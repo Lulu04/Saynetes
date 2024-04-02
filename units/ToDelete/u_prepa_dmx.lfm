@@ -1,0 +1,312 @@
+object FormPrepaDMX: TFormPrepaDMX
+  Left = 187
+  Height = 587
+  Top = 122
+  Width = 1156
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsSingle
+  Caption = 'Preparation DMX'
+  ClientHeight = 587
+  ClientWidth = 1156
+  Color = 2302755
+  DefaultMonitor = dmPrimary
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.2.0'
+  WindowState = wsMaximized
+  object Panel4: TPanel
+    Left = 0
+    Height = 587
+    Top = 0
+    Width = 290
+    Align = alLeft
+    ClientHeight = 587
+    ClientWidth = 290
+    Constraints.MinWidth = 200
+    TabOrder = 0
+    object Panel5: TPanel
+      Left = 1
+      Height = 194
+      Top = 392
+      Width = 288
+      Align = alBottom
+      Anchors = []
+      ClientHeight = 194
+      ClientWidth = 288
+      Color = 2960685
+      Constraints.MaxHeight = 350
+      ParentColor = False
+      TabOrder = 0
+      object Panel3: TPanel
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel5
+        AnchorSideRight.Control = Image1
+        AnchorSideBottom.Control = Panel5
+        AnchorSideBottom.Side = asrBottom
+        Left = 1
+        Height = 192
+        Top = 1
+        Width = 226
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        TabOrder = 0
+      end
+      object Image1: TImage
+        AnchorSideTop.Control = Panel5
+        AnchorSideRight.Control = Panel5
+        AnchorSideRight.Side = asrBottom
+        Left = 227
+        Height = 60
+        Top = 1
+        Width = 60
+        Anchors = [akTop, akRight]
+        Center = True
+        Constraints.MaxHeight = 60
+        Constraints.MaxWidth = 60
+        Constraints.MinHeight = 60
+        Constraints.MinWidth = 60
+        Proportional = True
+        Stretch = True
+      end
+    end
+    object Panel6: TPanel
+      Left = 1
+      Height = 180
+      Top = 206
+      Width = 288
+      Align = alClient
+      TabOrder = 1
+    end
+    object Splitter1: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 6
+      Top = 386
+      Width = 288
+      Align = alBottom
+      ResizeAnchor = akBottom
+      ResizeStyle = rsLine
+    end
+    object Panel7: TPanel
+      Left = 1
+      Height = 199
+      Top = 1
+      Width = 288
+      Align = alTop
+      ClientHeight = 199
+      ClientWidth = 288
+      Color = 5421248
+      ParentColor = False
+      TabOrder = 3
+      object Label9: TLabel
+        AnchorSideLeft.Control = Panel7
+        AnchorSideTop.Control = Panel7
+        Left = 1
+        Height = 17
+        Top = 1
+        Width = 50
+        Caption = 'Universe'
+        Font.Color = 1710618
+        Font.Height = -13
+        ParentColor = False
+        ParentFont = False
+      end
+      object Panel1: TPanel
+        AnchorSideLeft.Control = Label9
+        AnchorSideTop.Control = Label9
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel7
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = BOk
+        Left = 1
+        Height = 152
+        Top = 18
+        Width = 286
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 3
+        ClientHeight = 152
+        ClientWidth = 286
+        Color = 3487029
+        ParentColor = False
+        TabOrder = 0
+        object BAddUniverse: TSpeedButton
+          AnchorSideTop.Control = Panel1
+          AnchorSideRight.Control = BDeleteUniverse
+          Cursor = crHandPoint
+          Left = 28
+          Height = 23
+          Hint = 'Creates a new universe'
+          Top = 4
+          Width = 26
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 25
+          Images = FormMain.ImageList1
+          ImageIndex = 0
+          Transparent = False
+          OnClick = BAddUniverseClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object BDeleteUniverse: TSpeedButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel1
+          AnchorSideRight.Control = BDeviceManager
+          AnchorSideBottom.Side = asrBottom
+          Cursor = crHandPoint
+          Left = 79
+          Height = 23
+          Hint = 'Delete the selected universe'
+          Top = 4
+          Width = 26
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 25
+          Images = FormMain.ImageList1
+          ImageIndex = 14
+          Transparent = False
+          OnClick = BDeleteUniverseClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object BLoadFrom: TSpeedButton
+          AnchorSideLeft.Control = Panel1
+          AnchorSideTop.Control = Panel1
+          AnchorSideRight.Control = Panel1
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = Panel1
+          AnchorSideBottom.Side = asrBottom
+          Cursor = crHandPoint
+          Left = 255
+          Height = 23
+          Hint = 'Import the DMX configuration'#13#10'from another project'
+          Top = 4
+          Width = 26
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 4
+          Images = FormMain.ImageList1
+          ImageIndex = 12
+          Transparent = False
+          OnClick = BLoadFromClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object Panel2: TPanel
+          AnchorSideLeft.Control = Panel1
+          AnchorSideTop.Control = BAddUniverse
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel1
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = Panel1
+          AnchorSideBottom.Side = asrBottom
+          Left = 4
+          Height = 118
+          Top = 30
+          Width = 278
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 3
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 3
+          BorderSpacing.Bottom = 3
+          TabOrder = 0
+        end
+        object BDeviceManager: TSpeedButton
+          AnchorSideLeft.Control = Panel1
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel1
+          AnchorSideBottom.Control = Panel1
+          AnchorSideBottom.Side = asrBottom
+          Cursor = crHandPoint
+          Left = 130
+          Height = 23
+          Hint = 'Open the dmx device manager window, an utility to help you'#13#10'to connect your universes to your devices.'
+          Top = 4
+          Width = 26
+          BorderSpacing.Left = 25
+          BorderSpacing.Top = 3
+          Images = FormMain.ImageList1
+          ImageIndex = 17
+          Transparent = False
+          OnClick = BDeviceManagerClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+      end
+      object BOk: TSpeedButton
+        AnchorSideLeft.Control = Panel7
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideBottom.Control = Panel7
+        AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 104
+        Height = 20
+        Top = 173
+        Width = 80
+        Anchors = [akLeft, akBottom]
+        AutoSize = True
+        BorderSpacing.Bottom = 5
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 80
+        Caption = 'Ok'
+        Images = FormMain.ImageList1
+        ImageIndex = 3
+        Transparent = False
+        OnClick = BOkClick
+      end
+    end
+    object Splitter2: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 6
+      Top = 200
+      Width = 288
+      Align = alTop
+      ResizeAnchor = akTop
+      ResizeStyle = rsLine
+    end
+  end
+  object Panel8: TPanel
+    Left = 296
+    Height = 587
+    Top = 0
+    Width = 860
+    Align = alClient
+    Anchors = [akTop, akRight, akBottom]
+    Color = clNone
+    ParentColor = False
+    TabOrder = 1
+  end
+  object Panel9: TPanel
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 927
+    Height = 214
+    Top = 50
+    Width = 228
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 50
+    BorderSpacing.Right = 1
+    TabOrder = 2
+  end
+  object Splitter3: TSplitter
+    Left = 290
+    Height = 587
+    Top = 0
+    Width = 6
+    ResizeStyle = rsLine
+  end
+  object OD1: TOpenDialog
+    Title = 'Load a DMX configuration from another project'
+    Filter = 'Project file|*.say|All files|*.*'
+    Options = [ofNoChangeDir, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 216
+    Top = 72
+  end
+end

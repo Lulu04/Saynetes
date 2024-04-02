@@ -1,0 +1,542 @@
+object FormCustomized: TFormCustomized
+  Left = 258
+  Height = 585
+  Top = 198
+  Width = 896
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'FormCustomized'
+  ClientHeight = 585
+  ClientWidth = 896
+  OnChangeBounds = FormChangeBounds
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
+  OnPaint = FormPaint
+  OnResize = FormResize
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.4.0'
+  object PB: TPaintBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 896
+    Anchors = [akTop, akLeft, akRight]
+    Constraints.MaxHeight = 25
+    Constraints.MinHeight = 25
+    OnChangeBounds = PBChangeBounds
+    OnMouseDown = PBMouseDown
+    OnMouseMove = PBMouseMove
+    OnMouseUp = PBMouseUp
+    OnPaint = PBPaint
+    OnResize = PBResize
+  end
+  object BCloseWindow: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = PB
+    AnchorSideBottom.Side = asrBottom
+    Left = 871
+    Height = 25
+    Top = 0
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 25
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 25
+    Flat = True
+    ImageIndex = 2
+    OnClick = BCloseWindowClick
+    OnMouseEnter = BCloseWindowMouseEnter
+    OnMouseLeave = BCloseWindowMouseLeave
+  end
+  object BEnlargeWindow: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = BCloseWindow
+    AnchorSideBottom.Control = PB
+    AnchorSideBottom.Side = asrBottom
+    Left = 846
+    Height = 25
+    Top = 0
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 25
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 25
+    Flat = True
+    ImageIndex = 16
+    OnMouseEnter = BCloseWindowMouseEnter
+    OnMouseLeave = BCloseWindowMouseLeave
+  end
+  object BReduceWindow: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = BEnlargeWindow
+    AnchorSideBottom.Control = PB
+    AnchorSideBottom.Side = asrBottom
+    Left = 821
+    Height = 25
+    Top = 0
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 25
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 25
+    Flat = True
+    ImageIndex = 11
+    OnMouseEnter = BCloseWindowMouseEnter
+    OnMouseLeave = BCloseWindowMouseLeave
+  end
+  object ColorButton2: TColorButton
+    Left = 288
+    Height = 27
+    Top = 136
+    Width = 72
+    BorderWidth = 2
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    OnColorChanged = ColorButton2ColorChanged
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = ColorButton2
+    AnchorSideBottom.Control = ColorButton2
+    Left = 288
+    Height = 15
+    Top = 121
+    Width = 96
+    Anchors = [akLeft, akBottom]
+    Caption = 'Form backGround'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = ColorButton3
+    AnchorSideBottom.Control = ColorButton3
+    Left = 288
+    Height = 15
+    Top = 201
+    Width = 54
+    Anchors = [akLeft, akBottom]
+    Caption = 'Font color'
+    ParentColor = False
+  end
+  object ColorButton3: TColorButton
+    Left = 288
+    Height = 27
+    Top = 216
+    Width = 72
+    BorderWidth = 2
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    OnColorChanged = ColorButton3ColorChanged
+  end
+  object Panel1: TPanel
+    Left = 32
+    Height = 104
+    Top = 64
+    Width = 168
+    ClientHeight = 104
+    ClientWidth = 168
+    TabOrder = 0
+    object FSE1: TFloatSpinEdit
+      AnchorSideLeft.Control = ColorButton1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = ColorButton1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideBottom.Control = ColorButton1
+      AnchorSideBottom.Side = asrBottom
+      Left = 100
+      Height = 23
+      Top = 28
+      Width = 54
+      BorderSpacing.Left = 4
+      Font.Style = [fsBold]
+      Increment = 0.1
+      MaxValue = 1
+      OnChange = ColorButton1ColorChanged
+      ParentFont = False
+      TabOrder = 0
+      Value = 0.5
+    end
+    object ColorButton1: TColorButton
+      Left = 24
+      Height = 28
+      Top = 25
+      Width = 72
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      OnColorChanged = ColorButton1ColorChanged
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = ColorButton1
+      AnchorSideBottom.Control = ColorButton1
+      Left = 24
+      Height = 15
+      Top = 10
+      Width = 42
+      Anchors = [akLeft, akBottom]
+      Caption = 'Title Bar'
+      ParentColor = False
+    end
+    object CheckBox1: TCheckBox
+      Left = 46
+      Height = 19
+      Top = 60
+      Width = 20
+      Checked = True
+      OnChange = CheckBox1Change
+      State = cbChecked
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Control = CheckBox1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = CheckBox1
+      AnchorSideTop.Side = asrCenter
+      Left = 66
+      Height = 15
+      Top = 62
+      Width = 63
+      Caption = 'Show frame'
+      ParentColor = False
+      WordWrap = True
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 72
+      Height = 23
+      Top = 76
+      Width = 50
+      MaxValue = 10
+      OnChange = SpinEdit1Change
+      TabOrder = 2
+      Value = 1
+    end
+  end
+  object Label5: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 0
+    Height = 15
+    Top = 285
+    Width = 34
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    Left = 493
+    Height = 109
+    Top = 32
+    Width = 154
+    Items.Strings = (
+      'Item 1'
+      'Item 2'
+    )
+    ItemHeight = 15
+    TabOrder = 1
+  end
+  object Panel2: TPanel
+    Left = 80
+    Height = 321
+    Top = 256
+    Width = 791
+    ClientHeight = 321
+    ClientWidth = 791
+    TabOrder = 2
+    object ListBox2: TListBox
+      Left = 16
+      Height = 109
+      Top = 8
+      Width = 154
+      Items.Strings = (
+        'Item 1'
+        'Item 2'
+      )
+      ItemHeight = 15
+      TabOrder = 0
+    end
+    object ComboBox2: TComboBox
+      Left = 200
+      Height = 23
+      Top = 32
+      Width = 156
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Item1'
+        'Item2'
+      )
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'Item1'
+    end
+    object Panel3: TPanel
+      Left = 472
+      Height = 284
+      Top = 20
+      Width = 298
+      ClientHeight = 284
+      ClientWidth = 298
+      TabOrder = 2
+      object ListBox3: TListBox
+        Left = 16
+        Height = 109
+        Top = 8
+        Width = 154
+        Items.Strings = (
+          'Item 1'
+          'Item 2'
+        )
+        ItemHeight = 15
+        TabOrder = 0
+      end
+      object ComboBox3: TComboBox
+        Left = 184
+        Height = 23
+        Top = 16
+        Width = 100
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'Item1'
+          'Item2'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Item1'
+      end
+      object Edit3: TEdit
+        Left = 24
+        Height = 23
+        Top = 152
+        Width = 178
+        TabOrder = 2
+        Text = 'Edit3'
+      end
+      object SpeedButton2: TSpeedButton
+        Left = 88
+        Height = 19
+        Top = 232
+        Width = 72
+        AutoSize = True
+        Caption = 'SpeedButton'
+        Color = 7777764
+        ImageIndex = 3
+        Transparent = False
+      end
+      object Label6: TLabel
+        Left = 214
+        Height = 15
+        Top = 72
+        Width = 34
+        Caption = 'Label6'
+        Font.Style = [fsUnderline]
+        ParentColor = False
+        ParentFont = False
+      end
+      inline FrameTrackBar2: TFrameTrackBar
+        AnchorSideTop.Control = Label6
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Panel3
+        AnchorSideBottom.Side = asrBottom
+        Left = 225
+        Height = 192
+        Top = 89
+        Width = 18
+        Anchors = [akTop, akLeft, akBottom]
+        BorderSpacing.Top = 2
+        BorderSpacing.Bottom = 2
+        ClientHeight = 192
+        ClientWidth = 18
+        TabOrder = 3
+        inherited PB: TPaintBox
+          Height = 192
+          Width = 18
+        end
+      end
+    end
+    object Edit2: TEdit
+      Left = 24
+      Height = 23
+      Top = 136
+      Width = 178
+      TabOrder = 3
+      Text = 'Edit2'
+    end
+    object Label7: TLabel
+      Left = 240
+      Height = 15
+      Top = 96
+      Width = 37
+      Caption = 'Label7'
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpeedButton7: TSpeedButton
+      Left = 256
+      Height = 19
+      Top = 152
+      Width = 100
+      AutoSize = True
+      Caption = 'Transparent et Flat'
+      Color = 7777764
+      Flat = True
+      ImageIndex = 3
+    end
+    object SpeedButton8: TSpeedButton
+      Left = 256
+      Height = 19
+      Top = 184
+      Width = 123
+      AutoSize = True
+      Caption = 'Transparent et PAS Flat'
+      Color = 7777764
+      ImageIndex = 3
+    end
+    object SpeedButton9: TSpeedButton
+      Left = 256
+      Height = 19
+      Top = 216
+      Width = 123
+      AutoSize = True
+      Caption = 'PAS Transparent et Flat'
+      Color = 7777764
+      Flat = True
+      ImageIndex = 3
+      Transparent = False
+    end
+    object SpeedButton10: TSpeedButton
+      Left = 256
+      Height = 19
+      Top = 248
+      Width = 146
+      AutoSize = True
+      Caption = 'PAS Transparent et PAS Flat'
+      Color = 7777764
+      ImageIndex = 3
+      Transparent = False
+    end
+    inline FrameTrackBar1: TFrameTrackBar
+      Left = 12
+      Height = 37
+      Top = 218
+      Width = 219
+      ClientHeight = 37
+      ClientWidth = 219
+      TabOrder = 4
+      inherited PB: TPaintBox
+        Height = 37
+        Width = 219
+      end
+    end
+  end
+  object ComboBox1: TComboBox
+    Left = 676
+    Height = 23
+    Top = 52
+    Width = 156
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'Item1'
+      'Item2'
+    )
+    Style = csDropDownList
+    TabOrder = 3
+    Text = 'Item1'
+  end
+  object Edit1: TEdit
+    Left = 670
+    Height = 23
+    Top = 92
+    Width = 178
+    TabOrder = 4
+    Text = 'Edit1'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 384
+    Height = 19
+    Top = 216
+    Width = 63
+    AutoSize = True
+    Caption = 'Font Name'
+    Color = 16110090
+    Flat = True
+    ImageIndex = 37
+    Transparent = False
+    OnClick = SpeedButton1Click
+  end
+  object Label8: TLabel
+    Left = 136
+    Height = 15
+    Top = 216
+    Width = 36
+    Caption = 'Label8'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 504
+    Height = 19
+    Top = 152
+    Width = 100
+    AutoSize = True
+    Caption = 'Transparent et Flat'
+    Color = 7777764
+    Flat = True
+    ImageIndex = 3
+  end
+  object SpeedButton4: TSpeedButton
+    Left = 504
+    Height = 19
+    Top = 184
+    Width = 123
+    AutoSize = True
+    Caption = 'Transparent et PAS Flat'
+    Color = 7777764
+    ImageIndex = 3
+  end
+  object SpeedButton5: TSpeedButton
+    Left = 504
+    Height = 19
+    Top = 216
+    Width = 123
+    AutoSize = True
+    Caption = 'PAS Transparent et Flat'
+    Color = 7777764
+    Flat = True
+    ImageIndex = 3
+    Transparent = False
+  end
+  object SpeedButton6: TSpeedButton
+    Left = 504
+    Height = 19
+    Top = 248
+    Width = 146
+    AutoSize = True
+    Caption = 'PAS Transparent et PAS Flat'
+    Color = 7777764
+    ImageIndex = 3
+    Transparent = False
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Options = [fdEffects, fdApplyButton]
+    OnApplyClicked = FontDialog1ApplyClicked
+    Left = 392
+    Top = 48
+  end
+end

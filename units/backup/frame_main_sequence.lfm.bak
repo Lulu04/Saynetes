@@ -1,0 +1,144 @@
+object FrameMainSequence: TFrameMainSequence
+  Left = 0
+  Height = 672
+  Top = 0
+  Width = 296
+  ClientHeight = 672
+  ClientWidth = 296
+  TabOrder = 0
+  DesignLeft = 641
+  DesignTop = 175
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Splitter1
+    Left = 0
+    Height = 308
+    Top = 0
+    Width = 296
+    Anchors = [akTop, akLeft, akBottom]
+    BevelColor = 247036
+    ClientHeight = 308
+    ClientWidth = 296
+    Color = 4934475
+    Constraints.MinHeight = 300
+    ParentColor = False
+    TabOrder = 0
+    object Panel2: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label9
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 282
+      Top = 23
+      Width = 284
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 2
+      BevelOuter = bvNone
+      Color = 1710618
+      ParentColor = False
+      TabOrder = 0
+    end
+    object Label9: TLabel
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 219
+      Height = 17
+      Top = 4
+      Width = 73
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      Caption = 'SEQUENCES'
+      Font.Color = 247036
+      Font.Height = 18
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Panel3: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Splitter2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 89
+    Top = 583
+    Width = 296
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BevelColor = 247036
+    Color = 4934475
+    Constraints.MaxHeight = 250
+    ParentColor = False
+    TabOrder = 1
+  end
+  object Splitter1: TSplitter
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crVSplit
+    Left = 0
+    Height = 3
+    Top = 308
+    Width = 296
+    Align = alNone
+    Anchors = [akLeft, akRight]
+    Color = 3158064
+    Constraints.MaxHeight = 3
+    Constraints.MinHeight = 3
+    OnMoved = Splitter1Moved
+    ParentColor = False
+    ResizeAnchor = akTop
+    ResizeStyle = rsPattern
+  end
+  object Panel4: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Splitter1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Splitter2
+    Left = 0
+    Height = 269
+    Top = 311
+    Width = 296
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BevelColor = 247036
+    Color = 4934475
+    ParentColor = False
+    TabOrder = 3
+  end
+  object Splitter2: TSplitter
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crVSplit
+    Left = 0
+    Height = 3
+    Top = 580
+    Width = 296
+    Align = alNone
+    Anchors = [akLeft, akRight]
+    Color = 3158064
+    Constraints.MaxHeight = 3
+    Constraints.MinHeight = 3
+    OnMoved = Splitter1Moved
+    ParentColor = False
+    ResizeAnchor = akBottom
+    ResizeStyle = rsPattern
+  end
+end

@@ -1,0 +1,307 @@
+object FrameIntersessionMusic: TFrameIntersessionMusic
+  Left = 0
+  Height = 277
+  Top = 0
+  Width = 392
+  ClientHeight = 277
+  ClientWidth = 392
+  TabOrder = 0
+  DesignLeft = 686
+  DesignTop = 175
+  object Panel1: TPanel
+    Left = 0
+    Height = 277
+    Top = 0
+    Width = 392
+    Align = alClient
+    Anchors = [akTop, akRight, akBottom]
+    BevelColor = 247036
+    BevelOuter = bvNone
+    ClientHeight = 277
+    ClientWidth = 392
+    Color = 4934475
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 86
+      Height = 17
+      Top = 0
+      Width = 303
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 20
+      BorderSpacing.Right = 3
+      Caption = 'INTERSESSION MUSIC'
+      Font.Color = 247036
+      Font.Height = 18
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object FLBPlaylist: TFileListBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Shape2
+      AnchorSideBottom.Control = Label10
+      Cursor = crHandPoint
+      Left = 3
+      Height = 181
+      Hint = 'This is the list of intermission musics'
+      Top = 52
+      Width = 305
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 3
+      BorderSpacing.Right = 5
+      BorderStyle = bsNone
+      Color = 1644825
+      Directory = 'C:\lazarus'
+      ExtendedSelect = False
+      Font.Color = 10473964
+      Font.Height = 18
+      ItemHeight = 0
+      Mask = '*.playlist'
+      OnDrawItem = FLBPlaylistDrawItem
+      OnMouseMove = FLBPlaylistMouseMove
+      OnSelectionChange = FLBPlaylistSelectionChange
+      ParentShowHint = False
+      ParentFont = False
+      PopupMenu = PopupPlaylist
+      ShowHint = True
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+      TabStop = False
+    end
+    object Label10: TLabel
+      AnchorSideLeft.Control = FLBPlaylist
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Label11
+      Left = 140
+      Height = 17
+      Top = 233
+      Width = 31
+      Anchors = [akLeft, akBottom]
+      Caption = 'Label'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label11: TLabel
+      AnchorSideLeft.Control = FLBPlaylist
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 140
+      Height = 17
+      Top = 250
+      Width = 31
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Bottom = 10
+      Caption = 'Label'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object Shape2: TShape
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 313
+      Height = 248
+      Top = 27
+      Width = 74
+      Anchors = [akTop, akRight, akBottom]
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 2
+      Brush.Color = 6978171
+      Pen.Color = 3552822
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Label7: TLabel
+      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Shape2
+      AnchorSideBottom.Control = TB1
+      Left = 328
+      Height = 15
+      Top = 27
+      Width = 45
+      Alignment = taCenter
+      Caption = 'sVolume'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object TB1: TTrackBar
+      AnchorSideLeft.Control = Shape2
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Shape2
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 339
+      Height = 230
+      Top = 43
+      Width = 31
+      Frequency = 20
+      Max = 200
+      OnChange = TB1Change
+      Orientation = trVertical
+      Position = 100
+      Reversed = True
+      ShowSelRange = False
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 26
+      BorderSpacing.Top = 1
+      BorderSpacing.Bottom = 2
+      TabOrder = 1
+    end
+    object Shape3: TShape
+      Tag = 1
+      Cursor = crHandPoint
+      Left = 6
+      Height = 31
+      Top = 3
+      Width = 31
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 2
+      Brush.Color = 14079702
+      Pen.Color = 1973790
+      Shape = stRoundSquare
+    end
+    object SpeedButton3: TSpeedButton
+      Tag = 1
+      AnchorSideLeft.Control = Shape3
+      AnchorSideTop.Control = Shape3
+      AnchorSideRight.Control = Shape3
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape3
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 6
+      Height = 31
+      Hint = 'Start/Pause the intersession music.'
+      Top = 3
+      Width = 31
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 30
+      OnClick = SpeedButton3Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Label2: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Shape3
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 15
+      Top = 37
+      Width = 44
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 3
+      Caption = 'sPlaylist'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object BPrevious: TSpeedButton
+      AnchorSideTop.Control = FLBPlaylist
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Label10
+      Cursor = crHandPoint
+      Left = 95
+      Height = 20
+      Top = 234
+      Width = 25
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 1
+      BorderSpacing.Right = 20
+      Images = DataModule1.ImageList1
+      ImageIndex = 5
+      OnClick = BPreviousClick
+      OnMouseEnter = BPreviousMouseEnter
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object BNext: TSpeedButton
+      AnchorSideLeft.Control = Label10
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = FLBPlaylist
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 191
+      Height = 20
+      Top = 234
+      Width = 25
+      BorderSpacing.Left = 20
+      BorderSpacing.Top = 1
+      Images = DataModule1.ImageList1
+      ImageIndex = 4
+      OnClick = BPreviousClick
+      OnMouseEnter = BPreviousMouseEnter
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Panel2: TPanel
+      AnchorSideLeft.Control = SpeedButton3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = SpeedButton3
+      AnchorSideTop.Side = asrCenter
+      Left = 52
+      Height = 10
+      Top = 13
+      Width = 14
+      BorderSpacing.Left = 15
+      BevelOuter = bvNone
+      TabOrder = 2
+    end
+  end
+  object PopupPlaylist: TPopupMenu
+    OnPopup = PopupPlaylistPopup
+    Left = 264
+    Top = 88
+    object MINewPlaylist: TMenuItem
+      Caption = 'New playlist'
+      OnClick = MINewPlaylistClick
+    end
+    object MIModifyPlaylist: TMenuItem
+      Caption = 'Modify the playlist'
+      OnClick = MIModifyPlaylistClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object MIDeletePlaylist: TMenuItem
+      Caption = 'Delete the playlist'
+      OnClick = MIDeletePlaylistClick
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 150
+    OnTimer = Timer1Timer
+    Left = 152
+    Top = 88
+  end
+end

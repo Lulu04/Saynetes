@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":51512371,"name":"tformeditstep.caption","sourcebytes":[69,100,105,116,32,97,99,116,105,111,110,115],"value":"Edit actions"},
+{"hash":4766463,"name":"tformeditstep.pageaudio.caption","sourcebytes":[65,117,100,105,111],"value":"Audio"},
+{"hash":18728,"name":"tformeditstep.pagedmx.caption","sourcebytes":[68,77,88],"value":"DMX"},
+{"hash":219666334,"name":"tformeditstep.label2.caption","sourcebytes":[65,99,116,105,111,110,32,100,101,115,99,114,105,112,116,105,111,110],"value":"Action description"},
+{"hash":77089212,"name":"tformeditstep.speedbutton1.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"}
+]}

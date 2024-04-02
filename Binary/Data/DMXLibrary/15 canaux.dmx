@@ -1,0 +1,64 @@
+0
+300
+15 canaux
+15
+0
+Config
+1
+0-->255 : 
+1
+Master Dimmer
+1
+0-->255 : 
+2
+Dimmer
+1
+0-->255 : 
+3
+Red
+1
+0-->255 : 
+4
+Green
+1
+0-->255 : 
+5
+Blue
+1
+0-->255 : 
+6
+Strobe
+1
+0-->255 : 
+7
+Pan
+1
+0-->255 : 
+8
+Tilt
+1
+0-->255 : 
+9
+Speed Pan_Tilt
+1
+0-->255 : 
+10
+GOBO
+1
+0-->255 : 
+11
+GOBO Rotation
+1
+0-->255 : 
+12
+Color changer
+1
+0-->255 : 
+13
+Blanc
+1
+0-->255 : 
+14
+Ambre
+1
+0-->255 : 

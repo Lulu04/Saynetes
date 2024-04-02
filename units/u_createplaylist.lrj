@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":146058324,"name":"tformcreateplaylist.caption","sourcebytes":[67,114,101,97,116,101,32,97,32,112,108,97,121,108,105,115,116],"value":"Create a playlist"},
+{"hash":96168421,"name":"tformcreateplaylist.updown1.hint","sourcebytes":[77,111,118,101,32,117,112,47,100,111,119,110,32,116,104,101,32,115,101,108,101,99,116,101,100,32,97,117,100,105,111,32,102,105,108,101],"value":"Move up/down the selected audio file"},
+{"hash":176437460,"name":"tformcreateplaylist.speedbutton1.hint","sourcebytes":[65,100,100,32,97,117,100,105,111,32,102,105,108,101,115,32,116,111,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Add audio files to the playlist"},
+{"hash":489380,"name":"tformcreateplaylist.speedbutton1.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
+{"hash":1096980,"name":"tformcreateplaylist.speedbutton2.hint","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,97,117,100,105,111,32,102,105,108,101,115,32,102,114,111,109,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Delete the selected audio files from the playlist"},
+{"hash":128724181,"name":"tformcreateplaylist.speedbutton2.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":7903429,"name":"tformcreateplaylist.bsave.caption","sourcebytes":[115,83,97,118,101],"value":"sSave"},
+{"hash":127420876,"name":"tformcreateplaylist.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":43545507,"name":"tformcreateplaylist.od1.title","sourcebytes":[83,101,108,101,99,116,32,97,117,100,105,111,32,102,105,108,101,115],"value":"Select audio files"}
+]}

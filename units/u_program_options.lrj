@@ -1,0 +1,21 @@
+{"version":1,"strings":[
+{"hash":59960659,"name":"tformprogramoptions.caption","sourcebytes":[80,114,111,103,114,97,109,32,111,112,116,105,111,110,115],"value":"Program options"},
+{"hash":30811,"name":"tformprogramoptions.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":127420876,"name":"tformprogramoptions.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":125335353,"name":"tformprogramoptions.bapply.caption","sourcebytes":[115,65,112,112,108,121],"value":"sApply"},
+{"hash":257824915,"name":"tformprogramoptions.dividerbevel2.caption","sourcebytes":[77,97,120,32,114,101,99,101,110,116,32,112,114,111,106,101,99,116,32,102,105,108,101,115],"value":"Max recent project files"},
+{"hash":139375349,"name":"tformprogramoptions.dividerbevel3.caption","sourcebytes":[76,97,110,103,117,97,103,101],"value":"Language"},
+{"hash":5404860,"name":"tformprogramoptions.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":178735486,"name":"tformprogramoptions.dividerbevel7.caption","sourcebytes":[83,101,113,117,101,110,99,101,32,101,120,101,99,117,116,105,111,110],"value":"Sequence execution"},
+{"hash":237959877,"name":"tformprogramoptions.label6.caption","sourcebytes":[34,83,80,65,67,69,34,32,107,101,121,32,114,117,110,32,115,101,113,117,101,110,99,101],"value":"\"SPACE\" key run sequence"},
+{"hash":108108372,"name":"tformprogramoptions.label7.caption","sourcebytes":[34,83,80,65,67,69,34,32,107,101,121,32,114,117,110,32,115,101,113,117,101,110,99,101,32,97,110,100,32,115,101,108,101,99,116,32,116,104,101,32,110,101,120,116],"value":"\"SPACE\" key run sequence and select the next"},
+{"hash":155161707,"name":"tformprogramoptions.dividerbevel4.caption","sourcebytes":[65,117,100,105,111,32,112,108,97,121,98,97,99,107],"value":"Audio playback"},
+{"hash":20757925,"name":"tformprogramoptions.dividerbevel5.caption","sourcebytes":[65,117,100,105,111,32,99,97,112,116,117,114,101],"value":"Audio capture"},
+{"hash":5404860,"name":"tformprogramoptions.label4.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5404860,"name":"tformprogramoptions.label5.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":44550999,"name":"tformprogramoptions.dividerbevel6.caption","sourcebytes":[68,77,88,32,118,105,101,119],"value":"DMX view"},
+{"hash":178787989,"name":"tformprogramoptions.cbstage.text","sourcebytes":[82,101,99,116,97,110,103,108,101],"value":"Rectangle"},
+{"hash":62675781,"name":"tformprogramoptions.label2.caption","sourcebytes":[83,104,97,112,101,32,111,102,32,116,104,101,32,115,116,97,103,101],"value":"Shape of the stage"},
+{"hash":5879987,"name":"tformprogramoptions.label3.caption","sourcebytes":[83,101,97,116,115],"value":"Seats"},
+{"hash":94079841,"name":"tformprogramoptions.cbseats.text","sourcebytes":[83,101,97,116,115,49],"value":"Seats1"}
+]}

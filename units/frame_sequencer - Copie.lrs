@@ -1,0 +1,47 @@
+LazarusResources.Add('TFrameSequencer','FORMDATA',[
+  'TPF0'#241#15'TFrameSequencer'#14'FrameSequencer'#10'DesignLeft'#3#163#2#9'De'
+  +'signTop'#3's'#1#0#241#17'TBGLVirtualScreen'#17'BGLVirtualScreen1'#22'Anchor'
+  +'SideLeft.Control'#7#5'Owner'#21'AnchorSideTop.Control'#7#5'Owner'#23'Anchor'
+  +'SideRight.Control'#7#5'Owner'#0#0#241#10'TScrollBar'#10'ScrollBar1'#22'Anch'
+  +'orSideLeft.Control'#7#5'Owner'#23'AnchorSideRight.Control'#7#5'Owner'#24'An'
+  +'chorSideBottom.Control'#7#5'Owner'#21'Constraints.MaxHeight'#2#0#0#0#242#2#2
+  +#10'TPopupMenu'#5'PopSB'#4'Left'#2'H'#3'Top'#2'('#0#9'TMenuItem'#18'MI_SBAdd'
+  +'ComplexCmd'#7'Caption'#6#8'New Step'#8'ShortCut'#2'p'#7'OnClick'#7#23'MI_SB'
+  +'AddComplexCmdClick'#0#0#9'TMenuItem'#9'MenuItem8'#7'Caption'#6#1'-'#0#0#9'T'
+  +'MenuItem'#10'MI_SBPaste'#7'Caption'#6#5'Paste'#8'ShortCut'#3'V@'#7'OnClick'
+  +#7#15'MI_SBPasteClick'#0#0#9'TMenuItem'#9'MenuItem2'#7'Caption'#6#1'-'#0#0#9
+  +'TMenuItem'#23'MI_SBSelectTimeInterval'#7'Caption'#6#25'Select this time int'
+  +'erval'#7'OnClick'#7#28'MI_SBSelectTimeIntervalClick'#0#0#9'TMenuItem'#15'MI'
+  +'_SBModifyTime'#7'Caption'#6#25'Modify this time interval'#7'OnClick'#7#20'M'
+  +'I_SBModifyTimeClick'#0#0#9'TMenuItem'#15'MI_SBDeleteTime'#7'Caption'#6#24'S'
+  +'upprimer cet intervalle'#7'OnClick'#7#20'MI_SBDeleteTimeClick'#0#0#9'TMenuI'
+  +'tem'#10'MenuItem12'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#12'MI_SBZoomAll'#7'C'
+  +'aption'#6#8'View all'#8'ShortCut'#4'A'#128#0#0#7'OnClick'#7#17'MI_SBZoomAll'
+  +'Click'#0#0#9'TMenuItem'#20'MI_SBZoomOnSelection'#7'Caption'#6#17'Zoom on se'
+  +'lection'#8'ShortCut'#4'S'#128#0#0#7'OnClick'#7#25'MI_SBZoomOnSelectionClick'
+  +#0#0#0#242#2#3#10'TPopupMenu'#8'PopLabel'#4'Left'#3#200#0#3'Top'#2'('#0#9'TM'
+  +'enuItem'#13'MI_StepModify'#7'Caption'#6#7'Edit...'#7'OnClick'#7#18'MI_StepM'
+  +'odifyClick'#0#0#9'TMenuItem'#13'MI_StepRename'#7'Caption'#6#6'Rename'#8'Sho'
+  +'rtCut'#3'R@'#7'OnClick'#7#18'MI_StepRenameClick'#0#0#9'TMenuItem'#13'MI_Ste'
+  +'pDelete'#7'Caption'#6#6'Delete'#8'ShortCut'#2'.'#7'OnClick'#7#18'MI_StepDel'
+  +'eteClick'#0#0#9'TMenuItem'#9'MenuItem3'#7'Caption'#6#1'-'#0#0#9'TMenuItem'
+  +#17'MI_StepMoveInTime'#7'Caption'#6#14'Set in time...'#7'OnClick'#7#22'MI_St'
+  +'epMoveInTimeClick'#0#0#9'TMenuItem'#19'MI_StepModifyLength'#7'Caption'#6#22
+  +'Change the duration...'#7'OnClick'#7#24'MI_StepModifyLengthClick'#0#0#9'TMe'
+  +'nuItem'#9'MenuItem5'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#10'MI_StepCut'#7'Ca'
+  +'ption'#6#3'Cut'#8'ShortCut'#3'X@'#7'OnClick'#7#15'MI_StepCutClick'#0#0#9'TM'
+  +'enuItem'#11'MI_StepCopy'#7'Caption'#6#4'Copy'#8'ShortCut'#3'C@'#7'OnClick'#7
+  +#16'MI_StepCopyClick'#0#0#9'TMenuItem'#12'MI_StepPaste'#7'Caption'#6#5'Paste'
+  +#8'ShortCut'#3'V@'#7'OnClick'#7#17'MI_StepPasteClick'#0#0#9'TMenuItem'#16'MI'
+  +'_StepSelectAll'#7'Caption'#6#10'Select all'#8'ShortCut'#3'A@'#0#0#9'TMenuIt'
+  +'em'#9'MenuItem4'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#12'MI_StepGroup'#7'Capt'
+  +'ion'#6#5'Group'#8'ShortCut'#3'G@'#7'OnClick'#7#17'MI_StepGroupClick'#0#0#9
+  +'TMenuItem'#14'MI_StepUngroup'#7'Caption'#6#7'Ungroup'#8'ShortCut'#3'U@'#7'O'
+  +'nClick'#7#19'MI_StepUngroupClick'#0#0#9'TMenuItem'#9'MenuItem6'#7'Caption'#6
+  +#1'-'#0#0#9'TMenuItem'#12'MI_StepMerge'#7'Caption'#6#19'Merge the selection'
+  +#7'OnClick'#7#17'MI_StepMergeClick'#0#0#9'TMenuItem'#21'MI_StepDivideAndGrou'
+  +'p'#7'Caption'#6#16'Divide and group'#7'OnClick'#7#26'MI_StepDivideAndGroupC'
+  +'lick'#0#0#9'TMenuItem'#9'MenuItem7'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#16'M'
+  +'I_StepRearrange'#7'Caption'#6#9'Rearrange'#7'OnClick'#7#21'MI_StepRearrange'
+  +'Click'#0#0#0#0
+]);

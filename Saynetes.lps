@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Win64_Debug">
+      <SessionMatrixOptions Count="1">
+        <Item1 ID="607505579495" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
+      </SessionMatrixOptions>
+    </BuildModes>
+    <Units Count="144">
+      <Unit0>
+        <Filename Value="Saynetes.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="26"/>
+        <TopLine Value="7"/>
+        <CursorPos X="60" Y="28"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="units\u_mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="222"/>
+        <CursorPos X="49" Y="235"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="units\u_audio_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="29"/>
+        <TopLine Value="25"/>
+        <CursorPos X="15" Y="38"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="units\u_edit_sequence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSequenceEdition"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="308"/>
+        <CursorPos X="70" Y="321"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="units\u_dmx_library.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXLibrary"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="16"/>
+        <CursorPos X="33" Y="34"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="units\frame_sequencer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameSequencer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="43" Y="49"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="units\u_common.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="16"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="88"/>
+        <CursorPos X="38" Y="99"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="units\u_utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="473"/>
+        <CursorPos X="102" Y="480"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="units\frame_viewcmdlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewCmdList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="194"/>
+        <CursorPos X="29" Y="206"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="units\u_project_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="301"/>
+        <CursorPos X="4" Y="310"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="units\u_list_dmxuniverse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="42"/>
+        <CursorPos X="2" Y="96"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="units\u_modify_time.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_ModifyTime"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="8" Y="58"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="units\u_move_step.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_MoveStep"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="3" Y="57"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="units\u_change_complex_step_length.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_ChangeStepLength"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="3" Y="60"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="unit_dmx_device\u_dmxdevice_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="17"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="863"/>
+        <CursorPos X="20" Y="407"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="unit_dmx_device\driver_enttec_opendmx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="23"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="73"/>
+        <CursorPos X="38" Y="78"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unit_dmx_device\u_vellemank8062d.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="19"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="331"/>
+        <CursorPos X="17" Y="333"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="unit_dmx_device\ftd2xx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="24"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="25"/>
+        <CursorPos X="60" Y="41"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="unit_dmx_device\u_dmx_util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="231"/>
+        <CursorPos Y="243"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="units\u_resource_string.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="378"/>
+        <CursorPos X="32" Y="401"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="units\u_list_top.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="360"/>
+        <CursorPos X="20" Y="286"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="units\frame_cmd_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameCmdAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="21"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="395"/>
+        <CursorPos X="50" Y="407"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="units\frame_viewaudiolist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewAudioList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="15" Y="19"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="units\u_projectwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProjectWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="32"/>
+        <TopLine Value="123"/>
+        <CursorPos X="33" Y="132"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="units\frame_viewtoplist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewTopList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="323"/>
+        <CursorPos X="29" Y="336"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="units\u_top_player.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="139"/>
+        <CursorPos X="23" Y="150"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="units\frame_velocity.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frame_Velocity"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="25" Y="110"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="units\frame_viewdmxlibrary.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXLibrary"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="267"/>
+        <CursorPos X="47" Y="281"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="units\frame_viewfixturechannels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXFixtureChannels"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="82"/>
+        <CursorPos X="76" Y="102"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="units\u_newfixturewizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormFixtureWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="224"/>
+        <CursorPos Y="235"/>
+        <UsageCount Value="201"/>
+        <Bookmarks Count="1">
+          <Item0 X="3" Y="446"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="units\u_dmxlib_inputrange.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormInputDMXRange"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="58"/>
+        <CursorPos X="33" Y="78"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="units\u_user_askconfirmation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserConfirmation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="69"/>
+        <CursorPos X="13" Y="81"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="units\u_user_showmessage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserMessage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="7"/>
+        <CursorPos X="15" Y="33"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="units\u_user_inputstring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserInput"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="34"/>
+        <CursorPos X="15" Y="46"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="units\u_userdialogs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="3"/>
+        <CursorPos X="15" Y="10"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="units\u_editfixture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormEditFixture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="98"/>
+        <CursorPos X="25" Y="105"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="units\frame_editstring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEditString"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="31"/>
+        <CursorPos X="15" Y="42"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXCursors"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="887"/>
+        <CursorPos X="26" Y="902"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXChannelsTools"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="503"/>
+        <CursorPos X="45" Y="515"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="units\u_notebook_util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="100"/>
+        <CursorPos X="11" Y="109"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXRGBTools"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="620"/>
+        <CursorPos X="41" Y="640"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="units\frame_color_palette.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frame_ColorPalette"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="19"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="77"/>
+        <CursorPos Y="92"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="units\frame_viewuniverselist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewUniverseList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="62"/>
+        <CursorPos X="36" Y="74"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="units\frame_viewchannelslist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewChannelsList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="61"/>
+        <CursorPos X="45" Y="75"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="units\u_dmxtools_group.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXGroup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="25"/>
+        <TopLine Value="81"/>
+        <CursorPos X="32" Y="94"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="units\u_edit_otheraction.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormOtherAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="25"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="191"/>
+        <CursorPos X="42" Y="206"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="units\frame_fx_channelchaser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFXChannelChaser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="23"/>
+        <TopLine Value="193"/>
+        <CursorPos X="42" Y="203"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="units\u_helper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="16"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="100"/>
+        <CursorPos X="12" Y="114"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="units\u_add_action_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAudioAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="11"/>
+        <CursorPos X="62" Y="25"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="units\u_devicemanager_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDeviceManager"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="18"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="223"/>
+        <CursorPos X="49" Y="236"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="unit_dmx_device\u_ftdi_based.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="22"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="602"/>
+        <CursorPos X="18" Y="605"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="units\u_startupwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormStartUpWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="31"/>
+        <TopLine Value="65"/>
+        <CursorPos X="48" Y="70"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="units\u_program_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProgramOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="396"/>
+        <CursorPos X="3" Y="399"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="units\u_createplaylist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCreatePlaylist"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="83"/>
+        <CursorPos X="30" Y="99"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="units\frame_viewcolorlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewColorList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="17"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="25" Y="25"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="units\frame_fx_rgbchaser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFXRGBChaser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="368"/>
+        <CursorPos X="63" Y="380"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="units\frame_viewfixtureslist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewFixturesList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="62"/>
+        <CursorPos X="35" Y="75"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="units\u_presetmanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PresetManager"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="18"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="181"/>
+        <CursorPos X="56" Y="199"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="units\frame_viewfixtureinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFixtureInfo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="112"/>
+        <CursorPos X="36" Y="127"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="units\u_askifshiftadress.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAskIfShiftAdress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="36"/>
+        <CursorPos X="62" Y="49"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="units\frame_viewdmxdipswitchs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDipSwitchs"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="219"/>
+        <CursorPos X="28" Y="239"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="units\u_logfile.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="154"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="units\frame_cmd_audiofx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameCmdAudioFX"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="22"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="799"/>
+        <CursorPos X="38" Y="812"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="units\frame_trackbar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameTrackBar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="24"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="3" Y="52"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="units\u_datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="23"/>
+        <CursorPos X="26" Y="28"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="units\frame_audiolevels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameAudioLevels"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="8"/>
+        <CursorPos X="47" Y="15"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="units\frame_intersessionmusic.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameIntersessionMusic"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="160"/>
+        <CursorPos X="45" Y="166"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="units\frame_audiocapture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameAudioCapture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="48"/>
+        <CursorPos X="33" Y="65"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="units\frame_viewprojectfolder.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewProjectFolder"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="23"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="units\frame_led.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameLed"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="14"/>
+        <CursorPos X="57" Y="8"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="units\frame_buttononoff.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameButtonOnOff"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="76"/>
+        <CursorPos Y="89"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="units\u_add_action_dmx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAddDMXAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="5" Y="23"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="units\frame_viewprojectors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewProjector"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1800"/>
+        <CursorPos X="63" Y="1808"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="units\u_global_var.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="2"/>
+        <CursorPos X="24" Y="12"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="units\frame_main_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="502"/>
+        <CursorPos X="30" Y="509"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="units\frame_main_sequence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainSequence"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="78"/>
+        <CursorPos X="41" Y="93"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="units\frame_main_addfixture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainAddFixture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="75"/>
+        <CursorPos X="40" Y="88"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="units\u_project_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProjectOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="126"/>
+        <CursorPos X="52" Y="137"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="..\UnitsCommon\project_util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="366"/>
+        <CursorPos Y="379"/>
+        <UsageCount Value="137"/>
+        <Loaded Value="True"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="units\form_about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="58"/>
+        <CursorPos X="7" Y="73"/>
+        <UsageCount Value="84"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="units\u_apputils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="26"/>
+        <CursorPos X="8" Y="40"/>
+        <UsageCount Value="82"/>
+        <Loaded Value="True"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="units\frame_viewfixtureimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFixtureImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="66"/>
+        <CursorPos X="88" Y="88"/>
+        <UsageCount Value="67"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="units\form_changefixtureimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormChangeFixtureImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="50"/>
+        <CursorPos X="29" Y="65"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="..\UNITE COMMUNE\lclhelper.pas"/>
+        <UnitName Value="LCLHelper"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="3" Y="60"/>
+        <UsageCount Value="190"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\alsound.pas"/>
+        <UnitName Value="ALSound"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <TopLine Value="2439"/>
+        <CursorPos Y="2456"/>
+        <UsageCount Value="190"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="..\UNITE COMMUNE\u_logfile.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="51"/>
+        <CursorPos Y="67"/>
+        <UsageCount Value="190"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="units\u_fixture_manager.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="50" Y="45"/>
+        <UsageCount Value="122"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="units\fixture_fromlibrary.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="457"/>
+        <CursorPos X="22" Y="447"/>
+        <UsageCount Value="44"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="units\u_customized_form.pas"/>
+        <ComponentName Value="FormCustomized"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="3"/>
+        <TopLine Value="109"/>
+        <CursorPos X="33" Y="12"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="units\frame_main_light.pas"/>
+        <ComponentName Value="FrameMainLight"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="62" Y="44"/>
+        <UsageCount Value="1"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="units\u_add_fixture.pas"/>
+        <ComponentName Value="FormDMXAddFixture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="77"/>
+        <CursorPos X="3" Y="91"/>
+        <UsageCount Value="168"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="units\u_main_audio.pas"/>
+        <ComponentName Value="FormMainAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="15" Y="97"/>
+        <UsageCount Value="172"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="units\u_main_viewprojector.pas"/>
+        <ComponentName Value="FormViewProjector"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos Y="59"/>
+        <UsageCount Value="171"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="units\u_main_sequencelist.pas"/>
+        <ComponentName Value="FormMainSequenceList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="153"/>
+        <CursorPos X="28" Y="167"/>
+        <UsageCount Value="170"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="units\u_main_intersession.pas"/>
+        <ComponentName Value="FormMainIntersession"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="36" Y="44"/>
+        <UsageCount Value="109"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="units\frame_mainaudio.pas"/>
+        <ComponentName Value="FrameMainAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos Y="92"/>
+        <UsageCount Value="126"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="units\u_prepa_dmx.pas"/>
+        <ComponentName Value="FormPrepaDMX"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="189"/>
+        <CursorPos X="30" Y="206"/>
+        <UsageCount Value="126"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="units\frame_maindmx.pas"/>
+        <ComponentName Value="FrameMainDMX"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="19"/>
+        <UsageCount Value="126"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="units\frame_viewdmxprojectors.pas"/>
+        <ComponentName Value="FrameViewDMXProjectors"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="625"/>
+        <CursorPos X="4" Y="639"/>
+        <UsageCount Value="126"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="units\frame_mainentracte.pas"/>
+        <ComponentName Value="FrameMainEntracte"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="46" Y="49"/>
+        <UsageCount Value="128"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="units\u_prepa_sequence.pas"/>
+        <ComponentName Value="FormPrepaSequence"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="11"/>
+        <UsageCount Value="96"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="units\u_prepa_audio.pas"/>
+        <ComponentName Value="FormPrepaAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="5" Y="301"/>
+        <UsageCount Value="96"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="..\UNITE COMMUNE\BassSoundManager\BassSoundManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="266"/>
+        <CursorPos X="51" Y="279"/>
+        <UsageCount Value="90"/>
+      </Unit102>
+      <Unit103>
+        <Filename Value="units\frame_cmd_all.pas"/>
+        <ComponentName Value="FrameCmdAll"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="24" Y="12"/>
+        <UsageCount Value="83"/>
+      </Unit103>
+      <Unit104>
+        <Filename Value="units\frame_viewdmxdipswitch.pas"/>
+        <ComponentName Value="FrameViewDipSwitch"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="19"/>
+        <CursorPos X="37" Y="71"/>
+        <UsageCount Value="167"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit104>
+      <Unit105>
+        <Filename Value="unit_dmx_device\D2XXUnit.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="250"/>
+        <CursorPos X="5" Y="203"/>
+        <UsageCount Value="65"/>
+      </Unit105>
+      <Unit106>
+        <Filename Value="unit_dmx_device\driver_enttec_usbdmxpro.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="143"/>
+        <CursorPos X="18" Y="160"/>
+        <UsageCount Value="39"/>
+      </Unit106>
+      <Unit107>
+        <Filename Value="units\u_gestion_top.pas"/>
+        <ComponentName Value="FormGestionTop"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="77"/>
+        <CursorPos Y="88"/>
+        <UsageCount Value="35"/>
+      </Unit107>
+      <Unit108>
+        <Filename Value="units\u_edit_complex_action.pas"/>
+        <ComponentName Value="FormEditComplexAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="119"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="32"/>
+      </Unit108>
+      <Unit109>
+        <Filename Value="units\frame_viewtopcontent.pas"/>
+        <ComponentName Value="FrameViewTopContent"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="67"/>
+        <CursorPos X="34" Y="65"/>
+        <UsageCount Value="31"/>
+      </Unit109>
+      <Unit110>
+        <Filename Value="units\u_edit_simple_action.pas"/>
+        <ComponentName Value="FormEditSimpleAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="40" Y="27"/>
+        <UsageCount Value="31"/>
+      </Unit110>
+      <Unit111>
+        <Filename Value="units\u_list_object_rvb.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="32" Y="16"/>
+        <UsageCount Value="10"/>
+      </Unit111>
+      <Unit112>
+        <Filename Value="..\UNITE COMMUNE\BGLVirtualScreenTimeLine\frame_bglvirtualscreen_sequencer.pas"/>
+        <ComponentName Value="FrameBGLSequencer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="714"/>
+        <CursorPos X="19" Y="718"/>
+        <UsageCount Value="90"/>
+      </Unit112>
+      <Unit113>
+        <Filename Value="..\UNITE COMMUNE\project_util.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="147"/>
+        <CursorPos X="29" Y="159"/>
+        <UsageCount Value="90"/>
+      </Unit113>
+      <Unit114>
+        <Filename Value="..\UNITE COMMUNE\utilitaire_fichier.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="477"/>
+        <CursorPos X="40" Y="481"/>
+        <UsageCount Value="92"/>
+      </Unit114>
+      <Unit115>
+        <Filename Value="..\UNITE COMMUNE\undo_redo_manager.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="25" Y="120"/>
+        <UsageCount Value="90"/>
+      </Unit115>
+      <Unit116>
+        <Filename Value="..\UNITE COMMUNE\lightcolorgradient.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="149"/>
+        <CursorPos X="12" Y="163"/>
+        <UsageCount Value="91"/>
+      </Unit116>
+      <Unit117>
+        <Filename Value="unit_dmx_device\hidapi.inc"/>
+        <EditorIndex Value="21"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="159"/>
+        <CursorPos X="15" Y="207"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit117>
+      <Unit118>
+        <Filename Value="unit_dmx_device\hidapi.pas"/>
+        <EditorIndex Value="20"/>
+        <WindowIndex Value="2"/>
+        <CursorPos X="27" Y="9"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit118>
+      <Unit119>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\als_frame_buffers.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <TopLine Value="58"/>
+        <CursorPos X="15" Y="70"/>
+        <UsageCount Value="90"/>
+      </Unit119>
+      <Unit120>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\als_error.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <TopLine Value="40"/>
+        <CursorPos X="57" Y="43"/>
+        <UsageCount Value="90"/>
+      </Unit120>
+      <Unit121>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\als_directfilter.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <TopLine Value="264"/>
+        <CursorPos Y="276"/>
+        <UsageCount Value="90"/>
+      </Unit121>
+      <Unit122>
+        <Filename Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\bgrabitmap-master\bglcontrols\bglvirtualscreen.pas"/>
+        <UnitName Value="BGLVirtualScreen"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="50"/>
+        <CursorPos X="43" Y="63"/>
+        <UsageCount Value="18"/>
+      </Unit122>
+      <Unit123>
+        <Filename Value="units\frame_viewdmxcursors -  BGLVirtualScreen.pas"/>
+        <EditorIndex Value="23"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="91"/>
+        <CursorPos X="50" Y="105"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit123>
+      <Unit124>
+        <Filename Value="units\unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="2"/>
+        <CursorPos X="17" Y="13"/>
+        <UsageCount Value="18"/>
+      </Unit124>
+      <Unit125>
+        <Filename Value="C:\lazarus\lcl\include\treeview.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="4500"/>
+        <CursorPos Y="4520"/>
+        <UsageCount Value="7"/>
+      </Unit125>
+      <Unit126>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\openalsoft.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <UsageCount Value="7"/>
+      </Unit126>
+      <Unit127>
+        <Filename Value="..\UNITE COMMUNE\ALSound\source\als_velocity_curve.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="4"/>
+        <TopLine Value="771"/>
+        <UsageCount Value="84"/>
+      </Unit127>
+      <Unit128>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-stl\src\gvector.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="215"/>
+        <UsageCount Value="7"/>
+      </Unit128>
+      <Unit129>
+        <Filename Value="..\ALSound\source\alsound.pas"/>
+        <UnitName Value="ALSound"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2160"/>
+        <CursorPos X="25" Y="2173"/>
+        <UsageCount Value="68"/>
+      </Unit129>
+      <Unit130>
+        <Filename Value="..\UnitsCommon\undo_redo_manager.pas"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="71" Y="35"/>
+        <UsageCount Value="63"/>
+        <Loaded Value="True"/>
+      </Unit130>
+      <Unit131>
+        <Filename Value="..\ALSound\source\libsndfile.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="971"/>
+        <CursorPos X="39" Y="981"/>
+        <UsageCount Value="48"/>
+      </Unit131>
+      <Unit132>
+        <Filename Value="..\ALSound\source\openalsoft.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="146"/>
+        <CursorPos X="32" Y="158"/>
+        <UsageCount Value="48"/>
+      </Unit132>
+      <Unit133>
+        <Filename Value="..\UnitsCommon\lightcolorgradient.pas"/>
+        <EditorIndex Value="20"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="19"/>
+        <UsageCount Value="56"/>
+        <Loaded Value="True"/>
+      </Unit133>
+      <Unit134>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2617"/>
+        <CursorPos Y="2632"/>
+        <UsageCount Value="12"/>
+      </Unit134>
+      <Unit135>
+        <Filename Value="..\UnitsCommon\utilitaire_bgrabitmap.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="11"/>
+        <CursorPos X="47" Y="23"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit135>
+      <Unit136>
+        <Filename Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\unibitmap.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="656"/>
+        <CursorPos X="14" Y="651"/>
+        <UsageCount Value="7"/>
+      </Unit136>
+      <Unit137>
+        <Filename Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgraopengltype.pas"/>
+        <UnitName Value="BGRAOpenGLType"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="684"/>
+        <CursorPos Y="697"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit137>
+      <Unit138>
+        <Filename Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgralclbitmap.pas"/>
+        <UnitName Value="BGRALCLBitmap"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="1038"/>
+        <CursorPos Y="1051"/>
+        <UsageCount Value="8"/>
+      </Unit138>
+      <Unit139>
+        <Filename Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\bgrasvg.pas"/>
+        <UnitName Value="BGRASVG"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="210"/>
+        <CursorPos X="3" Y="220"/>
+        <UsageCount Value="20"/>
+      </Unit139>
+      <Unit140>
+        <Filename Value="..\UnitsCommon\utilitaire_fichier.pas"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="40"/>
+        <CursorPos X="18" Y="58"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit140>
+      <Unit141>
+        <Filename Value="C:\lazarus\lcl\filectrl.pp"/>
+        <UnitName Value="FileCtrl"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos X="15" Y="71"/>
+        <UsageCount Value="10"/>
+      </Unit141>
+      <Unit142>
+        <Filename Value="C:\lazarus\lcl\include\customlistbox.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="620"/>
+        <CursorPos Y="641"/>
+        <UsageCount Value="10"/>
+      </Unit142>
+      <Unit143>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32listsl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="229"/>
+        <CursorPos Y="242"/>
+        <UsageCount Value="10"/>
+      </Unit143>
+    </Units>
+    <OtherDefines Count="2">
+      <Define0 Value="BassSoundManager_USEFX"/>
+      <Define1 Value="Debug"/>
+    </OtherDefines>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="units\frame_viewuniverselist.pas"/>
+        <Caret Line="74" Column="36" TopLine="62"/>
+      </Position1>
+      <Position2>
+        <Filename Value="units\u_devicemanager_form.pas"/>
+        <Caret Line="236" Column="49" TopLine="223"/>
+      </Position2>
+      <Position3>
+        <Filename Value="units\frame_main_addfixture.pas"/>
+        <Caret Line="88" Column="40" TopLine="75"/>
+      </Position3>
+      <Position4>
+        <Filename Value="units\frame_viewfixtureslist.pas"/>
+        <Caret Line="75" Column="35" TopLine="62"/>
+      </Position4>
+      <Position5>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="436" Column="59" TopLine="424"/>
+      </Position5>
+      <Position6>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="486" Column="54" TopLine="474"/>
+      </Position6>
+      <Position7>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="515" Column="54" TopLine="504"/>
+      </Position7>
+      <Position8>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="548" Column="54" TopLine="536"/>
+      </Position8>
+      <Position9>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="575" Column="55" TopLine="564"/>
+      </Position9>
+      <Position10>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="580" Column="60" TopLine="568"/>
+      </Position10>
+      <Position11>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="600" Column="54" TopLine="589"/>
+      </Position11>
+      <Position12>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <Caret Line="640" Column="41" TopLine="620"/>
+      </Position12>
+      <Position13>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <Caret Line="470" Column="20" TopLine="458"/>
+      </Position13>
+      <Position14>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <Caret Line="635" Column="31" TopLine="623"/>
+      </Position14>
+      <Position15>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <Caret Line="899" Column="31" TopLine="887"/>
+      </Position15>
+      <Position16>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <Caret Line="902" Column="26" TopLine="887"/>
+      </Position16>
+      <Position17>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="305" Column="67" TopLine="292"/>
+      </Position17>
+      <Position18>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="307" Column="59" TopLine="292"/>
+      </Position18>
+      <Position19>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="354" Column="45" TopLine="342"/>
+      </Position19>
+      <Position20>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="386" Column="45" TopLine="374"/>
+      </Position20>
+      <Position21>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="412" Column="43" TopLine="400"/>
+      </Position21>
+      <Position22>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="460" Column="43" TopLine="448"/>
+      </Position22>
+      <Position23>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="488" Column="58" TopLine="476"/>
+      </Position23>
+      <Position24>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="493" Column="51" TopLine="476"/>
+      </Position24>
+      <Position25>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <Caret Line="515" Column="45" TopLine="503"/>
+      </Position25>
+      <Position26>
+        <Filename Value="units\frame_viewchannelslist.pas"/>
+        <Caret Line="75" Column="45" TopLine="61"/>
+      </Position26>
+      <Position27>
+        <Filename Value="units\frame_fx_rgbchaser.pas"/>
+        <Caret Line="380" Column="63" TopLine="368"/>
+      </Position27>
+      <Position28>
+        <Filename Value="units\frame_viewfixtureinfo.pas"/>
+        <Caret Line="124" Column="50" TopLine="112"/>
+      </Position28>
+      <Position29>
+        <Filename Value="units\frame_viewfixtureinfo.pas"/>
+        <Caret Line="127" Column="36" TopLine="112"/>
+      </Position29>
+      <Position30>
+        <Filename Value="units\frame_viewprojectors.pas"/>
+        <Caret Line="416" Column="60" TopLine="403"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\Users\JLS\AppData\Local\lazarus\onlinepackagemanager\packages\bgrabitmap-master\bgrabitmap\bgraopengltype.pas"/>
+        <Line Value="697"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

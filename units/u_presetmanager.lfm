@@ -1,0 +1,137 @@
+object PresetManager: TPresetManager
+  Left = 317
+  Height = 240
+  Top = 127
+  Width = 320
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 240
+  ClientWidth = 320
+  Color = 13106941
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.6.0'
+  object LB: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 230
+    Top = 5
+    Width = 197
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Color = 9240058
+    ItemHeight = 0
+    OnSelectionChange = LBSelectionChange
+    TabOrder = 0
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = LB
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LB
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 207
+    Height = 22
+    Hint = 'Update the selected preset with the current settings'
+    Top = 10
+    Width = 108
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    Caption = 'sUpdate'
+    ImageIndex = 6
+    OnClick = SpeedButton1Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object SpeedButton2: TSpeedButton
+    AnchorSideLeft.Control = LB
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 207
+    Height = 22
+    Hint = 'Delete the selected preset'
+    Top = 72
+    Width = 108
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 40
+    BorderSpacing.Right = 5
+    Caption = 'sDelete'
+    ImageIndex = 1
+    OnClick = SpeedButton2Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object SpeedButton3: TSpeedButton
+    AnchorSideLeft.Control = LB
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = SpeedButton2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 207
+    Height = 22
+    Hint = 'Rename the selected preset'
+    Top = 114
+    Width = 108
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 20
+    BorderSpacing.Right = 5
+    Caption = 'sRename'
+    OnClick = SpeedButton3Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object SpeedButton4: TSpeedButton
+    AnchorSideLeft.Control = LB
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LB
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 207
+    Height = 22
+    Top = 208
+    Width = 108
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'sClose'
+    ImageIndex = 2
+    OnClick = SpeedButton4Click
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 32
+    Top = 24
+    object MIAdd: TMenuItem
+      Caption = 'sAdd'
+      ImageIndex = 0
+      OnClick = MIAddClick
+    end
+    object MIManager: TMenuItem
+      Caption = 'Preset manager...'
+      ImageIndex = 19
+      OnClick = MIManagerClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+  end
+end

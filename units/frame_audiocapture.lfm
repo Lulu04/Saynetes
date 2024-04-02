@@ -1,0 +1,413 @@
+object FrameAudioCapture: TFrameAudioCapture
+  Left = 0
+  Height = 279
+  Top = 0
+  Width = 298
+  ClientHeight = 279
+  ClientWidth = 298
+  TabOrder = 0
+  DesignLeft = 566
+  DesignTop = 225
+  object Panel2: TPanel
+    Left = 0
+    Height = 279
+    Top = 0
+    Width = 298
+    Align = alClient
+    BevelColor = 247036
+    BevelOuter = bvNone
+    ClientHeight = 279
+    ClientWidth = 298
+    Color = 6517620
+    ParentColor = False
+    TabOrder = 0
+    object Shape2: TShape
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel7
+      AnchorSideBottom.Control = Panel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 5
+      Height = 239
+      Top = 35
+      Width = 56
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Bottom = 5
+      Brush.Color = 6978171
+      Pen.Color = 3552822
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Shape3: TShape
+      Tag = 1
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      Cursor = crHandPoint
+      Left = 5
+      Height = 31
+      Top = 2
+      Width = 31
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 2
+      Brush.Color = 14079702
+      Pen.Color = 3552822
+      Shape = stRoundSquare
+    end
+    object SpeedButton3: TSpeedButton
+      Tag = 1
+      AnchorSideLeft.Control = Shape3
+      AnchorSideTop.Control = Shape3
+      AnchorSideRight.Control = Shape3
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape3
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 5
+      Height = 31
+      Hint = 'Starts/stops listening to the sound captured from a microphone'#13#10'connected to the computer or from the line input.'
+      Top = 2
+      Width = 31
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 30
+      OnClick = SpeedButton3Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Left = 237
+      Height = 17
+      Top = 3
+      Width = 58
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      Caption = 'CAPTURE'
+      Font.Color = 247036
+      Font.Height = 18
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel7: TPanel
+      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 66
+      Height = 239
+      Top = 35
+      Width = 26
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 15
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 5
+      BevelOuter = bvNone
+      TabOrder = 0
+    end
+    object TrackBar1: TTrackBar
+      AnchorSideLeft.Control = Shape2
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Shape2
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 22
+      Height = 223
+      Top = 50
+      Width = 31
+      Frequency = 30
+      Max = 282
+      OnChange = TrackBar1Change
+      Orientation = trVertical
+      Position = 100
+      Reversed = True
+      ShowSelRange = False
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 17
+      BorderSpacing.Bottom = 1
+      TabOrder = 1
+    end
+    object Label7: TLabel
+      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Shape2
+      AnchorSideBottom.Control = TrackBar1
+      Left = 18
+      Height = 15
+      Top = 35
+      Width = 30
+      Alignment = taCenter
+      Caption = 'Label'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Shape1: TShape
+      AnchorSideLeft.Control = Panel7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 97
+      Height = 60
+      Top = 214
+      Width = 196
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 5
+      Brush.Color = 6978171
+      Pen.Color = 3552822
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object TrackBar2: TTrackBar
+      AnchorSideLeft.Control = Shape1
+      AnchorSideTop.Control = Shape1
+      AnchorSideRight.Control = Shape1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 99
+      Height = 24
+      Top = 242
+      Width = 192
+      Frequency = 20
+      Max = 100
+      Min = -100
+      OnChange = TrackBar2Change
+      Position = 0
+      ShowSelRange = False
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 8
+      TabOrder = 2
+    end
+    object Label2: TLabel
+      AnchorSideLeft.Control = TrackBar2
+      AnchorSideTop.Control = Shape1
+      Left = 105
+      Height = 15
+      Top = 219
+      Width = 28
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 5
+      Caption = 'Label'
+      Font.Color = 15395562
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpeedButton4: TSpeedButton
+      AnchorSideTop.Control = Label2
+      AnchorSideRight.Control = TrackBar2
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 251
+      Height = 19
+      Top = 219
+      Width = 34
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 6
+      Caption = 'Label'
+      Font.Style = [fsItalic]
+      OnClick = SpeedButton4Click
+      ParentFont = False
+    end
+    object Shape4: TShape
+      AnchorSideTop.Control = Shape2
+      AnchorSideRight.Control = Shape1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape1
+      Left = 237
+      Height = 174
+      Top = 35
+      Width = 56
+      Anchors = [akTop, akRight, akBottom]
+      Brush.Color = 6978171
+      Pen.Color = 3552822
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object TrackBar3: TTrackBar
+      AnchorSideLeft.Control = Shape4
+      AnchorSideTop.Control = Label8
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Shape4
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape4
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 253
+      Height = 158
+      Top = 50
+      Width = 40
+      Frequency = 10
+      Max = 100
+      OnChange = TrackBar3Change
+      Orientation = trVertical
+      Position = 100
+      Reversed = True
+      ShowSelRange = False
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 16
+      BorderSpacing.Bottom = 1
+      TabOrder = 3
+    end
+    object Label8: TLabel
+      AnchorSideLeft.Control = Shape4
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Shape4
+      AnchorSideBottom.Control = TrackBar1
+      Left = 243
+      Height = 15
+      Top = 35
+      Width = 45
+      Alignment = taCenter
+      Caption = 'sVolume'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label3: TLabel
+      AnchorSideLeft.Control = Panel7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Shape4
+      AnchorSideBottom.Control = Label4
+      Left = 97
+      Height = 15
+      Top = 95
+      Width = 135
+      Alignment = taCenter
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 5
+      Caption = 'Label'
+      Font.Color = 15395562
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Control = Panel7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Shape4
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Shape4
+      AnchorSideBottom.Control = Label5
+      Left = 97
+      Height = 15
+      Top = 115
+      Width = 135
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      Caption = 'Label'
+      Font.Color = 15395562
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = Panel7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label4
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Shape4
+      Left = 97
+      Height = 15
+      Top = 135
+      Width = 135
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      Caption = 'Label'
+      Font.Color = 15395562
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Panel1: TPanel
+      AnchorSideLeft.Control = SpeedButton3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = SpeedButton3
+      AnchorSideTop.Side = asrCenter
+      Left = 51
+      Height = 10
+      Top = 12
+      Width = 14
+      BorderSpacing.Left = 15
+      BevelOuter = bvNone
+      TabOrder = 4
+    end
+    object SpeedButton1: TSpeedButton
+      AnchorSideRight.Control = Label3
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Label3
+      Cursor = crHandPoint
+      Left = 190
+      Height = 20
+      Hint = 'Remove all audio effects'
+      Top = 75
+      Width = 37
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Right = 5
+      Caption = 'FX'
+      Images = DataModule1.ImageList1
+      ImageIndex = 2
+      OnClick = SpeedButton1Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton2: TSpeedButton
+      AnchorSideLeft.Control = Label3
+      AnchorSideTop.Control = SpeedButton1
+      Cursor = crHandPoint
+      Left = 102
+      Height = 20
+      Hint = 'Apply audio effects'
+      Top = 75
+      Width = 37
+      AutoSize = True
+      BorderSpacing.Left = 5
+      Caption = 'FX'
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 64
+    Top = 208
+  end
+end

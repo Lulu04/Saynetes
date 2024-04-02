@@ -1,0 +1,1 @@
+KERNEL=="1-3.2", SUBSYSTEMS=="usb", ATTRS{product}=="USB K8062", RUN+="/root/dmxd"

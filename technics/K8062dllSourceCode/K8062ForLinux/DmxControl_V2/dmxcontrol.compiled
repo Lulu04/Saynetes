@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1594078105"/>
+  <Params Value=" -Tlinux -Px86_64 -Mfpc -Sgi -Cg -O1 -g -gl -XX -l -vewnhibq -Fu/usr/share/lazarus/2.0.10/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.0.10/components/ideintf/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.0.10/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.0.10/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.0.10/lcl/units/x86_64-linux -Fu/usr/share/lazarus/2.0.10/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/2.0.10/packager/units/x86_64-linux -Fu/media/sf_pascal/Saynètes/technics/K8062dllSourceCode/K8062ForLinux/DmxControl_V2/ -o/media/sf_pascal/Saynètes/technics/K8062dllSourceCode/K8062ForLinux/DmxControl_V2/dmxcontrol -dLCL -dLCLgtk2 dmxcontrol.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

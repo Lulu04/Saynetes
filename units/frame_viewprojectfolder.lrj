@@ -1,0 +1,8 @@
+{"version":1,"strings":[
+{"hash":14669314,"name":"tframeviewprojectfolder.label7.caption","sourcebytes":[80,114,111,106,101,99,116,115,32,102,111,108,100,101,114],"value":"Projects folder"},
+{"hash":32139842,"name":"tframeviewprojectfolder.flbprojects.hint","sourcebytes":[84,104,101,32,108,105,115,116,32,111,102,32,112,114,111,106,101,99,116,115,32,102,111,117,110,100,32,105,110,32,116,104,101,32,97,98,111,118,101,32,102,111,108,100,101,114],"value":"The list of projects found in the above folder"},
+{"hash":71639044,"name":"tframeviewprojectfolder.buttonopenproject.hint","sourcebytes":[79,112,101,110,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,111,106,101,99,116],"value":"Open the selected project"},
+{"hash":353982,"name":"tframeviewprojectfolder.buttonopenproject.caption","sourcebytes":[79,112,101,110],"value":"Open"},
+{"hash":121544131,"name":"tframeviewprojectfolder.label8.caption","sourcebytes":[80,82,79,74,69,67,84,83],"value":"PROJECTS"},
+{"hash":5404860,"name":"tframeviewprojectfolder.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
+]}

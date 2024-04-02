@@ -1,0 +1,23 @@
+{"version":1,"strings":[
+{"hash":52847203,"name":"tformotheraction.caption","sourcebytes":[79,84,72,69,82,32,97,99,116,105,111,110,115],"value":"OTHER actions"},
+{"hash":193025973,"name":"tformotheraction.speedbutton1.hint","sourcebytes":[83,116,97,114,116,32,97,32,84,79,80,32,102,114,111,109,32,116,104,105,115,32,111,110,101],"value":"Start a TOP from this one"},
+{"hash":100853413,"name":"tformotheraction.speedbutton1.caption","sourcebytes":[83,116,97,114,116,32,115,101,113,117,101,110,99,101],"value":"Start sequence"},
+{"hash":109364197,"name":"tformotheraction.speedbutton2.hint","sourcebytes":[83,116,111,112,32,97,32,84,79,80,32,102,114,111,109,32,116,104,105,115,32,111,110,101],"value":"Stop a TOP from this one"},
+{"hash":104702805,"name":"tformotheraction.speedbutton2.caption","sourcebytes":[83,116,111,112,32,115,101,113,117,101,110,99,101],"value":"Stop sequence"},
+{"hash":190332062,"name":"tformotheraction.speedbutton3.hint","sourcebytes":[76,111,111,112,32,116,104,105,115,32,115,101,113,117,101,110,99,101,32,116,111,32,105,116,115,32,98,101,103,105,110,110,105,110,103,46,13,10,65,108,108,32,97,99,116,105,111,110,32,116,104,97,116,32,102,111,108,108,111,119,32,119,105,108,108,32,98,101,32,105,103,110,111,114,101,100,46],"value":"Loop this sequence to its beginning.\r\nAll action that follow will be ignored."},
+{"hash":267232085,"name":"tformotheraction.speedbutton3.caption","sourcebytes":[76,111,111,112,32,115,101,113,117,101,110,99,101],"value":"Loop sequence"},
+{"hash":489380,"name":"tformotheraction.badd1.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
+{"hash":225056692,"name":"tformotheraction.label1.caption","sourcebytes":[83,101,113,117,101,110,99,101,32,116,111,32,115,116,97,114,116],"value":"Sequence to start"},
+{"hash":489380,"name":"tformotheraction.badd2.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
+{"hash":47620752,"name":"tformotheraction.label2.caption","sourcebytes":[83,101,113,117,101,110,99,101,32,116,111,32,115,116,111,112],"value":"Sequence to stop"},
+{"hash":489380,"name":"tformotheraction.badd3.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
+{"hash":489380,"name":"tformotheraction.badd4.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
+{"hash":168290296,"name":"tformotheraction.label3.caption","sourcebytes":[83,101,113,117,101,110,99,101,32,116,111,32,115,116,114,101,116,99,104],"value":"Sequence to stretch"},
+{"hash":191336164,"name":"tformotheraction.label4.caption","sourcebytes":[68,117,114,97,116,105,111,110,32,105,110,32,115,101,99,111,110,100],"value":"Duration in second"},
+{"hash":204842361,"name":"tformotheraction.label25.caption","sourcebytes":[86,101,108,111,99,105,116,121],"value":"Velocity"},
+{"hash":5925812,"name":"tformotheraction.label5.caption","sourcebytes":[83,112,101,101,100],"value":"Speed"},
+{"hash":5404860,"name":"tformotheraction.label11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5679012,"name":"tformotheraction.speedbutton5.caption","sourcebytes":[82,69,83,69,84],"value":"RESET"},
+{"hash":21666142,"name":"tformotheraction.speedbutton4.hint","sourcebytes":[83,116,114,101,116,99,104,32,116,105,109,101,32,97,108,108,111,119,115,32,121,111,117,32,116,111,32,115,112,101,101,100,32,117,112,47,100,111,119,110,32,116,104,101,32,101,120,101,99,117,116,105,111,110,32,111,102,32,97,110,111,116,104,101,114,32,115,101,113,117,101,110,99,101,46],"value":"Stretch time allows you to speed up/down the execution of another sequence."},
+{"hash":202122389,"name":"tformotheraction.speedbutton4.caption","sourcebytes":[83,116,114,101,116,99,104,32,116,105,109,101],"value":"Stretch time"}
+]}

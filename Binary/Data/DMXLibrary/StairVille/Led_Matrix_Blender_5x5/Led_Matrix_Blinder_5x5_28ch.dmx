@@ -1,0 +1,140 @@
+14
+96
+LED Matrix Blinder 5x5_28ch
+28
+1
+Master Dimmer
+1
+0-->255 : 
+2
+Dimmer
+1
+0-->255 : led 1
+2
+Dimmer
+1
+0-->255 : led 2
+2
+Dimmer
+1
+0-->255 : led 3
+2
+Dimmer
+1
+0-->255 : led 4
+2
+Dimmer
+1
+0-->255 : led 5
+2
+Dimmer
+1
+0-->255 : led 6
+2
+Dimmer
+1
+0-->255 : led 7
+2
+Dimmer
+1
+0-->255 : led 8
+2
+Dimmer
+1
+0-->255 : led 9
+2
+Dimmer
+1
+0-->255 : led 10
+2
+Dimmer
+1
+0-->255 : led 11
+2
+Dimmer
+1
+0-->255 : led 12
+2
+Dimmer
+1
+0-->255 : led 13
+2
+Dimmer
+1
+0-->255 : led 14
+2
+Dimmer
+1
+0-->255 : led 15
+2
+Dimmer
+1
+0-->255 : led 16
+2
+Dimmer
+1
+0-->255 : led 17
+2
+Dimmer
+1
+0-->255 : led 18
+2
+Dimmer
+1
+0-->255 : led 19
+2
+Dimmer
+1
+0-->255 : led 20
+2
+Dimmer
+1
+0-->255 : led 21
+2
+Dimmer
+1
+0-->255 : led 22
+2
+Dimmer
+1
+0-->255 : led 23
+2
+Dimmer
+1
+0-->255 : led 24
+2
+Dimmer
+1
+0-->255 : led 25
+0
+Channel 27
+25
+0-->9 : all leds ON
+10-->19 : Letter
+20-->29 : Number
+30-->39 : show 1
+40-->49 : show 2
+50-->59 : show 3
+60-->69 : show 4
+70-->79 : show 5
+80-->89 : show 6
+90-->99 : show 7
+100-->109 : show 8
+110-->119 : show 9
+120-->129 : show 10
+130-->139 : show 11
+140-->149 : show 12
+150-->159 : show 13
+160-->169 : show 14
+170-->179 : show 15
+180-->189 : show 16
+190-->199 : show 17
+200-->209 : show 18
+210-->219 : show 19
+220-->229 : show 20
+230-->239 : show 21
+240-->255 : sound controlled
+0
+Channel 28
+1
+0-->255 : choice of the letter or number

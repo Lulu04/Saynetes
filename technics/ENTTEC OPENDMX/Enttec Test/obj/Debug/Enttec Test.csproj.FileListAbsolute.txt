@@ -1,0 +1,9 @@
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\bin\Debug\Enttec Test.exe.config
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\bin\Debug\Enttec Test.exe
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\bin\Debug\Enttec Test.pdb
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec_Test.Main.resources
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec_Test.Properties.Resources.resources
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec Test.csproj.GenerateResource.Cache
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec Test.exe
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec Test.pdb
+E:\Development\AVMS Applications\PC Applications\1. EXAMPLE CODE\DMX512\Enttec DMX\Enttec Test\Enttec Test\Enttec Test\obj\Debug\Enttec Test.csprojResolveAssemblyReference.cache

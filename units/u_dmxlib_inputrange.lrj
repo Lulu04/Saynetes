@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":4767230,"name":"tforminputdmxrange.label1.caption","sourcebytes":[66,101,103,105,110],"value":"Begin"},
+{"hash":19524,"name":"tforminputdmxrange.label2.caption","sourcebytes":[69,110,100],"value":"End"},
+{"hash":30811,"name":"tforminputdmxrange.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":127420876,"name":"tforminputdmxrange.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"}
+]}

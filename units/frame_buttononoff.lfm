@@ -1,0 +1,47 @@
+object FrameButtonOnOff: TFrameButtonOnOff
+  Left = 0
+  Height = 115
+  Top = 0
+  Width = 120
+  ClientHeight = 115
+  ClientWidth = 120
+  TabOrder = 0
+  DesignLeft = 338
+  DesignTop = 133
+  object Shape3: TShape
+    Tag = 1
+    Cursor = crHandPoint
+    Left = 5
+    Height = 113
+    Top = 2
+    Width = 115
+    Align = alClient
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    Brush.Color = 14079702
+    Pen.Color = 3552822
+    Shape = stRoundSquare
+  end
+  object SpeedButton3: TSpeedButton
+    Tag = 1
+    AnchorSideLeft.Control = Shape3
+    AnchorSideTop.Control = Shape3
+    AnchorSideRight.Control = Shape3
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Shape3
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 5
+    Height = 113
+    Hint = 'Starts/stops listening to the sound captured from a microphone'#13#10'connected to the computer or from the line input.'
+    Top = 2
+    Width = 115
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Flat = True
+    Images = DataModule1.ImageList1
+    ImageIndex = 30
+    OnClick = SpeedButton3Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+end

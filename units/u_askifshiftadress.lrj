@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":5404860,"name":"tformaskifshiftadress.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":495555,"name":"tformaskifshiftadress.speedbutton1.caption","sourcebytes":[115,89,101,115],"value":"sYes"},
+{"hash":127420876,"name":"tformaskifshiftadress.speedbutton2.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":258289363,"name":"tformaskifshiftadress.label2.caption","sourcebytes":[83,104,105,102,116,32,116,104,101,32,97,100,114,101,115,115,101,115,32,111,102,32,116,104,101,32,111,116,104,101,114,32,102,105,120,116,117,114,101,115],"value":"Shift the adresses of the other fixtures"},
+{"hash":103976756,"name":"tformaskifshiftadress.label3.caption","sourcebytes":[68,111,110,39,116,32,115,104,105,102,116],"value":"Don't shift"}
+]}

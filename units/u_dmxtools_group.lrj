@@ -1,0 +1,14 @@
+{"version":1,"strings":[
+{"hash":111298131,"name":"tformdmxgroup.caption","sourcebytes":[68,77,88,32,32,103,114,111,117,112,115],"value":"DMX  groups"},
+{"hash":259893139,"name":"tformdmxgroup.speedbutton1.hint","sourcebytes":[83,104,111,119,32,116,104,101,32,99,104,97,110,110,101,108,32,103,114,111,117,112,115],"value":"Show the channel groups"},
+{"hash":243613091,"name":"tformdmxgroup.speedbutton1.caption","sourcebytes":[115,67,104,97,110,110,101,108,115],"value":"sChannels"},
+{"hash":23892163,"name":"tformdmxgroup.speedbutton2.hint","sourcebytes":[83,104,111,119,32,116,104,101,32,82,71,66,32,103,114,111,117,112,115],"value":"Show the RGB groups"},
+{"hash":493234,"name":"tformdmxgroup.speedbutton2.caption","sourcebytes":[115,82,71,66],"value":"sRGB"},
+{"hash":140923268,"name":"tformdmxgroup.bloadfrom.hint","sourcebytes":[73,109,112,111,114,116,32,116,104,101,32,103,114,111,117,112,32,108,105,115,116,13,10,102,114,111,109,32,97,110,111,116,104,101,114,32,112,114,111,106,101,99,116],"value":"Import the group list\r\nfrom another project"},
+{"hash":241433612,"name":"tformdmxgroup.speedbutton3.hint","sourcebytes":[85,110,115,101,108,101,99,116,32,97,108,108],"value":"Unselect all"},
+{"hash":143411269,"name":"tformdmxgroup.michannelrename.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
+{"hash":128724181,"name":"tformdmxgroup.michanneldelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":143411269,"name":"tformdmxgroup.mirgbrename.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
+{"hash":128724181,"name":"tformdmxgroup.mirgbdelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":12445060,"name":"tformdmxgroup.od1.title","sourcebytes":[76,111,97,100,32,68,77,88,32,103,114,111,117,112,115,32,102,114,111,109,32,97,110,111,116,104,101,114,32,112,114,111,106,101,99,116],"value":"Load DMX groups from another project"}
+]}

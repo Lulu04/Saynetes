@@ -1,0 +1,15 @@
+{"version":1,"strings":[
+{"hash":5942387,"name":"tframefxchannelchaser.label22.caption","sourcebytes":[83,116,101,112,115],"value":"Steps"},
+{"hash":168519168,"name":"tframefxchannelchaser.label23.caption","sourcebytes":[115,101,99,111,110,100,115,32,112,101,114,32,115,116,101,112],"value":"seconds per step"},
+{"hash":194069936,"name":"tframefxchannelchaser.shape5.hint","sourcebytes":[77,111,118,101,115,32,116,111,32,115,101,116,32,116,104,101,32,100,101,108,97,121,32,98,101,116,119,101,101,110,32,101,97,99,104,32,115,116,101,112],"value":"Moves to set the delay between each step"},
+{"hash":4899465,"name":"tframefxchannelchaser.label25.caption","sourcebytes":[68,101,108,97,121],"value":"Delay"},
+{"hash":174563351,"name":"tframefxchannelchaser.label26.caption","sourcebytes":[83,112,97,99,105,110,103],"value":"Spacing"},
+{"hash":28082215,"name":"tframefxchannelchaser.speedbutton9.hint","sourcebytes":[83,116,97,114,116,32,116,104,101,32,112,114,101,118,105,101,119],"value":"Start the preview"},
+{"hash":99845079,"name":"tframefxchannelchaser.speedbutton10.hint","sourcebytes":[83,116,111,112,32,116,104,101,32,112,114,101,118,105,101,119],"value":"Stop the preview"},
+{"hash":5404860,"name":"tframefxchannelchaser.label24.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5404860,"name":"tframefxchannelchaser.badd6.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":213795144,"name":"tframefxchannelchaser.label2.caption","sourcebytes":[76,101,118,101,108,32,109,97,120],"value":"Level max"},
+{"hash":5404860,"name":"tframefxchannelchaser.label11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":213795134,"name":"tframefxchannelchaser.label4.caption","sourcebytes":[76,101,118,101,108,32,109,105,110],"value":"Level min"},
+{"hash":5404860,"name":"tframefxchannelchaser.label13.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
+]}

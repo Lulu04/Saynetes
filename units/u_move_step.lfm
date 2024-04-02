@@ -1,0 +1,175 @@
+object Form_MoveStep: TForm_MoveStep
+  Left = 434
+  Height = 170
+  Top = 275
+  Width = 474
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 170
+  ClientWidth = 474
+  Color = 5596774
+  KeyPreview = True
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.4.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 170
+    Top = 0
+    Width = 474
+    Align = alClient
+    Brush.Color = 2736090
+    Brush.Style = bsClear
+    Pen.Color = 2736090
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = S4
+    Left = 48
+    Height = 15
+    Top = 24
+    Width = 162
+    Caption = 'Click on the needed alignment'
+    Font.Color = 15395562
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape2: TShape
+    AnchorSideLeft.Control = Owner
+    Left = 30
+    Height = 80
+    Top = 40
+    Width = 2
+    BorderSpacing.Left = 30
+  end
+  object S4: TShape
+    AnchorSideTop.Control = S1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = S1
+    Cursor = crHandPoint
+    Left = 48
+    Height = 16
+    Top = 67
+    Width = 78
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 4
+    Brush.Color = 2736090
+    Brush.Style = bsDiagCross
+    Pen.Color = 2736090
+    Pen.Style = psDot
+    OnMouseUp = S4MouseUp
+    Shape = stRoundRect
+  end
+  object S5: TShape
+    AnchorSideLeft.Control = S1
+    AnchorSideTop.Control = S1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 126
+    Height = 16
+    Top = 87
+    Width = 56
+    BorderSpacing.Top = 24
+    Brush.Color = 2736090
+    Brush.Style = bsDiagCross
+    Pen.Color = 2736090
+    Pen.Style = psDot
+    OnMouseUp = S4MouseUp
+    Shape = stRoundRect
+  end
+  object S1: TShape
+    AnchorSideLeft.Control = Shape3
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Shape2
+    Left = 126
+    Height = 16
+    Top = 47
+    Width = 222
+    BorderSpacing.Top = 7
+    Brush.Color = 2736090
+    Pen.Color = 14787846
+    Shape = stRoundRect
+  end
+  object S3: TShape
+    AnchorSideTop.Control = S1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = S1
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 292
+    Height = 16
+    Top = 87
+    Width = 56
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 24
+    Brush.Color = 2736090
+    Brush.Style = bsDiagCross
+    Pen.Color = 2736090
+    Pen.Style = psDot
+    OnMouseUp = S4MouseUp
+    Shape = stRoundRect
+  end
+  object S2: TShape
+    AnchorSideLeft.Control = S1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = S1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 348
+    Height = 16
+    Top = 67
+    Width = 84
+    BorderSpacing.Top = 4
+    Brush.Color = 2736090
+    Brush.Style = bsDiagCross
+    Pen.Color = 2736090
+    Pen.Style = psDot
+    OnMouseUp = S4MouseUp
+    Shape = stRoundRect
+  end
+  object Shape3: TShape
+    AnchorSideLeft.Control = Shape2
+    AnchorSideTop.Control = Shape2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 30
+    Height = 2
+    Top = 120
+    Width = 414
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 30
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = S1
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = S1
+    AnchorSideTop.Side = asrCenter
+    Left = 227
+    Height = 12
+    Top = 49
+    Width = 21
+    Caption = 'Label'
+    Font.Color = clBlack
+    Font.Height = 12
+    ParentColor = False
+    ParentFont = False
+  end
+  object BCancel: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 197
+    Height = 24
+    Top = 138
+    Width = 80
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 8
+    Caption = 'sCancel'
+    Images = DataModule1.ImageList1
+    ImageIndex = 2
+    OnClick = BCancelClick
+  end
+end

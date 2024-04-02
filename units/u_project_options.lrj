@@ -1,0 +1,17 @@
+{"version":1,"strings":[
+{"hash":7411795,"name":"tformprojectoptions.caption","sourcebytes":[80,114,111,106,101,99,116,32,111,112,116,105,111,110,115],"value":"Project options"},
+{"hash":30811,"name":"tformprojectoptions.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":127420876,"name":"tformprojectoptions.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":125335353,"name":"tformprojectoptions.bapply.caption","sourcebytes":[115,65,112,112,108,121],"value":"sApply"},
+{"hash":191803740,"name":"tformprojectoptions.label1.caption","sourcebytes":[83,104,111,119,32,99,97,112,116,117,114,101,32,112,97,110,101,108],"value":"Show capture panel"},
+{"hash":197590268,"name":"tformprojectoptions.label2.caption","sourcebytes":[83,104,111,119,32,115,111,117,110,100,32,99,111,110,116,114,111,108,32,112,97,110,101,108],"value":"Show sound control panel"},
+{"hash":227746119,"name":"tformprojectoptions.dividerbevel3.caption","sourcebytes":[80,97,110,101,108,32,116,111,32,115,104,111,119],"value":"Panel to show"},
+{"hash":132378675,"name":"tformprojectoptions.dividerbevel5.caption","sourcebytes":[68,77,88,32,97,99,116,105,111,110,115],"value":"DMX actions"},
+{"hash":15689715,"name":"tformprojectoptions.label3.caption","sourcebytes":[83,104,111,119,32,68,77,88,32,97,100,114,101,115,115],"value":"Show DMX adress"},
+{"hash":249580389,"name":"tformprojectoptions.label5.caption","sourcebytes":[83,104,111,119,32,102,105,120,116,117,114,101,32,110,97,109,101],"value":"Show fixture name"},
+{"hash":117290014,"name":"tformprojectoptions.label6.caption","sourcebytes":[83,104,111,119,32,102,105,120,116,117,114,101,32,100,101,115,99,114,105,112,116,105,111,110],"value":"Show fixture description"},
+{"hash":220386789,"name":"tformprojectoptions.label7.caption","sourcebytes":[83,104,111,119,32,99,104,97,110,110,101,108,32,110,97,109,101],"value":"Show channel name"},
+{"hash":232837203,"name":"tformprojectoptions.label4.caption","sourcebytes":[83,104,111,119,32,99,111,108,111,114,32,97,115],"value":"Show color as"},
+{"hash":41703413,"name":"tformprojectoptions.label8.caption","sourcebytes":[99,111,108,111,114,101,100,32,114,101,99,116,97,110,103,108,101],"value":"colored rectangle"},
+{"hash":150893673,"name":"tformprojectoptions.label9.caption","sourcebytes":[116,101,120,116,32,40,114,44,103,44,98,41],"value":"text (r,g,b)"}
+]}

@@ -1,0 +1,36 @@
+object Frame_Velocity: TFrame_Velocity
+  Left = 0
+  Height = 116
+  Top = 0
+  Width = 170
+  ClientHeight = 116
+  ClientWidth = 170
+  OnResize = FrameResize
+  TabOrder = 0
+  DesignLeft = 436
+  DesignTop = 250
+  object CB: TComboBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 0
+    Height = 116
+    Hint = 'Use the velocity curves if you want a movement other than linear.'
+    Top = 0
+    Width = 170
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSelect = False
+    Color = 3355443
+    ItemHeight = 110
+    OnChange = CBChange
+    OnDrawItem = CBDrawItem
+    ParentShowHint = False
+    ShowHint = True
+    Style = csOwnerDrawFixed
+    TabOrder = 0
+  end
+end

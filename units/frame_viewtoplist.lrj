@@ -1,0 +1,12 @@
+{"version":1,"strings":[
+{"hash":238096414,"name":"tframeviewtoplist.minewsequence.caption","sourcebytes":[65,100,100,32,115,101,113,117,101,110,99,101,46,46,46],"value":"Add sequence..."},
+{"hash":154481966,"name":"tframeviewtoplist.miinsertsequence.caption","sourcebytes":[73,110,115,101,114,116,32,115,101,113,117,101,110,99,101,46,46,46],"value":"Insert sequence..."},
+{"hash":196112718,"name":"tframeviewtoplist.miedit.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},
+{"hash":75708878,"name":"tframeviewtoplist.mirename.caption","sourcebytes":[82,101,110,97,109,101,46,46,46],"value":"Rename..."},
+{"hash":120574821,"name":"tframeviewtoplist.miduplicate.caption","sourcebytes":[68,117,112,108,105,99,97,116,101],"value":"Duplicate"},
+{"hash":5490901,"name":"tframeviewtoplist.mimerge.caption","sourcebytes":[77,101,114,103,101],"value":"Merge"},
+{"hash":7908192,"name":"tframeviewtoplist.mistop.caption","sourcebytes":[115,83,116,111,112],"value":"sStop"},
+{"hash":187496644,"name":"tframeviewtoplist.miresetspeed.caption","sourcebytes":[78,111,114,109,97,108,32,115,112,101,101,100],"value":"Normal speed"},
+{"hash":128724181,"name":"tframeviewtoplist.midelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":34981006,"name":"tframeviewtoplist.miloadfromanotherproject.caption","sourcebytes":[76,111,97,100,32,115,101,113,117,101,110,99,101,115,32,102,114,111,109,32,97,110,111,116,104,101,114,32,112,114,111,106,101,99,116,46,46,46],"value":"Load sequences from another project..."}
+]}

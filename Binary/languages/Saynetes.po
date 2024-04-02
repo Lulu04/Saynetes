@@ -1,0 +1,3762 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: alsound.strals_alattributesnotconfiguredforloopback
+msgid "OpenAL: Ask for Loopback context but attributes not configured on loopback mode"
+msgstr ""
+
+#: alsound.strals_alcannotattachbuffertosource
+msgid "OpenAL: Can not attach buffer to source"
+msgstr ""
+
+#: alsound.strals_alcannotfillbuffer
+msgid "OpenAL: Can not fill buffer"
+msgstr ""
+
+#: alsound.strals_alcannotgeneratebuffer
+msgid "OpenAL: Can not generate buffer"
+msgstr ""
+
+#: alsound.strals_alcannotgeneratefilter
+msgid "OpenAL: Can not generate filter"
+msgstr ""
+
+#: alsound.strals_alcannotgeneratesource
+msgid "OpenAl: Can not generate source"
+msgstr ""
+
+#: alsound.strals_alcannotmanagebformat
+msgid "OpenAL: Can not manage Ambisonic B-Format buffer"
+msgstr ""
+
+#: alsound.strals_alcannotopencapturedevice
+msgid "OpenAL: Can not open capture device"
+msgstr ""
+
+#: alsound.strals_alcannotopenloopbackdevice
+msgid "OpenAL: Can not open loopback device"
+msgstr ""
+
+#: alsound.strals_alcannotopenplaybackdevice
+msgid "OpenAL: Can not open playback device"
+msgstr ""
+
+#: alsound.strals_alcontextcannotloopback
+msgid "OpenAL: Context can not loopback"
+msgstr ""
+
+#: alsound.strals_alcontextnotcreated
+msgid "OpenAL: Context not created"
+msgstr ""
+
+#: alsound.strals_alerrorwhilecapturing
+msgid "OpenAL: An error appears while capturing audio"
+msgstr ""
+
+#: alsound.strals_allfile
+msgid "All files"
+msgstr ""
+
+#: alsound.strals_allibrarynotloaded
+msgid "OpenAL: Library not loaded"
+msgstr ""
+
+#: alsound.strals_audiofile
+msgctxt "alsound.strals_audiofile"
+msgid "Audio files"
+msgstr ""
+
+#: alsound.strals_cannotclosetemporarycapturefile
+msgid "LibSndFile: Failed to close the temporary capture file"
+msgstr ""
+
+#: alsound.strals_cannotcreatetargetcapturefile
+msgid "LibSndFile: Can not create target capture file"
+msgstr ""
+
+#: alsound.strals_cannotopentemporarycapturefile
+msgid "LibSndFile: Failed to open the temporary capture file"
+msgstr ""
+
+#: alsound.strals_errorwhilebufferingdata
+msgid "OpenAL: Error while buffering data"
+msgstr ""
+
+#: alsound.strals_errorwhilequeuingbuffer
+msgid "OpenAL: Error while queuing buffer"
+msgstr ""
+
+#: alsound.strals_failtoreadsample
+msgid "LibSndFile: Failed to read sample"
+msgstr ""
+
+#: alsound.strals_filenotopened
+msgid "LibSndFile: Can not open file"
+msgstr ""
+
+#: alsound.strals_filewriteerrorontargetcapturefile
+msgid "LibSndFile: File write error while converting temporary capture file to final file"
+msgstr ""
+
+#: alsound.strals_filewriteerrorwhilecapturing
+msgid "LibSndFile: File write error while capturing audio"
+msgstr ""
+
+#: alsound.strals_filewriteerrorwhilemixing
+msgid "LibSndFile: File write error while mixing audio to file"
+msgstr ""
+
+#: alsound.strals_floatsamplenotsupported
+msgid "OpenAL: Float samples not supported"
+msgstr ""
+
+#: alsound.strals_libsndfilenotloaded
+msgid "LibSndFile: Library not loaded"
+msgstr ""
+
+#: alsound.strals_noerror
+msgid "No error"
+msgstr ""
+
+#: alsound.strals_outofmemory
+msgid "ALSound: Not enough memory"
+msgstr ""
+
+#: alsound.strals_undefined
+msgid "OALSSoundManager: Undefined error"
+msgstr ""
+
+#: alsound.strals_unsupportedchannelcount
+msgid "LibSndFile: Unsupported channel count"
+msgstr ""
+
+#: alsound.strals_unsupportedformat
+msgid "OpenAL: Unsupported format"
+msgstr ""
+
+#: tformaskifshiftadress.label2.caption
+msgid "Shift the adresses of the other fixtures"
+msgstr ""
+
+#: tformaskifshiftadress.label3.caption
+msgctxt "tformaskifshiftadress.label3.caption"
+msgid "Don't shift"
+msgstr ""
+
+#: tformaudioaction.caption
+msgid "AUDIO action"
+msgstr ""
+
+#: tformcreateplaylist.bcancel.caption
+msgctxt "tformcreateplaylist.bcancel.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformcreateplaylist.bsave.caption
+msgid "Save playlist"
+msgstr ""
+
+#: tformcreateplaylist.caption
+msgid "Create a playlist"
+msgstr ""
+
+#: tformcreateplaylist.od1.title
+msgid "Select audio files"
+msgstr ""
+
+#: tformcreateplaylist.speedbutton1.caption
+msgctxt "tformcreateplaylist.speedbutton1.caption"
+msgid "Add"
+msgstr ""
+
+#: tformcreateplaylist.speedbutton1.hint
+msgid "Add audio files to the playlist"
+msgstr ""
+
+#: tformcreateplaylist.speedbutton2.caption
+msgctxt "tformcreateplaylist.speedbutton2.caption"
+msgid "Delete"
+msgstr ""
+
+#: tformcreateplaylist.speedbutton2.hint
+msgid "Delete the selected audio files from the playlist"
+msgstr ""
+
+#: tformcreateplaylist.updown1.hint
+msgid "Move up/down the selected audio file"
+msgstr ""
+
+#: tformdevicemanager.bartnet.caption
+msgid "Art-Net"
+msgstr ""
+
+#: tformdevicemanager.bdmxdevices.caption
+msgid "DMX devices"
+msgstr ""
+
+#: tformdevicemanager.bsearch.caption
+msgctxt "tformdevicemanager.bsearch.caption"
+msgid "Search"
+msgstr ""
+
+#: tformdevicemanager.bsearch.hint
+msgctxt "tformdevicemanager.bsearch.hint"
+msgid ""
+"Searches for connected USB to DMX devices.\n"
+"Note that if you use it, universes will be dissociated from their devices.\n"
+msgstr ""
+
+#: tformdevicemanager.bviewinputdmx.caption
+msgid "DMX Input"
+msgstr ""
+
+#: tformdevicemanager.caption
+msgid "DEVICE MANAGER"
+msgstr ""
+
+#: tformdevicemanager.label1.caption
+msgctxt "tformdevicemanager.label1.caption"
+msgid "View"
+msgstr ""
+
+#: tformdevicemanager.sg1.columns[0].title.caption
+msgctxt "tformdevicemanager.sg1.columns[0].title.caption"
+msgid "Universe"
+msgstr ""
+
+#: tformdevicemanager.sg1.columns[1].title.caption
+msgctxt "tformdevicemanager.sg1.columns[1].title.caption"
+msgid "Target device"
+msgstr ""
+
+#: tformdevicemanager.sg1.columns[2].title.caption
+msgctxt "tformdevicemanager.sg1.columns[2].title.caption"
+msgid "Channels used"
+msgstr ""
+
+#: tformdevicemanager.sg1.columns[3].title.caption
+msgctxt "tformdevicemanager.sg1.columns[3].title.caption"
+msgid "Optimized"
+msgstr ""
+
+#: tformdevicemanager.sg2.columns[0].title.caption
+msgid "Devices"
+msgstr ""
+
+#: tformdevicemanager.sg2.columns[1].title.caption
+msgctxt "tformdevicemanager.sg2.columns[1].title.caption"
+msgid "Direction"
+msgstr ""
+
+#: tformdevicemanager.sg2.columns[2].title.caption
+msgid "State"
+msgstr ""
+
+#: tformdevicemanager.speedbutton1.caption
+msgctxt "tformdevicemanager.speedbutton1.caption"
+msgid "Close"
+msgstr ""
+
+#: tformdmxaction.caption
+msgid "DMX action"
+msgstr ""
+
+#: tformdmxchannelstools.badd1.caption
+msgctxt "tformdmxchannelstools.badd1.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxchannelstools.badd2.caption
+msgctxt "tformdmxchannelstools.badd2.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxchannelstools.badd3.caption
+msgctxt "tformdmxchannelstools.badd3.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxchannelstools.badd4.caption
+msgctxt "tformdmxchannelstools.badd4.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxchannelstools.badd5.caption
+msgctxt "tformdmxchannelstools.badd5.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxchannelstools.buttonaudiofollowerpreset.caption
+msgctxt "tformdmxchannelstools.buttonaudiofollowerpreset.caption"
+msgid "PRESET"
+msgstr ""
+
+#: tformdmxchannelstools.buttonflamepreset.caption
+msgctxt "tformdmxchannelstools.buttonflamepreset.caption"
+msgid "PRESET"
+msgstr ""
+
+#: tformdmxchannelstools.caption
+msgid "Channels tools"
+msgstr ""
+
+#: tformdmxchannelstools.label1.caption
+msgctxt "tformdmxchannelstools.label1.caption"
+msgid "Duration in second"
+msgstr ""
+
+#: tformdmxchannelstools.label14.caption
+msgctxt "tformdmxchannelstools.label14.caption"
+msgid "Soften"
+msgstr ""
+
+#: tformdmxchannelstools.label16.caption
+msgctxt "tformdmxchannelstools.label16.caption"
+msgid "Select the source to copy on the others"
+msgstr ""
+
+#: tformdmxchannelstools.label18.caption
+msgctxt "tformdmxchannelstools.label18.caption"
+msgid "Source"
+msgstr ""
+
+#: tformdmxchannelstools.label2.caption
+msgctxt "tformdmxchannelstools.label2.caption"
+msgid "Level max"
+msgstr ""
+
+#: tformdmxchannelstools.label25.caption
+msgctxt "tformdmxchannelstools.label25.caption"
+msgid "Velocity"
+msgstr ""
+
+#: tformdmxchannelstools.label3.caption
+msgctxt "tformdmxchannelstools.label3.caption"
+msgid "Wait time"
+msgstr ""
+
+#: tformdmxchannelstools.label4.caption
+#, fuzzy
+#| msgid "Crackling"
+msgctxt "tformdmxchannelstools.label4.caption"
+msgid "Level min"
+msgstr "Crépitement"
+
+#: tformdmxchannelstools.label5.caption
+msgctxt "tformdmxchannelstools.label5.caption"
+msgid "Gain"
+msgstr ""
+
+#: tformdmxchannelstools.label6.caption
+msgctxt "tformdmxchannelstools.label6.caption"
+msgid "Brightness max"
+msgstr ""
+
+#: tformdmxchannelstools.label7.caption
+msgctxt "tformdmxchannelstools.label7.caption"
+msgid "Soften on"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton1.caption
+msgctxt "tformdmxchannelstools.speedbutton1.caption"
+msgid "Dimmer"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton1.hint
+msgctxt "tformdmxchannelstools.speedbutton1.hint"
+msgid "Gradually changes the value of a channel over a given time"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton2.caption
+msgctxt "tformdmxchannelstools.speedbutton2.caption"
+msgid "Flame"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton2.hint
+msgctxt "tformdmxchannelstools.speedbutton2.hint"
+msgid "Simulates a flame effect on the selected channels"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton3.caption
+msgctxt "tformdmxchannelstools.speedbutton3.caption"
+msgid "Audio follower"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton3.hint
+msgctxt "tformdmxchannelstools.speedbutton3.hint"
+msgid ""
+"Sets the intensity of a channel according to the level of a playing sound.\n"
+"The louder the sound, the higher the intensity and vice versa.\n"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton4.caption
+msgctxt "tformdmxchannelstools.speedbutton4.caption"
+msgid "Copy"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton4.hint
+msgctxt "tformdmxchannelstools.speedbutton4.hint"
+msgid "Copies the value of a dmx channel (the source) to one or more others"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton5.caption
+msgctxt "tformdmxchannelstools.speedbutton5.caption"
+msgid "Stop"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton5.hint
+msgctxt "tformdmxchannelstools.speedbutton5.hint"
+msgid ""
+"Stops an effect on a channel.\n"
+"The last value calculated by the effect is kept.\n"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton6.hint
+msgctxt "tformdmxchannelstools.speedbutton6.hint"
+msgid "Play selected audio file"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton7.hint
+msgctxt "tformdmxchannelstools.speedbutton7.hint"
+msgid "Stop audio"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton8.caption
+msgctxt "tformdmxchannelstools.speedbutton8.caption"
+msgid "Chaser"
+msgstr ""
+
+#: tformdmxchannelstools.speedbutton8.hint
+msgctxt "tformdmxchannelstools.speedbutton8.hint"
+msgid "Chaser effect. Choose at least 2 channels to apply this effect."
+msgstr ""
+
+#: tformdmxgroup.bloadfrom.hint
+msgid ""
+"Import the group list\n"
+"from another project\n"
+msgstr ""
+
+#: tformdmxgroup.caption
+msgid "DMX  groups"
+msgstr ""
+
+#: tformdmxgroup.michanneldelete.caption
+msgctxt "tformdmxgroup.michanneldelete.caption"
+msgid "Delete"
+msgstr ""
+
+#: tformdmxgroup.michannelrename.caption
+msgctxt "tformdmxgroup.michannelrename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tformdmxgroup.mirgbdelete.caption
+msgctxt "tformdmxgroup.mirgbdelete.caption"
+msgid "Delete"
+msgstr ""
+
+#: tformdmxgroup.mirgbrename.caption
+msgctxt "tformdmxgroup.mirgbrename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tformdmxgroup.od1.title
+msgctxt "tformdmxgroup.od1.title"
+msgid "Load DMX groups from another project"
+msgstr ""
+
+#: tformdmxgroup.speedbutton1.caption
+msgctxt "tformdmxgroup.speedbutton1.caption"
+msgid "Channels"
+msgstr ""
+
+#: tformdmxgroup.speedbutton1.hint
+msgctxt "tformdmxgroup.speedbutton1.hint"
+msgid "Show the channel groups"
+msgstr ""
+
+#: tformdmxgroup.speedbutton2.caption
+msgid "RGB"
+msgstr ""
+
+#: tformdmxgroup.speedbutton2.hint
+msgctxt "tformdmxgroup.speedbutton2.hint"
+msgid "Show the RGB groups"
+msgstr ""
+
+#: tformdmxlibrary.caption
+msgctxt "tformdmxlibrary.caption"
+msgid "DMX library"
+msgstr ""
+
+#: tformdmxlibrary.label1.caption
+msgctxt "tformdmxlibrary.label1.caption"
+msgid "Channels"
+msgstr ""
+
+#: tformdmxlibrary.label2.caption
+msgid "Power max :"
+msgstr ""
+
+#: tformdmxlibrary.speedbutton1.caption
+msgid "New fixture"
+msgstr ""
+
+#: tformdmxlibrary.speedbutton2.caption
+msgctxt "tformdmxlibrary.speedbutton2.caption"
+msgid "Edit..."
+msgstr ""
+
+#: tformdmxlibrary.speedbutton3.caption
+msgctxt "tformdmxlibrary.speedbutton3.caption"
+msgid "Close"
+msgstr ""
+
+#: tformdmxrgbtools.badd1.caption
+msgctxt "tformdmxrgbtools.badd1.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxrgbtools.badd2.caption
+msgctxt "tformdmxrgbtools.badd2.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxrgbtools.badd3.caption
+msgctxt "tformdmxrgbtools.badd3.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxrgbtools.badd4.caption
+msgctxt "tformdmxrgbtools.badd4.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxrgbtools.badd5.caption
+msgctxt "tformdmxrgbtools.badd5.caption"
+msgid "Add"
+msgstr ""
+
+#: tformdmxrgbtools.caption
+msgid "RGB Tools"
+msgstr ""
+
+#: tformdmxrgbtools.label1.caption
+msgctxt "tformdmxrgbtools.label1.caption"
+msgid "Duration in second"
+msgstr ""
+
+#: tformdmxrgbtools.label14.caption
+msgctxt "tformdmxrgbtools.label14.caption"
+msgid "Soften"
+msgstr ""
+
+#: tformdmxrgbtools.label18.caption
+msgctxt "tformdmxrgbtools.label18.caption"
+msgid "Source"
+msgstr ""
+
+#: tformdmxrgbtools.label2.caption
+msgctxt "tformdmxrgbtools.label2.caption"
+msgid "Select the source to copy on the others"
+msgstr ""
+
+#: tformdmxrgbtools.label3.caption
+msgctxt "tformdmxrgbtools.label3.caption"
+msgid "Wait time"
+msgstr ""
+
+#: tformdmxrgbtools.label4.caption
+msgctxt "tformdmxrgbtools.label4.caption"
+msgid "Amplitude"
+msgstr ""
+
+#: tformdmxrgbtools.label5.caption
+msgctxt "tformdmxrgbtools.label5.caption"
+msgid "Gain"
+msgstr ""
+
+#: tformdmxrgbtools.label7.caption
+msgctxt "tformdmxrgbtools.label7.caption"
+msgid "Soften on"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton1.caption
+msgctxt "tformdmxrgbtools.speedbutton1.caption"
+msgid "Dimmer"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton1.hint
+msgctxt "tformdmxrgbtools.speedbutton1.hint"
+msgid "Gradually changes the color on the selected fixtures, over a given time"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton2.caption
+msgctxt "tformdmxrgbtools.speedbutton2.caption"
+msgid "Flame"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton2.hint
+msgctxt "tformdmxrgbtools.speedbutton2.hint"
+msgid "Simulates a colored flame effect on the selected fixtures"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton3.caption
+msgctxt "tformdmxrgbtools.speedbutton3.caption"
+msgid "Audio follower"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton3.hint
+msgctxt "tformdmxrgbtools.speedbutton3.hint"
+msgid ""
+"Sets the intensity of a RGB color according to the level of a sound.\n"
+"The louder the sound, the higher the intensity and vice versa.\n"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton4.caption
+msgctxt "tformdmxrgbtools.speedbutton4.caption"
+msgid "Copy"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton4.hint
+msgctxt "tformdmxrgbtools.speedbutton4.hint"
+msgid "Copies the RGB color of a fixture to one or more others"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton5.caption
+msgctxt "tformdmxrgbtools.speedbutton5.caption"
+msgid "Stop"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton5.hint
+msgctxt "tformdmxrgbtools.speedbutton5.hint"
+msgid ""
+"Stops an RGB effect on the selected fixtures.\n"
+"The last color calculated by the effect is kept.\n"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton6.hint
+msgctxt "tformdmxrgbtools.speedbutton6.hint"
+msgid "Play selected audio file"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton7.hint
+msgctxt "tformdmxrgbtools.speedbutton7.hint"
+msgid "Stop audio"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton8.caption
+msgctxt "tformdmxrgbtools.speedbutton8.caption"
+msgid "Chaser"
+msgstr ""
+
+#: tformdmxrgbtools.speedbutton8.hint
+msgctxt "tformdmxrgbtools.speedbutton8.hint"
+msgid "Chaser effect. Choose at least 2 RGB fixtures to apply this effect."
+msgstr ""
+
+#: tformeditfixture.caption
+msgid "Fixture edition"
+msgstr ""
+
+#: tformeditfixture.label12.caption
+msgid "Power :"
+msgstr ""
+
+#: tformeditfixture.label6.caption
+msgctxt "tformeditfixture.label6.caption"
+msgid "Watt"
+msgstr ""
+
+#: tformeditfixture.speedbutton1.caption
+msgctxt "tformeditfixture.speedbutton1.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformeditfixture.speedbutton2.caption
+msgctxt "tformeditfixture.speedbutton2.caption"
+msgid "Save"
+msgstr ""
+
+#: tformeditfixture.speedbutton3.caption
+msgctxt "tformeditfixture.speedbutton3.caption"
+msgid "Delete range"
+msgstr ""
+
+#: tformeditfixture.speedbutton4.caption
+msgctxt "tformeditfixture.speedbutton4.caption"
+msgid "Add a range to the channel"
+msgstr ""
+
+#: tformeditfixture.speedbutton5.caption
+msgctxt "tformeditfixture.speedbutton5.caption"
+msgid "Rename channel"
+msgstr ""
+
+#: tformfixturewizard.b_cancel.caption
+msgctxt "tformfixturewizard.b_cancel.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformfixturewizard.b_next.caption
+msgctxt "tformfixturewizard.b_next.caption"
+msgid "Next"
+msgstr ""
+
+#: tformfixturewizard.b_previous.caption
+msgctxt "tformfixturewizard.b_previous.caption"
+msgid "Previous"
+msgstr ""
+
+#: tformfixturewizard.caption
+msgid "New fixture wizard"
+msgstr ""
+
+#: tformfixturewizard.label10.caption
+msgid "Does the fixture have dip switchs to set the dmx adress ?"
+msgstr ""
+
+#: tformfixturewizard.label11.caption
+msgid "manufacturer"
+msgstr ""
+
+#: tformfixturewizard.label12.caption
+msgctxt "tformfixturewizard.label12.caption"
+msgid "Name of the fixture"
+msgstr ""
+
+#: tformfixturewizard.label13.caption
+msgid "Mode"
+msgstr ""
+
+#: tformfixturewizard.label4.caption
+msgid "Choose the type of fixture that is closest to the one you want to create"
+msgstr ""
+
+#: tformfixturewizard.label5.caption
+msgid "Enter the Watt consumption of the device when it is running at full power"
+msgstr ""
+
+#: tformfixturewizard.label6.caption
+msgctxt "tformfixturewizard.label6.caption"
+msgid "Watt"
+msgstr ""
+
+#: tformfixturewizard.label7.caption
+msgid "Enter the DMX channels count of the fixture"
+msgstr ""
+
+#: tformfixturewizard.label8.caption
+msgid "DMX channel(s)"
+msgstr ""
+
+#: tformfixturewizard.rb1.caption
+msgctxt "tformfixturewizard.rb1.caption"
+msgid "Other"
+msgstr ""
+
+#: tformfixturewizard.rb10.caption
+msgid "Moving head"
+msgstr ""
+
+#: tformfixturewizard.rb11.caption
+msgid "Smoke machine"
+msgstr ""
+
+#: tformfixturewizard.rb12.caption
+msgid "Bubble machine"
+msgstr ""
+
+#: tformfixturewizard.rb13.caption
+msgid "Dimmer 1 channel"
+msgstr ""
+
+#: tformfixturewizard.rb14.caption
+msgid "Dimmer 4 channels"
+msgstr ""
+
+#: tformfixturewizard.rb15.caption
+msgid "RGB Led matrix"
+msgstr ""
+
+#: tformfixturewizard.rb16.caption
+msgid "Led matrix"
+msgstr ""
+
+#: tformfixturewizard.rb2.caption
+msgid "PC"
+msgstr ""
+
+#: tformfixturewizard.rb3.caption
+msgid "PAR"
+msgstr ""
+
+#: tformfixturewizard.rb4.caption
+msgid "Halogen"
+msgstr ""
+
+#: tformfixturewizard.rb5.caption
+msgid "PAR Led"
+msgstr ""
+
+#: tformfixturewizard.rb6.caption
+msgid "Bar led"
+msgstr ""
+
+#: tformfixturewizard.rb7.caption
+msgid "Profile"
+msgstr ""
+
+#: tformfixturewizard.rb8.caption
+msgctxt "tformfixturewizard.rb8.caption"
+msgid "Color changer"
+msgstr ""
+
+#: tformfixturewizard.rb9.caption
+msgid "Scanner"
+msgstr ""
+
+#: tformfixturewizard.speedbutton1.caption
+msgctxt "tformfixturewizard.speedbutton1.caption"
+msgid "Add a range to the channel"
+msgstr ""
+
+#: tformfixturewizard.speedbutton2.caption
+msgctxt "tformfixturewizard.speedbutton2.caption"
+msgid "Delete range"
+msgstr ""
+
+#: tformfixturewizard.speedbutton3.caption
+msgctxt "tformfixturewizard.speedbutton3.caption"
+msgid "Rename channel"
+msgstr ""
+
+#: tformfixturewizard.speedbutton4.hint
+msgid "Reverse the bit order"
+msgstr ""
+
+#: tformfixturewizard.speedbutton5.hint
+msgid "Reverse the ON/OFF position"
+msgstr ""
+
+#: tformfixturewizard.speedbutton6.hint
+msgid "Add a bit to the dipswitch"
+msgstr ""
+
+#: tformfixturewizard.speedbutton7.hint
+msgid "Remove a bit to the dipswitch"
+msgstr ""
+
+#: tforminputdmxrange.bcancel.caption
+msgctxt "tforminputdmxrange.bcancel.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tforminputdmxrange.bok.caption
+msgctxt "tforminputdmxrange.bok.caption"
+msgid "Ok"
+msgstr ""
+
+#: tforminputdmxrange.label1.caption
+msgctxt "tforminputdmxrange.label1.caption"
+msgid "Begin"
+msgstr ""
+
+#: tforminputdmxrange.label2.caption
+msgctxt "tforminputdmxrange.label2.caption"
+msgid "End"
+msgstr ""
+
+#: tformmain.caption
+msgid "Saynètes"
+msgstr ""
+
+#: tformmain.label1.caption
+msgctxt "tformmain.label1.caption"
+msgid "Sequence"
+msgstr ""
+
+#: tformmain.menuitem1.caption
+msgid "Project"
+msgstr ""
+
+#: tformmain.menuitem4.caption
+msgid "Tools"
+msgstr ""
+
+#: tformmain.menuitem6.caption
+msgid "About..."
+msgstr ""
+
+#: tformmain.menuitem7.caption
+msgid "English"
+msgstr ""
+
+#: tformmain.menuitem8.caption
+msgid "Français"
+msgstr ""
+
+#: tformmain.miprepadmx.caption
+msgctxt "tformmain.miprepadmx.caption"
+msgid "DMX"
+msgstr ""
+
+#: tformmain.mipreparation.caption
+msgctxt "tformmain.mipreparation.caption"
+msgid "Preparation"
+msgstr ""
+
+#: tformmain.miprepasequence.caption
+msgctxt "tformmain.miprepasequence.caption"
+msgid "Sequence"
+msgstr ""
+
+#: tformmain.miprojectclose.caption
+msgid "Close project"
+msgstr ""
+
+#: tformmain.miprojectnew.caption
+msgid "New project..."
+msgstr ""
+
+#: tformmain.miprojectopen.caption
+msgid "Open project"
+msgstr ""
+
+#: tformmain.miprojectoptions.caption
+msgid "Project options..."
+msgstr ""
+
+#: tformmain.miprojectquit.caption
+msgctxt "tformmain.miprojectquit.caption"
+msgid "Quit"
+msgstr ""
+
+#: tformmain.miprojectsave.caption
+msgctxt "tformmain.miprojectsave.caption"
+msgid "Save project"
+msgstr ""
+
+#: tformmain.mitooldevicemanager.caption
+msgid "Device manager"
+msgstr ""
+
+#: tformmain.mitooldmxlibrary.caption
+msgctxt "tformmain.mitooldmxlibrary.caption"
+msgid "DMX library"
+msgstr ""
+
+#: tformmain.mitoolpreference.caption
+msgctxt "tformmain.mitoolpreference.caption"
+msgid "Preferences"
+msgstr ""
+
+#: tformmain.pageaudio.caption
+msgctxt "tformmain.pageaudio.caption"
+msgid "F1 - Audio"
+msgstr ""
+
+#: tformmain.pagedmx.caption
+msgctxt "tformmain.pagedmx.caption"
+msgid "F2 - DMX"
+msgstr ""
+
+#: tformmain.pageentracte.caption
+msgid "F3 - Intersession"
+msgstr ""
+
+#: tformmain.speedbutton1.hint
+msgid ""
+"Switch between EDIT MODE and SHOW MODE.\n"
+"In EDIT MODE you can edit the project.\n"
+"In SHOW MODE, you can not apply modifications on the project.\n"
+msgstr ""
+
+#: tformotheraction.badd1.caption
+msgctxt "tformotheraction.badd1.caption"
+msgid "Add"
+msgstr ""
+
+#: tformotheraction.badd2.caption
+msgctxt "tformotheraction.badd2.caption"
+msgid "Add"
+msgstr ""
+
+#: tformotheraction.badd3.caption
+msgctxt "tformotheraction.badd3.caption"
+msgid "Add"
+msgstr ""
+
+#: tformotheraction.badd4.caption
+msgctxt "tformotheraction.badd4.caption"
+msgid "Add"
+msgstr ""
+
+#: tformotheraction.caption
+msgid "OTHER actions"
+msgstr ""
+
+#: tformotheraction.label1.caption
+msgctxt "tformotheraction.label1.caption"
+msgid "Sequence to start"
+msgstr ""
+
+#: tformotheraction.label2.caption
+msgctxt "tformotheraction.label2.caption"
+msgid "Sequence to stop"
+msgstr ""
+
+#: tformotheraction.label25.caption
+msgctxt "tformotheraction.label25.caption"
+msgid "Velocity"
+msgstr ""
+
+#: tformotheraction.label3.caption
+msgctxt "tformotheraction.label3.caption"
+msgid "Sequence to stretch"
+msgstr ""
+
+#: tformotheraction.label4.caption
+msgctxt "tformotheraction.label4.caption"
+msgid "Duration in second"
+msgstr ""
+
+#: tformotheraction.label5.caption
+msgctxt "tformotheraction.label5.caption"
+msgid "Speed"
+msgstr ""
+
+#: tformotheraction.speedbutton1.caption
+msgid "Start sequence"
+msgstr ""
+
+#: tformotheraction.speedbutton1.hint
+msgctxt "tformotheraction.speedbutton1.hint"
+msgid "Start a TOP from this one"
+msgstr ""
+
+#: tformotheraction.speedbutton2.caption
+msgid "Stop sequence"
+msgstr ""
+
+#: tformotheraction.speedbutton2.hint
+msgctxt "tformotheraction.speedbutton2.hint"
+msgid "Stop a TOP from this one"
+msgstr ""
+
+#: tformotheraction.speedbutton3.caption
+msgid "Loop sequence"
+msgstr ""
+
+#: tformotheraction.speedbutton3.hint
+msgctxt "tformotheraction.speedbutton3.hint"
+msgid ""
+"Loop this sequence to its beginning.\n"
+"All action that follow will be ignored.\n"
+msgstr ""
+
+#: tformotheraction.speedbutton4.caption
+msgid "Stretch time"
+msgstr ""
+
+#: tformotheraction.speedbutton4.hint
+msgctxt "tformotheraction.speedbutton4.hint"
+msgid "Stretch time allows you to speed up/down the execution of another sequence."
+msgstr ""
+
+#: tformotheraction.speedbutton5.caption
+msgid "RESET"
+msgstr ""
+
+#: tformprefs.caption
+msgctxt "tformprefs.caption"
+msgid "Preferences"
+msgstr ""
+
+#: tformprefs.label1.caption
+msgid "Show fixtures name with :"
+msgstr ""
+
+#: tformprefs.label2.caption
+msgid "Universe and adress"
+msgstr ""
+
+#: tformprefs.label3.caption
+msgid "Fixture name"
+msgstr ""
+
+#: tformprefs.label4.caption
+msgctxt "tformprefs.label4.caption"
+msgid "Fixture description"
+msgstr ""
+
+#: tformprefs.label5.caption
+msgctxt "tformprefs.label5.caption"
+msgid "Channel name"
+msgstr ""
+
+#: tformprefs.speedbutton1.caption
+msgctxt "tformprefs.speedbutton1.caption"
+msgid "View"
+msgstr ""
+
+#: tformprefs.speedbutton1.hint
+msgctxt "tformprefs.speedbutton1.hint"
+msgid "Gradually changes the value of a channel over a given time"
+msgstr ""
+
+#: tformprepadmx.badduniverse.hint
+msgid "Creates a new universe"
+msgstr ""
+
+#: tformprepadmx.bdeleteuniverse.hint
+msgid "Delete the selected universe"
+msgstr ""
+
+#: tformprepadmx.bdevicemanager.hint
+msgid ""
+"Open the dmx device manager window, an utility to help you\n"
+"to connect your universes to your devices.\n"
+msgstr ""
+
+#: tformprepadmx.bloadfrom.hint
+msgid ""
+"Import the DMX configuration\n"
+"from another project\n"
+msgstr ""
+
+#: tformprepadmx.bok.caption
+msgctxt "tformprepadmx.bok.caption"
+msgid "Ok"
+msgstr ""
+
+#: tformprepadmx.caption
+msgid "Preparation DMX"
+msgstr ""
+
+#: tformprepadmx.label9.caption
+msgctxt "tformprepadmx.label9.caption"
+msgid "Universe"
+msgstr ""
+
+#: tformprepadmx.od1.title
+msgctxt "tformprepadmx.od1.title"
+msgid "Load a DMX configuration from another project"
+msgstr ""
+
+#: tformprepasequence.caption
+msgid "FormPrepaSequence"
+msgstr ""
+
+#: tformprepasequence.label1.caption
+msgid "Sequences"
+msgstr ""
+
+#: tformprepasequence.speedbutton1.caption
+msgid "New"
+msgstr ""
+
+#: tformprepasequence.speedbutton2.caption
+msgctxt "tformprepasequence.speedbutton2.caption"
+msgid "Modify"
+msgstr ""
+
+#: tformprojectwizard.b_cancel.caption
+msgctxt "tformprojectwizard.b_cancel.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformprojectwizard.b_next.caption
+msgctxt "tformprojectwizard.b_next.caption"
+msgid "Next"
+msgstr ""
+
+#: tformprojectwizard.b_previous.caption
+msgctxt "tformprojectwizard.b_previous.caption"
+msgid "Previous"
+msgstr ""
+
+#: tformprojectwizard.caption
+msgid "New project wizard"
+msgstr ""
+
+#: tformprojectwizard.label1.caption
+msgctxt "tformprojectwizard.label1.caption"
+msgid "Project created with success !"
+msgstr ""
+
+#: tformprojectwizard.label2.caption
+msgid "Click the 'Finish' button to close this wizard."
+msgstr ""
+
+#: tformprojectwizard.label3.caption
+msgid "Select a folder where to save the project"
+msgstr ""
+
+#: tformprojectwizard.statictext1.caption
+msgid ""
+"This wizard will help you to create a new project\n"
+"Click 'Next' to continue...\n"
+msgstr ""
+
+#: tformsequenceedition.bpreview.hint
+msgid "Start the sequence preview"
+msgstr ""
+
+#: tformsequenceedition.bstop.hint
+msgctxt "tformsequenceedition.bstop.hint"
+msgid "Stop the preview"
+msgstr ""
+
+#: tformsequenceedition.b_redo.caption
+msgctxt "tformsequenceedition.b_redo.caption"
+msgid "Redo"
+msgstr ""
+
+#: tformsequenceedition.b_shutdown.caption
+msgctxt "tformsequenceedition.b_shutdown.caption"
+msgid "SHUTDOWN"
+msgstr ""
+
+#: tformsequenceedition.b_shutdown.hint
+msgid "Stop all sounds, and turn off all lights"
+msgstr ""
+
+#: tformsequenceedition.b_undo.caption
+msgctxt "tformsequenceedition.b_undo.caption"
+msgid "Undo"
+msgstr ""
+
+#: tformsequenceedition.b_viewall.hint
+msgctxt "tformsequenceedition.b_viewall.hint"
+msgid "View all"
+msgstr ""
+
+#: tformsequenceedition.b_viewselection.hint
+msgctxt "tformsequenceedition.b_viewselection.hint"
+msgid "Zoom on selection"
+msgstr ""
+
+#: tformsequenceedition.caption
+msgid "Sequence edition"
+msgstr ""
+
+#: tformsequenceedition.label13.caption
+msgctxt "tformsequenceedition.label13.caption"
+msgid "Begin"
+msgstr ""
+
+#: tformsequenceedition.label14.caption
+msgctxt "tformsequenceedition.label14.caption"
+msgid "End"
+msgstr ""
+
+#: tformsequenceedition.label15.caption
+msgctxt "tformsequenceedition.label15.caption"
+msgid "Duration"
+msgstr ""
+
+#: tformsequenceedition.label3.caption
+msgctxt "tformsequenceedition.label3.caption"
+msgid "View"
+msgstr ""
+
+#: tformsequenceedition.label7.caption
+msgctxt "tformsequenceedition.label7.caption"
+msgid "Begin"
+msgstr ""
+
+#: tformsequenceedition.label8.caption
+msgctxt "tformsequenceedition.label8.caption"
+msgid "End"
+msgstr ""
+
+#: tformsequenceedition.label9.caption
+msgctxt "tformsequenceedition.label9.caption"
+msgid "Duration"
+msgstr ""
+
+#: tformsequenceedition.speedbutton1.caption
+msgctxt "tformsequenceedition.speedbutton1.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformsequenceedition.speedbutton2.caption
+msgctxt "tformsequenceedition.speedbutton2.caption"
+msgid "Add this sequence"
+msgstr ""
+
+#: tformstartupwizard.caption
+msgid "StartUp Wizard"
+msgstr ""
+
+#: tformstartupwizard.label1.caption
+msgid "Open a recent project"
+msgstr ""
+
+#: tformstartupwizard.label2.caption
+msgid "Welcome to Saynètes. What would you like to do ?"
+msgstr ""
+
+#: tformstartupwizard.speedbutton1.caption
+msgid "Create a new project"
+msgstr ""
+
+#: tformstartupwizard.speedbutton2.caption
+msgid "Open a  project"
+msgstr ""
+
+#: tformstartupwizard.speedbutton3.caption
+msgctxt "tformstartupwizard.speedbutton3.caption"
+msgid "Quit"
+msgstr ""
+
+#: tformuserconfirmation.speedbutton1.caption
+msgctxt "tformuserconfirmation.speedbutton1.caption"
+msgid "Ok"
+msgstr ""
+
+#: tformuserconfirmation.speedbutton2.caption
+msgctxt "tformuserconfirmation.speedbutton2.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformuserinput.speedbutton1.caption
+msgctxt "tformuserinput.speedbutton1.caption"
+msgid "Ok"
+msgstr ""
+
+#: tformuserinput.speedbutton2.caption
+msgctxt "tformuserinput.speedbutton2.caption"
+msgid "Cancel"
+msgstr ""
+
+#: tformusermessage.speedbutton1.caption
+msgctxt "tformusermessage.speedbutton1.caption"
+msgid "Ok"
+msgstr ""
+
+#: tform_changesteplength.label1.caption
+msgid "Step Name"
+msgstr ""
+
+#: tform_changesteplength.label2.caption
+msgid "Current duration:"
+msgstr ""
+
+#: tform_changesteplength.label3.caption
+msgid "New duration:"
+msgstr ""
+
+#: tform_changesteplength.label5.caption
+msgctxt "tform_changesteplength.label5.caption"
+msgid "sec"
+msgstr ""
+
+#: tform_changesteplength.label6.caption
+msgctxt "tform_changesteplength.label6.caption"
+msgid "sec"
+msgstr ""
+
+#: tform_modifytime.label1.caption
+msgid "New value:"
+msgstr ""
+
+#: tform_modifytime.label2.caption
+msgctxt "tform_modifytime.label2.caption"
+msgid "sec"
+msgstr ""
+
+#: tform_modifytime.rb1.caption
+msgid "shifts ALL the next steps"
+msgstr ""
+
+#: tform_modifytime.rb2.caption
+msgid "shifts the previous step"
+msgstr ""
+
+#: tform_modifytime.rb3.caption
+msgid "shifts the next step (ONLY ONE)"
+msgstr ""
+
+#: tform_movestep.label1.caption
+msgid "Click on the desired move"
+msgstr ""
+
+#: tframecmdaudio.b1.caption
+msgctxt "tframecmdaudio.b1.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b2.caption
+msgctxt "tframecmdaudio.b2.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b3.caption
+msgctxt "tframecmdaudio.b3.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b4.caption
+msgctxt "tframecmdaudio.b4.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b5.caption
+msgctxt "tframecmdaudio.b5.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b6.caption
+msgctxt "tframecmdaudio.b6.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.b7.caption
+msgctxt "tframecmdaudio.b7.caption"
+msgid "Settings..."
+msgstr ""
+
+#: tframecmdaudio.blisten.hint
+msgctxt "tframecmdaudio.blisten.hint"
+msgid "Play selected audio file"
+msgstr ""
+
+#: tframecmdaudio.bpitchnormal.caption
+msgctxt "tframecmdaudio.bpitchnormal.caption"
+msgid "normal"
+msgstr ""
+
+#: tframecmdaudio.bstopall.hint
+msgctxt "tframecmdaudio.bstopall.hint"
+msgid "Stop audio"
+msgstr ""
+
+#: tframecmdaudio.button21.caption
+msgctxt "tframecmdaudio.button21.caption"
+msgid "Show effects"
+msgstr ""
+
+#: tframecmdaudio.b_ajouteraudio.caption
+msgctxt "tframecmdaudio.b_ajouteraudio.caption"
+msgid "Add"
+msgstr ""
+
+#: tframecmdaudio.b_appliquereffetaudio.caption
+msgid "Apply effects"
+msgstr ""
+
+#: tframecmdaudio.b_appliquereffetaudio.hint
+msgid ""
+"Permet d'activer les effets audio cochés.\n"
+"L'activation des effets ne portera que sur\n"
+"les fichiers audio sélectionnés.\n"
+msgstr ""
+
+#: tframecmdaudio.b_arretereffetaudio.caption
+msgid "Remove effects"
+msgstr ""
+
+#: tframecmdaudio.b_arretereffetaudio.hint
+msgid ""
+"Permet de désactiver les effets audio cochés.\n"
+"  La désactivation des effets ne portera que\n"
+"       sur les fichiers audio sélectionnés.\n"
+msgstr ""
+
+#: tframecmdaudio.label4.caption
+msgctxt "tframecmdaudio.label4.caption"
+msgid "Audio files"
+msgstr ""
+
+#: tframecmdaudio.lblattendre10.caption
+msgid "SET PAN"
+msgstr ""
+
+#: tframecmdaudio.lblattendre11.caption
+msgctxt "tframecmdaudio.lblattendre11.caption"
+msgid "second(s)"
+msgstr ""
+
+#: tframecmdaudio.lblattendre12.caption
+msgctxt "tframecmdaudio.lblattendre12.caption"
+msgid "PLAY"
+msgstr ""
+
+#: tframecmdaudio.lblattendre13.caption
+msgctxt "tframecmdaudio.lblattendre13.caption"
+msgid "second(s)"
+msgstr ""
+
+#: tframecmdaudio.lblattendre14.caption
+msgid "SET PITCH"
+msgstr ""
+
+#: tframecmdaudio.lblattendre4.caption
+msgid "PAUSE"
+msgstr ""
+
+#: tframecmdaudio.lblattendre5.caption
+msgctxt "tframecmdaudio.lblattendre5.caption"
+msgid "STOP"
+msgstr ""
+
+#: tframecmdaudio.lblattendre6.caption
+msgid "FADEIN"
+msgstr ""
+
+#: tframecmdaudio.lblattendre7.caption
+msgid "FADEOUT"
+msgstr ""
+
+#: tframecmdaudio.lblattendre8.caption
+msgid "SET VOLUME"
+msgstr ""
+
+#: tframecmdaudio.lblattendre9.caption
+msgctxt "tframecmdaudio.lblattendre9.caption"
+msgid "second(s)"
+msgstr ""
+
+#: tframecmdaudio.lblcurve.caption
+msgctxt "tframecmdaudio.lblcurve.caption"
+msgid "Curve"
+msgstr ""
+
+#: tframecmdaudio.lblvol1.caption
+msgctxt "tframecmdaudio.lblvol1.caption"
+msgid "in"
+msgstr ""
+
+#: tframecmdaudio.lblvol3.caption
+msgctxt "tframecmdaudio.lblvol3.caption"
+msgid "in"
+msgstr ""
+
+#: tframecmdaudio.lblvol4.caption
+msgctxt "tframecmdaudio.lblvol4.caption"
+msgid "in"
+msgstr ""
+
+#: tframecmdaudio.rb1.caption
+msgctxt "tframecmdaudio.rb1.caption"
+msgid "EQUALIZER"
+msgstr ""
+
+#: tframecmdaudio.rb2.caption
+msgctxt "tframecmdaudio.rb2.caption"
+msgid "ECHO"
+msgstr ""
+
+#: tframecmdaudio.rb3.caption
+msgctxt "tframecmdaudio.rb3.caption"
+msgid "REVERB"
+msgstr ""
+
+#: tframecmdaudio.rb4.caption
+#, fuzzy
+msgctxt "tframecmdaudio.rb4.caption"
+msgid "CHORUS"
+msgstr "CHORUS"
+
+#: tframecmdaudio.rb5.caption
+msgctxt "tframecmdaudio.rb5.caption"
+msgid "PHASER"
+msgstr ""
+
+#: tframecmdaudio.rb6.caption
+#, fuzzy
+msgctxt "tframecmdaudio.rb6.caption"
+msgid "DISTORSION"
+msgstr "DISTORSION"
+
+#: tframecmdaudio.rb7.caption
+msgctxt "tframecmdaudio.rb7.caption"
+msgid "GARGLE"
+msgstr ""
+
+#: tframecmdaudio.rbfadein.hint
+msgctxt "tframecmdaudio.rbfadein.hint"
+msgid ""
+"Start the playback of an audio file,\n"
+"then increase gradually the volume from 0%\n"
+"to the specified value.\n"
+msgstr ""
+
+#: tframecmdaudio.rbfadeout.hint
+msgctxt "tframecmdaudio.rbfadeout.hint"
+msgid ""
+"Gradually lower the volume of an audio file.\n"
+"When the volume is equal to zero, the audio is stopped.\n"
+msgstr ""
+
+#: tframecmdaudio.rbfreq.hint
+msgctxt "tframecmdaudio.rbfreq.hint"
+msgid ""
+"Sets the frequency for an audio file.\n"
+"You can set the new frequency and the time to reach it.\n"
+msgstr ""
+
+#: tframecmdaudio.rbpan.hint
+msgctxt "tframecmdaudio.rbpan.hint"
+msgid ""
+"Sets the panning for an audio file.\n"
+"You can set the new panning value and the time to reachs it.\n"
+msgstr ""
+
+#: tframecmdaudio.rbpause.hint
+msgctxt "tframecmdaudio.rbpause.hint"
+msgid "Suspends the playback of an audio file."
+msgstr ""
+
+#: tframecmdaudio.rbplay.hint
+msgctxt "tframecmdaudio.rbplay.hint"
+msgid ""
+"Start or resume the playback of an audio file.\n"
+"The playback is from beginning, except if the sound is paused.\n"
+"You have to set the volume and panning.\n"
+msgstr ""
+
+#: tframecmdaudio.rbstop.hint
+msgctxt "tframecmdaudio.rbstop.hint"
+msgid "Stops the playback of an audio file."
+msgstr ""
+
+#: tframecmdaudio.rbvolume.hint
+msgctxt "tframecmdaudio.rbvolume.hint"
+msgid ""
+"Sets the volume of an audio file.\n"
+"You can sets the new volume and\n"
+"the time length in seconds to reach it.\n"
+msgstr ""
+
+#: tframeeditstring.label1.caption
+msgid "description"
+msgstr ""
+
+#: tframeeditstring.label2.caption
+msgctxt "tframeeditstring.label2.caption"
+msgid "please no space or special characters"
+msgstr ""
+
+#: tframefxchannelchaser.badd6.caption
+msgctxt "tframefxchannelchaser.badd6.caption"
+msgid "Add"
+msgstr ""
+
+#: tframefxchannelchaser.cbmode.text
+msgctxt "tframefxchannelchaser.cbmode.text"
+msgid "MODE 1"
+msgstr ""
+
+#: tframefxchannelchaser.cbmove.text
+msgctxt "tframefxchannelchaser.cbmove.text"
+msgid "ONE SHOOT"
+msgstr ""
+
+#: tframefxchannelchaser.label2.caption
+msgctxt "tframefxchannelchaser.label2.caption"
+msgid "Level max"
+msgstr ""
+
+#: tframefxchannelchaser.label22.caption
+msgctxt "tframefxchannelchaser.label22.caption"
+msgid "Steps"
+msgstr ""
+
+#: tframefxchannelchaser.label23.caption
+msgctxt "tframefxchannelchaser.label23.caption"
+msgid "seconds per step"
+msgstr ""
+
+#: tframefxchannelchaser.label24.caption
+msgctxt "tframefxchannelchaser.label24.caption"
+msgid "Velocity"
+msgstr ""
+
+#: tframefxchannelchaser.label25.caption
+msgctxt "tframefxchannelchaser.label25.caption"
+msgid "Delay"
+msgstr ""
+
+#: tframefxchannelchaser.label26.caption
+msgctxt "tframefxchannelchaser.label26.caption"
+msgid "Spacing"
+msgstr ""
+
+#: tframefxchannelchaser.label4.caption
+msgctxt "tframefxchannelchaser.label4.caption"
+msgid "Level min"
+msgstr ""
+
+#: tframefxchannelchaser.shape5.hint
+msgctxt "tframefxchannelchaser.shape5.hint"
+msgid "Moves to set the delay between each step"
+msgstr ""
+
+#: tframefxchannelchaser.speedbutton10.hint
+msgctxt "tframefxchannelchaser.speedbutton10.hint"
+msgid "Stop the preview"
+msgstr ""
+
+#: tframefxchannelchaser.speedbutton9.hint
+msgctxt "tframefxchannelchaser.speedbutton9.hint"
+msgid "Start the preview"
+msgstr ""
+
+#: tframefxrgbchaser.badd6.caption
+msgctxt "tframefxrgbchaser.badd6.caption"
+msgid "Add"
+msgstr ""
+
+#: tframefxrgbchaser.cbmove.text
+msgctxt "tframefxrgbchaser.cbmove.text"
+msgid "ONE SHOOT"
+msgstr ""
+
+#: tframefxrgbchaser.colorbutton1.hint
+msgid "If checked, the projector will come back to this color"
+msgstr ""
+
+#: tframefxrgbchaser.label1.caption
+msgctxt "tframefxrgbchaser.label1.caption"
+msgid "Steps"
+msgstr ""
+
+#: tframefxrgbchaser.label2.caption
+msgid "Colors"
+msgstr ""
+
+#: tframefxrgbchaser.label23.caption
+msgctxt "tframefxrgbchaser.label23.caption"
+msgid "seconds per step"
+msgstr ""
+
+#: tframefxrgbchaser.label24.caption
+msgctxt "tframefxrgbchaser.label24.caption"
+msgid "Velocity"
+msgstr ""
+
+#: tframefxrgbchaser.label25.caption
+msgctxt "tframefxrgbchaser.label25.caption"
+msgid "Delay"
+msgstr ""
+
+#: tframefxrgbchaser.label26.caption
+msgctxt "tframefxrgbchaser.label26.caption"
+msgid "Spacing"
+msgstr ""
+
+#: tframefxrgbchaser.label3.caption
+msgid "Back to"
+msgstr ""
+
+#: tframefxrgbchaser.panel1.hint
+msgid "This is the list of colors for the chaser"
+msgstr ""
+
+#: tframefxrgbchaser.shape5.hint
+msgctxt "tframefxrgbchaser.shape5.hint"
+msgid "Moves to set the delay between each step"
+msgstr ""
+
+#: tframefxrgbchaser.speedbutton1.hint
+msgid "Add the color to the list"
+msgstr ""
+
+#: tframefxrgbchaser.speedbutton10.hint
+msgctxt "tframefxrgbchaser.speedbutton10.hint"
+msgid "Stop the preview"
+msgstr ""
+
+#: tframefxrgbchaser.speedbutton2.hint
+msgid "Delete the selected colors from the list"
+msgstr ""
+
+#: tframefxrgbchaser.speedbutton3.caption
+msgctxt "tframefxrgbchaser.speedbutton3.caption"
+msgid "PRESET"
+msgstr ""
+
+#: tframefxrgbchaser.speedbutton9.hint
+msgctxt "tframefxrgbchaser.speedbutton9.hint"
+msgid "Start the preview"
+msgstr ""
+
+#: tframefxrgbchaser.updown1.hint
+msgid "Moves the selected colors"
+msgstr ""
+
+#: tframemainaudio.bpancenter.caption
+msgctxt "tframemainaudio.bpancenter.caption"
+msgid "Center"
+msgstr ""
+
+#: tframemainaudio.bpitchnormal.caption
+msgctxt "tframemainaudio.bpitchnormal.caption"
+msgid "Normal"
+msgstr ""
+
+#: tframemainaudio.label1.caption
+msgid "Fade In"
+msgstr ""
+
+#: tframemainaudio.label10.caption
+msgid "'p' = pause"
+msgstr ""
+
+#: tframemainaudio.label11.caption
+msgid "'SPACE' = Start/Stop audio"
+msgstr ""
+
+#: tframemainaudio.label2.caption
+msgid "Fade Out"
+msgstr ""
+
+#: tframemainaudio.label20.caption
+msgid "Pitch"
+msgstr ""
+
+#: tframemainaudio.label3.caption
+msgctxt "tframemainaudio.label3.caption"
+msgid "Volume"
+msgstr ""
+
+#: tframemainaudio.label4.caption
+msgctxt "tframemainaudio.label4.caption"
+msgid "Panning"
+msgstr ""
+
+#: tframemainaudio.label5.caption
+msgctxt "tframemainaudio.label5.caption"
+msgid "importing audio files..."
+msgstr ""
+
+#: tframemainaudio.label6.caption
+msgctxt "tframemainaudio.label6.caption"
+msgid "1/1"
+msgstr ""
+
+#: tframemainaudio.lbl_freq.caption
+msgctxt "tframemainaudio.lbl_freq.caption"
+msgid "Hz"
+msgstr ""
+
+#: tframemainaudio.mi_delete.caption
+msgctxt "tframemainaudio.mi_delete.caption"
+msgid "Delete"
+msgstr ""
+
+#: tframemainaudio.opendialog1.title
+msgctxt "tframemainaudio.opendialog1.title"
+msgid "Import audio"
+msgstr ""
+
+#: tframemainaudio.sb_fadein10s.caption
+msgctxt "tframemainaudio.sb_fadein10s.caption"
+msgid "15s"
+msgstr ""
+
+#: tframemainaudio.sb_fadein1s.caption
+msgctxt "tframemainaudio.sb_fadein1s.caption"
+msgid "1s"
+msgstr ""
+
+#: tframemainaudio.sb_fadein4s.caption
+msgctxt "tframemainaudio.sb_fadein4s.caption"
+msgid "5s"
+msgstr ""
+
+#: tframemainaudio.sb_fadein7s.caption
+msgctxt "tframemainaudio.sb_fadein7s.caption"
+msgid "10s"
+msgstr ""
+
+#: tframemainaudio.sb_fadeout10s.caption
+msgctxt "tframemainaudio.sb_fadeout10s.caption"
+msgid "15s"
+msgstr ""
+
+#: tframemainaudio.sb_fadeout1s.caption
+msgctxt "tframemainaudio.sb_fadeout1s.caption"
+msgid "1s"
+msgstr ""
+
+#: tframemainaudio.sb_fadeout4s.caption
+msgctxt "tframemainaudio.sb_fadeout4s.caption"
+msgid "5s"
+msgstr ""
+
+#: tframemainaudio.sb_fadeout7s.caption
+msgctxt "tframemainaudio.sb_fadeout7s.caption"
+msgid "10s"
+msgstr ""
+
+#: tframemainaudio.speedbutton1.hint
+msgid "Import audio file to the project"
+msgstr ""
+
+#: tframemainaudio.speedbutton2.hint
+msgid "Stop all audio and all effects."
+msgstr ""
+
+#: tframemaindmx.label1.caption
+msgctxt "tframemaindmx.label1.caption"
+msgid "Universe"
+msgstr ""
+
+#: tframemainentracte.buttonopenproject.caption
+msgctxt "tframemainentracte.buttonopenproject.caption"
+msgid "Open"
+msgstr ""
+
+#: tframemainentracte.buttonopenproject.hint
+msgctxt "tframemainentracte.buttonopenproject.hint"
+msgid "Open the selected project"
+msgstr ""
+
+#: tframemainentracte.directoryedit1.hint
+msgctxt "tframemainentracte.directoryedit1.hint"
+msgid "Click to select the folder containing your projects"
+msgstr ""
+
+#: tframemainentracte.flbplaylist.hint
+msgctxt "tframemainentracte.flbplaylist.hint"
+msgid "This is the list of intermission musics"
+msgstr ""
+
+#: tframemainentracte.flbprojects.hint
+msgctxt "tframemainentracte.flbprojects.hint"
+msgid "The list of projects found in the above folder"
+msgstr ""
+
+#: tframemainentracte.label5.caption
+msgctxt "tframemainentracte.label5.caption"
+msgid "Volume :"
+msgstr ""
+
+#: tframemainentracte.label6.caption
+msgctxt "tframemainentracte.label6.caption"
+msgid "Intermission musics"
+msgstr ""
+
+#: tframemainentracte.label7.caption
+msgctxt "tframemainentracte.label7.caption"
+msgid "Projects folder"
+msgstr ""
+
+#: tframemainentracte.mideleteplaylist.caption
+msgctxt "tframemainentracte.mideleteplaylist.caption"
+msgid "Delete the playlist"
+msgstr ""
+
+#: tframemainentracte.mimodifyplaylist.caption
+msgctxt "tframemainentracte.mimodifyplaylist.caption"
+msgid "Modify the playlist"
+msgstr ""
+
+#: tframemainentracte.minewplaylist.caption
+msgctxt "tframemainentracte.minewplaylist.caption"
+msgid "New playlist"
+msgstr ""
+
+#: tframemainentracte.speedbutton1.caption
+msgctxt "tframemainentracte.speedbutton1.caption"
+msgid "Start intersession"
+msgstr ""
+
+#: tframemainentracte.speedbutton1.hint
+msgid "Start/Stop the intersession background music"
+msgstr ""
+
+#: tframesequencer.misbadddmxaction.caption
+msgctxt "tframesequencer.misbadddmxaction.caption"
+msgid "DMX action..."
+msgstr ""
+
+#: tframesequencer.misbaddotheraction.caption
+msgctxt "tframesequencer.misbaddotheraction.caption"
+msgid "OTHER action..."
+msgstr ""
+
+#: tframesequencer.mi_sbaddaudioaction.caption
+msgctxt "tframesequencer.mi_sbaddaudioaction.caption"
+msgid "AUDIO action..."
+msgstr ""
+
+#: tframesequencer.mi_sbdeletetime.caption
+msgid "Supprimer cet intervalle"
+msgstr ""
+
+#: tframesequencer.mi_sbmodifytime.caption
+msgid "Modify this time interval"
+msgstr ""
+
+#: tframesequencer.mi_sbpaste.caption
+msgctxt "tframesequencer.mi_sbpaste.caption"
+msgid "Paste"
+msgstr ""
+
+#: tframesequencer.mi_sbselecttimeinterval.caption
+msgid "Select this time interval"
+msgstr ""
+
+#: tframesequencer.mi_sbzoomall.caption
+msgctxt "tframesequencer.mi_sbzoomall.caption"
+msgid "View all"
+msgstr ""
+
+#: tframesequencer.mi_sbzoomonselection.caption
+msgctxt "tframesequencer.mi_sbzoomonselection.caption"
+msgid "Zoom on selection"
+msgstr ""
+
+#: tframesequencer.mi_stepcopy.caption
+msgctxt "tframesequencer.mi_stepcopy.caption"
+msgid "Copy"
+msgstr ""
+
+#: tframesequencer.mi_stepcut.caption
+msgctxt "tframesequencer.mi_stepcut.caption"
+msgid "Cut"
+msgstr ""
+
+#: tframesequencer.mi_stepdelete.caption
+msgctxt "tframesequencer.mi_stepdelete.caption"
+msgid "Delete"
+msgstr ""
+
+#: tframesequencer.mi_stepgroup.caption
+msgctxt "tframesequencer.mi_stepgroup.caption"
+msgid "Group"
+msgstr ""
+
+#: tframesequencer.mi_stepmodifylength.caption
+msgid "Change duration..."
+msgstr ""
+
+#: tframesequencer.mi_stepmoveintime.caption
+msgid "Change time position..."
+msgstr ""
+
+#: tframesequencer.mi_steppaste.caption
+msgctxt "tframesequencer.mi_steppaste.caption"
+msgid "Paste"
+msgstr ""
+
+#: tframesequencer.mi_steprearrange.caption
+msgid "Rearrange"
+msgstr ""
+
+#: tframesequencer.mi_steprename.caption
+msgctxt "tframesequencer.mi_steprename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tframesequencer.mi_stepselectall.caption
+msgid "Select all"
+msgstr ""
+
+#: tframesequencer.mi_stepungroup.caption
+msgid "Ungroup"
+msgstr ""
+
+#: tframeviewcmdlist.mideleteselection.caption
+msgctxt "tframeviewcmdlist.mideleteselection.caption"
+msgid "Delete the selection"
+msgstr ""
+
+#: tframeviewcmdlist.miedit.caption
+msgctxt "tframeviewcmdlist.miedit.caption"
+msgid "Edit..."
+msgstr ""
+
+#: tframeviewcmdlist.miview.caption
+msgctxt "tframeviewcmdlist.miview.caption"
+msgid "View"
+msgstr ""
+
+#: tframeviewcmdlist.miviewadress.caption
+msgid "DMX Adress"
+msgstr ""
+
+#: tframeviewcmdlist.miviewchannelname.caption
+msgid "DMX Channel name"
+msgstr ""
+
+#: tframeviewcmdlist.miviewdescription.caption
+msgid "DMX Fixture description"
+msgstr ""
+
+#: tframeviewcmdlist.miviewfixturename.caption
+msgid "DMX Fixture name"
+msgstr ""
+
+#: tframeviewdipswitchs.miadresssetting.caption
+msgctxt "tframeviewdipswitchs.miadresssetting.caption"
+msgid "Used for adress"
+msgstr ""
+
+#: tframeviewdipswitchs.mimustbeoff.caption
+msgctxt "tframeviewdipswitchs.mimustbeoff.caption"
+msgid "Must be OFF"
+msgstr ""
+
+#: tframeviewdipswitchs.mimustbeon.caption
+msgctxt "tframeviewdipswitchs.mimustbeon.caption"
+msgid "Must be ON"
+msgstr ""
+
+#: tframeviewdmxcursors.menuitem1.caption
+msgid "Only this channel"
+msgstr ""
+
+#: tframeviewdmxcursors.menuitem2.caption
+msgid "All channels"
+msgstr ""
+
+#: tframeviewdmxcursors.miallonall.caption
+msgctxt "tframeviewdmxcursors.miallonall.caption"
+msgid "All channels on all fixtures"
+msgstr ""
+
+#: tframeviewdmxcursors.micreategroup.caption
+msgid "Create a group"
+msgstr ""
+
+#: tframeviewdmxcursors.milockchannel.caption
+msgctxt "tframeviewdmxcursors.milockchannel.caption"
+msgid "Lock"
+msgstr ""
+
+#: tframeviewdmxcursors.mionlyonall.caption
+msgctxt "tframeviewdmxcursors.mionlyonall.caption"
+msgid "Only this channel on all fixtures"
+msgstr ""
+
+#: tframeviewdmxcursors.miselectonall.caption
+msgid "Selects on all fixtures"
+msgstr ""
+
+#: tframeviewdmxcursors.miunlockchannel.caption
+msgctxt "tframeviewdmxcursors.miunlockchannel.caption"
+msgid "Unlock"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton1.caption
+msgid "ZERO"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton1.hint
+msgid "Force all cursors to zero"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton2.caption
+msgid "SAME TYPES"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton2.hint
+msgid ""
+"Click to activate/deactivate\n"
+"When you move a cursor, its value is copied on channels with the same type.\n"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton3.caption
+msgid "ALL"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton3.hint
+msgctxt "tframeviewdmxcursors.speedbutton3.hint"
+msgid ""
+"Click to activate/deactivate.\n"
+"When you moves a cursor, its value is copied on all channels (selected or not)\n"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton4.caption
+msgid "SELECTED"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton4.hint
+msgctxt "tframeviewdmxcursors.speedbutton4.hint"
+msgid ""
+"Click to activate/deactivate.\n"
+"When you moves a selected cursor, its value is copied on other selected channels.\n"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton5.caption
+msgctxt "tframeviewdmxcursors.speedbutton5.caption"
+msgid "RGB TOOLS"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton5.hint
+msgid "Show/hide the RGB tools"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton6.caption
+msgid "CHANNELS TOOLS"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton6.hint
+msgctxt "tframeviewdmxcursors.speedbutton6.hint"
+msgid "Show/hide the channels tools"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton7.caption
+msgid "GROUP"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton7.hint
+msgctxt "tframeviewdmxcursors.speedbutton7.hint"
+msgid "Show/Hide the groups window"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton8.caption
+msgid "NONE"
+msgstr ""
+
+#: tframeviewdmxcursors.speedbutton8.hint
+msgid "Unselect all channels"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem10.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem10.caption"
+msgid "Dimmer"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem11.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem11.caption"
+msgid "Strobe"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem12.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem12.caption"
+msgid "Config"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem13.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem13.caption"
+msgid "Pan"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem14.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem14.caption"
+msgid "Tilt"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem15.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem15.caption"
+msgid "Speed pan/Tilt"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem16.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem16.caption"
+msgid "Gobo"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem17.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem17.caption"
+msgid "Rotation Gobo"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem18.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem18.caption"
+msgid "Color changer"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem19.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem19.caption"
+msgid "UV"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem20.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem20.caption"
+msgid "Speed"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem3.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem3.caption"
+msgid "Set as..."
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem4.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
+msgid "Red"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem5.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem5.caption"
+msgid "Green"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem6.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem6.caption"
+msgid "Blue"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem7.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem7.caption"
+msgid "White"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem8.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem8.caption"
+msgid "Master Dimmer"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem9.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem9.caption"
+msgid "Amber"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.miaddrange.caption
+msgctxt "tframeviewdmxfixturechannels.miaddrange.caption"
+msgid "Add a range to the channel"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.mideleterange.caption
+msgctxt "tframeviewdmxfixturechannels.mideleterange.caption"
+msgid "Delete the range"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.mimodifyrange.caption
+msgctxt "tframeviewdmxfixturechannels.mimodifyrange.caption"
+msgid "Modify the range"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.mi_renamechannel.caption
+msgid "Rename the channel"
+msgstr ""
+
+#: tframeviewdmxlibrary.mideletefixture.caption
+msgctxt "tframeviewdmxlibrary.mideletefixture.caption"
+msgid "Delete fixture..."
+msgstr ""
+
+#: tframeviewdmxlibrary.mideletefolder.caption
+msgctxt "tframeviewdmxlibrary.mideletefolder.caption"
+msgid "Delete folder..."
+msgstr ""
+
+#: tframeviewdmxlibrary.minewfolder.caption
+msgctxt "tframeviewdmxlibrary.minewfolder.caption"
+msgid "New folder..."
+msgstr ""
+
+#: tframeviewdmxlibrary.mirenamefixture.caption
+msgid "Rename fixture..."
+msgstr ""
+
+#: tframeviewdmxlibrary.mirenamefolder.caption
+msgid "Rename folder"
+msgstr ""
+
+#: tframeviewdmxprojectors.cbseats.hint
+msgctxt "tframeviewdmxprojectors.cbseats.hint"
+msgid "Select the shape of the seats"
+msgstr ""
+
+#: tframeviewdmxprojectors.cbseats.text
+msgctxt "tframeviewdmxprojectors.cbseats.text"
+msgid "Seats1"
+msgstr ""
+
+#: tframeviewdmxprojectors.cbstage.hint
+msgctxt "tframeviewdmxprojectors.cbstage.hint"
+msgid "Select the shape of the stage"
+msgstr ""
+
+#: tframeviewdmxprojectors.cbstage.text
+msgctxt "tframeviewdmxprojectors.cbstage.text"
+msgid "Rectangle"
+msgstr ""
+
+#: tframeviewdmxprojectors.combobox1.hint
+msgid "Select the universe(s) to show"
+msgstr ""
+
+#: tframeviewdmxprojectors.micreatergbgroup.caption
+msgid "Create RGB group"
+msgstr ""
+
+#: tframeviewdmxprojectors.midelete.caption
+msgid "Delete..."
+msgstr ""
+
+#: tframeviewdmxprojectors.mihflip.caption
+msgid "Horizontal flip"
+msgstr ""
+
+#: tframeviewdmxprojectors.milockfixture.caption
+msgctxt "tframeviewdmxprojectors.milockfixture.caption"
+msgid "Lock"
+msgstr ""
+
+#: tframeviewdmxprojectors.mirotation.caption
+msgid "Rotation"
+msgstr ""
+
+#: tframeviewdmxprojectors.miunlockfixture.caption
+msgctxt "tframeviewdmxprojectors.miunlockfixture.caption"
+msgid "Unlock"
+msgstr ""
+
+#: tframeviewdmxprojectors.mivflip.caption
+msgid "Vertical flip"
+msgstr ""
+
+#: tframeviewdmxprojectors.mizoom.caption
+msgctxt "tframeviewdmxprojectors.mizoom.caption"
+msgid "Zoom"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton1.hint
+msgctxt "tframeviewdmxprojectors.speedbutton1.hint"
+msgid "View all"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton2.caption
+msgid "ADRESS"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton2.hint
+msgid "Show/hide DMX adress"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton4.hint
+msgid ""
+"Open the Universe Manager, where you can\n"
+"add or modify your universes and fixtures.\n"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton5.hint
+msgid "Shutdown all lights."
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton7.hint
+msgid "Show/hide a RGB symbol on fixtures that have RGB channels"
+msgstr ""
+
+#: tframeviewdmxprojectors.speedbutton8.hint
+msgctxt "tframeviewdmxprojectors.speedbutton8.hint"
+msgid "Show/hide the channels levels"
+msgstr ""
+
+#: tframeviewtoplist.midelete.caption
+msgctxt "tframeviewtoplist.midelete.caption"
+msgid "Delete"
+msgstr ""
+
+#: tframeviewtoplist.miduplicate.caption
+msgid "Duplicate"
+msgstr ""
+
+#: tframeviewtoplist.miedit.caption
+msgctxt "tframeviewtoplist.miedit.caption"
+msgid "Edit..."
+msgstr ""
+
+#: tframeviewtoplist.miinsertsequence.caption
+msgid "Insert sequence..."
+msgstr ""
+
+#: tframeviewtoplist.miloadfromanotherproject.caption
+msgid "Load sequences from another project..."
+msgstr ""
+
+#: tframeviewtoplist.mimerge.caption
+msgid "Merge"
+msgstr ""
+
+#: tframeviewtoplist.minewsequence.caption
+msgid "Add sequence..."
+msgstr ""
+
+#: tframeviewtoplist.mirename.caption
+msgid "Rename..."
+msgstr ""
+
+#: tframeviewtoplist.miresetspeed.caption
+msgid "Normal speed"
+msgstr ""
+
+#: tframeviewtoplist.mistop.caption
+msgctxt "tframeviewtoplist.mistop.caption"
+msgid "Stop"
+msgstr ""
+
+#: tframe_colorpalette.label1.caption
+msgid "Red :"
+msgstr ""
+
+#: tframe_colorpalette.label2.caption
+msgid "Green :"
+msgstr ""
+
+#: tframe_colorpalette.label3.caption
+msgid "Blue :"
+msgstr ""
+
+#: tpresetmanager.miadd.caption
+msgctxt "tpresetmanager.miadd.caption"
+msgid "Add"
+msgstr ""
+
+#: tpresetmanager.mimanager.caption
+msgid "Preset manager..."
+msgstr ""
+
+#: tpresetmanager.speedbutton1.caption
+msgid "Update"
+msgstr ""
+
+#: tpresetmanager.speedbutton1.hint
+msgid "Update the selected preset with the current settings"
+msgstr ""
+
+#: tpresetmanager.speedbutton2.caption
+msgctxt "tpresetmanager.speedbutton2.caption"
+msgid "Delete"
+msgstr ""
+
+#: tpresetmanager.speedbutton2.hint
+msgid "Delete the selected preset"
+msgstr ""
+
+#: tpresetmanager.speedbutton3.caption
+msgctxt "tpresetmanager.speedbutton3.caption"
+msgid "Rename"
+msgstr ""
+
+#: tpresetmanager.speedbutton3.hint
+msgid "Rename the selected preset"
+msgstr ""
+
+#: tpresetmanager.speedbutton4.caption
+msgctxt "tpresetmanager.speedbutton4.caption"
+msgid "Close"
+msgstr ""
+
+#: u_resource_string.saction
+msgid "Action"
+msgstr ""
+
+#: u_resource_string.sactionname
+msgid "Action Name"
+msgstr ""
+
+#: u_resource_string.sactionwithbadformat
+msgid "Action with bad format..."
+msgstr ""
+
+#: u_resource_string.sactuallythereisnouniverse
+msgid "Actually, there is no DMX universe."
+msgstr ""
+
+#: u_resource_string.sadd
+msgctxt "u_resource_string.sadd"
+msgid "Add"
+msgstr ""
+
+#: u_resource_string.saddaction
+msgid "Add action"
+msgstr ""
+
+#: u_resource_string.saddthissequence
+msgctxt "u_resource_string.saddthissequence"
+msgid "Add this sequence"
+msgstr ""
+
+#: u_resource_string.sadiscontinuityappearsontherange
+msgid " a discontinuity appears on the range"
+msgstr ""
+
+#: u_resource_string.sadress
+msgid "Adress"
+msgstr ""
+
+#: u_resource_string.safixturemusthaveatleastonechannel
+msgid "A fixture must have at least one channel"
+msgstr ""
+
+#: u_resource_string.sall
+msgid "all"
+msgstr ""
+
+#: u_resource_string.samplitude
+msgctxt "u_resource_string.samplitude"
+msgid "Amplitude"
+msgstr ""
+
+#: u_resource_string.sanerroroccuredwhilecreatingthemanufacturerfolderinthedmxlibrary
+msgid "An error occured while creating the manufacturer folder in the dmx library !!"
+msgstr ""
+
+#: u_resource_string.sanerroroccuredwhilesaving
+msgctxt "u_resource_string.sanerroroccuredwhilesaving"
+msgid "An error occured while saving"
+msgstr ""
+
+#: u_resource_string.sanerroroccurredwhileimportingthefiletotheproject
+msgid "An error occurred while importing the file to the project !!"
+msgstr ""
+
+#: u_resource_string.sanerroroccurredwhileremovingthefilefromdisk
+msgid "An error occurred while removing the file from disk"
+msgstr ""
+
+#: u_resource_string.sapplythemodifications
+msgid "Apply the modifications"
+msgstr ""
+
+#: u_resource_string.sareyousuretodeletethesefixtures
+msgid "Are you sure you want to delete these fixtures ?"
+msgstr ""
+
+#: u_resource_string.sareyousuretodeletethisfixture
+msgid "Are you sure you want to delete this fixture ?"
+msgstr ""
+
+#: u_resource_string.sareyousuretodeletethissequence
+msgid "Are you sure you want to delete this sequence ?"
+msgstr ""
+
+#: u_resource_string.sargumentoutofrange
+msgid "Argument out of range !!"
+msgstr ""
+
+#: u_resource_string.saskdeleteplaylist
+msgid "Delete this playlist ?"
+msgstr ""
+
+#: u_resource_string.saskmovefixtureonanotheruniverse
+msgid "Are you sure to move this fixture on another universe ?"
+msgstr ""
+
+#: u_resource_string.sasremindertherangesmustcovertheinterval
+msgid "As a reminder, the ranges must cover the interval 0 to 255"
+msgstr ""
+
+#: u_resource_string.saudiofadein
+msgid "AUDIO - FADEIN"
+msgstr "AUDIO - FONDU ENTRANT"
+
+#: u_resource_string.saudiofadeout
+msgid "AUDIO - FADEOUT"
+msgstr "AUDIO - FONDU SORTANT"
+
+#: u_resource_string.saudiofilenotfound
+msgid "Audio file not found !!"
+msgstr "Fichier audio inexistant !!"
+
+#: u_resource_string.saudiofollow
+msgctxt "u_resource_string.saudiofollow"
+msgid "Audio"
+msgstr ""
+
+#: u_resource_string.saudiofollowerpresets
+msgid "Audio Follower presets"
+msgstr ""
+
+#: u_resource_string.saudiopause
+msgid "AUDIO - PAUSE"
+msgstr "AUDIO - PAUSE"
+
+#: u_resource_string.saudioplay
+msgid "AUDIO - PLAY"
+msgstr "AUDIO - LECTURE"
+
+#: u_resource_string.saudiosetfreq
+msgid "AUDIO - SET FREQUENCY"
+msgstr "AUDIO - Fixer la fréquence"
+
+#: u_resource_string.saudiosetpan
+msgid "AUDIO - SET PAN"
+msgstr "AUDIO - Fixer le panoeamique"
+
+#: u_resource_string.saudiosetvolume
+msgid "AUDIO - SET VOLUME"
+msgstr "AUDIO - Fixer le volume"
+
+#: u_resource_string.saudiostop
+msgid "AUDIO - STOP"
+msgstr "AUDIO - STOP"
+
+#: u_resource_string.sbacktobegin
+msgctxt "u_resource_string.sbacktobegin"
+msgid "BACK TO THE BEGINNING"
+msgstr ""
+
+#: u_resource_string.scancel
+msgctxt "u_resource_string.scancel"
+msgid "Cancel"
+msgstr ""
+
+#: u_resource_string.scannotsaveplaylist
+msgid "Cannot save the playlist"
+msgstr ""
+
+#: u_resource_string.scenter
+msgid "CENTER"
+msgstr "CENTRE"
+
+#: u_resource_string.schangevolumeto
+msgid "Change volume to"
+msgstr "Varier le volume à"
+
+#: u_resource_string.schannel
+msgid "Channel"
+msgstr ""
+
+#: u_resource_string.schannelamber
+msgctxt "u_resource_string.schannelamber"
+msgid "Amber"
+msgstr ""
+
+#: u_resource_string.schannelblue
+msgctxt "u_resource_string.schannelblue"
+msgid "Blue"
+msgstr ""
+
+#: u_resource_string.schannelcolorchanger
+msgid "Color Changer"
+msgstr ""
+
+#: u_resource_string.schannelconfig
+msgctxt "u_resource_string.schannelconfig"
+msgid "Config"
+msgstr ""
+
+#: u_resource_string.schanneldimmer
+msgctxt "u_resource_string.schanneldimmer"
+msgid "Dimmer"
+msgstr ""
+
+#: u_resource_string.schannelgobo
+msgctxt "u_resource_string.schannelgobo"
+msgid "Gobo"
+msgstr ""
+
+#: u_resource_string.schannelgreen
+msgctxt "u_resource_string.schannelgreen"
+msgid "Green"
+msgstr ""
+
+#: u_resource_string.schannelmasterdimmer
+msgctxt "u_resource_string.schannelmasterdimmer"
+msgid "Master Dimmer"
+msgstr ""
+
+#: u_resource_string.schannelpan
+msgctxt "u_resource_string.schannelpan"
+msgid "Pan"
+msgstr ""
+
+#: u_resource_string.schannelred
+msgctxt "u_resource_string.schannelred"
+msgid "Red"
+msgstr ""
+
+#: u_resource_string.schannelrotationgobo
+msgctxt "u_resource_string.schannelrotationgobo"
+msgid "Rotation Gobo"
+msgstr ""
+
+#: u_resource_string.schannels
+msgid "channels"
+msgstr ""
+
+#: u_resource_string.schannelspeed
+msgctxt "u_resource_string.schannelspeed"
+msgid "Speed"
+msgstr ""
+
+#: u_resource_string.schannelspeedpantilt
+msgid "Speed Pan/Tilt"
+msgstr ""
+
+#: u_resource_string.schannelstrobe
+msgctxt "u_resource_string.schannelstrobe"
+msgid "Strobe"
+msgstr ""
+
+#: u_resource_string.schanneltilt
+msgctxt "u_resource_string.schanneltilt"
+msgid "Tilt"
+msgstr ""
+
+#: u_resource_string.schanneluv
+msgid "Ultraviolet"
+msgstr ""
+
+#: u_resource_string.schannelwhite
+msgctxt "u_resource_string.schannelwhite"
+msgid "White"
+msgstr ""
+
+#: u_resource_string.schorus
+msgctxt "u_resource_string.schorus"
+msgid "CHORUS"
+msgstr "CHORUS"
+
+#: u_resource_string.sclose
+msgctxt "u_resource_string.sclose"
+msgid "Close"
+msgstr ""
+
+#: u_resource_string.scoef
+msgctxt "u_resource_string.scoef"
+msgid "Coef"
+msgstr ""
+
+#: u_resource_string.scolor
+msgid "Color"
+msgstr "Couleur"
+
+#: u_resource_string.scolorpresets
+msgid "Color presets"
+msgstr ""
+
+#: u_resource_string.scontinue
+msgid "Continue"
+msgstr ""
+
+#: u_resource_string.scopy
+msgctxt "u_resource_string.scopy"
+msgid "Copy"
+msgstr ""
+
+#: u_resource_string.scopyrgb
+msgctxt "u_resource_string.scopyrgb"
+msgid "Copy RGB"
+msgstr ""
+
+#: u_resource_string.scopy_
+msgid "copy"
+msgstr ""
+
+#: u_resource_string.scrackling
+msgctxt "u_resource_string.scrackling"
+msgid "Crackling"
+msgstr "Crépitement"
+
+#: u_resource_string.screatesequence
+msgid "Create sequence"
+msgstr ""
+
+#: u_resource_string.scurve
+msgid "CURVE"
+msgstr "COURBE"
+
+#: u_resource_string.scustom1
+msgid "Custom1"
+msgstr ""
+
+#: u_resource_string.sdelete
+msgctxt "u_resource_string.sdelete"
+msgid "Delete"
+msgstr ""
+
+#: u_resource_string.sdeleteselected
+msgctxt "u_resource_string.sdeleteselected"
+msgid "Delete the selection"
+msgstr ""
+
+#: u_resource_string.sdeletethisaction
+msgid "Delete this action"
+msgstr ""
+
+#: u_resource_string.sdeletethispreset
+msgid "Delete this preset ?"
+msgstr ""
+
+#: u_resource_string.sdeletethisuniverse
+msgid "Delete this universe ?"
+msgstr ""
+
+#: u_resource_string.sdescription
+msgctxt "u_resource_string.sdescription"
+msgid "Description"
+msgstr ""
+
+#: u_resource_string.sdeviceport
+msgid "Port"
+msgstr ""
+
+#: u_resource_string.sdeviceportin
+msgid "IN"
+msgstr ""
+
+#: u_resource_string.sdeviceportout
+msgctxt "u_resource_string.sdeviceportout"
+msgid "OUT"
+msgstr ""
+
+#: u_resource_string.sdevices
+msgid "devices"
+msgstr ""
+
+#: u_resource_string.sdimmer
+msgctxt "u_resource_string.sdimmer"
+msgid "Dimmer"
+msgstr ""
+
+#: u_resource_string.sdimmerrgb
+msgid "Dimmer RGB"
+msgstr ""
+
+#: u_resource_string.sdisqueisfullorwriteprotected
+msgid "Disk is full or write protected."
+msgstr ""
+
+#: u_resource_string.sdistorsion
+msgctxt "u_resource_string.sdistorsion"
+msgid "DISTORSION"
+msgstr "DISTORSION"
+
+#: u_resource_string.sdmxaudiofollower
+msgid "DMX - AUDIO FOLLOWER"
+msgstr ""
+
+#: u_resource_string.sdmxaudiofollowerrgb
+#, fuzzy
+#| msgid "DMX - AUDIO FOLLOWER RGB"
+msgid "DMX - AUDIO FOLLOWER RGB"
+msgstr "DMX - SUIVEUR AUDIO RVB"
+
+#: u_resource_string.sdmxchannel
+msgid "DMX CHANNEL AT"
+msgstr ""
+
+#: u_resource_string.sdmxchaser
+msgid "DMX - CHASER"
+msgstr ""
+
+#: u_resource_string.sdmxchaserrgb
+msgid "DMX - CHASER RGB"
+msgstr ""
+
+#: u_resource_string.sdmxconfsuccessloaded
+msgid "DMX configuration successfully loaded"
+msgstr ""
+
+#: u_resource_string.sdmxcopy
+msgid "DMX - COPY"
+msgstr ""
+
+#: u_resource_string.sdmxcopyrgb
+msgid "DMX - COPY RGB"
+msgstr ""
+
+#: u_resource_string.sdmxdimmer
+msgid "DMX - DIMMER"
+msgstr ""
+
+#: u_resource_string.sdmxdimmerrgb
+msgid "DMX - DIMMER RGB"
+msgstr ""
+
+#: u_resource_string.sdmxfadeflame
+msgid "DMX - FLAME + FADEIN"
+msgstr ""
+
+#: u_resource_string.sdmxfixture
+msgid "DMX FIXTURE AT"
+msgstr ""
+
+#: u_resource_string.sdmxflame
+msgid "DMX - FLAME"
+msgstr ""
+
+#: u_resource_string.sdmxflamergb
+msgid "DMX - FLAME RGB"
+msgstr ""
+
+#: u_resource_string.sdmxflamergbfade
+msgid "DMX - FLAME RGB + FADEIN"
+msgstr ""
+
+#: u_resource_string.sdmxflash
+msgid "DMX - FLASH"
+msgstr ""
+
+#: u_resource_string.sdmxgroupssuccessloaded
+msgid "DMX groups successfully loaded"
+msgstr ""
+
+#: u_resource_string.sdmxlibrary
+msgctxt "u_resource_string.sdmxlibrary"
+msgid "DMX library"
+msgstr ""
+
+#: u_resource_string.sdmxstopeffect
+msgid "DMX - STOP EFFECT"
+msgstr ""
+
+#: u_resource_string.sdmxstopeffectrgb
+msgid "DMX - STOP EFFECT RGB"
+msgstr ""
+
+#: u_resource_string.sdmxwave
+msgid "DMX - WAVE"
+msgstr ""
+
+#: u_resource_string.sduration
+msgid "duration"
+msgstr ""
+
+#: u_resource_string.secho
+msgctxt "u_resource_string.secho"
+msgid "ECHO"
+msgstr ""
+
+#: u_resource_string.seditionallowed
+msgid "Edition of audio, dmx and sequences... is now allowed"
+msgstr ""
+
+#: u_resource_string.seditionnotallowed
+msgid "Edition of audio, dmx and sequences is no longer allowed"
+msgstr ""
+
+#: u_resource_string.seditmode
+msgctxt "u_resource_string.seditmode"
+msgid "EDIT MODE"
+msgstr ""
+
+#: u_resource_string.sellipse
+msgid "Ellipse"
+msgstr ""
+
+#: u_resource_string.senabletocreatethenewfolder
+msgid "Unable to create the new folder"
+msgstr ""
+
+#: u_resource_string.sentering
+msgid "Entering"
+msgstr ""
+
+#: u_resource_string.sequalizer
+msgctxt "u_resource_string.sequalizer"
+msgid "EQUALIZER"
+msgstr ""
+
+#: u_resource_string.serror
+msgid "Error"
+msgstr ""
+
+#: u_resource_string.serrorloadingplaylist
+msgid "Error while opening this playlist"
+msgstr ""
+
+#: u_resource_string.serrorwhileimportingdmx
+msgid "An error occurred while importing the DMX configuration from the project"
+msgstr ""
+
+#: u_resource_string.serrorwhileimportingdmxgroups
+msgid "An error occurred while importing the DMX groups from the project"
+msgstr ""
+
+#: u_resource_string.sfade
+msgid "Fade"
+msgstr ""
+
+#: u_resource_string.sfadeoutin
+msgid "Fadeout in"
+msgstr ""
+
+#: u_resource_string.sfailedtodeletethefolder
+msgid "Failed to delete the folder"
+msgstr ""
+
+#: u_resource_string.sfailedtoremovethefixture
+msgid "Failed to remove the fixture"
+msgstr ""
+
+#: u_resource_string.sfailedtorenamethefixture
+msgid "Failed to rename the fixture"
+msgstr ""
+
+#: u_resource_string.sfailedtorenamethefolder
+msgid "Failed to rename the folder"
+msgstr ""
+
+#: u_resource_string.sfailtocreatedirectoryneededbytheproject
+msgid "Fail to create the directory needed by the project"
+msgstr ""
+
+#: u_resource_string.sfailtoloadthefixturefromlibrary
+msgid "Fail to load the fixture from library !!"
+msgstr ""
+
+#: u_resource_string.sfailtoloadtheproject
+msgid "Fail to load the project"
+msgstr ""
+
+#: u_resource_string.sfailtosavetheproject
+msgid "Fail to save the project"
+msgstr ""
+
+#: u_resource_string.sfaster
+msgid "faster"
+msgstr ""
+
+#: u_resource_string.sfile
+msgid "File"
+msgstr ""
+
+#: u_resource_string.sfileisnotaproject
+msgid "This file is not a SAYNÈTE project"
+msgstr ""
+
+#: u_resource_string.sfilewillbedeletedfromprojectstorage
+msgid "File(s) will be deleted from project storage and no longer be available"
+msgstr ""
+
+#: u_resource_string.sfinalopacity
+msgid "Final opacity"
+msgstr ""
+
+#: u_resource_string.sfinish
+msgid "Finish"
+msgstr ""
+
+#: u_resource_string.sfirstrangeshouldstartfrom0
+msgid " first range should start from 0"
+msgstr ""
+
+#: u_resource_string.sfixture
+msgid "Fixture"
+msgstr ""
+
+#: u_resource_string.sfixturefilealreadyexists
+msgid "There is already a fixture with the same name. The new one is renamed as"
+msgstr ""
+
+#: u_resource_string.sfixturenotinlibrary
+msgid "fixture not in library"
+msgstr ""
+
+#: u_resource_string.sflame
+msgctxt "u_resource_string.sflame"
+msgid "Flame"
+msgstr ""
+
+#: u_resource_string.sflamepresets
+msgid "Flame presets"
+msgstr ""
+
+#: u_resource_string.sflamergb
+msgctxt "u_resource_string.sflamergb"
+msgid "Flame RGB"
+msgstr ""
+
+#: u_resource_string.sflash
+msgid "Flash"
+msgstr ""
+
+#: u_resource_string.sfound
+msgid "Found"
+msgstr ""
+
+#: u_resource_string.sfrom
+msgid "from"
+msgstr ""
+
+#: u_resource_string.sgain
+msgctxt "u_resource_string.sgain"
+msgid "Gain"
+msgstr ""
+
+#: u_resource_string.sgargle
+msgctxt "u_resource_string.sgargle"
+msgid "GARGLE"
+msgstr ""
+
+#: u_resource_string.sgroup
+msgctxt "u_resource_string.sgroup"
+msgid "Group"
+msgstr ""
+
+#: u_resource_string.shalfcircle
+msgid "Half circle"
+msgstr ""
+
+#: u_resource_string.shideeffects
+msgid "Hide effects"
+msgstr ""
+
+#: u_resource_string.shz
+msgctxt "u_resource_string.shz"
+msgid "Hz"
+msgstr ""
+
+#: u_resource_string.simage
+msgid "Image"
+msgstr ""
+
+#: u_resource_string.sin
+msgctxt "u_resource_string.sin"
+msgid "in"
+msgstr ""
+
+#: u_resource_string.sinloop
+msgid "loop mode"
+msgstr ""
+
+#: u_resource_string.sisalreadyimported
+msgid "is already imported"
+msgstr ""
+
+#: u_resource_string.sitsnameisreplacedby
+msgid "Its name is replaced by"
+msgstr ""
+
+#: u_resource_string.sjumptoposition
+msgid "Jump to position"
+msgstr ""
+
+#: u_resource_string.slastrangeshouldendon255
+msgid " last range should end on 255"
+msgstr ""
+
+#: u_resource_string.sleft
+msgid "LEFT"
+msgstr ""
+
+#: u_resource_string.slevel
+msgctxt "u_resource_string.slevel"
+msgid "Level"
+msgstr ""
+
+#: u_resource_string.sloop
+msgctxt "u_resource_string.sloop"
+msgid "Loop"
+msgstr ""
+
+#: u_resource_string.sloopbackward
+msgid "LOOP BACKWARD"
+msgstr ""
+
+#: u_resource_string.sloopforward
+msgid "LOOP FORWARD"
+msgstr ""
+
+#: u_resource_string.smanufacturername
+msgid "Manufacturer name:"
+msgstr ""
+
+#: u_resource_string.smax
+msgid "Max"
+msgstr ""
+
+#: u_resource_string.smaxi
+msgid "Maxi"
+msgstr ""
+
+#: u_resource_string.smin
+msgid "Min"
+msgstr ""
+
+#: u_resource_string.smini
+msgid "Mini"
+msgstr ""
+
+#: u_resource_string.smode1
+msgctxt "u_resource_string.smode1"
+msgid "MODE 1"
+msgstr ""
+
+#: u_resource_string.smode2
+msgid "MODE 2"
+msgstr ""
+
+#: u_resource_string.smodename
+msgid "Mode name (optional):"
+msgstr ""
+
+#: u_resource_string.smodify
+msgctxt "u_resource_string.smodify"
+msgid "Modify"
+msgstr ""
+
+#: u_resource_string.smodifythesequence
+msgid "Modify the sequence"
+msgstr ""
+
+#: u_resource_string.smovethefile
+msgid "Move the file"
+msgstr ""
+
+#: u_resource_string.smovethefolder
+msgid "Move the folder"
+msgstr ""
+
+#: u_resource_string.smultiple
+msgid "multiple"
+msgstr ""
+
+#: u_resource_string.smusthaveatleastonerange
+msgid " must have at least one range."
+msgstr ""
+
+#: u_resource_string.snameforthenewgroup
+msgid "Name for the new group:"
+msgstr ""
+
+#: u_resource_string.snameforthenewrgbgroup
+msgid "Name for the new RGB group:"
+msgstr ""
+
+#: u_resource_string.snamefortheplaylist
+msgctxt "u_resource_string.snamefortheplaylist"
+msgid "Name for the playlist"
+msgstr ""
+
+#: u_resource_string.snameofthefixture
+msgid "Name of the fixture:"
+msgstr ""
+
+#: u_resource_string.snameofthenewfolder
+msgid "Name of the new folder :"
+msgstr ""
+
+#: u_resource_string.snewdescription
+msgid "New description:"
+msgstr ""
+
+#: u_resource_string.snewname
+msgid "New name:"
+msgstr ""
+
+#: u_resource_string.snewnamefor
+msgid "New name for"
+msgstr ""
+
+#: u_resource_string.snext
+msgctxt "u_resource_string.snext"
+msgid "Next"
+msgstr ""
+
+#: u_resource_string.sno
+msgid "No"
+msgstr ""
+
+#: u_resource_string.snodevicefound
+msgid "No device found..."
+msgstr ""
+
+#: u_resource_string.snone
+msgid "None"
+msgstr ""
+
+#: u_resource_string.snormal
+msgctxt "u_resource_string.snormal"
+msgid "normal"
+msgstr ""
+
+#: u_resource_string.snotanaction
+msgid "Not an action..."
+msgstr ""
+
+#: u_resource_string.snotconnected
+msgid "NOT CONNECTED"
+msgstr ""
+
+#: u_resource_string.snotdefined
+msgid "not defined"
+msgstr ""
+
+#: u_resource_string.snotfound
+msgid "NOT FOUND !!"
+msgstr ""
+
+#: u_resource_string.soff
+msgctxt "u_resource_string.soff"
+msgid "OFF"
+msgstr ""
+
+#: u_resource_string.sok
+msgctxt "u_resource_string.sok"
+msgid "Ok"
+msgstr ""
+
+#: u_resource_string.son
+msgctxt "u_resource_string.son"
+msgid "ON"
+msgstr ""
+
+#: u_resource_string.soneshoot
+msgctxt "u_resource_string.soneshoot"
+msgid "ONE SHOOT"
+msgstr ""
+
+#: u_resource_string.sonly
+msgid "only "
+msgstr ""
+
+#: u_resource_string.son_
+msgid "on"
+msgstr ""
+
+#: u_resource_string.sopacity
+msgid "Opacity"
+msgstr ""
+
+#: u_resource_string.soverwritespreviousdatafor
+msgid "Overwrites previous data for"
+msgstr ""
+
+#: u_resource_string.span
+msgctxt "u_resource_string.span"
+msgid "Pan"
+msgstr ""
+
+#: u_resource_string.spause
+msgid "Pause"
+msgstr ""
+
+#: u_resource_string.spaused
+msgid "paused"
+msgstr ""
+
+#: u_resource_string.sphaser
+msgctxt "u_resource_string.sphaser"
+msgid "PHASER"
+msgstr ""
+
+#: u_resource_string.sphoto
+msgid "PHOTO"
+msgstr ""
+
+#: u_resource_string.spingpong
+msgid "PING PONG"
+msgstr ""
+
+#: u_resource_string.splay
+msgctxt "u_resource_string.splay"
+msgid "Play"
+msgstr ""
+
+#: u_resource_string.splaying
+msgid "playing"
+msgstr ""
+
+#: u_resource_string.splaylistsavedsuccess
+msgid "Playlist saved successfully"
+msgstr ""
+
+#: u_resource_string.spleasenospaceorspecialcharacters
+msgctxt "u_resource_string.spleasenospaceorspecialcharacters"
+msgid "please no space or special characters"
+msgstr ""
+
+#: u_resource_string.spleasenospecialcharacters
+msgid "please no special characters"
+msgstr ""
+
+#: u_resource_string.spowervaluemustbeanintegergreaterthanzero
+msgid "Power value must be an integer greater than zero"
+msgstr ""
+
+#: u_resource_string.spresetbuttonhint
+msgid ""
+"With the presets, you can save your settings\n"
+"to use them later\n"
+msgstr ""
+
+#: u_resource_string.sprevious
+msgctxt "u_resource_string.sprevious"
+msgid "Previous"
+msgstr ""
+
+#: u_resource_string.sprojectcreatedwithsuccess
+msgctxt "u_resource_string.sprojectcreatedwithsuccess"
+msgid "Project created with success !"
+msgstr ""
+
+#: u_resource_string.sprojectname
+msgid "Project name"
+msgstr ""
+
+#: u_resource_string.square
+msgid "Square"
+msgstr ""
+
+#: u_resource_string.srectangle
+msgctxt "u_resource_string.srectangle"
+msgid "Rectangle"
+msgstr ""
+
+#: u_resource_string.sremoveaudiofilefromproject
+msgid "Remove audio file(s) from project ?"
+msgstr ""
+
+#: u_resource_string.srename
+msgctxt "u_resource_string.srename"
+msgid "Rename"
+msgstr ""
+
+#: u_resource_string.sreplacepresetdata
+msgid "Replace the data of this preset ?"
+msgstr ""
+
+#: u_resource_string.sresume
+msgid "Resume"
+msgstr ""
+
+#: u_resource_string.sreverb
+msgctxt "u_resource_string.sreverb"
+msgid "REVERB"
+msgstr ""
+
+#: u_resource_string.srgbcolorfrom
+msgid "RGB color from"
+msgstr ""
+
+#: u_resource_string.srgbgroup
+msgid "RGB Group"
+msgstr ""
+
+#: u_resource_string.sright
+msgid "RIGHT"
+msgstr ""
+
+#: u_resource_string.srunning
+msgid "running"
+msgstr ""
+
+#: u_resource_string.sscreen
+msgid "SCREEN"
+msgstr ""
+
+#: u_resource_string.sseats1
+msgctxt "u_resource_string.sseats1"
+msgid "Seats1"
+msgstr ""
+
+#: u_resource_string.sseats2
+msgid "Seats2"
+msgstr ""
+
+#: u_resource_string.ssec
+msgctxt "u_resource_string.ssec"
+msgid "sec"
+msgstr ""
+
+#: u_resource_string.ssecond
+msgid "second"
+msgstr ""
+
+#: u_resource_string.sseconds
+msgid "seconds"
+msgstr ""
+
+#: u_resource_string.sselected
+msgid "selected"
+msgstr ""
+
+#: u_resource_string.sselecteditemwillberemovedfromproject
+msgid "The selected items will be removed from the project. Continue ?"
+msgstr ""
+
+#: u_resource_string.sseq
+msgid "Seq"
+msgstr ""
+
+#: u_resource_string.ssequence
+msgctxt "u_resource_string.ssequence"
+msgid "Sequence"
+msgstr ""
+
+#: u_resource_string.ssequencename
+msgid "Sequence name"
+msgstr ""
+
+#: u_resource_string.sserialnumber
+msgctxt "u_resource_string.sserialnumber"
+msgid "Serial number"
+msgstr ""
+
+#: u_resource_string.ssetvolumeto
+msgid "Set volume to"
+msgstr ""
+
+#: u_resource_string.sseveral
+msgid "several"
+msgstr ""
+
+#: u_resource_string.sshoweffects
+msgctxt "u_resource_string.sshoweffects"
+msgid "Show effects"
+msgstr ""
+
+#: u_resource_string.sshowmode
+msgid "SHOW MODE"
+msgstr ""
+
+#: u_resource_string.sslower
+msgid "slower"
+msgstr ""
+
+#: u_resource_string.ssoften
+msgctxt "u_resource_string.ssoften"
+msgid "Soften"
+msgstr ""
+
+#: u_resource_string.ssoftenon
+msgctxt "u_resource_string.ssoftenon"
+msgid "Soften on"
+msgstr ""
+
+#: u_resource_string.sspeed
+msgctxt "u_resource_string.sspeed"
+msgid "Speed"
+msgstr ""
+
+#: u_resource_string.sstartintersession
+msgctxt "u_resource_string.sstartintersession"
+msgid "Start intersession"
+msgstr ""
+
+#: u_resource_string.sstartsequence
+msgid "START"
+msgstr ""
+
+#: u_resource_string.sstartvaluemustbegreaterthanendvalue
+msgid " start value must be lower than end value"
+msgstr ""
+
+#: u_resource_string.sstop
+msgctxt "u_resource_string.sstop"
+msgid "Stop"
+msgstr ""
+
+#: u_resource_string.sstopintersession
+msgid "Stop intersession"
+msgstr ""
+
+#: u_resource_string.sstopped
+msgid "stopped"
+msgstr ""
+
+#: u_resource_string.sstopsequence
+msgctxt "u_resource_string.sstopsequence"
+msgid "STOP"
+msgstr ""
+
+#: u_resource_string.sstretchtime
+msgid "STRETCH TIME"
+msgstr ""
+
+#: u_resource_string.ssubstract
+msgid "Substract"
+msgstr ""
+
+#: u_resource_string.sthefile
+msgid "The file"
+msgstr ""
+
+#: u_resource_string.sthefixturewascreatedsuccessfully
+msgid "The fixture was created successfully !"
+msgstr ""
+
+#: u_resource_string.sto
+msgctxt "u_resource_string.sto"
+msgid "to"
+msgstr ""
+
+#: u_resource_string.stocenter
+msgid "to CENTER"
+msgstr ""
+
+#: u_resource_string.stoleft
+msgid "to LEFT"
+msgstr ""
+
+#: u_resource_string.storight
+msgid "to RIGHT"
+msgstr ""
+
+#: u_resource_string.suniverse
+msgctxt "u_resource_string.suniverse"
+msgid "Universe"
+msgstr ""
+
+#: u_resource_string.suniversefull
+msgid "Universe full or not enough free adress available"
+msgstr ""
+
+#: u_resource_string.sunknowcommand
+msgid "UNKNOW COMMAND !!"
+msgstr ""
+
+#: u_resource_string.sunknown
+msgid "Unknown"
+msgstr ""
+
+#: u_resource_string.sunknownaction
+msgid "Unknown action !!"
+msgstr ""
+
+#: u_resource_string.sunknownaudio
+msgid "Unknown audio !!"
+msgstr ""
+
+#: u_resource_string.sunknowsequence
+msgid "UNKNOW SEQUENCE !!"
+msgstr ""
+
+#: u_resource_string.svideo
+msgid "Video"
+msgstr ""
+
+#: u_resource_string.svolume
+msgctxt "u_resource_string.svolume"
+msgid "Volume"
+msgstr ""
+
+#: u_resource_string.swait
+msgid "WAIT"
+msgstr ""
+
+#: u_resource_string.swarning
+msgid "Warning"
+msgstr ""
+
+#: u_resource_string.swouldyouliketocreateone
+msgid "Would you like to create one ?"
+msgstr ""
+
+#: u_resource_string.swouldyouliketodefineanothermodeforthisfixture
+msgid "Would you like to define another mode for this fixture ?"
+msgstr ""
+
+#: u_resource_string.syes
+msgid "Yes"
+msgstr ""
+
+#: u_resource_string.syouareabouttodelete
+msgid "You are about to delete"
+msgstr ""
+
+#: u_resource_string.syouwillloseallthecontentofthefolder
+msgid "YOU WILL LOSE ALL THE CONTENTS OF THE FOLDER"
+msgstr ""
+
+#: u_resource_string.szoom
+msgctxt "u_resource_string.szoom"
+msgid "Zoom"
+msgstr ""
+

@@ -1,0 +1,33 @@
+4
+150
+Cameo PAR64 CAN 6 channels mode
+6
+3
+Red
+1
+0-->255 : 
+4
+Green
+1
+0-->255 : 
+5
+Blue
+1
+0-->255 : 
+1
+Master Dimmer
+1
+0-->255 : 
+0
+Config
+2
+0-->16 : none
+17-->255 : Strobe - speed - micro sensibility
+12
+Color changer
+5
+0-->31 : none
+32-->95 : color fade mode
+96-->159 : color jump mode
+160-->223 : jump 7 colors mode
+224-->255 : Sound control mode

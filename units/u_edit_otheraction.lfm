@@ -1,0 +1,528 @@
+object FormOtherAction: TFormOtherAction
+  Left = 526
+  Height = 335
+  Top = 175
+  Width = 420
+  BorderIcons = [biSystemMenu]
+  Caption = 'OTHER actions'
+  ClientHeight = 335
+  ClientWidth = 420
+  Color = 3355443
+  Font.Color = 11318976
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.6.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 335
+    Top = 0
+    Width = 420
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = 247036
+    Pen.Width = 2
+  end
+  object Shape2: TShape
+    AnchorSideLeft.Control = SpeedButton1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 128
+    Height = 335
+    Top = 0
+    Width = 2
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Left = 3
+    Pen.Color = 247036
+    Pen.Width = 2
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Start a TOP from this one'
+    Top = 7
+    Width = 120
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 7
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 120
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 120
+    Caption = 'Start sequence'
+    Color = 4737096
+    Flat = True
+    Font.Color = 15395562
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object SpeedButton2: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Stop a TOP from this one'
+    Top = 39
+    Width = 120
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 120
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 120
+    Caption = 'Stop sequence'
+    Color = 4737096
+    Flat = True
+    Font.Color = 15395562
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object SpeedButton3: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SpeedButton2
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Loop this sequence to its beginning.'#13#10'All action that follow will be ignored.'
+    Top = 71
+    Width = 120
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 120
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 120
+    Caption = 'Loop sequence'
+    Color = 4737096
+    Flat = True
+    Font.Color = 15395562
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object Notebook1: TNotebook
+    AnchorSideLeft.Control = Shape2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 130
+    Height = 331
+    Top = 2
+    Width = 288
+    PageIndex = 3
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 2
+    BorderSpacing.Bottom = 2
+    TabOrder = 0
+    object PageStart: TPage
+      object BAdd1: TSpeedButton
+        AnchorSideRight.Control = PageStart
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = PageStart
+        AnchorSideBottom.Side = asrBottom
+        Left = 216
+        Height = 25
+        Top = 303
+        Width = 70
+        Anchors = [akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 70
+        Caption = 'sAdd'
+        Color = 247036
+        Font.Color = clBlack
+        Font.Height = 15
+        Images = DataModule1.ImageList1
+        ImageIndex = 4
+        Layout = blGlyphRight
+        Transparent = False
+        OnClick = BAdd1Click
+        ParentFont = False
+      end
+      object LBStart: TListBox
+        AnchorSideLeft.Control = PageStart
+        AnchorSideTop.Control = Label1
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageStart
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = BAdd1
+        Left = 2
+        Height = 283
+        Top = 17
+        Width = 284
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 2
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Color = 3947580
+        ItemHeight = 0
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        AnchorSideLeft.Control = PageStart
+        AnchorSideTop.Control = PageStart
+        Left = 2
+        Height = 15
+        Top = 2
+        Width = 91
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 2
+        Caption = 'Sequence to start'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+    end
+    object PageStop: TPage
+      object BAdd2: TSpeedButton
+        AnchorSideRight.Control = PageStop
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = PageStop
+        AnchorSideBottom.Side = asrBottom
+        Left = 216
+        Height = 25
+        Top = 303
+        Width = 70
+        Anchors = [akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 70
+        Caption = 'sAdd'
+        Color = 247036
+        Font.Color = clBlack
+        Font.Height = 15
+        Images = DataModule1.ImageList1
+        ImageIndex = 4
+        Layout = blGlyphRight
+        Transparent = False
+        OnClick = BAdd1Click
+        ParentFont = False
+      end
+      object Label2: TLabel
+        AnchorSideLeft.Control = PageStop
+        AnchorSideTop.Control = PageStop
+        Left = 2
+        Height = 15
+        Top = 2
+        Width = 89
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 2
+        Caption = 'Sequence to stop'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object LBStop: TListBox
+        AnchorSideLeft.Control = PageStop
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageStop
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = BAdd2
+        Left = 2
+        Height = 283
+        Top = 17
+        Width = 284
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 2
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Color = 3947580
+        ItemHeight = 0
+        TabOrder = 0
+      end
+    end
+    object PageLoop: TPage
+      object BAdd3: TSpeedButton
+        AnchorSideRight.Control = PageLoop
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = PageLoop
+        AnchorSideBottom.Side = asrBottom
+        Left = 216
+        Height = 25
+        Top = 303
+        Width = 70
+        Anchors = [akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 70
+        Caption = 'sAdd'
+        Color = 247036
+        Font.Color = clBlack
+        Font.Height = 15
+        Images = DataModule1.ImageList1
+        ImageIndex = 4
+        Layout = blGlyphRight
+        Transparent = False
+        OnClick = BAdd1Click
+        ParentFont = False
+      end
+    end
+    object PageStretchTime: TPage
+      object BAdd4: TSpeedButton
+        AnchorSideRight.Control = PageStretchTime
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = PageStretchTime
+        AnchorSideBottom.Side = asrBottom
+        Left = 216
+        Height = 25
+        Top = 303
+        Width = 70
+        Anchors = [akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 70
+        Caption = 'sAdd'
+        Color = 247036
+        Font.Color = clBlack
+        Font.Height = 15
+        Images = DataModule1.ImageList1
+        ImageIndex = 4
+        Layout = blGlyphRight
+        Transparent = False
+        OnClick = BAdd1Click
+        ParentFont = False
+      end
+      object Label3: TLabel
+        AnchorSideLeft.Control = PageStart
+        AnchorSideTop.Control = PageStart
+        Left = 0
+        Height = 15
+        Top = 2
+        Width = 113
+        BorderSpacing.Left = 3
+        BorderSpacing.Top = 2
+        Caption = 'Sequence to stretch'
+        Font.Color = 15395562
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object LBStretch: TListBox
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageStretchTime
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Label5
+        Left = 2
+        Height = 167
+        Top = 17
+        Width = 284
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 2
+        BorderSpacing.Right = 2
+        BorderSpacing.Bottom = 3
+        Color = 3947580
+        ItemHeight = 0
+        TabOrder = 0
+      end
+      object Panel1: TPanel
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideBottom.Control = PageStretchTime
+        AnchorSideBottom.Side = asrBottom
+        Left = 2
+        Height = 77
+        Top = 252
+        Width = 148
+        Anchors = [akLeft, akBottom]
+        BorderSpacing.Left = 2
+        BorderSpacing.Bottom = 2
+        BevelOuter = bvNone
+        Color = 5592405
+        ParentColor = False
+        TabOrder = 1
+      end
+      object Label4: TLabel
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideTop.Control = Label25
+        AnchorSideRight.Control = PageStretchTime
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = FSE1
+        Left = 179
+        Height = 15
+        Top = 237
+        Width = 99
+        Anchors = [akTop, akRight]
+        BorderSpacing.Left = 3
+        BorderSpacing.Right = 10
+        Caption = 'Duration in second'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object FSE1: TFloatSpinEdit
+        AnchorSideLeft.Control = Label4
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Label25
+        Left = 179
+        Height = 23
+        Top = 252
+        Width = 67
+        BorderSpacing.Bottom = 2
+        Color = 4276545
+        Font.Color = 15395562
+        Font.Style = [fsBold]
+        Increment = 0.5
+        MaxValue = 1000
+        ParentFont = False
+        TabOrder = 2
+        Value = 1
+      end
+      object Label25: TLabel
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Panel1
+        Left = 3
+        Height = 15
+        Top = 237
+        Width = 42
+        Anchors = [akLeft, akBottom]
+        BorderSpacing.Left = 3
+        Caption = 'Velocity'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideBottom.Control = TB1
+        Left = 3
+        Height = 15
+        Top = 187
+        Width = 32
+        Anchors = [akLeft, akBottom]
+        BorderSpacing.Left = 3
+        Caption = 'Speed'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label11: TLabel
+        AnchorSideLeft.Control = Label5
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label5
+        Left = 40
+        Height = 15
+        Top = 187
+        Width = 29
+        BorderSpacing.Left = 5
+        Caption = 'Label'
+        Font.Color = 15395562
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object TB1: TTrackBar
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideTop.Control = Label5
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageStretchTime
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Label25
+        Left = 0
+        Height = 30
+        Top = 202
+        Width = 288
+        Frequency = 75
+        Max = 700
+        Min = 25
+        OnChange = TB1Change
+        Position = 100
+        ShowSelRange = False
+        TickMarks = tmTopLeft
+        Anchors = [akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 5
+        TabOrder = 3
+      end
+      object SpeedButton5: TSpeedButton
+        AnchorSideRight.Control = TB1
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TB1
+        Left = 228
+        Height = 16
+        Top = 186
+        Width = 40
+        Anchors = [akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Right = 20
+        Constraints.MinWidth = 40
+        Caption = 'RESET'
+        Font.Color = clBlack
+        Font.Height = 12
+        Font.Style = [fsBold]
+        OnClick = SpeedButton5Click
+        ParentFont = False
+      end
+    end
+  end
+  object SpeedButton4: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SpeedButton3
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Stretch time allows you to speed up/down the execution of another sequence.'
+    Top = 103
+    Width = 120
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 120
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 120
+    Caption = 'Stretch time'
+    Color = 4737096
+    Flat = True
+    Font.Color = 15395562
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+end

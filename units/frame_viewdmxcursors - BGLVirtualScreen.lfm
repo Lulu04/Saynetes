@@ -1,0 +1,348 @@
+object FrameViewDMXCursors: TFrameViewDMXCursors
+  Left = 0
+  Height = 200
+  Top = 0
+  Width = 876
+  ClientHeight = 200
+  ClientWidth = 876
+  TabOrder = 0
+  DesignLeft = 307
+  DesignTop = 175
+  object BGLVirtualScreen1: TBGLVirtualScreen
+    Left = 0
+    Height = 150
+    Top = 35
+    Width = 876
+    OnRedraw = BGLVirtualScreen1Redraw
+    Align = alClient
+    BevelWidth = 0
+    Color = 3355443
+    ParentColor = False
+    TabOrder = 0
+    UseDockManager = False
+    OnFramesPerSecond = BGLVirtualScreen1FramesPerSecond
+    OnLoadTextures = BGLVirtualScreen1LoadTextures
+    OnMouseDown = BGLVirtualScreen1MouseDown
+    OnMouseLeave = BGLVirtualScreen1MouseLeave
+    OnMouseMove = BGLVirtualScreen1MouseMove
+    OnMouseUp = BGLVirtualScreen1MouseUp
+    OnMouseWheel = BGLVirtualScreen1MouseWheel
+    OnResize = BGLVirtualScreen1Resize
+  end
+  object ScrollBar1: TScrollBar
+    Left = 0
+    Height = 15
+    Top = 185
+    Width = 876
+    Align = alBottom
+    Constraints.MaxHeight = 15
+    Constraints.MinHeight = 15
+    LargeChange = 50
+    Max = 2000
+    PageSize = 500
+    SmallChange = 10
+    TabOrder = 1
+    TabStop = False
+    OnScroll = ScrollBar1Scroll
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 35
+    Top = 0
+    Width = 876
+    Align = alTop
+    ClientHeight = 35
+    ClientWidth = 876
+    Color = 3684408
+    ParentColor = False
+    TabOrder = 2
+    object BZero: TSpeedButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 21
+      Height = 20
+      Hint = 'Force all cursors to zero'
+      Top = 7
+      Width = 43
+      AutoSize = True
+      BorderSpacing.Left = 20
+      Constraints.MaxHeight = 20
+      Constraints.MinHeight = 20
+      Caption = 'ZERO'
+      Color = 247036
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 20
+      Margin = -2
+      Spacing = 0
+      Transparent = False
+      OnClick = BZeroClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BChannelTools: TSpeedButton
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = BRGBTools
+      Cursor = crHandPoint
+      Left = 704
+      Height = 20
+      Hint = 'Show/hide the channels tools'
+      Top = 7
+      Width = 83
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 15
+      Constraints.MaxHeight = 20
+      Constraints.MinHeight = 20
+      Caption = 'CHANNELS TOOLS'
+      Color = 247036
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Transparent = False
+      OnClick = BChannelToolsClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BRGBTools: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 802
+      Height = 20
+      Hint = 'Show/hide the RGB tools'
+      Top = 7
+      Width = 53
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 20
+      Constraints.MaxHeight = 20
+      Constraints.MinHeight = 20
+      Caption = 'RGB TOOLS'
+      Color = 247036
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Transparent = False
+      OnClick = BRGBToolsClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BOnlySameType: TSpeedButton
+      AnchorSideLeft.Control = BOnlySelected
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 216
+      Height = 16
+      Hint = 'Click to activate/deactivate'#13#10'When you move a cursor, its value is copied on channels with the same type.'
+      Top = 9
+      Width = 77
+      AutoSize = True
+      BorderSpacing.Left = 15
+      Constraints.MaxHeight = 16
+      Constraints.MinHeight = 16
+      Caption = 'SAME TYPES'
+      Color = 5395026
+      Flat = True
+      Font.Color = 11318976
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 21
+      Transparent = False
+      OnClick = BAllClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BAll: TSpeedButton
+      AnchorSideLeft.Control = BZero
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 79
+      Height = 16
+      Hint = 'Click to activate/deactivate.'#13#10'When you moves a cursor, its value is copied on all channels (selected or not)'
+      Top = 9
+      Width = 40
+      AutoSize = True
+      BorderSpacing.Left = 15
+      Constraints.MaxHeight = 16
+      Constraints.MinHeight = 16
+      Caption = 'ALL'
+      Color = 5395026
+      Flat = True
+      Font.Color = 11318976
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 21
+      Transparent = False
+      OnClick = BAllClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BOnlySelected: TSpeedButton
+      AnchorSideLeft.Control = BAll
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 134
+      Height = 16
+      Hint = 'Click to activate/deactivate.'#13#10'When you moves a selected cursor, its value is copied on other selected channels.'
+      Top = 9
+      Width = 67
+      AutoSize = True
+      BorderSpacing.Left = 15
+      Constraints.MaxHeight = 16
+      Constraints.MinHeight = 16
+      Caption = 'SELECTED'
+      Color = 5395026
+      Flat = True
+      Font.Color = 11318976
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 21
+      Transparent = False
+      OnClick = BAllClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BGroup: TSpeedButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = BChannelTools
+      Cursor = crHandPoint
+      Left = 588
+      Height = 20
+      Hint = 'Show/Hide the groups window'
+      Top = 7
+      Width = 56
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 60
+      Constraints.MaxHeight = 20
+      Constraints.MinHeight = 20
+      Caption = 'GROUP'
+      Color = 247036
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 36
+      Transparent = False
+      OnClick = BGroupClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BSelectNone: TSpeedButton
+      AnchorSideLeft.Control = BOnlySameType
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 323
+      Height = 20
+      Hint = 'Unselect all channels'
+      Top = 7
+      Width = 50
+      AutoSize = True
+      BorderSpacing.Left = 30
+      Constraints.MaxHeight = 20
+      Constraints.MinHeight = 20
+      Caption = 'NONE'
+      Color = 247036
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 7
+      Transparent = False
+      OnClick = BSelectNoneClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object Label1: TLabel
+      Left = 391
+      Height = 15
+      Top = 12
+      Width = 34
+      Caption = 'Label1'
+      Font.Color = 14408667
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object PopChannel: TPopupMenu
+    OnPopup = PopChannelPopup
+    Left = 144
+    Top = 50
+    object MenuItem1: TMenuItem
+      Caption = 'Only this channel'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'All channels'
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = '-'
+    end
+    object MIOnlyOnAll: TMenuItem
+      Caption = 'Only this channel on all fixtures'
+      OnClick = MIOnlyOnAllClick
+    end
+    object MIAllOnAll: TMenuItem
+      Caption = 'All channels on all fixtures'
+      OnClick = MIAllOnAllClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object MISelectOnAll: TMenuItem
+      Caption = 'Selects on all fixtures'
+      ImageIndex = 19
+      SubMenuImagesWidth = 16
+      OnClick = MISelectOnAllClick
+    end
+    object MenuItem5: TMenuItem
+      Caption = '-'
+    end
+    object MICreateGroup: TMenuItem
+      Caption = 'Create a group'
+      ImageIndex = 36
+      OnClick = MICreateGroupClick
+    end
+    object MenuItem6: TMenuItem
+      Caption = '-'
+    end
+    object MILockChannel: TMenuItem
+      Caption = 'Lock'
+      ImageIndex = 34
+      OnClick = MILockChannelClick
+    end
+    object MIUnlockChannel: TMenuItem
+      Caption = 'Unlock'
+      ImageIndex = 35
+      OnClick = MIUnlockChannelClick
+    end
+  end
+end

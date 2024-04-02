@@ -1,0 +1,35 @@
+object FrameViewColorList: TFrameViewColorList
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  ClientHeight = 240
+  ClientWidth = 320
+  TabOrder = 0
+  DesignLeft = 478
+  DesignTop = 272
+  object LB: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 240
+    Top = 0
+    Width = 320
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Color = 1644825
+    Font.Color = 11318976
+    ItemHeight = 0
+    MultiSelect = True
+    OnDrawItem = LBDrawItem
+    OnKeyDown = LBKeyDown
+    OnKeyUp = LBKeyUp
+    Options = []
+    ParentFont = False
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+  end
+end

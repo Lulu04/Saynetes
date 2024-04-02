@@ -1,0 +1,425 @@
+object FormMain: TFormMain
+  Left = 181
+  Height = 577
+  Top = 104
+  Width = 1006
+  Caption = 'SAYNÈTES'
+  ClientHeight = 557
+  ClientWidth = 1006
+  Color = 1710618
+  KeyPreview = True
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object PanelSequence: TPanel
+    Left = 695
+    Height = 517
+    Top = 40
+    Width = 311
+    Align = alRight
+    BevelColor = 247036
+    BevelOuter = bvNone
+    Color = 7303023
+    Constraints.MaxWidth = 600
+    Constraints.MinWidth = 200
+    ParentColor = False
+    TabOrder = 0
+  end
+  object Splitter1: TSplitter
+    Left = 692
+    Height = 517
+    Top = 40
+    Width = 3
+    Align = alRight
+    Color = 3158064
+    OnMoved = Splitter2Moved
+    ParentColor = False
+    ResizeAnchor = akRight
+    ResizeStyle = rsPattern
+  end
+  object PanelDMX: TPanel
+    Left = 307
+    Height = 517
+    Top = 40
+    Width = 385
+    Align = alClient
+    BevelColor = 247036
+    BevelOuter = bvNone
+    Color = 7303023
+    ParentColor = False
+    TabOrder = 2
+  end
+  object PanelAudio: TPanel
+    Left = 0
+    Height = 517
+    Top = 40
+    Width = 304
+    Align = alLeft
+    BevelColor = 247036
+    BevelOuter = bvNone
+    Color = 7303023
+    ParentColor = False
+    TabOrder = 3
+  end
+  object Splitter2: TSplitter
+    Left = 304
+    Height = 517
+    Top = 40
+    Width = 3
+    Color = 3158064
+    OnMoved = Splitter2Moved
+    ParentColor = False
+    ResizeStyle = rsPattern
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 1006
+    Align = alTop
+    BevelColor = 247036
+    ClientHeight = 40
+    ClientWidth = 1006
+    Color = 7303023
+    ParentColor = False
+    TabOrder = 5
+    object BToogleEditMode: TSpeedButton
+      AnchorSideTop.Control = Panel4
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel4
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 910
+      Height = 21
+      Hint = 'Switch between EDIT MODE and SHOW MODE.'#13#10'In EDIT MODE you can edit the project.'#13#10'In SHOW MODE, you can not apply modifications on the project.'
+      Top = 10
+      Width = 85
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 10
+      Constraints.MinHeight = 21
+      Constraints.MinWidth = 85
+      Enabled = False
+      Font.Color = clBlack
+      Font.Height = 12
+      Font.Style = [fsBold]
+      OnClick = BToogleEditModeClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BLight: TSpeedButton
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel4
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Shape4
+      Cursor = crHandPoint
+      Left = 823
+      Height = 30
+      Hint = 'Show the lightings window (Shortkey F2).'
+      Top = 5
+      Width = 76
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 5
+      Constraints.MaxHeight = 30
+      Constraints.MinHeight = 30
+      Constraints.MinWidth = 70
+      Caption = 'F2 - LIGHT'
+      Color = 4737096
+      Flat = True
+      Font.Color = 15395562
+      Font.Height = 14
+      Images = DataModule1.ImageList1
+      Transparent = False
+      OnClick = BAudioClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object BAudio: TSpeedButton
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel4
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = BLight
+      Cursor = crHandPoint
+      Left = 737
+      Height = 30
+      Hint = 'Show the audio window (Shortkey F1).'
+      Top = 5
+      Width = 81
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 5
+      Constraints.MaxHeight = 30
+      Constraints.MinHeight = 30
+      Constraints.MinWidth = 70
+      Caption = 'F1 - AUDIO'
+      Color = 4737096
+      Flat = True
+      Font.Color = 15395562
+      Font.Height = 14
+      Images = DataModule1.ImageList1
+      Transparent = False
+      OnClick = BAudioClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object Panel1: TPanel
+      AnchorSideRight.Control = BAudio
+      Left = 1
+      Height = 38
+      Top = 1
+      Width = 716
+      Align = alLeft
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Right = 20
+      ClientHeight = 38
+      ClientWidth = 716
+      TabOrder = 0
+      object SpeedButton1: TSpeedButton
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        Cursor = crHandPoint
+        Left = 5
+        Height = 30
+        Hint = 'New project (Ctrl+N)'
+        Top = 4
+        Width = 30
+        Color = 13555931
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 44
+        Transparent = False
+        OnClick = MIProjectNewClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton2: TSpeedButton
+        AnchorSideLeft.Control = SpeedButton1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        Cursor = crHandPoint
+        Left = 40
+        Height = 30
+        Hint = 'Load a project (Ctrl+O)'
+        Top = 4
+        Width = 30
+        BorderSpacing.Left = 5
+        Color = 13555931
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 12
+        Transparent = False
+        OnClick = MIProjectOpenClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton3: TSpeedButton
+        AnchorSideLeft.Control = SpeedButton2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        Cursor = crHandPoint
+        Left = 75
+        Height = 30
+        Hint = 'Save the project (Ctrl+S)'
+        Top = 4
+        Width = 30
+        BorderSpacing.Left = 5
+        Color = 13555931
+        Enabled = False
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 13
+        Transparent = False
+        OnClick = MIProjectSaveClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton4: TSpeedButton
+        AnchorSideLeft.Control = SpeedButton3
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        Cursor = crHandPoint
+        Left = 110
+        Height = 30
+        Hint = 'Project options'
+        Top = 4
+        Width = 30
+        BorderSpacing.Left = 5
+        Color = 13555931
+        Enabled = False
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 41
+        Transparent = False
+        OnClick = MIProjectOptionsClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton5: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = SpeedButton6
+        Cursor = crHandPoint
+        Left = 600
+        Height = 30
+        Hint = 'Connect your universes to your DMX devices'
+        Top = 4
+        Width = 30
+        Anchors = [akTop, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Right = 5
+        Color = 13555931
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 17
+        Transparent = False
+        OnClick = MIToolDeviceManagerClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton6: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = SpeedButton7
+        Cursor = crHandPoint
+        Left = 635
+        Height = 30
+        Hint = 'Open the DMX fixture library'
+        Top = 4
+        Width = 30
+        Anchors = [akTop, akRight]
+        BorderSpacing.Right = 20
+        Color = 13555931
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 32
+        Transparent = False
+        OnClick = MIToolDMXLibraryClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object SpeedButton7: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = Panel1
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 685
+        Height = 30
+        Hint = 'Program options'
+        Top = 4
+        Width = 30
+        Anchors = [akTop, akRight]
+        Color = 13555931
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 45
+        Transparent = False
+        OnClick = MIProgramOptionsClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+    object Shape4: TShape
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = BToogleEditMode
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 904
+      Height = 27
+      Top = 4
+      Width = 1
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 3
+      Brush.Style = bsClear
+      Pen.Color = 3158064
+    end
+  end
+  object MainMenu1: TMainMenu
+    Images = DataModule1.ImageList1
+    Left = 584
+    Top = 80
+    object MenuItem1: TMenuItem
+      Caption = 'Project'
+      object MIProjectNew: TMenuItem
+        Caption = 'New project...'
+        ImageIndex = 6
+        ShortCut = 16462
+        OnClick = MIProjectNewClick
+      end
+      object MIProjectOpen: TMenuItem
+        Caption = 'Open project'
+        ImageIndex = 12
+        ShortCut = 16463
+        OnClick = MIProjectOpenClick
+      end
+      object MIProjectSave: TMenuItem
+        Caption = 'Save project'
+        ImageIndex = 13
+        ShortCut = 16467
+        OnClick = MIProjectSaveClick
+      end
+      object MIProjectClose: TMenuItem
+        Caption = 'Close project'
+        ImageIndex = 2
+        OnClick = MIProjectCloseClick
+      end
+      object MIProjectOptions: TMenuItem
+        Caption = 'Project options...'
+        ImageIndex = 41
+        OnClick = MIProjectOptionsClick
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object MIProjectQuit: TMenuItem
+        Caption = 'Quit'
+        ImageIndex = 30
+        OnClick = MIProjectQuitClick
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Tools'
+      object MIToolDeviceManager: TMenuItem
+        Caption = 'Device manager'
+        ImageIndex = 17
+        OnClick = MIToolDeviceManagerClick
+      end
+      object MIToolDMXLibrary: TMenuItem
+        Caption = 'DMX library'
+        ImageIndex = 32
+        OnClick = MIToolDMXLibraryClick
+      end
+      object MenuItem5: TMenuItem
+        Caption = '-'
+      end
+      object MIProgramOptions: TMenuItem
+        Caption = 'Program options'
+        ImageIndex = 41
+        OnClick = MIProgramOptionsClick
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'About...'
+      OnClick = MenuItem6Click
+    end
+  end
+end

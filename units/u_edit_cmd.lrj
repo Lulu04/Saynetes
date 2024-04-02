@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":251212324,"name":"tformeditcmd.caption","sourcebytes":[69,100,105,116,32,99,111,109,109,97,110,100],"value":"Edit command"},
+{"hash":4766463,"name":"tformeditcmd.pageaudio.caption","sourcebytes":[65,117,100,105,111],"value":"Audio"},
+{"hash":191548734,"name":"tformeditcmd.label2.caption","sourcebytes":[115,116,101,112,32,100,101,115,99,114,105,112,116,105,111,110],"value":"step description"},
+{"hash":77089212,"name":"tformeditcmd.speedbutton1.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"},
+{"hash":154661632,"name":"tformeditcmd.speedbutton2.caption","sourcebytes":[73,110,115,101,114,116,32,115,116,101,112],"value":"Insert step"}
+]}

@@ -1,0 +1,22 @@
+{"version":1,"strings":[
+{"hash":35992126,"name":"tframesequencer.mi_sbaddaudioaction.caption","sourcebytes":[65,85,68,73,79,32,97,99,116,105,111,110,46,46,46],"value":"AUDIO action..."},
+{"hash":66091246,"name":"tframesequencer.misbadddmxaction.caption","sourcebytes":[68,77,88,32,97,99,116,105,111,110,46,46,46],"value":"DMX action..."},
+{"hash":107103278,"name":"tframesequencer.misbaddotheraction.caption","sourcebytes":[79,84,72,69,82,32,97,99,116,105,111,110,46,46,46],"value":"OTHER action..."},
+{"hash":126257829,"name":"tframesequencer.mi_sbpaste.caption","sourcebytes":[115,80,97,115,116,101],"value":"sPaste"},
+{"hash":16930236,"name":"tframesequencer.mi_sbselecttimeinterval.caption","sourcebytes":[83,101,108,101,99,116,32,116,104,105,115,32,116,105,109,101,32,105,110,116,101,114,118,97,108],"value":"Select this time interval"},
+{"hash":18889902,"name":"tframesequencer.mi_sbmodifytime.caption","sourcebytes":[77,111,100,105,102,121,32,116,104,105,115,32,116,105,109,101,32,105,110,116,101,114,118,97,108,46,46,46],"value":"Modify this time interval..."},
+{"hash":57698636,"name":"tframesequencer.mi_sbdeletetime.caption","sourcebytes":[68,101,108,101,116,101,32,116,104,105,115,32,105,110,116,101,114,118,97,108],"value":"Delete this interval"},
+{"hash":264856556,"name":"tframesequencer.mi_sbzoomall.caption","sourcebytes":[86,105,101,119,32,97,108,108],"value":"View all"},
+{"hash":100381710,"name":"tframesequencer.mi_sbzoomonselection.caption","sourcebytes":[90,111,111,109,32,111,110,32,115,101,108,101,99,116,105,111,110],"value":"Zoom on selection"},
+{"hash":143411269,"name":"tframesequencer.mi_steprename.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
+{"hash":128724181,"name":"tframesequencer.mi_stepdelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":50206094,"name":"tframesequencer.mi_stepmoveintime.caption","sourcebytes":[65,108,105,103,110,46,46,46],"value":"Align..."},
+{"hash":152132958,"name":"tframesequencer.mi_stepmodifylength.caption","sourcebytes":[67,104,97,110,103,101,32,100,117,114,97,116,105,111,110,46,46,46],"value":"Change duration..."},
+{"hash":490180,"name":"tframesequencer.mi_stepcut.caption","sourcebytes":[115,67,117,116],"value":"sCut"},
+{"hash":7841401,"name":"tframesequencer.mi_stepcopy.caption","sourcebytes":[115,67,111,112,121],"value":"sCopy"},
+{"hash":126257829,"name":"tframesequencer.mi_steppaste.caption","sourcebytes":[115,80,97,115,116,101],"value":"sPaste"},
+{"hash":195296268,"name":"tframesequencer.mi_stepselectall.caption","sourcebytes":[83,101,108,101,99,116,32,97,108,108],"value":"Select all"},
+{"hash":5150400,"name":"tframesequencer.mi_stepgroup.caption","sourcebytes":[71,114,111,117,112],"value":"Group"},
+{"hash":206476944,"name":"tframesequencer.mi_stepungroup.caption","sourcebytes":[85,110,103,114,111,117,112],"value":"Ungroup"},
+{"hash":144194661,"name":"tframesequencer.mi_steprearrange.caption","sourcebytes":[82,101,97,114,114,97,110,103,101],"value":"Rearrange"}
+]}

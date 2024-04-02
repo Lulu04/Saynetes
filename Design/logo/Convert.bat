@@ -1,0 +1,1 @@
+"C:\Program Files\ImageMagick-7.1.1-Q8\convert.exe" logo16.png logo20.png logo24.png logo32.png logo40.png logo48.png logo64.png logo96.png logo128.png logo256.png -colors 256 Saynetes.ico

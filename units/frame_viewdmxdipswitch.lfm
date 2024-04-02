@@ -1,0 +1,70 @@
+object FrameViewDipSwitch: TFrameViewDipSwitch
+  Left = 0
+  Height = 82
+  Top = 0
+  Width = 120
+  ClientHeight = 82
+  ClientWidth = 120
+  TabOrder = 0
+  DesignLeft = 425
+  DesignTop = 363
+  object Shape2: TShape
+    AnchorSideLeft.Control = Owner
+    Cursor = crHandPoint
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 32
+    Anchors = [akLeft]
+    Brush.Color = 7203571
+    Pen.Color = 1710618
+    OnMouseDown = Shape2MouseDown
+    Shape = stRoundRect
+  end
+  object Shape1: TShape
+    AnchorSideLeft.Control = Shape2
+    AnchorSideLeft.Side = asrCenter
+    Cursor = crHandPoint
+    Left = 6
+    Height = 20
+    Top = 5
+    Width = 20
+    Anchors = [akLeft]
+    Brush.Color = 1096135
+    Pen.Style = psClear
+    OnMouseDown = Shape2MouseDown
+    Shape = stCircle
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Shape2
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrBottom
+    Left = 13
+    Height = 13
+    Top = 66
+    Width = 6
+    Anchors = [akLeft]
+    Caption = '1'
+    Font.Color = 13948116
+    Font.Height = 13
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 40
+    Top = 8
+    object MIAdressSetting: TMenuItem
+      Caption = 'Adress setting'
+      OnClick = MIAdressSettingClick
+    end
+    object MIMustBeON: TMenuItem
+      Caption = 'Must be ON'
+      OnClick = MIMustBeONClick
+    end
+    object MIMustBeOFF: TMenuItem
+      Caption = 'Must be OFF'
+      OnClick = MIMustBeOFFClick
+    end
+  end
+end

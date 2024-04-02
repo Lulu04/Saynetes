@@ -1,0 +1,10 @@
+[EDIT MODE]
+true
+[OPTIONS PROJECTOR VIEW]
+ShowLevel|false|ShowRGBSymbol|false|ShowAdress|true|ShowFixtureInfo|false|HeightCursorView|546
+[FRAME_SEQUENCER]
+HeightPanelProjectList|731|HeightPanelSequenceList|551
+[VIEW ACTION LIST]
+ShowDMXAdress|true|ShowFixtureName|true|ShowFixtureDescription|true|ShowChannelName|true|ShowColorAsRectangleColor|true
+[MAIN VIEW PANEL TO SHOW]
+ShowAudioPanel|true|ShowDMXPanel|true|WidthPanelAudio|324|WidthPanelSequence|304|ShowAudioControlPanel|true|ShowAudioCapturePanel|true

@@ -1,0 +1,14 @@
+object FormAddDMXAction: TFormAddDMXAction
+  Left = 338
+  Height = 520
+  Top = 133
+  Width = 694
+  BorderIcons = [biSystemMenu]
+  Caption = 'DMX action'
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.6.0'
+end

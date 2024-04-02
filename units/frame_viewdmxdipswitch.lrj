@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":49,"name":"tframeviewdipswitch.label1.caption","sourcebytes":[49],"value":"1"},
+{"hash":38211399,"name":"tframeviewdipswitch.miadresssetting.caption","sourcebytes":[65,100,114,101,115,115,32,115,101,116,116,105,110,103],"value":"Adress setting"},
+{"hash":107821470,"name":"tframeviewdipswitch.mimustbeon.caption","sourcebytes":[77,117,115,116,32,98,101,32,79,78],"value":"Must be ON"},
+{"hash":114530758,"name":"tframeviewdipswitch.mimustbeoff.caption","sourcebytes":[77,117,115,116,32,98,101,32,79,70,70],"value":"Must be OFF"}
+]}

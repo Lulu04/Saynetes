@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":107298334,"name":"tframeviewdmxlibrary.minewfolder.caption","sourcebytes":[78,101,119,32,102,111,108,100,101,114,46,46,46],"value":"New folder..."},
+{"hash":236104162,"name":"tframeviewdmxlibrary.mirenamefolder.caption","sourcebytes":[82,101,110,97,109,101,32,102,111,108,100,101,114],"value":"Rename folder"},
+{"hash":235901582,"name":"tframeviewdmxlibrary.mideletefolder.caption","sourcebytes":[68,101,108,101,116,101,32,102,111,108,100,101,114,46,46,46],"value":"Delete folder..."},
+{"hash":149321086,"name":"tframeviewdmxlibrary.mirenamefixture.caption","sourcebytes":[82,101,110,97,109,101,32,102,105,120,116,117,114,101,46,46,46],"value":"Rename fixture..."},
+{"hash":32797502,"name":"tframeviewdmxlibrary.mideletefixture.caption","sourcebytes":[68,101,108,101,116,101,32,102,105,120,116,117,114,101,46,46,46],"value":"Delete fixture..."},
+{"hash":27362355,"name":"tframeviewdmxlibrary.midevelop.caption","sourcebytes":[68,101,118,101,108,111,112,32,102,111,108,100,101,114,115],"value":"Develop folders"},
+{"hash":266444227,"name":"tframeviewdmxlibrary.micollapsetree.caption","sourcebytes":[67,111,108,108,97,112,115,101,32,102,111,108,100,101,114,115],"value":"Collapse folders"}
+]}

@@ -1,0 +1,730 @@
+object FrameMainAudio: TFrameMainAudio
+  Left = 0
+  Height = 539
+  Top = 0
+  Width = 604
+  ClientHeight = 539
+  ClientWidth = 604
+  OnResize = FrameResize
+  TabOrder = 0
+  DesignLeft = 466
+  DesignTop = 137
+  object Panel5: TPanel
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 354
+    Height = 539
+    Top = 0
+    Width = 250
+    Anchors = [akTop, akRight, akBottom]
+    BevelOuter = bvNone
+    ClientHeight = 539
+    ClientWidth = 250
+    Color = 4934475
+    Constraints.MinWidth = 160
+    ParentColor = False
+    TabOrder = 0
+    TabStop = True
+    object Label3: TLabel
+      AnchorSideLeft.Control = TB_Audiovolume
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrBottom
+      Left = 1
+      Height = 17
+      Top = 101
+      Width = 43
+      BorderSpacing.Top = 40
+      Caption = 'Volume'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_volume: TLabel
+      AnchorSideLeft.Control = Label3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label3
+      Left = 54
+      Height = 17
+      Top = 101
+      Width = 32
+      BorderSpacing.Left = 10
+      Caption = '100%'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Control = TB_Audiopan
+      AnchorSideBottom.Control = TB_Audiopan
+      Left = 1
+      Height = 17
+      Top = 177
+      Width = 46
+      Anchors = [akLeft, akBottom]
+      Caption = 'Panning'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_pan: TLabel
+      AnchorSideLeft.Control = Label4
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label4
+      Left = 57
+      Height = 17
+      Top = 177
+      Width = 7
+      BorderSpacing.Left = 10
+      Caption = '0'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object BPanCenter: TSpeedButton
+      AnchorSideTop.Control = TB_Audiovolume
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = TB_Audiopan
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = TB_Audiopan
+      Cursor = crHandPoint
+      Left = 177
+      Height = 24
+      Top = 170
+      Width = 48
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 20
+      BorderSpacing.Right = 25
+      Caption = 'Center'
+      Font.Height = 12
+      Font.Style = [fsBold]
+      OnClick = BPanCenterClick
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel5
+      Left = 45
+      Height = 56
+      Top = 5
+      Width = 160
+      BorderSpacing.Top = 5
+      BevelOuter = bvNone
+      ClientHeight = 56
+      ClientWidth = 160
+      Color = 6118749
+      ParentColor = False
+      TabOrder = 0
+      object SB_fadein10s: TSpeedButton
+        Tag = 15
+        AnchorSideLeft.Control = SB_fadein7s
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        Cursor = crHandPoint
+        Left = 122
+        Height = 20
+        Hint = 'Fadein the selected sounds'
+        Top = 2
+        Width = 35
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '15s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 10
+        Transparent = False
+        OnClick = SB_fadein1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadein1s: TSpeedButton
+        Tag = 1
+        AnchorSideLeft.Control = Panel1
+        AnchorSideTop.Control = Panel1
+        Cursor = crHandPoint
+        Left = 2
+        Height = 20
+        Hint = 'Fadein the selected sounds'
+        Top = 2
+        Width = 35
+        AutoSize = True
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 2
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '1s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 10
+        Transparent = False
+        OnClick = SB_fadein1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadein4s: TSpeedButton
+        Tag = 5
+        AnchorSideLeft.Control = SB_fadein1s
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        Cursor = crHandPoint
+        Left = 42
+        Height = 20
+        Hint = 'Fadein the selected sounds'
+        Top = 2
+        Width = 35
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '5s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 10
+        Transparent = False
+        OnClick = SB_fadein1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadein7s: TSpeedButton
+        Tag = 10
+        AnchorSideLeft.Control = SB_fadein4s
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        Cursor = crHandPoint
+        Left = 82
+        Height = 20
+        Hint = 'Fadein the selected sounds'
+        Top = 2
+        Width = 35
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '10s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 10
+        Transparent = False
+        OnClick = SB_fadein1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadeout1s: TSpeedButton
+        Tag = 1
+        Cursor = crHandPoint
+        Left = 2
+        Height = 20
+        Hint = 'Fadeout the selected sounds'
+        Top = 32
+        Width = 35
+        AutoSize = True
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '1s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 11
+        Transparent = False
+        OnClick = SB_fadeout1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadeout4s: TSpeedButton
+        Tag = 5
+        Cursor = crHandPoint
+        Left = 42
+        Height = 20
+        Hint = 'Fadeout the selected sounds'
+        Top = 32
+        Width = 35
+        AutoSize = True
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '5s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 11
+        Transparent = False
+        OnClick = SB_fadeout1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadeout7s: TSpeedButton
+        Tag = 10
+        Cursor = crHandPoint
+        Left = 82
+        Height = 20
+        Hint = 'Fadeout the selected sounds'
+        Top = 32
+        Width = 35
+        AutoSize = True
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '10s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 11
+        Transparent = False
+        OnClick = SB_fadeout1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SB_fadeout10s: TSpeedButton
+        Tag = 15
+        Cursor = crHandPoint
+        Left = 122
+        Height = 20
+        Hint = 'Fadeout the selected sounds'
+        Top = 32
+        Width = 35
+        AutoSize = True
+        Constraints.MaxHeight = 20
+        Constraints.MaxWidth = 35
+        Constraints.MinHeight = 20
+        Constraints.MinWidth = 35
+        Caption = '15s'
+        Color = 5494124
+        Font.Color = clBlack
+        Font.Height = 13
+        Font.Style = [fsBold]
+        Images = FormMain.ImageList1
+        ImageIndex = 11
+        Transparent = False
+        OnClick = SB_fadeout1sClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+    end
+    object TB_Audiovolume: TTrackBar
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 32
+      Top = 118
+      Width = 249
+      Frequency = 25
+      LineSize = 2
+      Max = 200
+      OnChange = TB_AudiovolumeChange
+      Position = 200
+      ShowSelRange = False
+      TabStop = False
+      TickMarks = tmTopLeft
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 1
+    end
+    object TB_Audiopan: TTrackBar
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = BPanCenter
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 32
+      Top = 194
+      Width = 249
+      Frequency = 5
+      LineSize = 2
+      Max = 100
+      Min = -100
+      OnChange = TB_AudiopanChange
+      Position = 0
+      ShowSelRange = False
+      TabStop = False
+      TickMarks = tmTopLeft
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 2
+    end
+    object TBPitch: TTrackBar
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = BPitchNormal
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 28
+      Top = 270
+      Width = 249
+      Frequency = 3000
+      Max = 400
+      Min = 10
+      OnChange = TBPitchChange
+      Position = 100
+      ShowSelRange = False
+      TickMarks = tmTopLeft
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 3
+    end
+    object Label20: TLabel
+      AnchorSideLeft.Control = TBPitch
+      AnchorSideBottom.Control = TBPitch
+      Left = 1
+      Height = 17
+      Top = 253
+      Width = 27
+      Anchors = [akLeft, akBottom]
+      Caption = 'Pitch'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object BPitchNormal: TSpeedButton
+      AnchorSideTop.Control = TB_Audiopan
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = TBPitch
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 179
+      Height = 24
+      Top = 246
+      Width = 46
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 20
+      BorderSpacing.Right = 25
+      Caption = 'Normal'
+      Font.Height = 12
+      Font.Style = [fsBold]
+      OnClick = BPitchNormalClick
+      ParentFont = False
+    end
+    object lbl_freq: TLabel
+      AnchorSideLeft.Control = Label20
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label20
+      Left = 38
+      Height = 17
+      Top = 253
+      Width = 15
+      BorderSpacing.Left = 10
+      Caption = 'Hz'
+      Font.Color = 15395562
+      Font.Height = -13
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel2: TPanel
+      AnchorSideLeft.Control = Panel5
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel5
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 174
+      Top = 365
+      Width = 250
+      Anchors = [akLeft, akRight, akBottom]
+      BevelColor = 11894118
+      ClientHeight = 174
+      ClientWidth = 250
+      Color = 5650217
+      ParentColor = False
+      TabOrder = 4
+      object Shape3: TShape
+        Tag = 1
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = Panel2
+        Cursor = crHandPoint
+        Left = 1
+        Height = 31
+        Top = 3
+        Width = 39
+        BorderSpacing.Top = 2
+        Pen.Color = 1973790
+        Shape = stRoundSquare
+      end
+      object SpeedButton3: TSpeedButton
+        Tag = 1
+        AnchorSideLeft.Control = Shape3
+        AnchorSideTop.Control = Shape3
+        AnchorSideRight.Control = Shape3
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Shape3
+        AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 1
+        Height = 31
+        Top = 3
+        Width = 39
+        Anchors = [akLeft, akRight, akBottom]
+        Flat = True
+        Images = FormMain.ImageList1
+        ImageIndex = 30
+        OnClick = SpeedButton3Click
+      end
+      object Label1: TLabel
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Panel2
+        AnchorSideRight.Side = asrBottom
+        Left = 165
+        Height = 19
+        Top = 4
+        Width = 81
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 3
+        BorderSpacing.Right = 3
+        Caption = 'CAPTURE'
+        Font.Color = 1118481
+        Font.Height = 20
+        Font.Name = 'Arial'
+        Font.Style = [fsBold, fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        AnchorSideLeft.Control = Label1
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideTop.Control = Label1
+        AnchorSideTop.Side = asrBottom
+        Left = 195
+        Height = 15
+        Top = 23
+        Width = 21
+        Caption = 'OFF'
+        Font.Color = 13016202
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object Panel3: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Panel4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Panel5
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 498
+    Top = 41
+    Width = 354
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Color = 4934475
+    ParentColor = False
+    TabOrder = 1
+  end
+  object Panel4: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel5
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 354
+    Anchors = [akTop, akLeft, akRight]
+    ClientHeight = 41
+    ClientWidth = 354
+    Color = 3684408
+    ParentColor = False
+    TabOrder = 2
+    object SpeedButton1: TSpeedButton
+      AnchorSideTop.Control = Panel4
+      AnchorSideBottom.Control = Panel4
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 96
+      Height = 35
+      Hint = 'Import audio file to the project'
+      Top = 3
+      Width = 36
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 2
+      Color = 14075732
+      Images = FormMain.ImageList1
+      ImageIndex = 31
+      Transparent = False
+      OnClick = SpeedButton1Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton2: TSpeedButton
+      AnchorSideTop.Control = Panel4
+      AnchorSideBottom.Control = Panel4
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 192
+      Height = 35
+      Hint = 'Stop all audio and all effects.'
+      Top = 3
+      Width = 36
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 2
+      Color = 14075732
+      Images = FormMain.ImageList1
+      ImageIndex = 16
+      Transparent = False
+      OnClick = SpeedButton2Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton5: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel4
+      AnchorSideRight.Control = Panel4
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel4
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 268
+      Height = 29
+      Hint = 'Show/hide the RGB tools'
+      Top = 6
+      Width = 65
+      Anchors = [akTop, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 20
+      BorderSpacing.Bottom = 5
+      Constraints.MinHeight = 20
+      Constraints.MinWidth = 56
+      Caption = 'AUDIO TOOLS'
+      Color = 14075732
+      Font.Height = 12
+      Font.Style = [fsBold]
+      Transparent = False
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+  end
+  object Panel6: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    Left = 25
+    Height = 53
+    Top = 100
+    Width = 555
+    BorderSpacing.Top = 100
+    BevelColor = 11894118
+    BevelWidth = 3
+    ClientHeight = 53
+    ClientWidth = 555
+    Color = 8672320
+    Font.Color = 9950960
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+    object Label5: TLabel
+      AnchorSideLeft.Control = Panel6
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel6
+      Left = 203
+      Height = 20
+      Top = 8
+      Width = 148
+      BorderSpacing.Top = 5
+      Caption = 'importing audio files...'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      AnchorSideLeft.Control = Panel6
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideBottom.Control = Panel6
+      AnchorSideBottom.Side = asrBottom
+      Left = 266
+      Height = 20
+      Top = 28
+      Width = 22
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Bottom = 2
+      Caption = '1/1'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 168
+    Top = 214
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Import audio'
+    Filter = 'Audio files|*.wav;*.mp3;*.ogg|All files|*.*'
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail, ofAutoPreview]
+    Left = 64
+    Top = 440
+  end
+  object PopupMenu1: TPopupMenu
+    Images = FormMain.ImageList1
+    Left = 75
+    Top = 214
+    object MI_Delete: TMenuItem
+      Caption = 'Delete'
+      ImageIndex = 2
+      OnClick = MI_DeleteClick
+    end
+  end
+end

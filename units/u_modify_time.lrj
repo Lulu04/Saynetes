@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":130250522,"name":"tform_modifytime.label1.caption","sourcebytes":[78,101,119,32,118,97,108,117,101,58],"value":"New value:"},
+{"hash":174331625,"name":"tform_modifytime.label2.caption","sourcebytes":[115,101,99,111,110,100,40,115,41],"value":"second(s)"},
+{"hash":134374526,"name":"tform_modifytime.rb2.hint","sourcebytes":[83,104,105,102,116,115,32,111,110,108,121,32,116,104,101,32,112,114,101,118,105,111,117,115,32,115,116,101,112,115,32,97,110,100,32,107,101,101,112,32,116,104,101,32,99,117,114,114,101,110,116,32,116,105,109,101,32,112,111,115,105,116,105,111,110,32,111,102,32,116,104,101,32,111,116,104,101,114,115,46],"value":"Shifts only the previous steps and keep the current time position of the others."},
+{"hash":30811,"name":"tform_modifytime.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":31551913,"name":"tform_modifytime.label3.caption","sourcebytes":[115,104,105,102,116,115,32,111,110,108,121,32,116,104,101,32,78,69,88,84,32,115,116,101,112,32,40,111,110,108,121,32,111,110,101,41],"value":"shifts only the NEXT step (only one)"},
+{"hash":96525315,"name":"tform_modifytime.label4.caption","sourcebytes":[115,104,105,102,116,115,32,65,76,76,32,116,104,101,32,110,101,120,116,32,115,116,101,112,115],"value":"shifts ALL the next steps"},
+{"hash":6622425,"name":"tform_modifytime.label5.caption","sourcebytes":[115,104,105,102,116,115,32,111,110,108,121,32,116,104,101,32,80,82,69,86,73,79,85,83,32,115,116,101,112,32,40,111,110,108,121,32,111,110,101,41],"value":"shifts only the PREVIOUS step (only one)"}
+]}

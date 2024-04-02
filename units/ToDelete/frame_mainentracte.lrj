@@ -1,0 +1,18 @@
+{"version":1,"strings":[
+{"hash":197120611,"name":"tframemainentracte.label6.caption","sourcebytes":[73,110,116,101,114,115,101,115,115,105,111,110,32,109,117,115,105,99,115],"value":"Intersession musics"},
+{"hash":104608490,"name":"tframemainentracte.label5.caption","sourcebytes":[86,111,108,117,109,101,32,58],"value":"Volume :"},
+{"hash":58921509,"name":"tframemainentracte.label1.caption","sourcebytes":[53,48,46,48,32,37],"value":"50.0 %"},
+{"hash":212655155,"name":"tframemainentracte.speedbutton1.hint","sourcebytes":[83,116,97,114,116,47,83,116,111,112,32,116,104,101,32,105,110,116,101,114,115,101,115,115,105,111,110,32,98,97,99,107,103,114,111,117,110,100,32,109,117,115,105,99],"value":"Start/Stop the intersession background music"},
+{"hash":178633646,"name":"tframemainentracte.speedbutton1.caption","sourcebytes":[83,116,97,114,116,32,105,110,116,101,114,115,101,115,115,105,111,110],"value":"Start intersession"},
+{"hash":14669314,"name":"tframemainentracte.label7.caption","sourcebytes":[80,114,111,106,101,99,116,115,32,102,111,108,100,101,114],"value":"Projects folder"},
+{"hash":249151347,"name":"tframemainentracte.directoryedit1.hint","sourcebytes":[67,108,105,99,107,32,116,111,32,115,101,108,101,99,116,32,116,104,101,32,102,111,108,100,101,114,32,99,111,110,116,97,105,110,105,110,103,32,121,111,117,114,32,112,114,111,106,101,99,116,115],"value":"Click to select the folder containing your projects"},
+{"hash":213730755,"name":"tframemainentracte.label8.caption","sourcebytes":[99,117,114,114,101,110,116,32,109,117,115,105,99],"value":"current music"},
+{"hash":502624,"name":"tframemainentracte.label9.caption","sourcebytes":[115,116,111,112],"value":"stop"},
+{"hash":71639044,"name":"tframemainentracte.buttonopenproject.hint","sourcebytes":[79,112,101,110,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,111,106,101,99,116],"value":"Open the selected project"},
+{"hash":353982,"name":"tframemainentracte.buttonopenproject.caption","sourcebytes":[79,112,101,110],"value":"Open"},
+{"hash":32139842,"name":"tframemainentracte.flbprojects.hint","sourcebytes":[84,104,101,32,108,105,115,116,32,111,102,32,112,114,111,106,101,99,116,115,32,102,111,117,110,100,32,105,110,32,116,104,101,32,97,98,111,118,101,32,102,111,108,100,101,114],"value":"The list of projects found in the above folder"},
+{"hash":124298355,"name":"tframemainentracte.flbplaylist.hint","sourcebytes":[84,104,105,115,32,105,115,32,116,104,101,32,108,105,115,116,32,111,102,32,105,110,116,101,114,109,105,115,115,105,111,110,32,109,117,115,105,99,115],"value":"This is the list of intermission musics"},
+{"hash":130336724,"name":"tframemainentracte.minewplaylist.caption","sourcebytes":[78,101,119,32,112,108,97,121,108,105,115,116],"value":"New playlist"},
+{"hash":24951348,"name":"tframemainentracte.mimodifyplaylist.caption","sourcebytes":[77,111,100,105,102,121,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Modify the playlist"},
+{"hash":266644932,"name":"tframemainentracte.mideleteplaylist.caption","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Delete the playlist"}
+]}

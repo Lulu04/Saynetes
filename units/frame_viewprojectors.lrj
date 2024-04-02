@@ -1,0 +1,19 @@
+{"version":1,"strings":[
+{"hash":199149143,"name":"tframeviewprojector.combobox1.hint","sourcebytes":[83,101,108,101,99,116,32,116,104,101,32,117,110,105,118,101,114,115,101,40,115,41,32,116,111,32,115,104,111,119],"value":"Select the universe(s) to show"},
+{"hash":264856556,"name":"tframeviewprojector.bzoomall.hint","sourcebytes":[86,105,101,119,32,97,108,108],"value":"View all"},
+{"hash":56976739,"name":"tframeviewprojector.bshowdmxadress.hint","sourcebytes":[83,104,111,119,47,104,105,100,101,32,68,77,88,32,97,100,114,101,115,115],"value":"Show/hide DMX adress"},
+{"hash":72968835,"name":"tframeviewprojector.bshowdmxadress.caption","sourcebytes":[65,68,82,69,83,83],"value":"ADRESS"},
+{"hash":209916355,"name":"tframeviewprojector.bshowrgbsymbol.hint","sourcebytes":[83,104,111,119,47,104,105,100,101,32,97,32,82,71,66,32,115,121,109,98,111,108,32,111,110,32,102,105,120,116,117,114,101,115,32,116,104,97,116,32,104,97,118,101,32,82,71,66,32,99,104,97,110,110,101,108,115],"value":"Show/hide a RGB symbol on fixtures that have RGB channels"},
+{"hash":610627,"name":"tframeviewprojector.bshowlevels.hint","sourcebytes":[83,104,111,119,47,104,105,100,101,32,116,104,101,32,99,104,97,110,110,101,108,115,32,108,101,118,101,108,115],"value":"Show/hide the channels levels"},
+{"hash":18930286,"name":"tframeviewprojector.badddmx.hint","sourcebytes":[77,111,100,105,102,121,32,121,111,117,114,32,68,77,88,32,117,110,105,118,101,114,115,101,115,32,97,110,100,32,102,105,120,116,117,114,101,115,46],"value":"Modify your DMX universes and fixtures."},
+{"hash":223569438,"name":"tframeviewprojector.speedbutton5.hint","sourcebytes":[83,104,117,116,100,111,119,110,32,97,108,108,32,108,105,103,104,116,115,46],"value":"Shutdown all lights."},
+{"hash":149463758,"name":"tframeviewprojector.bshowinfo.hint","sourcebytes":[83,104,111,119,47,104,105,100,101,32,116,104,101,32,102,105,120,116,117,114,101,32,105,110,102,111,114,109,97,116,105,111,110,32,112,97,110,101,108,46],"value":"Show/hide the fixture information panel."},
+{"hash":111717326,"name":"tframeviewprojector.mirotation.caption","sourcebytes":[82,111,116,97,116,105,111,110],"value":"Rotation"},
+{"hash":398941,"name":"tframeviewprojector.mizoom.caption","sourcebytes":[90,111,111,109],"value":"Zoom"},
+{"hash":251132352,"name":"tframeviewprojector.mihflip.caption","sourcebytes":[72,111,114,105,122,111,110,116,97,108,32,102,108,105,112],"value":"Horizontal flip"},
+{"hash":187662016,"name":"tframeviewprojector.mivflip.caption","sourcebytes":[86,101,114,116,105,99,97,108,32,102,108,105,112],"value":"Vertical flip"},
+{"hash":128724181,"name":"tframeviewprojector.midelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":214796480,"name":"tframeviewprojector.micreatergbgroup.caption","sourcebytes":[67,114,101,97,116,101,32,82,71,66,32,103,114,111,117,112],"value":"Create RGB group"},
+{"hash":341403,"name":"tframeviewprojector.milockfixture.caption","sourcebytes":[76,111,99,107],"value":"Lock"},
+{"hash":96810395,"name":"tframeviewprojector.miunlockfixture.caption","sourcebytes":[85,110,108,111,99,107],"value":"Unlock"}
+]}

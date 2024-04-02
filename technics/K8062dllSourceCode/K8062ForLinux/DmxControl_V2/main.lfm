@@ -1,0 +1,218 @@
+object Univers: TUnivers
+  Left = 417
+  Height = 533
+  Top = 249
+  Width = 796
+  Caption = 'DmxControl'
+  ClientHeight = 510
+  ClientWidth = 796
+  Menu = MainMenu1
+  OnClose = FormClose
+  LCLVersion = '0.9.26.2'
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 456
+    Top = 24
+    Width = 345
+    Caption = 'Gestion materiel'
+    ClientHeight = 439
+    ClientWidth = 341
+    Color = clSkyBlue
+    Ctl3D = False
+    ParentColor = False
+    TabOrder = 0
+    object ListView1: TListView
+      Left = 10
+      Height = 379
+      Top = 10
+      Width = 321
+      Align = alClient
+      BorderSpacing.Bottom = 40
+      BorderSpacing.Around = 10
+      Columns = <      
+        item
+          AutoSize = False
+          Caption = 'Adr'
+        end      
+        item
+          AutoSize = False
+          Caption = 'Description'
+          Width = 271
+        end>
+      HideSelection = False
+      ScrollBars = ssAutoBoth
+      SortColumn = 0
+      SortType = stNone
+      TabOrder = 0
+      ViewStyle = vsReport
+    end
+    object Button1: TButton
+      Left = 6
+      Height = 25
+      Top = 409
+      Width = 75
+      Caption = 'Ajout'
+      Color = clSkyBlue
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 94
+      Height = 25
+      Top = 409
+      Width = 75
+      Caption = 'Modif'
+      Color = clSkyBlue
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object Button3: TButton
+      Left = 294
+      Height = 25
+      Top = 409
+      Width = 43
+      Caption = 'Supp'
+      Color = clMoneyGreen
+      OnClick = Button3Click
+      TabOrder = 3
+    end
+    object Button7: TButton
+      Left = 182
+      Height = 25
+      Top = 409
+      Width = 75
+      Caption = 'Effets'
+      Color = clSkyBlue
+      OnClick = Button7Click
+      TabOrder = 4
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 392
+    Height = 456
+    Top = 24
+    Width = 384
+    Caption = 'Gestion scenes'
+    ClientHeight = 439
+    ClientWidth = 380
+    Color = clHighlight
+    Ctl3D = False
+    ParentColor = False
+    TabOrder = 1
+    object ListView2: TListView
+      Left = 10
+      Height = 379
+      Top = 10
+      Width = 360
+      Align = alClient
+      BorderSpacing.Bottom = 40
+      BorderSpacing.Around = 10
+      Columns = <      
+        item
+          AutoSize = False
+          Caption = 'Index'
+        end      
+        item
+          AutoSize = False
+          Caption = 'Scene'
+          Width = 310
+        end>
+      DragCursor = crHandPoint
+      DragMode = dmAutomatic
+      ScrollBars = ssAutoBoth
+      SortColumn = 0
+      SortType = stNone
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnChange = ListView2Change
+      OnDragDrop = ListView2DragDrop
+      OnDragOver = ListView2DragOver
+    end
+    object Button4: TButton
+      Left = 6
+      Height = 25
+      Top = 409
+      Width = 75
+      Caption = 'Ajout'
+      Color = clSkyBlue
+      OnClick = Button4Click
+      TabOrder = 1
+    end
+    object Button5: TButton
+      Left = 102
+      Height = 25
+      Top = 409
+      Width = 75
+      Caption = 'Modif'
+      Color = clSkyBlue
+      OnClick = Button5Click
+      TabOrder = 2
+    end
+    object Button6: TButton
+      Left = 334
+      Height = 25
+      Top = 409
+      Width = 43
+      Caption = 'Supp'
+      Color = clMoneyGreen
+      OnClick = Button6Click
+      TabOrder = 3
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 19
+    Top = 491
+    Width = 796
+    Panels = <>
+  end
+  object MainMenu1: TMainMenu
+    left = 32
+    object MenuItem1: TMenuItem
+      Caption = 'Fichier'
+      object MenuItem2: TMenuItem
+        Caption = 'Charger'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Sauver'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Quitter'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Aide'
+      object MenuItem6: TMenuItem
+        Caption = 'Aide '
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = '------------------'
+        Enabled = False
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Arret module et Quit'
+        OnClick = MenuItem8Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'A Propos'
+        OnClick = MenuItem9Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.dmx'
+    Filter = '*.dmx|*.dmx'
+    InitialDir = './'
+    left = 72
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.dmx'
+    Filter = '*.dmx|*.dmx'
+    InitialDir = './'
+    left = 112
+  end
+end

@@ -1,0 +1,183 @@
+object FormCreatePlaylist: TFormCreatePlaylist
+  Left = 317
+  Height = 523
+  Top = 127
+  Width = 611
+  BorderIcons = [biSystemMenu]
+  Caption = 'Create a playlist'
+  ClientHeight = 523
+  ClientWidth = 611
+  Color = 3423553
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.6.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 523
+    Top = 0
+    Width = 611
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = 247036
+    Pen.Width = 2
+  end
+  object LB: TListBox
+    AnchorSideLeft.Control = SpeedButton1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Panel1
+    Cursor = crHandPoint
+    Left = 120
+    Height = 378
+    Top = 20
+    Width = 451
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    BorderSpacing.Right = 40
+    BorderSpacing.Bottom = 5
+    Color = 1644825
+    Font.Color = 10473964
+    ItemHeight = 0
+    MultiSelect = True
+    OnKeyDown = LBKeyDown
+    ParentFont = False
+    TabOrder = 0
+  end
+  object UpDown1: TUpDown
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LB
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 581
+    Height = 110
+    Hint = 'Move up/down the selected audio file'
+    Top = 70
+    Width = 20
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 50
+    BorderSpacing.Right = 10
+    Min = 0
+    OnClick = UpDown1Click
+    ParentShowHint = False
+    Position = 0
+    ShowHint = True
+    TabOrder = 1
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Cursor = crHandPoint
+    Left = 20
+    Height = 20
+    Hint = 'Add audio files to the playlist'
+    Top = 80
+    Width = 80
+    AutoSize = True
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 80
+    Constraints.MinHeight = 20
+    Constraints.MinWidth = 80
+    Caption = 'sAdd'
+    Images = DataModule1.ImageList1
+    ImageIndex = 0
+    OnClick = SpeedButton1Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object SpeedButton2: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 20
+    Height = 20
+    Hint = 'Delete the selected audio files from the playlist'
+    Top = 120
+    Width = 80
+    AutoSize = True
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    Constraints.MinHeight = 20
+    Constraints.MinWidth = 80
+    Caption = 'sDelete'
+    Images = DataModule1.ImageList1
+    ImageIndex = 1
+    OnClick = SpeedButton2Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object BSave: TSpeedButton
+    AnchorSideLeft.Control = LB
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 120
+    Height = 25
+    Top = 478
+    Width = 170
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Bottom = 20
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 170
+    Caption = 'sSave'
+    Font.Style = [fsBold]
+    Images = DataModule1.ImageList1
+    ImageIndex = 13
+    OnClick = BSaveClick
+    ParentFont = False
+  end
+  object BCancel: TSpeedButton
+    AnchorSideRight.Control = LB
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 401
+    Height = 25
+    Top = 478
+    Width = 170
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Bottom = 20
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 170
+    Caption = 'sCancel'
+    Font.Style = [fsBold]
+    Images = DataModule1.ImageList1
+    ImageIndex = 2
+    OnClick = BCancelClick
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = LB
+    AnchorSideRight.Control = LB
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BCancel
+    Left = 120
+    Height = 65
+    Top = 403
+    Width = 451
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 10
+    BevelColor = 247036
+    Color = 2699572
+    Constraints.MaxHeight = 65
+    Constraints.MinHeight = 65
+    ParentColor = False
+    TabOrder = 2
+  end
+  object OD1: TOpenDialog
+    Title = 'Select audio files'
+    Filter = 'Audio files|*.wav;*.ogg;*.mp3|All files|*.*'
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail, ofAutoPreview]
+    Left = 215
+    Top = 87
+  end
+end

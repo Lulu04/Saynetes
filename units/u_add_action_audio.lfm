@@ -1,0 +1,107 @@
+object FormAudioAction: TFormAudioAction
+  Left = 150
+  Height = 424
+  Top = 176
+  Width = 959
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'AUDIO action'
+  ClientHeight = 424
+  ClientWidth = 959
+  Color = 2631720
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnHide = FormHide
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.4.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 424
+    Top = 0
+    Width = 959
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = 247036
+    Pen.Width = 2
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Audio player''s functionnalities'
+    Top = 5
+    Width = 90
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 90
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 90
+    Caption = 'Sounds'
+    Color = 4737096
+    Flat = True
+    Font.Color = 11318976
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object SpeedButton2: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 5
+    Height = 30
+    Hint = 'Apply effects on audio'
+    Top = 37
+    Width = 90
+    AutoSize = True
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    Constraints.MaxHeight = 30
+    Constraints.MaxWidth = 90
+    Constraints.MinHeight = 30
+    Constraints.MinWidth = 90
+    Caption = 'Effects'
+    Color = 4737096
+    Flat = True
+    Font.Color = 11318976
+    Font.Height = 14
+    Transparent = False
+    ShowHint = True
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object Notebook1: TNotebook
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = SpeedButton1
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 96
+    Height = 416
+    Top = 6
+    Width = 860
+    PageIndex = 0
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Top = 1
+    BorderSpacing.Right = 2
+    BorderSpacing.Bottom = 2
+    TabOrder = 0
+    object PageSounds: TPage
+      OnBeforeShow = PageSoundsBeforeShow
+    end
+    object PageEffects: TPage
+      OnBeforeShow = PageEffectsBeforeShow
+    end
+  end
+end

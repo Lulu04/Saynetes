@@ -1,0 +1,87 @@
+object FrameViewDMXLibrary: TFrameViewDMXLibrary
+  Left = 0
+  Height = 269
+  Top = 0
+  Width = 277
+  ClientHeight = 269
+  ClientWidth = 277
+  TabOrder = 0
+  DesignLeft = 337
+  DesignTop = 265
+  object TV: TTreeView
+    Left = 0
+    Height = 269
+    Top = 0
+    Width = 277
+    Align = alClient
+    BackgroundColor = 1644825
+    BorderStyle = bsNone
+    Color = 1644825
+    DragMode = dmAutomatic
+    ExpandSignColor = 10473964
+    ExpandSignType = tvestArrowFill
+    Font.Color = 10473964
+    Font.Height = 15
+    HotTrack = True
+    HotTrackColor = 9240575
+    Images = DataModule1.ILTreeView
+    ParentFont = False
+    ReadOnly = True
+    RightClickSelect = True
+    ScrollBars = ssAutoBoth
+    SelectionFontColorUsed = True
+    ShowRoot = False
+    TabOrder = 0
+    OnClick = TVClick
+    OnDragDrop = TVDragDrop
+    OnDragOver = TVDragOver
+    OnSelectionChanged = TVSelectionChanged
+    OnStartDrag = TVStartDrag
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips]
+    TreeLinePenStyle = psSolid
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    Left = 48
+    Top = 72
+    object MINewFolder: TMenuItem
+      Caption = 'New folder...'
+      ImageIndex = 0
+      OnClick = MINewFolderClick
+    end
+    object MIRenameFolder: TMenuItem
+      Caption = 'Rename folder'
+      ImageIndex = 6
+      OnClick = MIRenameFolderClick
+    end
+    object MIDeleteFolder: TMenuItem
+      Caption = 'Delete folder...'
+      ImageIndex = 1
+      OnClick = MIDeleteFolderClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object MIRenameFixture: TMenuItem
+      Caption = 'Rename fixture...'
+      ImageIndex = 6
+      OnClick = MIRenameFixtureClick
+    end
+    object MIDeleteFixture: TMenuItem
+      Caption = 'Delete fixture...'
+      ImageIndex = 1
+      OnClick = MIDeleteFixtureClick
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object MIDevelop: TMenuItem
+      Caption = 'Develop folders'
+      OnClick = MIDevelopClick
+    end
+    object MICollapseTree: TMenuItem
+      Caption = 'Collapse folders'
+      OnClick = MIDevelopClick
+    end
+  end
+end

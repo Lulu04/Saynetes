@@ -1,0 +1,34 @@
+object FrameViewFixturesList: TFrameViewFixturesList
+  Left = 0
+  Height = 100
+  Top = 0
+  Width = 300
+  ClientHeight = 100
+  ClientWidth = 300
+  TabOrder = 0
+  DesignLeft = 317
+  DesignTop = 127
+  object LB: TListBox
+    Left = 0
+    Height = 100
+    Top = 0
+    Width = 300
+    Align = alClient
+    Color = 3355443
+    Font.Color = 11318976
+    Font.Height = 13
+    ItemHeight = 0
+    MultiSelect = True
+    OnDrawItem = LBDrawItem
+    OnKeyDown = LBKeyDown
+    OnKeyUp = LBKeyUp
+    OnMouseDown = LBMouseDown
+    OnMouseLeave = LBMouseLeave
+    OnMouseMove = LBMouseMove
+    OnSelectionChange = LBSelectionChange
+    Options = []
+    ParentFont = False
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+  end
+end

@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":7411795,"name":"tformprogramoptions.caption","sourcebytes":[80,114,111,106,101,99,116,32,111,112,116,105,111,110,115],"value":"Project options"},
+{"hash":205700981,"name":"tformprogramoptions.speedbutton1.hint","sourcebytes":[71,114,97,100,117,97,108,108,121,32,99,104,97,110,103,101,115,32,116,104,101,32,118,97,108,117,101,32,111,102,32,97,32,99,104,97,110,110,101,108,32,111,118,101,114,32,97,32,103,105,118,101,110,32,116,105,109,101],"value":"Gradually changes the value of a channel over a given time"},
+{"hash":380871,"name":"tformprogramoptions.speedbutton1.caption","sourcebytes":[86,105,101,119],"value":"View"},
+{"hash":56443907,"name":"tformprogramoptions.label2.caption","sourcebytes":[85,110,105,118,101,114,115,101,32,97,110,100,32,97,100,114,101,115,115],"value":"Universe and adress"},
+{"hash":212319733,"name":"tformprogramoptions.label3.caption","sourcebytes":[70,105,120,116,117,114,101,32,110,97,109,101],"value":"Fixture name"},
+{"hash":56810302,"name":"tformprogramoptions.label4.caption","sourcebytes":[70,105,120,116,117,114,101,32,100,101,115,99,114,105,112,116,105,111,110],"value":"Fixture description"},
+{"hash":259638133,"name":"tformprogramoptions.label5.caption","sourcebytes":[67,104,97,110,110,101,108,32,110,97,109,101],"value":"Channel name"},
+{"hash":196712234,"name":"tformprogramoptions.label1.caption","sourcebytes":[83,104,111,119,32,102,105,120,116,117,114,101,115,32,110,97,109,101,32,119,105,116,104,32,58],"value":"Show fixtures name with :"}
+]}

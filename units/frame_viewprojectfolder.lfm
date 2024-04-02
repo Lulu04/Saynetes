@@ -1,0 +1,172 @@
+object FrameViewProjectFolder: TFrameViewProjectFolder
+  Left = 0
+  Height = 282
+  Top = 0
+  Width = 345
+  ClientHeight = 282
+  ClientWidth = 345
+  TabOrder = 0
+  DesignLeft = 497
+  DesignTop = 270
+  object Panel3: TPanel
+    Left = 0
+    Height = 282
+    Top = 0
+    Width = 345
+    Align = alClient
+    BevelColor = 247036
+    BevelOuter = bvNone
+    ClientHeight = 282
+    ClientWidth = 345
+    Color = 4934475
+    ParentColor = False
+    TabOrder = 0
+    object Label7: TLabel
+      AnchorSideLeft.Control = Panel3
+      AnchorSideTop.Control = Panel3
+      Left = 5
+      Height = 15
+      Top = 10
+      Width = 74
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 10
+      Caption = 'Projects folder'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object FLBProjects: TFileListBox
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = ButtonOpenProject
+      Cursor = crHandPoint
+      Left = 2
+      Height = 191
+      Hint = 'The list of projects found in the above folder'
+      Top = 56
+      Width = 341
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Top = 5
+      BorderSpacing.Bottom = 5
+      Color = 1644825
+      Directory = 'C:\lazarus'
+      ExtendedSelect = False
+      Font.Color = 10473964
+      Font.Height = 18
+      ItemHeight = 0
+      Mask = '*.say'
+      OnDblClick = FLBProjectsDblClick
+      OnDrawItem = FLBProjectsDrawItem
+      OnMouseMove = FLBProjectsMouseMove
+      ParentShowHint = False
+      ParentFont = False
+      ShowHint = True
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+    end
+    object ButtonOpenProject: TSpeedButton
+      AnchorSideLeft.Control = FLBProjects
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Panel3
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 137
+      Height = 20
+      Hint = 'Open the selected project'
+      Top = 252
+      Width = 70
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Bottom = 10
+      Constraints.MinWidth = 70
+      Caption = 'Open'
+      Color = clDefault
+      Images = DataModule1.ImageList1
+      ImageIndex = 12
+      OnClick = ButtonOpenProjectClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object Label8: TLabel
+      AnchorSideTop.Control = Panel3
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Left = 279
+      Height = 17
+      Top = 2
+      Width = 63
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 3
+      Caption = 'PROJECTS'
+      Font.Color = 247036
+      Font.Height = 18
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      AnchorSideLeft.Control = Panel3
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BSearchProjectFolder
+      Left = 2
+      Height = 25
+      Top = 26
+      Width = 316
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 1
+      BorderSpacing.Right = 2
+      ClientHeight = 25
+      ClientWidth = 316
+      Color = 1644825
+      ParentColor = False
+      TabOrder = 1
+      object Label1: TLabel
+        AnchorSideLeft.Control = Panel1
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = Panel1
+        AnchorSideRight.Side = asrBottom
+        Left = 2
+        Height = 15
+        Top = 5
+        Width = 312
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 1
+        BorderSpacing.Right = 1
+        Caption = 'Label'
+        Font.Color = 15395562
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+      end
+    end
+    object BSearchProjectFolder: TSpeedButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Left = 320
+      Height = 22
+      Top = 27
+      Width = 23
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 2
+      Images = DataModule1.ImageList1
+      ImageIndex = 46
+      OnClick = BSearchProjectFolderClick
+    end
+  end
+  object SDD1: TSelectDirectoryDialog
+    Options = [ofPathMustExist, ofEnableSizing, ofViewDetail]
+    Left = 48
+    Top = 232
+  end
+end

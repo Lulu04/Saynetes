@@ -1,0 +1,44 @@
+1
+150
+PC SERENILED
+4
+1
+Master Dimmer
+1
+0-->255 : 
+2
+Fine Dimmer
+1
+0-->255 : 
+6
+Strobe
+13
+0-->20 : open
+21-->40 : speed 1 (slow)
+41-->60 : speed 2
+61-->80 : speed 3
+81-->100 : speed 4
+101-->120 : speed 5
+121-->140 : speed 6
+141-->160 : speed 7
+161-->180 : speed 8
+181-->200 : speed 9
+201-->220 : speed 10 (fast)
+221-->240 : closed et reserved
+241-->255 : closed
+0
+Freq Tune (led)
+13
+0-->20 : 3 KHz
+21-->40 : 2,4 KHz
+41-->60 : 2,0 KHz
+61-->80 : 1,7 KHz
+81-->100 : 1,5 KHz
+101-->120 : 1,3 KHz
+121-->140 : 1,2 KHz
+141-->160 : 1,1 KHz
+161-->180 : 939 Hz
+181-->200 : 760 Hz
+201-->220 : 610 Hz
+221-->240 : 469 Hz
+241-->255 : reserved

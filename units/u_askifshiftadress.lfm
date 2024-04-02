@@ -1,0 +1,165 @@
+object FormAskIfShiftAdress: TFormAskIfShiftAdress
+  Left = 317
+  Height = 205
+  Top = 127
+  Width = 381
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  ClientHeight = 205
+  ClientWidth = 381
+  Color = 1710618
+  KeyPreview = True
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.4.0'
+  object Shape1: TShape
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 205
+    Top = 0
+    Width = 381
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Brush.Style = bsClear
+    Pen.Color = 16744703
+    Pen.Width = 2
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 172
+    Height = 21
+    Top = 20
+    Width = 37
+    Alignment = taCenter
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 20
+    BorderSpacing.Right = 50
+    Caption = 'Label'
+    Font.Color = 15395562
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 30
+    Height = 20
+    Top = 175
+    Width = 100
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Left = 30
+    BorderSpacing.Right = 20
+    BorderSpacing.Bottom = 10
+    Constraints.MinHeight = 20
+    Constraints.MinWidth = 100
+    Caption = 'sYes'
+    Flat = True
+    Font.Style = [fsBold]
+    ImageIndex = 3
+    Transparent = False
+    OnClick = SpeedButton1Click
+    ParentFont = False
+  end
+  object SpeedButton2: TSpeedButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 251
+    Height = 20
+    Top = 175
+    Width = 100
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 30
+    BorderSpacing.Bottom = 10
+    Constraints.MinHeight = 20
+    Constraints.MinWidth = 100
+    Caption = 'sCancel'
+    Flat = True
+    Font.Style = [fsBold]
+    ImageIndex = 2
+    Transparent = False
+    OnClick = SpeedButton2Click
+    ParentFont = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 59
+    Height = 21
+    Top = 81
+    Width = 262
+    BorderSpacing.Top = 40
+    Caption = 'Shift the adresses of the other fixtures'
+    Font.Color = 15395562
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+    OnClick = Label2Click
+  end
+  object RadioButton1: TRadioButton
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Label2
+    Cursor = crHandPoint
+    Left = 39
+    Height = 19
+    Top = 82
+    Width = 20
+    Anchors = [akTop, akRight]
+    TabOrder = 0
+  end
+  object RadioButton2: TRadioButton
+    AnchorSideLeft.Control = RadioButton1
+    AnchorSideTop.Control = RadioButton1
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 39
+    Height = 19
+    Top = 121
+    Width = 20
+    BorderSpacing.Top = 20
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = RadioButton2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = RadioButton2
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 59
+    Height = 21
+    Top = 120
+    Width = 72
+    BorderSpacing.Top = 20
+    Caption = 'Don''t shift'
+    Font.Color = 15395562
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+    OnClick = Label3Click
+  end
+end

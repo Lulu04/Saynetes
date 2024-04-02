@@ -1,0 +1,12 @@
+{"version":1,"strings":[
+{"hash":196112718,"name":"tframeviewcmdlist.miedit.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},
+{"hash":74544686,"name":"tframeviewcmdlist.mideleteselection.caption","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,105,111,110],"value":"Delete the selection"},
+{"hash":380871,"name":"tframeviewcmdlist.miview.caption","sourcebytes":[86,105,101,119],"value":"View"},
+{"hash":75439619,"name":"tframeviewcmdlist.miviewadress.caption","sourcebytes":[68,77,88,32,65,100,114,101,115,115],"value":"DMX Adress"},
+{"hash":212021077,"name":"tframeviewcmdlist.miviewfixturename.caption","sourcebytes":[68,77,88,32,70,105,120,116,117,114,101,32,110,97,109,101],"value":"DMX Fixture name"},
+{"hash":53211454,"name":"tframeviewcmdlist.miviewdescription.caption","sourcebytes":[68,77,88,32,70,105,120,116,117,114,101,32,100,101,115,99,114,105,112,116,105,111,110],"value":"DMX Fixture description"},
+{"hash":259895765,"name":"tframeviewcmdlist.miviewchannelname.caption","sourcebytes":[68,77,88,32,67,104,97,110,110,101,108,32,110,97,109,101],"value":"DMX Channel name"},
+{"hash":105061011,"name":"tframeviewcmdlist.micolorrepresentation.caption","sourcebytes":[68,105,115,112,108,97,121,32,99,111,108,111,114,115],"value":"Display colors"},
+{"hash":150879289,"name":"tframeviewcmdlist.micolorastext.caption","sourcebytes":[65,115,32,116,101,120,116,32,40,114,44,103,44,98,41],"value":"As text (r,g,b)"},
+{"hash":125588341,"name":"tframeviewcmdlist.micolorasrectanglecolor.caption","sourcebytes":[65,115,32,99,111,108,111,114,101,100,32,114,101,99,116,97,110,103,108,101],"value":"As colored rectangle"}
+]}

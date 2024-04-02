@@ -1,0 +1,101 @@
+object FrameAudioLevels: TFrameAudioLevels
+  Left = 0
+  Height = 138
+  Top = 0
+  Width = 140
+  ClientHeight = 138
+  ClientWidth = 140
+  TabOrder = 0
+  DesignLeft = 561
+  DesignTop = 218
+  object Shape1: TShape
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 138
+    Top = 0
+    Width = 140
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Brush.Color = 6978171
+    Pen.Color = 3552822
+    Pen.EndCap = pecFlat
+    Pen.Width = 2
+    OnResize = Shape1Resize
+    Shape = stRoundRect
+  end
+  object ProgressBar2: TProgressBar
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ProgressBar1
+    AnchorSideRight.Control = Shape1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ProgressBar1
+    AnchorSideBottom.Side = asrBottom
+    Left = 127
+    Height = 111
+    Top = 17
+    Width = 8
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 5
+    Orientation = pbVertical
+    TabOrder = 0
+  end
+  object ProgressBar1: TProgressBar
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = Panel1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Shape1
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 111
+    Top = 17
+    Width = 8
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 2
+    BorderSpacing.Bottom = 10
+    Orientation = pbVertical
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = ProgressBar1
+    AnchorSideTop.Control = Shape1
+    AnchorSideRight.Control = ProgressBar1
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 5
+    Top = 10
+    Width = 8
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    BevelOuter = bvNone
+    Constraints.MaxHeight = 5
+    Constraints.MinHeight = 5
+    TabOrder = 2
+  end
+  object Panel2: TPanel
+    AnchorSideLeft.Control = ProgressBar2
+    AnchorSideTop.Control = Shape1
+    AnchorSideRight.Control = ProgressBar2
+    AnchorSideRight.Side = asrBottom
+    Left = 127
+    Height = 5
+    Top = 10
+    Width = 8
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    BevelOuter = bvNone
+    Constraints.MaxHeight = 5
+    Constraints.MinHeight = 5
+    TabOrder = 3
+  end
+  object Timer1: TTimer
+    Interval = 250
+    OnTimer = Timer1Timer
+    Left = 48
+    Top = 24
+  end
+end

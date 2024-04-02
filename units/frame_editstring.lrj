@@ -1,0 +1,4 @@
+{"version":1,"strings":[
+{"hash":158164990,"name":"tframeeditstring.label1.caption","sourcebytes":[100,101,115,99,114,105,112,116,105,111,110],"value":"description"},
+{"hash":232206019,"name":"tframeeditstring.label2.caption","sourcebytes":[112,108,101,97,115,101,32,110,111,32,115,112,97,99,101,32,111,114,32,115,112,101,99,105,97,108,32,99,104,97,114,97,99,116,101,114,115],"value":"please no space or special characters"}
+]}

@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":168633748,"name":"tformprojectwizard.caption","sourcebytes":[78,101,119,32,112,114,111,106,101,99,116,32,119,105,122,97,114,100],"value":"New project wizard"},
+{"hash":147627699,"name":"tformprojectwizard.b_previous.caption","sourcebytes":[115,80,114,101,118,105,111,117,115],"value":"sPrevious"},
+{"hash":7884020,"name":"tformprojectwizard.b_next.caption","sourcebytes":[115,78,101,120,116],"value":"sNext"},
+{"hash":127420876,"name":"tformprojectwizard.b_cancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":189121758,"name":"tformprojectwizard.statictext1.caption","sourcebytes":[84,104,105,115,32,119,105,122,97,114,100,32,119,105,108,108,32,104,101,108,112,32,121,111,117,32,116,111,32,99,114,101,97,116,101,32,97,32,110,101,119,32,112,114,111,106,101,99,116,13,10,67,108,105,99,107,32,39,78,101,120,116,39,32,116,111,32,99,111,110,116,105,110,117,101,46,46,46],"value":"This wizard will help you to create a new project\r\nClick 'Next' to continue..."},
+{"hash":136496004,"name":"tformprojectwizard.label3.caption","sourcebytes":[83,101,108,101,99,116,32,97,32,102,111,108,100,101,114,32,119,104,101,114,101,32,116,111,32,115,97,118,101,32,116,104,101,32,112,114,111,106,101,99,116],"value":"Select a folder where to save the project"},
+{"hash":243429489,"name":"tformprojectwizard.label1.caption","sourcebytes":[80,114,111,106,101,99,116,32,99,114,101,97,116,101,100,32,119,105,116,104,32,115,117,99,99,101,115,115,32,33],"value":"Project created with success !"},
+{"hash":101489646,"name":"tformprojectwizard.label2.caption","sourcebytes":[67,108,105,99,107,32,116,104,101,32,39,70,105,110,105,115,104,39,32,98,117,116,116,111,110,32,116,111,32,99,108,111,115,101,32,116,104,105,115,32,119,105,122,97,114,100,46],"value":"Click the 'Finish' button to close this wizard."}
+]}

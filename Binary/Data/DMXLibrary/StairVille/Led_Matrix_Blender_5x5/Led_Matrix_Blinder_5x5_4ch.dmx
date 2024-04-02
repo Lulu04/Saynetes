@@ -1,0 +1,42 @@
+14
+96
+LED Matrix Blinder 5x5_4ch
+4
+1
+Master Dimmer
+1
+0-->255 : 
+0
+Config
+23
+0-->0 : OFF
+1-->11 : show 1
+12-->23 : show 2
+24-->35 : show 3
+36-->47 : show 4
+48-->59 : show 5
+60-->71 : show 6
+72-->83 : show 7
+84-->95 : show 8
+96-->107 : show 9
+108-->119 : show 10
+120-->131 : show 11
+132-->143 : show 12
+144-->155 : show 13
+156-->167 : show 14
+168-->179 : show 15
+180-->191 : show 16
+192-->203 : show 17
+204-->215 : show 18
+216-->227 : show 19
+228-->239 : show 20
+240-->251 : show 21
+252-->255 : Sound controlled
+16
+Speed
+1
+0-->255 : 
+6
+Strobe
+1
+0-->255 : 

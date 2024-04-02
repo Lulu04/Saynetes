@@ -1,0 +1,50 @@
+object FrameViewDipSwitchs: TFrameViewDipSwitchs
+  Left = 0
+  Height = 89
+  Top = 0
+  Width = 267
+  ClientHeight = 89
+  ClientWidth = 267
+  TabOrder = 0
+  DesignLeft = 500
+  DesignTop = 364
+  object Panel1: TPanel
+    Left = 0
+    Height = 89
+    Top = 0
+    Width = 267
+    Align = alClient
+    ClientHeight = 89
+    ClientWidth = 267
+    Color = 8999984
+    ParentColor = False
+    TabOrder = 0
+    object PB1: TPaintBox
+      Left = 1
+      Height = 87
+      Top = 1
+      Width = 265
+      Align = alClient
+      OnMouseDown = PB1MouseDown
+      OnMouseMove = PB1MouseMove
+      OnPaint = PB1Paint
+      OnResize = PB1Resize
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 176
+    Top = 16
+    object MIAdressSetting: TMenuItem
+      Caption = 'Used for adress'
+      OnClick = MIAdressSettingClick
+    end
+    object MIMustBeON: TMenuItem
+      Caption = 'Must be ON'
+      OnClick = MIMustBeONClick
+    end
+    object MIMustBeOFF: TMenuItem
+      Caption = 'Must be OFF'
+      OnClick = MIMustBeOFFClick
+    end
+  end
+end

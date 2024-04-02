@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="Saynetes"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+        <TextName Value="Saynètes"/>
+        <TextDesc Value="Light and sound controls for shows"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="Binary\languages"/>
+      <ExcludedOriginals Count="57">
+        <Item1 Value="sAdd"/>
+        <Item2 Value="ALS - fx"/>
+        <Item3 Value="sApply"/>
+        <Item4 Value="sAudioFollower"/>
+        <Item5 Value="sBegin"/>
+        <Item6 Value="sCancel"/>
+        <Item7 Value="CAPTURE"/>
+        <Item8 Value="sChannels"/>
+        <Item9 Value="sChaser"/>
+        <Item10 Value="sClose"/>
+        <Item11 Value="sCopy"/>
+        <Item12 Value="sCut"/>
+        <Item13 Value="sDelete"/>
+        <Item14 Value="sDimmer"/>
+        <Item15 Value="Dry/Wet"/>
+        <Item16 Value="DRY"/>
+        <Item17 Value="sDuration"/>
+        <Item18 Value="sEnd"/>
+        <Item19 Value="FILES"/>
+        <Item20 Value="sFlame"/>
+        <Item21 Value="sFlash"/>
+        <Item22 Value="FX"/>
+        <Item23 Value="Label"/>
+        <Item24 Value="sLoop"/>
+        <Item25 Value="sNext"/>
+        <Item26 Value="sNo"/>
+        <Item27 Value="sOk"/>
+        <Item28 Value="sOFF"/>
+        <Item29 Value="sON"/>
+        <Item30 Value="sPaste"/>
+        <Item31 Value="sPitch"/>
+        <Item32 Value="sPlaylist"/>
+        <Item33 Value="PRESET"/>
+        <Item34 Value="Preset"/>
+        <Item35 Value="sPrevious"/>
+        <Item36 Value="Redo"/>
+        <Item37 Value="sRename"/>
+        <Item38 Value="sRGB"/>
+        <Item39 Value="SAYNÈTES"/>
+        <Item40 Value="sSave"/>
+        <Item41 Value="second(s)"/>
+        <Item42 Value="sSelection"/>
+        <Item43 Value="sStop"/>
+        <Item44 Value="sto"/>
+        <Item45 Value="Undo"/>
+        <Item46 Value="sUpdate"/>
+        <Item47 Value="sView"/>
+        <Item48 Value="sVolume"/>
+        <Item49 Value="sWatt"/>
+        <Item50 Value="WET"/>
+        <Item51 Value="sYes"/>
+        <Item52 Value="_"/>
+        <Item53 Value="1/1"/>
+        <Item54 Value="1s"/>
+        <Item55 Value="5s"/>
+        <Item56 Value="10s"/>
+        <Item57 Value="15s"/>
+      </ExcludedOriginals>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="2"/>
+      <BuildNr Value="2433"/>
+      <StringTable CompanyName="Lulu" ProductName="Saynètes" ProductVersion="2.0"/>
+    </VersionInfo>
+    <MacroValues Count="1">
+      <Macro1 Name="LCLWidgetType" Value="win32"/>
+    </MacroValues>
+    <BuildModes Count="6">
+      <Item1 Name="Win32_Debug" Default="True"/>
+      <Item2 Name="Win32_Release">
+        <MacroValues Count="1">
+          <Macro1 Name="LCLWidgetType" Value="win32"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Binary\Saynetes"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Win64_Debug">
+        <MacroValues Count="1">
+          <Macro1 Name="LCLWidgetType" Value="win32"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Binary\Saynetes"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="0"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <WriteFPCLogo Value="False"/>
+            <CompilerMessages>
+              <IgnoredMessages idx6058="True" idx3124="True" idx3123="True"/>
+            </CompilerMessages>
+            <CustomOptions Value="-dDebug"/>
+            <OtherDefines Count="2">
+              <Define0 Value="BassSoundManager_USEFX"/>
+              <Define1 Value="Debug"/>
+            </OtherDefines>
+          </Other>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="Win64_Release">
+        <MacroValues Count="1">
+          <Macro1 Name="LCLWidgetType" Value="win32"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Binary\Saynetes"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="Linux64_Debug">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="gtk2"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Binary\Saynetes"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="\usr\lib\gcc\x86_64-linux-gnu\7;\usr\lib\gcc\x86_64-linux-gnu\11"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="0"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <WriteFPCLogo Value="False"/>
+            <CustomOptions Value="-dDebug"/>
+            <OtherDefines Count="2">
+              <Define0 Value="BassSoundManager_USEFX"/>
+              <Define1 Value="Debug"/>
+            </OtherDefines>
+          </Other>
+        </CompilerOptions>
+      </Item5>
+      <Item6 Name="Linux64_Release">
+        <MacroValues Count="1">
+          <Macro2 Name="LCLWidgetType" Value="gtk2"/>
+        </MacroValues>
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="Binary\Saynetes"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="\usr\lib\gcc\x86_64-linux-gnu\7;\usr\lib\gcc\x86_64-linux-gnu\11"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item6>
+      <SharedMatrixOptions Count="2">
+        <Item1 ID="647696521686" Modes="Win64_Release,Win64_Debug,Win32_Release,Win32_Debug" Type="IDEMacro" MacroName="LCLWidgetType" Value="win32"/>
+        <Item2 ID="636581233401" Modes="Linux64_Release,Linux64_Debug" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk2"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages Count="4">
+      <Item1>
+        <PackageName Value="LazControls"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="BGLControls"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="BGRABitmapPack"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LCL"/>
+      </Item4>
+    </RequiredPackages>
+    <Units Count="83">
+      <Unit0>
+        <Filename Value="Saynetes.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="units\u_mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="units\u_audio_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="units\u_edit_sequence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSequenceEdition"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="units\u_dmx_library.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXLibrary"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="units\frame_sequencer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameSequencer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="units\u_common.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="units\u_utils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="units\frame_viewcmdlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewCmdList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="units\u_project_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="units\u_list_dmxuniverse.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="units\u_modify_time.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_ModifyTime"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="units\u_move_step.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_MoveStep"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="units\u_change_complex_step_length.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_ChangeStepLength"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="unit_dmx_device\u_dmxdevice_manager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="unit_dmx_device\driver_enttec_opendmx.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unit_dmx_device\u_vellemank8062d.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="unit_dmx_device\ftd2xx.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="unit_dmx_device\u_dmx_util.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="units\u_resource_string.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="units\u_list_top.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="units\frame_cmd_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameCmdAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="units\frame_viewaudiolist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewAudioList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="units\u_projectwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProjectWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="units\frame_viewtoplist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewTopList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="units\u_top_player.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="units\frame_velocity.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frame_Velocity"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="units\frame_viewdmxlibrary.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXLibrary"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="units\frame_viewfixturechannels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXFixtureChannels"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="units\u_newfixturewizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormFixtureWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="units\u_dmxlib_inputrange.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormInputDMXRange"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="units\u_user_askconfirmation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserConfirmation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="units\u_user_showmessage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserMessage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="units\u_user_inputstring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormUserInput"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="units\u_userdialogs.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="units\u_editfixture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormEditFixture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="units\frame_editstring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEditString"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="units\frame_viewdmxcursors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDMXCursors"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="units\u_dmxtools_channels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXChannelsTools"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="units\u_notebook_util.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="units\u_dmxtools_rgb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXRGBTools"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="units\frame_color_palette.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frame_ColorPalette"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="units\frame_viewuniverselist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewUniverseList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="units\frame_viewchannelslist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewChannelsList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="units\u_dmxtools_group.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDMXGroup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="units\u_edit_otheraction.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormOtherAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="units\frame_fx_channelchaser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFXChannelChaser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="units\u_helper.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="units\u_add_action_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAudioAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="units\u_devicemanager_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDeviceManager"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="unit_dmx_device\u_ftdi_based.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="units\u_startupwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormStartUpWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="units\u_program_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProgramOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="units\u_createplaylist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCreatePlaylist"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="units\frame_viewcolorlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewColorList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="units\frame_fx_rgbchaser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFXRGBChaser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="units\frame_viewfixtureslist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewFixturesList"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="units\u_presetmanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PresetManager"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="units\frame_viewfixtureinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFixtureInfo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="units\u_askifshiftadress.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAskIfShiftAdress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="units\frame_viewdmxdipswitchs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewDipSwitchs"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="units\u_logfile.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="units\frame_cmd_audiofx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameCmdAudioFX"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="units\frame_trackbar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameTrackBar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="units\u_datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="units\frame_audiolevels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameAudioLevels"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="units\frame_intersessionmusic.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameIntersessionMusic"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="units\frame_audiocapture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameAudioCapture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="units\frame_viewprojectfolder.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewProjectFolder"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="units\frame_led.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameLed"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="units\frame_buttononoff.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameButtonOnOff"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="units\u_add_action_dmx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAddDMXAction"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="units\frame_viewprojectors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewProjector"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="units\u_global_var.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="units\frame_main_audio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainAudio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="units\frame_main_sequence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainSequence"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="units\frame_main_addfixture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameMainAddFixture"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="units\u_project_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProjectOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="..\UnitsCommon\project_util.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="units\form_about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="units\u_apputils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="units\frame_viewfixtureimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFixtureImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="units\form_changefixtureimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormChangeFixtureImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit82>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="Binary\Saynetes"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <IncludeAssertionCode Value="True"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <Checks>
+        <IOChecks Value="True"/>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <VerifyObjMethodCallValidity Value="True"/>
+      <TargetCPU Value="i386"/>
+      <TargetOS Value="win32"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+        <UseHeaptrc Value="True"/>
+        <TrashVariables Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShoLineNum Value="True"/>
+        <ShowCond Value="True"/>
+      </Verbosity>
+      <CustomOptions Value="-dDebug"/>
+      <OtherDefines Count="2">
+        <Define0 Value="BassSoundManager_USEFX"/>
+        <Define1 Value="Debug"/>
+      </OtherDefines>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

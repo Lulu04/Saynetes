@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":5404860,"name":"tframemainaddfixture.label9.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":216572117,"name":"tframemainaddfixture.badduniverse.hint","sourcebytes":[67,114,101,97,116,101,115,32,97,32,110,101,119,32,117,110,105,118,101,114,115,101],"value":"Creates a new universe"},
+{"hash":108911173,"name":"tframemainaddfixture.bdeleteuniverse.hint","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,117,110,105,118,101,114,115,101],"value":"Delete the selected universe"},
+{"hash":256931684,"name":"tframemainaddfixture.bloadfrom.hint","sourcebytes":[73,109,112,111,114,116,32,116,104,101,32,68,77,88,32,99,111,110,102,105,103,117,114,97,116,105,111,110,13,10,102,114,111,109,32,97,110,111,116,104,101,114,32,112,114,111,106,101,99,116],"value":"Import the DMX configuration\r\nfrom another project"},
+{"hash":62362275,"name":"tframemainaddfixture.bdevicemanager.hint","sourcebytes":[67,111,110,110,101,99,116,32,121,111,117,114,32,117,110,105,118,101,114,115,101,115,32,116,111,32,121,111,117,114,32,68,77,88,32,100,101,118,105,99,101,115],"value":"Connect your universes to your DMX devices"},
+{"hash":308805,"name":"tframemainaddfixture.bok.caption","sourcebytes":[68,111,110,101],"value":"Done"},
+{"hash":230712340,"name":"tframemainaddfixture.od1.title","sourcebytes":[76,111,97,100,32,97,32,68,77,88,32,99,111,110,102,105,103,117,114,97,116,105,111,110,32,102,114,111,109,32,97,110,111,116,104,101,114,32,112,114,111,106,101,99,116],"value":"Load a DMX configuration from another project"}
+]}

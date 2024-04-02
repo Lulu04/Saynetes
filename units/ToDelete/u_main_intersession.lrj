@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":14669314,"name":"tformmainintersession.label7.caption","sourcebytes":[80,114,111,106,101,99,116,115,32,102,111,108,100,101,114],"value":"Projects folder"},
+{"hash":249151347,"name":"tformmainintersession.directoryedit1.hint","sourcebytes":[67,108,105,99,107,32,116,111,32,115,101,108,101,99,116,32,116,104,101,32,102,111,108,100,101,114,32,99,111,110,116,97,105,110,105,110,103,32,121,111,117,114,32,112,114,111,106,101,99,116,115],"value":"Click to select the folder containing your projects"},
+{"hash":71639044,"name":"tformmainintersession.buttonopenproject.hint","sourcebytes":[79,112,101,110,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,111,106,101,99,116],"value":"Open the selected project"},
+{"hash":353982,"name":"tformmainintersession.buttonopenproject.caption","sourcebytes":[79,112,101,110],"value":"Open"},
+{"hash":32139842,"name":"tformmainintersession.flbprojects.hint","sourcebytes":[84,104,101,32,108,105,115,116,32,111,102,32,112,114,111,106,101,99,116,115,32,102,111,117,110,100,32,105,110,32,116,104,101,32,97,98,111,118,101,32,102,111,108,100,101,114],"value":"The list of projects found in the above folder"}
+]}
