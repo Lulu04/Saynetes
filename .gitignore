@@ -14,3 +14,4 @@ ProjectTest/
 /Design/qlab
 *.log
 /units/backup
+/unit_dmx_device/backup
