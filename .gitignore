@@ -1,0 +1,9 @@
+*.lps
+*.exe
+*.dbg
+*.log
+Binary/*.ini
+technics/
+ProjetDeTests2/
+ProjetDeTests/
+ProjectTest/
