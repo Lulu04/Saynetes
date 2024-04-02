@@ -1,8 +1,0 @@
-[APPLICATION NAME]
-Saynète
-[APPLICATION VERSION]
-3.1.0
-[AUDIO FILES]
-2
-TYPE|streamed|FILENAME|oiseaux_foret_LOOP.wav|ID|1|LOOP|true
-TYPE|streamed|FILENAME|marche_dans_herbe_LOOP.WAV|ID|2|LOOP|true
