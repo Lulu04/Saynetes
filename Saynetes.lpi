@@ -84,10 +84,9 @@
     </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
-      <AutoIncrementBuild Value="True"/>
-      <MajorVersionNr Value="2"/>
-      <BuildNr Value="2433"/>
-      <StringTable CompanyName="Lulu" ProductName="Saynètes" ProductVersion="2.0"/>
+      <MajorVersionNr Value="3"/>
+      <MinorVersionNr Value="1"/>
+      <StringTable CompanyName="Lulu" ProductName="Saynètes"/>
     </VersionInfo>
     <MacroValues Count="1">
       <Macro1 Name="LCLWidgetType" Value="win32"/>

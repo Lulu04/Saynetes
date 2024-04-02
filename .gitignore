@@ -1,8 +1,10 @@
 *.lps
+*.res
 *.exe
 *.dbg
 *.log
-lib/*
+lib/
+backup/
 Binary/*.ini
 technics/
 ProjetDeTests2/
@@ -10,3 +12,4 @@ ProjetDeTests/
 ProjectTest/
 /Design/Nouveau dossier
 /Design/qlab
+*.log
