@@ -903,7 +903,7 @@ msgstr ""
 #: tformsequenceedition.bkeep0visible.caption
 msgctxt "tformsequenceedition.bkeep0visible.caption"
 msgid "[<"
-msgstr ""
+msgstr "[<"
 
 #: tformsequenceedition.bkeep0visible.hint
 msgid "Keep the position 0 visible"
@@ -2203,8 +2203,8 @@ msgid "AUDIO - PLAY"
 msgstr "AUDIO - LECTURE"
 
 #: u_resource_string.saudiosetfreq
-msgid "AUDIO - SET FREQUENCY"
-msgstr "AUDIO - Fixer la fréquence"
+msgid "AUDIO - SET PITCH"
+msgstr "AUDIO - Fixer le pitch"
 
 #: u_resource_string.saudiosetpan
 msgid "AUDIO - SET PAN"
@@ -3505,4 +3505,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-

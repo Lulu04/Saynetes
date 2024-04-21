@@ -320,20 +320,21 @@ end;
 procedure TFrameCmdAudio.GenerateCmdForPitchFile;
 var i: integer;
   snd: TALSSound;
+  v: single;
 begin
-  FCmds:=CmdTitleAudioChangePitch;
-
+  FCmds := CmdTitleAudioChangePitch;
+  v := GetPitch;
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
-    FCmds.ConcatCmd(CmdAudioChangePitch(snd.Tag, GetPitch, FSE3.Value, Frame_Velocity1.SelectedCurveID));
+    snd := FSelectedSounds[i];
+    FCmds.ConcatCmd(CmdAudioChangePitch(snd.Tag, v, FSE3.Value, Frame_Velocity1.SelectedCurveID));
   end;
 
-  FShortReadableString:=SAudioSetFreq+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FShortReadableString:=FShortReadableString+' '+STo+' '+PitchToString(TBPitch.Position);
-  FCmdDuration:=FSE3.Value;
+  FShortReadableString := SAudioSetFreq+' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString+SMultiple
+    else FShortReadableString := FShortReadableString+ExtractFileName(snd.Filename);
+  FShortReadableString := FShortReadableString+' '+STo+' '+PitchToString(v);
+  FCmdDuration := FSE3.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForStartCapture;

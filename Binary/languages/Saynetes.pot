@@ -2107,7 +2107,7 @@ msgid "AUDIO - PLAY"
 msgstr ""
 
 #: u_resource_string.saudiosetfreq
-msgid "AUDIO - SET FREQUENCY"
+msgid "AUDIO - SET PITCH"
 msgstr ""
 
 #: u_resource_string.saudiosetpan

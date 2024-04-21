@@ -196,7 +196,7 @@ begin
            else
              Font.Color := c_nomplay;
            Font.Style := [fsBold];
-           txt := UpCase(ExtractFilename(snd.Filename));
+           txt := ExtractFilename(snd.Filename);
        end;
 
        ALS_PAUSED:
@@ -216,7 +216,7 @@ begin
                Font.Color := c_nompausebas;
            end;
            Font.Style := [fsBold];
-           txt := UpCase(ExtractFilename(snd.Filename));
+           txt := ExtractFilename(snd.Filename);
          end;
 
        ALS_STOPPED:
@@ -226,7 +226,7 @@ begin
            else
              Font.Color := c_nomstop;
            Font.Style := [];
-           txt := LowerCase(ExtractFilename(snd.Filename));
+           txt := (ExtractFilename(snd.Filename);
          end;
      end;//case
      end;

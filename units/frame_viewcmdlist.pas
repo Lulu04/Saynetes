@@ -422,7 +422,7 @@ begin
     CMD_AUDIO_SETPITCH: begin   // CMD_AUDIO_SETPITCH IDaudio pitch duration IDcurve
       RenderBackground;
       Font.Height := Font.Height-1;
-      txt := FormatAudioFile(A[1]) + '   '+STo+' ' + A[2] + ' '+SHz;
+      txt := FormatAudioFile(A[1]) + '   '+STo+' ' + A[2];
       if StringToSingle ( A[3] )>1 then
         txt := txt+'   '+SIn+'   '+A[3]+' '+SSeconds
       else

@@ -359,9 +359,9 @@ begin
  if aPitch = 1.0 then
    Result := SNormal
  else if aPitch > 1.0 then
-   Result := FormatFloatWithDot('0.00', aPitch )+'('+SFaster+')'
+   Result := FormatFloatWithDot('0.00', aPitch)+'('+SFaster+')'
  else
-   Result := FormatFloatWithDot('0.00', aPitch )+'('+SSlower+')';
+   Result := FormatFloatWithDot('0.00', aPitch)+'('+SSlower+')';
 end;
 
 function AudioFXToString(aEffectType: TALSEffectType; aPresetIndex: integer): string;
