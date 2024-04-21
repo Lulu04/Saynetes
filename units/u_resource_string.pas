@@ -225,7 +225,7 @@ resourcestring
   SAudioFadeOut='AUDIO - FADEOUT';
   SAudioSetVolume='AUDIO - SET VOLUME';
   SAudioSetPan='AUDIO - SET PAN';
-  SAudioSetFreq='AUDIO - SET FREQUENCY';
+  SAudioSetFreq='AUDIO - SET PITCH';
   SAudioConnectEffect='AUDIO - CONNECT EFFECT';
   SAudioDisconnectEffect='AUDIO - DISCONNECT EFFECT';
   SAudioCaptureStart='AUDIO CAPTURE - START';
