@@ -63,6 +63,7 @@ type
     function GetTopByIndex(aIndex: integer): TSequence;
 
     function GetNameByID(aID: cardinal): string;
+    function IDToIndex(aID: cardinal): integer;
 
     procedure Save(temp: TStrings);
     procedure Load(temp: TStrings);
@@ -241,6 +242,17 @@ begin
   end;
 
  Result := SUnknowSequence;
+end;
+
+function TTopList.IDToIndex(aID: cardinal): integer;
+var i: integer;
+begin
+  for i:=0 to Count-1 do
+   if GetTopByIndex(i).ID = aID then begin
+     Result := i;
+     exit;
+   end;
+  Result := -1;
 end;
 
 const SEQUENCE_HEADER = '[SEQUENCE]';
