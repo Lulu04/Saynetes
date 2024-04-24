@@ -335,6 +335,7 @@ end;
 procedure TSaynetesProject.OnProjectReadyChange(aState: boolean);
 begin
   FormMain.OnProjectReadyChange;
+  UpdateStringAfterLanguageChange;
 end;
 
 procedure TSaynetesProject.InitProjectByDefault;
