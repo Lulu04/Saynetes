@@ -220,13 +220,13 @@ begin
          end;
 
        ALS_STOPPED:
-         begin // render stopped audio tracks
+         begin // render audio tracks stopped
            if snd.Loop then
              Font.Color := c_nombouclestop
            else
              Font.Color := c_nomstop;
            Font.Style := [];
-           txt := (ExtractFilename(snd.Filename);
+           txt := ExtractFilename(snd.Filename);
          end;
      end;//case
      end;
