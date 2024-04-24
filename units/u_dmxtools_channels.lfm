@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 1
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -393,9 +393,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Left = 0
         Height = 15
         Top = 82
-        Width = 24
+        Width = 29
         BorderSpacing.Top = 10
-        Caption = 'Gain'
+        Caption = 'sGain'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
@@ -427,8 +427,8 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Left = 0
         Height = 15
         Top = 143
-        Width = 81
-        Caption = 'Brightness max'
+        Width = 86
+        Caption = 'sBrightness max'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
@@ -444,7 +444,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Top = 158
         Width = 249
         Frequency = 20
-        Max = 200
+        Max = 255
         OnChange = SpeedButton6Click
         Position = 200
         ShowSelRange = False
@@ -459,9 +459,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Left = 0
         Height = 15
         Top = 214
-        Width = 51
+        Width = 56
         BorderSpacing.Top = 10
-        Caption = 'Soften on'
+        Caption = 'sSoften on'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
@@ -577,7 +577,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label5
         AnchorSideRight.Side = asrBottom
-        Left = 34
+        Left = 39
         Height = 15
         Top = 82
         Width = 28
@@ -594,7 +594,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label6
         AnchorSideRight.Side = asrBottom
-        Left = 91
+        Left = 96
         Height = 15
         Top = 143
         Width = 28
@@ -611,7 +611,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label7
         AnchorSideRight.Side = asrBottom
-        Left = 61
+        Left = 66
         Height = 15
         Top = 214
         Width = 28
@@ -644,6 +644,14 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ShowHint = True
         ParentFont = False
         ParentShowHint = False
+      end
+      object Label23: TLabel
+        Left = 0
+        Height = 15
+        Top = 8
+        Width = 40
+        Caption = 'sFollow'
+        ParentColor = False
       end
     end
     object PageCopy: TPage
