@@ -122,6 +122,7 @@ resourcestring
   SPitch='Pitch';
   SCurve='CURVE';
   SCurve_='Curve';
+  SReset='RESET';
   SAudioFileNotFound='Audio file not found !!';
   SAnErrorOccurredWhileImportingTheFileToTheProject='An error occurred while importing the file to the project !!';
   SDisqueIsFullOrWriteProtected='Disk is full or write protected.';
@@ -217,6 +218,8 @@ resourcestring
   SFaster='faster';
   SNormal='normal';
   SNormal_='Normal';
+  SValue='Value';
+  SDurationInSecond='Duration in second';
 
   SAudioPlay='AUDIO - PLAY';
   SAudioStop='AUDIO - STOP';
@@ -326,9 +329,14 @@ resourcestring
   SCrackling='Crackling';
   SDimmerRGB='Dimmer RGB';
   SRGBColorFrom='RGB color from';
+  SFollow='Follow';
   SGain='Gain';
+  SBrightnessMax='Brightness max';
   SSoftenOn='Soften on';
   SSoften='Soften';
+  SWaitTime='Wait time';
+  SLevelMin='Level min';
+  SLevelMax='Level max';
   SMin='Min';
   SMax='Max';
   SLevel='Level';
