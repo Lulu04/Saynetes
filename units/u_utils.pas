@@ -153,6 +153,8 @@ function AudioFXToString(aEffectType: TALSEffectType; aPresetIndex: integer): st
 function AudioFXName(aEffectType: TALSEffectType): string;
 function AudioFXPresetName(aEffectType: TALSEffectType; aPresetIndex: integer): string;
 
+// return a string: slower/normal/faster x.xx
+function StrechTimeToString(const aValue: single): string;
 
 function PercentToDMXByte(const aPercent: single): byte;
 function DMXByteToPercent(aValue: byte): single;
@@ -439,6 +441,17 @@ begin
     else
       Result := A[aPresetIndex];
   end;
+end;
+
+function StrechTimeToString(const aValue: single): string;
+begin
+  if aValue < 1 then
+    Result := SSlower+' '+FormatFloat('0.00', aValue)
+  else
+  if aValue = 1 then
+    Result := SNormal
+  else
+    Result := SFaster+' '+FormatFloat('0.00', aValue);
 end;
 
 function PercentToDMXByte(const aPercent: single): byte;
