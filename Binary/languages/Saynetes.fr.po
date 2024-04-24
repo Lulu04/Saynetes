@@ -160,16 +160,6 @@ msgstr "Fermer"
 msgid "Channels tools"
 msgstr "Outils canaux"
 
-#: tformdmxchannelstools.label1.caption
-msgctxt "tformdmxchannelstools.label1.caption"
-msgid "Duration in second"
-msgstr "Durée en seconde"
-
-#: tformdmxchannelstools.label14.caption
-msgctxt "tformdmxchannelstools.label14.caption"
-msgid "Soften"
-msgstr "Adoucir"
-
 #: tformdmxchannelstools.label16.caption
 msgctxt "tformdmxchannelstools.label16.caption"
 msgid "Select the source to copy on the others"
@@ -179,59 +169,6 @@ msgstr "Sélectionnez la source à copier sur les autres"
 msgctxt "tformdmxchannelstools.label18.caption"
 msgid "Source"
 msgstr "Source"
-
-#: tformdmxchannelstools.label2.caption
-msgctxt "tformdmxchannelstools.label2.caption"
-msgid "Level max"
-msgstr "Niveau max"
-
-#: tformdmxchannelstools.label22.caption
-msgctxt "tformdmxchannelstools.label22.caption"
-msgid "Fixed duration"
-msgstr "Durée fixe"
-
-#: tformdmxchannelstools.label25.caption
-msgctxt "tformdmxchannelstools.label25.caption"
-msgid "Velocity"
-msgstr "Vélocité"
-
-#: tformdmxchannelstools.label28.caption
-msgid "Fixed value"
-msgstr "Valeur fixe"
-
-#: tformdmxchannelstools.label29.caption
-msgid "Random value between"
-msgstr "Valeur aléatoire entre"
-
-#: tformdmxchannelstools.label3.caption
-msgctxt "tformdmxchannelstools.label3.caption"
-msgid "Wait time"
-msgstr "Vitesse"
-
-#: tformdmxchannelstools.label30.caption
-msgctxt "tformdmxchannelstools.label30.caption"
-msgid "Random duration between"
-msgstr "Durée aléatoire entre"
-
-#: tformdmxchannelstools.label4.caption
-msgctxt "tformdmxchannelstools.label4.caption"
-msgid "Level min"
-msgstr "Niveau min"
-
-#: tformdmxchannelstools.label5.caption
-msgctxt "tformdmxchannelstools.label5.caption"
-msgid "Gain"
-msgstr "Gain"
-
-#: tformdmxchannelstools.label6.caption
-msgctxt "tformdmxchannelstools.label6.caption"
-msgid "Brightness max"
-msgstr "Luminosité maxi"
-
-#: tformdmxchannelstools.label7.caption
-msgctxt "tformdmxchannelstools.label7.caption"
-msgid "Soften on"
-msgstr "Adoucir sur"
 
 #: tformdmxchannelstools.speedbutton1.hint
 msgctxt "tformdmxchannelstools.speedbutton1.hint"
@@ -495,6 +432,27 @@ msgstr "Ajouter une plage au canal"
 msgctxt "tformeditfixture.speedbutton5.caption"
 msgid "Rename channel"
 msgstr "Renommer le canal"
+
+#: tformeditsingleaction.bok.caption
+msgid "Apply change"
+msgstr "Appliquer les changements"
+
+#: tformeditsingleaction.label1.caption
+msgid "Edit action"
+msgstr "Édition de"
+
+#: tformeditsingleaction.label27.caption
+msgid "Action not editable"
+msgstr "Action non éditable"
+
+#: tformeditsingleaction.label3.caption
+msgid "Audio file:"
+msgstr "Fichier audio:"
+
+#: tformeditsingleaction.label5.caption
+msgctxt "tformeditsingleaction.label5.caption"
+msgid "Speed"
+msgstr "Vitesse"
 
 #: tformfixturewizard.caption
 msgid "New fixture wizard"
@@ -767,6 +725,7 @@ msgid "Stretch time allows you to speed up/down the execution of another sequenc
 msgstr "Strech time (L'étirement de temps) vous permet d'accélérer ou de ralentir l'exécution d'une autre séquence."
 
 #: tformotheraction.speedbutton5.caption
+msgctxt "tformotheraction.speedbutton5.caption"
 msgid "RESET"
 msgstr "RESET"
 
@@ -2237,6 +2196,11 @@ msgctxt "u_resource_string.sblue"
 msgid "Blue"
 msgstr "Bleu"
 
+#: u_resource_string.sbrightnessmax
+msgctxt "u_resource_string.sbrightnessmax"
+msgid "Brightness max"
+msgstr "Luminosité maxi"
+
 #: u_resource_string.sbubblemachine
 msgctxt "u_resource_string.sbubblemachine"
 msgid "Bubble machine"
@@ -2601,6 +2565,11 @@ msgctxt "u_resource_string.sduration"
 msgid "Duration"
 msgstr "Durée"
 
+#: u_resource_string.sdurationinsecond
+msgctxt "u_resource_string.sdurationinsecond"
+msgid "Duration in second"
+msgstr "Durée en seconde"
+
 #: u_resource_string.seditionallowed
 msgid "Edition of audio, dmx and sequences... is now allowed"
 msgstr "L'édition de l'audio, du dmx et des séquences est maintenant autorisée"
@@ -2723,6 +2692,16 @@ msgstr "Terminer"
 msgid " first range should start from 0"
 msgstr " la première plage devrait commencer de 0"
 
+#: u_resource_string.sfixedduration
+msgctxt "u_resource_string.sfixedduration"
+msgid "Fixed duration"
+msgstr "Durée fixe"
+
+#: u_resource_string.sfixedvalue
+msgctxt "u_resource_string.sfixedvalue"
+msgid "Fixed value"
+msgstr "Valeur fixe"
+
 #: u_resource_string.sfixture
 msgid "Fixture"
 msgstr "Appareil"
@@ -2752,6 +2731,10 @@ msgstr "Flamme RVB"
 #: u_resource_string.sflash
 msgid "Flash"
 msgstr "Flash"
+
+#: u_resource_string.sfollow
+msgid "Follow"
+msgstr "Suivre"
 
 #: u_resource_string.sfound
 msgid "Found"
@@ -2851,6 +2834,16 @@ msgstr "GAUCHE"
 msgctxt "u_resource_string.slevel"
 msgid "Level"
 msgstr "Niveau"
+
+#: u_resource_string.slevelmax
+msgctxt "u_resource_string.slevelmax"
+msgid "Level max"
+msgstr "Niveau max"
+
+#: u_resource_string.slevelmin
+msgctxt "u_resource_string.slevelmin"
+msgid "Level min"
+msgstr "Niveau min"
 
 #: u_resource_string.sloop
 msgid "Loop"
@@ -3181,6 +3174,11 @@ msgstr "Carré"
 msgid "Random duration"
 msgstr "Durée aléatoire"
 
+#: u_resource_string.srandomdurationbetween
+msgctxt "u_resource_string.srandomdurationbetween"
+msgid "Random duration between"
+msgstr "Durée aléatoire entre"
+
 #: u_resource_string.srandomintensity
 msgid "Random intensity"
 msgstr "Intensité aléatoire"
@@ -3188,6 +3186,11 @@ msgstr "Intensité aléatoire"
 #: u_resource_string.srandomvalue
 msgid "Random value"
 msgstr "Valeur aléatoire"
+
+#: u_resource_string.srandomvaluebetween
+msgctxt "u_resource_string.srandomvaluebetween"
+msgid "Random value between"
+msgstr "Valeur aléatoire entre"
 
 #: u_resource_string.sready
 msgid "Ready"
@@ -3219,6 +3222,11 @@ msgstr "Remplacer les données de ce prédéfini ?"
 #: u_resource_string.srequiretheprogramtoberestarted
 msgid "Requires the program to be restarted."
 msgstr "Nécessite le redémarrage du programme."
+
+#: u_resource_string.sreset
+msgctxt "u_resource_string.sreset"
+msgid "RESET"
+msgstr "RAZ"
 
 #: u_resource_string.sresume
 msgid "Resume"
@@ -3450,6 +3458,15 @@ msgctxt "u_resource_string.supdate"
 msgid "Update"
 msgstr "Mettre à jour"
 
+#: u_resource_string.svalue
+msgid "Value"
+msgstr "Valeur"
+
+#: u_resource_string.svelocity
+msgctxt "u_resource_string.svelocity"
+msgid "Velocity"
+msgstr "Vélocité"
+
 #: u_resource_string.svideo
 msgid "Video"
 msgstr "Video"
@@ -3467,6 +3484,11 @@ msgstr "Volume"
 #: u_resource_string.swait
 msgid "WAIT"
 msgstr "ATTENDRE"
+
+#: u_resource_string.swaittime
+msgctxt "u_resource_string.swaittime"
+msgid "Wait time"
+msgstr "Attente"
 
 #: u_resource_string.swarning
 msgid "Warning"

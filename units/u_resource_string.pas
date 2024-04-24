@@ -122,6 +122,7 @@ resourcestring
   SPitch='Pitch';
   SCurve='CURVE';
   SCurve_='Curve';
+  SVelocity='Velocity';
   SReset='RESET';
   SAudioFileNotFound='Audio file not found !!';
   SAnErrorOccurredWhileImportingTheFileToTheProject='An error occurred while importing the file to the project !!';
@@ -348,6 +349,10 @@ resourcestring
   SRandomValue='Random value';
   SRandomIntensity='Random intensity';
   SRandomDuration='Random duration';
+  SFixedValue='Fixed value';
+  SRandomValueBetween='Random value between';
+  SFixedDuration='Fixed duration';
+  SRandomDurationBetween='Random duration between';
 
   SScreen='SCREEN';
   SFinalOpacity='Final opacity';
