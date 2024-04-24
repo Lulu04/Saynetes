@@ -44,7 +44,7 @@ type
   TSingleCmd = string;  // a single command
   TParamArray = TStringArray; //  <- splitted TSingleCmd
 
-  // group of several commands.  e.g: 'CMD_STARTTOP 12;PAUSE 25;CMD_STOPTOP 12 '
+  // group of several commands.  e.g: 'CMD_STARTTOP 12;Wait 5.0;CMD_STOPTOP 12'
   TCmdList = string;
   TCmdArray = TStringArray; //  <- splitted TCmdList
 
@@ -156,22 +156,22 @@ const
 
    // Other
 
-   CMD_WAIT           = 100;  // CMD_WAIT durée
+   CMD_WAIT           = 100;  // CMD_WAIT DurationF
    CMD_LOOP           = 101;  // CMD_LOOP
    CMD_STARTSEQUENCE       = 102;  // CMD_STARTSEQUENCE IDSeq
    CMD_STOPSEQUENCE        = 103;  // CMD_STOPSEQUENCE IDSeq
-   CMD_SEQUENCESTRETCHTIME = 104;  // CMD_SEQUENCESTRETCHTIME IDSeq StretchValue Duration CurveID
+   CMD_SEQUENCESTRETCHTIME = 104;  // CMD_SEQUENCESTRETCHTIME IDSeq StretchValueF DurationF CurveID
 
    // DMX
 
-   CMD_DMX_DIMMER       =  200;  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex Percent Duration CurveID
+   CMD_DMX_DIMMER       =  200;  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
    TITLECMD_DMX_DIMMER  = 1200;  // TITLECMD_DMX_DIMMER Duration CurveID
 
    CMD_DMX_FLAME        =  201;  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
-   TITLECMD_DMX_FLAME   = 1201;  // TITLECMD_DMX_FLAME  LevelMin LevelMax Speed Soften
+   TITLECMD_DMX_FLAME   = 1201;  // TITLECMD_DMX_FLAME  LevelMinF LevelMaxF WaitTimeF SoftenF
                                    // LevelMin: single  range 0.0 to 1.0
                                    // LevelMax: single  range 0.0 to 1.0
-                                   // Speed: single  range 0.05 to 2.0
+                                   // WaitTime: single  range 0.05 to 2.0
                                    // Soften: single range 0.0 to 1.0
 
    CMD_DMX_STOPEFFECT         =  203;  // CMD_DMX_STOPEFFECT IDuniverse IDFixture ChanIndex
