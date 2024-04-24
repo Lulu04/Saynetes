@@ -135,28 +135,32 @@ begin
 end;
 
 procedure TFormOtherAction.UpdateWidgets;
-var s: string;
 begin
-  //stretch time
-  if GetStretchValue < 1 then
-    s := SSlower+' '+FormatFloat('0.00', GetStretchValue)
-  else
-    if GetStretchValue = 1 then
-      s := SNormal
-    else
-      s := SFaster+' '+FormatFloat('0.00', GetStretchValue);
-  Label11.Caption := s;
+  Label11.Caption := StrechTimeToString(GetStretchValue);
 end;
 
 procedure TFormOtherAction.BAdd1Click(Sender: TObject);
 var pt: TSequence;
+  procedure BeepListBox(aLB: TListBox);
+  var c: TColor;
+  begin
+    c := aLB.Color;
+    aLB.Color := PercentColor(c, 0.5);
+    Application.processMessages;
+    Sleep(100);
+    aLB.Color := c;
+    Application.processMessages;
+  end;
+
 begin
   FCmdDuration := 0;
 
   if Notebook1.PageIndex=Notebook1.IndexOf(PageStart) then
   begin
-    if LBStart.ItemIndex = -1 then
+    if (LBStart.ItemIndex = -1) or (LBStart.ItemIndex = FormSequenceEdition.EditingTopIndex) then begin
+      BeepListBox(LBStart);
       exit;
+    end;
     pt := Sequences.GetTopByIndex(LBStart.ItemIndex);
     FCmds := CmdStartTop(pt.ID);
     FShortReadableString := SStartSequence+' '+pt.Name;
@@ -164,8 +168,10 @@ begin
 
   if Notebook1.PageIndex=Notebook1.IndexOf(PageStop) then
   begin
-    if LBStop.ItemIndex = -1 then
+    if (LBStop.ItemIndex = -1) or (LBStop.ItemIndex = FormSequenceEdition.EditingTopIndex) then begin
+      BeepListBox(LBStop);
       exit;
+    end;
     pt := Sequences.GetTopByIndex(LBStop.ItemIndex);
     FCmds := CmdStopTop(pt.ID);
     FShortReadableString := SStopSequence+' '+pt.Name;
@@ -179,8 +185,10 @@ begin
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageStretchTime) then
   begin
-    if LBStretch.ItemIndex = -1 then
+    if (LBStretch.ItemIndex = -1) or (LBStretch.ItemIndex = FormSequenceEdition.EditingTopIndex) then begin
+      BeepListBox(LBStretch);
       exit;
+    end;
     pt := Sequences.GetTopByIndex(LBStretch.ItemIndex);
     FCmds := CmdTopStretchTime(pt.ID, GetStretchValue, FSE1.Value, Frame_Velocity1.SelectedCurveID);
     FShortReadableString := SStretchTime+' '+SOn_+' '+pt.Name+' '+SCoef+' '+FormatFloat('0.00', GetStretchValue);
@@ -198,20 +206,20 @@ begin
   LBStart.LockSelectionChange;
   LBStart.Clear;
   for i:=0 to Sequences.Count-1 do
-    if i <> FormSequenceEdition.EditingTopIndex then LBStart.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStart.Items.Add(Sequences.GetTopByIndex(i).Name);
 
   LBStart.UnlockSelectionChange;
 
   LBStop.LockSelectionChange;
   LBStop.Clear;
   for i:=0 to Sequences.Count-1 do
-    if i <> FormSequenceEdition.EditingTopIndex then LBStop.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStop.Items.Add(Sequences.GetTopByIndex(i).Name);
   LBStop.UnlockSelectionChange;
 
   LBStretch.LockSelectionChange;
   LBStretch.Clear;
   for i:=0 to Sequences.Count-1 do
-    if i <> FormSequenceEdition.EditingTopIndex then LBStretch.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStretch.Items.Add(Sequences.GetTopByIndex(i).Name);
   LBStretch.UnlockSelectionChange;
 end;
 
