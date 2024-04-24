@@ -665,6 +665,10 @@ end;
 
 procedure TFormDMXChannelsTools.UpdateStringAfterLanguageChange;
 begin
+  Label4.Caption := SLevelMin;
+  Label2.Caption := SLevelMax;
+  Label3.Caption := SWaitTime;
+  Label14.Caption := SSoften;
   FFlamePresetManager.UpdateStringAfterLanguageChange;
   FAudioFollowerPresetManager.UpdateStringAfterLanguageChange;
 end;
