@@ -143,6 +143,7 @@ type
     procedure ResetState;
 
     function IDToIndex(aID: TSoundID): integer;
+    function IndexToID(aIndex: integer): TSoundID;
     function GetSoundByIndex(aIndex: integer): TALSSound;
     function GetSoundByID(aID: TSoundID): TALSSound;
     function GetSoundFileNameByIndex(aIndex: TSoundID): string;
@@ -988,6 +989,14 @@ begin
       exit;
     end;
   Result := -1;
+end;
+
+function TSoundManager.IndexToID(aIndex: integer): TSoundID;
+var snd: TALSSound;
+begin
+  snd := GetSoundByIndex(aIndex);
+  if snd <> NIL then Result := snd.Tag
+    else Result := -1;
 end;
 
 function TSoundManager.GetSoundByIndex(aIndex: integer): TALSSound;
