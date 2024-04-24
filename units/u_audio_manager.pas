@@ -142,8 +142,10 @@ type
     // Stop all sounds, delete all effects, stop capture
     procedure ResetState;
 
+    function IDToIndex(aID: TSoundID): integer;
     function GetSoundByIndex(aIndex: integer): TALSSound;
     function GetSoundByID(aID: TSoundID): TALSSound;
+    function GetSoundFileNameByIndex(aIndex: TSoundID): string;
     function GetSoundFileNameByID(aID: TSoundID): string;
     function GetLevel(aID: TSoundID): single;
 
@@ -333,6 +335,14 @@ begin
         exit;
       end;
   end;
+end;
+
+function TSoundManager.GetSoundFileNameByIndex(aIndex: TSoundID): string;
+begin
+  if (aIndex >= 0) and (aIndex < Count) then
+    Result := ExtractFileName(FPlaybackContext.Sounds[aIndex].Filename)
+  else
+    Result := SUnknownAudio;
 end;
 
 constructor TSoundManager.Create;
@@ -967,6 +977,17 @@ begin
   StopAllSound;
   DeleteAllEffects;
   StopCaptureToPlayback;
+end;
+
+function TSoundManager.IDToIndex(aID: TSoundID): integer;
+var i: integer;
+begin
+  for i:=0 to FPlaybackContext.SoundCount-1 do
+    if FPlaybackContext.Sounds[i].Tag = aID then begin
+      Result := i;
+      exit;
+    end;
+  Result := -1;
 end;
 
 function TSoundManager.GetSoundByIndex(aIndex: integer): TALSSound;
