@@ -312,19 +312,19 @@ var before, after: TCustomSequencerStep;
   delta: Single;
   F: TForm_ModifyTime;
 begin
- before := GetStepBefore( FClickedTimePos );
- after := GetStepAfter( FClickedTimePos );
+ before := GetStepBefore(FClickedTimePos);
+ after := GetStepAfter(FClickedTimePos);
  if before = after then exit;
- if after=NIL then exit;
- if before=NIL
+ if after = NIL then exit;
+ if before = NIL
    then delta := after.TimePos
    else delta := after.TimePos - before.TimePos;
 
  F := TForm_ModifyTime.Create(NIL);
  F.FSE.Value := delta;
  if before=NIL then begin
-  F.RB1.Checked:=TRUE;
-  F.RB2.Enabled:=FALSE;
+  F.RB1.Checked := TRUE;
+  F.RB2.Enabled := FALSE;
  end;
 
  F.EnsureVisiblePosition( FClickedScreen );
