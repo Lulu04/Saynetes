@@ -41,6 +41,7 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
+    Label23: TLabel;
     Label25: TLabel;
     Label28: TLabel;
     Label29: TLabel;
@@ -317,7 +318,7 @@ begin
     Label8.Caption := TB4.Position.ToString
   else
     Label8.Caption := '+'+TB4.Position.ToString;
-  Label9.Caption := FormatFloat('0.0', TB5.Position/TB5.Max);
+  Label9.Caption := TB5.Position.ToString+' ('+FormatFloat('0.0', TB5.Position/TB5.Max*100)+'%)';
   Label10.Caption := FormatFloat('0.00', TB6.Position/10)+SSec;
   // flame
   Label11.Caption := FormatFloat('0.0', TB1.Position/TB1.Max*100)+'%';
@@ -346,12 +347,13 @@ begin
                                  Frame_Velocity1.SelectedCurveID));
   end;
   // DMXDIMMER IDuniverse dmxadress percent duration IDcurve
-  FShortReadable := SDMXDimmer+' ';
+  FShortReadable := SDMXDimmer;
   if Length(FTargetChannels) > 1 then
-    FShortReadable := FShortReadable + SMultiple
+    FShortReadable := FShortReadable + ' '+SMultiple
   else begin
-    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + chan.Fixture.Description+' ';
-    FShortReadable := FShortReadable + chan.Name + ' '+STo+' '+FormatFloat('0.00',chan.PercentValue*100);
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable + ' '+chan.Name;
+    FShortReadable := FShortReadable + ' '+STo+' '+FormatFloat('0.00',chan.PercentValue*100);
   end;
 
   FDuration := FloatSpinEdit1.Value
@@ -378,12 +380,12 @@ begin
                    TB7.Position/TB7.Max));
   end;
   // DMXFLAMME IDuniverse IDFixture dmxadress LevelMin LevelMax Speed Soften Addmode
-  FShortReadable := SDMXFlame+' ';
+  FShortReadable := SDMXFlame;
   if Length(FTargetChannels) > 1 then
-    FShortReadable := FShortReadable + SMultiple
+    FShortReadable := FShortReadable + ' '+SMultiple
   else begin
-    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + chan.Fixture.Description+' ';
-    FShortReadable := FShortReadable + chan.Name;
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable + ' '+chan.Name;
   end;
   FDuration := 0.0;
 end;
@@ -404,12 +406,13 @@ begin
                    snd.Tag, TB4.Position/10, TB5.Position/TB5.Max, TB6.Position/10));
   end;
   // DMXSUIVEURAUDIO IDuniverse IDFixture dmxadress IDaudio gainF MaxPercentF SoftenTimeF
-  FShortReadable := SDMXAudioFollower+' '+ExtractFileName(snd.Filename)+' '+SOn_+' ';
+  FShortReadable := SDMXAudioFollower+' '+ExtractFileName(snd.Filename)+' '+SOn_;
   if Length(FTargetChannels) > 1 then
-    FShortReadable := FShortReadable + SMultiple
+    FShortReadable := FShortReadable + ' '+SMultiple
   else begin
-    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + chan.Fixture.Description+' ';
-    FShortReadable := FShortReadable+chan.Name;
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable+' '+chan.Name;
   end;
   FDuration := 0.0;
 end;
@@ -451,13 +454,12 @@ begin
   else
     FShortReadable := FShortReadable+SIn+' '+DurationToString(dmax);
 
-
   if Length(FTargetChannels) > 1 then
     FShortReadable := FShortReadable+' '+SOn+' '+SMultiple
   else begin
-    FShortReadable := FShortReadable+' '+SOn+' ';
-    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + chan.Fixture.Description+' ';
-    FShortReadable := FShortReadable+chan.Name;
+    FShortReadable := FShortReadable+' '+SOn;
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable+' '+chan.Name;
   end;
   FDuration := dmax;
 end;
@@ -485,12 +487,12 @@ begin
   // DMXCOPIECANAL SourceIDuniverse SourceIDFixture Sourcedmxadress TargetIDUniverse TargetIDFixture Targetdmxadress
   FShortReadable := SDMXCopy+' ';
   if FSourceChannelForCopy.Fixture.Description <> '' then FShortReadable := FShortReadable + FSourceChannelForCopy.Fixture.Description+' ';
-  FShortReadable := FShortReadable+FSourceChannelForCopy.Name+' '+SOn_+' ';
+  FShortReadable := FShortReadable+FSourceChannelForCopy.Name+' '+SOn_;
   if Length(FTargetChannels) > 2 then
-    FShortReadable := FShortReadable + SMultiple
+    FShortReadable := FShortReadable + ' '+SMultiple
   else begin
-    if targetChan.Fixture.Description <> '' then FShortReadable := FShortReadable + targetChan.Fixture.Description+' ';
-    FShortReadable := FShortReadable + targetChan.Name;
+    if targetChan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+targetChan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable + ' '+targetChan.Name;
   end;
   FDuration := 0.0;
 end;
@@ -507,12 +509,12 @@ begin
     FCmd.ConcatCmd(CmdDMXStopEffect(chan.Universe.ID, chan.Fixture.ID, chan.Index));
   end;
   // DMXSTOPEFFET IDuniverse IDFixture dmxadress
-  FShortReadable := SDMXStopEffect+' '+Son_+' ';
+  FShortReadable := SDMXStopEffect+' '+Son_;
   if Length(FTargetChannels) > 1 then
-    FShortReadable := FShortReadable + SMultiple
+    FShortReadable := FShortReadable + ' '+SMultiple
   else begin
-    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + chan.Fixture.Description+' ';
-    FShortReadable := FShortReadable + chan.Name;
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable + ' '+chan.Name;
   end;
   FDuration := 0.0;
 end;
@@ -669,6 +671,10 @@ begin
   Label2.Caption := SLevelMax;
   Label3.Caption := SWaitTime;
   Label14.Caption := SSoften;
+  Label23.Caption := SFollow;
+  Label5.Caption := sGain;
+  Label6.Caption := SBrightnessMax;
+  Label7.Caption := SSoftenOn;
   FFlamePresetManager.UpdateStringAfterLanguageChange;
   FAudioFollowerPresetManager.UpdateStringAfterLanguageChange;
 end;
