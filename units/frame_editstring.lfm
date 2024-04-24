@@ -40,7 +40,7 @@ object FrameEditString: TFrameEditString
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Cursor = crHandPoint
+      Cursor = crIBeam
       Left = 0
       Height = 29
       Top = 17
