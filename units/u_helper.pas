@@ -17,9 +17,11 @@ type
 TCmdListHelper = type helper(TStringHelper) for TCmdList
   function SplitToArray( aCharSeparator: char ): TStringArray;
 public
+  function GetOnlyCmd: integer;
   function IsSingleCmd: boolean;
   function IsTitle: boolean;
   function IsWait(out sec: single): boolean;
+  procedure ChangeParamFromTitleParam(const aTitleCmd: TSingleCmd);
   function SplitToParamArray: TParamArray;
   procedure ConcatCmd( aCmd: TSingleCmd );
   procedure ConcatCmdList( aCmdList: TCmdList );
@@ -431,20 +433,25 @@ begin
  until EndOfString;
 end;
 
+function TCmdListHelper.GetOnlyCmd: integer;
+var A: TParamArray;
+begin
+ if Self = '' then
+   Result := CMD_UNKNOW
+ else begin
+  A := Self.SplitToParamArray;
+  Result := A[0].ToInteger;
+ end;
+end;
+
 function TCmdListHelper.IsSingleCmd: boolean;
 begin
  Result := Pos( CMD_SEPARATOR, Self )=0;
 end;
 
 function TCmdListHelper.IsTitle: boolean;
-var A: TParamArray;
 begin
- if Self = '' then
-   Result := FALSE
- else begin
-  A := Self.SplitToParamArray;
-  Result := A[0].ToInteger >= 1000;
- end;
+  Result := Self.GetOnlyCmd >= 1000;
 end;
 
 function TCmdListHelper.IsWait(out sec: single): boolean;
@@ -456,6 +463,86 @@ begin
    Result := A[0] = CMD_WAIT.ToString;
    if Result then sec := StringToSingle(A[1]);
  end;
+end;
+
+procedure TCmdListHelper.ChangeParamFromTitleParam(const aTitleCmd: TSingleCmd);
+var A, B: TParamArray;
+  cmd: integer;
+begin
+  if not aTitleCmd.IsSingleCmd or not aTitleCmd.IsTitle then exit;
+
+  A := Self.SplitToParamArray;
+  B := aTitleCmd.SplitToParamArray;
+  if TryStrToInt(B[0], cmd) then
+    case cmd of
+      TITLECMD_AUDIO_PLAY:;
+      TITLECMD_AUDIO_STOP:;
+      TITLECMD_AUDIO_PAUSE:;
+      TITLECMD_AUDIO_FADEIN:;
+      TITLECMD_AUDIO_FADEOUT:;
+      TITLECMD_AUDIO_SETVOLUME:;
+      TITLECMD_AUDIO_SETPAN:;
+      TITLECMD_AUDIO_SETPITCH:;
+      TITLECMD_AUDIO_APPLYFX:;
+
+      TITLECMD_DMX_DIMMER: begin  // TITLECMD_DMX_DIMMER Duration CurveID
+                                  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
+        A[5] := B[1];
+        A[6] := B[2];
+      end;
+      TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME  LevelMin LevelMax Speed Soften
+                                 // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
+        A[4] := B[1];
+        A[5] := B[2];
+        A[6] := B[3];
+        A[7] := B[4];
+      end;
+      TITLECMD_DMX_STOPEFFECT:;
+      TITLECMD_DMX_COPYCHANNEL:;
+      TITLECMD_DMX_AUDIOFOLLOWER: begin // TITLECMD_DMX_AUDIOFOLLOWER IDaudio Gain MaxPercent SoftenTime
+                                        // CMD_DMX_AUDIOFOLLOWER IDuniverse IDFixture ChanIndex IDaudio Gain MaxPercent SoftenTime
+        A[4] := B[1];
+        A[5] := B[2];
+        A[6] := B[3];
+        A[7] := B[4];
+      end;
+      TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
+                                // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
+        A[4] := B[1];
+        A[5] := B[2];
+        A[6] := B[3];
+        A[7] := B[4];
+      end;
+      TITLECMD_DMX_DIMMERRGB: begin  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
+                                     // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
+        A[3] := B[1];
+        A[4] := B[2];
+        A[5] := B[3];
+      end;
+      TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color Speed Amplitude Soften
+                                   // CMD_DMX_FLAMERGB IDuniverse IDFixture Color Speed Amplitude Soften
+      end;
+      TITLECMD_DMX_AUDIOFOLLOWERRGB: begin // TITLECMD_DMX_AUDIOFOLLOWERRGB IDaudio Color Gain SoftenTime
+                                           // CMD_DMX_AUDIOFOLLOWERRGB IDuniverse IDFixture IDaudio Color Gain SoftenTime
+        A[3] := B[1];
+        A[4] := B[2];
+        A[5] := B[3];
+        A[6] := B[4];
+      end;
+      TITLECMD_DMX_STOPEFFECTRGB:;
+      TITLECMD_DMX_COPYRGB:;
+
+
+      TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
+                                   // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
+        A[3] := B[1];
+        A[4] := B[2];
+        A[5] := B[3];
+        A[6] := B[4];
+        A[7] := B[5];
+      end;
+    end;
+  Self := A.PackToCmd;
 end;
 
 function TCmdListHelper.SplitToParamArray: TParamArray;
