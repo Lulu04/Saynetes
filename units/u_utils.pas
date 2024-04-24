@@ -68,9 +68,9 @@ function CmdDMXInternalWave(aIDUni, aIDFix: cardinal; aChanIndex: integer;
 function CmdTitleDMXDimmer(aDuration: single; aCurveID: word): TSingleCmd;
 function CmdDMXDimmer(aIDUni, aIDFix: cardinal; aChanIndex: integer; aPercent, aDuration: single; aCurveID: word): TSingleCmd;
 
-function CmdTitleDMXFlame(aLevelMin, aLevelMax, aSpeed, aSoften: single): TSingleCmd;
+function CmdTitleDMXFlame(aLevelMin, aLevelMax, aWaitTime, aSoften: single): TSingleCmd;
 function CmdDMXFlame(aIDUni, aIDFix: cardinal; aChanIndex: integer;
-                     aLevelMin, aLevelMax, aSpeed, aSoften: single): TSingleCmd;
+                     aLevelMin, aLevelMax, aWaitTime, aSoften: single): TSingleCmd;
 
 function CmdTitleDMXAudioFollower(aIDAudio: TSoundID; aGain, aMaxPercent, aSoftenTime: single): TSingleCmd;
 function CmdDMXAudioFollower(aUni, aIDFix: cardinal; aChanIndex: integer; aIDAudio: TSoundID; aGain, aMaxPercent, aSoftenTime: single): TSingleCmd;
@@ -792,17 +792,17 @@ begin
            aCurveID.ToString;
 end;
 
-function CmdTitleDMXFlame(aLevelMin, aLevelMax, aSpeed, aSoften: single): TSingleCmd;
+function CmdTitleDMXFlame(aLevelMin, aLevelMax, aWaitTime, aSoften: single): TSingleCmd;
 begin
   Result:=TITLECMD_DMX_FLAME.ToString+PARAM_SEPARATOR+
           FormatFloatWithDot('0.000', aLevelMin)+PARAM_SEPARATOR+
           FormatFloatWithDot('0.000', aLevelMax)+PARAM_SEPARATOR+
-          FormatFloatWithDot('0.000', aSpeed)+PARAM_SEPARATOR+
+          FormatFloatWithDot('0.000', aWaitTime)+PARAM_SEPARATOR+
           FormatFloatWithDot('0.000', aSoften);
 end;
 
 function CmdDMXFlame(aIDUni, aIDFix: cardinal; aChanIndex: integer;
-  aLevelMin, aLevelMax, aSpeed, aSoften: single): TSingleCmd;
+  aLevelMin, aLevelMax, aWaitTime, aSoften: single): TSingleCmd;
 begin
  Result:=CMD_DMX_FLAME.ToString+PARAM_SEPARATOR+
          aIDUni.ToString+PARAM_SEPARATOR+
@@ -810,7 +810,7 @@ begin
          aChanIndex.ToString+PARAM_SEPARATOR+
          FormatFloatWithDot('0.000', aLevelMin)+PARAM_SEPARATOR+
          FormatFloatWithDot('0.000', aLevelMax)+PARAM_SEPARATOR+
-         FormatFloatWithDot('0.000', aSpeed)+PARAM_SEPARATOR+
+         FormatFloatWithDot('0.000', aWaitTime)+PARAM_SEPARATOR+
          FormatFloatWithDot('0.000', aSoften);
 end;
 
