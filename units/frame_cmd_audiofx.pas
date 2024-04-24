@@ -478,22 +478,22 @@ begin
       snd:=FSelectedSounds[i];
       FCmds.ConcatCmd( CmdTitleAudioApplyFX(snd.Tag, wetdry, GetEffectCount));
       if FEffectsState[0] then
-        FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox5.ItemIndex), ComboBox6.ItemIndex));
+        FCmds.ConcatCmd(CmdAudioFXPreset(GetEffectType(ComboBox5.ItemIndex), ComboBox6.ItemIndex));
       if FEffectsState[1] then
-        FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox7.ItemIndex), ComboBox8.ItemIndex));
+        FCmds.ConcatCmd(CmdAudioFXPreset(GetEffectType(ComboBox7.ItemIndex), ComboBox8.ItemIndex));
       if FEffectsState[2] then
-        FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox9.ItemIndex), ComboBox10.ItemIndex));
+        FCmds.ConcatCmd(CmdAudioFXPreset(GetEffectType(ComboBox9.ItemIndex), ComboBox10.ItemIndex));
     end;
   end
   else
   begin
     FCmds.ConcatCmd( CmdTitleAudioCaptureApplyFX(wetdry, GetEffectCount));
     if FEffectsState[0] then
-      FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox5.ItemIndex), ComboBox6.ItemIndex));
+      FCmds.ConcatCmd(CmdAudioCaptureFXPreset(GetEffectType(ComboBox5.ItemIndex), ComboBox6.ItemIndex));
     if FEffectsState[1] then
-      FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox7.ItemIndex), ComboBox8.ItemIndex));
+      FCmds.ConcatCmd(CmdAudioCaptureFXPreset(GetEffectType(ComboBox7.ItemIndex), ComboBox8.ItemIndex));
     if FEffectsState[2] then
-      FCmds.ConcatCmd( CmdAudioFXPreset(GetEffectType(ComboBox9.ItemIndex), ComboBox10.ItemIndex));
+      FCmds.ConcatCmd(CmdAudioCaptureFXPreset(GetEffectType(ComboBox9.ItemIndex), ComboBox10.ItemIndex));
   end;
 
   if TargetIsFile then
