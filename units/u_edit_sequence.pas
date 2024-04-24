@@ -103,7 +103,7 @@ var
   FormSequenceEdition: TFormSequenceEdition;
 
 implementation
-uses LCLType, u_resource_string;
+uses u_resource_string;
 
 {$R *.lfm}
 
@@ -111,12 +111,7 @@ uses LCLType, u_resource_string;
 
 procedure TFormSequenceEdition.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
-  case Key of
-   VK_ESCAPE: Close;
-   else
-     if not FrameEditString1.HaveFocus then
-       FSeq.ProcessKey(Key, Shift);
-  end;
+  if not FrameEditString1.HaveFocus then FSeq.ProcessKey(Key, Shift);
 end;
 
 procedure TFormSequenceEdition.FormShow(Sender: TObject);
