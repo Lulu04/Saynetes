@@ -667,6 +667,8 @@ end;
 
 procedure TFormDMXChannelsTools.UpdateStringAfterLanguageChange;
 begin
+  Label1.Caption := SDurationInSecond;
+  Label25.Caption := SVelocity;
   Label4.Caption := SLevelMin;
   Label2.Caption := SLevelMax;
   Label3.Caption := SWaitTime;
@@ -675,6 +677,11 @@ begin
   Label5.Caption := sGain;
   Label6.Caption := SBrightnessMax;
   Label7.Caption := SSoftenOn;
+  Label28.Caption := SFixedValue;
+  Label29.Caption := SRandomValueBetween;
+  Label22.Caption := SFixedDuration;
+  Label30.Caption := SRandomDurationBetween;
+
   FFlamePresetManager.UpdateStringAfterLanguageChange;
   FAudioFollowerPresetManager.UpdateStringAfterLanguageChange;
 end;
