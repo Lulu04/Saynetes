@@ -1008,7 +1008,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
           Color = 4276545
           Font.Color = 15395562
           Font.Style = [fsBold]
-          Increment = 0.1
+          Increment = 0.05
           MaxValue = 1000
           MinValue = 0.1
           OnChange = RadioButton1Change
@@ -1072,7 +1072,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
           Color = 4276545
           Font.Color = 15395562
           Font.Style = [fsBold]
-          Increment = 0.1
+          Increment = 0.05
           MaxValue = 1000
           MinValue = 0.1
           OnChange = RadioButton1Change

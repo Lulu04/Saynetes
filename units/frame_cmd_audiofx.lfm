@@ -134,7 +134,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       Top = 225
       Width = 232
       Frequency = 10
-      Max = 100
+      Max = 200
       OnChange = TrackBar1Change
       Position = 50
       ShowSelRange = False
