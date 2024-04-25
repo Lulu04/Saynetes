@@ -25,7 +25,8 @@ uses
   frame_viewprojectfolder, frame_led, frame_buttononoff, u_add_action_dmx,
   frame_viewprojectors, u_global_var, frame_main_audio, frame_main_sequence,
   frame_main_addfixture, u_project_options, project_util, form_about,
-u_apputils, frame_viewfixtureimage, form_changefixtureimage;
+u_apputils, frame_viewfixtureimage, form_changefixtureimage,
+u_edit_singleaction;
 
 {$R *.res}
 
