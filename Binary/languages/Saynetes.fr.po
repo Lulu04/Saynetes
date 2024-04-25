@@ -286,16 +286,6 @@ msgstr "Éditer..."
 msgid "RGB Tools"
 msgstr "Outils RVB"
 
-#: tformdmxrgbtools.label1.caption
-msgctxt "tformdmxrgbtools.label1.caption"
-msgid "Duration in second"
-msgstr "Durée en seconde"
-
-#: tformdmxrgbtools.label14.caption
-msgctxt "tformdmxrgbtools.label14.caption"
-msgid "Soften"
-msgstr "Adoucir"
-
 #: tformdmxrgbtools.label18.caption
 msgctxt "tformdmxrgbtools.label18.caption"
 msgid "Source"
@@ -305,44 +295,6 @@ msgstr "Source"
 msgctxt "tformdmxrgbtools.label2.caption"
 msgid "Select the source to copy on the others"
 msgstr "Sélectionnez la source à copier sur les autres"
-
-#: tformdmxrgbtools.label22.caption
-msgctxt "tformdmxrgbtools.label22.caption"
-msgid "Fixed duration"
-msgstr "Durée fixe"
-
-#: tformdmxrgbtools.label28.caption
-msgid "Fixed color"
-msgstr "Couleur fixe"
-
-#: tformdmxrgbtools.label29.caption
-msgid "Random color intensity between"
-msgstr "Intensité aléatoire entre"
-
-#: tformdmxrgbtools.label3.caption
-msgctxt "tformdmxrgbtools.label3.caption"
-msgid "Wait time"
-msgstr "Lenteur"
-
-#: tformdmxrgbtools.label30.caption
-msgctxt "tformdmxrgbtools.label30.caption"
-msgid "Random duration between"
-msgstr "Durée aléatoire entre"
-
-#: tformdmxrgbtools.label4.caption
-msgctxt "tformdmxrgbtools.label4.caption"
-msgid "Amplitude"
-msgstr "Amplitude"
-
-#: tformdmxrgbtools.label5.caption
-msgctxt "tformdmxrgbtools.label5.caption"
-msgid "Gain"
-msgstr "Gain"
-
-#: tformdmxrgbtools.label7.caption
-msgctxt "tformdmxrgbtools.label7.caption"
-msgid "Soften on"
-msgstr "Adoucir sur"
 
 #: tformdmxrgbtools.speedbutton1.hint
 msgctxt "tformdmxrgbtools.speedbutton1.hint"
@@ -2692,10 +2644,19 @@ msgstr "Terminer"
 msgid " first range should start from 0"
 msgstr " la première plage devrait commencer de 0"
 
+#: u_resource_string.sfixedcolor
+msgctxt "u_resource_string.sfixedcolor"
+msgid "Fixed color"
+msgstr "Couleur fixe"
+
 #: u_resource_string.sfixedduration
 msgctxt "u_resource_string.sfixedduration"
 msgid "Fixed duration"
 msgstr "Durée fixe"
+
+#: u_resource_string.sfixedintensity
+msgid "Fixed intensity"
+msgstr "Intensité fixe"
 
 #: u_resource_string.sfixedvalue
 msgctxt "u_resource_string.sfixedvalue"
@@ -3182,6 +3143,11 @@ msgstr "Durée aléatoire entre"
 #: u_resource_string.srandomintensity
 msgid "Random intensity"
 msgstr "Intensité aléatoire"
+
+#: u_resource_string.srandomintensitybetween
+msgctxt "u_resource_string.srandomintensitybetween"
+msgid "Random intensity between"
+msgstr "Intensité aléatoire entre"
 
 #: u_resource_string.srandomvalue
 msgid "Random value"
