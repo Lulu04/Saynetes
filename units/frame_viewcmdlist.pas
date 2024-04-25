@@ -30,12 +30,15 @@ type
     procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer;
       ARect: TRect; State: TOwnerDrawState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
+    procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
     procedure LBMouseLeave(Sender: TObject);
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseUp(Sender: TObject; {%H-}Button: TMouseButton;
       {%H-}Shift: TShiftState; X, Y: Integer);
     procedure MIColorAsTextClick(Sender: TObject);
     procedure MIDeleteSelectionClick(Sender: TObject);
+    procedure MIEditClick(Sender: TObject);
     procedure MIViewUniverseClick(Sender: TObject);
     procedure PopupMenu1Popup(Sender: TObject);
   private
@@ -59,7 +62,6 @@ type
     function Clipboard_HasData: boolean;
   private
     FItemIndexUnderMouse: integer;
-    FImage: TImage;
     function GetItemHeight: integer;
     procedure SetItemHeight(AValue: integer);
   private
@@ -82,10 +84,10 @@ type
   end;
 
 implementation
-uses u_utils, VelocityCurve, ALSound,
-  u_audio_manager, u_list_dmxuniverse, u_resource_string,
-  u_list_top, u_project_manager, u_helper, u_dmx_util,
-  frame_bglvirtualscreen_sequencer, u_program_options;
+uses u_utils, VelocityCurve, ALSound, u_audio_manager, u_list_dmxuniverse,
+  u_resource_string, u_list_top, u_project_manager, u_helper, u_dmx_util,
+  frame_bglvirtualscreen_sequencer, u_program_options, u_edit_singleaction,
+  u_logfile, BGRABitmap;
 
 {$R *.lfm}
 
@@ -104,7 +106,7 @@ var txt, txt2: string;
    end;
    function DurationValue(v: string): string;
    begin
-    Result := FormatFloat('0.00', StringToSingle(v))+' '+SSec;
+    Result := FormatFloat('0.00', StringToSingle(v))+SSec;
    end;
    function FormatFloat1Decimal(v: string): string;
    begin
@@ -123,6 +125,11 @@ var txt, txt2: string;
    function FormatPan( p: string ): string;
    begin
     Result := SPan+' '+PanToStringPercent(StringToSingle(p));
+   end;
+
+   function FormatDryWet(p: string): string;
+   begin
+    Result := SDryWet+'  '+DryWetToStringPercent(StringToSingle(p));
    end;
 
    function FormatAudioFile( strID: string ): string;
@@ -209,7 +216,7 @@ var txt, txt2: string;
 
    function RenderTitle(const aTitle, aParamTitle: string; aColor: TColor): integer;
    begin
-aColor:=RGBToColor(192,182,172);
+aColor:=RGBToColor(220,220,220);
      with LB.Canvas do
      begin
       Brush.Style := bsClear;
@@ -231,7 +238,7 @@ aColor:=RGBToColor(192,182,172);
 
    function RenderCmdText(const aTxt: string; aX: integer; aColor: TColor): integer;
    begin
-aColor:=RGBToColor(192,182,172);
+aColor:=RGBToColor(220,220,220);
     with LB.Canvas do
     begin
      Font.Color := aColor;
@@ -264,12 +271,13 @@ aColor:=RGBToColor(192,182,172);
 
    procedure RenderCurve(ax, ay: integer; strIDCourbure: string);
    var id: word;
+    ima: TBGRABitmap;
    begin
     id := strtoint(strIDCourbure);
     if VelocityCurveList.ValidCurveID(id) then
     begin
-      VelocityCurveList.GetCurveByID(id).DrawOn(FImage);
-      LB.Canvas.Draw(ax, ay, FImage.Picture.Bitmap);
+      ima := VelocityCurveList.GetCurveByID(id).GetBGRABitmapImage(LB.Font.Height*2, LB.Font.Height, True);
+      ima.Draw(LB.Canvas, ax, ay, True);
     end
     else
     begin
@@ -334,7 +342,7 @@ begin
       RenderTitle(SStopSequence, Sequences.GetNameByID(A[1].ToInteger), coul_action_divers);
     end;
 
-    CMD_SEQUENCESTRETCHTIME: begin // CMD_SEQUENCESTRETCHTIME IDSeq StretchValue Duration CurveID
+    CMD_SEQUENCESTRETCHTIME: begin // CMD_SEQUENCESTRETCHTIME IDSeq StretchValueF DurationF CurveID
       RenderBackground;
       txt := Sequences.GetNameByID(A[1].ToInteger)+' '+STo+' '+FormatFloat2Decimal(A[2])+' '+SIn+' '+DurationValue(A[3]);
       RenderTitle(SStretchTime, txt, coul_action_divers);
@@ -433,7 +441,7 @@ begin
 
     TITLECMD_AUDIO_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX IDaudio dry/wet EffectCount
       RenderBackground;
-      txt2 := SOn_ + ' ' + FormatAudioFile(A[1]) +' '+ SDryWet+' '+FormatFloat2Decimal(A[2]);
+      txt2 := SOn_ + ' ' + FormatAudioFile(A[1]) +' '+ FormatDryWet(A[2]);
       RenderTitle( SAudioConnectEffect, txt2, coul_action_audio);
     end;
 
@@ -476,9 +484,9 @@ begin
      RenderCurve(x, arect.Top, A[3]);
     end;
 
-    TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX  IDaudio  dry/wet  EffectCount
+    TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_CAPTURE_APPLYFX dry/wet EffectCount
       RenderBackground;
-      txt2 := SDryWet + ' ' + FormatFloat2Decimal(A[2]);
+      txt2 := FormatDryWet(A[1]);
       RenderTitle( SAudioCaptureConnectEffect, txt2, coul_action_audio);
     end;
 
@@ -511,14 +519,10 @@ begin
 
     TITLECMD_DMX_FLASH: begin  // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
      RenderBackground;
-     if A[1] <> A[2] then
-       txt := SRandomValue+' '+DMXPercent(A[1])+' - '+DMXPercent(A[2])+' '
-     else
-       txt := STo+' '+DMXPercent(A[1])+' ';
-     if A[3] <> A[4] then
-       txt := txt+SRandomDuration+' '+DurationValue(A[3])+' - '+DurationValue(A[4])
-     else
-       txt := txt+SIn+' '+DurationValue(A[3]);
+     if A[1] <> A[2] then txt := SRandomValue+' '+FormatFloat1Decimal(A[1])+' - '+FormatFloat1Decimal(A[2])+' '
+       else txt := STo+' '+FormatFloat1Decimal(A[1])+' ';
+     if A[3] <> A[4] then txt := txt+SRandomDuration+' '+DurationValue(A[3])+' - '+DurationValue(A[4])
+       else txt := txt+SIn+' '+DurationValue(A[3]);
      RenderTitle( SDMXFlash, txt, coul_action_dmx );
     end;
     CMD_DMX_FLASH: begin // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex
@@ -526,15 +530,7 @@ begin
      RenderBackground;
      Font.Height := Font.Height-1;
      txt := FormatDmxTrack(A[1], A[2], A[3]); // +' ';
-    { if A[1] <> A[2] then
-       txt := txt+SRandomValue+' '+FormatFloat1Decimal(A[1])+'% - '+FormatFloat1Decimal(A[2])+'% '
-     else
-       txt := txt+STo+' '+A[1]+'% ';
-     if A[3] <> A[4] then
-       txt := txt+SRandomDuration+' '+DurationValue(A[3])+' - '+DurationValue(A[4])
-     else
-       txt := txt+SIn+' '+DurationValue(A[3]); }
-      RenderCmdText(txt, x, coul_action_dmx);
+     RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_STOPEFFECT: RenderTitle(SDMXStopEffect, SOn_, coul_action_dmx);
@@ -558,9 +554,9 @@ begin
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
-    TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME LevelMin LevelMax Speed Soften
+    TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME LevelMin LevelMax WaitTimeF Soften
      RenderBackground;
-     txt:=SMin+' '+DMXPercent(A[1])+' '+SMax+' '+DMXPercent(A[2])+' '+SSpeed+' '+DurationValue(A[2])+' '+
+     txt:=SMin+' '+DMXPercent(A[1])+' '+SMax+' '+DMXPercent(A[2])+' '+SWaitTime+' '+DurationValue(A[3])+' '+
           SSoften+' '+DMXPercent(A[4]);
      RenderTitle(SDMXFlame, txt, coul_action_dmx);
     end;
@@ -572,16 +568,16 @@ begin
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
-    TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color Speed Amplitude Soften
+    TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color WaitTime Amplitude Soften
        RenderBackground;
         x:=RenderTitle(SDMXFlameRGB+' ', '', coul_action_dmx);
         x:=RenderColor(x, A[1]);
-        txt:=SSpeed+' '+DurationValue(A[2])+' '+SAmplitude+' '+DMXPercent(A[3])+' '+
+        txt:=SWaitTime+' '+DurationValue(A[2])+' '+SAmplitude+' '+DMXPercent(A[3])+' '+
              SSoften+' '+DMXPercent(A[4]);
         x:=RenderCmdText(txt, x, coul_action_dmx);
     end;
 
-    CMD_DMX_FLAMERGB: begin   // CMD_DMX_FLAMERGB IDuniverse IDFixture Color Speed Amplitude Soften
+    CMD_DMX_FLAMERGB: begin   // CMD_DMX_FLAMERGB IDuniverse IDFixture Color WaitTime Amplitude Soften
        RenderBackground;
         Font.Height:=Font.Height-1;
         RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
@@ -657,12 +653,10 @@ begin
      RenderBackground;
      x:=RenderTitle(SDMXFlashRGB+' ', '', coul_action_dmx);
      x:=RenderColor(x, A[1]);
-     if A[2] <> A[3] then
-       txt := SRandomIntensity+' '+DMXPercent(A[2])+' - '+DMXPercent(A[3])+' ';
-     if A[4] <> A[5] then
-       txt := txt+SRandomDuration+' '+DurationValue(A[4])+' - '+DurationValue(A[5])
-     else
-       txt := txt+SIn+' '+DurationValue(A[4]);
+     if A[2] <> A[3] then txt := SRandomIntensity+' '+DMXPercent(A[2])+' - '+DMXPercent(A[3])+' '
+       else txt := SFixedIntensity+' '+DMXPercent(A[2]);
+     if A[4] <> A[5] then txt := txt+SRandomDuration+' '+DurationValue(A[4])+' - '+DurationValue(A[5])
+       else txt := txt+SIn+' '+DurationValue(A[4]);
      x:=RenderCmdText(txt, x, coul_action_dmx);
     end;
     CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
@@ -827,6 +821,22 @@ begin
 
 end;
 
+procedure TFrameViewCmdList.LBMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+var i: integer;
+begin
+  i := LB.GetIndexAtY(Y);
+
+  // click on empty area = unselect all
+  if (Button = mbLeft) and (i = -1) then
+    LB.ItemIndex := -1;
+
+  // right click on item = select it (except if it is already selected)
+  if (Button = mbRight) and (i <> -1) then
+    if not LB.Selected[i] then
+      LB.ItemIndex := i;
+end;
+
 procedure TFrameViewCmdList.LBMouseLeave(Sender: TObject);
 begin
 //  FormViewProjector.FrameViewProjector1.ProcessViewDMXCursorsMouseOverFixtureEvent(Self, NIL);
@@ -854,25 +864,26 @@ end;
 
 procedure TFrameViewCmdList.LBMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
-var index: Integer;
+var index, cmd: Integer;
 begin
   index := LB.GetIndexAtXY(X,Y);
   if index = -1 then
     exit;
 
- { if LB.Items.Strings[index].IsTitle then begin
+  if LB.Items.Strings[index].IsTitle then begin
+    cmd := LB.Items.Strings[index].GetOnlyCmd-1000;
     // select the block started by the title
-    LB.Selected[index]:=TRUE;
+    LB.Selected[index] := TRUE;
     repeat
       inc(index);
-      if index=LB.Count then exit;
-      if LB.Items.Strings[index].IsTitle then exit;
-      LB.Selected[index]:=TRUE;
+      if index = LB.Count then exit;
+      if LB.Items.Strings[index].GetOnlyCmd <> cmd then exit;
+      LB.Selected[index] := TRUE;
     until FALSE;
-  end else begin   }
+  end else begin
     // select only one action
-  //  LB.Selected[index]:=TRUE;
- // end;
+    LB.Selected[index] := TRUE;
+  end;
 end;
 
 procedure TFrameViewCmdList.MIColorAsTextClick(Sender: TObject);
@@ -896,6 +907,52 @@ begin
   FWorkingStep.CmdList := GetCmdList;
 end;
 
+procedure TFrameViewCmdList.MIEditClick(Sender: TObject);
+var F: TFormEditSingleAction;
+  indexFirstSelected, i: integer;
+  flagSingleCmd, flagHaveTitle: boolean;
+  s: TSingleCmd;
+begin
+  if ReadOnly then exit;
+  if FWorkingStep = NIL then exit;
+  if LB.SelCount = 0 then exit;
+
+  // retrieve the index of the first selected item and check if all selected lines are single cmd
+  indexFirstSelected := -1;
+  flagSingleCmd := True;
+  for i:=0 to LB.Count-1 do
+    if LB.Selected[i] then begin
+      if indexFirstSelected = -1 then indexFirstSelected := i;
+      flagSingleCmd := flagSingleCmd and LB.Items.Strings[i].IsSingleCmd;
+    end;
+  if not flagSingleCmd then exit;
+  flagHaveTitle := LB.Items.Strings[indexFirstSelected].IsTitle;
+  if (LB.SelCount > 1) and not flagHaveTitle then exit;
+
+  F := TFormEditSingleAction.Create(NIL);
+  F.Cmd := LB.Items.Strings[indexFirstSelected];
+  if F.CmdIsEditable then begin
+    if F.ShowModal = mrOk then begin
+      LB.Items.Strings[indexFirstSelected] := F.Cmd;
+
+      // modify action param from title param
+      if (LB.SelCount > 1) and flagHaveTitle then begin
+        i := indexFirstSelected + 1;
+        while (i < LB.Count) and LB.Selected[i] do begin
+          s := LB.Items.Strings[i];
+          s.ChangeParamFromTitleParam(F.Cmd);
+          LB.Items.Strings[i] := s;
+          inc(i);
+        end;
+      end;
+
+      LB.Invalidate;
+      FWorkingStep.CmdList := GetCmdList; // save changes in the sequence
+    end;
+  end;
+  F.Free;
+end;
+
 procedure TFrameViewCmdList.MIViewUniverseClick(Sender: TObject);
 var mi: TMenuItem;
 begin
@@ -915,8 +972,8 @@ end;
 
 procedure TFrameViewCmdList.PopupMenu1Popup(Sender: TObject);
 begin
-  MIEdit.Enabled := LB.SelCount=1;
-  MIDeleteSelection.Enabled := LB.SelCount>0;
+  MIEdit.Enabled := LB.SelCount > 0;
+  MIDeleteSelection.Enabled := (LB.SelCount > 0) and (LB.SelCount < LB.Count);
 
   MIViewAdress.Checked := Project.Options.CmdListViewDMXAdress;
   MIViewFixtureName.Checked := Project.Options.CmdListViewDMXFixName;
@@ -1011,10 +1068,7 @@ constructor TFrameViewCmdList.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   FClipBoard := TStringList.Create;
-  FItemIndexUnderMouse:=-1;
-  FImage := TImage.Create(NIL);
-  FImage.Width := 35;
-  FImage.Height := 19;
+  FItemIndexUnderMouse := -1;
   coul_action_audio := RGBToColor(100,200,255);
   coul_action_dmx  := RGBToColor(210,180,150);
   coul_action_divers := RGBToColor(37,245,89);
@@ -1025,7 +1079,6 @@ end;
 
 destructor TFrameViewCmdList.Destroy;
 begin
-  FImage.Free;
   FClipBoard.Free;
   inherited Destroy;
 end;

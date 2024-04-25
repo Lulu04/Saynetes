@@ -23,11 +23,12 @@ object FrameViewCmdList: TFrameViewCmdList
     BorderStyle = bsNone
     ClickOnSelChange = False
     Color = 1644825
-    ExtendedSelect = False
     Font.Height = 16
     ItemHeight = 0
+    MultiSelect = True
     OnDrawItem = LBDrawItem
     OnKeyUp = LBKeyUp
+    OnMouseDown = LBMouseDown
     OnMouseLeave = LBMouseLeave
     OnMouseMove = LBMouseMove
     OnMouseUp = LBMouseUp
@@ -45,6 +46,7 @@ object FrameViewCmdList: TFrameViewCmdList
     object MIEdit: TMenuItem
       Caption = 'Edit...'
       ImageIndex = 6
+      OnClick = MIEditClick
     end
     object MIDeleteSelection: TMenuItem
       Caption = 'Delete the selection'
