@@ -316,7 +316,7 @@ begin
   FrameViewCmdList1 := TFrameViewCmdList.Create(Self);
   FrameViewCmdList1.Parent := Panel2;
   FrameViewCmdList1.Align := alClient;
-  FrameViewCmdList1.ItemHeight := 14;
+  FrameViewCmdList1.ItemHeight := 16;
   FrameViewCmdList1.UpdateMenuEntryFromProjectOptions;
 
   FrameEditString1 := TFrameEditString.Create(Self);
