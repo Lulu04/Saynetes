@@ -2542,11 +2542,6 @@ msgstr ""
 msgid " first range should start from 0"
 msgstr ""
 
-#: u_resource_string.sfixedcolor
-msgctxt "u_resource_string.sfixedcolor"
-msgid "Fixed color"
-msgstr ""
-
 #: u_resource_string.sfixedduration
 msgctxt "u_resource_string.sfixedduration"
 msgid "Fixed duration"
