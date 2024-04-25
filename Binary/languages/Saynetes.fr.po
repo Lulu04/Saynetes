@@ -2644,11 +2644,6 @@ msgstr "Terminer"
 msgid " first range should start from 0"
 msgstr " la première plage devrait commencer de 0"
 
-#: u_resource_string.sfixedcolor
-msgctxt "u_resource_string.sfixedcolor"
-msgid "Fixed color"
-msgstr "Couleur fixe"
-
 #: u_resource_string.sfixedduration
 msgctxt "u_resource_string.sfixedduration"
 msgid "Fixed duration"
@@ -3493,3 +3488,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

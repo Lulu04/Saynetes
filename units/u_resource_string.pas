@@ -353,6 +353,8 @@ resourcestring
   SRandomValueBetween='Random value between';
   SFixedDuration='Fixed duration';
   SRandomDurationBetween='Random duration between';
+  SFixedIntensity='Fixed intensity';
+  SRandomIntensityBetween='Random intensity between';
 
   SScreen='SCREEN';
   SFinalOpacity='Final opacity';
