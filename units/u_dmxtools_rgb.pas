@@ -663,6 +663,18 @@ begin
         FrameViewFixturesList1.FTargetViewProjector := FTargetViewProjector;
       end;
   end;
+
+  Label1.Caption := SDurationInSecond;
+  Label3.Caption := SWaitTime;
+  Label4.Caption := SAmplitude;
+  Label14.Caption := SSoften;
+  Label5.Caption := SGain;
+  Label7.Caption := SSoftenOn;
+  Label28.Caption := SFixedIntensity;
+  Label29.Caption := SRandomIntensityBetween;
+  Label22.Caption := SFixedDuration;
+  Label30.Caption := SRandomDurationBetween;
+  Label31.Caption := SSeconds_;
 end;
 
 procedure TFormDMXRGBTools.UpdateEditMode;
