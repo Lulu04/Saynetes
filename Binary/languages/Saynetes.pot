@@ -251,16 +251,6 @@ msgstr ""
 msgid "RGB Tools"
 msgstr ""
 
-#: tformdmxrgbtools.label1.caption
-msgctxt "tformdmxrgbtools.label1.caption"
-msgid "Duration in second"
-msgstr ""
-
-#: tformdmxrgbtools.label14.caption
-msgctxt "tformdmxrgbtools.label14.caption"
-msgid "Soften"
-msgstr ""
-
 #: tformdmxrgbtools.label18.caption
 msgctxt "tformdmxrgbtools.label18.caption"
 msgid "Source"
@@ -269,44 +259,6 @@ msgstr ""
 #: tformdmxrgbtools.label2.caption
 msgctxt "tformdmxrgbtools.label2.caption"
 msgid "Select the source to copy on the others"
-msgstr ""
-
-#: tformdmxrgbtools.label22.caption
-msgctxt "tformdmxrgbtools.label22.caption"
-msgid "Fixed duration"
-msgstr ""
-
-#: tformdmxrgbtools.label28.caption
-msgid "Fixed color"
-msgstr ""
-
-#: tformdmxrgbtools.label29.caption
-msgid "Random color intensity between"
-msgstr ""
-
-#: tformdmxrgbtools.label3.caption
-msgctxt "tformdmxrgbtools.label3.caption"
-msgid "Wait time"
-msgstr ""
-
-#: tformdmxrgbtools.label30.caption
-msgctxt "tformdmxrgbtools.label30.caption"
-msgid "Random duration between"
-msgstr ""
-
-#: tformdmxrgbtools.label4.caption
-msgctxt "tformdmxrgbtools.label4.caption"
-msgid "Amplitude"
-msgstr ""
-
-#: tformdmxrgbtools.label5.caption
-msgctxt "tformdmxrgbtools.label5.caption"
-msgid "Gain"
-msgstr ""
-
-#: tformdmxrgbtools.label7.caption
-msgctxt "tformdmxrgbtools.label7.caption"
-msgid "Soften on"
 msgstr ""
 
 #: tformdmxrgbtools.speedbutton1.hint
@@ -2590,9 +2542,18 @@ msgstr ""
 msgid " first range should start from 0"
 msgstr ""
 
+#: u_resource_string.sfixedcolor
+msgctxt "u_resource_string.sfixedcolor"
+msgid "Fixed color"
+msgstr ""
+
 #: u_resource_string.sfixedduration
 msgctxt "u_resource_string.sfixedduration"
 msgid "Fixed duration"
+msgstr ""
+
+#: u_resource_string.sfixedintensity
+msgid "Fixed intensity"
 msgstr ""
 
 #: u_resource_string.sfixedvalue
@@ -3073,6 +3034,11 @@ msgstr ""
 
 #: u_resource_string.srandomintensity
 msgid "Random intensity"
+msgstr ""
+
+#: u_resource_string.srandomintensitybetween
+msgctxt "u_resource_string.srandomintensitybetween"
+msgid "Random intensity between"
 msgstr ""
 
 #: u_resource_string.srandomvalue
