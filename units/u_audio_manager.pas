@@ -844,7 +844,7 @@ begin
     Log.Error('Sound manager error while opening the default capture device');
     Log.Error(FCaptureContext.StrError, 1);
     if Length(ALSManager.ListOfCaptureDeviceName) = 0 then
-      Log.Info('No audio capture device found', 1)
+      Log.Error('No audio capture device found', 1)
     else
       Log.Info('Default capture device: '+ALSManager.DefaultCaptureDeviceName, 1);
   end
@@ -923,10 +923,10 @@ procedure TSoundManager.StopCaptureToPlayback;
 begin
   if FCaptureContext = NIL then
     exit;
-  if FCaptureContext.State <> ALS_RECORDING then
-    exit;
+//  if FCaptureContext.State <> ALS_RECORDING then
+//    exit;
 
-  Log.Info('Audio capture to playback stopped');
+  Log.Info('Stopping Audio capture to playback');
   // delete effect from sound before stopping capture
   // because StopCapture destroy the playback sound's object.
   DeleteAllEffectOnSoundItem( FCapturedSound.Tag );
@@ -936,8 +936,9 @@ begin
 
   FCaptureContext.StopCapture;
 
+  Log.Info('Audio capture to playback stopped', 1);
   if FCaptureContext.CaptureError then
-    Log.Error(FCaptureContext.StrCaptureError);
+    Log.Error('with error: '+FCaptureContext.StrCaptureError, 1);
 
   FCapturedSound := NIL;
   FCaptureContext.Free;
