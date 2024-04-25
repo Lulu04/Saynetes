@@ -148,6 +148,9 @@ function PanToStringPercent(const aPan: single): string;
 //function FreqToString(const aFreq: integer): string;
 // aPitch [0.1 to 4.0]        0.1(lower)   NORMAL    4.0(higher)
 function PitchToString(const aPitch: single): string;
+// aDryWet is [0..1] range
+// return a string like 20%/80%
+function DryWetToStringPercent(const aDryWet: single): string;
 // => EAXReverb  preset  DEFAULT
 function AudioFXToString(aEffectType: TALSEffectType; aPresetIndex: integer): string;
 function AudioFXName(aEffectType: TALSEffectType): string;
@@ -364,6 +367,13 @@ begin
    Result := FormatFloatWithDot('0.00', aPitch)+'('+SFaster+')'
  else
    Result := FormatFloatWithDot('0.00', aPitch)+'('+SSlower+')';
+end;
+
+function DryWetToStringPercent(const aDryWet: single): string;
+var dry: single;
+begin
+  dry := 1.0 - aDryWet;
+  Result := FormatFloat('0.0', dry*100)+'%/'+FormatFloat('0.0', aDryWet*100)+'%';
 end;
 
 function AudioFXToString(aEffectType: TALSEffectType; aPresetIndex: integer): string;
