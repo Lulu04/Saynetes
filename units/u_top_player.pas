@@ -199,7 +199,7 @@ begin
          snd.Pan.ChangeTo( StringToSingle(A[1]), StringToSingle(A[2]), TALSCurveID(A[3].ToInteger) );
      end;
 
-     TITLECMD_AUDIO_CAPTURE_APPLYFX: begin
+     TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX  IDaudio  dry/wet  EffectCount
        SoundManager.PrepareEffectChain( CAPTURE_IDAUDIO, StringToSingle(A[1]), A[2].ToInteger );
      end;
 
@@ -359,7 +359,7 @@ var TimeNow, deltaT: QWord;
   deltaSec: single;
   P: TStringArray;
   pt: TSequence;
-  i: Integer;
+  i, cmd: Integer;
   loopAlreadyDone: boolean;
 begin
  TimeNow := GetTickCount64;
@@ -380,46 +380,41 @@ begin
  // scan all top
  for i:=-1 to Sequences.Count-1 do
  begin
-   if i = -1 then
-     pt := FPreview
-   else
-     pt := Sequences.GetTopByIndex(i);
+   if i = -1 then pt := FPreview
+     else pt := Sequences.GetTopByIndex(i);
+   if pt = NIL then continue;
 
    pt.TimeStretchFactor.OnElapse(deltaSec);
-   if pt.Running then
+   if pt.Running and (Length(pt.CmdArray) > 0) then
    begin
      pt.Clock := pt.Clock+deltaSec*pt.TimeStretchFactor.Value;
      if pt.WaitSec > 0 then
        pt.WaitSec -= deltaSec*pt.TimeStretchFactor.Value;
-     if (pt.WaitSec <= 0) and (Length(pt.CmdArray) > 0) then
+     if pt.WaitSec <= 0 then
      begin
            loopAlreadyDone := False;
            repeat
+              if pt.EndOfPlay then break;
               P := pt.CmdArray[pt.LineIndex].SplitToParamArray; // read and split one cmd
-
-              case P[0].ToInteger of
-                CMD_WAIT: begin
-                  pt.WaitSec += StringToSingle(P[1]); // trick to take in account the small pause value<deltaT
-                  loopAlreadyDone := False;
+              if (Length(P) > 0) and TryStrToInt(P[0], cmd) then
+                case cmd of
+                  CMD_WAIT: begin
+                    pt.WaitSec += StringToSingle(P[1]); // trick to take in account the small pause value<deltaT
+                    loopAlreadyDone := False;
+                  end;
+                  CMD_LOOP: begin
+                    if loopAlreadyDone then pt.WaitSec := 10 // avoid infinite loop in case of sequence with only loop action.
+                      else pt.LoopToBegin;
+                    loopAlreadyDone := True;
+                  end
+                  else ExecuteCmd(P);
                 end;
-                CMD_LOOP: begin
-                  if loopAlreadyDone then pt.WaitSec := 10 // avoid infinite loop in case of sequence with only loop action.
-                    else pt.LoopToBegin;
-                  loopAlreadyDone := True;
-                end
-                else begin
-                  ExecuteCmd( P );
-                //  loopAlreadyDone := False;
-                end;
-              end;
-
               pt.NextLine;
-           until pt.EndOfPlay or (pt.WaitSec>0);
+           until pt.EndOfPlay or (pt.WaitSec > 0);
 
-           if pt.EndOfPlay then
-           begin
+           if pt.EndOfPlay then begin
              pt.Stop;
-             if i=-1 then DoEndPreviewEvent;
+             if i = -1 then DoEndPreviewEvent;
            end;
      end;
    end;
