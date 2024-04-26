@@ -948,6 +948,8 @@ begin
 
       LB.Invalidate;
       FWorkingStep.CmdList := GetCmdList; // save changes in the sequence
+      FWorkingStep.Duration := FWorkingStep.CmdList.ComputeCmdListDuration;
+      FWorkingStep.UpdateWidth;
     end;
   end;
   F.Free;

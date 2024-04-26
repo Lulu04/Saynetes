@@ -89,10 +89,15 @@ object FormEditSingleAction: TFormEditSingleAction
         ParentFont = False
       end
       object CBSequence: TComboBox
-        Left = 80
+        AnchorSideLeft.Control = Label4
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrCenter
+        Left = 82
         Height = 23
-        Top = 16
+        Top = 12
         Width = 338
+        BorderSpacing.Left = 10
         ItemHeight = 15
         OnChange = TB1Change
         Style = csDropDownList
@@ -251,10 +256,15 @@ object FormEditSingleAction: TFormEditSingleAction
         ParentFont = False
       end
       object CBAudio1: TComboBox
-        Left = 82
+        AnchorSideLeft.Control = Label3
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrCenter
+        Left = 80
         Height = 23
-        Top = 0
+        Top = -4
         Width = 338
+        BorderSpacing.Left = 10
         ItemHeight = 15
         OnChange = TBVolChange
         Style = csDropDownList
@@ -954,9 +964,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelAudioFollower: TPanel
-        Left = -288
+        Left = -2
         Height = 160
-        Top = 120
+        Top = 176
         Width = 500
         BevelOuter = bvNone
         ClientHeight = 160
@@ -966,14 +976,17 @@ object FormEditSingleAction: TFormEditSingleAction
         TabOrder = 2
         Visible = False
         object CBAudio2: TComboBox
-          AnchorSideTop.Side = asrBottom
+          AnchorSideLeft.Control = Label24
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Label24
+          AnchorSideTop.Side = asrCenter
           AnchorSideRight.Side = asrBottom
-          Left = 72
+          Left = 58
           Height = 23
-          Top = 8
-          Width = 249
+          Top = 4
+          Width = 263
           Anchors = [akTop, akLeft, akRight]
-          BorderSpacing.Top = 6
+          BorderSpacing.Left = 10
           Color = 2565927
           ItemHeight = 15
           OnChange = TrackBar1Change
