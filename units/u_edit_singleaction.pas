@@ -206,7 +206,7 @@ type
 
 
 implementation
-uses LCLType, u_helper, u_list_top, u_list_dmxuniverse, u_audio_manager,
+uses LCLType, u_helper, u_list_top, u_audio_manager,
   u_resource_string, u_utils, u_logfile;
 
 {$R *.lfm}
