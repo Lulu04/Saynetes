@@ -13,12 +13,11 @@ uses
 type
   { TSequence }
 
-  TSequence=class
+  TSequence = class
   private
     FSequencerInfoList: TSequencerInfoList;
     FIsLooped: boolean;
     procedure SetSequencerInfoList(AValue: TSequencerInfoList);
-  //published
   public
      Name: string;
      ID: Cardinal;
