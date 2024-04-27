@@ -274,7 +274,8 @@ type
 
 implementation
 uses u_dmxtools_channels, u_dmxtools_rgb,
-  u_dmxtools_group, u_top_player, frame_viewprojectors, u_apputils;
+  u_dmxtools_group, u_top_player, frame_viewprojectors, u_apputils,
+  utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -426,7 +427,7 @@ begin
     UpdateCursorArea;
     CursorAreaLastDrawn := CursorArea;
     r := Renderer.AdjustRect(CursorArea);
-    Renderer.ImageCursors[Ord(Channel.ChannelType)].Draw(aCanvas, r.Left, r.Top);
+    Renderer.ImageCursors[Ord(Channel.ChannelType)].Draw(aCanvas, r.Left, r.Top, False);
     if Channel.Locked then
       Renderer.ImageLock.Draw(aCanvas, r.Left, r.Top, False);
     Channel.LockedPainted := Channel.Locked;
@@ -1628,6 +1629,7 @@ end;
 
 procedure TFrameViewDMXCursors.CreateGraphicObjects;
 var i: TChannelType;
+  f: string;
 begin
   ImageCursors := NIL;
   SetLength(ImageCursors, Ord(High(TChannelType))+1);
@@ -1635,17 +1637,18 @@ begin
   for i in TChannelType do
   begin
    try
-    ImageCursors[Ord(i)] := TBGRABitmap.Create(DMXCursorImageFileNameFor(i));
+     f := DMXCursorImageFileNameFor(i);
+    ImageCursors[Ord(i)] := SVGFileToBGRABitmap(f, ScaleDesignToForm(25), -1);
    except
-    ImageCursors[Ord(i)] := TBGRABitmap.Create(20,30, BGRAWhite);
+    ImageCursors[Ord(i)] := TBGRABitmap.Create(ScaleDesignToForm(25),ScaleDesignToForm(35), BGRAWhite);
    end;
   end;
 
   // locked cursor
   try
-    ImageLock := TBGRABitmap.Create(GetAppCursorImagesFolder+'CursorLocked.png');
+    ImageLock := SVGFileToBGRABitmap(GetAppFixtureImagesFolder+'Lock.svg', ScaleDesignToForm(25), -1);
   except
-    ImageLock := TBGRABitmap.Create(20,30, BGRAWhite);
+    ImageLock := TBGRABitmap.Create(ScaleDesignToForm(25),ScaleDesignToForm(35), BGRAWhite);
   end;
 
   FFixtureFont := TFont.Create;
@@ -1709,12 +1712,13 @@ end;
 procedure TFrameViewDMXCursors.AdjustCursorBackGroundImage(aCursorPathHeight: integer);
 var i, x, y: integer;
   yy, deltay: single;
-  c, c1: TColor;
+  c: TBGRAPixel;
+  gradCount: integer;
 const GRADUATION_COUNT = 10;
 begin
+  if aCursorPathHeight < 0 then aCursorPathHeight := 0;
   // resize
-  FCursorBackGround.SetSize(ImageCursors[0].Width,
-     aCursorPathHeight+ImageCursors[0].Height);
+  FCursorBackGround.SetSize(ImageCursors[0].Width, aCursorPathHeight+ImageCursors[0].Height);
   // background
   FCursorBackGround.Fill(FColorFixtureBackground);
 
@@ -1722,27 +1726,32 @@ begin
   x := FCursorBackGround.Width shr 1;
   y := ImageCursors[0].Height shr 1;
 
-  FCursorBackGround.DrawVertLine(x, y, y+aCursorPathHeight, BGRABlack);     // vertical axis
-  FCursorBackGround.DrawVertLine(x+1, y, y+aCursorPathHeight, BGRABlack);
+  c := BGRA(0,0,0,150);
+  FCursorBackGround.DrawVertLine(x, y, y+aCursorPathHeight, c);     // vertical axis
+  FCursorBackGround.DrawVertLine(x+1, y, y+aCursorPathHeight, c);
   // cursor graduations
+  c := BGRA(0,0,0,80);
   yy := y;
-  deltay := aCursorPathHeight/GRADUATION_COUNT; // we want 10 big graduations
-  c := PercentColor( FColorFixtureBackground, -0.2);
-  c1 := PercentColor( FColorFixtureBackground, -0.4);
-  for i:=0 to GRADUATION_COUNT-1 do
-  begin
-   FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width, Round(yy), c1, true);
+  gradCount := GRADUATION_COUNT;
+  repeat
+   deltay := aCursorPathHeight/gradCount; // we want 10 big graduations
+   if deltay < ScaleDesignToForm(30) then dec(gradCount);
+  until (deltay > ScaleDesignToForm(30)) or (gradCount = 0);
+  if gradCount > 0 then begin
+    for i:=0 to GRADUATION_COUNT-1 do begin
+     FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width, Round(yy), c, true);
 
-   yy := yy+deltay*0.5;
-   FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width shr 2, Round(yy), c, True);
-   FCursorBackGround.DrawLine(ImageCursors[0].Width-ImageCursors[0].Width shr 2, Round(yy),
+     yy := yy+deltay*0.5;
+     FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width shr 2, Round(yy), c, True);
+     FCursorBackGround.DrawLine(ImageCursors[0].Width-ImageCursors[0].Width shr 2, Round(yy),
                                  ImageCursors[0].Width, Round(yy), c, True);
-    yy := yy+deltay*0.5;
+     yy := yy+deltay*0.5;
+    end;
   end;
 
-  y := aCursorPathHeight+ImageCursors[0].Height shr 1;
-  FCursorBackGround.DrawLine(0, y, ImageCursors[0].Width, y, c1, true)
- end;
+//  y := aCursorPathHeight+ImageCursors[0].Height shr 1;
+//  FCursorBackGround.DrawLine(0, y, ImageCursors[0].Width, y, c, true)
+end;
 
 constructor TFrameViewDMXCursors.Create(aOwner: TComponent);
 begin
