@@ -270,6 +270,14 @@ begin
     ctAMBER: Result:=Result+'CursorAmber.png';
     ctUV: Result:=Result+'CursorUV.png';
     ctSPEED: Result:=Result+'CursorSpeedPanTilt.png';
+    ctNOFUNCTION: Result:=Result+'CursorNoFunction.png';
+    ctCYAN: Result:=Result+'CursorCyan.png';
+    ctMAGENTA: Result:=Result+'CursorMagenta.png';
+    ctYELLOW: Result:=Result+'CursorYellow.png';
+    ctLIME: Result:=Result+'CursorLime.png';
+    ctINDIGO: Result:=Result+'CursorIndigo.png';
+    ctWARMWHITE: Result:=Result+'CursorWarmWhite.png';
+    ctCOLDWHITE: Result:=Result+'CursorColdWhite.png';
     else Result:='';
   end;//case
 end;

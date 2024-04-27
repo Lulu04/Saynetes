@@ -1673,6 +1673,44 @@ msgctxt "tframeviewdmxfixturechannels.menuitem20.caption"
 msgid "Speed"
 msgstr "Vitesse"
 
+#: tframeviewdmxfixturechannels.menuitem21.caption
+#, fuzzy
+msgctxt "tframeviewdmxfixturechannels.menuitem21.caption"
+msgid "Speed"
+msgstr "Vitesse"
+
+#: tframeviewdmxfixturechannels.menuitem22.caption
+msgid "No function"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem23.caption
+msgid "Cyan"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem24.caption
+msgid "Magenta"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem25.caption
+msgid "Yellow"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem26.caption
+msgid "Lime"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem27.caption
+msgid "Indigo"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem28.caption
+msgid "Warm white"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem29.caption
+msgid "Cold white"
+msgstr ""
+
 #: tframeviewdmxfixturechannels.menuitem3.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem3.caption"
 msgid "Set as..."

@@ -308,7 +308,15 @@ type
                      ctWHITE,
                      ctAMBER,
                      ctUV,
-                     ctSPEED
+                     ctSPEED,        // 16
+                     ctNOFUNCTION,
+                     ctCYAN,
+                     ctMAGENTA,
+                     ctYELLOW,
+                     ctLIME,
+                     ctINDIGO,
+                     ctWARMWHITE,
+                     ctCOLDWHITE
                    );
 
     // stage shape rendered in the stage view
