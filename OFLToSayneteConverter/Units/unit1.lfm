@@ -1,0 +1,193 @@
+object Form1: TForm1
+  Left = 313
+  Height = 811
+  Top = 107
+  Width = 748
+  Caption = 'Form1'
+  ClientHeight = 811
+  ClientWidth = 748
+  OnShow = FormShow
+  LCLVersion = '2.2.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 315
+    Top = 496
+    Width = 748
+    Align = alClient
+    Caption = 'Panel1'
+    ClientHeight = 315
+    ClientWidth = 748
+    TabOrder = 0
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 6
+      Height = 15
+      Top = 1
+      Width = 30
+      BorderSpacing.Left = 5
+      Caption = 'Errors'
+      ParentColor = False
+    end
+    object Memo1: TMemo
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 1
+      Height = 298
+      Top = 16
+      Width = 746
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 488
+    Top = 0
+    Width = 748
+    Align = alTop
+    Caption = 'Panel2'
+    ClientHeight = 488
+    ClientWidth = 748
+    TabOrder = 1
+    object LB: TListBox
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      AnchorSideRight.Control = Button1
+      AnchorSideBottom.Control = Panel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 481
+      Top = 6
+      Width = 565
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 10
+      ItemHeight = 0
+      TabOrder = 0
+    end
+    object Button1: TButton
+      AnchorSideTop.Control = Panel2
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 30
+      Top = 61
+      Width = 156
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 60
+      BorderSpacing.Right = 10
+      Caption = 'Convert'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Label2: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = LB
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 239
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Total:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label3: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 254
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Done:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 269
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Remains:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = Label4
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 304
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 20
+      Caption = 'SwitchChannel error:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label6: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = Label5
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 319
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Wheels error:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label7: TLabel
+      AnchorSideLeft.Control = Button1
+      AnchorSideTop.Control = Label6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Button1
+      AnchorSideRight.Side = asrBottom
+      Left = 581
+      Height = 15
+      Top = 334
+      Width = 156
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Matrix error:'
+      ParentColor = False
+      WordWrap = True
+    end
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 8
+    Top = 488
+    Width = 748
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+end
