@@ -1,17 +1,17 @@
 8
-0
+200
 Marque - TOUS
 13
 0
-PARAMETRAGE
+Config
 1
 0-->255 : 
 1
-MASTER DIMMER
+Master Dimmer
 1
 0-->255 : 
 2
-DIMMER
+Dimmer
 1
 0-->255 : 
 3
@@ -31,19 +31,19 @@ STROBO
 1
 0-->255 : 
 7
-PAN
+Pan
 1
 0-->255 : 
 8
-TILT
+Tilt
 1
 0-->255 : 
 9
-VITESSE PAN/TILT
+Speed Pan/Tilt
 1
 0-->255 : 
 10
-GOBO
+Gobo
 1
 0-->255 : 
 11
@@ -51,6 +51,6 @@ GOBO ROTATION
 1
 0-->255 : 
 12
-CHOIX COULEUR
+Color changer
 1
 0-->255 : 
