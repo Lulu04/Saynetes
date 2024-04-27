@@ -26,6 +26,15 @@ type
     MenuItem19: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem20: TMenuItem;
+    MenuItem21: TMenuItem;
+    MenuItem22: TMenuItem;
+    MenuItem23: TMenuItem;
+    MenuItem24: TMenuItem;
+    MenuItem25: TMenuItem;
+    MenuItem26: TMenuItem;
+    MenuItem27: TMenuItem;
+    MenuItem28: TMenuItem;
+    MenuItem29: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
@@ -50,6 +59,15 @@ type
     procedure MenuItem18Click(Sender: TObject);
     procedure MenuItem19Click(Sender: TObject);
     procedure MenuItem20Click(Sender: TObject);
+    procedure MenuItem21Click(Sender: TObject);
+    procedure MenuItem22Click(Sender: TObject);
+    procedure MenuItem23Click(Sender: TObject);
+    procedure MenuItem24Click(Sender: TObject);
+    procedure MenuItem25Click(Sender: TObject);
+    procedure MenuItem26Click(Sender: TObject);
+    procedure MenuItem27Click(Sender: TObject);
+    procedure MenuItem28Click(Sender: TObject);
+    procedure MenuItem29Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
@@ -187,6 +205,69 @@ begin
   if TV.Selected=NIL then exit;
   TV.Selected.ImageIndex:=ord(ctSPEED);
   TV.Selected.Text:='Speed';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem21Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctSPEED);
+  TV.Selected.Text:='Speed';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem22Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctNOFUNCTION);
+  TV.Selected.Text:='No function';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem23Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctCYAN);
+  TV.Selected.Text:='Cyan';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem24Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctMAGENTA);
+  TV.Selected.Text:='Magenta';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem25Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctYELLOW);
+  TV.Selected.Text:='Yellow';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem26Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctLIME);
+  TV.Selected.Text:='Lime';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem27Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctINDIGO);
+  TV.Selected.Text:='Indigo';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem28Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctWARMWHITE);
+  TV.Selected.Text:='Warm white';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem29Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctCOLDWHITE);
+  TV.Selected.Text:='Cold white';
 end;
 
 procedure TFrameViewDMXFixtureChannels.MenuItem4Click(Sender: TObject);
