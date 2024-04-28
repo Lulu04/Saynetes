@@ -322,7 +322,9 @@ type
                      ctCOLORTEMPERATURE,
                      ctSTROBESPEED,
                      ctSOUNDSENSITIVITY,
-                     ctBLADEROTATION   // 30
+                     ctBLADEROTATION,   // 30
+                     ctZOOM,
+                     ctFOCUS
                    );
 
     // stage shape rendered in the stage view

@@ -1739,6 +1739,15 @@ msgstr "Rotation du couteau"
 msgid "Sound sensitivity"
 msgstr "Sensibilité sonore"
 
+#: tframeviewdmxfixturechannels.menuitem36.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem36.caption"
+msgid "Zoom"
+msgstr "Zoom"
+
+#: tframeviewdmxfixturechannels.menuitem37.caption
+msgid "Focus"
+msgstr "Focus"
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

@@ -98,6 +98,8 @@ begin
   AddImageToImageList('StrobeSpeed.svg', ILChannelType);
   AddImageToImageList('SoundSensitivity.svg', ILChannelType);
   AddImageToImageList('BladeRotation.svg', ILChannelType);
+  AddImageToImageList('Zoom.svg', ILChannelType);
+  AddImageToImageList('Focus.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

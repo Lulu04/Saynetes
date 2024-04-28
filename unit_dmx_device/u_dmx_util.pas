@@ -284,6 +284,8 @@ begin
     CTSTROBESPEED: Result:=Result+'CursorStrobeSpeed.svg';
     ctSOUNDSENSITIVITY: Result:=Result+'CursorSoundSensitivity.svg';
     ctBLADEROTATION: Result:=Result+'CursorBladeRotation.svg';
+    ctZOOM: Result:=Result+'CursorZoom.svg';
+    ctFOCUS: Result:=Result+'CursorFocus.svg';
     else Result:='';
   end;//case
 end;
