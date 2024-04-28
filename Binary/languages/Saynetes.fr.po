@@ -1727,6 +1727,10 @@ msgstr "Insertion couteau"
 msgid "Color temperature"
 msgstr "Température de couleur"
 
+#: tframeviewdmxfixturechannels.menuitem33.caption
+msgid "Strobe speed"
+msgstr "Vitesse du stroboscope"
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

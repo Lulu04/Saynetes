@@ -95,6 +95,7 @@ begin
   AddImageToImageList('Iris.svg', ILChannelType);
   AddImageToImageList('BladeInsertion.svg', ILChannelType);
   AddImageToImageList('ColorTemperature.svg', ILChannelType);
+  AddImageToImageList('StrobeSpeed.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

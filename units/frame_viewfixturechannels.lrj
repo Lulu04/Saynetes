@@ -5,6 +5,7 @@
 {"hash":128992178,"name":"tframeviewdmxfixturechannels.menuitem10.caption","sourcebytes":[115,68,105,109,109,101,114],"value":"sDimmer"},
 {"hash":119975890,"name":"tframeviewdmxfixturechannels.menuitem8.caption","sourcebytes":[77,97,115,116,101,114,32,68,105,109,109,101,114],"value":"Master Dimmer"},
 {"hash":95131013,"name":"tframeviewdmxfixturechannels.menuitem11.caption","sourcebytes":[83,116,114,111,98,101],"value":"Strobe"},
+{"hash":47316532,"name":"tframeviewdmxfixturechannels.menuitem33.caption","sourcebytes":[83,116,114,111,98,101,32,115,112,101,101,100],"value":"Strobe speed"},
 {"hash":5925812,"name":"tframeviewdmxfixturechannels.menuitem21.caption","sourcebytes":[83,112,101,101,100],"value":"Speed"},
 {"hash":22142,"name":"tframeviewdmxfixturechannels.menuitem13.caption","sourcebytes":[80,97,110],"value":"Pan"},
 {"hash":372788,"name":"tframeviewdmxfixturechannels.menuitem14.caption","sourcebytes":[84,105,108,116],"value":"Tilt"},

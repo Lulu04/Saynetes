@@ -64,6 +64,11 @@ object FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels
         ImageIndex = 6
         OnClick = MenuItem11Click
       end
+      object MenuItem33: TMenuItem
+        Caption = 'Strobe speed'
+        ImageIndex = 28
+        OnClick = MenuItem33Click
+      end
       object MenuItem21: TMenuItem
         Caption = 'Speed'
         ImageIndex = 16

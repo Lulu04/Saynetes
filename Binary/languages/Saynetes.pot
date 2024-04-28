@@ -1640,6 +1640,10 @@ msgstr ""
 msgid "Color temperature"
 msgstr ""
 
+#: tframeviewdmxfixturechannels.menuitem33.caption
+msgid "Strobe speed"
+msgstr ""
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"
