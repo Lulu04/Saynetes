@@ -7,7 +7,7 @@ Config
 1
 0-->255 : 
 1
-Master Dimmer
+Gradateur Principal
 1
 0-->255 : 
 2
@@ -39,11 +39,11 @@ Tilt
 1
 0-->255 : 
 9
-Speed Pan/Tilt
+Vitesse Pan/Tilt
 1
 0-->255 : 
 10
-Gobo
+GOBO
 1
 0-->255 : 
 11
@@ -51,6 +51,6 @@ GOBO ROTATION
 1
 0-->255 : 
 12
-Color changer
+Changeur de couleur
 1
 0-->255 : 
