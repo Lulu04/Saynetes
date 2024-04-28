@@ -317,10 +317,12 @@ type
                      ctINDIGO,
                      ctWARMWHITE,
                      ctCOLDWHITE,
-                     ctIRIS,
+                     ctIRIS,          // 25
                      ctBLADEINSERTION,
                      ctCOLORTEMPERATURE,
-                     ctSTROBESPEED
+                     ctSTROBESPEED,
+                     ctSOUNDSENSITIVITY,
+                     ctBLADEROTATION   // 30
                    );
 
     // stage shape rendered in the stage view

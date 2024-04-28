@@ -1731,6 +1731,14 @@ msgstr "Température de couleur"
 msgid "Strobe speed"
 msgstr "Vitesse du stroboscope"
 
+#: tframeviewdmxfixturechannels.menuitem34.caption
+msgid "Blade rotation"
+msgstr "Rotation du couteau"
+
+#: tframeviewdmxfixturechannels.menuitem35.caption
+msgid "Sound sensitivity"
+msgstr "Sensibilité sonore"
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

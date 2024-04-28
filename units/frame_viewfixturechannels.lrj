@@ -29,6 +29,8 @@
 {"hash":108615301,"name":"tframeviewdmxfixturechannels.menuitem29.caption","sourcebytes":[67,111,108,100,32,119,104,105,116,101],"value":"Cold white"},
 {"hash":329987,"name":"tframeviewdmxfixturechannels.menuitem30.caption","sourcebytes":[73,114,105,115],"value":"Iris"},
 {"hash":242125102,"name":"tframeviewdmxfixturechannels.menuitem31.caption","sourcebytes":[66,108,97,100,101,32,105,110,115,101,114,116,105,111,110],"value":"Blade insertion"},
+{"hash":80928126,"name":"tframeviewdmxfixturechannels.menuitem34.caption","sourcebytes":[66,108,97,100,101,32,114,111,116,97,116,105,111,110],"value":"Blade rotation"},
+{"hash":110311769,"name":"tframeviewdmxfixturechannels.menuitem35.caption","sourcebytes":[83,111,117,110,100,32,115,101,110,115,105,116,105,118,105,116,121],"value":"Sound sensitivity"},
 {"hash":203405966,"name":"tframeviewdmxfixturechannels.menuitem22.caption","sourcebytes":[78,111,32,102,117,110,99,116,105,111,110],"value":"No function"},
 {"hash":185793516,"name":"tframeviewdmxfixturechannels.mi_renamechannel.caption","sourcebytes":[82,101,110,97,109,101,32,116,104,101,32,99,104,97,110,110,101,108],"value":"Rename the channel"},
 {"hash":112719804,"name":"tframeviewdmxfixturechannels.miaddrange.caption","sourcebytes":[65,100,100,32,97,32,114,97,110,103,101,32,116,111,32,116,104,101,32,99,104,97,110,110,101,108],"value":"Add a range to the channel"},
