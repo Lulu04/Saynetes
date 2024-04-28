@@ -94,6 +94,7 @@ begin
   AddImageToImageList('ColdWhite.svg', ILChannelType);
   AddImageToImageList('Iris.svg', ILChannelType);
   AddImageToImageList('BladeInsertion.svg', ILChannelType);
+  AddImageToImageList('ColorTemperature.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

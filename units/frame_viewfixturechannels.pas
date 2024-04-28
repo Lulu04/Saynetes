@@ -38,6 +38,7 @@ type
     MenuItem3: TMenuItem;
     MenuItem30: TMenuItem;
     MenuItem31: TMenuItem;
+    MenuItem32: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
@@ -72,6 +73,7 @@ type
     procedure MenuItem29Click(Sender: TObject);
     procedure MenuItem30Click(Sender: TObject);
     procedure MenuItem31Click(Sender: TObject);
+    procedure MenuItem32Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
@@ -286,6 +288,13 @@ begin
   if TV.Selected=NIL then exit;
   TV.Selected.ImageIndex:=ord(ctBLADEINSERTION);
   TV.Selected.Text:='Blade insertion';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem32Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctCOLORTEMPERATURE);
+  TV.Selected.Text:='Color temperature';
 end;
 
 procedure TFrameViewDMXFixtureChannels.MenuItem4Click(Sender: TObject);
