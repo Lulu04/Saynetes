@@ -1748,6 +1748,11 @@ msgstr "Zoom"
 msgid "Focus"
 msgstr "Focus"
 
+#: tframeviewdmxfixturechannels.menuitem38.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem38.caption"
+msgid "Rotation"
+msgstr "Rotation"
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

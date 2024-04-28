@@ -100,6 +100,7 @@ begin
   AddImageToImageList('BladeRotation.svg', ILChannelType);
   AddImageToImageList('Zoom.svg', ILChannelType);
   AddImageToImageList('Focus.svg', ILChannelType);
+  AddImageToImageList('Rotation.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

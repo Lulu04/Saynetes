@@ -286,6 +286,7 @@ begin
     ctBLADEROTATION: Result:=Result+'CursorBladeRotation.svg';
     ctZOOM: Result:=Result+'CursorZoom.svg';
     ctFOCUS: Result:=Result+'CursorFocus.svg';
+    ctROTATION: Result:=Result+'CursorRotation.svg';
     else Result:='';
   end;//case
 end;

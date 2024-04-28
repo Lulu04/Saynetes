@@ -12,6 +12,7 @@
 {"hash":47173364,"name":"tframeviewdmxfixturechannels.menuitem15.caption","sourcebytes":[83,112,101,101,100,32,112,97,110,47,84,105,108,116],"value":"Speed pan/Tilt"},
 {"hash":320911,"name":"tframeviewdmxfixturechannels.menuitem16.caption","sourcebytes":[71,111,98,111],"value":"Gobo"},
 {"hash":225341247,"name":"tframeviewdmxfixturechannels.menuitem17.caption","sourcebytes":[82,111,116,97,116,105,111,110,32,71,111,98,111],"value":"Rotation Gobo"},
+{"hash":111717326,"name":"tframeviewdmxfixturechannels.menuitem38.caption","sourcebytes":[82,111,116,97,116,105,111,110],"value":"Rotation"},
 {"hash":59058658,"name":"tframeviewdmxfixturechannels.menuitem18.caption","sourcebytes":[67,111,108,111,114,32,99,104,97,110,103,101,114],"value":"Color changer"},
 {"hash":146299781,"name":"tframeviewdmxfixturechannels.menuitem32.caption","sourcebytes":[67,111,108,111,114,32,116,101,109,112,101,114,97,116,117,114,101],"value":"Color temperature"},
 {"hash":22708,"name":"tframeviewdmxfixturechannels.menuitem4.caption","sourcebytes":[82,101,100],"value":"Red"},
