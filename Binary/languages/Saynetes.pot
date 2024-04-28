@@ -1652,6 +1652,15 @@ msgstr ""
 msgid "Sound sensitivity"
 msgstr ""
 
+#: tframeviewdmxfixturechannels.menuitem36.caption
+msgctxt "tframeviewdmxfixturechannels.menuitem36.caption"
+msgid "Zoom"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem37.caption
+msgid "Focus"
+msgstr ""
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

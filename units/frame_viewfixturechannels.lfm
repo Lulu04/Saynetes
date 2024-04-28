@@ -189,6 +189,16 @@ object FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels
         ImageIndex = 30
         OnClick = MenuItem34Click
       end
+      object MenuItem36: TMenuItem
+        Caption = 'Zoom'
+        ImageIndex = 31
+        OnClick = MenuItem36Click
+      end
+      object MenuItem37: TMenuItem
+        Caption = 'Focus'
+        ImageIndex = 32
+        OnClick = MenuItem37Click
+      end
       object MenuItem35: TMenuItem
         Caption = 'Sound sensitivity'
         ImageIndex = 29

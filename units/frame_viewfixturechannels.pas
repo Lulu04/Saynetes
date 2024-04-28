@@ -42,6 +42,8 @@ type
     MenuItem33: TMenuItem;
     MenuItem34: TMenuItem;
     MenuItem35: TMenuItem;
+    MenuItem36: TMenuItem;
+    MenuItem37: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
@@ -80,6 +82,8 @@ type
     procedure MenuItem33Click(Sender: TObject);
     procedure MenuItem34Click(Sender: TObject);
     procedure MenuItem35Click(Sender: TObject);
+    procedure MenuItem36Click(Sender: TObject);
+    procedure MenuItem37Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
@@ -322,6 +326,20 @@ begin
   if TV.Selected=NIL then exit;
   TV.Selected.ImageIndex:=ord(ctSOUNDSENSITIVITY);
   TV.Selected.Text:='Sound sensitivity';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem36Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctZOOM);
+  TV.Selected.Text:='Zoom';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem37Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctFOCUS);
+  TV.Selected.Text:='Focus';
 end;
 
 procedure TFrameViewDMXFixtureChannels.MenuItem4Click(Sender: TObject);
