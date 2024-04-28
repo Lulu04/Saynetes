@@ -281,6 +281,7 @@ begin
     ctIRIS: Result:=Result+'CursorIris.svg';
     ctBLADEINSERTION: Result:=Result+'CursorBladeInsertion.svg';
     ctCOLORTEMPERATURE: Result:=Result+'CursorColorTemperature.svg';
+    CTSTROBESPEED: Result:=Result+'CursorStrobeSpeed.svg';
     else Result:='';
   end;//case
 end;
