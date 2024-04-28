@@ -1723,6 +1723,10 @@ msgstr "Iris"
 msgid "Blade insertion"
 msgstr "Insertion couteau"
 
+#: tframeviewdmxfixturechannels.menuitem32.caption
+msgid "Color temperature"
+msgstr "Température de couleur"
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

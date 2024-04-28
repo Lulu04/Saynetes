@@ -99,6 +99,11 @@ object FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels
         ImageIndex = 12
         OnClick = MenuItem18Click
       end
+      object MenuItem32: TMenuItem
+        Caption = 'Color temperature'
+        ImageIndex = 27
+        OnClick = MenuItem32Click
+      end
       object MenuItem4: TMenuItem
         Caption = 'Red'
         ImageIndex = 3

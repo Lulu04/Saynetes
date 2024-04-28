@@ -318,7 +318,8 @@ type
                      ctWARMWHITE,
                      ctCOLDWHITE,
                      ctIRIS,
-                     ctBLADEINSERTION
+                     ctBLADEINSERTION,
+                     ctCOLORTEMPERATURE
                    );
 
     // stage shape rendered in the stage view
