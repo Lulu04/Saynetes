@@ -96,6 +96,8 @@ begin
   AddImageToImageList('BladeInsertion.svg', ILChannelType);
   AddImageToImageList('ColorTemperature.svg', ILChannelType);
   AddImageToImageList('StrobeSpeed.svg', ILChannelType);
+  AddImageToImageList('SoundSensitivity.svg', ILChannelType);
+  AddImageToImageList('BladeRotation.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

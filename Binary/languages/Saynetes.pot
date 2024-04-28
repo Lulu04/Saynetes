@@ -1644,6 +1644,14 @@ msgstr ""
 msgid "Strobe speed"
 msgstr ""
 
+#: tframeviewdmxfixturechannels.menuitem34.caption
+msgid "Blade rotation"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem35.caption
+msgid "Sound sensitivity"
+msgstr ""
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

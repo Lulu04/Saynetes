@@ -282,6 +282,8 @@ begin
     ctBLADEINSERTION: Result:=Result+'CursorBladeInsertion.svg';
     ctCOLORTEMPERATURE: Result:=Result+'CursorColorTemperature.svg';
     CTSTROBESPEED: Result:=Result+'CursorStrobeSpeed.svg';
+    ctSOUNDSENSITIVITY: Result:=Result+'CursorSoundSensitivity.svg';
+    ctBLADEROTATION: Result:=Result+'CursorBladeRotation.svg';
     else Result:='';
   end;//case
 end;

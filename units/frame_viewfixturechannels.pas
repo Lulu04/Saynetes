@@ -40,6 +40,8 @@ type
     MenuItem31: TMenuItem;
     MenuItem32: TMenuItem;
     MenuItem33: TMenuItem;
+    MenuItem34: TMenuItem;
+    MenuItem35: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
@@ -76,6 +78,8 @@ type
     procedure MenuItem31Click(Sender: TObject);
     procedure MenuItem32Click(Sender: TObject);
     procedure MenuItem33Click(Sender: TObject);
+    procedure MenuItem34Click(Sender: TObject);
+    procedure MenuItem35Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
@@ -304,6 +308,20 @@ begin
   if TV.Selected=NIL then exit;
   TV.Selected.ImageIndex:=ord(ctSTROBESPEED);
   TV.Selected.Text:='Strobe speed';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem34Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctBLADEROTATION);
+  TV.Selected.Text:='Blade rotation';
+end;
+
+procedure TFrameViewDMXFixtureChannels.MenuItem35Click(Sender: TObject);
+begin
+  if TV.Selected=NIL then exit;
+  TV.Selected.ImageIndex:=ord(ctSOUNDSENSITIVITY);
+  TV.Selected.Text:='Sound sensitivity';
 end;
 
 procedure TFrameViewDMXFixtureChannels.MenuItem4Click(Sender: TObject);
