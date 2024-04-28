@@ -302,7 +302,7 @@ type
                      ctPAN,
                      ctTILT,
                      ctPANTILTSPEED,
-                     ctGOBO,
+                     ctGOBO, // non utilisé dans le converter
                      ctGOBOROTATION,
                      ctCOLORCHOICE,
                      ctWHITE,
@@ -324,7 +324,8 @@ type
                      ctSOUNDSENSITIVITY,
                      ctBLADEROTATION,   // 30
                      ctZOOM,
-                     ctFOCUS
+                     ctFOCUS,
+                     ctROTATION
                    );
 
     // stage shape rendered in the stage view
