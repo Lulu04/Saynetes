@@ -316,7 +316,9 @@ type
                      ctLIME,
                      ctINDIGO,
                      ctWARMWHITE,
-                     ctCOLDWHITE
+                     ctCOLDWHITE,
+                     ctIRIS,
+                     ctBLADEINSERTION
                    );
 
     // stage shape rendered in the stage view

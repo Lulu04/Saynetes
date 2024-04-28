@@ -1628,6 +1628,14 @@ msgstr ""
 msgid "Set as..."
 msgstr ""
 
+#: tframeviewdmxfixturechannels.menuitem30.caption
+msgid "Iris"
+msgstr ""
+
+#: tframeviewdmxfixturechannels.menuitem31.caption
+msgid "Blade insertion"
+msgstr ""
+
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
 msgid "Red"

@@ -278,6 +278,8 @@ begin
     ctINDIGO: Result:=Result+'CursorIndigo.svg';
     ctWARMWHITE: Result:=Result+'CursorWarmWhite.svg';
     ctCOLDWHITE: Result:=Result+'CursorColdWhite.svg';
+    ctIRIS: Result:=Result+'CursorIris.svg';
+    ctBLADEINSERTION: Result:=Result+'CursorBladeInsertion.svg';
     else Result:='';
   end;//case
 end;

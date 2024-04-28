@@ -1674,47 +1674,54 @@ msgid "Speed"
 msgstr "Vitesse"
 
 #: tframeviewdmxfixturechannels.menuitem21.caption
-#, fuzzy
 msgctxt "tframeviewdmxfixturechannels.menuitem21.caption"
 msgid "Speed"
 msgstr "Vitesse"
 
 #: tframeviewdmxfixturechannels.menuitem22.caption
 msgid "No function"
-msgstr ""
+msgstr "Pas de fonction"
 
 #: tframeviewdmxfixturechannels.menuitem23.caption
 msgid "Cyan"
-msgstr ""
+msgstr "Cyan"
 
 #: tframeviewdmxfixturechannels.menuitem24.caption
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: tframeviewdmxfixturechannels.menuitem25.caption
 msgid "Yellow"
-msgstr ""
+msgstr "Jaune"
 
 #: tframeviewdmxfixturechannels.menuitem26.caption
 msgid "Lime"
-msgstr ""
+msgstr "Lime"
 
 #: tframeviewdmxfixturechannels.menuitem27.caption
 msgid "Indigo"
-msgstr ""
+msgstr "Indigo"
 
 #: tframeviewdmxfixturechannels.menuitem28.caption
 msgid "Warm white"
-msgstr ""
+msgstr "Blanc chaud"
 
 #: tframeviewdmxfixturechannels.menuitem29.caption
 msgid "Cold white"
-msgstr ""
+msgstr "Blanc froid"
 
 #: tframeviewdmxfixturechannels.menuitem3.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem3.caption"
 msgid "Set as..."
 msgstr "Configurer comme..."
+
+#: tframeviewdmxfixturechannels.menuitem30.caption
+msgid "Iris"
+msgstr "Iris"
+
+#: tframeviewdmxfixturechannels.menuitem31.caption
+msgid "Blade insertion"
+msgstr "Insertion couteau"
 
 #: tframeviewdmxfixturechannels.menuitem4.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
@@ -3526,4 +3533,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-

@@ -164,6 +164,16 @@ object FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels
         ImageIndex = 24
         OnClick = MenuItem29Click
       end
+      object MenuItem30: TMenuItem
+        Caption = 'Iris'
+        ImageIndex = 25
+        OnClick = MenuItem30Click
+      end
+      object MenuItem31: TMenuItem
+        Caption = 'Blade insertion'
+        ImageIndex = 26
+        OnClick = MenuItem31Click
+      end
       object MenuItem22: TMenuItem
         Caption = 'No function'
         ImageIndex = 17
