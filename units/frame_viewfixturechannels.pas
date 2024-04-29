@@ -116,7 +116,7 @@ type
     procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure Clear;
-    procedure ShowFixture( const aFileName: string );
+    procedure ShowFixture(const aFileName: string; aShowCollapsed: boolean);
     // fills a TLibraryFixture from data read and modified from method  ShowFixture
     function ToLibraryFixture: TLibraryFixture;
 
@@ -521,7 +521,7 @@ procedure TFrameViewDMXFixtureChannels.Clear;
 begin
   TV.Items.Clear;
 end;
-procedure TFrameViewDMXFixtureChannels.ShowFixture(const aFileName: string);
+procedure TFrameViewDMXFixtureChannels.ShowFixture(const aFileName: string; aShowCollapsed: boolean);
 var i, j: integer;
   n: TTreeNode;
   lf: TLibraryFixture;
@@ -536,35 +536,60 @@ begin
   FPower := lf.Power; // power
   FFixtureName := lf.Name;            // name
   FChannelCount:=Length(lf.Channels); // channel count
-  for i:=0 to High(lf.Channels) do begin
-      n := TV.Items.Add( TV.Items.GetFirstNode, lf.Channels[i].Name ); // channel name
-      //if channel name is a known word, we translate it in the current app language
-      case LowerCase(n.Text) of
-        'red': n.Text:=SChannelRed;
-        'green': n.Text:=SChannelGreen;
-        'blue': n.Text:=SChannelBlue;
-        'white': n.Text:=SChannelWhite;
-        'amber': n.Text:=SChannelAmber;
-        'ultraviolet': n.Text:=SChannelUV;
-        'master dimmer': n.Text:=SChannelMasterDimmer;
-        'dimmer': n.Text:=SDimmer;
-        'config': n.Text:=SChannelConfig;
-        'strobe': n.Text:=SChannelStrobe;
-        'pan': n.Text:=SChannelPan;
-        'tilt': n.Text:=SChannelTilt;
-        'speed pan/tilt': n.Text:=SChannelSpeedPanTilt;
-        'gobo': n.Text:=SChannelGobo;
-        'rotation gobo': n.Text:=SChannelRotationGobo;
-        'color changer': n.Text:=SChannelColorChanger;
-        'speed': n.Text:=SChannelSpeed;
-      end;//case
 
-      n.ImageIndex:=Ord(lf.Channels[i].ChannelType); // image associated with channel type
-      for j:=0 to High(lf.Channels[i].Ranges) do
-        TV.Items.AddChild( n, lf.Channels[i].Ranges[j].Encode );
+  for i:=0 to High(lf.Channels) do begin
+    n := TV.Items.Add( TV.Items.GetFirstNode, lf.Channels[i].Name ); // channel name
+{    //if channel name is a known word, we translate it in the current app language
+    case LowerCase(n.Text) of
+      'red': n.Text:=SChannelRed;
+      'green': n.Text:=SChannelGreen;
+      'blue': n.Text:=SChannelBlue;
+      'white': n.Text:=SChannelWhite;
+      'amber': n.Text:=SChannelAmber;
+      'ultraviolet': n.Text:=SChannelUV;
+      'master dimmer': n.Text:=SChannelMasterDimmer;
+      'dimmer': n.Text:=SDimmer;
+      'config': n.Text:=SChannelConfig;
+      'strobe': n.Text:=SChannelStrobe;
+      'pan': n.Text:=SChannelPan;
+      'tilt': n.Text:=SChannelTilt;
+      'speed pan/tilt': n.Text:=SChannelSpeedPanTilt;
+      'gobo': n.Text:=SChannelGobo;
+      'rotation gobo': n.Text:=SChannelRotationGobo;
+      'color changer': n.Text:=SChannelColorChanger;
+      'speed': n.Text:=SChannelSpeed;
+      'no function': n.Text := SChannelNoFunction;
+      'cyan': n.Text := SChannelCyan;
+      'magenta': n.Text := SChannelMagenta;
+      'yellow': n.Text := SChannelYellow;
+      'lime': n.Text := SChannelLime;
+      'indigo': n.Text := SChannelIndigo;
+      'warm white': n.Text := SChannelWarmWhite;
+      'cold white': n.Text := SChannelColdWhite;
+      'iris': n.Text := SChannelIris;
+      'blade insertion': n.Text := SChannelBladeInsertion;
+      'color temperature': n.Text := SChannelColorTemperature;
+      'strobe speed': n.Text := SChannelStrobeSpeed;
+      'sound sensitivity': n.Text := SChannelSoundSensitivity;
+      'blade rotation': n.Text := SChannelBladRotation;
+      'zoom': n.Text := SChannelZoom;
+      'focus': n.Text := SChannelFocus;
+      'rotation': n.Text := SChannelRotation;
+    end;//case     }
+
+    n.ImageIndex := Ord(lf.Channels[i].ChannelType); // image associated with channel type
+    for j:=0 to High(lf.Channels[i].Ranges) do
+      TV.Items.AddChild(n, lf.Channels[i].Ranges[j].Encode);
   end;
   TV.FullExpand;
-  FReady:=TRUE;
+  FReady := TRUE;
+
+  if TV.Items.Count = 0 then exit;
+
+   n := TV.Items.GetFirstNode;
+   for n in TV.Items do
+     if aShowCollapsed then n.Collapse(True)
+       else n.Expand(False);
 end;
 
 function TFrameViewDMXFixtureChannels.ToLibraryFixture: TLibraryFixture;
