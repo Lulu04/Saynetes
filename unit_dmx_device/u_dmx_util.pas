@@ -181,6 +181,7 @@ begin
   ftLedBarTransparentLed: Result+='19_BarTransparentLed.svg';
   ftParLongBulb: Result+='20_ParLongBulb.svg';
   ftFan: Result+='21_Fan.svg';
+  ftLaser: Result+='22_Laser.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -210,6 +211,7 @@ begin
    ftLedBarTransparentLed: Result := SLedBarTransparentLed;
    ftParLongBulb: Result := SParLongBulb;
    ftFan: Result := SFan;
+   ftLaser: Result := SLaser;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;

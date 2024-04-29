@@ -2845,6 +2845,10 @@ msgstr "Son nom est remplacé par"
 msgid "Jump to position"
 msgstr "Sauter à la position"
 
+#: u_resource_string.slaser
+msgid "Laser"
+msgstr "Laser"
+
 #: u_resource_string.slastrangeshouldendon255
 msgid " last range should end on 255"
 msgstr " la dernière plage devrait finir sur 255"
