@@ -111,9 +111,12 @@ begin
   FOnMoveItem(Self, SourceNode, TargetPath, Accept);
   if not Accept then exit;
  try
-  if ItsAFile( SourceNode ) then
-    DeplaceFichier( SourcePath, TargetPath  )  // move a file
-  else begin
+  if ItsAFile( SourceNode ) then begin
+    // move a file
+    if CopieFichier(SourcePath, TargetPath) then
+      SupprimeFichier(SourcePath);
+    //DeplaceFichier( SourcePath, TargetPath  )  // move a file
+  end else begin
     // move a folder
     CopieRepertoire( SourcePath, TargetPath, TRUE, TRUE );
     SupprimeRepertoire( SourcePath );
