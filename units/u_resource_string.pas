@@ -265,7 +265,7 @@ resourcestring
   SHideEffects='Hide effects';
   SShowEffects='Show effects';
 
-  SChannelMasterDimmer='Master Dimmer';
+{  SChannelMasterDimmer='Master Dimmer';
 //  SChannelDimmer='Dimmer';
   SChannelRed='Red';
   SChannelGreen='Green';
@@ -282,6 +282,24 @@ resourcestring
   SChannelRotationGobo='Rotation Gobo';
   SChannelColorChanger='Color Changer';
   SChannelSpeed='Speed';
+  SChannelNoFunction='No function';
+  SChannelCyan='Cyan';
+  SChannelMagenta='Magenta';
+  SChannelYellow='Yellow';
+  SChannelLime='Lime';
+  SChannelIndigo='Indigo';
+  SChannelWarmWhite='Warm white';
+  SChannelColdWhite='Cold white';
+  SChannelIris='Iris';
+  SChannelBladeInsertion='Blade insertion';
+  SChannelColorTemperature='Color temperature';
+  SChannelStrobeSpeed='Strobe speed';
+  SChannelSoundSensitivity='Sound sensitivity';
+  SChannelBladRotation='Blade rotation';
+  SChannelZoom='Zoom';
+  SChannelFocus='Focus';
+  SChannelRotation='Rotation';  }
+
 
   SDimmer='Dimmer';
   SFlame='Flame';
