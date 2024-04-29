@@ -269,7 +269,8 @@ type
                      ftLedParLongWithColoredLed,  // PAR with colored led RGB long version
                      ftLedParShortWithColoredLed, // PAR with colored led RGB short version
                      ftLedBarTransparentLed,
-                     ftParLongBulb     // long PAR with bulb
+                     ftParLongBulb,     // long PAR with bulb
+                     ftFan      // 21
                          );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
@@ -284,7 +285,7 @@ const
                    ftProfile,
                    ftScanner, ftMovingHead,
                    ftColorChanger,
-                   ftSmokeMachine, ftBubbleMachine,
+                   ftSmokeMachine, ftBubbleMachine, ftFan,
                    ftDimmer1Channel,
                    ftDimmer4Channels);
 

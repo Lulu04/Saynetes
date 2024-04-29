@@ -2589,6 +2589,10 @@ msgstr ""
 msgid "Failure when saving project to"
 msgstr ""
 
+#: u_resource_string.sfan
+msgid "Fan"
+msgstr ""
+
 #: u_resource_string.sfaster
 msgid "faster"
 msgstr ""

@@ -180,6 +180,7 @@ begin
   ftLedParShortWithColoredLed: Result+='18_ParShortColoredLed.svg';
   ftLedBarTransparentLed: Result+='19_BarTransparentLed.svg';
   ftParLongBulb: Result+='20_ParLongBulb.svg';
+  ftFan: Result+='21_Fan.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -208,6 +209,7 @@ begin
    ftLedParShortWithColoredLed: Result := SLedParShortColoredLed;
    ftLedBarTransparentLed: Result := SLedBarTransparentLed;
    ftParLongBulb: Result := SParLongBulb;
+   ftFan: Result := SFan;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;

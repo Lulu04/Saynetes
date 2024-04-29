@@ -2691,6 +2691,10 @@ msgstr "Échec lors de la sauvegarde des univers DMX vers"
 msgid "Failure when saving project to"
 msgstr "Échec lors de la sauvegarde du projet vers"
 
+#: u_resource_string.sfan
+msgid "Fan"
+msgstr "Ventilateur"
+
 #: u_resource_string.sfaster
 msgid "faster"
 msgstr "plus vite"
