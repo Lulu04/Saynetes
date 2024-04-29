@@ -150,7 +150,7 @@ procedure TFrameMainAddFixture.ProcessDMXLibrarySelectionChangeEvent(
   Sender: TObject; aFileName: string);
 var uni: TDmxUniverse;
 begin
-  FrameViewDMXFixtureChannels1.ShowFixture(aFileName);//fixfilename);
+  FrameViewDMXFixtureChannels1.ShowFixture(aFileName, True);//fixfilename);
   if aFilename <> '' then
   begin
     ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);

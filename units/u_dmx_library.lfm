@@ -1,7 +1,7 @@
 object FormDMXLibrary: TFormDMXLibrary
-  Left = 229
+  Left = 225
   Height = 785
-  Top = 85
+  Top = 99
   Width = 1024
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -15,7 +15,7 @@ object FormDMXLibrary: TFormDMXLibrary
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = SpeedButton1

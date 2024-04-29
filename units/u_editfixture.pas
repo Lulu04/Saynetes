@@ -154,7 +154,7 @@ end;
 procedure TFormEditFixture.Edit(const aFilename: string);
 begin
   FFileName:=aFilename;
-  FrameViewDMXFixtureChannels1.ShowFixture(aFilename);
+  FrameViewDMXFixtureChannels1.ShowFixture(aFilename, True);
   Label11.Caption:=FrameViewDMXFixtureChannels1.FixtureName;
   E1.Text:=FrameViewDMXFixtureChannels1.Power.ToString;
   ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);

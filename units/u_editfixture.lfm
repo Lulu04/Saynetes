@@ -78,7 +78,6 @@ object FormEditFixture: TFormEditFixture
     AnchorSideTop.Control = SpeedButton3
     AnchorSideTop.Side = asrBottom
     AnchorSideBottom.Side = asrBottom
-    Cursor = crHandPoint
     Left = 55
     Height = 150
     Top = 310
