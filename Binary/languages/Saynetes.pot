@@ -2168,90 +2168,13 @@ msgstr ""
 msgid "Channel"
 msgstr ""
 
-#: u_resource_string.schannelamber
-msgctxt "u_resource_string.schannelamber"
-msgid "Amber"
-msgstr ""
-
-#: u_resource_string.schannelblue
-msgctxt "u_resource_string.schannelblue"
-msgid "Blue"
-msgstr ""
-
-#: u_resource_string.schannelcolorchanger
-msgid "Color Changer"
-msgstr ""
-
-#: u_resource_string.schannelconfig
-msgctxt "u_resource_string.schannelconfig"
-msgid "Config"
-msgstr ""
-
-#: u_resource_string.schannelgobo
-msgctxt "u_resource_string.schannelgobo"
-msgid "Gobo"
-msgstr ""
-
-#: u_resource_string.schannelgreen
-msgctxt "u_resource_string.schannelgreen"
-msgid "Green"
-msgstr ""
-
-#: u_resource_string.schannelmasterdimmer
-msgctxt "u_resource_string.schannelmasterdimmer"
-msgid "Master Dimmer"
-msgstr ""
-
-#: u_resource_string.schannelpan
-msgctxt "u_resource_string.schannelpan"
-msgid "Pan"
-msgstr ""
-
-#: u_resource_string.schannelred
-msgctxt "u_resource_string.schannelred"
-msgid "Red"
-msgstr ""
-
-#: u_resource_string.schannelrotationgobo
-msgctxt "u_resource_string.schannelrotationgobo"
-msgid "Rotation Gobo"
-msgstr ""
-
 #: u_resource_string.schannels
 msgid "channels"
-msgstr ""
-
-#: u_resource_string.schannelspeed
-msgctxt "u_resource_string.schannelspeed"
-msgid "Speed"
-msgstr ""
-
-#: u_resource_string.schannelspeedpantilt
-msgid "Speed Pan/Tilt"
-msgstr ""
-
-#: u_resource_string.schannelstrobe
-msgctxt "u_resource_string.schannelstrobe"
-msgid "Strobe"
 msgstr ""
 
 #: u_resource_string.schannels_
 msgctxt "u_resource_string.schannels_"
 msgid "Channels"
-msgstr ""
-
-#: u_resource_string.schanneltilt
-msgctxt "u_resource_string.schanneltilt"
-msgid "Tilt"
-msgstr ""
-
-#: u_resource_string.schanneluv
-msgid "Ultraviolet"
-msgstr ""
-
-#: u_resource_string.schannelwhite
-msgctxt "u_resource_string.schannelwhite"
-msgid "White"
 msgstr ""
 
 #: u_resource_string.schaser
