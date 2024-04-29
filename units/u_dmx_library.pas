@@ -91,7 +91,7 @@ begin
     F := TFormEditFixture.Create(NIL);
     F.Edit(FrameViewDMXLibrary1.GetSelectedFixtureFileName);
     if F.ShowModal = mrOk then
-      FrameViewDMXFixtureChannels1.ShowFixture(FrameViewDMXLibrary1.GetSelectedFixtureFileName);
+      FrameViewDMXFixtureChannels1.ShowFixture(FrameViewDMXLibrary1.GetSelectedFixtureFileName, True);
   finally
     F.Free;
   end;
@@ -104,7 +104,7 @@ end;
 
 procedure TFormDMXLibrary.ProcessViewDMXLibrarySelectionChangeEvent(Sender: TObject; aFilename: string);
 begin
-  FrameViewDMXFixtureChannels1.ShowFixture( aFilename );
+  FrameViewDMXFixtureChannels1.ShowFixture(aFilename, True);
 
   if FrameViewDMXFixtureChannels1.Ready then
   begin
