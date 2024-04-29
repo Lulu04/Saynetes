@@ -110,31 +110,31 @@ Dimmer
 Channel 27
 25
 0-->9 : all leds ON
-10-->19 : Letter
-20-->29 : Number
-30-->39 : show 1
-40-->49 : show 2
-50-->59 : show 3
-60-->69 : show 4
-70-->79 : show 5
-80-->89 : show 6
-90-->99 : show 7
-100-->109 : show 8
-110-->119 : show 9
-120-->129 : show 10
-130-->139 : show 11
-140-->149 : show 12
-150-->159 : show 13
-160-->169 : show 14
-170-->179 : show 15
-180-->189 : show 16
-190-->199 : show 17
-200-->209 : show 18
-210-->219 : show 19
-220-->229 : show 20
-230-->239 : show 21
+10-->19 : Letter on next channel
+20-->29 : Number on next channel
+30-->39 : show 1 - Speed on next channel
+40-->49 : show 2 - Speed on next channel
+50-->59 : show 3 - Speed on next channel
+60-->69 : show 4 - Speed on next channel
+70-->79 : show 5 - Speed on next channel
+80-->89 : show 6 - Speed on next channel
+90-->99 : show 7 - Speed on next channel
+100-->109 : show 8 - Speed on next channel
+110-->119 : show 9 - Speed on next channel
+120-->129 : show 10 - Speed on next channel
+130-->139 : show 11 - Speed on next channel
+140-->149 : show 12 - Speed on next channel
+150-->159 : show 13 - Speed on next channel
+160-->169 : show 14 - Speed on next channel
+170-->179 : show 15 - Speed on next channel
+180-->189 : show 16 - Speed on next channel
+190-->199 : show 17 - Speed on next channel
+200-->209 : show 18 - Speed on next channel
+210-->219 : show 19 - Speed on next channel
+220-->229 : show 20 - Speed on next channel
+230-->239 : show 21 - Speed on next channel
 240-->255 : sound controlled
 0
 Channel 28
 1
-0-->255 : choice of the letter or number
+0-->255 : choice of the letter or number - speed
