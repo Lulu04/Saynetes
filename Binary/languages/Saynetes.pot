@@ -2742,6 +2742,10 @@ msgstr ""
 msgid "Jump to position"
 msgstr ""
 
+#: u_resource_string.slaser
+msgid "Laser"
+msgstr ""
+
 #: u_resource_string.slastrangeshouldendon255
 msgid " last range should end on 255"
 msgstr ""

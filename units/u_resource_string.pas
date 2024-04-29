@@ -417,6 +417,7 @@ resourcestring
   SLedBarTransparentLed='Bar transparent led';
   SParLongBulb='Long PAR with bulb';
   SFan='Fan';
+  SLaser='Laser';
 
 
 implementation
