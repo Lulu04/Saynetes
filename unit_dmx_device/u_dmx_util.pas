@@ -498,7 +498,6 @@ begin
       BeginValue:=0;
       EndValue:=255;
       Text:=SUnknown;
-      Symbol:=0;
     end;
     Result:=FALSE;
   end;
