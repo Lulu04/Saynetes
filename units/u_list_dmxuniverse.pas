@@ -49,7 +49,6 @@ type
     public
       BeginValue,
       EndValue: byte;
-      Symbol: word;    // graphic Symbol id
       function Duplicate: TChannelRange;
       // Decode/Encode are reserved for dmx library
       procedure Decode(s: string);
@@ -875,7 +874,6 @@ begin
  Result.BeginValue := BeginValue;
  Result.EndValue := EndValue;
  Result.Text := Text;
- Result.Symbol := Symbol;
 end;
 
 procedure TChannelRange.Decode(s: string);
