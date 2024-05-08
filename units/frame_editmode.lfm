@@ -1,0 +1,275 @@
+object FrameEditMode: TFrameEditMode
+  Left = 0
+  Height = 179
+  Top = 0
+  Width = 495
+  ClientHeight = 179
+  ClientWidth = 495
+  OnMouseLeave = FrameMouseLeave
+  TabOrder = 0
+  DesignLeft = 360
+  DesignTop = 271
+  object Panel1: TPanel
+    Left = 0
+    Height = 179
+    Top = 0
+    Width = 495
+    Align = alClient
+    BevelColor = 5596778
+    ClientHeight = 179
+    ClientWidth = 495
+    Color = 4345683
+    Font.Color = 15395562
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    OnMouseMove = Panel1MouseMove
+    object Shape1: TShape
+      AnchorSideLeft.Control = Edit1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrCenter
+      Left = 102
+      Height = 27
+      Top = 38
+      Width = 243
+      Brush.Style = bsClear
+      Pen.Color = clRed
+      Pen.Width = 2
+      Visible = False
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 20
+      Top = 8
+      Width = 44
+      Caption = 'MODE'
+      Font.Color = 15395562
+      Font.Height = 20
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object BAddChannel: TSpeedButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 8
+      Height = 20
+      Top = 148
+      Width = 92
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 7
+      BorderSpacing.Bottom = 10
+      Caption = 'Add channel'
+      Color = 16433669
+      Flat = True
+      Font.Color = clWhite
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      Transparent = False
+      OnClick = BAddChannelClick
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 15
+      Top = 48
+      Width = 38
+      Caption = 'sName'
+      Font.Color = 15395562
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 104
+      Height = 23
+      Top = 40
+      Width = 239
+      Font.Style = [fsBold]
+      OnChange = Edit1Change
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 88
+      Width = 65
+      Caption = 'Short name'
+      Font.Color = 15395562
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit2: TEdit
+      Left = 104
+      Height = 23
+      Top = 80
+      Width = 152
+      Font.Style = [fsBold]
+      OnChange = Edit1Change
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 8
+      Height = 20
+      Top = 112
+      Width = 100
+      Caption = 'DMX channels'
+      Font.Color = 15395562
+      Font.Height = 20
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object BDeleteMode: TSpeedButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 465
+      Height = 24
+      Top = 6
+      Width = 24
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      Images = DataModule1.ImageList1
+      ImageIndex = 2
+      OnClick = BDeleteModeClick
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = Label1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label1
+      Left = 60
+      Height = 20
+      Top = 8
+      Width = 37
+      BorderSpacing.Left = 8
+      Caption = 'Label'
+      Font.Color = 15395562
+      Font.Height = 20
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object PanelTools: TPanel
+      AnchorSideRight.Side = asrBottom
+      Left = 346
+      Height = 26
+      Top = 144
+      Width = 128
+      Anchors = []
+      BorderSpacing.Right = 20
+      BevelOuter = bvNone
+      ClientHeight = 26
+      ClientWidth = 128
+      TabOrder = 2
+      Visible = False
+      object BEditChannel: TSpeedButton
+        AnchorSideLeft.Control = BDown
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 68
+        Height = 24
+        Hint = 'Modify channel'
+        Top = 0
+        Width = 24
+        BorderSpacing.Left = 10
+        Images = DataModule1.ImageList1
+        ImageIndex = 6
+        OnClick = BDeleteModeClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object BDeleteChannel: TSpeedButton
+        AnchorSideLeft.Control = BEditChannel
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 102
+        Height = 24
+        Hint = 'Delete channel'
+        Top = 0
+        Width = 24
+        BorderSpacing.Left = 10
+        Images = DataModule1.ImageList1
+        ImageIndex = 2
+        OnClick = BDeleteModeClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object BUp: TSpeedButton
+        AnchorSideLeft.Control = PanelTools
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 0
+        Height = 24
+        Hint = 'Move the channel up'
+        Top = 0
+        Width = 24
+        Images = DataModule1.ImageList1
+        ImageIndex = 10
+        OnClick = BDeleteModeClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object BDown: TSpeedButton
+        AnchorSideLeft.Control = BUp
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 34
+        Height = 24
+        Hint = 'Move the channel down'
+        Top = 0
+        Width = 24
+        BorderSpacing.Left = 10
+        Images = DataModule1.ImageList1
+        ImageIndex = 11
+        OnClick = BDeleteModeClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+    object Label6: TLabel
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      Left = 239
+      Height = 15
+      Top = 63
+      Width = 104
+      Anchors = [akTop, akRight]
+      Caption = 'sname already used'
+      Font.Color = 6974207
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object Label7: TLabel
+      AnchorSideTop.Control = Edit2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit2
+      AnchorSideRight.Side = asrBottom
+      Left = 152
+      Height = 15
+      Top = 103
+      Width = 104
+      Anchors = [akTop, akRight]
+      Caption = 'sname already used'
+      Font.Color = 6974207
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+  end
+end

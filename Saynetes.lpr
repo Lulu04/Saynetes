@@ -11,9 +11,9 @@ uses
   frame_sequencer, u_common, lazcontrols, frame_viewcmdlist, u_resource_string,
   u_list_top, frame_cmd_audio, frame_viewaudiolist, u_projectwizard,
   frame_viewtoplist, u_top_player, frame_viewdmxlibrary,
-  frame_viewfixturechannels, u_newfixturewizard, u_dmxlib_inputrange,
+  frame_viewfixturechannels, u_editfixturewizard, u_dmxlib_inputrange,
   u_user_askconfirmation, u_user_showmessage, u_user_inputstring, u_userdialogs,
-  u_editfixture, frame_editstring, frame_viewdmxcursors, u_dmxtools_channels,
+  frame_editstring, frame_viewdmxcursors, u_dmxtools_channels,
   u_notebook_util, u_dmxtools_rgb, frame_viewuniverselist,
   frame_viewchannelslist, u_dmxtools_group, u_edit_otheraction,
   frame_fx_channelchaser, u_helper, u_add_action_audio, u_devicemanager_form,
@@ -26,7 +26,9 @@ uses
   frame_viewprojectors, u_global_var, frame_main_audio, frame_main_sequence,
   frame_main_addfixture, u_project_options, project_util, form_about,
 u_apputils, frame_viewfixtureimage, form_changefixtureimage,
-u_edit_singleaction;
+u_edit_singleaction, frame_viewfixtureoverview, frame_editmode,
+form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
+form_editweblink;
 
 {$R *.res}
 

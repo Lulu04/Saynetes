@@ -1,10 +1,6 @@
 {"version":1,"strings":[
 {"hash":45130473,"name":"tformdmxlibrary.caption","sourcebytes":[68,77,88,32,108,105,98,114,97,114,121],"value":"DMX library"},
-{"hash":224097765,"name":"tformdmxlibrary.speedbutton1.caption","sourcebytes":[78,101,119,32,102,105,120,116,117,114,101],"value":"New fixture"},
-{"hash":196112718,"name":"tformdmxlibrary.speedbutton2.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},
-{"hash":5404860,"name":"tformdmxlibrary.lblfixturename.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":5404860,"name":"tformdmxlibrary.lblfixturepower.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":243613091,"name":"tformdmxlibrary.label1.caption","sourcebytes":[115,67,104,97,110,110,101,108,115],"value":"sChannels"},
-{"hash":71624698,"name":"tformdmxlibrary.label2.caption","sourcebytes":[80,111,119,101,114,32,109,97,120,32,58],"value":"Power max :"},
-{"hash":125449877,"name":"tformdmxlibrary.speedbutton3.caption","sourcebytes":[115,67,108,111,115,101],"value":"sClose"}
+{"hash":224097765,"name":"tformdmxlibrary.bnewfixture.caption","sourcebytes":[78,101,119,32,102,105,120,116,117,114,101],"value":"New fixture"},
+{"hash":196112718,"name":"tformdmxlibrary.beditfixture.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},
+{"hash":243613091,"name":"tformdmxlibrary.label1.caption","sourcebytes":[115,67,104,97,110,110,101,108,115],"value":"sChannels"}
 ]}

@@ -6,7 +6,7 @@ unit u_helper;
 interface
 
 uses
-  Classes, SysUtils, Graphics,
+  Classes, SysUtils, Graphics, StdCtrls,
   u_common, u_list_dmxuniverse,
   frame_bglvirtualscreen_sequencer;
 
@@ -95,9 +95,157 @@ TTStepListHelper = class helper for TStepList
 end;
 
 
+{ TManufacturersHelper }
+
+TManufacturersHelper = type helper for TManufacturers
+  procedure Load;
+  procedure FillComboBoxWithName(aCB: TComboBox);
+  function IndexOfName(const aManufacturerName: string): integer;
+end;
+
+
+{ TFixLibAvailableChannelsHelper }
+
+TFixLibAvailableChannelsHelper = type helper for TFixLibAvailableChannels
+  function GetChannelsByName(const aName: string): PFixLibAvailableChannel;
+  function NameToIndex(const aName: string): integer;
+end;
+
+
+{ TWebLinksHelper }
+
+TWebLinksHelper = type helper for TWebLinks
+  procedure LoadFrom(t: TStringList);
+  procedure SaveTo(t: TStringList);
+  procedure CopyTo(var aTarget: TWebLinks);
+end;
+
+
 implementation
 
-uses frame_sequencer, u_utils;
+uses frame_sequencer, u_utils, u_apputils, PropertyUtils;
+
+{ TWebLinksHelper }
+
+procedure TWebLinksHelper.LoadFrom(t: TStringList);
+var i, k: integer;
+  prop: TProperties;
+  s: string;
+begin
+  Self := NIL;
+  k := t.IndexOf('[LINKS]');
+  if (k = -1) or (k = t.Count-1) then exit;
+
+  prop.Split(t.Strings[k+1], '|');
+  // retrieve the number of links
+  k := 0;
+  repeat
+   inc(k);
+  until not prop.CheckProperties(['LinkType'+k.ToString]);
+
+  SetLength(Self, k-1);
+  s := '';
+  for i:=0 to High(Self) do begin
+    prop.StringValueOf('LinkType'+(i+1).ToString, s, '');
+    Self[i].LinkType := s;
+    prop.StringValueOf('Url'+(i+1).ToString, s, '');
+    Self[i].Url := s;
+  end;
+end;
+
+procedure TWebLinksHelper.SaveTo(t: TStringList);
+var i: integer;
+  prop: TProperties;
+begin
+  if Length(Self) = 0 then exit;
+
+  prop.Init('|');
+  for i:=0 to High(Self) do begin
+    prop.Add('LinkType'+(i+1).ToString, Self[i].LinkType);
+    prop.Add('Url'+(i+1).ToString, Self[i].Url);
+  end;
+  t.Add('[LINKS]');
+  t.Add(prop.PackedProperty);
+end;
+
+procedure TWebLinksHelper.CopyTo(var aTarget: TWebLinks);
+var i: integer;
+begin
+  aTarget := NIL;
+  SetLength(aTarget, Length(Self));
+  for i:=0 to High(Self) do
+    Self[i].CopyTo(aTarget[i]);
+end;
+
+{ TFixLibAvailableChannelsHelper }
+
+function TFixLibAvailableChannelsHelper.GetChannelsByName(const aName: string): PFixLibAvailableChannel;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].NameID = aName then begin
+      Result := @Self[i];
+      exit;
+    end;
+  Result := NIL;
+end;
+
+function TFixLibAvailableChannelsHelper.NameToIndex(const aName: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].NameID = aName then exit(i);
+  Result := -1;
+end;
+
+{ TManufacturersHelper }
+
+procedure TManufacturersHelper.Load;
+var t: TStringList;
+  i, j: integer;
+  prop: TProperties;
+  nam, folder, web: string;
+begin
+  nam := '';
+  folder := '';
+  Self := NIL;
+  t := TStringList.Create;
+  try
+    t.LoadFromFile(GetAppDMXLibraryFolder + MANUFACTURER_LIST);
+    SetLength(Self, t.Count);
+    j := 0;
+    for i:=0 to t.Count-1 do begin
+      prop.Split(t.Strings[i], '|');
+      if prop.StringValueOf('Name', nam, '') and
+         prop.StringValueOf('Folder', folder, '') then begin
+        Self[j].Folder := folder;
+        Self[j].Name := nam;
+        if prop.StringValueOf('Web', web, '') then Self[j].WebSite := web
+          else Self[j].WebSite := '';
+        inc(j);
+      end;
+    end;
+    if j < t.Count then SetLength(Self, j);
+  finally
+    t.Free;
+  end;
+end;
+
+procedure TManufacturersHelper.FillComboBoxWithName(aCB: TComboBox);
+var i: integer;
+begin
+  aCB.Clear;
+  for i:=0 to High(Self) do
+    aCB.Items.Add(Self[i].Name);
+end;
+
+function TManufacturersHelper.IndexOfName(const aManufacturerName: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].Name = aManufacturerName then exit(i);
+  Result := -1;
+end;
 
 
 { TTStepListHelper }

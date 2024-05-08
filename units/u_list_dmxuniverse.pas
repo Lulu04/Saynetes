@@ -10,7 +10,7 @@ uses
   fgl,
   BGRABitmapTypes,
   u_dmxdevice_manager,
-  u_common, VelocityCurve, u_utils, u_audio_manager;
+  u_common, VelocityCurve, u_utils, u_audio_manager, PropertyUtils;
 
 
 
@@ -45,6 +45,8 @@ type
   TChannelRange = record
     private
       FText: string;
+      FExtra: string;
+      procedure SetExtra(AValue: string);
       procedure SetText(AValue: string);
     public
       BeginValue,
@@ -54,13 +56,21 @@ type
       procedure Decode(s: string);
       function Encode: string;
       property Text: string read FText write SetText; // range description
+      property Extra: string read FExtra write SetExtra;
     end;
+  TArrayOfChannelRange = array of TChannelRange;
 
+{$define SectionInterface}
+{$I fixture_fromlibrary.inc}
+{$undef SectionInterface}
 
+type
   { TBaseDMXChannel }
   TBaseDMXChannel = class
    private
+     FDefaultValue: byte;
     FPercentValue: single;
+    procedure SetDefaultValue(AValue: byte);
     procedure SetPercentValue(AValue: single);
    public
     EffectPainted: integer;
@@ -69,7 +79,7 @@ type
     RangeIndexPainted: integer;
    public
     Name: string;
-    Ranges: array of TChannelRange;
+    Ranges: TArrayOfChannelRange;
     ChannelType: TChannelType;
     Universe: TDmxUniverse;
     Fixture: TDMXFixture;
@@ -91,6 +101,7 @@ type
     function CurrentTextRange: string;
 
     function ByteValue: byte;
+    property DefaultValue: byte read FDefaultValue write SetDefaultValue;
     // [0..1]
     property PercentValue: single read FPercentValue write SetPercentValue;
   end;
@@ -157,26 +168,6 @@ type
   TDMXChannelsList = class(specialize TFPGObjectList<TDmxChannel>);
   ArrayOfDmxChannels = array of TDmxChannel;
 
-  // On some fixtures, some dips must be set to ON or OFF to enable dmx control mode
-  TDipSwitchFunction = (dsfAdress, // dip sets the adress
-                        dsfOn,     // dip must be set to ON
-                        dsfOff     // dip must be set to OFF
-                       );
-  ArrayOfDipSwitchFunction = array of TDipSwitchFunction;
-  { TDipSwitch }
-
-  TDipSwitch = record
-    OnIsUp: boolean; // true if the up position means ON
-    MSBIsLeft: boolean; // true if the msb bit is on the left
-    Functions: ArrayOfDipSwitchFunction;
-    procedure InitByDefault;
-    procedure LoadFrom(aDipSwitch: TDipSwitch);
-    procedure LoadFrom(t: TStringList);
-    procedure SaveTo(t: TStringList);
-    function AdressBitCount: integer;
-  end;
-
-
   { TDMXFixture }
 
   TDMXFixture = class
@@ -230,10 +221,10 @@ type
      FlipH, FlipV,
      Selected: boolean;
    public
+     FixLibLocation: TFixtureLibraryLocation; // the infos to locate the fixture in the dmx library
      Name: string;
      Description: string;
      ID: cardinal;
-     FullFilename: string;
      Power,
      Weight: integer;
      FixtureType: TFixtureType;
@@ -325,7 +316,12 @@ type
      // Fixture
      function FixturesCount: integer;
      procedure Fixture_Add(f: TDmxFixture);
-     function Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
+// TO DELETE
+//     function Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
+     // IS REPLACED BY THIS ONE
+     function Fixture_AddFromFixLib(const aLibFix: TLibraryFixture;
+                                    const aFixtureLocation: TFixtureLibraryLocation): TDmxFixture;
+
      function Fixture_GetByID(aID: cardinal): TDmxFixture;
      function Fixture_WhichContainsThisAdress(aAdress: TDMXAdress): TDMXFixture;
 
@@ -440,81 +436,12 @@ var
 
 
 implementation
-uses u_resource_string, u_helper, u_logfile, u_dmx_util,
-  Math, LCLIntf, u_global_var, u_project_manager, u_apputils;
+uses u_resource_string, u_logfile, u_dmx_util,
+  Math, LCLIntf, u_global_var, u_project_manager, u_apputils, u_helper;
 
-{ TDipSwitch }
-const
-      DIPSWITCH_HEADER = '[DIPSWITCH]';
-
-
-procedure TDipSwitch.InitByDefault;
-begin
-  OnIsUp := TRUE;
-  SetLength(Functions, 0);
-end;
-
-procedure TDipSwitch.LoadFrom(aDipSwitch: TDipSwitch);
-var i: integer;
-begin
-  OnIsUp := aDipSwitch.OnIsUp;
-  MSBIsLeft := aDipSwitch.MSBIsLeft;
-  SetLength(Functions, Length(aDipSwitch.Functions));
-  for i:=0 to High(Functions) do
-    Functions[i] := aDipSwitch.Functions[i];
-end;
-
-procedure TDipSwitch.LoadFrom(t: TStringList);
-var A: TStringArray;
-  i, k: integer;
-begin
-  k := t.indexOf(DIPSWITCH_HEADER);
-  if k = -1 then
-   InitByDefault
-  else
-  begin
-    A := t.Strings[k+1].SplitToArray(DIPSWITCH_SEPARATOR);
-    OnIsUp := A[0]='OnIsUp';
-    MSBIsLeft := A[1]='MSBIsLeft';
-    SetLength(Functions, A[2].ToInteger);
-    k := 3;
-    for i:=0 to High(Functions) do begin
-      Functions[i] := TDipSwitchFunction(A[k].ToInteger);
-      inc(k);
-    end;
-  end;
-end;
-
-procedure TDipSwitch.SaveTo(t: TStringList);
-var i: integer;
-  s: string;
-begin
-  if Length(Functions)=0 then
-    exit;
-
-  t.Add(DIPSWITCH_HEADER);
-  if OnIsUp then
-    s := 'OnIsUp'+DIPSWITCH_SEPARATOR
-  else
-    s := 'OnIsDown'+DIPSWITCH_SEPARATOR;
-  if MSBIsLeft then
-    s := s+'MSBIsLeft'+DIPSWITCH_SEPARATOR
-  else
-    s := s+'MSBIsRight'+DIPSWITCH_SEPARATOR;
-  s := s+Length(Functions).ToString;
-  for i:=0 to High(Functions) do
-    s := s+DIPSWITCH_SEPARATOR+Ord(Functions[i]).ToString;
-  t.Add(s);
-end;
-
-function TDipSwitch.AdressBitCount: integer;
-var i: integer;
-begin
-  Result := 0;
-  for i:=0 to High(Functions) do
-    if Functions[i]=dsfAdress then
-      inc(Result);
-end;
+{$define SectionImplementation}
+{$include fixture_fromlibrary.inc}
+{$undef SectionImplementation}
 
 { TDMXChannel }
 
@@ -794,6 +721,13 @@ begin
   FPercentValue := AValue;
 end;
 
+procedure TBaseDMXChannel.SetDefaultValue(AValue: byte);
+begin
+  if FDefaultValue = AValue then Exit;
+  FDefaultValue := AValue;
+  FPercentValue := FDefaultValue/255;
+end;
+
 constructor TBaseDMXChannel.Create;
 begin
  Name := SUnknown;
@@ -865,8 +799,13 @@ end;
 procedure TChannelRange.SetText(AValue: string);
 begin
   if FText = AValue then Exit;
-  FText := AValue;
-  FText := ReplaceForbidenCharByUnderscore(FText, FIXTURESEPARATOR+CHANNELRANGESEPARATOR+CHANNELRANGEPARAMSEPARATOR);
+  FText := ReplaceForbidenCharByUnderscore(AValue, FIXTURESEPARATOR+CHANNELRANGESEPARATOR+CHANNELRANGEPARAMSEPARATOR);
+end;
+
+procedure TChannelRange.SetExtra(AValue: string);
+begin
+  if FExtra = AValue then Exit;
+  FExtra := ReplaceForbidenCharByUnderscore(AValue, FIXTURESEPARATOR+CHANNELRANGESEPARATOR+CHANNELRANGEPARAMSEPARATOR);
 end;
 
 function TChannelRange.Duplicate: TChannelRange;
@@ -897,7 +836,7 @@ var chan: TDMXChannel;
     i: integer;
 begin
   prop.Init(FIXTURESEPARATOR);
-  prop.Add('Fixture', PathRelativeToDMXLibrary(FullFilename));
+  prop.Add('FixtureLocation', FixLibLocation.SaveToString);
   prop.Add('ID', integer(ID));
   prop.Add('Adress', Adress);
   prop.Add('Description', Description);
@@ -907,7 +846,6 @@ begin
   prop.Add('Zoom', Zoom);
   prop.Add('FlipH', FlipH);
   prop.Add('FlipV', FlipV);
-  prop.Add('ChannelCount', FChannels.Count);
   i := 1;
   for chan in FChannels do
   begin
@@ -917,25 +855,10 @@ begin
   end;
 
   Result := prop.PackedProperty
-
-{ Result := PathRelativeToDMXLibrary(FullFilename)+FIXTURESEPARATOR+
-           ID.ToString+FIXTURESEPARATOR+
-           Adress.ToString+FIXTURESEPARATOR+
-           Description+FIXTURESEPARATOR+
-           FormatFloat('0.000', ScreenPos.x)+FIXTURESEPARATOR+
-           FormatFloat('0.000', ScreenPos.y)+FIXTURESEPARATOR+
-           FormatFloat('0.000', Angle)+FIXTURESEPARATOR+
-           FormatFloat('0.000', Zoom)+FIXTURESEPARATOR+
-           FlipH.ToInteger.ToString+FIXTURESEPARATOR+
-           FlipV.ToInteger.ToString+FIXTURESEPARATOR+
-           FChannels.Count.ToString;
- for chan in FChannels do
-   Result := Result+FIXTURESEPARATOR+chan.Name+
-                  FIXTURESEPARATOR+chan.Locked.ToInteger.ToString;  }
 end;
 
 function TDMXFixture.LoadFromString(const s: string): boolean;
-var i, c, vi: integer;
+var i, j, vi: integer;
   libfix: TLibraryFixture;
   chan: TDMXChannel;
 
@@ -943,6 +866,7 @@ var i, c, vi: integer;
   s1: string;
   flag, vb: boolean;
   vs: single;
+  A: TFixLibAvailableChannels;
   procedure LogMissingProperty(const apropName: string);
   begin
     Log.Error('TDMXFixture.LoadFromString - Property '+apropName+' not found', 3);
@@ -950,41 +874,38 @@ var i, c, vi: integer;
 
 begin
   vi := 0;
-  c := 0;
   vb := False;
   vs := 0;
   s1 := '';
 
   prop.Split(s, FIXTURESEPARATOR);
 
+  if not prop.StringValueOf('FixtureLocation', s1, '') then begin
+    LogMissingProperty('FixtureLocation');
+     exit(False);
+  end;
+
   try
-    flag := prop.StringValueOf('Fixture', s1, '');
-    if not flag then
-      LogMissingProperty('Fixture')
-    else
-    begin
-      s1 := AdjustDirectorySeparator(s1);
-      flag := libfix.LoadFromFile(GetAppDMXLibraryFolder+s1);
-      if flag then
-      begin
-        Name := libfix.Name;
-        Power := libfix.Power;
-        FixtureType := libfix.FixtureType;
-        FDipSwitchs.LoadFrom(libfix.DipSwitch);
-      end
-      else
-      begin
-        Log.Error('TDMXFixture.LoadFromString - Fail to load fixture "'+s1+'" from library');
-        Name := SFixtureNotInLibrary;
-        Power := 0;
-        FixtureType := ftOther;
-        FDipSwitchs.InitByDefault;
-      end;
+    FixLibLocation.LoadFromString(s1);
+    if libfix.LoadFrom(FixLibLocation) then begin
+      Name := libfix.General.FixtureName;
+      Power := libfix.Physical.Power;
+      FixtureType := libfix.General.FixtureType;
+      FDipSwitchs.LoadFrom(libfix.DipSwitchs);
+    end else begin
+      Log.Error('TDMXFixture.LoadFromString - Fail to load fixture "'+FixLibLocation.RelativePathInLibrary+'" from library');
+      Name := SFixtureNotInLibrary;
+      Power := 0;
+      FixtureType := ftOther;
+      FDipSwitchs.InitDefault;
+      exit(False);
     end;
 
-    FullFilename := ConcatPaths([GetAppDMXLibraryFolder, s1]);
-    if not prop.IntegerValueOf('ID', integer(ID), 0) then
+    flag := prop.IntegerValueOf('ID', integer(ID), 0);
+    if not flag then begin
       LogMissingProperty('ID');
+      exit(False);
+    end;
 
     if not prop.StringValueOf('Description', Description, '') then
       LogMissingProperty('Description');
@@ -1009,99 +930,53 @@ begin
     if not prop.BooleanValueOf('FlipV', FlipV, False) then
       LogMissingProperty('FlipV');
 
-    if not prop.IntegerValueOf('ChannelCount', c, 1) then
-      LogMissingProperty('ChannelCount');
+//    if not prop.IntegerValueOf('ChannelCount', c, 1) then
+//      LogMissingProperty('ChannelCount');
 
-    for i:=1 to c do
+    A := libfix.GetChannelsForMode(FixLibLocation.Mode);
+    if Length(A) = 0 then begin
+      Log.Error('TDMXFixture.LoadFromString - no channel found in fixture "'+FixLibLocation.RelativePathInLibrary+'"', 1);
+      exit(False);
+    end;
+
+    for i:=0 to High(A) do
      begin
       chan := TDMXChannel.Create;
       chan.Fixture := Self;
       FChannels.Add(chan);
 
-      if not prop.StringValueOf('ChanName'+i.ToString, s1, SUnknown) then
-        LogMissingProperty('ChanName'+i.ToString);
+      if not prop.StringValueOf('ChanName'+(i+1).ToString, s1, SUnknown) then
+        LogMissingProperty('ChanName'+(i+1).ToString);
       chan.Name := s1;
 
-      if not prop.BooleanValueOf('Locked'+i.ToString, vb, False) then
-        LogMissingProperty('Locked'+i.ToString);
+      if not prop.BooleanValueOf('Locked'+(i+1).ToString, vb, False) then
+        LogMissingProperty('Locked'+(i+1).ToString);
       chan.Locked := vb;
 
       chan.Universe := Universe;
 
-      if flag then
-      begin
-        chan.ChannelType := libfix.Channels[i-1].ChannelType;
-        chan.Ranges := libfix.Channels[i-1].Ranges;
+      chan.ChannelType := A[i].ChanType;
+      SetLength(chan.Ranges, Length(A[i].Ranges));
+      for j:=0 to High(chan.Ranges) do begin
+       chan.Ranges[j].BeginValue := A[i].Ranges[j].BeginValue;
+       chan.Ranges[j].EndValue := A[i].Ranges[j].EndValue;
+       chan.Ranges[j].Text := A[i].Ranges[j].Text+' '+ A[i].Ranges[j].Extra;
       end;
+
+      chan.DefaultValue := A[i].DefaultValue;
     end;
 
-    if not prop.IntegerValueOf('Adress', vi, 1) then
+    if not prop.IntegerValueOf('Adress', vi, 1) then begin
       LogMissingProperty('Adress');
+      exit(False);
+    end;
+
     Adress := vi; // to do after channels creation !!
     UpdateHasRGB;
     Result := TRUE;
   except
     Result := FALSE;
   end;
-
-{
-  try
-    A := s.Split([FIXTURESEPARATOR]);
-    flag := libfix.LoadFromFile(DMXLibraryPath+AdjustDirectorySeparator(A[0]));
-    if flag then
-    begin
-      Name := libfix.Name;
-      Power := libfix.Power;
-      FixtureType := libfix.FixtureType;
-      FDipSwitchs.LoadFrom(libfix.DipSwitch);
-    end
-    else
-    begin
-      Name := SFixtureNotInLibrary;
-      Power := 0;
-      FixtureType := ftOther;
-    end;
-
-    FullFilename := ConcatPaths([DMXLibraryPath, A[0]]);
-    ID := A[1].ToInteger;
-    Description := A[3];
-    ScreenPos.x := StringToSingle(A[4]);
-    ScreenPos.y := StringToSingle(A[5]);
-    Angle := StringToSingle(A[6]);
-    Zoom := StringToSingle(A[7]);
-    FlipH := A[8].ToInteger.ToBoolean;
-    FlipV := A[9].ToInteger.ToBoolean;
-    c := A[10].ToInteger;
-    k := 11;
-    for i:=0 to c-1 do
-     begin
-      chan := TDMXChannel.Create;
-      chan.Fixture := Self;
-      FChannels.Add(chan);
-      chan.Name := A[k];
-      inc(k);
-      chan.Universe := Universe;
-
-      if High(A) >= k then
-      begin
-        chan.Locked := A[k].ToInteger.ToBoolean;
-        inc(k);
-      end;
-
-      if flag then
-      begin
-         chan.ChannelType := libfix.Channels[i].ChannelType;
-         chan.Ranges := libfix.Channels[i].Ranges;
-      end;
-
-    end;
-    Adress := A[2].ToInteger; // to do after channels creation
-    UpdateHasRGB;
-    Result := TRUE;
-  except
-    Result := FALSE;
-  end;
-}
 end;
 
 constructor TDMXFixture.Create;
@@ -1113,7 +988,6 @@ begin
   FlipH := FALSE;
   FlipV := FALSE;
   ID := 0;
-  FullFilename := '';
   FixtureType := ftOther;
   Power := 0;
   FUniverse := NIL;
@@ -1121,7 +995,7 @@ begin
   Name := '';
   Description := '';
   FHASRGBChannel := FALSE;
-  FDipSwitchs.InitByDefault;
+  FDipSwitchs.InitDefault;
 end;
 
 destructor TDMXFixture.Destroy;
@@ -1470,7 +1344,7 @@ begin
   DoOptimizeUsedChannels;
 end;
 
-function TDmxUniverse.Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
+{function TDmxUniverse.Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
 var libfix: TLibraryFixture;
   f: TDmxFixture;
   chan: TDMXChannel;
@@ -1500,6 +1374,36 @@ begin
 
   Fixture_Add(f);
   Result := f;
+end; }
+
+function TDmxUniverse.Fixture_AddFromFixLib(const aLibFix: TLibraryFixture;
+  const aFixtureLocation: TFixtureLibraryLocation): TDmxFixture;
+var A: TFixLibAvailableChannels;
+  i, j: integer;
+  chan: TDMXChannel;
+begin
+  Result := TDmxFixture.Create;
+  aFixtureLocation.CopyTo(Result.FixLibLocation);
+  Result.FixtureType := aLibFix.General.FixtureType;
+  Result.Power := aLibFix.Physical.Power;
+  Result.Name := aLibFix.General.FixtureName;
+  Result.Universe := Self;
+  Result.DipSwitchs.LoadFrom(aLibFix.DipSwitchs);
+
+  // copy channels parameters
+  A := aLibFix.GetChannelsForMode(aFixtureLocation.Mode);
+  for i:=0 to High(A) do begin
+    chan := TDMXChannel.Create;
+    chan.Name := A[i].NameID;
+    chan.ChannelType := A[i].ChanType;
+    chan.DefaultValue := A[i].DefaultValue;
+    SetLength(chan.Ranges, Length(A[i].Ranges));
+    for j:=0 to High(chan.Ranges) do
+      A[i].Ranges[j].CopyTo(chan.Ranges[j]);
+    Result.FChannels.Add(chan);
+  end;
+
+  Fixture_Add(Result);
 end;
 
 function TDmxUniverse.Fixture_GetByID(aID: cardinal): TDmxFixture;

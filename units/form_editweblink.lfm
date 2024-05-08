@@ -1,0 +1,128 @@
+object FormEditWebLink: TFormEditWebLink
+  Left = 516
+  Height = 118
+  Top = 363
+  Width = 508
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  ClientHeight = 118
+  ClientWidth = 508
+  Color = 5201506
+  KeyPreview = True
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  object BCancel: TSpeedButton
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 403
+    Height = 20
+    Top = 88
+    Width = 65
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Top = 40
+    BorderSpacing.Right = 40
+    BorderSpacing.Bottom = 10
+    Caption = 'sCancel'
+    Color = 16433669
+    Flat = True
+    Font.Color = clWhite
+    Font.Height = 15
+    Font.Style = [fsBold]
+    Images = DataModule1.ImageList1
+    ImageIndex = 2
+    Transparent = False
+    OnClick = BOKClick
+    ParentFont = False
+  end
+  object BOK: TSpeedButton
+    AnchorSideRight.Control = BCancel
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 318
+    Height = 20
+    Top = 88
+    Width = 45
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Top = 20
+    BorderSpacing.Right = 40
+    BorderSpacing.Bottom = 10
+    Caption = 'sOk'
+    Color = 16433669
+    Flat = True
+    Font.Color = clWhite
+    Font.Height = 15
+    Font.Style = [fsBold]
+    Images = DataModule1.ImageList1
+    ImageIndex = 3
+    Transparent = False
+    OnClick = BOKClick
+    ParentFont = False
+  end
+  object Label18: TLabel
+    AnchorSideRight.Side = asrBottom
+    Left = 32
+    Height = 15
+    Top = 24
+    Width = 64
+    Caption = 'Type of link'
+    Font.Color = 15395562
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object ComboBox1: TComboBox
+    AnchorSideLeft.Control = Label18
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Label18
+    AnchorSideBottom.Side = asrBottom
+    Left = 111
+    Height = 23
+    Top = 16
+    Width = 133
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 15
+    ItemHeight = 15
+    Items.Strings = (
+      'manual'
+      'product page'
+      'video'
+      'other'
+    )
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object Label19: TLabel
+    AnchorSideRight.Side = asrBottom
+    Left = 79
+    Height = 15
+    Top = 56
+    Width = 17
+    Caption = 'Url'
+    Font.Color = 15395562
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label19
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 112
+    Height = 23
+    Top = 48
+    Width = 371
+    Anchors = [akTop]
+    BorderSpacing.Left = 15
+    TabOrder = 1
+  end
+end

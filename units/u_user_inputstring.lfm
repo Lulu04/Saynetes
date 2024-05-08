@@ -36,6 +36,7 @@ object FormUserInput: TFormUserInput
     AnchorSideRight.Control = SpeedButton2
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
     Left = 220
     Height = 20
     Top = 78
@@ -62,6 +63,7 @@ object FormUserInput: TFormUserInput
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
     Left = 330
     Height = 20
     Top = 78

@@ -1,6 +1,7 @@
 unit frame_viewprojectors;
 
 {$mode ObjFPC}{$H+}
+{$MODESWITCH ADVANCEDRECORDS}
 
 interface
 
@@ -38,6 +39,14 @@ type
                                   smRotationItem, // item selected will be rotated
                                   smZoomItem);    // item selected will be zoomed
 
+  { TFixtureToAdd }
+
+  TFixtureToAdd = record
+    FixtureLocation: TFixtureLibraryLocation;
+    TargetUniverse: TDMXUniverse;
+    procedure InitEmpty;
+    function HaveReferenceToFixture: boolean;
+  end;
 
   { TFrameViewProjector }
 
@@ -163,9 +172,8 @@ type
     function TextureHalfSize(aTex: IBGLTexture): TPointF; overload;
     function GetWordFixtureArea(aFix: TDMXFixture): TRectF;
   private
-    FFixtureFilenameToAdd: string;
+    FFixtureToAdd: TFixtureToAdd;
     FLibraryFixtureToAdd: TLibraryFixture;
-    FTargetUniverse: TDMXUniverse;
     procedure DoAddFixture(X, Y: integer);
   private
     FOnAddCmd: TNotifyEvent;
@@ -217,7 +225,7 @@ type
 
     procedure FillComboBoxUniverseToShow;
 
-    procedure FixtureFilenameToAdd(const aFilename: string; aTargetUniverse: TDMXUniverse);
+    procedure FixtureFilenameToAdd(const aFixtureLocation: TFixtureLibraryLocation; aTargetUniverse: TDMXUniverse);
     procedure ExitAddMode;
     function InAddMode: boolean;
 
@@ -271,6 +279,19 @@ uses u_project_manager, u_userdialogs, u_resource_string, u_dmxtools_group,
 
 
 {$R *.lfm}
+
+{ TFixtureToAdd }
+
+procedure TFixtureToAdd.InitEmpty;
+begin
+  FixtureLocation.InitDefault;
+  TargetUniverse := NIL;
+end;
+
+function TFixtureToAdd.HaveReferenceToFixture: boolean;
+begin
+  Result := FixtureLocation.IsFilled and (TargetUniverse <> NIL);
+end;
 
 { TFrameViewProjector }
 
@@ -420,30 +441,29 @@ begin
   UpdateComboBoxLanguage;
 end;
 
-procedure TFrameViewProjector.FixtureFilenameToAdd(const aFilename: string;
+procedure TFrameViewProjector.FixtureFilenameToAdd(const aFixtureLocation: TFixtureLibraryLocation;
   aTargetUniverse: TDMXUniverse);
 begin
-  FFixtureFilenameToAdd := '';
-  FTargetUniverse := NIL;
+  FFixtureToAdd.InitEmpty;
   FState := msReleased;
-  if (aFileName = '') or (aTargetUniverse = NIL) then
-    exit;
-  if not FLibraryFixtureToAdd.LoadFromFile(aFilename) then
-    exit;
+  if aTargetUniverse = NIL then exit;
+  if not FLibraryFixtureToAdd.LoadFrom(aFixtureLocation) then exit;
 
-  FFixtureFilenameToAdd := aFilename;
-  FTargetUniverse := aTargetUniverse;
+  aFixtureLocation.CopyTo(FFixtureToAdd.FixtureLocation);
+  FFixtureToAdd.TargetUniverse := aTargetUniverse;
 end;
 
 procedure TFrameViewProjector.ExitAddMode;
+var fixLocation: TFixtureLibraryLocation;
 begin
-  FixtureFilenameToAdd('', NIL);
+  fixLocation.InitDefault;
+  FixtureFilenameToAdd(fixLocation, NIL);
   Redraw;
 end;
 
 function TFrameViewProjector.InAddMode: boolean;
 begin
-  Result := (FTargetUniverse <> NIL) and (Length(FFixtureFilenameToAdd) > 0);
+  Result := FFixtureToAdd.HaveReferenceToFixture;
 end;
 
 procedure TFrameViewProjector.AddToSelected(aFix: TDMXFixture);
@@ -627,8 +647,8 @@ end;
 procedure TFrameViewProjector.BGLVirtualScreen1DragOver(Sender,
   Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
 begin
-  if (Source is TTreeView) and (FFixtureFilenameToAdd <> '') and
-     (FTargetUniverse <> NIL) and ModePrepaDMX then
+  if (Source is TTreeView) and FFixtureToAdd.HaveReferenceToFixture and
+     ModePrepaDMX then
   begin
     Sel_None;
     FState := msAdding;
@@ -847,6 +867,7 @@ var fix: TDMXFixture;
   txt: string;
   c: TBGRAPixel;
   alpha: byte;
+  fixType: TFixtureType;
 begin
   if not BGLVirtualScreen1.MakeCurrent(false) then
     exit;
@@ -1060,7 +1081,8 @@ begin
     // render the fixture to add under mouse cursor
     if FState = msAdding then
     begin
-      tex := TextureFor(FLibraryFixtureToAdd.FixtureType);
+      fixType := FLibraryFixtureToAdd.General.FixtureType;
+      tex := TextureFor(fixType);
       w := tex.Width*FZoom;
       h := tex.Height*FZoom;
       p := PointF(BGLVirtualScreen1.ScreenToClient(Mouse.CursorPos));
@@ -1068,11 +1090,11 @@ begin
       p.y := p.y-h*0.5;
       p := ClientToWord(p.Truncate);
 
-      if p.x < 0 then tex.ToggleFlipX;
-      if p.y > 0 then tex.ToggleFlipY;
+      if (p.x < 0) and FixtureCanFlipH[fixType] then tex.ToggleFlipX;
+      if (p.y > 0) and FixtureCanFlipV[fixType] then tex.ToggleFlipY;
       tex.Draw(p.x, p.y);
-      if p.x < 0 then tex.ToggleFlipX;
-      if p.y > 0 then tex.ToggleFlipY;
+      if (p.x < 0) and FixtureCanFlipH[fixType] then tex.ToggleFlipX;
+      if (p.y > 0) and FixtureCanFlipV[fixType] then tex.ToggleFlipY;
     end;
 
 
@@ -1806,16 +1828,24 @@ end;
 procedure TFrameViewProjector.DoAddFixture(X, Y: integer);
 var fix: TDMXFixture;
   adress: TDMXAdress;
+  targetUni: TDMXUniverse;
+  chanCount: integer;
 begin
-  // check if there is enough dmx adress available in the target universe to fit all channels
-  if not FTargetUniverse.FirstFreeAdress(Length(FLibraryFixtureToAdd.Channels), adress) then
-  begin
-    ShowMess(SUniverseFull+lineending+FTargetUniverse.Name, SOk, mtError);
+  targetUni := FFixtureToAdd.TargetUniverse;
+  if targetUni = NIL then begin
     ExitAddMode;
     exit;
   end;
 
-  fix := FTargetUniverse.Fixture_AddFromDMXLib(FFixtureFilenameToAdd);
+  // check if there is enough dmx adress available in the target universe to fit all channels
+  chanCount := FLibraryFixtureToAdd.GetChannelCountForMode(FFixtureToAdd.FixtureLocation.Mode);
+  if not targetUni.FirstFreeAdress(chanCount, adress) then begin
+    ShowMess(SUniverseFull+lineending+targetUni.Name, SOk, mtError);
+    ExitAddMode;
+    exit;
+  end;
+
+  fix := targetUni.Fixture_AddFromFixLib(FLibraryFixtureToAdd, FFixtureToAdd.FixtureLocation);
   if fix = NIL then
   begin
     ShowMess(SFailToLoadTheFixtureFromLibrary, SOk, mtError);
@@ -1828,7 +1858,7 @@ begin
   fix.FlipH := fix.ScreenPos.x<0;
   fix.FlipV := fix.ScreenPos.y>0;
   fix.Selected := TRUE;
-  FTargetUniverse.DoOptimizeUsedChannels;
+  targetUni.DoOptimizeUsedChannels;
   InternalAddToSelected(fix);
   FrameViewDMXCursors1.Add(fix, True);
   Redraw;

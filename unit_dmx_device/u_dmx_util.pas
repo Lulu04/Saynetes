@@ -12,31 +12,8 @@ uses
 
 
   //------------------------------
-  //  BIBLIOTHEQUE DMX
+  //  DMX LIBRARY
   //------------------------------
-type
-
-  // fixture records to manage dmx library
-  TLibraryFixtureChannel=record
-    Name: string;
-    ChannelType: TChannelType;
-    Ranges: array of TChannelRange;
-  end;
-
-  ArrayOfLibraryFixtureChannel=array of TLibraryFixtureChannel;
-
-
-  { TLibraryFixture }
-
-  TLibraryFixture=record
-    FixtureType: TFixtureType;
-    Power: integer;
-    Name: string;
-    Channels: ArrayOfLibraryFixtureChannel;
-    DipSwitch: TDipSwitch;
-    function LoadFromFile( const aFileName: string ): boolean;
-    function SaveToFile( const aFileName: string ): boolean;
-  end;
 
   function PathRelativeToDMXLibrary(const aFullFileName: string): string;
   // DirectorySeparator is : under Unix '/'
@@ -57,6 +34,7 @@ type
 
   // fill a TImage with an image according an TFixtureType passed as parameter
   procedure ShowFixtureImage( aImage:TImage; aFT:TFixtureType );
+  procedure ShowFixtureImage(aImage: TImage; const aFixtureLocation: TFixtureLibraryLocation);
 
   function DMXCursorImageFileNameFor(aCT: TChanneltype): string;
 
@@ -70,6 +48,9 @@ type
 
 
   function GetFixtureFromCmd(const aCmd: TSingleCmd): TDMXFixture;
+
+
+  function GetFixtureModeNames(const aFixtureFilename: string): TStringArray;
 
 type
 
@@ -101,7 +82,8 @@ type
   end;
 
 implementation
-uses LazFileUtils, u_helper, u_apputils, u_dmxdevice_manager, utilitaire_bgrabitmap;
+uses LazFileUtils, u_helper, u_apputils, u_logfile, u_dmxdevice_manager,
+  utilitaire_bgrabitmap;
 
 
 function PathRelativeToDMXLibrary(const aFullFileName: string): string;
@@ -182,6 +164,8 @@ begin
   ftParLongBulb: Result+='20_ParLongBulb.svg';
   ftFan: Result+='21_Fan.svg';
   ftLaser: Result+='22_Laser.svg';
+  ftParSmallTransparentLed: Result+='23_ParSmallTransparentLed.svg';
+  ftFlower01: Result+='24_Flower01.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -212,6 +196,8 @@ begin
    ftParLongBulb: Result := SParLongBulb;
    ftFan: Result := SFan;
    ftLaser: Result := SLaser;
+   ftParSmallTransparentLed: Result := SSmallPar;
+   ftFlower01: Result+=SFlower01;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
@@ -253,6 +239,14 @@ begin
   aImage.Tag := ord(aFT);
 end;
 
+procedure ShowFixtureImage(aImage: TImage; const aFixtureLocation: TFixtureLibraryLocation);
+var fixLib: TLibraryFixture;
+begin
+  fixlib.InitDefault;
+  if fixLib.LoadFrom(aFixtureLocation) then ShowFixtureImage(aImage, fixLib.General.FixtureType)
+    else aImage.Picture.Assign(NIL);
+end;
+
 function DMXCursorImageFileNameFor(aCT: TChanneltype): string;
 begin
   Result := GetAppCursorImagesFolder;
@@ -291,6 +285,8 @@ begin
     ctZOOM: Result:=Result+'CursorZoom.svg';
     ctFOCUS: Result:=Result+'CursorFocus.svg';
     ctROTATION: Result:=Result+'CursorRotation.svg';
+    ctPANSPEED: Result:=Result+'CursorPanSpeed.svg';
+    ctTILTSPEED: Result:=Result+'CursorTiltSpeed.svg';
     else Result:='';
   end;//case
 end;
@@ -372,6 +368,24 @@ begin
 
     else Result:=NIL;
   end;//case
+end;
+
+function GetFixtureModeNames(const aFixtureFilename: string): TStringArray;
+var t: TStringList;
+  i: integer;
+  modes: TFixLibModes;
+begin
+  Result := NIL;
+  t := TStringList.Create;
+  try
+    t.LoadFromFile(aFixtureFilename);
+    LoadModesFrom(t, @modes);
+    SetLength(Result, Length(modes));
+      for i:=0 to High(modes) do
+        Result[i] := modes[i].Name;
+  finally
+    t.Free;
+  end;
 end;
 
 { TDevicePathHelper }
@@ -458,76 +472,6 @@ begin
   IDUni:=A[0].ToInteger;
   IDFix:=A[1].ToInteger;
   ChanIndex:=A[2].ToInteger;
-end;
-
-{ TLibraryFixture }
-
-function TLibraryFixture.LoadFromFile(const aFileName: string): boolean;
-var t: TStringList;
-    i, j, k, ft: integer;
-begin
-  DipSwitch.InitByDefault;
-  t:=TStringList.Create;
-  try
-    t.LoadFromFile(aFileName);
-    if not TryStrToInt( t.Strings[0], ft )   // fixture type
-      then ft:=ord(ftOther);
-    FixtureType:=TFixtureType(ft);
-    Power:=t.Strings[1].ToInteger; // power
-    Name:=t.Strings[2];            // name
-    SetLength(Channels, t.Strings[3].ToInteger);   // channel count
-    k:=4;
-    for i:=0 to High(Channels) do begin
-      Channels[i].ChannelType:=TChannelType(t.Strings[k].ToInteger); // channel type
-      Channels[i].Name:=t.Strings[k+1];  // channel name
-      SetLength(Channels[i].Ranges, t.Strings[k+2].ToInteger); // range count
-      inc(k,3);
-      for j:=0 to High(Channels[i].Ranges) do begin
-        Channels[i].Ranges[j].Decode(t.Strings[k]);
-        inc(k);
-      end;
-    end;
-    DipSwitch.LoadFrom(t);
-    Result:=TRUE;
-  except
-    SetLength(Channels, 1);
-    Channels[0].ChannelType:=ctDimmer; // channel type
-    Channels[0].Name:=SUnknown;  // channel name
-    SetLength(Channels[0].Ranges, 1); // range count
-    with Channels[0].Ranges[0] do begin
-      BeginValue:=0;
-      EndValue:=255;
-      Text:=SUnknown;
-    end;
-    Result:=FALSE;
-  end;
-  t.Free;
-end;
-
-function TLibraryFixture.SaveToFile(const aFileName: string): boolean;
-var t: TStringList;
-    i, j: integer;
-begin
-  t:=TStringList.Create;
-  t.Add(Ord(FixtureType).ToString);
-  t.Add(Power.ToString);
-  t.Add(Name);
-  t.Add(Length(Channels).ToString);
-  for i:=0 to High(Channels) do begin
-    t.Add(Ord(Channels[i].ChannelType).ToString);
-    t.Add(Channels[i].Name);
-    t.Add(Length(Channels[i].Ranges).ToString);
-    for j:=0 to High(Channels[i].Ranges) do
-      t.Add(Channels[i].Ranges[j].Encode);
-  end;
-  DipSwitch.SaveTo(t);
-  try
-    t.SaveToFile(aFileName);
-    Result:=TRUE;
-  except
-    Result:=FALSE;
-  end;
-  t.Free;
 end;
 
 end.

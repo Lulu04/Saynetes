@@ -98,6 +98,20 @@ resourcestring
   SGreen='Green';
   SBlue='Blue';
 
+  SManufacturer='Manufacturer';
+  SAuthors='Authors';
+  SDimensions='Dimensions';
+  SWidth='Width';
+  SHeight='Height';
+  SDepth='Depth';
+  SWeight='Weight';
+  SConnector='Connector';
+  SBulb='Bulb';
+  SLumens='Lumens';
+  SLens='Lens';
+  SMinDegree='Min degree';
+  SMaxDegree='Max degree';
+  SWebLinks='Web links';
   SManufacturerName='Manufacturer name:';
   SNameOfTheFixture='Name of the fixture:';
   SModeName='Mode name (optional):';
@@ -108,9 +122,8 @@ resourcestring
   SLastRangeShouldEndOn255=' last range should end on 255';
   SStartValueMustBeGreaterThanEndValue=' start value must be lower than end value';
   SADiscontinuityAppearsOnTheRange=' a discontinuity appears on the range';
-  SPowerValueMustBeAnIntegerGreaterThanZero='Power value must be an integer greater than zero';
   STheFixtureWasCreatedSuccessfully='The fixture was created successfully !';
-  SWouldYouLikeToDefineAnotherModeForThisFixture='Would you like to define another mode for this fixture ?';
+  SPower='Power';
   SWatt='Watt';
 
   SVolume='Volume';
@@ -411,6 +424,17 @@ resourcestring
 
   SNotConnected='NOT CONNECTED';
 
+  SCanNotOpenTheFile='Can not open the file';
+  STheFileIsCorrupted='The file is corrupted...';
+
+  SCreateNewChannel='Create new channel';
+  SNameAlreadyUsed='name already used';
+  SName='Name';
+  SAskDeleteThisLink='Delete this link ?';
+  SAskToOverwriteFixtureFilename='A fixture with this filename already exists, do you want to overwrite it ?'+
+                                 '(its content will be lost)';
+  SThisFilenamAlreadyExists='this filename already exists !';
+  SSaveTheChangeBeforeQuit='Save the change before quit?';
 
 // fixture name
   SOther='Other';
@@ -436,7 +460,8 @@ resourcestring
   SParLongBulb='Long PAR with bulb';
   SFan='Fan';
   SLaser='Laser';
-
+  SSmallPar='Small PAR';
+  SFlower01='Flower 1';
 
 implementation
 // exclusion i18n

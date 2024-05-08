@@ -13,21 +13,24 @@ type
   { TFormUserConfirmation }
 
   TFormUserConfirmation = class(TForm)
+    BNo: TSpeedButton;
     PB: TPaintBox;
     ImageList1: TImageList;
     Label1: TLabel;
     Shape1: TShape;
-    BOk: TSpeedButton;
+    BYes: TSpeedButton;
     BCancel: TSpeedButton;
+    procedure BNoClick(Sender: TObject);
     procedure FormKeyUp({%H-}Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure Label1Resize({%H-}Sender: TObject);
-    procedure BOkClick({%H-}Sender: TObject);
+    procedure BYesClick({%H-}Sender: TObject);
     procedure BCancelClick({%H-}Sender: TObject);
     procedure PBPaint(Sender: TObject);
   private
     FImage: TBGRABitmap;
   public
-    function Init( const mess, syes, sno: string; aMsgType: TMsgDlgType ): integer;
+    function Init(const mess, syes, sno: string; aMsgType: TMsgDlgType): integer; overload;
+    function Init(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer; overload;
   end;
 
 var FormUserConfirmation: TFormUserConfirmation;
@@ -54,13 +57,19 @@ begin
   // adjust the height of the windows according to the height of the message
   Height := Label1.Top+
             Label1.Height+
-            BOk.Height*2+
-            BOk.Height div 2;
+            BYes.Height*2+
+            BYes.Height div 2;
 end;
 
-procedure TFormUserConfirmation.BOkClick(Sender: TObject);
+procedure TFormUserConfirmation.BYesClick(Sender: TObject);
 begin
-  ModalResult := mrOk;
+  if BNo.Visible then ModalResult := mrYes
+    else ModalResult := mrOk;
+end;
+
+procedure TFormUserConfirmation.BNoClick(Sender: TObject);
+begin
+  ModalResult := mrNo;
 end;
 
 procedure TFormUserConfirmation.BCancelClick(Sender: TObject);
@@ -76,9 +85,36 @@ end;
 function TFormUserConfirmation.Init( const mess, syes, sno: string; aMsgType: TMsgDlgType ): integer;
 begin
   Label1.Caption := mess;
-  BOk.Caption := syes;
+  BYes.Caption := syes;
   BCancel.Caption := sno;
   FImage := MsgDlgTypeToBGRABitmap(aMsgType, PB.Width, PB.Height);
+
+  // layout
+  BCancel.Left := ClientWidth - ScaleDesignToForm(30) - BCancel.Width;
+  BYes.Left := BCancel.Left - ScaleDesignToForm(60) - BYes.Width;
+  BNo.Visible := False;
+
+  {$ifdef LCLGTK2}
+  Hide;
+  Application.ProcessMessages;
+  {$endif}
+  Result := ShowModal;
+  FImage.Free;
+  FImage := NIL;
+end;
+
+function TFormUserConfirmation.Init(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer;
+begin
+  Label1.Caption := mess;
+  BYes.Caption := syes;
+  BNo.Caption := sno;
+  BCancel.Caption := scancel;
+  FImage := MsgDlgTypeToBGRABitmap(aMsgType, PB.Width, PB.Height);
+
+  // layout
+  BCancel.Left := ClientWidth - ScaleDesignToForm(30) - BCancel.Width;
+  BNo.Left := BCancel.Left - ScaleDesignToForm(40) - BNo.Width;
+  BYes.Left := BNo.Left - ScaleDesignToForm(40) - BYes.Width;
 
   {$ifdef LCLGTK2}
   Hide;

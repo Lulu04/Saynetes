@@ -1,0 +1,923 @@
+rotation (pan)
+shows
+dimmer & strobe
+color wheel rotation
+dimmer fine
+soundcontrolcoldwhite
+soundcontrol2coldwhite
+programselcoldwhite
+fadespeedcoldwhite
+strobecoldwhite
+programscoldwhite
+patterns / shows
+macro
+macro
+auto / sound mode
+relay 1
+relay 2
+relay 3
+relay 4
+color change
+mode change
+pump
+pump
+fountain
+fountain
+pan/tilt macros
+macro
+natural white fine
+laser
+sound control
+violet
+effects
+color mix mode
+dimmer fine
+color mix control
+dimmer fine
+color mode
+music control
+sound effects
+input select (1)
+input select (2 / user)
+lens position
+enable/disable
+input select (1)
+input select (2 / user)
+lens position
+enable/disable
+effects
+blade fine
+tilt all fine
+tilt 1 fine
+tilt 2 fine
+tilt 3 fine
+tilt 4 fine
+index
+index fine
+gobo beam angle all
+gobo beam angle all fine
+index red
+index red fine
+rotation red fine
+index green
+index green fine
+rotation green fine
+index blue
+index blue fine
+rotation blue fine
+gobo beam angle red
+gobo beam angle red fine
+gobo beam angle green
+gobo beam angle green fine
+gobo beam angle blue
+gobo beam angle blue fine
+effects
+color change
+external fan
+dimmer fine
+color wheel effect
+beam color wheel effect
+fx1 select
+effects
+safety
+flame
+chase
+safety
+angle
+preset
+direction
+go
+dimmer fine
+cct fine
+g/m point 8bit
+g/m point 16bit
+g/m point 16bit fine
+hue fine
+saturation fine
+strobe 16bit fine
+dimmer fine
+cct fine
+strobe 16bit fine
+dimmer fine
+cct fine
+g/m point 8bit
+g/m point 16bit
+g/m point 16bit fine
+hue fine
+saturation fine
+strobe 16bit fine
+dimmer fine
+cct fine
+strobe 16bit fine
+dimmer fine
+cct fine
+g/m point 8bit
+g/m point 16bit
+g/m point 16bit fine
+hue fine
+saturation fine
+strobe 16bit fine
+dimmer fine
+cct fine
+strobe 16bit fine
+dimmer fine
+cct fine
+g/m point 8bit
+g/m point 16bit
+g/m point 16bit fine
+hue fine
+saturation fine
+strobe 16bit fine
+dimmer fine
+cct fine
+strobe 16bit fine
+dimmer fine
+cct fine
+g/m point 8bit
+g/m point 16bit
+g/m point 16bit fine
+hue fine
+saturation fine
+strobe 16bit fine
+dimmer fine
+cct fine
+strobe 16bit fine
+pump
+heat
+fog intensity
+cooling
+auto / sound mode
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+dimmer fine
+dimmer 2 fine
+color temperature 2 fine
+extended strobe
+color macro
+auto program
+dimmer mode
+pan / tilt speed
+color macro
+macro speed
+program mode
+fan speed
+haze output
+macro
+color program
+shutter / dimmer
+effects
+mode select
+pattern selection
+horizontal movement
+vertical movement
+rotation y-axis
+rotation x-axis
+rotation z-axis
+blanking
+wave movement
+patterns
+pattern speed dj
+pattern speed
+size
+horizontal size
+vertical size
+automatic size
+rotation dj
+horizontal position fine
+vertical position fine
+inversion
+color effects
+color effects extended
+scan speed dj
+scan speed
+safety zone
+safety zone intensity dj
+safety zone intensity
+color balancing red
+color balancing green
+color balancing blue
+blanking
+blank shift
+reserved 1
+reserved 2
+reserved 3
+reserved 4
+reserved 5
+reserved 6
+reserved 7
+reserved 8
+reserved 9
+reserved 10
+reserved 11
+mode select
+pattern selection
+horizontal movement
+vertical movement
+rotation y-axis
+rotation x-axis
+rotation z-axis
+blanking
+wave movement
+pattern
+circular movement
+y rotation
+x rotation
+horizontal movement
+vertical movement
+manual zoom
+pattern buildup
+dot effect with strobe
+red + orange dimmer
+green + purple dimmer
+blue + white
+green + yellow dimmer
+light always on
+sound mode
+rgb
+dimmer fine
+tungsten
+tungsten fine
+daylight
+daylight fine
+color temperature 2 fine
+gel
+green-magenta point
+hue fine
+saturation fine
+fx param 1
+fx param 2
+fx param 3
+fx param 4
+fx param 5
+cie x
+cie x fine
+cie y
+cie y fine
+cie x2
+cie x2 fine
+cie y2
+cie y2 fine
+crossfade
+crossfade fine
+dimmer fine
+tungsten
+tungsten fine
+daylight
+daylight fine
+color temperature 2 fine
+gel
+green-magenta point
+hue fine
+saturation fine
+fx param 1
+fx param 2
+fx param 3
+fx param 4
+fx param 5
+cie x
+cie x fine
+cie y
+cie y fine
+cie x2
+cie x2 fine
+cie y2
+cie y2 fine
+crossfade
+crossfade fine
+laser-mode-1ch
+laser-mode-10ch-combined
+effects delay
+blackout move
+dimmer fine
+dimmer fine
+effects
+color macro
+smd red
+smd green
+smd blue
+program mode
+sources
+corrective
+efx
+efx speed
+sources
+corrective
+efx
+efx speed
+sources
+corrective
+efx
+efx speed
+sources
+corrective
+efx
+efx speed
+motor speed
+lamp on/off
+access
+folder
+file
+playback speed
+x size
+y size
+x position
+y position
+visible points
+scan rate
+release
+reserved
+dimmer fine
+settings
+pan continuous
+macros
+macro speed
+frequency
+dimmer fine
+dimmer fine
+dimmer fine
+dimmer fine
+dimmer fine
+dimmer fine
+built-in functions
+flame
+safety
+brightness
+colors / programs
+colors / programs
+lenses rotation
+dimmer fine
+color / macro
+macro
+color change
+cct base
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+dimming
+crossfade
+crossfade fine
+hue fine
+saturation fine
+gel filter
+reserved for future use
+color macros/effects
+angle
+ignition
+opening time
+ignition
+valve opening time
+strobe simple
+color macro / temperature
+strobe simple
+color macro / temperature
+fog volume
+timer duration
+timer interval
+pan / tilt speed
+dimmer intensity
+pan / tilt speed
+dimmer intensity
+colors, color change
+color change speed
+internal programs speed
+auto mode / sound control
+preset colours
+auto mode / sound control
+sound / strobe
+sound / strobe
+effects
+effects
+cool white
+operating mode
+rgbwa leds
+color change speed
+rgbwa led strobe
+white led strobe
+laser
+rgbwa led rotation
+laser rotation
+effects
+effects
+auto program
+auto program speed
+strobe / program
+auto program
+auto program speed
+strobe / program
+deep red
+mix
+tuning
+deep red
+mint
+mix
+tuning
+red orange
+mint
+fan control
+hue fine
+color point
+red emulated
+green emulated
+blue emulated
+plus 7 control
+fan control
+hue fine
+color point
+red emulated
+green emulated
+blue emulated
+plus 7 control
+mint
+fan control
+hue fine
+color point
+red emulated
+green emulated
+blue emulated
+plus 7 control
+deep red
+mix
+tuning
+deep red
+mix
+tuning
+deep red
+mix
+tuning
+deep red
+mint
+mix
+tuning
+deep red
+mint
+mix
+tuning
+deep red
+mint
+mix
+tuning
+color macros 2
+color fade
+color macro
+pan continuous movement
+pan movement speed
+tilt movement macro
+color change / fade speed
+pan/tilt programs
+pan/tilt program speed
+dimmer fine
+dimming curve modes
+reset / dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+color chase macros
+color chase speed
+dimming modes
+dimmer curve mode
+dimmer fine
+program macros
+program macro speed
+program macro fade
+dimmer fine
+zoom fresnel
+zoom pc
+dimmer fine
+green-magenta point
+white base color
+memory # hundreds
+memory # tens
+memory # singles
+hue fine
+hue gel
+saturation gel
+colorspace x position
+colorspace x position fine
+colorspace y position
+colorspace y position fine
+effects speed
+cross fade to color
+dimmer fine
+green-magenta point
+white base color
+memory # hundreds
+memory # tens
+memory # singles
+hue fine
+hue gel
+saturation gel
+colorspace x position
+colorspace x position fine
+colorspace y position
+colorspace y position fine
+effects speed
+cross fade to color
+dimmer fine
+green-magenta point
+white base color
+memory # hundreds
+memory # tens
+memory # singles
+hue fine
+hue gel
+saturation gel
+colorspace x position
+colorspace x position fine
+colorspace y position
+colorspace y position fine
+effects speed
+cross fade to color
+cct linear mode
+cct step mode
+color temperature mode
+cct linear mode
+cct step mode
+color temperature mode
+macros
+color wheel effect
+color macros 2
+dimmer fine
+movement macros
+movement macro speed
+dimmer fine
+orange
+orange fine
+royal blue
+royal blue fine
+dimmer speed mode
+motor reset
+color macro + white balance
+dimmer fine
+white color macros
+auto program
+auto program speed
+auto program
+auto program speed
+cool white
+auto program speed
+program 1-15
+program 16-30
+operating mode
+blower speed
+haze volume
+color mixing
+dimmer fine
+settings
+dimmer fine
+device settings
+dimmer fine
+colour macros
+colour temperature
+auto program speed
+sound
+set dimmer curve
+device settings
+strobe1
+strobe2
+strobe3
+sound control
+strobe1
+strobe2
+strobe3
+sound control
+strobe1
+strobe2
+strobe3
+sound control
+strobe1
+strobe2
+strobe3
+sound control
+dimmer fine
+color preset
+dmx delay
+strobe multifunctional
+sound control
+chase
+color preset 1
+color preset 2
+dimmer fine
+strobe functions
+color macro simple
+color macro advanced
+pattern select
+x axis rolling
+y axis rolling
+x axis moving
+y axis moving
+drawing
+scanning speed
+pattern select
+x axis rolling
+y axis rolling
+x axis moving
+y axis moving
+drawing
+scanning speed
+pattern select
+x axis rolling
+y axis rolling
+x axis moving
+y axis moving
+drawing
+scanning speed
+auto modes
+color macros simple
+color macros extended
+color macro simple
+color macro advanced
+color macro
+color macro advanced
+color macro
+color macro advanced
+color macro
+color macro advanced
+all colors
+simple strobe
+dimmer / chase / strobe
+extended strobe
+sound / strobe
+extended strobe
+dimmer mode
+dimmer simple
+dimmer extended
+color snap
+color snap speed
+color fade
+color fade speed
+sound control
+12hz strobe
+20hz strobe
+fade, color change, sound active
+fade speed
+dimmer control
+fade, color change, sound active
+fade speed
+dimmer control
+page
+bank
+button
+smoke
+color temperature cct
+lee color gel 1
+lee color gel 2
+lee color gel 3
+lee color gel 4
+program cross fade
+program direction
+program group size
+program user offset in groups
+program restart
+intensity red of color 1
+intensity green of color 1
+intensity blue of color 1
+intensity red of color 2
+intensity green of color 2
+intensity blue of color 2
+intensity red of color 3
+intensity green of color 3
+intensity blue of color 3
+intensity red of color 4
+intensity green of color 4
+intensity blue of color 4
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+fan control
+presets
+reserved for future use
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+fan control
+presets
+reserved for future use
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+fan control
+presets
+reserved for future use
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+fan control
+presets
+reserved for future use
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+dimmer fine
+green-magenta point 8bit
+green-magenta point 16bit
+green-magenta point 16bit fine
+cross fade to color
+cross fade to color fine
+hue fine
+saturation fine
+plus/minus green
+reserved
+gel cct
+cct <-> rgb
+green/magenta point
+cct <-> hsi
+gel r/l
+gel series
+gel model
+source
+x
+y
+effect parameter 1
+effect parameter 2
+effect parameter 3
+effect parameter 4
+effect parameter 5
+effect parameter 6
+effect parameter 7
+effect parameter 8
+effects
+frequency
+mode selection
+lightning
+explosion
+effects
+frequency
+mode selection
+lightning
+explosion
+effects
+frequency
+mode selection
+lightning
+explosion
+cct control
+frequency control
+mode selection
+fx control
+start trigger
+effects
+frequency
+mode selection
+lightning
+explosion
+tilt continuous rotation
+tilt continuous rotation speed
+color macros & effects
+strobing
+pan / tilt speed
+show mode
+show speed / sound mode
+color macro
+uv chase speed / strobe
+lasers
+led rotation
+laser rotation
+dimmer fine
+program fade
+program mode
+shutter/strobe
+program selection mode
+program mode
+dimmer curves
+fog & color change
+green (outer leds)
+green (inner leds)
+mode select
+mode select
+dimmer curves
+program selection mode
+show mode
+show speed
+center led
+red laser
+green laser
+laser patterns
+red beam
+green beam
+blue beam
+white beam
+beam strobe
+beam rotation
+red gobo effect
+green gobo effect
+blue gobo effect
+white gobo effect
+program fade
+dimmer modes
+program fade
+dimmer modes
+program fade
+dimmer modes
+rgb color change
+pan/tilt reversion
+shutter a rotation
+shutter a rotation fine
+shutter a insertion
+shutter b rotation
+shutter b rotation fine
+shutter b insertion
+shutter c rotation
+shutter c rotation fine
+shutter c insertion
+shutter d rotation
+shutter d rotation fine
+shutter d insertion
+shutters all rotation offset
+shutters all rotation offset fine
+gobo 1 rotation
+gobo 1 rotation fine
+external dimmer (optional)
+external dmx output 1
+external dmx output 2
+external dmx output 3
+external dmx output 4
+external dmx output 5
+external dmx output 6
+external dmx output 7
+external dmx output 8
+fx speed

@@ -6,35 +6,32 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, LCLTranslator,
-  ExtCtrls, Buttons, StdCtrls, ComCtrls,
-  frame_viewdmxlibrary, frame_viewfixturechannels;
+  ExtCtrls, Buttons, StdCtrls, ComCtrls, frame_viewdmxlibrary,
+  frame_viewfixtureoverview, frame_viewfixturechannels, u_list_dmxuniverse;
 
 type
 
   { TFormDMXLibrary }
 
   TFormDMXLibrary = class(TForm)
-    Image1: TImage;
     Label1: TLabel;
-    Label2: TLabel;
-    LBLFixtureName: TLabel;
-    LBLFixturePower: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
+    Panel3: TPanel;
+    Shape1: TShape;
+    BNewFixture: TSpeedButton;
+    BEditFixture: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
-    procedure SpeedButton2Click(Sender: TObject);
-    procedure SpeedButton3Click(Sender: TObject);
+    procedure BNewFixtureClick(Sender: TObject);
+    procedure BEditFixtureClick(Sender: TObject);
   private
     FrameViewDMXLibrary1: TFrameViewDMXLibrary;
-    procedure ProcessViewDMXLibrarySelectionChangeEvent(Sender: TObject; aFilename: string);
+    procedure ProcessViewDMXLibrarySelectionChangeEvent(Sender: TObject; const aFixtureLocation: TFixtureLibraryLocation);
     procedure ProcessViewDMXLibraryMoveItem(Sender: TObject; aNode: TTreeNode; const aTargetPath: string; var Accept: boolean);
   private
+    FrameFixtureOverview: TFrameFixtureOverview;
     FrameViewDMXFixtureChannels1: TFrameViewDMXFixtureChannels;
 
   public
@@ -45,8 +42,8 @@ type
 //  FormDMXLibrary: TFormDMXLibrary;
 
 implementation
-uses LCLType, u_resource_string, u_newfixturewizard, u_common, u_editfixture,
-  u_userdialogs, u_dmx_util;
+uses LCLType, u_resource_string, u_editfixturewizard, u_common,
+  u_userdialogs;
 
 {$R *.lfm}
 
@@ -62,11 +59,10 @@ procedure TFormDMXLibrary.FormShow(Sender: TObject);
 begin
   FrameViewDMXLibrary1.Fill;
 
-  SpeedButton3.Caption := SClose;
   Label1.Caption := SChannels_;
 end;
 
-procedure TFormDMXLibrary.SpeedButton1Click(Sender: TObject);
+procedure TFormDMXLibrary.BNewFixtureClick(Sender: TObject);
 var F: TFormFixtureWizard;
 begin
   F := TFormFixtureWizard.Create(NIL);
@@ -74,52 +70,43 @@ begin
     if F.ShowModal = mrOk then
     begin
       FrameViewDMXLibrary1.Fill;
-      FrameViewDMXLibrary1.SetSelected(ChangeFileExt(ExtractFileName(F.SavedFilename),''));
+      // select the new fixture
+      //FrameViewDMXLibrary1.SetSelected(ChangeFileExt(ExtractFileName(F.SavedFilename),''));
     end;
   finally
     F.Free;
   end;
 end;
 
-procedure TFormDMXLibrary.SpeedButton2Click(Sender: TObject);
-var F: TFormEditFixture;
+procedure TFormDMXLibrary.BEditFixtureClick(Sender: TObject);
+var F: TFormFixtureWizard;
+  fixLocation: TFixtureLibraryLocation;
 begin
-  if FrameViewDMXLibrary1.GetSelectedFixtureFileName = '' then
-    exit;
+  if not FrameViewDMXLibrary1.SelectedIsMode and not FrameViewDMXLibrary1.SelectedIsFile then exit;
+  fixLocation := FrameViewDMXLibrary1.SelectedFixtureLocation;
 
   try
-    F := TFormEditFixture.Create(NIL);
-    F.Edit(FrameViewDMXLibrary1.GetSelectedFixtureFileName);
-    if F.ShowModal = mrOk then
-      FrameViewDMXFixtureChannels1.ShowFixture(FrameViewDMXLibrary1.GetSelectedFixtureFileName, True);
+    F := TFormFixtureWizard.Create(NIL);
+    F.EditExistingFixture(fixLocation);
+    if F.ShowModal = mrOk then begin
+      FrameFixtureOverview.ShowFixture(fixLocation);
+      FrameViewDMXFixtureChannels1.ShowFixture(fixLocation, True);
+    end;
   finally
     F.Free;
   end;
 end;
 
-procedure TFormDMXLibrary.SpeedButton3Click(Sender: TObject);
+procedure TFormDMXLibrary.ProcessViewDMXLibrarySelectionChangeEvent(Sender: TObject;
+  const aFixtureLocation: TFixtureLibraryLocation);
 begin
-  Close;
-end;
+  FrameFixtureOverview.Visible := aFixtureLocation.Filename <> '';
+  FrameViewDMXFixtureChannels1.Visible := aFixtureLocation.Mode <> '';
 
-procedure TFormDMXLibrary.ProcessViewDMXLibrarySelectionChangeEvent(Sender: TObject; aFilename: string);
-begin
-  FrameViewDMXFixtureChannels1.ShowFixture(aFilename, True);
+  if FrameFixtureOverview.Visible then FrameFixtureOverview.ShowFixture(aFixtureLocation);
+  if FrameViewDMXFixtureChannels1.Visible then FrameViewDMXFixtureChannels1.ShowFixture(aFixtureLocation, False);
 
-  if FrameViewDMXFixtureChannels1.Ready then
-  begin
-    LBLFixtureName.Caption := FrameViewDMXFixtureChannels1.FixtureName;
-    LBLFixturePower.Caption := FrameViewDMXFixtureChannels1.Power.ToString+' Watt';
-    ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);
-    Image1.Visible := TRUE;
-    SpeedButton2.Enabled := TRUE;
-  end
-  else begin
-    LBLFixtureName.Caption := '';
-    LBLFixturePower.Caption := '';
-    Image1.Visible := FALSE;
-    SpeedButton2.Enabled := FALSE;
-  end;
+  BEditFixture.Enabled := FrameFixtureOverview.Visible;
 end;
 
 procedure TFormDMXLibrary.ProcessViewDMXLibraryMoveItem(Sender: TObject; aNode: TTreeNode;
@@ -140,12 +127,18 @@ begin
   FrameViewDMXLibrary1.Parent := Panel1;
   FrameViewDMXLibrary1.Align := alClient;
   FrameViewDMXLibrary1.OnSelectionChange := @ProcessViewDMXLibrarySelectionChangeEvent;
-  FrameViewDMXLibrary1.OnMoveItem := @ProcessViewDMXLibraryMoveItem;
-  FrameViewDMXLibrary1.UserChangeEnabled := TRUE;
+  FrameViewDMXLibrary1.OnMoveItem := NIL; //@ProcessViewDMXLibraryMoveItem;
+  FrameViewDMXLibrary1.UserChangeEnabled := False; //TRUE;
+
+  FrameFixtureOverview := TFrameFixtureOverview.Create(Self);
+  FrameFixtureOverview.Parent := Panel3;
+  FrameFixtureOverview.Align := alClient;
+  FrameFixtureOverview.Visible := False;
 
   FrameViewDMXFixtureChannels1 := TFrameViewDMXFixtureChannels.Create(Self);
   FrameViewDMXFixtureChannels1.Parent := Panel2;
   FrameViewDMXFixtureChannels1.Align := alClient;
+  FrameViewDMXFixtureChannels1.Visible := False;
 end;
 
 end.

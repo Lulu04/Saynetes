@@ -71,6 +71,18 @@ msgstr ""
 msgid "Move up/down the selected audio file"
 msgstr ""
 
+#: tformdefinenewchannel.label4.caption
+msgid "Default value"
+msgstr ""
+
+#: tformdefinenewchannel.label5.caption
+msgid "name used by another channel"
+msgstr ""
+
+#: tformdefinenewchannel.label6.caption
+msgid "Choose only icon"
+msgstr ""
+
 #: tformdevicemanager.bartnet.caption
 msgid "Art-Net"
 msgstr ""
@@ -229,22 +241,19 @@ msgctxt "tformdmxgroup.speedbutton3.hint"
 msgid "Unselect all"
 msgstr ""
 
-#: tformdmxlibrary.caption
-msgctxt "tformdmxlibrary.caption"
-msgid "DMX library"
+#: tformdmxlibrary.beditfixture.caption
+msgctxt "tformdmxlibrary.beditfixture.caption"
+msgid "Edit..."
 msgstr ""
 
-#: tformdmxlibrary.label2.caption
-msgid "Power max :"
-msgstr ""
-
-#: tformdmxlibrary.speedbutton1.caption
+#: tformdmxlibrary.bnewfixture.caption
+msgctxt "tformdmxlibrary.bnewfixture.caption"
 msgid "New fixture"
 msgstr ""
 
-#: tformdmxlibrary.speedbutton2.caption
-msgctxt "tformdmxlibrary.speedbutton2.caption"
-msgid "Edit..."
+#: tformdmxlibrary.caption
+msgctxt "tformdmxlibrary.caption"
+msgid "DMX library"
 msgstr ""
 
 #: tformdmxrgbtools.caption
@@ -315,33 +324,6 @@ msgid ""
 "The last color calculated by the effect is kept."
 msgstr ""
 
-#: tformeditfixture.caption
-msgid "Fixture edition"
-msgstr ""
-
-#: tformeditfixture.label12.caption
-msgid "Power :"
-msgstr ""
-
-#: tformeditfixture.speedbutton1.caption
-msgid "Change image"
-msgstr ""
-
-#: tformeditfixture.speedbutton3.caption
-msgctxt "tformeditfixture.speedbutton3.caption"
-msgid "Delete range"
-msgstr ""
-
-#: tformeditfixture.speedbutton4.caption
-msgctxt "tformeditfixture.speedbutton4.caption"
-msgid "Add a range to the channel"
-msgstr ""
-
-#: tformeditfixture.speedbutton5.caption
-msgctxt "tformeditfixture.speedbutton5.caption"
-msgid "Rename channel"
-msgstr ""
-
 #: tformeditsingleaction.bok.caption
 msgid "Apply change"
 msgstr ""
@@ -363,12 +345,61 @@ msgctxt "tformeditsingleaction.label5.caption"
 msgid "Speed"
 msgstr ""
 
+#: tformeditweblink.label18.caption
+msgid "Type of link"
+msgstr ""
+
+#: tformeditweblink.label19.caption
+msgid "Url"
+msgstr ""
+
+#: tformfixturewizard.baddmanufacturer.hint
+msgid "Add a new manufacturer to the list"
+msgstr ""
+
+#: tformfixturewizard.baddmode.caption
+msgid "ADD MODE"
+msgstr ""
+
+#: tformfixturewizard.baddweblink.hint
+msgid "Add a link"
+msgstr ""
+
+#: tformfixturewizard.bcheckandsave.caption
+msgctxt "tformfixturewizard.bcheckandsave.caption"
+msgid "CHECK and SAVE"
+msgstr ""
+
+#: tformfixturewizard.bdeleteweblink.hint
+msgid "Delete the selected link"
+msgstr ""
+
+#: tformfixturewizard.bgeneral.caption
+msgctxt "tformfixturewizard.bgeneral.caption"
+msgid "GENERAL"
+msgstr ""
+
+#: tformfixturewizard.bmodes.caption
+msgctxt "tformfixturewizard.bmodes.caption"
+msgid "MODES and CHANNELS"
+msgstr ""
+
+#: tformfixturewizard.bphysical.caption
+msgctxt "tformfixturewizard.bphysical.caption"
+msgid "PHYSICAL"
+msgstr ""
+
+#: tformfixturewizard.bsave.caption
+msgctxt "tformfixturewizard.bsave.caption"
+msgid "SAVE FIXTURE"
+msgstr ""
+
 #: tformfixturewizard.caption
 msgid "New fixture wizard"
 msgstr ""
 
 #: tformfixturewizard.label1.caption
-msgid "If the manufacturer is already defined, please type its name as it appears in the library, respecting upper case letters"
+msgid "Manufacturer folder:"
 msgstr ""
 
 #: tformfixturewizard.label10.caption
@@ -376,15 +407,21 @@ msgid "Does the fixture have dip switchs to set the dmx adress ?"
 msgstr ""
 
 #: tformfixturewizard.label11.caption
-msgid "manufacturer"
+msgctxt "tformfixturewizard.label11.caption"
+msgid "Physical"
 msgstr ""
 
 #: tformfixturewizard.label12.caption
-msgid "Name of the fixture"
+msgid "Modes and channels"
 msgstr ""
 
-#: tformfixturewizard.label13.caption
-msgid "Mode"
+#: tformfixturewizard.label2.caption
+msgid "Output filename:"
+msgstr ""
+
+#: tformfixturewizard.label3.caption
+msgctxt "tformfixturewizard.label3.caption"
+msgid "General"
 msgstr ""
 
 #: tformfixturewizard.label4.caption
@@ -392,30 +429,19 @@ msgid "Choose the type of fixture that is closest to the one you want to create"
 msgstr ""
 
 #: tformfixturewizard.label5.caption
-msgid "Enter the Watt consumption of the device when it is running at full power"
+msgid "Use commas to separate several names"
 msgstr ""
 
-#: tformfixturewizard.label7.caption
-msgid "Enter the DMX channels count of the fixture"
+#: tformfixturewizard.label6.caption
+msgid "file name will be:"
 msgstr ""
 
 #: tformfixturewizard.label8.caption
-msgid "DMX channel(s)"
+msgid "Please correct errors before saving"
 msgstr ""
 
-#: tformfixturewizard.speedbutton1.caption
-msgctxt "tformfixturewizard.speedbutton1.caption"
-msgid "Add a range to the channel"
-msgstr ""
-
-#: tformfixturewizard.speedbutton2.caption
-msgctxt "tformfixturewizard.speedbutton2.caption"
-msgid "Delete range"
-msgstr ""
-
-#: tformfixturewizard.speedbutton3.caption
-msgctxt "tformfixturewizard.speedbutton3.caption"
-msgid "Rename channel"
+#: tformfixturewizard.lbweblink.hint
+msgid "Double click on a link to  open in browser"
 msgstr ""
 
 #: tformfixturewizard.speedbutton4.hint
@@ -752,6 +778,18 @@ msgid ""
 "Click 'Next' to continue..."
 msgstr ""
 
+#: tformselectexistingchannel.baddexisting.caption
+msgid "Add existing"
+msgstr ""
+
+#: tformselectexistingchannel.label1.caption
+msgid "Add channel to mode"
+msgstr ""
+
+#: tformselectexistingchannel.label2.caption
+msgid "Select an existing channel"
+msgstr ""
+
 #: tformsequenceedition.bkeep0visible.caption
 msgctxt "tformsequenceedition.bkeep0visible.caption"
 msgid "[<"
@@ -1085,6 +1123,42 @@ msgstr ""
 
 #: tframecmdaudiofx.speedbutton7.hint
 msgid "Disconnects all effects that were previously connected to the sound."
+msgstr ""
+
+#: tframeeditmode.baddchannel.caption
+msgid "Add channel"
+msgstr ""
+
+#: tframeeditmode.bdeletechannel.hint
+msgctxt "tframeeditmode.bdeletechannel.hint"
+msgid "Delete channel"
+msgstr ""
+
+#: tframeeditmode.bdown.hint
+msgctxt "tframeeditmode.bdown.hint"
+msgid "Move the channel down"
+msgstr ""
+
+#: tframeeditmode.beditchannel.hint
+msgctxt "tframeeditmode.beditchannel.hint"
+msgid "Modify channel"
+msgstr ""
+
+#: tframeeditmode.bup.hint
+msgctxt "tframeeditmode.bup.hint"
+msgid "Move the channel up"
+msgstr ""
+
+#: tframeeditmode.label1.caption
+msgid "MODE"
+msgstr ""
+
+#: tframeeditmode.label3.caption
+msgid "Short name"
+msgstr ""
+
+#: tframeeditmode.label4.caption
+msgid "DMX channels"
 msgstr ""
 
 #: tframeeditstring.label1.caption
@@ -2004,8 +2078,16 @@ msgstr ""
 msgid "Delete this playlist ?"
 msgstr ""
 
+#: u_resource_string.saskdeletethislink
+msgid "Delete this link ?"
+msgstr ""
+
 #: u_resource_string.saskmovefixtureonanotheruniverse
 msgid "Are you sure to move this fixture on another universe ?"
+msgstr ""
+
+#: u_resource_string.sasktooverwritefixturefilename
+msgid "A fixture with this filename already exists, do you want to overwrite it ?(its content will be lost)"
 msgstr ""
 
 #: u_resource_string.sasremindertherangesmustcovertheinterval
@@ -2109,6 +2191,10 @@ msgstr ""
 msgid "AUDIO - STOP"
 msgstr ""
 
+#: u_resource_string.sauthors
+msgid "Authors"
+msgstr ""
+
 #: u_resource_string.sbacktobegin
 msgid "BACK TO THE BEGINNING"
 msgstr ""
@@ -2137,9 +2223,17 @@ msgctxt "u_resource_string.sbubblemachine"
 msgid "Bubble machine"
 msgstr ""
 
+#: u_resource_string.sbulb
+msgid "Bulb"
+msgstr ""
+
 #: u_resource_string.scancel
 msgctxt "u_resource_string.scancel"
 msgid "Cancel"
+msgstr ""
+
+#: u_resource_string.scannotopenthefile
+msgid "Can not open the file"
 msgstr ""
 
 #: u_resource_string.scannotsaveplaylist
@@ -2204,6 +2298,10 @@ msgstr ""
 msgid "Color presets"
 msgstr ""
 
+#: u_resource_string.sconnector
+msgid "Connector"
+msgstr ""
+
 #: u_resource_string.scontinue
 msgid "Continue"
 msgstr ""
@@ -2223,6 +2321,11 @@ msgstr ""
 
 #: u_resource_string.scrackling
 msgid "Crackling"
+msgstr ""
+
+#: u_resource_string.screatenewchannel
+msgctxt "u_resource_string.screatenewchannel"
+msgid "Create new channel"
 msgstr ""
 
 #: u_resource_string.screatesequence
@@ -2277,7 +2380,12 @@ msgstr ""
 msgid "Delete this universe ?"
 msgstr ""
 
+#: u_resource_string.sdepth
+msgid "Depth"
+msgstr ""
+
 #: u_resource_string.sdescription
+msgctxt "u_resource_string.sdescription"
 msgid "Description"
 msgstr ""
 
@@ -2295,6 +2403,10 @@ msgstr ""
 
 #: u_resource_string.sdevices
 msgid "devices"
+msgstr ""
+
+#: u_resource_string.sdimensions
+msgid "Dimensions"
 msgstr ""
 
 #: u_resource_string.sdimmer
@@ -2587,6 +2699,10 @@ msgstr ""
 msgid "Flash"
 msgstr ""
 
+#: u_resource_string.sflower01
+msgid "Flower 1"
+msgstr ""
+
 #: u_resource_string.sfollow
 msgid "Follow"
 msgstr ""
@@ -2625,6 +2741,10 @@ msgstr ""
 #: u_resource_string.shalogen
 msgctxt "u_resource_string.shalogen"
 msgid "Halogen"
+msgstr ""
+
+#: u_resource_string.sheight
+msgid "Height"
 msgstr ""
 
 #: u_resource_string.shideeffects
@@ -2689,6 +2809,10 @@ msgstr ""
 msgid "LEFT"
 msgstr ""
 
+#: u_resource_string.slens
+msgid "Lens"
+msgstr ""
+
 #: u_resource_string.slevel
 msgid "Level"
 msgstr ""
@@ -2715,6 +2839,14 @@ msgstr ""
 msgid "LOOP FORWARD"
 msgstr ""
 
+#: u_resource_string.slumens
+msgid "Lumens"
+msgstr ""
+
+#: u_resource_string.smanufacturer
+msgid "Manufacturer"
+msgstr ""
+
 #: u_resource_string.smanufacturername
 msgid "Manufacturer name:"
 msgstr ""
@@ -2728,7 +2860,12 @@ msgid "Matrix transparent led"
 msgstr ""
 
 #: u_resource_string.smax
+msgctxt "u_resource_string.smax"
 msgid "Max"
+msgstr ""
+
+#: u_resource_string.smaxdegree
+msgid "Max degree"
 msgstr ""
 
 #: u_resource_string.smaxi
@@ -2736,7 +2873,12 @@ msgid "Maxi"
 msgstr ""
 
 #: u_resource_string.smin
+msgctxt "u_resource_string.smin"
 msgid "Min"
+msgstr ""
+
+#: u_resource_string.smindegree
+msgid "Min degree"
 msgstr ""
 
 #: u_resource_string.smini
@@ -2784,6 +2926,16 @@ msgstr ""
 
 #: u_resource_string.smusthaveatleastonerange
 msgid " must have at least one range."
+msgstr ""
+
+#: u_resource_string.sname
+msgctxt "u_resource_string.sname"
+msgid "Name"
+msgstr ""
+
+#: u_resource_string.snamealreadyused
+msgctxt "u_resource_string.snamealreadyused"
+msgid "name already used"
 msgstr ""
 
 #: u_resource_string.snameforthenewgroup
@@ -2983,8 +3135,8 @@ msgstr ""
 msgid "please no special characters"
 msgstr ""
 
-#: u_resource_string.spowervaluemustbeanintegergreaterthanzero
-msgid "Power value must be an integer greater than zero"
+#: u_resource_string.spower
+msgid "Power"
 msgstr ""
 
 #: u_resource_string.spreamp
@@ -3117,6 +3269,10 @@ msgctxt "u_resource_string.ssave"
 msgid "Save"
 msgstr ""
 
+#: u_resource_string.ssavethechangebeforequit
+msgid "Save the change before quit?"
+msgstr ""
+
 #: u_resource_string.sscanner
 msgctxt "u_resource_string.sscanner"
 msgid "Scanner"
@@ -3199,6 +3355,10 @@ msgstr ""
 msgid "slower"
 msgstr ""
 
+#: u_resource_string.ssmallpar
+msgid "Small PAR"
+msgstr ""
+
 #: u_resource_string.ssmokemachine
 msgctxt "u_resource_string.ssmokemachine"
 msgid "Smoke machine"
@@ -3253,8 +3413,17 @@ msgstr ""
 msgid "The file"
 msgstr ""
 
+#: u_resource_string.sthefileiscorrupted
+msgid "The file is corrupted..."
+msgstr ""
+
 #: u_resource_string.sthefixturewascreatedsuccessfully
 msgid "The fixture was created successfully !"
+msgstr ""
+
+#: u_resource_string.sthisfilenamalreadyexists
+msgctxt "u_resource_string.sthisfilenamalreadyexists"
+msgid "this filename already exists !"
 msgstr ""
 
 #: u_resource_string.sto
@@ -3357,12 +3526,20 @@ msgctxt "u_resource_string.swatt"
 msgid "Watt"
 msgstr ""
 
-#: u_resource_string.swouldyouliketocreateone
-msgid "Would you like to create one ?"
+#: u_resource_string.sweblinks
+msgid "Web links"
 msgstr ""
 
-#: u_resource_string.swouldyouliketodefineanothermodeforthisfixture
-msgid "Would you like to define another mode for this fixture ?"
+#: u_resource_string.sweight
+msgid "Weight"
+msgstr ""
+
+#: u_resource_string.swidth
+msgid "Width"
+msgstr ""
+
+#: u_resource_string.swouldyouliketocreateone
+msgid "Would you like to create one ?"
 msgstr ""
 
 #: u_resource_string.swrittenby
