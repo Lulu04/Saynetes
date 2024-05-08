@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/6976/ADJ%20Quad%20Phase%20HP%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/quad-phase-hp|LinkType3|video|Url3|https://www.youtube.com/watch?v=g3qTCXyDvK8|LinkType4|video|Url4|https://www.youtube.com/watch?v=pxrg2VxH0xY
+[GENERAL]
+Manufacturer|American DJ|Name|Quad Phase HP|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|198|Height|279|Depth|312|Weight|4.00|Power|64|Connector|3-pin|Bulb|LED|LensMinDegree|65.000|LensMaxDegree|65.000
+[CHAN_DEF]
+ID|Color|Type|12|R1|Begin~0~End~16~Txt~Red|R2|Begin~17~End~33~Txt~Green|R3|Begin~34~End~50~Txt~Blue|R4|Begin~51~End~67~Txt~White|R5|Begin~68~End~84~Txt~Red + Green|R6|Begin~85~End~101~Txt~Red + Blue|R7|Begin~102~End~118~Txt~Red + White|R8|Begin~119~End~135~Txt~Green + Blue|R9|Begin~136~End~152~Txt~Green + White|R10|Begin~153~End~169~Txt~Blue + White|R11|Begin~170~End~186~Txt~Red + Green + Blue|R12|Begin~187~End~203~Txt~Red + Green + White|R13|Begin~204~End~220~Txt~Red + Blue + White|R14|Begin~221~End~237~Txt~Green + Blue + White|R15|Begin~238~End~255~Txt~Red + Green + Blue + White
+ID|Rotation|Type|33|DefaultValue|128|R1|Begin~0~End~9~Txt~Stop|R2|Begin~10~End~120~Txt~CW fast..slow|R3|Begin~121~End~134~Txt~Stop|R4|Begin~135~End~245~Txt~CCW slow..fast|R5|Begin~246~End~249~Txt~Stop|R6|Begin~250~End~255~Txt~Sound Control
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function No Strobe|R2|Begin~1~End~255~Txt~slow..fast
+ID|Shutter|Type|6|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~255~Txt~Open
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Color~Rotation~Strobe~Shutter
+[END_MODES]

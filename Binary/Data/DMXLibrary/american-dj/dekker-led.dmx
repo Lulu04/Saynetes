@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/7156/dekker_led.pdf|LinkType2|product page|Url2|https://www.adj.com/dekker-led|LinkType3|video|Url3|https://www.youtube.com/watch?v=vq36Zvue0dU
+[GENERAL]
+Manufacturer|American DJ|Name|Dekker LED|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|280|Height|260|Depth|251|Weight|3.85|Power|25|Connector|3-pin|Bulb|2x 5W RGBW LEDs
+[CHAN_DEF]
+ID|Programs|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~26~Txt~ColorFade 4-color|R3|Begin~27~End~51~Txt~ColorFade 9-color|R4|Begin~52~End~76~Txt~ColorJump 4-color|R5|Begin~77~End~101~Txt~ColorJump 9-color|R6|Begin~102~End~126~Txt~RampUp|R7|Begin~127~End~151~Txt~RampDown|R8|Begin~152~End~176~Txt~RampUpDown|R9|Begin~177~End~201~Txt~Strobe|R10|Begin~202~End~226~Txt~Strobe 9-color|R11|Begin~227~End~254~Txt~Strobe gradual dim|R12|Begin~255~End~255~Txt~Cycle all programs
+ID|Program Speed|Type|16|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~254~Txt~Slow..Fast|R3|Begin~255~End~255~Txt~Sound active
+ID|Rotation|Type|33|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~127~Txt~CW slow..fast|R3|Begin~128~End~255~Txt~CCW fast..slow
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Programs~Program Speed
+Name|8-channel|ShortName|8ch|Content|Rotation~Red~Green~Blue~White~Master dimmer~Programs~Program Speed
+[END_MODES]

@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://drive.google.com/drive/folders/1MNU9qpVMQ3880Og8qXIOpQl60UShyjXo
+[GENERAL]
+Manufacturer|Acoustic Control|Name|PAR 180 COB 3in1|Type|16|Authors|Sergio Collantes|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|220|Height|220|Depth|90|Weight|1.50|Power|150|Connector|3-pin|Bulb|3× 30W COB RGB LED|LensMinDegree|80.000|LensMaxDegree|80.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~50~Txt~No function Manual Mode|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Sound Activate|R5|Begin~201~End~255~Txt~Strobe Color
+ID|FX Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Dimmer~Strobe~Mode~FX Speed~Red~Green~Blue
+[END_MODES]

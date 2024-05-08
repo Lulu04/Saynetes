@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://bklumitec.com/out/media/106619_BA_D_E_Light_Can.pdf|LinkType2|product page|Url2|https://apelabs.com/produkt/lightcan-roadbag/|LinkType3|video|Url3|https://www.youtube.com/watch?v=323kJeW-KT0
+[GENERAL]
+Manufacturer|Ape Labs|Name|LightCan|Type|0|Authors|Gloryfire|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|55|Height|136|Depth|55|Weight|0.39|Power|0|Connector|Other|Bulb|15W RGBW LED|Lens|Effect lens|LensMinDegree|65.000|LensMaxDegree|65.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Programs|Type|0|R1|Begin~0~End~5~Txt~ColorFade White|R2|Begin~6~End~11~Txt~ColorFade Red|R3|Begin~12~End~17~Txt~ColorFade Orange|R4|Begin~18~End~23~Txt~ColorFade Yellow|R5|Begin~24~End~29~Txt~ColorFade Lime|R6|Begin~30~End~35~Txt~ColorFade Green|R7|Begin~36~End~41~Txt~ColorFade Cyan|R8|Begin~42~End~47~Txt~ColorFade Cyan/Blue|R9|Begin~48~End~53~Txt~ColorFade Blue|R10|Begin~54~End~59~Txt~ColorFade Blue/Magenta|R11|Begin~60~End~65~Txt~ColorFade Magenta|R12|Begin~66~End~71~Txt~ColorFade Red pastel|R13|Begin~72~End~77~Txt~ColorFade Green pastel|R14|Begin~78~End~83~Txt~ColorFade Blue pastel|R15|Begin~84~End~89~Txt~ColorFade Blue > Red|R16|Begin~90~End~95~Txt~ColorFade Magenta > White|R17|Begin~96~End~101~Txt~ColorFade White > Blue|R18|Begin~102~End~107~Txt~ColorFade Red pastel > Green pastel > Blue pastel|R19|Begin~108~End~113~Txt~ColorFade Yellow > Magenta > Blue|R20|Begin~114~End~127~Txt~ColorFade Rainbow|R21|Begin~128~End~133~Txt~ColorJump White|R22|Begin~134~End~139~Txt~ColorJump Red|R23|Begin~140~End~145~Txt~ColorJump Orange|R24|Begin~146~End~151~Txt~ColorJump Yellow|R25|Begin~152~End~157~Txt~ColorJump Lime|R26|Begin~158~End~163~Txt~ColorJump Green|R27|Begin~164~End~169~Txt~ColorJump Cyan|R28|Begin~170~End~175~Txt~ColorJump Cyan/Blue|R29|Begin~176~End~181~Txt~ColorJump Blue|R30|Begin~182~End~187~Txt~ColorJump Blue/Magenta|R31|Begin~188~End~193~Txt~ColorJump Magenta|R32|Begin~194~End~199~Txt~ColorJump Red pastel|R33|Begin~200~End~205~Txt~ColorJump Green pastel|R34|Begin~206~End~211~Txt~ColorJump Blue pastel|R35|Begin~212~End~217~Txt~ColorJump Blue > Red|R36|Begin~218~End~223~Txt~ColorJump Magenta > White|R37|Begin~224~End~229~Txt~ColorJump White > Blue|R38|Begin~230~End~235~Txt~ColorJump Red pastel > Green pastel > Blue pastel|R39|Begin~236~End~241~Txt~ColorJump Yellow > Magenta > Blue|R40|Begin~242~End~255~Txt~ColorJump Rainbow
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|3-Channel|ShortName|3ch|Content|Master dimmer~Programs~Program Speed
+Name|4-Channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|8-Channel|ShortName|8ch|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+[END_MODES]

@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.adbstagelight.com/wp-content/uploads/2017/04/DS5153-E-Europe105-data-sheet.pdf
+[GENERAL]
+Manufacturer|ADB|Name|Europe 105|Type|20|Authors|ameisso|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|0|Power|0|Connector|3-pin|Bulb|Tungsten halogen
+[CHAN_DEF]
+ID|Intensity|Type|1|DefaultValue|1|R1|Begin~0~End~255~Txt~0 to 100%
+[END_CHAN_DEF]
+[MODES]
+Name|DW 105 1000W|ShortName|DW105-1k|Content|Intensity
+Name|DW 105 1200W|ShortName|DW105-1.2k|Content|Intensity
+Name|DVW 105 1000W|ShortName|DVW105-1k|Content|Intensity
+Name|DVW 105 1200W|ShortName|DVW105-1.2k|Content|Intensity
+Name|DS 105 1000W|ShortName|DS105-1k|Content|Intensity
+Name|DS 105 1200W|ShortName|DS105-1.2k|Content|Intensity
+Name|DSN 105 1000W|ShortName|DSN105-1k|Content|Intensity
+Name|DSN 105 1200W|ShortName|DSN105-1.2k|Content|Intensity
+Name|DN 105 1000W|ShortName|DN105-1k|Content|Intensity
+Name|DN 105 1200W|ShortName|DN105-1.2k|Content|Intensity
+[END_MODES]

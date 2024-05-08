@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/8787/ADJ%20Starburst%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/starburst|LinkType3|video|Url3|https://www.youtube.com/watch?v=SetHSmR7J6c|LinkType4|video|Url4|https://www.youtube.com/watch?v=haRjymezIig|LinkType5|video|Url5|https://www.youtube.com/watch?v=WXHROB4soLs
+[GENERAL]
+Manufacturer|American DJ|Name|Starburst|Type|24|Authors|Gerard Fontanillas|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|318|Height|412|Depth|318|Weight|3.65|Power|55|Connector|3-pin|Bulb|5x 15W RGBWAUV LEDs|Lens|34 beams|LensMinDegree|1.000|LensMaxDegree|1.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|DefaultValue|8|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~Intensity 0 to 100%
+ID|Rotation|Type|33|DefaultValue|143|R1|Begin~0~End~30~Txt~No function|R2|Begin~31~End~140~Txt~Rotation fast CW..slow CW|R3|Begin~141~End~145~Txt~Rotation stop|R4|Begin~146~End~255~Txt~Rotation slow CCW..fast CCW
+ID|Color Macros|Type|12|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~205~Txt~Color Preset|R3|Begin~206~End~255~Txt~ColorJump fast..slow
+ID|Programs|Type|0|R1|Begin~0~End~55~Txt~No function|R2|Begin~56~End~75~Txt~Sound-active|R3|Begin~76~End~105~Txt~Red CW|R4|Begin~106~End~135~Txt~Blue CCW|R5|Begin~136~End~165~Txt~7-color change CW|R6|Begin~166~End~195~Txt~7-color change CCW|R7|Begin~196~End~225~Txt~7-color change with strobe CW|R8|Begin~226~End~255~Txt~7-color change with strobe CCW
+ID|Reset|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~85~Txt~Reset|R3|Begin~86~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|12-channel|ShortName|12ch|Content|Red~Green~Blue~White~Amber~UV~Strobe~Master dimmer~Rotation~Color Macros~Programs~Reset
+[END_MODES]
