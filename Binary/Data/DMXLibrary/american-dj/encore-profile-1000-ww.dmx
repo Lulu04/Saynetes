@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/8872/ADJ%20Encore%20Profile%201000%20WW%20-%20User%20Manual%2006-06-2023.pdf|LinkType2|product page|Url2|https://www.adj.com/encore-profile-1000-ww|LinkType3|video|Url3|https://www.youtube.com/watch?v=zz6L0bJZoF8|LinkType4|video|Url4|https://www.youtube.com/watch?v=MdO71QLiFZ4|LinkType5|video|Url5|https://www.youtube.com/watch?v=SwFZg45s_hE|LinkType6|video|Url6|https://www.youtube.com/watch?v=2twVkEXGRBg
+[GENERAL]
+Manufacturer|American DJ|Name|Encore Profile 1000 WW|Type|6|Authors|Gerard Fontanillas|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|250|Height|385|Depth|560|Weight|8.50|Power|144|Connector|3-pin and 5-pin|Bulb|120W warm white COB LED|LensMinDegree|12.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Warm white|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~14~Txt~No function|R2|Begin~15~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Warm white
+Name|2-channel|ShortName|2ch|Content|Warm white~Master dimmer
+Name|3-channel|ShortName|3ch|Content|Warm white~Master dimmer~Strobe
+[END_MODES]

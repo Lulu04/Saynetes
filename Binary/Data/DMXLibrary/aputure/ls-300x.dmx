@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2020/04/LS_300x-Product_Manual_EN.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/ls-300x/|LinkType3|other|Url3|https://www.aputure.com/wp-content/uploads/2021/02/LS-300x-DMX-Table.xlsx
+[GENERAL]
+Manufacturer|Aputure|Name|LS 300x|Type|23|Authors|Peter Zuiderent, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|298|Height|216|Depth|345|Weight|11.40|Power|300|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CCT Control|Type|27|R1|Begin~0~End~195~Txt~Color Temperature 2700K..6500K|R2|Begin~196~End~255~Txt~No function
+ID|Frequency Control|Type|0|R1|Begin~0~End~19~Txt~1|R2|Begin~20~End~39~Txt~2|R3|Begin~40~End~59~Txt~3|R4|Begin~60~End~79~Txt~4|R5|Begin~80~End~99~Txt~5|R6|Begin~100~End~119~Txt~6|R7|Begin~120~End~139~Txt~7|R8|Begin~140~End~159~Txt~8|R9|Begin~160~End~179~Txt~9|R10|Begin~180~End~199~Txt~10|R11|Begin~200~End~219~Txt~R|R12|Begin~220~End~255~Txt~No function
+ID|Mode Selection|Type|0|R1|Begin~0~End~127~Txt~Manual Mode|R2|Begin~128~End~255~Txt~FX Mode
+ID|FX Control|Type|0|R1|Begin~0~End~19~Txt~Paparazzi|R2|Begin~20~End~39~Txt~Fireworks|R3|Begin~40~End~59~Txt~Faulty Bulb|R4|Begin~60~End~79~Txt~Lightning|R5|Begin~80~End~99~Txt~TV|R6|Begin~100~End~119~Txt~Pulsing|R7|Begin~120~End~139~Txt~Strobe|R8|Begin~140~End~159~Txt~Explosion|R9|Begin~160~End~179~Txt~Fire|R10|Begin~180~End~255~Txt~No function
+ID|Start Trigger|Type|0|R1|Begin~0~End~0~Txt~Start Point|R2|Begin~1~End~127~Txt~Single Trigger|R3|Begin~128~End~255~Txt~Cycle Mode (Lightning)
+[END_CHAN_DEF]
+[MODES]
+Name|Default|ShortName|Default|Content|Master dimmer~CCT Control~Frequency Control~Mode Selection~FX Control~Start Trigger
+[END_MODES]

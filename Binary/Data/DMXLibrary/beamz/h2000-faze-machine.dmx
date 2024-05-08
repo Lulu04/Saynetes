@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.tronios.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2F160.512+Beamz+Fazer+H2000+V1.4.pdf|LinkType2|product page|Url2|https://www.beamzlighting.com/product/h2000-faze-machine-with-dmx/|LinkType3|video|Url3|https://www.youtube.com/watch?v=Fxl80HCGqjA
+[GENERAL]
+Manufacturer|BeamZ|Name|H2000 Faze Machine|Type|10|Authors|DMS|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|185|Height|350|Depth|360|Weight|6.80|Power|1700|Connector|3-pin
+[CHAN_DEF]
+ID|Smoke|Type|0|R1|Begin~0~End~255~Txt~Fog off..strong
+ID|Fan|Type|33|R1|Begin~0~End~255~Txt~Speed 80%..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Smoke~Fan
+[END_MODES]

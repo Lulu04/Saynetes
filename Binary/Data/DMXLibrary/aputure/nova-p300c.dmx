@@ -1,0 +1,47 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2020/06/Nova_P300c_Manual_20200722-EN.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/nova-p300c/|LinkType3|video|Url3|https://www.youtube.com/watch?v=qr-QiRpwijI|LinkType4|other|Url4|https://www.aputure.com/wp-content/uploads/2021/02/Nova-P300c-DMX-Table_2020-12-09.xlsx
+[GENERAL]
+Manufacturer|Aputure|Name|Nova P300c|Type|3|Authors|Peter Zuiderent, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|562|Height|457|Depth|166|Weight|10.35|Power|300|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CCT|Type|27|R1|Begin~0~End~255~Txt~Color Temperature 2000K..10000K
+ID|Green/Magenta Point|Type|0|R1|Begin~0~End~11~Txt~-1.0|R2|Begin~12~End~120~Txt~-0.9 … -0.1|R3|Begin~121~End~132~Txt~0|R4|Begin~133~End~241~Txt~0.1 … 0.9|R5|Begin~242~End~255~Txt~1.0
+ID|CCT <-> RGB|Type|0|R1|Begin~0~End~255~Txt~crossfade to color
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|CCT <-> HSI|Type|0|R1|Begin~0~End~255~Txt~Cross Fade To Color
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~1°..360°
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~0%..100%
+ID|Gel CCT|Type|27|R1|Begin~0~End~126~Txt~Color Temperature 3200K|R2|Begin~127~End~255~Txt~Color Temperature 5600K
+ID|Gel R/L|Type|0|R1|Begin~0~End~9~Txt~|R2|Begin~10~End~29~Txt~L|R3|Begin~30~End~59~Txt~R|R4|Begin~60~End~255~Txt~No function
+ID|Gel Series|Type|0|R1|Begin~0~End~9~Txt~R-Col.corr/L-Col.corr|R2|Begin~10~End~19~Txt~R-Cal color/L-Cal.Filter|R3|Begin~20~End~29~Txt~R-Storaro/L-600 Series|R4|Begin~30~End~39~Txt~R-Cinelux/L-Cosmetic|R5|Begin~40~End~49~Txt~R-Backup/L-700 Series|R6|Begin~50~End~255~Txt~No function
+ID|Gel Model|Type|0|R1|Begin~0~End~255~Txt~Gel Model selection (dependent on Gel R/L and Gel Series)
+ID|Source|Type|0|R1|Begin~0~End~1~Txt~Tungsten Bulb|R2|Begin~2~End~3~Txt~Incandescent|R3|Begin~4~End~5~Txt~Halogeen|R4|Begin~6~End~7~Txt~Antique Bulb|R5|Begin~8~End~9~Txt~Warm Antique Bulb|R6|Begin~10~End~11~Txt~Christmas lights|R7|Begin~12~End~13~Txt~Night Light|R8|Begin~14~End~15~Txt~Infrared Heat Lamp|R9|Begin~16~End~17~Txt~Grow Light|R10|Begin~18~End~19~Txt~CFL Soft White|R11|Begin~20~End~21~Txt~CFL Bright White|R12|Begin~22~End~23~Txt~CFL Cool White|R13|Begin~24~End~25~Txt~CFL Daylight|R14|Begin~26~End~27~Txt~Cool White 1|R15|Begin~28~End~29~Txt~Cool White 2|R16|Begin~30~End~31~Txt~Cool White 3|R17|Begin~32~End~33~Txt~Warm White|R18|Begin~34~End~35~Txt~CFL BlackLight|R19|Begin~36~End~37~Txt~HMI|R20|Begin~38~End~39~Txt~High Presure Sodium|R21|Begin~40~End~41~Txt~Low Presure Sodium|R22|Begin~42~End~43~Txt~Mercury Vapor|R23|Begin~44~End~45~Txt~Metal Halyde|R24|Begin~46~End~47~Txt~Ceramic|R25|Begin~48~End~49~Txt~Carbon Arc|R26|Begin~50~End~51~Txt~Xenon|R27|Begin~52~End~53~Txt~Candle|R28|Begin~54~End~55~Txt~Gas Fire|R29|Begin~56~End~57~Txt~Sun Direct|R30|Begin~58~End~59~Txt~Sun Overcast|R31|Begin~60~End~61~Txt~Sun Blue Hour|R32|Begin~62~End~63~Txt~Mobile Phone|R33|Begin~64~End~65~Txt~Computer Monitor|R34|Begin~66~End~67~Txt~Electroluminescence|R35|Begin~68~End~69~Txt~Blow Torch|R36|Begin~70~End~71~Txt~Road Flare|R37|Begin~72~End~73~Txt~Amber Caution|R38|Begin~74~End~75~Txt~Green Traffic Light|R39|Begin~76~End~77~Txt~Yellow Traffic Light|R40|Begin~78~End~79~Txt~Red Traffic Light|R41|Begin~80~End~81~Txt~Blue Glow Stick|R42|Begin~82~End~83~Txt~Green Glow Stick|R43|Begin~84~End~85~Txt~Red Glow Stick|R44|Begin~86~End~87~Txt~Yellow Glow Stick|R45|Begin~88~End~89~Txt~Pink Glow Stick|R46|Begin~90~End~91~Txt~Violet Glow Stick|R47|Begin~92~End~255~Txt~Backup
+ID|X|Type|0|R1|Begin~0~End~255~Txt~0 … 0.8
+ID|Y|Type|0|R1|Begin~0~End~255~Txt~0 … 0.8
+ID|Effect|Type|0|R1|Begin~0~End~9~Txt~Club Lights|R2|Begin~10~End~19~Txt~Paperazzi|R3|Begin~20~End~29~Txt~Lightning|R4|Begin~30~End~39~Txt~TV|R5|Begin~40~End~49~Txt~Candle|R6|Begin~50~End~59~Txt~Fire|R7|Begin~60~End~69~Txt~Strobe|R8|Begin~70~End~79~Txt~Explosion|R9|Begin~80~End~89~Txt~Faulty Bulb|R10|Begin~90~End~99~Txt~Pulsing|R11|Begin~100~End~109~Txt~Welding|R12|Begin~110~End~119~Txt~Cop Car|R13|Begin~120~End~129~Txt~Color Chase|R14|Begin~130~End~139~Txt~Party Lights|R15|Begin~140~End~149~Txt~Fireworks|R16|Begin~150~End~255~Txt~Backup
+ID|Effect Parameter 1|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 2|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 3|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 4|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 5|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 6|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 7|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+ID|Effect Parameter 8|Type|0|R1|Begin~0~End~255~Txt~Dependent on Effect
+[END_CHAN_DEF]
+[MODES]
+Name|CCT&RGB|ShortName|CCT&RGB|Content|Master dimmer~CCT~Green/Magenta Point~CCT <-> RGB~Red~Green~Blue
+Name|CCT|ShortName|CCT|Content|Master dimmer~CCT~Green/Magenta Point
+Name|CCT&HSI|ShortName|CCT&HSI|Content|Master dimmer~CCT~Green/Magenta Point~CCT <-> HSI~Hue~Saturation
+Name|GEL|ShortName|GEL|Content|Master dimmer~Gel CCT~Gel R/L~Gel Series~Gel Model
+Name|HSI|ShortName|HSI|Content|Master dimmer~Hue~Saturation
+Name|Source|ShortName|Source|Content|Master dimmer~Source
+Name|RGB|ShortName|RGB|Content|Master dimmer~Red~Green~Blue
+Name|X-Y|ShortName|X-Y|Content|Master dimmer~X~Y
+Name|Effect|ShortName|Effect|Content|Effect~Master dimmer~Effect Parameter 1~Effect Parameter 2~Effect Parameter 3~Effect Parameter 4~Effect Parameter 5~Effect Parameter 6~Effect Parameter 7~Effect Parameter 8
+[END_MODES]

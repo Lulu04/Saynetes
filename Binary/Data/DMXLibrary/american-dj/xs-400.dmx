@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://adjmedia.s3-website-eu-west-1.amazonaws.com/manuals/XS%20400.pdf|LinkType2|product page|Url2|https://www.adj.eu/xs-400|LinkType3|video|Url3|https://www.youtube.com/watch?v=Don23z-XN-s|LinkType4|video|Url4|https://www.youtube.com/watch?v=AjbBAu8UHW8|LinkType5|video|Url5|https://www.youtube.com/watch?v=EpWMiggfdBM
+[GENERAL]
+Manufacturer|American DJ|Name|XS 400|Type|9|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|170|Height|284|Depth|124|Weight|2.50|Power|45|Connector|3-pin|Bulb|4x 10W RGBW LEDs|Lumens|454|LensMinDegree|5.000|LensMaxDegree|5.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Tilt Continuous Rotation|Type|33|R1|Begin~0~End~55~Txt~No function|R2|Begin~56~End~127~Txt~Continuous fast CW|R3|Begin~128~End~199~Txt~Continuous fast CCW|R4|Begin~200~End~255~Txt~No function
+ID|Tilt Continuous Rotation Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros & Effects|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Red #ff0000|R3|Begin~21~End~30~Txt~Green #00ff00|R4|Begin~31~End~40~Txt~Red + Green #00ff00|R5|Begin~41~End~50~Txt~Blue #0000ff|R6|Begin~51~End~60~Txt~Red + Blue #0000ff|R7|Begin~61~End~70~Txt~Green + Blue #0000ff|R8|Begin~71~End~80~Txt~Red + Green + Blue #0000ff|R9|Begin~81~End~123~Txt~ColorJump slow..fast|R10|Begin~124~End~166~Txt~Color mix slow..fast|R11|Begin~167~End~209~Txt~ColorFade slow..fast|R12|Begin~210~End~249~Txt~Color change slow..fast|R13|Begin~250~End~255~Txt~Sound control
+ID|Strobing|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~139~Txt~slow..fast|R3|Begin~140~End~189~Txt~RampUp slow..fast|R4|Begin~190~End~239~Txt~RampDown slow..fast|R5|Begin~240~End~255~Txt~Random timing
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Programs|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~40~Txt~Program 1|R3|Begin~41~End~65~Txt~Program 2|R4|Begin~66~End~90~Txt~Program 3|R5|Begin~91~End~115~Txt~Program 4|R6|Begin~116~End~140~Txt~Program 5|R7|Begin~141~End~165~Txt~Program 6|R8|Begin~166~End~190~Txt~Program 7|R9|Begin~191~End~215~Txt~Program 8|R10|Begin~216~End~240~Txt~Random program playing 5 times each|R11|Begin~241~End~255~Txt~Random program 2min each
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Special Functions|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout with Pan / Tilt movement|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout with RGBW value change|R5|Begin~100~End~199~Txt~No function|R6|Begin~200~End~209~Txt~Reset all|R7|Begin~210~End~255~Txt~No function
+ID|Dimmer Curve|Type|0|DefaultValue|255|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default setting
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan / Tilt Speed~Special Functions~Dimmer Curve
+Name|18-channel|ShortName|18ch|Content|Pan~Pan fine~Tilt~Tilt fine~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan / Tilt Speed~Special Functions~Dimmer Curve
+[END_MODES]

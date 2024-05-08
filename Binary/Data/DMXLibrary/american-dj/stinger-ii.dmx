@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/8885/ADJ%20Stinger%20II%20-%20User%20Manual%202023-08-11.pdf|LinkType2|product page|Url2|https://www.adj.com/stinger-ii|LinkType3|video|Url3|https://www.youtube.com/watch?v=XCDmUI576hg|LinkType4|video|Url4|https://www.youtube.com/watch?v=aC-e9Qma0fU|LinkType5|video|Url5|https://www.youtube.com/watch?v=YECVi23sda8
+[GENERAL]
+Manufacturer|American DJ|Name|Stinger II|Type|24|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|230|Height|304|Depth|248|Weight|5.00|Power|60|Connector|3-pin|Bulb|6x 5W RGBWAUV and 8x 3W UV LEDs; red and green laser (4.9mW)
+[CHAN_DEF]
+ID|Show Mode|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~44~Txt~Show 1|R3|Begin~45~End~79~Txt~Show 2|R4|Begin~80~End~114~Txt~Show 3|R5|Begin~115~End~149~Txt~Show 4|R6|Begin~150~End~184~Txt~Show 5|R7|Begin~185~End~219~Txt~Show 6|R8|Begin~220~End~255~Txt~Random show
+ID|Show Speed/Sound Mode|Type|0|R1|Begin~0~End~247~Txt~slow..fast|R2|Begin~248~End~255~Txt~Sound active
+ID|Color Macro|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~198~Txt~ColorJump|R3|Begin~199~End~225~Txt~ColorFade 1|R4|Begin~226~End~255~Txt~ColorFade 2
+ID|LED Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~244~Txt~slow..fast|R3|Begin~245~End~255~Txt~Sound controlled
+ID|UV|Type|15|R1|Begin~0~End~134~Txt~No function|R2|Begin~135~End~255~Txt~UV chase
+ID|UV Chase Speed / Strobe|Type|16|R1|Begin~0~End~127~Txt~slow..fast|R2|Begin~128~End~255~Txt~slow..fast strobing
+ID|Lasers|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~49~Txt~Red~Extra~#ff0000|R3|Begin~50~End~89~Txt~Green~Extra~#00ff00|R4|Begin~90~End~129~Txt~Red + green~Extra~#00ff00|R5|Begin~130~End~169~Txt~Red + green flicker~Extra~#00ff00|R6|Begin~170~End~209~Txt~Green + red flicker~Extra~#ff0000|R7|Begin~210~End~249~Txt~Red + green flicker sync~Extra~#00ff00|R8|Begin~250~End~255~Txt~Red + green flicker alternate~Extra~#00ff00
+ID|Laser Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~244~Txt~slow..fast|R3|Begin~245~End~255~Txt~Sound controlled
+ID|LED Rotation|Type|33|R1|Begin~0~End~9~Txt~Stop|R2|Begin~10~End~127~Txt~CW slow..fast|R3|Begin~128~End~255~Txt~CCW slow..fast
+ID|Laser Rotation|Type|33|R1|Begin~0~End~127~Txt~Laser patterns|R2|Begin~128~End~255~Txt~Pattern chase slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Show Mode~Show Speed / Sound Mode
+Name|9-channel|ShortName|9ch|Content|Show Mode~Color Macro~LED Strobe~UV~UV Chase Speed / Strobe~Lasers~Laser Strobe~LED Rotation~Laser Rotation
+[END_MODES]

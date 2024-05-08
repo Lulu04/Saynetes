@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.arri.com/resource/blob/31158/de6629cdb138a59ca92684f4e9b7fa59/arri-caster-user-manual-en-apr2015-l02583-data.pdf|LinkType2|manual|Url2|https://www.arri.com/resource/blob/31096/bd7dfefbb42a8bc2d9a27857cba780f4/arri-caster-2-plus-datasheet-en-apr2014-data.pdf|LinkType3|product page|Url3|https://www.arri.com/en/lighting/led/discontinued/caster-series/broadcaster-2-plus|LinkType4|video|Url4|https://www.youtube.com/watch?v=uDUITNNHRQE
+[GENERAL]
+Manufacturer|ARRI|Name|Broadcaster 2 Plus|Type|3|Authors|Giulio|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|218|Height|96|Depth|70|Weight|0.96|Power|35|Connector|Other|Bulb|LED|Lens|Prismatic Homogenizing Lense|LensMinDegree|63.000|LensMaxDegree|63.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~2800K..6500K
+ID|Plus/Minus Green|Type|0|R1|Begin~0~End~255~Txt~
+ID|Reserved|Type|17|R1|Begin~0~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Master dimmer~Color Temperature~Plus/Minus Green~Reserved
+[END_MODES]

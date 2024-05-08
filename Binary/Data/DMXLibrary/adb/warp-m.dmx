@@ -1,0 +1,48 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.adbstagelight.com/wp-content/uploads/2017/05/M5083-E-user-manual-WARP-M.pdf
+[GENERAL]
+Manufacturer|ADB|Name|WARP/M|Type|9|Authors|ameisso|Creator|OFL
+[PHYSICAL]
+Width|549|Height|695|Depth|448|Weight|32.00|Power|900|Connector|5-pin|Bulb|halogen
+[CHAN_DEF]
+ID|Control|Type|0|R1|Begin~0~End~20~Txt~Fire|R2|Begin~21~End~25~Txt~Park|R3|Begin~26~End~30~Txt~Online|R4|Begin~31~End~35~Txt~No function|R5|Begin~36~End~40~Txt~Stealth Mode|R6|Begin~41~End~45~Txt~Quiet Mode|R7|Begin~46~End~50~Txt~Fast mode|R8|Begin~51~End~55~Txt~Reset all|R9|Begin~56~End~60~Txt~Reset all Shutters|R10|Begin~61~End~65~Txt~Reset Gobo 1|R11|Begin~66~End~70~Txt~Gobo 2/iris|R12|Begin~71~End~75~Txt~Reset Zoom|R13|Begin~76~End~80~Txt~Reset Focus|R14|Begin~81~End~85~Txt~Reset Pan|R15|Begin~86~End~90~Txt~Reset Tilt|R16|Begin~91~End~95~Txt~No function|R17|Begin~96~End~100~Txt~Calibration lens|R18|Begin~101~End~105~Txt~Calibration of Shutters|R19|Begin~106~End~110~Txt~Calibration of Pan/Tilt|R20|Begin~111~End~115~Txt~Calibration of Iris/Gobo|R21|Begin~116~End~120~Txt~No function|R22|Begin~121~End~125~Txt~Pan invert On|R23|Begin~126~End~130~Txt~Pan invert Off|R24|Begin~131~End~135~Txt~Tilt invert On|R25|Begin~136~End~140~Txt~Tilt invert Off|R26|Begin~141~End~145~Txt~Pan/Tilt swap On|R27|Begin~146~End~150~Txt~Pan/Tilt swap Off|R28|Begin~151~End~155~Txt~Display On|R29|Begin~156~End~160~Txt~Display Off|R30|Begin~161~End~165~Txt~Factory default setting|R31|Begin~166~End~170~Txt~User setting 1|R32|Begin~171~End~175~Txt~User setting 2|R33|Begin~176~End~180~Txt~User setting 3|R34|Begin~181~End~185~Txt~No function|R35|Begin~186~End~190~Txt~DMX address setting|R36|Begin~191~End~195~Txt~Accessory change|R37|Begin~196~End~200~Txt~Gobo Mode indexed|R38|Begin~201~End~205~Txt~Gobo Mode indexed and Endless rotation|R39|Begin~206~End~210~Txt~No function|R40|Begin~211~End~215~Txt~No function|R41|Begin~216~End~220~Txt~No function|R42|Begin~221~End~225~Txt~No function|R43|Begin~226~End~230~Txt~No function|R44|Begin~231~End~235~Txt~No function|R45|Begin~236~End~240~Txt~No function|R46|Begin~241~End~255~Txt~Arm
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..400deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..275deg
+ID|Tilt fine|Type|8
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~narrow..wide
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~near..far
+ID|Shutter A Rotation|Type|30|R1|Begin~0~End~255~Txt~0deg..720deg
+ID|Shutter A Rotation fine|Type|30
+ID|Shutter A Insertion|Type|26|R1|Begin~0~End~255~Txt~out..in
+ID|Shutter B Rotation|Type|30|R1|Begin~0~End~255~Txt~0deg to 720deg
+ID|Shutter B Rotation fine|Type|30
+ID|Shutter B Insertion|Type|26|R1|Begin~0~End~255~Txt~out..in
+ID|Shutter C Rotation|Type|30|R1|Begin~0~End~255~Txt~0deg..720deg
+ID|Shutter C Rotation fine|Type|30
+ID|Shutter C Insertion|Type|26|R1|Begin~0~End~255~Txt~out..in
+ID|Shutter D Rotation|Type|30|R1|Begin~0~End~255~Txt~0deg..720deg
+ID|Shutter D Rotation fine|Type|30
+ID|Shutter D Insertion|Type|26|R1|Begin~0~End~255~Txt~out..in
+ID|Shutters all rotation offset|Type|30|R1|Begin~0~End~255~Txt~0deg..720deg
+ID|Shutters all rotation offset fine|Type|30
+ID|Gobo 1 rotation|Type|33|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Gobo 1 rotation fine|Type|33
+ID|Iris|Type|25|R1|Begin~0~End~255~Txt~open..closed
+ID|Iris fine|Type|25
+ID|External dimmer (optional)|Type|1|R1|Begin~0~End~255~Txt~0 to 100%
+ID|External DMX output 1|Type|0
+ID|External DMX output 2|Type|0
+ID|External DMX output 3|Type|0
+ID|External DMX output 4|Type|0
+ID|External DMX output 5|Type|0
+ID|External DMX output 6|Type|0
+ID|External DMX output 7|Type|0
+ID|External DMX output 8|Type|0
+[END_CHAN_DEF]
+[MODES]
+Name|12-30|ShortName|warpm1230|Content|Control~Pan~Pan fine~Tilt~Tilt fine~Zoom~Focus~Shutter A Rotation~Shutter A Rotation fine~Shutter A Insertion~Shutter B Rotation~Shutter B Rotation fine~Shutter B Insertion~Shutter C Rotation~Shutter C Rotation fine~Shutter C Insertion~Shutter D Rotation~Shutter D Rotation fine~Shutter D Insertion~Shutters all rotation offset~Shutters all rotation offset fine~Gobo 1 rotation~Gobo 1 rotation fine~Iris~Iris fine~External dimmer (optional)~External DMX output 1~External DMX output 2~External DMX output 3~External DMX output 4~External DMX output 5~External DMX output 6~External DMX output 7~External DMX output 8
+Name|22-50|ShortName|warpm2250|Content|Control~Pan~Pan fine~Tilt~Tilt fine~Zoom~Focus~Shutter A Rotation~Shutter A Rotation fine~Shutter A Insertion~Shutter B Rotation~Shutter B Rotation fine~Shutter B Insertion~Shutter C Rotation~Shutter C Rotation fine~Shutter C Insertion~Shutter D Rotation~Shutter D Rotation fine~Shutter D Insertion~Shutters all rotation offset~Shutters all rotation offset fine~Gobo 1 rotation~Gobo 1 rotation fine~Iris~Iris fine~External dimmer (optional)~External DMX output 1~External DMX output 2~External DMX output 3~External DMX output 4~External DMX output 5~External DMX output 6~External DMX output 7~External DMX output 8
+[END_MODES]

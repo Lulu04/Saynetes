@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/10687/Fog%20Fury%20Jett%20Pro%20-%20User%20Manual%20(08-10-2022).pdf|LinkType2|product page|Url2|https://www.adj.com/fog-fury-jett-pro|LinkType3|video|Url3|https://www.youtube.com/watch?v=dN6IbP1x5Fo|LinkType4|video|Url4|https://www.youtube.com/watch?v=0mFX-qgHLbo
+[GENERAL]
+Manufacturer|American DJ|Name|Fog Fury Jett Pro|Type|10|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|419|Height|206|Depth|315|Weight|9.50|Power|1550|Connector|3-pin|Bulb|3W LEDs (6x Red, 7x Green, 6x Blue, 3x Amber, 6x UV)
+[CHAN_DEF]
+ID|Fog+Color|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~255~Txt~Fog with random color change
+ID|Fog|Type|2|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~255~Txt~Fog 1133m^3/min
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Red #ff0000|R3|Begin~16~End~23~Txt~Green #00ff00|R4|Begin~24~End~31~Txt~Blue + UV #8800ff|R5|Begin~32~End~39~Txt~Amber #ffbf00|R6|Begin~40~End~47~Txt~UV #8800ff|R7|Begin~48~End~55~Txt~Red + Blue + UV #8800ff|R8|Begin~56~End~63~Txt~OuterGreen + Amber #92ff00|R9|Begin~64~End~71~Txt~Red + UV #8800ff|R10|Begin~72~End~79~Txt~Blue + Amber #ffbfff|R11|Begin~80~End~87~Txt~InnerGreen + Blue #00ffff|R12|Begin~88~End~95~Txt~Red + InnerGreen #ffff00|R13|Begin~96~End~103~Txt~Red + InnerGreen + Blue #ffffff|R14|Begin~104~End~111~Txt~Colormix 1 #84cf78|R15|Begin~112~End~119~Txt~Colormix 2 + UV #30005a|R16|Begin~120~End~127~Txt~Colormix 3 + UV #6500be|R17|Begin~128~End~135~Txt~Colormix 4 + UV #250046|R18|Begin~136~End~143~Txt~Colormix 5 + UV #6b00c8|R19|Begin~144~End~151~Txt~Colormix 6 + UV #500096|R20|Begin~152~End~159~Txt~Colormix 7 + UV #6b00c8|R21|Begin~160~End~167~Txt~Colormix 8 + UV #20003c|R22|Begin~168~End~175~Txt~Colormix 9 #c8b1eb|R23|Begin~176~End~183~Txt~Colormix 10 + UV #1d0037|R24|Begin~184~End~191~Txt~Colormix 11 + UV #5b00aa|R25|Begin~192~End~199~Txt~Colormix 12 + UV #350064|R26|Begin~200~End~207~Txt~Colormix 13 #ff8a00|R27|Begin~208~End~215~Txt~Colormix 14 + UV #8800ff|R28|Begin~216~End~223~Txt~Colormix 15 #b4ff94|R29|Begin~224~End~231~Txt~Colormix 16 + UV #7600de|R30|Begin~232~End~239~Txt~All on #8800ff|R31|Begin~240~End~247~Txt~Random color 1|R32|Begin~248~End~255~Txt~Random color 2
+ID|Strobe|Type|6|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~95~Txt~slow..fast|R3|Begin~96~End~159~Txt~Pulse|R4|Begin~160~End~255~Txt~slow..fast Random timing
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green (Outer LEDs)|Type|4|R1|Begin~0~End~255~Txt~I0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~I0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Green (Inner LEDs)|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Fog + Color
+Name|2-channel|ShortName|2ch|Content|Fog~Color Macros
+Name|3-channel|ShortName|3ch|Content|Fog~Color Macros~Strobe
+Name|7-channel|ShortName|7ch|Content|Fog~Red~Green (Outer LEDs)~Blue~Amber~Green (Inner LEDs)~UV
+Name|9-channel|ShortName|9ch|Content|Fog~Red~Green (Outer LEDs)~Blue~Amber~Green (Inner LEDs)~UV~Strobe~Master dimmer
+[END_MODES]
