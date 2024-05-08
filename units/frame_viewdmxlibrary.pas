@@ -6,12 +6,12 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, ComCtrls, LCLType, Menus,
-  LCLTranslator, ExtCtrls;
+  LCLTranslator, ExtCtrls, u_list_dmxuniverse;
 
 type
 
   TMoveItemEvent=procedure(Sender: TObject; aNode: TTreeNode; const aTargetPath: string; var Accept: boolean) of object;
-  TSelectionChangeEvent=procedure(Sender: TObject; aFileName: string) of object;
+  TSelectionChangeEvent=procedure(Sender: TObject; const aFixLocation: TFixtureLibraryLocation) of object;
 
   { TFrameViewDMXLibrary }
 
@@ -44,24 +44,32 @@ type
     FOnSelectionChange: TSelectionChangeEvent;
     FOnStartDragFixture: TNotifyEvent;
     FUserChangeEnabled: boolean;
+    function GetSelectedFixtureLocation: TFixtureLibraryLocation;
     procedure SetUserChangeEnabled(AValue: boolean);
     function SortProc( Node1, Node2: TTreeNode ): integer;
     procedure FillTreeViewWithLibraryContent;
     function RelativePathForNode(aNode: TTreeNode): string;
     function AbsolutePathForNode(aNode: TTreeNode): string;
     function ItsTheRoot( aNode: TTreeNode ): boolean;
-    function ItsAFile( aNode: TTreeNode ): boolean;
   public
     procedure EraseBackground({%H-}DC: HDC); override;
     // gives '' if its a folder or no selection
     function GetSelectedFixtureFileName: string;
+    // return '' if a mode is not selected
+    function GetSelectedFixtureMode: string;
 
     procedure Fill;
-    function ItsAFolder( aNode: TTreeNode ): boolean;
+    function ItsAFolder(aNode: TTreeNode): boolean;
+    function ItsAFile(aNode: TTreeNode): boolean;
+    function ItsAMode(aNode: TTreeNode): boolean;
+
+    function SelectedIsFile: boolean;
+    function SelectedIsMode: boolean;
 
     procedure SetSelected(const aNodeText: string);
 
-    //
+    // use this property only if function SelectedIsMode return True
+    property SelectedFixtureLocation: TFixtureLibraryLocation read GetSelectedFixtureLocation;
     property UserChangeEnabled: boolean read FUserChangeEnabled write SetUserChangeEnabled;
     property OnSelectionChange: TSelectionChangeEvent read FOnSelectionChange write FOnSelectionChange;
     property OnMoveItem: TMoveItemEvent read FOnMoveItem write FOnMoveItem;
@@ -71,7 +79,7 @@ type
 implementation
 
 uses u_resource_string, u_userdialogs, u_common, u_logfile, u_apputils,
-  utilitaire_fichier, LazFileUtils, Dialogs;
+  u_dmx_util, utilitaire_fichier, LazFileUtils, Dialogs;
 
 {$R *.lfm}
 
@@ -299,11 +307,9 @@ begin
 end;
 
 procedure TFrameViewDMXLibrary.TVSelectionChanged(Sender: TObject);
-var f: string;
 begin
- f := GetSelectedFixtureFileName;
- if FOnSelectionChange <> NIL then
-   FOnSelectionChange(Self, f);
+  if FOnSelectionChange = NIL then exit;
+  FOnSelectionChange(Self, GetSelectedFixtureLocation);
 end;
 
 procedure TFrameViewDMXLibrary.TVStartDrag(Sender: TObject; var DragObject: TDragObject);
@@ -333,12 +339,24 @@ begin
 end;
 
 function TFrameViewDMXLibrary.GetSelectedFixtureFileName: string;
+var n: TTreeNode;
+begin
+  Result := '';
+  n := TV.Selected;
+  if n = NIL then exit;
+  if ItsAMode(n) then n := n.Parent;
+  if not ItsAFile(n) then exit;
+
+  Result := AbsolutePathForNode(n);
+end;
+
+function TFrameViewDMXLibrary.GetSelectedFixtureMode: string;
 begin
   Result := '';
   if TV.Selected = NIL then exit;
-  if not ItsAFile( TV.Selected ) then exit;
+  if not ItsAMode(TV.Selected) then exit;
 
-  Result := AbsolutePathForNode( TV.Selected );
+  Result := TV.Selected.Text;
 end;
 
 procedure TFrameViewDMXLibrary.SetUserChangeEnabled(AValue: boolean);
@@ -351,10 +369,30 @@ begin
     TV.PopupMenu := PopupMenu1;
 end;
 
+function TFrameViewDMXLibrary.GetSelectedFixtureLocation: TFixtureLibraryLocation;
+var n: TTreeNode;
+begin
+  n := TV.Selected;
+
+  Result.InitDefault;
+  if not ItsTheRoot(n) then begin
+    Result.SubFolder := RelativePathForNode(n);
+    if ItsAFile(n) then begin
+      Result.Filename := ChangeFileExt(n.Text, DMX_LIBRARY_FILE_EXTENSION);
+    end else
+    if ItsAMode(n) then begin
+      Result.Filename := ChangeFileExt(n.Parent.Text, DMX_LIBRARY_FILE_EXTENSION);
+      Result.Mode := n.Text;
+    end;
+  end;
+end;
+
 procedure TFrameViewDMXLibrary.FillTreeViewWithLibraryContent;
   procedure ScanFolder ( folder: string; aNode: TTreeNode );
   var sr: TSearchRec;
-    n: TTreeNode;
+    n, n1: TTreeNode;
+    modes: TStringArray;
+    i: Integer;
   begin
    if LazFileUtils.FindFirstUTF8( folder + DirectorySeparator + '*', faAnyFile, sr ) = 0 then
    begin
@@ -366,21 +404,27 @@ procedure TFrameViewDMXLibrary.FillTreeViewWithLibraryContent;
          // one found a folder
          n := TV.Items.AddChild( aNode, Sr.Name);
 
-         n.SelectedIndex := 1;  // icon closed folder
-         n.ImageIndex := 1;     // icon open folder
+         n.SelectedIndex := 1;  // icon folder
+         n.ImageIndex := 1;     // icon folder
          n.MakeVisible;
          n.Collapse( True );
          ScanFolder( folder + DirectorySeparator + Sr.Name, n );
        end;
      end
-     else if LowerCase( ExtractFileExt( sr.Name )) = '.dmx' then
+     else if LowerCase( ExtractFileExt( sr.Name )) = DMX_LIBRARY_FILE_EXTENSION then
      begin
        // one found a dmx fixture file
        n := TV.Items.AddChild( aNode, ChangeFileExt(Sr.Name, ''));
        // set icon
        n.SelectedIndex := 2;
        n.ImageIndex := 2;
-       n.MakeVisible;
+       // add each modes
+       modes := GetFixtureModeNames(ConcatPaths([folder, Sr.Name]));
+       for i:=0 to High(modes) do begin
+         n1 := TV.Items.AddChild( n, modes[i]);
+         n1.SelectedIndex := 3;
+         n1.ImageIndex := 3;
+       end;
      end;
     until LazFileUtils.FindNextUTF8(Sr) <> 0;
    end;
@@ -403,19 +447,22 @@ end;
 function TFrameViewDMXLibrary.RelativePathForNode(aNode: TTreeNode): string;
 var n: TTreeNode;
 begin
- if aNode = NIL then
-   Result := ''
- else begin
-   // reconstruct the full path from parents of selected item
-   Result := aNode.Text;
-   n := aNode;
-   while n.Level>1 do begin
-     n := n.Parent;
-     Result := ConcatPaths([n.Text, Result]);
-   end;
-   if aNode.ImageIndex > 1 then
-     Result := Result + '.dmx';
- end;
+  Result := '';
+  if aNode = NIL then exit;
+  if ItsTheRoot(aNode) then exit;
+
+  // check if the node is a Mode name, we switch to its parent (filename)
+  if ItsAMode(aNode) then aNode := aNode.Parent;
+  // check if the node is a file, we switch to its parent (folder)
+  if ItsAFile(aNode) then aNode := aNode.Parent;
+
+  // reconstruct the full path from parents of selected item
+  Result := aNode.Text;
+  n := aNode;
+  while n.Level > 1 do begin
+    n := n.Parent;
+    Result := ConcatPaths([n.Text, Result]);
+  end;
 end;
 
 function TFrameViewDMXLibrary.AbsolutePathForNode(aNode: TTreeNode): string;
@@ -457,6 +504,22 @@ begin
    exit;
  end
  else Result := aNode.ImageIndex = 1;
+end;
+
+function TFrameViewDMXLibrary.ItsAMode(aNode: TTreeNode): boolean;
+begin
+  if aNode = NIL then Result := False
+    else Result := aNode.ImageIndex = 3;
+end;
+
+function TFrameViewDMXLibrary.SelectedIsFile: boolean;
+begin
+  Result := ItsAFile(TV.Selected);
+end;
+
+function TFrameViewDMXLibrary.SelectedIsMode: boolean;
+begin
+ Result := ItsAMode(TV.Selected);
 end;
 
 procedure TFrameViewDMXLibrary.SetSelected(const aNodeText: string);

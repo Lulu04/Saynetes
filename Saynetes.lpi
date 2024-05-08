@@ -22,85 +22,105 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="78">
-        <Item1 Value="sAdd"/>
-        <Item2 Value="ALS - fx"/>
-        <Item3 Value="sAmplitude"/>
-        <Item4 Value="sApply"/>
-        <Item5 Value="sAudioFollower"/>
-        <Item6 Value="sBegin"/>
-        <Item7 Value="sBrightness max"/>
-        <Item8 Value="sCancel"/>
-        <Item9 Value="CAPTURE"/>
-        <Item10 Value="sChannels"/>
-        <Item11 Value="sChaser"/>
-        <Item12 Value="sClose"/>
-        <Item13 Value="sCopy"/>
-        <Item14 Value="sCut"/>
-        <Item15 Value="sDelete"/>
-        <Item16 Value="sDimmer"/>
-        <Item17 Value="Dry/Wet"/>
-        <Item18 Value="DRY"/>
-        <Item19 Value="sDuration"/>
-        <Item20 Value="sDuration in second"/>
-        <Item21 Value="sEnd"/>
-        <Item22 Value="FILES"/>
-        <Item23 Value="sFixed color"/>
-        <Item24 Value="sFixed duration"/>
-        <Item25 Value="sFixed intensity"/>
-        <Item26 Value="sFixed value"/>
-        <Item27 Value="sFollow"/>
-        <Item28 Value="sFlame"/>
-        <Item29 Value="sFlash"/>
-        <Item30 Value="FX"/>
-        <Item31 Value="sGain"/>
-        <Item32 Value="Label"/>
-        <Item33 Value="sLevel max"/>
-        <Item34 Value="sLevel min"/>
-        <Item35 Value="sWait time"/>
-        <Item36 Value="sReset"/>
-        <Item37 Value="sSequence"/>
-        <Item38 Value="sSoften"/>
-        <Item39 Value="sLoop"/>
-        <Item40 Value="sNext"/>
-        <Item41 Value="sNo"/>
-        <Item42 Value="sOk"/>
-        <Item43 Value="sOFF"/>
-        <Item44 Value="sON"/>
-        <Item45 Value="sPaste"/>
-        <Item46 Value="sPitch"/>
-        <Item47 Value="sPlaylist"/>
-        <Item48 Value="PRESET"/>
-        <Item49 Value="Preset"/>
-        <Item50 Value="sPrevious"/>
-        <Item51 Value="Redo"/>
-        <Item52 Value="sRandom intensity between"/>
-        <Item53 Value="sRandom duration between"/>
-        <Item54 Value="sRandom value between"/>
-        <Item55 Value="sRename"/>
-        <Item56 Value="sRGB"/>
-        <Item57 Value="SAYNÈTES"/>
-        <Item58 Value="sSave"/>
-        <Item59 Value="second(s)"/>
-        <Item60 Value="sSelection"/>
-        <Item61 Value="sSoften"/>
-        <Item62 Value="sSoften on"/>
-        <Item63 Value="sStop"/>
-        <Item64 Value="sto"/>
-        <Item65 Value="Undo"/>
-        <Item66 Value="sUpdate"/>
-        <Item67 Value="sVelocity"/>
-        <Item68 Value="sView"/>
-        <Item69 Value="sVolume"/>
-        <Item70 Value="sWatt"/>
-        <Item71 Value="WET"/>
-        <Item72 Value="sYes"/>
-        <Item73 Value="_"/>
-        <Item74 Value="1/1"/>
-        <Item75 Value="1s"/>
-        <Item76 Value="5s"/>
-        <Item77 Value="10s"/>
-        <Item78 Value="15s"/>
+      <ExcludedOriginals Count="98">
+        <Item1 Value="CAPTURE"/>
+        <Item2 Value="DRY"/>
+        <Item3 Value="Dry/Wet"/>
+        <Item4 Value="FILES"/>
+        <Item5 Value="FX"/>
+        <Item6 Value="kg"/>
+        <Item7 Value="Label"/>
+        <Item8 Value="mm"/>
+        <Item9 Value="PRESET"/>
+        <Item10 Value="Preset"/>
+        <Item11 Value="Redo"/>
+        <Item12 Value="SAYNÈTES"/>
+        <Item13 Value="Undo"/>
+        <Item14 Value="WET"/>
+        <Item15 Value="x"/>
+        <Item16 Value="sAdd"/>
+        <Item17 Value="ALS - fx"/>
+        <Item18 Value="sAmplitude"/>
+        <Item19 Value="sApply"/>
+        <Item20 Value="sAudioFollower"/>
+        <Item21 Value="sAuthors"/>
+        <Item22 Value="sBegin"/>
+        <Item23 Value="sBrightness max"/>
+        <Item24 Value="sBulb"/>
+        <Item25 Value="sCancel"/>
+        <Item26 Value="sChannels"/>
+        <Item27 Value="sChaser"/>
+        <Item28 Value="sClose"/>
+        <Item29 Value="sConnector"/>
+        <Item30 Value="sCopy"/>
+        <Item31 Value="sCut"/>
+        <Item32 Value="sDelete"/>
+        <Item33 Value="sDescription"/>
+        <Item34 Value="sDimensions"/>
+        <Item35 Value="sDimmer"/>
+        <Item36 Value="sDuration"/>
+        <Item37 Value="sDuration in second"/>
+        <Item38 Value="sEnd"/>
+        <Item39 Value="sFixed color"/>
+        <Item40 Value="sFixed duration"/>
+        <Item41 Value="sFixed intensity"/>
+        <Item42 Value="sFixed value"/>
+        <Item43 Value="sFixture"/>
+        <Item44 Value="sFollow"/>
+        <Item45 Value="sFlame"/>
+        <Item46 Value="sFlash"/>
+        <Item47 Value="sGain"/>
+        <Item48 Value="sLens"/>
+        <Item49 Value="sLevel max"/>
+        <Item50 Value="sLevel min"/>
+        <Item51 Value="sLoop"/>
+        <Item52 Value="sLumens"/>
+        <Item53 Value="sManufacturer"/>
+        <Item54 Value="sMax"/>
+        <Item55 Value="sMax degree"/>
+        <Item56 Value="sMin"/>
+        <Item57 Value="sMin degree"/>
+        <Item58 Value="sname already used"/>
+        <Item59 Value="sName"/>
+        <Item60 Value="sNext"/>
+        <Item61 Value="sNo"/>
+        <Item62 Value="sOk"/>
+        <Item63 Value="sOFF"/>
+        <Item64 Value="sON"/>
+        <Item65 Value="sPaste"/>
+        <Item66 Value="sPitch"/>
+        <Item67 Value="sPlaylist"/>
+        <Item68 Value="sPower"/>
+        <Item69 Value="sPrevious"/>
+        <Item70 Value="sRandom intensity between"/>
+        <Item71 Value="sRandom duration between"/>
+        <Item72 Value="sRandom value between"/>
+        <Item73 Value="sRename"/>
+        <Item74 Value="sReset"/>
+        <Item75 Value="sRGB"/>
+        <Item76 Value="sSave"/>
+        <Item77 Value="second(s)"/>
+        <Item78 Value="sSelection"/>
+        <Item79 Value="sSequence"/>
+        <Item80 Value="sSoften"/>
+        <Item81 Value="sSoften on"/>
+        <Item82 Value="sStop"/>
+        <Item83 Value="sto"/>
+        <Item84 Value="sUpdate"/>
+        <Item85 Value="sVelocity"/>
+        <Item86 Value="sView"/>
+        <Item87 Value="sVolume"/>
+        <Item88 Value="sWait time"/>
+        <Item89 Value="sWatt"/>
+        <Item90 Value="sWebLinks"/>
+        <Item91 Value="sWeight"/>
+        <Item92 Value="sYes"/>
+        <Item93 Value="_"/>
+        <Item94 Value="1/1"/>
+        <Item95 Value="1s"/>
+        <Item96 Value="5s"/>
+        <Item97 Value="10s"/>
+        <Item98 Value="15s"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>
@@ -364,7 +384,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="84">
+    <Units Count="89">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -527,7 +547,7 @@
         <ResourceBaseClass Value="Frame"/>
       </Unit28>
       <Unit29>
-        <Filename Value="units\u_newfixturewizard.pas"/>
+        <Filename Value="units\u_editfixturewizard.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormFixtureWizard"/>
         <HasResources Value="True"/>
@@ -566,327 +586,362 @@
         <IsPartOfProject Value="True"/>
       </Unit34>
       <Unit35>
-        <Filename Value="units\u_editfixture.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="FormEditFixture"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit35>
-      <Unit36>
         <Filename Value="units\frame_editstring.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameEditString"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit36>
-      <Unit37>
+      </Unit35>
+      <Unit36>
         <Filename Value="units\frame_viewdmxcursors.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewDMXCursors"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit37>
-      <Unit38>
+      </Unit36>
+      <Unit37>
         <Filename Value="units\u_dmxtools_channels.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormDMXChannelsTools"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit38>
-      <Unit39>
+      </Unit37>
+      <Unit38>
         <Filename Value="units\u_notebook_util.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit39>
-      <Unit40>
+      </Unit38>
+      <Unit39>
         <Filename Value="units\u_dmxtools_rgb.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormDMXRGBTools"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit40>
-      <Unit41>
+      </Unit39>
+      <Unit40>
         <Filename Value="units\frame_color_palette.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Frame_ColorPalette"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit41>
-      <Unit42>
+      </Unit40>
+      <Unit41>
         <Filename Value="units\frame_viewuniverselist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewUniverseList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit42>
-      <Unit43>
+      </Unit41>
+      <Unit42>
         <Filename Value="units\frame_viewchannelslist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewChannelsList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit43>
-      <Unit44>
+      </Unit42>
+      <Unit43>
         <Filename Value="units\u_dmxtools_group.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormDMXGroup"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit44>
-      <Unit45>
+      </Unit43>
+      <Unit44>
         <Filename Value="units\u_edit_otheraction.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormOtherAction"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit45>
-      <Unit46>
+      </Unit44>
+      <Unit45>
         <Filename Value="units\frame_fx_channelchaser.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameFXChannelChaser"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit46>
-      <Unit47>
+      </Unit45>
+      <Unit46>
         <Filename Value="units\u_helper.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit47>
-      <Unit48>
+      </Unit46>
+      <Unit47>
         <Filename Value="units\u_add_action_audio.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormAudioAction"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit48>
-      <Unit49>
+      </Unit47>
+      <Unit48>
         <Filename Value="units\u_devicemanager_form.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormDeviceManager"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit49>
-      <Unit50>
+      </Unit48>
+      <Unit49>
         <Filename Value="unit_dmx_device\u_ftdi_based.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit50>
-      <Unit51>
+      </Unit49>
+      <Unit50>
         <Filename Value="units\u_startupwizard.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormStartUpWizard"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit51>
-      <Unit52>
+      </Unit50>
+      <Unit51>
         <Filename Value="units\u_program_options.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormProgramOptions"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit52>
-      <Unit53>
+      </Unit51>
+      <Unit52>
         <Filename Value="units\u_createplaylist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormCreatePlaylist"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit53>
-      <Unit54>
+      </Unit52>
+      <Unit53>
         <Filename Value="units\frame_viewcolorlist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewColorList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit54>
-      <Unit55>
+      </Unit53>
+      <Unit54>
         <Filename Value="units\frame_fx_rgbchaser.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameFXRGBChaser"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit55>
-      <Unit56>
+      </Unit54>
+      <Unit55>
         <Filename Value="units\frame_viewfixtureslist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewFixturesList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit56>
-      <Unit57>
+      </Unit55>
+      <Unit56>
         <Filename Value="units\u_presetmanager.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PresetManager"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit57>
-      <Unit58>
+      </Unit56>
+      <Unit57>
         <Filename Value="units\frame_viewfixtureinfo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameFixtureInfo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit58>
-      <Unit59>
+      </Unit57>
+      <Unit58>
         <Filename Value="units\u_askifshiftadress.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormAskIfShiftAdress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit59>
-      <Unit60>
+      </Unit58>
+      <Unit59>
         <Filename Value="units\frame_viewdmxdipswitchs.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewDipSwitchs"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit60>
-      <Unit61>
+      </Unit59>
+      <Unit60>
         <Filename Value="units\u_logfile.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit61>
-      <Unit62>
+      </Unit60>
+      <Unit61>
         <Filename Value="units\frame_cmd_audiofx.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameCmdAudioFX"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit62>
-      <Unit63>
+      </Unit61>
+      <Unit62>
         <Filename Value="units\frame_trackbar.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameTrackBar"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit63>
-      <Unit64>
+      </Unit62>
+      <Unit63>
         <Filename Value="units\u_datamodule.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DataModule1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-      </Unit64>
-      <Unit65>
+      </Unit63>
+      <Unit64>
         <Filename Value="units\frame_audiolevels.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameAudioLevels"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit65>
-      <Unit66>
+      </Unit64>
+      <Unit65>
         <Filename Value="units\frame_intersessionmusic.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameIntersessionMusic"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit66>
-      <Unit67>
+      </Unit65>
+      <Unit66>
         <Filename Value="units\frame_audiocapture.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameAudioCapture"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit67>
-      <Unit68>
+      </Unit66>
+      <Unit67>
         <Filename Value="units\frame_viewprojectfolder.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewProjectFolder"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit68>
-      <Unit69>
+      </Unit67>
+      <Unit68>
         <Filename Value="units\frame_led.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameLed"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit69>
-      <Unit70>
+      </Unit68>
+      <Unit69>
         <Filename Value="units\frame_buttononoff.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameButtonOnOff"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit70>
-      <Unit71>
+      </Unit69>
+      <Unit70>
         <Filename Value="units\u_add_action_dmx.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormAddDMXAction"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit71>
-      <Unit72>
+      </Unit70>
+      <Unit71>
         <Filename Value="units\frame_viewprojectors.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameViewProjector"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit72>
-      <Unit73>
+      </Unit71>
+      <Unit72>
         <Filename Value="units\u_global_var.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit73>
-      <Unit74>
+      </Unit72>
+      <Unit73>
         <Filename Value="units\frame_main_audio.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameMainAudio"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit74>
-      <Unit75>
+      </Unit73>
+      <Unit74>
         <Filename Value="units\frame_main_sequence.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameMainSequence"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit75>
-      <Unit76>
+      </Unit74>
+      <Unit75>
         <Filename Value="units\frame_main_addfixture.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameMainAddFixture"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit76>
-      <Unit77>
+      </Unit75>
+      <Unit76>
         <Filename Value="units\u_project_options.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormProjectOptions"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit77>
-      <Unit78>
+      </Unit76>
+      <Unit77>
         <Filename Value="..\UnitsCommon\project_util.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit78>
-      <Unit79>
+      </Unit77>
+      <Unit78>
         <Filename Value="units\form_about.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormAbout"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit79>
-      <Unit80>
+      </Unit78>
+      <Unit79>
         <Filename Value="units\u_apputils.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit80>
-      <Unit81>
+      </Unit79>
+      <Unit80>
         <Filename Value="units\frame_viewfixtureimage.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrameFixtureImage"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit81>
-      <Unit82>
+      </Unit80>
+      <Unit81>
         <Filename Value="units\form_changefixtureimage.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormChangeFixtureImage"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit82>
-      <Unit83>
+      </Unit81>
+      <Unit82>
         <Filename Value="units\u_edit_singleaction.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormEditSingleAction"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="units\frame_viewfixtureoverview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameFixtureOverview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit83>
+      <Unit84>
+        <Filename Value="units\frame_editmode.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEditMode"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="units\form_selectexistingchannel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSelectExistingChannel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="units\form_definenewchannel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDefineNewChannel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="units\frame_cb_channeltype.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameCBChannelType"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="units\form_editweblink.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormEditWebLink"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit88>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

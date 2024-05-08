@@ -16,9 +16,18 @@ object FormDMXLibrary: TFormDMXLibrary
   OnShow = FormShow
   Position = poWorkAreaCenter
   LCLVersion = '2.2.6.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 785
+    Top = 0
+    Width = 1024
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = clMenuBar
+  end
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Control = BNewFixture
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Panel2
     AnchorSideBottom.Control = Owner
@@ -32,6 +41,7 @@ object FormDMXLibrary: TFormDMXLibrary
     BorderSpacing.Top = 4
     BorderSpacing.Right = 30
     BorderSpacing.Bottom = 10
+    BevelColor = 4227327
     Color = 3552822
     ParentColor = False
     TabOrder = 0
@@ -41,15 +51,16 @@ object FormDMXLibrary: TFormDMXLibrary
     AnchorSideRight.Side = asrBottom
     Left = 557
     Height = 488
-    Top = 160
+    Top = 287
     Width = 457
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 10
+    BevelColor = 4227327
     Color = 3552822
     ParentColor = False
     TabOrder = 1
   end
-  object SpeedButton1: TSpeedButton
+  object BNewFixture: TSpeedButton
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Panel1
     AnchorSideRight.Side = asrBottom
@@ -69,17 +80,17 @@ object FormDMXLibrary: TFormDMXLibrary
     Images = DataModule1.ImageList1
     ImageIndex = 0
     Transparent = False
-    OnClick = SpeedButton1Click
+    OnClick = BNewFixtureClick
     ParentFont = False
   end
-  object SpeedButton2: TSpeedButton
-    AnchorSideTop.Control = Panel1
+  object BEditFixture: TSpeedButton
+    AnchorSideTop.Control = BNewFixture
     AnchorSideRight.Control = Panel2
     AnchorSideRight.Side = asrBottom
     Cursor = crHandPoint
     Left = 864
     Height = 25
-    Top = 49
+    Top = 20
     Width = 150
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -92,60 +103,15 @@ object FormDMXLibrary: TFormDMXLibrary
     Images = DataModule1.ImageList1
     ImageIndex = 6
     Transparent = False
-    OnClick = SpeedButton2Click
+    OnClick = BEditFixtureClick
     ParentFont = False
-  end
-  object LBLFixtureName: TLabel
-    AnchorSideLeft.Control = Panel2
-    AnchorSideTop.Control = Image1
-    Left = 557
-    Height = 20
-    Top = 90
-    Width = 36
-    BorderSpacing.Top = 5
-    Caption = 'Label'
-    Constraints.MaxWidth = 380
-    Font.Color = 15395562
-    Font.Height = 20
-    ParentColor = False
-    ParentFont = False
-    WordWrap = True
-  end
-  object LBLFixturePower: TLabel
-    AnchorSideLeft.Control = Label2
-    AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = Label2
-    Left = 646
-    Height = 20
-    Top = 115
-    Width = 36
-    BorderSpacing.Left = 10
-    Caption = 'Label'
-    Font.Color = 15395562
-    Font.Height = 20
-    ParentColor = False
-    ParentFont = False
-  end
-  object Image1: TImage
-    AnchorSideRight.Control = Panel2
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Panel2
-    Left = 947
-    Height = 70
-    Top = 85
-    Width = 67
-    Anchors = [akRight, akBottom]
-    BorderSpacing.Bottom = 5
-    Center = True
-    Proportional = True
-    Stretch = True
   end
   object Label1: TLabel
     AnchorSideLeft.Control = Panel2
     AnchorSideBottom.Control = Panel2
     Left = 557
     Height = 15
-    Top = 145
+    Top = 272
     Width = 54
     Anchors = [akLeft, akBottom]
     Caption = 'sChannels'
@@ -153,42 +119,18 @@ object FormDMXLibrary: TFormDMXLibrary
     ParentColor = False
     ParentFont = False
   end
-  object Label2: TLabel
-    AnchorSideLeft.Control = LBLFixtureName
-    AnchorSideTop.Control = LBLFixtureName
-    AnchorSideTop.Side = asrBottom
+  object Panel3: TPanel
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
     Left = 557
-    Height = 20
-    Top = 115
-    Width = 79
-    BorderSpacing.Top = 5
-    Caption = 'Power max :'
-    Font.Color = 15395562
-    Font.Height = 20
+    Height = 218
+    Top = 54
+    Width = 457
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 10
+    BevelColor = 4227327
+    Color = 3552822
     ParentColor = False
-    ParentFont = False
-  end
-  object SpeedButton3: TSpeedButton
-    AnchorSideLeft.Control = Panel2
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Panel2
-    AnchorSideTop.Side = asrBottom
-    AnchorSideBottom.Side = asrBottom
-    Cursor = crHandPoint
-    Left = 710
-    Height = 30
-    Top = 698
-    Width = 150
-    AutoSize = True
-    BorderSpacing.Top = 50
-    Constraints.MinHeight = 30
-    Constraints.MinWidth = 150
-    Caption = 'sClose'
-    Font.Color = clBlack
-    Images = DataModule1.ImageList1
-    ImageIndex = 2
-    Transparent = False
-    OnClick = SpeedButton3Click
-    ParentFont = False
+    TabOrder = 2
   end
 end

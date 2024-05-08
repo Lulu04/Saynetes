@@ -97,16 +97,13 @@ type
     procedure MIModifyRangeClick(Sender: TObject);
     procedure MI_RenameChannelClick(Sender: TObject);
     procedure PopupMenu1Popup(Sender: TObject);
-    procedure TVMouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+    procedure TVMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure TVSelectionChanged(Sender: TObject);
   private
-    FEditionEnabled: boolean;
+    FEditionEnabled, FTreeIsCollapsed: boolean;
+    FFixturetype: TFixturetype;
     FOnSelectionChange: TNotifyEvent;
     FReady: boolean;
-    FFixtureType: TFixtureType;
-    FPower: integer;
-    FFixtureName: string;
     FChannelCount: integer;
     FSelectionEnabled: boolean;
     function GetSelected: TTreeNode;
@@ -116,12 +113,7 @@ type
     procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure Clear;
-    procedure ShowFixture(const aFileName: string; aShowCollapsed: boolean);
-    // fills a TLibraryFixture from data read and modified from method  ShowFixture
-    function ToLibraryFixture: TLibraryFixture;
-
-    // fills a TLibraryFixture.Channels from the current editing
-    procedure FillChannels(var Channels:ArrayOfLibraryFixtureChannel);
+    procedure ShowFixture(const aFixtureLocation: TFixtureLibraryLocation; aShowCollapsed: boolean);
 
     procedure MoveSelectedUp;
     procedure MoveSelectedDown;
@@ -135,10 +127,8 @@ type
 
 
     property Ready: boolean read FReady; // true after a successfull call to method ShowFixture
-    property FixtureType: TFixtureType read FFixtureType write FFixturetype;
-    property Power: integer read FPower;
-    property FixtureName: string read FFixtureName;
     property ChannelCount: integer read FChannelCount write FChannelCount;
+    property FixtureType: TFixturetype read FFixturetype;
 
     property EditionEnabled: boolean read FEditionEnabled write SetEditionEnabled;
     property SelectionEnabled: boolean read FSelectionEnabled write SetSelectionEnabled;
@@ -464,6 +454,8 @@ end;
 
 procedure TFrameViewDMXFixtureChannels.TVMouseUp(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+var
+  n: TTreeNode;
 begin
   if FEditionEnabled and (Button = mbRight) and (TV.Selected <> NIL) then begin
     MenuItem3.Enabled := TV.Selected.Level = 0;
@@ -474,12 +466,23 @@ begin
     MIDeleteRange.Enabled := MIAddRange.Enabled;
     PopupMenu1.PopUp;
   end;
+
+    // collapse/develop the tree
+  if (Button = mbLeft) and (TV.GetNodeWithExpandSignAt(X, Y) = NIL) then begin
+    FTreeIsCollapsed := not FTreeIsCollapsed;
+
+    if TV.Items.Count = 0 then exit;
+    n := TV.Items.GetFirstNode;
+    for n in TV.Items do
+      if FTreeIsCollapsed then n.Collapse(True)
+        else n.Expand(False);
+  end;
 end;
 
 procedure TFrameViewDMXFixtureChannels.MenuItem10Click(Sender: TObject);
 begin
-  if TV.Selected=NIL then exit;
-  TV.Selected.ImageIndex:=ord(ctDIMMER);
+  if TV.Selected = NIL then exit;
+  TV.Selected.ImageIndex := ord(ctDIMMER);
   TV.Selected.Text:='Dimmer';
 end;
 
@@ -487,7 +490,7 @@ procedure TFrameViewDMXFixtureChannels.MenuItem11Click(Sender: TObject);
 begin
   if TV.Selected=NIL then exit;
   TV.Selected.ImageIndex:=ord(ctSTROBE);
-  TV.Selected.Text:='Strobe';
+  TV.Selected.Text := 'Strobe';
 end;
 
 procedure TFrameViewDMXFixtureChannels.SetSelectionEnabled(AValue: boolean);
@@ -521,65 +524,35 @@ procedure TFrameViewDMXFixtureChannels.Clear;
 begin
   TV.Items.Clear;
 end;
-procedure TFrameViewDMXFixtureChannels.ShowFixture(const aFileName: string; aShowCollapsed: boolean);
+procedure TFrameViewDMXFixtureChannels.ShowFixture(const aFixtureLocation: TFixtureLibraryLocation; aShowCollapsed: boolean);
 var i, j: integer;
   n: TTreeNode;
   lf: TLibraryFixture;
+  A: TFixLibAvailableChannels;
 begin
   FReady := FALSE;
   TV.Items.Clear;
-  if aFileName = '' then exit;
+  if (aFixtureLocation.SubFolder = '') or
+     (aFixtureLocation.FileName = '') or
+     (aFixtureLocation.Mode = '') then exit;
+  if ExtractFileExt(aFixtureLocation.Filename) <> DMX_LIBRARY_FILE_EXTENSION then exit;
 
-  if not lf.LoadFromFile(aFileName) then exit;
+  try
+   if not lf.LoadFromFile(aFixtureLocation.AbsolutPath) then exit;
+  except
+    exit;
+  end;
 
-  FFixtureType := lf.FixtureType;
-  FPower := lf.Power; // power
-  FFixtureName := lf.Name;            // name
-  FChannelCount:=Length(lf.Channels); // channel count
+  FFixturetype := lf.General.FixtureType;
+  A := lf.GetChannelsForMode(aFixtureLocation.Mode);
 
-  for i:=0 to High(lf.Channels) do begin
-    n := TV.Items.Add( TV.Items.GetFirstNode, lf.Channels[i].Name ); // channel name
-{    //if channel name is a known word, we translate it in the current app language
-    case LowerCase(n.Text) of
-      'red': n.Text:=SChannelRed;
-      'green': n.Text:=SChannelGreen;
-      'blue': n.Text:=SChannelBlue;
-      'white': n.Text:=SChannelWhite;
-      'amber': n.Text:=SChannelAmber;
-      'ultraviolet': n.Text:=SChannelUV;
-      'master dimmer': n.Text:=SChannelMasterDimmer;
-      'dimmer': n.Text:=SDimmer;
-      'config': n.Text:=SChannelConfig;
-      'strobe': n.Text:=SChannelStrobe;
-      'pan': n.Text:=SChannelPan;
-      'tilt': n.Text:=SChannelTilt;
-      'speed pan/tilt': n.Text:=SChannelSpeedPanTilt;
-      'gobo': n.Text:=SChannelGobo;
-      'rotation gobo': n.Text:=SChannelRotationGobo;
-      'color changer': n.Text:=SChannelColorChanger;
-      'speed': n.Text:=SChannelSpeed;
-      'no function': n.Text := SChannelNoFunction;
-      'cyan': n.Text := SChannelCyan;
-      'magenta': n.Text := SChannelMagenta;
-      'yellow': n.Text := SChannelYellow;
-      'lime': n.Text := SChannelLime;
-      'indigo': n.Text := SChannelIndigo;
-      'warm white': n.Text := SChannelWarmWhite;
-      'cold white': n.Text := SChannelColdWhite;
-      'iris': n.Text := SChannelIris;
-      'blade insertion': n.Text := SChannelBladeInsertion;
-      'color temperature': n.Text := SChannelColorTemperature;
-      'strobe speed': n.Text := SChannelStrobeSpeed;
-      'sound sensitivity': n.Text := SChannelSoundSensitivity;
-      'blade rotation': n.Text := SChannelBladRotation;
-      'zoom': n.Text := SChannelZoom;
-      'focus': n.Text := SChannelFocus;
-      'rotation': n.Text := SChannelRotation;
-    end;//case     }
+  for i:=0 to High(A) do begin
+    // channel name
+    n := TV.Items.Add(TV.Items.GetFirstNode, {(i+1).ToString+'. '+}A[i].NameID);
 
-    n.ImageIndex := Ord(lf.Channels[i].ChannelType); // image associated with channel type
-    for j:=0 to High(lf.Channels[i].Ranges) do
-      TV.Items.AddChild(n, lf.Channels[i].Ranges[j].Encode);
+    n.ImageIndex := Ord(A[i].ChanType); // image associated with channel type
+    for j:=0 to High(A[i].Ranges) do
+      TV.Items.AddChild(n, A[i].Ranges[j].ToReadableString);
   end;
   TV.FullExpand;
   FReady := TRUE;
@@ -590,31 +563,9 @@ begin
    for n in TV.Items do
      if aShowCollapsed then n.Collapse(True)
        else n.Expand(False);
-end;
 
-function TFrameViewDMXFixtureChannels.ToLibraryFixture: TLibraryFixture;
-begin
-  Result.Name:=self.FixtureName;
-  Result.FixtureType:=self.FixtureType;
-  Result.Power:=Power;
-  FillChannels(Result.Channels);
+   FTreeIsCollapsed := aShowCollapsed;
 end;
-
-procedure TFrameViewDMXFixtureChannels.FillChannels( var Channels: ArrayOfLibraryFixtureChannel);
-var i, j: integer;
-  n: TTreeNode;
-begin
-  SetLength(Channels, TV.Items.TopLvlCount);
-  for i:=0 to TV.Items.TopLvlCount-1 do begin
-    n := TV.Items.TopLvlItems[i];
-    Channels[i].ChannelType:=TChannelType(n.ImageIndex);
-    Channels[i].Name:=n.Text;
-    SetLength(Channels[i].Ranges, n.Count);
-    for j:=0 to n.Count-1 do
-      Channels[i].Ranges[j].Decode(n.Items[j].Text);
-  end;
-end;
-
 procedure TFrameViewDMXFixtureChannels.MoveSelectedUp;
 var n: TTreeNode;
 begin

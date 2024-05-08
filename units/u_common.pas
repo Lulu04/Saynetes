@@ -28,8 +28,11 @@ const
 
 // message definition
 const
-  LM_MESSAGE_MainGui=LM_USER+1;
-     MESS_MainGui_StartupWizard=0;
+  LM_MESSAGE_MainGui = LM_USER + 1;
+     MESS_MainGui_StartupWizard = 0;
+
+  LM_MESSAGE_EditFixtureWizard = LM_USER + 2;
+     MESS_DeleteModeFrame = 0;
 {  LM_MESSAGE_DMXUniverse=LM_USER+2;
      MESS_DMXUniverse_Update=0;
   LM_MESSAGE_Player=LM_USER+3;  }
@@ -82,15 +85,14 @@ const
   CMD_SEPARATOR = ';';
   PARAM_SEPARATOR = ' ';
 
-  FORBIDENCHARS:string='|\;:*$#&';
+  FORBIDENCHARS:string='|\;:*$#&~';
   FILENAMEFORBIDENCHARS=' /|\;,.:*?!%$#&';
 
   PRESET_SEPARATOR = '|';
 
-  DIPSWITCH_SEPARATOR = ';';
+  FIXTURELOCATION_SEPARATOR = '~';
 
   DECIMAL_CHARACTERS: array[0..1] of char=(',', '.');
-
 
 const
    PROJECT_FILE_EXTENSION = '.say';
@@ -247,14 +249,14 @@ const
 
 type
 
-    // énumération des types d'appareils dmx possibles
+    // enum of possible fixture image
     // KEEP THIS ORDER !!
     TFixtureType = ( ftOther=0,
-                     ftPlanConvex,     // projecteur plan convex
+                     ftPlanConvex,     // plan convex
                      ftParShortBulb,   // short PAR with bulb
-                     ftHalogen,        // projecteur halogène
+                     ftHalogen,        // halogen
                      ftParLongTransparentLed, // PAR with transparent led long version
-                     ftBarColoredLed,  // rampe à leds
+                     ftBarColoredLed,
                      ftProfile,        // découpe
                      ftColorChanger,
                      ftScanner,
@@ -271,11 +273,13 @@ type
                      ftLedBarTransparentLed,
                      ftParLongBulb,     // long PAR with bulb
                      ftFan,      // 21
-                     ftLaser
+                     ftLaser,
+                     ftParSmallTransparentLed,
+                     ftFlower01
                          );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
-                   ftOther,
+                   ftOther, ftParSmallTransparentLed,
                    ftParShortTransparentLed, ftParLongTransparentLed,
                    ftLedParShortWithColoredLed, ftLedParLongWithColoredLed,
                    ftLedBarTransparentLed, ftBarColoredLed,
@@ -285,11 +289,65 @@ const
                    ftHalogen,
                    ftProfile,
                    ftScanner, ftMovingHead, ftLaser,
+                   ftFlower01,
                    ftColorChanger,
                    ftSmokeMachine, ftBubbleMachine, ftFan,
                    ftDimmer1Channel,
                    ftDimmer4Channels);
 
+  FixtureCanFlipH: array[TFixtureType] of boolean =(
+               False,
+               True,     // plan convex
+               True,   // short PAR with bulb
+               True,        // halogen
+               True, // PAR with transparent led long version
+               False,
+               False,        // découpe
+               True,
+               True,
+               True,
+               True,
+               True,
+               False,
+               False,
+               True,
+               True,   //15
+               True, // PAR with transparent led short version
+               True,  // PAR with colored led RGB long version
+               True, // PAR with colored led RGB short version
+               False,
+               True,     // long PAR with bulb
+               True,      // 21
+               True,  // laser
+               True,  // small par
+               True); // flower01
+
+  FixtureCanFlipV: array[TFixtureType] of boolean =(
+               False,
+               True,   // plan convex
+               True,   // short PAR with bulb
+               True,   // halogen
+               True,   // PAR with transparent led long version
+               False,
+               True,   // profile
+               False,
+               False,
+               False,
+               False,
+               False,
+               False,
+               False,
+               False, //ftMatrixTransparentLed,
+               False, //ftMatrixWithColoredLed,   //15
+               True, // PAR with transparent led short version
+               True,  // PAR with colored led RGB long version
+               True, // PAR with colored led RGB short version
+               False, //ftLedBarTransparentLed,
+               True,     // long PAR with bulb
+               False, //ftFan,      // 21
+               False, //ftLaser
+               True,  //small par
+               True);  // flower01
 type
 
     // enum for channels type
@@ -299,22 +357,22 @@ type
                      ctDIMMER,
                      ctRED,
                      ctGREEN,
-                     ctBLUE,
+                     ctBLUE,         // 5
                      ctSTROBE,
                      ctPAN,
                      ctTILT,
                      ctPANTILTSPEED,
-                     ctGOBO, // non utilisé dans le converter
+                     ctGOBO,        // 10
                      ctGOBOROTATION,
                      ctCOLORCHOICE,
                      ctWHITE,
                      ctAMBER,
-                     ctUV,
-                     ctSPEED,        // 16
+                     ctUV,           // 15
+                     ctSPEED,
                      ctNOFUNCTION,
                      ctCYAN,
                      ctMAGENTA,
-                     ctYELLOW,
+                     ctYELLOW,      // 20
                      ctLIME,
                      ctINDIGO,
                      ctWARMWHITE,
@@ -327,7 +385,9 @@ type
                      ctBLADEROTATION,   // 30
                      ctZOOM,
                      ctFOCUS,
-                     ctROTATION
+                     ctROTATION,
+                     ctPANSPEED,
+                     ctTILTSPEED        // 35
                    );
 
     // stage shape rendered in the stage view
@@ -344,6 +404,16 @@ type
                 seatType2
               );
 
+
+const
+    MANUFACTURER_LIST = 'manufacturers.txt';
+type
+  TFixtureManufacturer = record
+    Folder,
+    Name,
+    WebSite: string;
+  end;
+  TManufacturers = array of TFixtureManufacturer;
 
 implementation
 

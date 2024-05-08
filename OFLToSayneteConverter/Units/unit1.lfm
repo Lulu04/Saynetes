@@ -7,7 +7,7 @@ object Form1: TForm1
   ClientHeight = 811
   ClientWidth = 748
   OnShow = FormShow
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 0
     Height = 315
@@ -179,6 +179,13 @@ object Form1: TForm1
       Caption = 'Matrix error:'
       ParentColor = False
       WordWrap = True
+    end
+    object PB: TProgressBar
+      Left = 583
+      Height = 14
+      Top = 104
+      Width = 150
+      TabOrder = 2
     end
   end
   object Splitter1: TSplitter

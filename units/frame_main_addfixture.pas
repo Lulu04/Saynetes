@@ -46,8 +46,9 @@ type
     function SelectedUniverseIndex: integer;
   private
     FDMXLibraryFilled: boolean;
+    FSelectedLocation: TFixtureLibraryLocation;
     FrameViewDMXFixtureChannels1: TFrameViewDMXFixtureChannels;
-    procedure ProcessDMXLibrarySelectionChangeEvent(Sender: TObject; aFileName: string);
+    procedure ProcessDMXLibrarySelectionChangeEvent(Sender: TObject; const aFixtureLocation: TFixtureLibraryLocation);
     procedure ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject);
     procedure UpdateWidgets;
   public
@@ -147,32 +148,32 @@ begin
 end;
 
 procedure TFrameMainAddFixture.ProcessDMXLibrarySelectionChangeEvent(
-  Sender: TObject; aFileName: string);
+  Sender: TObject; const aFixtureLocation: TFixtureLibraryLocation);
 var uni: TDmxUniverse;
 begin
-  FrameViewDMXFixtureChannels1.ShowFixture(aFileName, True);//fixfilename);
-  if aFilename <> '' then
-  begin
-    ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);
+  ShowFixtureImage(Image1, aFixtureLocation);
 
+  FrameViewDMXFixtureChannels1.ShowFixture(aFixtureLocation, True);
+  if FrameViewDMXFixtureChannels1.Ready then begin
+    aFixtureLocation.CopyTo(FSelectedLocation);
+//    ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);
     uni := FrameViewUniverseList1.SelectedUniverse;
-
-    if uni <> NIL then
-      FormMain.FrameViewProjector1.FixtureFilenameToAdd(aFileName, uni)
-    else
-      FormMain.FrameViewProjector1.ExitAddMode;
+    if uni <> NIL then FormMain.FrameViewProjector1.FixtureFilenameToAdd(aFixtureLocation, uni)
+      else FormMain.FrameViewProjector1.ExitAddMode;
   end
-  else Image1.Picture.Assign(NIL);
+  else begin
+//    Image1.Picture.Assign(NIL);
+    FSelectedLocation.InitDefault;
+  end;
 end;
 
-procedure TFrameMainAddFixture.ProcessDMXLibraryStartDragFixtureEvent(
-  Sender: TObject);
+procedure TFrameMainAddFixture.ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject);
 var uni: TDmxUniverse;
 begin
   uni := FrameViewUniverseList1.SelectedUniverse;
 
-  if uni <> NIL then
-    FormMain.FrameViewProjector1.FixtureFilenameToAdd(FrameViewDMXLibrary1.GetSelectedFixtureFileName, uni)
+  if (uni <> NIL) and FSelectedLocation.IsFilled then
+    FormMain.FrameViewProjector1.FixtureFilenameToAdd(FSelectedLocation, uni)
   else
     FormMain.FrameViewProjector1.ExitAddMode;
 end;

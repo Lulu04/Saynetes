@@ -34,6 +34,7 @@ object FormUserMessage: TFormUserMessage
     AnchorSideLeft.Side = asrCenter
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
     Left = 190
     Height = 20
     Top = 100

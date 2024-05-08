@@ -61,6 +61,8 @@ type
 
     procedure ShowAdress(aAdress: TDMXAdress; aDipSwitch: TDipSwitch);
 
+    procedure SetSwitchFunction(aIndex: integer; aFunction: TDipSwitchFunction);
+
     property Count: integer read GetCount write SetCount;
     property Switchs: ArrayOfSwitchDescriptor read FSwitchs;
     property MSBIsLeft: boolean read FMSBIsLeft write SetMSBIsLeft;
@@ -79,7 +81,7 @@ uses Math, u_resource_string, u_logfile;
 procedure TFrameViewDipSwitchs.SetCount(AValue: integer);
 var i: integer;
 begin
-  AValue:=EnsureRange(AValue, 1, 11);
+  AValue := EnsureRange(AValue, 1, 10);
   SetLength(FSwitchs, AValue);
   for i:=0 to AValue-1 do FSwitchs[i].SwitchFunction:=dsfAdress;
   UpdateImage;
@@ -250,6 +252,12 @@ begin
   SetLength(FSwitchs, Length(aDipSwitch.Functions));
   for i:=0 to High(FSwitchs) do
     FSwitchs[i].SwitchFunction:=aDipSwitch.Functions[i];
+  UpdateImage;
+end;
+
+procedure TFrameViewDipSwitchs.SetSwitchFunction(aIndex: integer; aFunction: TDipSwitchFunction);
+begin
+  FSwitchs[aIndex].SwitchFunction := aFunction;
   UpdateImage;
 end;
 

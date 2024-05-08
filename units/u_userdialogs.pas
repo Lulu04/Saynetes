@@ -10,7 +10,10 @@ uses
 
 procedure ShowMess(const mess, sbutton: string; aMsgType: TMsgDlgType=mtCustom);
 
+// return mrOk or mrCancel
 function AskConfirmation(const mess, syes, sno: string; aMsgType: TMsgDlgType): integer;
+// return mrYes or mrNo or mrCancel
+function AskConfirmation(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer;
 
 function UserIntegerInput(const mess, sok, scancel: string;
                            var number: integer;
@@ -50,7 +53,12 @@ end;
 
 function AskConfirmation(const mess, syes, sno: string; aMsgType: TMsgDlgType): integer;
 begin
-  Result:=FormUserConfirmation.Init(mess, syes, sno, aMsgType);
+  Result := FormUserConfirmation.Init(mess, syes, sno, aMsgType);
+end;
+
+function AskConfirmation(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer;
+begin
+  Result := FormUserConfirmation.Init(mess, syes, sno, scancel, aMsgType);
 end;
 
 function UserInputFileName(const mess, sok, scancel: string;

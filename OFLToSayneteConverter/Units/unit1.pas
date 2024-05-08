@@ -8,8 +8,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  fpjson, jsonparser,
-  u_common;
+  ComCtrls, Menus, fpjson, jsonparser, u_common;
 
 type
 
@@ -28,10 +27,12 @@ type
     Memo1: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
+    PB: TProgressBar;
     Splitter1: TSplitter;
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
+    procedure ConvertManufacturers;
     function OriginalPath: string;
     function DestPath: string;
     function ManufacturerNameOf(const f: string): string;
@@ -44,13 +45,14 @@ var
   Form1: TForm1;
 
 implementation
-uses utilitaire_fichier, PropertyUtils;
+uses utilitaire_fichier, PropertyUtils, jsonscanner;
 
 {$R *.lfm}
 
 var
   FWheelsErrorCount,
   FMatrixErrorCount: integer;
+  FChannelNotTyped: TStringList;
 
 
 
@@ -67,9 +69,9 @@ type
   TGeneral = record
     Manufacturer,
     Name,
-    FixType,
     Authors,
     Creator: string;
+    FixtureType: TFixtureType;
     procedure InitDefault;
     procedure SaveTo(t: TStringList);
   end;
@@ -93,6 +95,12 @@ type
     procedure SaveTo(t: TStringList);
   end;
 
+  TWebLink = record
+    LinkType,
+    Url: string;
+  end;
+  TWebLinks = array of TWebLink;
+
   { TSlotDescriptor }
 
   TSlotDescriptor = record
@@ -110,26 +118,15 @@ type
     procedure InitDefault;
   end;
 
-  { TSwitchDescriptor }
-
-  TSwitchDescriptor = record
-    SwitchID,
-    TargetID: string;
-    function SaveToString: string;
-  end;
-
   { TSingleRange }
 
   TSingleRange = record
     BeginValue,
     EndValue: integer;
-    Symbol: word;
     Txt,
     Extra: string;
-    Switchs: array of TSwitchDescriptor;
 
     procedure InitDefault;
-    procedure AddSwitch(const aSwitchID, aTargetID: string);
     function SaveToString: string;
   end;
   TRanges = array of TSingleRange;
@@ -137,41 +134,27 @@ type
 
   { TAvailableChannel }
 
+  PAvailableChannel = ^TAvailableChannel;
   TAvailableChannel = record
-    ID: string;
+  private
+    FID: string;
+    procedure SetID(AValue: string);
+  public
     BitWidthForNumber: integer; // 0 means total bit width of coarse plus fine(s) channel(s)
     DefaultValue: integer;
     ChanType: TChannelType;
     Ranges: TRanges;
 
-    FineChannelAliases: TStringArray; // contains the ID of the fine(s) channel aliases
+    FineChannelIndexes: array of integer; // contains the index of the fine(s) channel aliases
 
     procedure InitDefault;
-    procedure SetSingleRange(aSymbol: word; const aText: string);
+    procedure SetSingleRange(const aText: string);
     function HaveFineChannels: boolean;
     function SaveToString: string;
+    property ID: string read FID write SetID;
   end;
   TAvailableChannels = array of TAvailableChannel;
 
-  { TVirtualSwitchingChannel }
-
-  TVirtualSwitchingChannel = record
-    VirtualName: string;
-    PossibleTargetChannels: TStringArray;
-    function SaveToString: string; // used to save "modes"
-  end;
-  TVirtualSwitchingChannels =  array of TVirtualSwitchingChannel;
-
-  { HVirtualSwitchingChannels }
-
-  HVirtualSwitchingChannels = type helper for TVirtualSwitchingChannels
-    procedure Add(const aVirtualName, aPossibleTargetChannelName: string);
-    function IsVirtualSwitchingChannel(const aChannelName: string): boolean;
-    function SaveToString(const aVirtualChannelName: string): string;
-  end;
-
-var
-    FVirtualSwitchingChannels: TVirtualSwitchingChannels;
 
 type
 
@@ -208,9 +191,11 @@ type
   private
     FSourceWheelIndex: integer;
     FChannelNotUsedIsAdded: boolean;
+    FHaveColorChannel: boolean;
     // because OFL modes can have null entry to specify a not used channel...
     procedure AddNotUsedChannelIfNeeded;
   public
+    Web: TWebLinks;
     General: TGeneral;
     Physical: TPhysical;
     Matrix: TMatrix;
@@ -222,7 +207,7 @@ type
     function TranslateCapabilityType(aItem: TJSONData;
                  const aOFLType: string;
                  out chanType: TChannelType; out txt: string;
-                 out symbol: word; out extra: string): boolean;
+                 out extra: string): boolean;
     function TranslateSlotType(aItem: TJSONData;
                  const aOFLType: string;
                  out chanType: TChannelType; out txt: string;
@@ -238,71 +223,10 @@ type
 
     procedure SaveTo(t: TStringList);
     function SaveTo(const aFilename: string): boolean;
+
+    property HaveColorChannel: boolean read FHaveColorChannel; // used to set the right fixture type
   end;
 
-{ TVirtualSwitchingChannel }
-
-function TVirtualSwitchingChannel.SaveToString: string;
-var s: String;
-begin
-  Result := VirtualName;
-  for s in PossibleTargetChannels do
-    Result := Result+'#'+s;
-end;
-
-{ HVirtualSwitchingChannels }
-
-procedure HVirtualSwitchingChannels.Add(const aVirtualName, aPossibleTargetChannelName: string);
-var i, j: integer;
-begin
-  // aVirtualName is already in the array ?
-  for i:=0 to High(Self) do
-    with Self[i] do
-      if VirtualName = aVirtualName then begin
-        // do nothing if aPossibleTargetChannelName is already present
-        for j:=0 to High(PossibleTargetChannels) do
-          if PossibleTargetChannels[j] = aPossibleTargetChannelName then exit;
-        // add the target channel
-        SetLength(PossibleTargetChannels, Length(PossibleTargetChannels)+1);
-        PossibleTargetChannels[High(PossibleTargetChannels)] := aPossibleTargetChannelName;
-        exit;
-      end;
-
-  // Add an entry
-  SetLength(Self, Length(Self)+1);
-  with Self[High(Self)] do begin
-    VirtualName := aVirtualName;
-    SetLength(PossibleTargetChannels, 1);
-    PossibleTargetChannels[0] := aPossibleTargetChannelName;
-  end;
-
-end;
-
-function HVirtualSwitchingChannels.IsVirtualSwitchingChannel(const aChannelName: string): boolean;
-var v: TVirtualSwitchingChannel;
-begin
-  Result := False;
-  for v in Self do
-    Result := Result or (v.VirtualName = aChannelName);
-end;
-
-function HVirtualSwitchingChannels.SaveToString(const aVirtualChannelName: string): string;
-var v: TVirtualSwitchingChannel;
-begin
-  for v in Self do
-    if v.VirtualName = aVirtualChannelName then begin
-      Result := v.SaveToString;
-      exit;
-    end;
-  Raise Exception.Create(aVirtualChannelName+' is not a virtual switching channel');
-end;
-
-{ TSwitchDescriptor }
-
-function TSwitchDescriptor.SaveToString: string;
-begin
-  Result := SwitchID+':'+TargetID;
-end;
 
 { TFixtureMode }
 
@@ -324,7 +248,7 @@ begin
 end;
 
 function TFixtureMode.SaveToString: string;
-var prop: TPackProperty;
+var prop: PropertyUtils.TProperties;
   s: string;
   i: integer;
 begin
@@ -396,58 +320,125 @@ procedure TSingleRange.InitDefault;
 begin
   BeginValue := 0;
   EndValue := 0;
-  Symbol := 0;
   txt := '';
-  Switchs := NIL;
-end;
-
-procedure TSingleRange.AddSwitch(const aSwitchID, aTargetID: string);
-begin
-  SetLength(Switchs, Length(Switchs)+1);
-  with Switchs[High(Switchs)] do begin
-    SwitchID := aSwitchID;
-    TargetID := aTargetID;
-  end;
 end;
 
 function TSingleRange.SaveToString: string;
-var prop: TPackProperty;
-  i: integer;
-  s: string;
+var prop: PropertyUtils.TProperties;
 begin
   prop.Init('~');
   prop.Add('Begin', BeginValue);
   prop.Add('End', EndValue);
-  prop.Add('Symbol', Symbol);
   prop.Add('Txt', txt);
   if Extra <> '' then prop.Add('Extra', Extra);
-  if Length(Switchs) > 0 then begin
-    s := '';
-    for i:=0 to High(Switchs) do begin
-      s := s+Switchs[i].SaveToString;
-      if i < High(Switchs) then s := s+';';
-    end;
-    prop.Add('Switch', s);
-  end;
-
   Result := prop.PackedProperty;
 end;
 
 { TAvailableChannel }
 
+procedure TAvailableChannel.SetID(AValue: string);
+var s: string;
+begin
+  FID := AValue;
+  s := LowerCase(AValue);
+  case s of
+    'config', 'configuration', 'maintenance', 'mode', 'auto programs',
+    'programs', 'program', 'auto program selection', 'reset', 'dimmer curve',
+    'program speed / sound control', 'special functions', 'function', 'functions', 'internal programs',
+    'function selection', 'control', 'factory reset',
+    'built in programs', 'channel functions', 'led programs',
+    'effect', 'effect speed / sound sensitivity', 'auto/sound programs',
+    'lens function select', 'lens control', 'geometry', 'custom masking',
+    'freeze', 'fixture control settings': ChanType := ctCONFIG;
+
+    'master', 'master fine', 'master dimmer', 'master dimmer fine', 'master dimmer fine value',
+    'master intensity', 'master intensity fine': ChanType := ctMASTERDIMMER;
+
+    'dimmer', 'dimmer fine value', 'intensity', 'intensity fine', 'intensity fine value',
+    'value', 'value fine', 'fog', 'haze', 'fan', 'light output', 'dimmer / strobe',
+    'power', 'fade in', 'fade out', 'haze / fog', 'fog output', 'fog on/off',
+    'fog emission', 'beam dimmer', 'output', 'hue', 'hue fine value',
+    'saturation', 'saturation fine value', 'dimmer 2', 'dimmer 2 fine value': ChanType := ctDIMMER;
+
+    'red', 'red fine', 'red fine value', 'red 1', 'red 2', 'beam red': ChanType := ctRED;
+    'green', 'green fine', 'green fine value', 'green 1', 'green 2', 'beam green': ChanType := ctGREEN;
+    'blue', 'blue fine', 'blue fine value', 'blue 1', 'blue 2', 'beam blue': ChanType := ctBLUE;
+
+    'strobe', 'strobe fine', 'strobe effect', 'shutter / strobe', 'shutter',
+    'led strobe', 'laser strobe', 'linear strobe', 'fx strobe', 'electronic shutter effect',
+    'flash rate', 'strobe 16bit', 'strobe 16bit fine value': ChanType := ctSTROBE;
+
+    'pan', 'pan fine', 'pan fine value', 'pan 1', 'pan 2', 'horizontal position',
+    'lens h shift': ChanType := ctPAN;
+
+    'tilt', 'tilt fine', 'tilt fine value', 'tilt 1', 'tilt 2', 'vertical position',
+    'tilt spin', 'lens v shift', 'tilt all', 'tilt all fine value',
+    'tilt 1 fine value', 'tilt 2 fine value', 'tilt 3', 'tilt 3 fine value',
+    'tilt 4', 'tilt 4 fine value': ChanType := ctTILT;
+
+    'pan/tilt speed', 'pan/tilt speed fine', 'pan/tilt macro speed': ChanType := ctPANTILTSPEED;
+    'gobo', 'gobo all', 'raster pattern', 'red gobo', 'green gobo', 'blue gobo': ChanType := ctGOBO;
+    'gobo rotation', 'gobo rotation fine': ChanType := ctGOBOROTATION;
+
+    'color', 'colors', 'color macros', 'color presets', 'color walking',
+    'virtual color wheel', 'constant color', 'cct', 'ctc', 'derby colors',
+    'color programs', 'rgb macros', 'rgbw presets' ,'rgbw presets / chase',
+    'led color saturation', 'color selection', 'color presets / temperature',
+    'tint', 'user colors', 'beam ctc', 'cct fine value': ChanType := ctCOLORCHOICE;
+
+    'white', 'white fine', 'white fine value', 'white 1', 'white 2',
+    'natural white', 'natural white fine value', 'beam white': ChanType := ctWHITE;
+
+    'amber', 'amber fine': ChanType := ctAMBER;
+
+    'uv', 'uv fine': ChanType := ctUV;
+
+    'speed', 'speed fine', 'function speed', 'color effect speed', 'effect speed',
+    'color speed', 'derby speed', 'program speed', 'program duration', 'fade time',
+    'auto speed', 'dimmer speed', 'movement speed', 'chase speed', 'led speed',
+    'rotation speed', 'flash duration': ChanType := ctSPEED;
+
+    'no function', 'notused': ChanType := ctNOFUNCTION;
+    'cyan', 'cyan fine', 'cyan fine value': ChanType := ctCYAN;
+    'magenta', 'magenta fine', 'magenta fine value': ChanType := ctMAGENTA;
+    'yellow', 'yellow fine', 'yellow fine value': ChanType := ctYELLOW;
+    'lime', 'lime fine': ChanType := ctLIME;
+    'indigo', 'indigo fine': ChanType := ctINDIGO;
+    'warm white', 'warm white fine', 'warm white fine value', 'intensity warm white': ChanType := ctWARMWHITE;
+    'cold white', 'cold white fine', 'intensity cold white', 'intensitycoldwhite': ChanType := ctCOLDWHITE;
+    'iris', 'iris fine': ChanType := ctIRIS;
+    'blade insertion', 'blade insertion fine', 'blade', 'blade fine value': ChanType := ctBLADEINSERTION;
+
+    'color temperature', 'color temperature fine', 'color temperature fine value',
+    'color temperature 2', 'color temperature 2 fine value': ChanType := ctCOLORTEMPERATURE;
+
+    'strobe speed', 'strobe speed fine', 'shutter speed', 'shutter speed fine': ChanType := ctSTROBESPEED;
+    'sound sensitivity': ChanType := ctSOUNDSENSITIVITY;
+    'blade rotation', 'blade rotation fine': ChanType := ctBLADEROTATION;
+    'zoom', 'zoom fine', 'zoom fine value', 'lens zoom': ChanType := ctZOOM;
+    'focus', 'focus fine', 'lens focus': ChanType := ctFOCUS;
+
+    'rotation', 'rotation fine', 'motor rotation', 'rotating derby', 'rotating laser',
+    'rotation red', 'rotation green', 'rotation blue': ChanType := ctROTATION;
+
+    'pan speed', 'pan speed fine': ChanType := ctPANSPEED;
+    'tilt speed', 'tilt speed fine': ChanType := ctTILTSPEED;
+    else FChannelNotTyped.Add(s);
+  end;
+end;
+
 procedure TAvailableChannel.InitDefault;
 begin
-  ID := '';
+  FID := '';
   BitWidthForNumber := 0;
   DefaultValue := 0;
   Ranges := NIL;
-  FineChannelAliases := NIL;
+  FineChannelIndexes := NIL;
 end;
 
-procedure TAvailableChannel.SetSingleRange(aSymbol: word; const aText: string);
+procedure TAvailableChannel.SetSingleRange(const aText: string);
 begin
   SetLength(Ranges, 1);
-  Ranges[0].Symbol := aSymbol;
   Ranges[0].txt := aText;
   Ranges[0].BeginValue := 0;
   Ranges[0].EndValue := 255;
@@ -455,20 +446,27 @@ end;
 
 function TAvailableChannel.HaveFineChannels: boolean;
 begin
-  Result := Length(FineChannelAliases) > 0;
+  Result := Length(FineChannelIndexes) > 0;
 end;
 
 function TAvailableChannel.SaveToString: string;
-var prop: TPackProperty;
+var prop: PropertyUtils.TProperties;
   i: integer;
+  flag: boolean;
 begin
   prop.Init('|');
   prop.Add('ID', ID);
   prop.Add('Type', Ord(ChanType));
   if DefaultValue <> 0 then prop.Add('DefaultValue', DefaultValue);
 
-  for i:=0 to High(Ranges) do
-    prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
+  // no data for an single empty range
+  flag :=  (Length(Ranges) = 1) and (Ranges[0].BeginValue = 0) and
+           (Ranges[0].EndValue = 255) and (Trim(Ranges[0].Txt) = '') and
+           (Trim(Ranges[0].Extra) = '');
+
+  if not flag then
+    for i:=0 to High(Ranges) do
+      prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
 
   Result := prop.PackedProperty;
 end;
@@ -479,18 +477,18 @@ procedure TGeneral.InitDefault;
 begin
   Manufacturer := '';
   Name := '';
-  FixType := '';
+  FixtureType := ftOther;
   Authors := '';
   Creator := '';
 end;
 
 procedure TGeneral.SaveTo(t: TStringList);
-var prop: TPackProperty;
+var prop: PropertyUtils.TProperties;
 begin
   prop.Init('|');
   prop.Add('Manufacturer', Manufacturer);
   prop.Add('Name', Name);
-  prop.Add('Type', FixType);
+  prop.Add('Type', Ord(FixtureType));
   if Authors <> '' then prop.Add('Authors', Authors);
   if Creator <> '' then prop.Add('Creator', Creator);
   t.Add('[GENERAL]');
@@ -596,7 +594,7 @@ begin
 end;
 
 procedure TPhysical.SaveTo(t: TStringList);
-var prop: TPackProperty;
+var prop: PropertyUtils.TProperties;
 begin
   prop.Init('|');
   if Width <> 0 then prop.Add('Width', Width);
@@ -620,11 +618,11 @@ end;
 
 procedure TFixtureFromLibrary.InitDefault;
 begin
+  Web := NIL;
   General.InitDefault;
   Physical.InitDefault;
   AvailableChannels := NIL;
   Wheels := NIL;
-  FVirtualSwitchingChannels := NIL;
   Matrix.InitDefault;
 end;
 
@@ -632,7 +630,6 @@ function TFixtureFromLibrary.ProcessItemCapability(aItem: TJSONData; aChanIndex:
 var sub: TJSONData;
   i: integer;
   chanType: TChannelType;
-  symbol: word;
   txt, extra, s: string;
 begin
   Result := False;
@@ -642,17 +639,17 @@ begin
     s := TJSONObject(aItem).Names[i];
     case s of
       'type': begin
-        Result := TranslateCapabilityType(aItem, sub.AsString, chanType, txt, symbol, extra);
+        Result := TranslateCapabilityType(aItem, sub.AsString, chanType, txt, extra);
         if not Result then exit;
         AvailableChannels[aChanIndex].ChanType := chanType;
-        AvailableChannels[aChanIndex].SetSingleRange(0, txt);
+        AvailableChannels[aChanIndex].SetSingleRange(txt);
       end;
     end;
   end;
 end;
 
 function TFixtureFromLibrary.TranslateCapabilityType(aItem: TJSONData; const aOFLType: string;
-  out chanType: TChannelType; out txt: string; out symbol: word; out extra: string): boolean;
+  out chanType: TChannelType; out txt: string; out extra: string): boolean;
 var sub: TJSONData;
   prop: string;
   wheelIndex: Integer;
@@ -757,13 +754,11 @@ iSlot:=Trunc(sub.AsFloat)-1;
         if iSlot+1 <= High(Wheels[wheelIndex].Slots) then
           txt := txt+'..'+Wheels[wheelIndex].Slots[iSlot+1].Txt;
         extra := Wheels[wheelIndex].Slots[iSlot].Extra;
-        symbol := Wheels[wheelIndex].Slots[iSlot].Symbol;
       end
       else begin
         dec(iSlot);
         ConcatToText(Wheels[wheelIndex].Slots[iSlot].Txt);
         extra := Wheels[wheelIndex].Slots[iSlot].Extra;
-        symbol := Wheels[wheelIndex].Slots[iSlot].Symbol;
       end;
     end
     else if HasRangedProperty_OnWheel('slotNumber') then ConcatToText(prop);
@@ -773,7 +768,6 @@ begin
   Result := True;
   txt := '';
   extra := '';
-  symbol := 0;
   case aOFLType of
     'NoFunction': begin
       chanType := ctNOFUNCTION;
@@ -789,17 +783,17 @@ begin
       if txt = '' then txt := 'Strobe';
     end;
     'StrobeSpeed': begin
-      chanType := ctSpeed;
+      chanType := ctSTROBESPEED;
       if HasRangedProperty('speed') then ConcatToText(prop)
       else txt := 'Strobe speed';
     end;
     'StrobeDuration': begin
-      chanType := ctSpeed;
+      chanType := ctSTROBESPEED;
       if HasRangedProperty('duration') then ConcatToText(prop)
       else txt := 'Strobe duration';
     end;
     'Intensity': begin
-      chanType := ctDimmer;
+      chanType := ctMASTERDIMMER;
       if HasRangedProperty('brightness') then ConcatToText(prop)
       else txt := 'Intensity';
     end;
@@ -827,30 +821,30 @@ begin
       if txt = '' then txt := 'Color intensity';
     end;
     'ColorPreset': begin
-      chanType := ctConfig;
+      chanType := ctCOLORCHOICE;
       if HasRangedProperty('color') then txt := 'Color';
       if HasArrayProperty('colors') then
-        extra := 'Colors_'+prop;
+        extra := prop;
       if HasRangedProperty('colorTemperature') then ConcatToText('Color temperature '+prop);
-      if txt = '' then txt := 'Color Preset';
+      if (txt = '') and (extra='') then txt := 'Preset';
     end;
     'ColorTemperature': begin
-      chanType := ctConfig;
+      chanType := ctCOLORTEMPERATURE;
       txt := 'Color Temperature';
       if HasRangedProperty('colorTemperature') then ConcatToText(prop);
     end;
     'Pan': begin
-      chanType := ctPan;
+      chanType := ctPAN;
       if HasRangedProperty('angle') then ConcatToText(prop);
       if txt = '' then txt := 'Angle';
     end;
     'PanContinuous': begin
-      chanType := ctPan;
+      chanType := ctPAN;
       txt := 'Continuous';
       if HasRangedProperty('speed') then ConcatToText(prop);
     end;
     'Tilt': begin
-      chanType := ctTilt;
+      chanType := ctTILT;
       if HasRangedProperty('angle') then ConcatToText(prop);
       if txt = '' then txt := 'Angle';
     end;
@@ -866,7 +860,7 @@ begin
       if HasRangedProperty('duration') then ConcatToText(prop);
       if txt = '' then txt := 'Pan/Tilt speed';
     end;
-    'WheelSlot': begin
+{    'WheelSlot': begin
       chanType := ctConfig;
       CheckPropertyWheel;
       CheckPropertySlotNumber;
@@ -889,12 +883,11 @@ begin
     end;
 
     'WheelSlotRotation': begin
-      chanType := ctGOBOROTATION;   // TO DO
+      chanType := ctGOBOROTATION;
       CheckPropertyWheel;
       if HasSteppedProperty('slotNumber')  then begin
         ConcatToText(Wheels[wheelIndex].Slots[prop.ToInteger-1].Txt);
         extra := Wheels[wheelIndex].Slots[prop.ToInteger-1].Extra;
-        symbol := Wheels[wheelIndex].Slots[prop.ToInteger-1].Symbol;
       end
       else if HasRangedProperty_OnWheel('slotNumber') then ConcatToText(prop);
       if HasRangedProperty('speed') then ConcatToText(prop);
@@ -908,7 +901,7 @@ begin
       if HasRangedProperty('speed') then ConcatToText(prop);
       if HasRangedProperty('angle') then ConcatToText(prop);
       if txt = '' then txt := 'Wheel rotation';
-    end;
+    end;  }
 
     'Effect': begin
       chanType := ctConfig;
@@ -938,7 +931,7 @@ begin
       if txt = '' then txt := 'Effect parameter';
     end;
     'SoundSensitivity': begin
-      chanType := ctCONFIG;
+      chanType := ctSOUNDSENSITIVITY;
       txt := 'Sound sensitivity';
       if HasRangedProperty('soundSensitivity') then ConcatToText(prop);
     end;
@@ -954,22 +947,22 @@ begin
       if HasRangedProperty('verticalAngle') then ConcatToText(prop);
     end;
     'Focus': begin
-      chanType := ctCONFIG;
+      chanType := ctFOCUS;
       txt := 'Focus';
       if HasRangedProperty('distance') then ConcatToText(prop);
     end;
     'Zoom': begin
-      chanType := ctCONFIG;
+      chanType := ctZOOM;
       txt := 'Zoom';
       if HasRangedProperty('angle') then ConcatToText(prop);
     end;
     'Iris': begin
-      chanType := ctCONFIG;
+      chanType := ctIRIS;
       txt := 'Iris';
       if HasRangedProperty('openPercent') then ConcatToText('open '+prop);
     end;
     'IrisEffect': begin
-      chanType := ctCONFIG;
+      chanType := ctIRIS;
       //txt := 'Iris effect';
       if HasSteppedProperty('effectName') then ConcatToText(prop);
       if HasRangedProperty('speed') then ConcatToText(prop);
@@ -992,25 +985,25 @@ begin
       if HasRangedProperty('angle') then ConcatToText(prop);
     end;
     'PrismRotation': begin
-      chanType := ctCONFIG;
+      chanType := ctROTATION;
       txt := 'Prism rotation';
       if HasRangedProperty('speed') then ConcatToText(prop);
       if HasRangedProperty('angle') then ConcatToText(prop);
     end;
     'BladeInsertion': begin
-      chanType := ctCONFIG;
+      chanType := ctBLADEINSERTION;
       txt := 'Blade insertion';
       if HasSteppedProperty('blade') then ConcatToText(prop);
       if HasRangedProperty('insertion') then ConcatToText(prop);
     end;
     'BladeRotation': begin
-      chanType := ctCONFIG;
+      chanType := ctBLADEROTATION;
       txt := 'Blade rotation';
       if HasSteppedProperty('blade') then ConcatToText(prop);
       if HasRangedProperty('angle') then ConcatToText(prop);
     end;
     'BladeSystemRotation': begin
-      chanType := ctCONFIG;
+      chanType := ctBLADEROTATION;
       txt := 'Blade system rotation';
       if HasRangedProperty('angle') then ConcatToText(prop);
     end;
@@ -1031,7 +1024,7 @@ begin
       else txt := 'Fog/Haze';
     end;
     'Rotation': begin
-      chanType := ctCONFIG;
+      chanType := ctROTATION;
       txt := 'Rotation';
       if HasRangedProperty('speed') then ConcatToText(prop);
       if HasRangedProperty('angle') then ConcatToText(prop);
@@ -1178,8 +1171,6 @@ var
   arr: TJSONArray;
   s, txt, extra: String;
   chanType: TChannelType;
-  symbol: word;
-  enum1: TJSONEnum;
 begin
   Result := False;
 
@@ -1206,9 +1197,8 @@ begin
       end;
 
       'type': begin
-        if TranslateCapabilityType(aItem, sub.AsString, chanType, txt, symbol, extra) then
+        if TranslateCapabilityType(aItem, sub.AsString, chanType, txt, extra) then
         begin
-          AvailableChannels[aChanIndex].Ranges[iRange].Symbol := symbol;
           AvailableChannels[aChanIndex].Ranges[iRange].txt := txt;
           AvailableChannels[aChanIndex].Ranges[iRange].Extra := extra;
         end
@@ -1219,12 +1209,8 @@ begin
       end;
 
       'switchChannels': begin
-        for enum1 in sub do begin
-          FVirtualSwitchingChannels.Add(enum1.Key, enum1.Value.AsString);
-
-          AvailableChannels[aChanIndex].Ranges[iRange].AddSwitch(enum1.Key, enum1.Value.AsString);
-        end;
-
+        LogMessage('-> HAVE SWITCH CHANNEL');
+        exit;
       end;
     end;
   end;
@@ -1286,10 +1272,20 @@ end;
 function TFixtureFromLibrary.InitAvailableChannelsfrom(aItem: TJSONData): boolean;
 var item, sub, subCap: TJSONData;
   arr: TJSONArray;
-  i, j, k, iChan: integer;
+  i, j, k, fineIndex, iChan: integer;
   s, s1: string;
-  defv: integer;
+//  defv: integer;
   v: double;
+  coarseChannel: PAvailableChannel;
+  coarseChannelIndex: integer;
+  rawDefaultValue: DWord;
+  procedure CreateNewChannel;
+  begin
+    iChan := Length(AvailableChannels);
+    SetLength(AvailableChannels, ichan+1);
+    AvailableChannels[iChan].InitDefault;
+  end;
+
 begin
   Result := True;
 
@@ -1298,35 +1294,42 @@ begin
   iChan := 0;
   for i:=0 to aItem.Count-1 do  // parse all available channels
   begin
-    SetLength(AvailableChannels, Length(AvailableChannels)+1);
-    AvailableChannels[iChan].InitDefault;
+    CreateNewChannel;
+    coarseChannel := @AvailableChannels[iChan]; // keep the instance of the coarse channel
+    coarseChannelIndex := iChan;
+
     item := aItem.Items[i];
 
     s := TJSONObject(aItem).Names[i];
-    AvailableChannels[iChan].ID := s;
+    coarseChannel^.ID := s;  // try also to init the channel type
+
+    s1 := Lowercase(s);
+    FHaveColorChannel := (s1 ='red') or (s1 = 'green') or (s1 = 'blue') or (s1 = 'amber') or
+                         (s1 = 'uv') or (s1 = 'cyan') or (s1 = 'magenta') or (s1 = 'yellow') or
+                         (s1 = 'lime') or (s1 = 'indigo');
 
     // check if the name of the channel is the same as a wheel
-    FSourceWheelIndex := IndexOfWheel(AvailableChannels[iChan].ID);
+    FSourceWheelIndex := IndexOfWheel(coarseChannel^.ID);
 
-    for j:=0 to item.Count-1 do   // parse one channel
+    for j:=0 to item.Count-1 do   // parse fields of the channel
     begin
       sub := item.Items[j];
       s := TJSONObject(item).Names[j];
       case s of
         'defaultValue': begin
           case sub.JSONType of
-            jtNumber: AvailableChannels[iChan].DefaultValue := sub.AsInteger;
+            jtNumber: coarseChannel^.DefaultValue := sub.AsInteger;
             jtString: begin
               s1 := sub.AsString;
               if s1.Contains('%') then begin
                 Delete(s1, Pos('%', s1), Length(s1)-Pos('%', s1)+1);
-                case Length(AvailableChannels[iChan].FineChannelAliases) of
+                case Length(coarseChannel^.FineChannelIndexes) of
                   0: v := $FF;
                   1: v := $FFFF;
                   2: v := $FFFFFF;
                   3: v := $FFFFFFFF;
                 end;
-                AvailableChannels[iChan].DefaultValue := Round(StringToSingle(s1)/100*v);
+                coarseChannel^.DefaultValue := Round(StringToSingle(s1)/100*v);
               end
               else begin
                 Raise Exception.Create('Not implemented!!');
@@ -1340,16 +1343,25 @@ begin
         'highlightValue':; // not implemented
 
         'fineChannelAliases': begin // array of name
-          arr := TJSONArray(sub);
+          rawDefaultValue := coarseChannel^.DefaultValue;
 
-          SetLength(AvailableChannels[iChan].FineChannelAliases, arr.Count);
-          for k:=0 to arr.Count-1 do
-            AvailableChannels[iChan].FineChannelAliases[k] := arr.Items[k].AsString; // name of the fine channel alias
+          arr := TJSONArray(sub);
+          SetLength(coarseChannel^.FineChannelIndexes, arr.Count);
+
+          for k:=0 to arr.Count-1 do begin
+            CreateNewChannel;
+            coarseChannel := @AvailableChannels[coarseChannelIndex]; // necessary !
+            coarseChannel^.FineChannelIndexes[k] := iChan; // keep the index of the fine channel
+//            AvailableChannels[iChan].ChanType := coarseChannel^.ChanType;
+//            AvailableChannels[iChan].ID := coarseChannel^.ID+' fine value';
+//            AvailableChannels[iChan].DefaultValue := 0;
+            //AvailableChannels[iChan].FineChannelAliases[k] := arr.Items[k].AsString; // name of the fine channel alias
+          end;
         end;
 
         'dmxValueResolution': begin
           case sub.AsString of
-            '8bit': AvailableChannels[iChan].BitWidthForNumber := 8;
+            '8bit': coarseChannel^.BitWidthForNumber := 8;
            else begin
              LogMessage('InitAvailableChannelsFrom - property "dmxValueResolution" value not supported "'+
                          sub.AsString+'"');
@@ -1358,16 +1370,16 @@ begin
           end;
         end;
 
-        'capability': begin
-          Result := ProcessItemCapability(sub, i);
+        'capability': begin   // channel with single range
+          Result := ProcessItemCapability(sub, coarseChannelIndex); //iChan);   //i);
         end;
 
-        'capabilities': begin
-          AvailableChannels[iChan].Ranges := NIL;
+        'capabilities': begin  // channel with multiple ranges
+          coarseChannel^.Ranges := NIL;
           arr := TJSONArray(sub);
           for k:=0 to arr.Count-1 do begin // parse each range
             subCap := arr.Items[k];
-            if not AddRangeFrom(iChan, subCap) then begin
+            if not AddRangeFrom(coarseChannelIndex, subCap) then begin //(iChan, subCap) then begin
               LogMessage('InitAvailableChannelsFrom() - Fail to retrieve range info "'+subCap.AsJSON);
               Result := False;
             end;
@@ -1376,46 +1388,23 @@ begin
         end;
       end;
       if not Result then break;
-    end;
 
-    // if the last created channel have fine channel alias(es), then we put them
-    // in the list as normal available channels, so that they can be visible for
-    // 'modes'
-    if Result and
-       (Length(AvailableChannels[iChan].FineChannelAliases) > 0) then begin
-       for j:=0 to High(AvailableChannels[iChan].FineChannelAliases) do
-       begin
-         SetLength(AvailableChannels, Length(AvailableChannels)+1);
-         with AvailableChannels[High(AvailableChannels)] do begin
-           InitDefault;
-           ID := AvailableChannels[iChan].FineChannelAliases[j];
-           ChanType := AvailableChannels[iChan].ChanType;
-           for k:=0 to High(AvailableChannels[iChan].Ranges) do
-           begin
-             SetLength(Ranges, Length(Ranges)+1);
-             Ranges[k].InitDefault;
-             Ranges[k].BeginValue := AvailableChannels[iChan].Ranges[k].BeginValue;
-             Ranges[k].EndValue := AvailableChannels[iChan].Ranges[k].EndValue;
-             Ranges[k].Symbol := AvailableChannels[iChan].Ranges[k].Symbol;
-             Ranges[k].Txt := AvailableChannels[iChan].Ranges[k].Txt;
-             Ranges[k].Extra := AvailableChannels[iChan].Ranges[k].Extra;
-           end;
-         end;
-       end;
-       // distribute the default value on the coarse and fine(s) channels
-       if (AvailableChannels[iChan].BitWidthForNumber = 0) and
-          (AvailableChannels[iChan].DefaultValue <> 0) then begin
-         defv := AvailableChannels[iChan].DefaultValue;
-         for j:=High(AvailableChannels[iChan].FineChannelAliases) downto -1 do
-         begin
-           AvailableChannels[iChan+j+1].DefaultValue := byte(defv and $FF);
-           defv := defv shr 8;
-         end;
-       end;
-       j := Length(AvailableChannels[iChan].FineChannelAliases);
-       inc(iChan, j);
+    end;// for j parse channel fields
+
+    if coarseChannel^.HaveFineChannels then begin
+      // initialize fine channels
+LogMessage('COARSE CHANNEL: ChanType:'+IntToStr(Ord(coarseChannel^.ChanType)));
+      for k:=High(coarseChannel^.FineChannelIndexes) downto 0 do begin
+        fineIndex := coarseChannel^.FineChannelIndexes[k]; // index of a fine channel
+        AvailableChannels[fineIndex].ChanType := coarseChannel^.ChanType;
+        AvailableChannels[fineIndex].ID := coarseChannel^.ID+' fine';
+LogMessage('setting type:'+IntToStr(Ord(coarseChannel^.ChanType))+' on '+AvailableChannels[fineIndex].ID);
+        // distribute the default value on coarse and fine channels
+        AvailableChannels[fineIndex].DefaultValue := (rawDefaultValue div ($100 shl (8*Length(coarseChannel^.FineChannelIndexes)))) {and $000000FF};
+        rawDefaultValue := rawDefaultValue shr 8;
+      end;
+      coarseChannel^.DefaultValue := rawDefaultValue and $FF;
     end;
-    inc(iChan);
 
 
     if not Result then break;
@@ -1432,7 +1421,7 @@ begin
     InitDefault;
     ID := 'NotUsed';
     ChanType := ctNOFUNCTION;
-    SetSingleRange(0, 'No function');
+    SetSingleRange('No function');
   end;
 end;
 
@@ -1546,21 +1535,12 @@ begin
 
     for j:=0 to arr.Count-1 do
     begin
-      if arr.Items[j].IsNull then  begin// entry in modes can be null...
+      if arr.Items[j].IsNull then begin// entry in modes can be null...
         AddNotUsedChannelIfNeeded;
         s := 'NotUsed'
       end else
         s := arr.Items[j].AsString;
       Modes[i].ChannelsIDToUse[j] := s;
-
-
-      if not FVirtualSwitchingChannels.IsVirtualSwitchingChannel(s) and
-         (IndexOfAvailableChannelName(s) = -1) and
-         (s <> 'NotUsed') then begin
-        LogMessage('  MODES - "modes" use channel "'+s+
-             '" that is not registered in available or switching channels');
-        exit;
-      end;
     end;
     inc(i);
   end;
@@ -1593,9 +1573,21 @@ end;
 
 procedure TFixtureFromLibrary.SaveTo(t: TStringList);
 var i: Integer;
+  prop: TProperties;
 begin
   t.Add('[SAYNETE]');
   t.Add('Version|v3.1.0');
+
+  if Length(Web) > 0 then begin
+    prop.Init('|');
+    for i:=0 to High(Web) do begin
+      prop.Add('LinkType'+(i+1).ToString, Web[i].LinkType);
+      prop.Add('Url'+(i+1).ToString, Web[i].Url);
+    end;
+    t.Add('[LINKS]');
+    t.Add(prop.PackedProperty);
+  end;
+
   General.SaveTo(t);
   Physical.SaveTo(t);
   Matrix.SaveTo(t);
@@ -1656,8 +1648,11 @@ begin
 
   tot := LB.Count;
   Label2.Caption := 'Total: '+tot.ToString+' fixtures';
+  PB.Max := tot;
   Application.ProcessMessages;
-//  Memo1.Visible := False;
+  Memo1.Visible := False;
+
+  FChannelNotTyped := TStringList.Create;
 
   // Try to convert each JSON file
   FWheelsErrorCount := 0;
@@ -1665,21 +1660,29 @@ begin
   c := 0;
   for i:=LB.Count-1 downto 0 do
   begin
+    PB.Position := PB.Max-(i+1);
+    Application.ProcessMessages;
+
     fSrc := ConcatPaths([OriginalPath, LB.Items.Strings[i]]);
     fDest := ChangeFileExt(ConcatPaths([DestPath, LB.Items.Strings[i]]), '.dmx');
 //ShowMessage('Try to convert'+LineEnding+fSrc);
-    if Convert(fSrc, fDest) then
-    begin
-      inc(c);
-      //LogMessage('SUCCESS: '+fDest);
-    end
+    if Convert(fSrc, fDest) then inc(c)
     else LogMessage('FAIL: '+fSrc);
+    LogMessage(' ');
   end;
+
   Memo1.Visible := True;
   Label3.Caption := 'Done: '+c.ToString;
   Label4.Caption := 'Remains: '+(tot-c).ToString;
   Label6.Caption := 'Wheels error: '+FWheelsErrorCount.ToString;
   Label7.Caption := 'Matrix error: '+FMatrixErrorCount.ToString;
+
+  // convert the manufacturer list
+  ConvertManufacturers;
+
+  // save the non converted channel types
+  FChannelNotTyped.SaveToFile(Application.Location+'not_recognized_channel_type.txt');
+  FChannelNotTyped.Free;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
@@ -1689,6 +1692,57 @@ begin
   F := ContenuDuRepertoire(OriginalPath, '.json', True, True);
   LB.Items.Assign(F);
   F.Free;
+end;
+
+procedure TForm1.ConvertManufacturers;
+var stream: TFileStream;
+  FParser: TJSONParser;
+  m, s: string;
+  wholeData, sub: TJSONData;
+  i: integer;
+  prop: TProperties;
+  t: TStringList;
+begin
+  // Open a stream and parse the manufacturer file
+  m := ConcatPaths([OriginalPath, 'manufacturers.json']);
+  stream := TFileStream.Create(m, fmOpenRead);
+  t := TStringList.Create;
+  try
+    FParser := TJSONParser.Create(stream, [joUTF8]);
+    wholeData := FParser.Parse;
+
+    for i:=1 to wholeData.Count-1 do begin
+      prop.Init('|');
+
+      s := TJSONObject(wholeData).Names[i];
+      prop.Add('Folder', s);
+
+      sub := wholeData.Items[i].FindPath('name');
+      prop.Add('Name', sub.AsString);
+
+      sub := wholeData.Items[i].FindPath('website');
+      if sub <> NIL then prop.Add('Web', sub.AsString);
+
+      sub := wholeData.Items[i].FindPath('rdmId');
+      if sub <> NIL then prop.Add('RDM', sub.AsString);
+
+      t.Add(prop.PackedProperty);
+    end;
+
+    try
+      m := ConcatPaths([DestPath,'manufacturers.txt']);
+      t.SaveToFile(m);
+      ShowMessage('Manufacturer list created !');
+    except
+      ShowMessage('Enable to save the manufacturer file'+LineEnding+m);
+    end;
+
+  finally
+    FParser.Free;
+    wholeData.Free;
+    stream.Free;
+    t.Free;
+  end;
 end;
 
 function TForm1.OriginalPath: string;
@@ -1713,7 +1767,7 @@ begin
   m := ConcatPaths([OriginalPath, 'manufacturers.json']);
   Fstr := TFileStream.Create(m, fmOpenRead);
   try
-    FParser := TJSONParser.Create(Fstr);
+    FParser := TJSONParser.Create(Fstr, [joUTF8]);
     wholeData := FParser.Parse;
 
     m := ExcludeTrailingPathDelimiter(NomDuDernierSousRepertoire(f));
@@ -1737,9 +1791,9 @@ var
   arr: TJSONArray;
   itemEnum, itemEnum2: TJSONEnum;
   j: integer;
-  s: string;
+  s, OFLFixtureType: string;
 begin
-  LogMessage('Converting '+SrcFilename);
+  LogMessage('-- Converting '+SrcFilename);
   Result := True;
 
   fix.InitDefault;
@@ -1758,7 +1812,7 @@ begin
     // Open a stream and parse the source file
     Fstr := TFileStream.Create(SrcFilename, fmOpenRead);
     try
-      FParser := TJSONParser.Create(Fstr);
+      FParser := TJSONParser.Create(Fstr, [joUTF8]);
       wholeData := FParser.Parse;
 
       // Parse each entries
@@ -1766,15 +1820,57 @@ begin
       begin
         case itemEnum.Key of
           '$schema': ;
-          'links':;
           'shortName':;
           'comment':;
           'helpWanted':;
           'rdm':; // ignored
+          'fixtureKey':;
+          'manufacturerKey':;
+          'oflURL':;
+          'links': begin
+            for itemEnum2 in itemEnum.Value do begin
+              case itemEnum2.Key of
+                'manual': begin
+                  arr := TJSONArray(itemEnum2.Value);
+                  for j:=0 to arr.Count-1 do begin
+                    SetLength(fix.Web, Length(fix.Web)+1);
+                    fix.Web[High(fix.Web)].LinkType := 'manual';
+                    fix.Web[High(fix.Web)].Url := arr.Items[j].AsString;
+                  end;
+                end;
+                'productPage': begin
+                  arr := TJSONArray(itemEnum2.Value);
+                  for j:=0 to arr.Count-1 do begin
+                    SetLength(fix.Web, Length(fix.Web)+1);
+                    fix.Web[High(fix.Web)].LinkType := 'product page';
+                    fix.Web[High(fix.Web)].Url := arr.Items[j].AsString;
+                  end;
+                end;
+                'video': begin
+                  arr := TJSONArray(itemEnum2.Value);
+                  for j:=0 to arr.Count-1 do begin
+                    SetLength(fix.Web, Length(fix.Web)+1);
+                    fix.Web[High(fix.Web)].LinkType := 'video';
+                    fix.Web[High(fix.Web)].Url := arr.Items[j].AsString;
+                  end;
+                end;
+                'other': begin
+                  arr := TJSONArray(itemEnum2.Value);
+                  for j:=0 to arr.Count-1 do begin
+                    SetLength(fix.Web, Length(fix.Web)+1);
+                    fix.Web[High(fix.Web)].LinkType := 'other';
+                    fix.Web[High(fix.Web)].Url := arr.Items[j].AsString;
+                  end;
+                end;
+                else raise exception.create('forgot to implement !');
+              end;//case
+            end;
+          end;
           'name': fix.General.Name := itemEnum.Value.AsString;
           'categories': begin
             arr := TJSONArray(itemEnum.Value);
-            fix.General.FixType := arr.Items[0].AsString;
+            //fix.General.FixtureType := arr.Items[0].AsString;
+            OFLFixtureType := arr.Items[0].AsString;
           end;
           'meta': begin
             sub := itemEnum.Value.FindPath('authors');
@@ -1785,10 +1881,8 @@ begin
             end;
             arr := TJSONArray(sub);
             for j:=0 to arr.Count-1 do
-              if j = 0 then
-                fix.General.Authors := arr.Items[j].AsString
-              else
-                fix.General.Authors := fix.General.Authors+', '+arr.Items[j].AsString;
+              if j = 0 then fix.General.Authors := arr.Items[j].AsString
+                else fix.General.Authors := fix.General.Authors+', '+arr.Items[j].AsString;
           end;
           'physical': begin
              Result := fix.Physical.InitFrom(itemEnum.Value);
@@ -1812,7 +1906,7 @@ begin
                   LogMessage('  property "matrix/pixelGroups" found but not implemented!');
                   Result := False;
                 end;
-              end;
+              end;//case
             end;
 
             LogMessage('  property "'+itemEnum.Key+'":"'{+item.AsJSON}+'" found but not implemented!');
@@ -1831,8 +1925,7 @@ begin
           'modes': begin
             arr := TJSONArray(itemEnum.Value);
             Result := fix.InitModesFrom(arr);
-          end
-
+          end;
           else begin
             LogMessage(SrcFilename);
             LogMessage('  property "'+itemEnum.Key+'" found but not implemented!');
@@ -1840,7 +1933,32 @@ begin
           end;
         end;//case
         if not Result then break;
-      end;
+        end;
+
+        // we try to set the right fixture type for Saynètes
+        case OFLFixtureType of
+          'Barrel Scanner', 'Scanner': fix.General.FixtureType := ftScanner;
+          'Moving Head': fix.General.FixtureType := ftMovingHead;
+          'Fan': fix.General.FixtureType := ftFan;
+          'Hazer', 'Smoke': fix.General.FixtureType := ftSmokeMachine;
+          'Laser': fix.General.FixtureType := ftLaser;
+          'Matrix': begin
+            if fix.HaveColorChannel then fix.General.FixtureType := ftMatrixWithColoredLed
+              else fix.General.FixtureType := ftMatrixTransparentLed;
+          end;
+          'Pixel Bar':begin
+            if fix.HaveColorChannel then fix.General.FixtureType := ftBarColoredLed
+              else fix.General.FixtureType := ftLedBarTransparentLed;
+          end;
+          'Other': fix.General.FixtureType := ftOther;
+          'Blinder':;
+          'Color Changer':;// fix.General.FixtureType := ftParLongTransparentLed;
+          'Dimmer':;
+          'Effect':;
+          'Flower':;
+          'Stand':;
+          'Strobe':;
+        end;
     finally
       FStr.Free;
       wholeData.Free;

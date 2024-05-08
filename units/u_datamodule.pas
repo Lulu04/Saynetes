@@ -101,6 +101,8 @@ begin
   AddImageToImageList('Zoom.svg', ILChannelType);
   AddImageToImageList('Focus.svg', ILChannelType);
   AddImageToImageList('Rotation.svg', ILChannelType);
+  AddImageToImageList('PanSpeed.svg', ILChannelType);
+  AddImageToImageList('TiltSpeed.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

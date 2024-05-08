@@ -1,0 +1,23 @@
+object FrameCBChannelType: TFrameCBChannelType
+  Left = 0
+  Height = 23
+  Top = 0
+  Width = 321
+  ClientHeight = 23
+  ClientWidth = 321
+  TabOrder = 0
+  DesignLeft = 342
+  DesignTop = 127
+  object CB: TComboBox
+    Left = 0
+    Height = 21
+    Top = 0
+    Width = 321
+    Align = alClient
+    ItemHeight = 15
+    OnChange = CBChange
+    OnDrawItem = CBDrawItem
+    Style = csOwnerDrawFixed
+    TabOrder = 0
+  end
+end

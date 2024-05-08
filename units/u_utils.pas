@@ -137,8 +137,7 @@ function FileNameIsValid(const aFileName: string): boolean;
 
 function StringIsValid(const s: string; const ForbidenChars: string): boolean;
 
-function ReplaceForbidenCharByUnderscore(const s: string; const ForbidenChars: string): string;
-
+function ReplaceForbidenCharByUnderscore(const s: string; const aForbidenChars: string): string;
 
 // aVolume[0..1] -> x.x%
 function VolumeToStringPercent(const aVolume: single): string;
@@ -331,13 +330,12 @@ begin
    end;
 end;
 
-function ReplaceForbidenCharByUnderscore(const s: string; const ForbidenChars: string): string;
-var i: Integer;
+function ReplaceForbidenCharByUnderscore(const s: string; const aForbidenChars: string): string;
+var i: integer;
 begin
-  Result:=s;
-  for i:=1 to Length(s) do
-   if Pos(Result[i], ForbidenChars)>0
-     then Result[i]:='_';
+  Result := s;
+  for i:=1 to Length(aForbidenChars) do
+    Result.Replace(aForbidenChars[i], '_', [rfReplaceAll]);
 end;
 
 function VolumeToStringPercent(const aVolume: single): string;
