@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://static.boomtonedj.com/pdf/manual/49/49097_silentpar12x3w3in12016enfr.pdf|LinkType2|product page|Url2|http://www.boomtonedj.com/boomtonedj-silentpar-12x3w-3in1-p49097.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=wFqLpt4mC8I
+[GENERAL]
+Manufacturer|BoomToneDJ|Name|SilentPAR 12x3W 3in1|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|270|Height|90|Depth|252|Weight|3.00|Power|40|Connector|3-pin|Bulb|12x 3W RGB LEDs|LensMinDegree|45.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~slow..fast
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~59~Txt~DMX|R2|Begin~60~End~119~Txt~Static|R3|Begin~120~End~179~Txt~Color Jump|R4|Begin~180~End~239~Txt~Color Fade|R5|Begin~240~End~255~Txt~Sound active
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|7-channel|ShortName|7ch|Content|Intensity~Red~Green~Blue~Strobe~Program Speed~Mode
+[END_MODES]

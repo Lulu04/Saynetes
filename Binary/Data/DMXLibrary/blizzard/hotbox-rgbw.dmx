@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://api.blizzard.lighting/public/Products/hotbox%20rgbw/downloads/hotbox-manual-rev-b.pdf|LinkType2|product page|Url2|https://www.blizzardpro.com/products/hotbox-rgbw
+[GENERAL]
+Manufacturer|Blizzard|Name|HotBox RGBW|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|127|Height|102|Depth|127|Weight|2.70|Power|47|Connector|3-pin|Bulb|7× 10W RGBW LEDs|LensMinDegree|26.000|LensMaxDegree|26.000
+[CHAN_DEF]
+ID|Hue|Type|0|R1|Begin~0~End~255~Txt~
+ID|Saturation|Type|0|R1|Begin~0~End~255~Txt~
+ID|Value|Type|0|R1|Begin~0~End~255~Txt~
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|12Hz Strobe|Type|6|R1|Begin~0~End~14~Txt~Strobe stop Random timing|R2|Begin~15~End~255~Txt~Strobe 0Hz..12Hz
+ID|Fade, Color Change, Sound Active|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~RampUp|R3|Begin~64~End~95~Txt~RampDown|R4|Begin~96~End~127~Txt~RampUpDown|R5|Begin~128~End~159~Txt~ColorFade|R6|Begin~160~End~191~Txt~RampUpDown "Auto Run" -- ch.8 ignored?|R7|Begin~192~End~223~Txt~ColorJump|R8|Begin~224~End~255~Txt~Sound Active, Multicolor
+ID|Fade Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|20Hz Strobe|Type|6|R1|Begin~0~End~14~Txt~Strobe stop Random timing|R2|Begin~15~End~255~Txt~Strobe 0Hz..20Hz
+ID|Dimmer Control|Type|0|R1|Begin~0~End~5~Txt~As set in the control menu display|R2|Begin~6~End~55~Txt~Mode 0 = 8-bit, 256 dimming steps|R3|Begin~56~End~105~Txt~Mode 1 = 32-bit, 0-25% intensity range|R4|Begin~106~End~155~Txt~Mode 2 = 32-bit, 0-50% intensity range|R5|Begin~156~End~205~Txt~Mode 3 = 32-bit, 0-75% intensity range|R6|Begin~206~End~255~Txt~Mode 4 = 32-bit, full intensity dimming
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Hue~Saturation~Value
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|5-channel|ShortName|5ch|Content|Dimmer~Red~Green~Blue~White
+Name|8-channel A|ShortName|8ACh|Content|Dimmer~Red~Green~Blue~White~12Hz Strobe~Fade, Color Change, Sound Active~Fade Speed
+Name|8-channel B|ShortName|8bCh|Content|Dimmer~Red~Green~Blue~White~20Hz Strobe~Fade, Color Change, Sound Active~Fade Speed
+Name|9-channel A|ShortName|9ACh|Content|Dimmer~Red~Green~Blue~White~12Hz Strobe~Fade, Color Change, Sound Active~Fade Speed~Dimmer Control
+Name|9-channel B|ShortName|9bCh|Content|Dimmer~Red~Green~Blue~White~20Hz Strobe~Fade, Color Change, Sound Active~Fade Speed~Dimmer Control
+[END_MODES]

@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1476262257.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/beamspot1-dmx-fc|LinkType3|video|Url3|https://www.facebook.com/MRProducts/videos/briteq-sound-lightshow-2016-hq-video/1103561746357817/
+[GENERAL]
+Manufacturer|Briteq|Name|BEAMSPOT1-DMX FC|Type|23|Authors|Aleksey Khoroshev|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|124|Height|196|Depth|172|Weight|1.23|Power|15|Connector|3-pin|Bulb|15W RGBW LED|Lumens|275|LensMinDegree|4.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Functions|Type|0|R1|Begin~0~End~190~Txt~Intensity|R2|Begin~191~End~200~Txt~ColorJump low..high 7 colors|R3|Begin~201~End~247~Txt~Strobe slow..fast|R4|Begin~248~End~255~Txt~100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Sound/Strobe|Type|0|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~24~Txt~ColorJump low..high 7 colors|R3|Begin~25~End~34~Txt~No function|R4|Begin~35~End~255~Txt~Strobe slow..fast
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~255~Txt~slow..fast
+ID|Extended Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~37~Txt~Strobe Random timing|R3|Begin~38~End~67~Txt~Strobe Sound controlled|R4|Begin~68~End~255~Txt~Strobe slow..fast
+ID|Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~127~Txt~ColorJump slow..fast|R3|Begin~128~End~247~Txt~ColorFade slow..fast|R4|Begin~248~End~255~Txt~Sound control
+[END_CHAN_DEF]
+[MODES]
+Name|RGB + Functions|ShortName|04CH RGB+DIM|Content|Red~Green~Blue~Functions
+Name|RGBW|ShortName|04CH RGBW|Content|Red~Green~Blue~White
+Name|RGBW + Functions|ShortName|05CH RGBW+DIM|Content|Red~Green~Blue~White~Functions
+Name|RGBW + Master + Sound/Strobe|ShortName|06CH|Content|Red~Green~Blue~White~Master Dimmer~Sound/Strobe
+Name|RGBW + Master + Strobe|ShortName|06CH+|Content|Red~Green~Blue~White~Master Dimmer~Strobe
+Name|Master + Strobe + Programs + RGBW|ShortName|07CH|Content|Master Dimmer~Extended Strobe~Programs~Red~Green~Blue~White
+[END_MODES]
