@@ -2298,6 +2298,14 @@ msgstr "REVENIR AU DÉBUT"
 msgid "Bar colored led"
 msgstr "Barre de LED colorées"
 
+#: u_resource_string.sbarshortcoloredled
+msgid "Short bar colored led"
+msgstr ""
+
+#: u_resource_string.sbarshorttransparentled
+msgid "Short bar transparent led"
+msgstr ""
+
 #: u_resource_string.sbegin
 msgctxt "u_resource_string.sbegin"
 msgid "Begin"
@@ -2804,6 +2812,10 @@ msgstr "Flash"
 msgid "Flower 1"
 msgstr "Flower 1"
 
+#: u_resource_string.sflower02
+msgid "Flower 2"
+msgstr ""
+
 #: u_resource_string.sfollow
 msgid "Follow"
 msgstr "Suivre"
@@ -3173,6 +3185,14 @@ msgstr "PAR long avec ampoule"
 msgid "Long PAR transparent led"
 msgstr "PAR long à LED transparentes"
 
+#: u_resource_string.sparrectangularmultiplecoloredled
+msgid "Rectangular PAR with multiple colored led"
+msgstr ""
+
+#: u_resource_string.sparrectangularmultipletransparentled
+msgid "Rectangular PAR with multiple transparent led"
+msgstr ""
+
 #: u_resource_string.sparshortbulb
 msgid "Short PAR with bulb"
 msgstr "PAR court avec ampoule"
@@ -3283,7 +3303,9 @@ msgid "Square"
 msgstr "Carré"
 
 #: u_resource_string.squareparmultiplecoloredled
-msgid "Square PAR with multiple colored leds"
+#, fuzzy
+#| msgid "Square PAR with multiple colored leds"
+msgid "Square PAR with multiple colored led"
 msgstr "PAR carré avec plusieurs leds colorées"
 
 #: u_resource_string.srandomduration
@@ -3491,7 +3513,9 @@ msgid "Speed"
 msgstr "Vitesse"
 
 #: u_resource_string.ssquareparmultipletransparentled
-msgid "Square PAR with multiple transparent leds"
+#, fuzzy
+#| msgid "Square PAR with multiple transparent leds"
+msgid "Square PAR with multiple transparent led"
 msgstr "PAR carré avec plusieurs leds transparentes"
 
 #: u_resource_string.ssquareparsingletransparentled
@@ -3681,3 +3705,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

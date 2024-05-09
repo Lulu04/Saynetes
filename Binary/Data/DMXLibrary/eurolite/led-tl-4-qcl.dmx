@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51915448-Manual-122742-1.000-eurolite-led-tl-4-qcl-rgb+uv-trusslight-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51915448-eurolite-led-tl-4-qcl-rgb+uv-trusslight.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=FZe4SH3rlaQ
+[GENERAL]
+Manufacturer|Eurolite|Name|LED TL-4 QCL|Type|16|Authors|Clemens Mair|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|145|Height|130|Depth|155|Weight|1.30|Power|15|Connector|3-pin|Bulb|4× 8W 4in1 QCL RGB+UV LED|LensMinDegree|13.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..20Hz
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~UV~Extra~#8800ff|R6|Begin~50~End~59~Txt~Yellow~Extra~#ffff00|R7|Begin~60~End~69~Txt~Magenta~Extra~#ff00ff|R8|Begin~70~End~79~Txt~Cyan~Extra~#00ffff|R9|Begin~80~End~89~Txt~Dark orange~Extra~#c04d00|R10|Begin~90~End~99~Txt~Green yellow~Extra~#88ff00|R11|Begin~100~End~109~Txt~Salmon~Extra~#ff8888|R12|Begin~110~End~119~Txt~Turquoise~Extra~#1d9cce|R13|Begin~120~End~129~Txt~Light green~Extra~#88ff88|R14|Begin~130~End~139~Txt~Orange~Extra~#ff8800|R15|Begin~140~End~149~Txt~Lavender~Extra~#cc61cc|R16|Begin~150~End~159~Txt~Light blue~Extra~#52aeff|R17|Begin~160~End~169~Txt~Dark blue~Extra~#000088|R18|Begin~170~End~179~Txt~Pink~Extra~#ff88ff|R19|Begin~180~End~255~Txt~White~Extra~#ffffff
+ID|Auto Mode / Sound Control|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~69~Txt~ColorFade slow..fast|R3|Begin~70~End~129~Txt~ColorJump slow..fast|R4|Begin~130~End~189~Txt~ColorFade low..high|R5|Begin~190~End~255~Txt~ColorJump low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel 1|ShortName|4ch1|Content|Red~Green~Blue~UV
+Name|4-channel|ShortName|4ch|Content|Master Dimmer~Strobe~Color Presets~Auto Mode / Sound Control
+Name|8-channel|ShortName|8ch|Content|Master Dimmer~Strobe~Red~Green~Blue~UV~Color Presets~Auto Mode / Sound Control
+[END_MODES]

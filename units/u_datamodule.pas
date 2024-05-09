@@ -103,6 +103,9 @@ begin
   AddImageToImageList('Rotation.svg', ILChannelType);
   AddImageToImageList('PanSpeed.svg', ILChannelType);
   AddImageToImageList('TiltSpeed.svg', ILChannelType);
+  AddImageToImageList('Fan.svg', ILChannelType);
+  AddImageToImageList('Smoke.svg', ILChannelType);
+  AddImageToImageList('PanTilt.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

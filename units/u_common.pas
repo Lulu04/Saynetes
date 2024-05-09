@@ -278,7 +278,12 @@ type
                      ftFlower01,
                      ftParSquareSingleTransparentLed,  // square par single transparent led
                      ftParSquareMultipleTransparentLed, // square par with multiple transparent led
-                     ftParSquareMultipleColoredLed   // square par with multiple colored led
+                     ftParSquareMultipleColoredLed,  // square par with multiple colored led
+                     ftParRectangularMultipleTransparentLed,
+                     ftParRectangularMultipleColoredLed,
+                     ftBarShortTransparentLed,  // 30
+                     ftBarShortColoredLed,
+                     ftFlower02
                      );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
@@ -288,16 +293,21 @@ const
                    ftParSquareSingleTransparentLed,
                    ftParSquareMultipleTransparentLed,
                    ftParSquareMultipleColoredLed,
-
+                   ftParRectangularMultipleTransparentLed,
+                   ftParRectangularMultipleColoredLed,
 
                    ftLedBarTransparentLed, ftBarColoredLed,
+                   ftBarShortTransparentLed, ftBarShortColoredLed,
+
                    ftMatrixTransparentLed, ftMatrixWithColoredLed,
                    ftParShortBulb, ftParLongBulb,
                    ftPlanConvex,
                    ftHalogen,
                    ftProfile,
                    ftScanner, ftMovingHead, ftLaser,
-                   ftFlower01,
+
+                   ftFlower01, ftFlower02,
+
                    ftColorChanger,
                    ftSmokeMachine, ftBubbleMachine, ftFan,
                    ftDimmer1Channel,
@@ -331,7 +341,12 @@ const
                True,  // flower01
                True,  // square par 1 transparent led
                True,  // square par multiple transparent led
-               True   // square par multiple colored led
+               True,  // square par multiple colored led
+               True,  // ParRectangularMultipleTransparentLed
+               True,  // ParRectangularColoredTransparentLed
+               False, // ftBarShortTransparentLed
+               False, // ftBarShortColoredLed
+               True   // flower02
                );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
@@ -362,7 +377,12 @@ const
                True,  // flower01
                True,  // square par 1 led
                True,   // square par multiple led
-               True   // square par multiple colored led
+               True,   // square par multiple colored led
+               True,  // ParRectangularMultipleTransparentLed
+               True,  // ParRectangularColoredTransparentLed
+               False, // ftBarShortTransparentLed
+               False, // ftBarShortColoredLed
+               True   // flower02
                );
 type
 
@@ -403,7 +423,10 @@ type
                      ctFOCUS,
                      ctROTATION,
                      ctPANSPEED,
-                     ctTILTSPEED        // 35
+                     ctTILTSPEED,       // 35
+                     ctFAN,
+                     ctSMOKE,
+                     ctPANTILT
                    );
 
     // stage shape rendered in the stage view

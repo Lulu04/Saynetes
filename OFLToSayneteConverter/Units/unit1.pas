@@ -795,27 +795,66 @@ begin
     'Intensity': begin
       chanType := ctMASTERDIMMER;
       if HasRangedProperty('brightness') then ConcatToText(prop)
-      else txt := 'Intensity';
+      else txt := '0..100%';
     end;
     'ColorIntensity': begin
       chanType := ctDimmer; // default
       if HasSteppedProperty('color') then begin
         txt := prop;
         case prop of
-          'Red': chanType := ctRED;
-          'Green': chanType := ctGREEN;
-          'Blue': chanType := ctBLUE;
-          'Cyan': chanType := ctCYAN;
-          'Magenta': chanType := ctMAGENTA;
-          'Yellow': chanType := ctYELLOW;
-          'Amber': chanType := ctAMBER;
-          'White': chanType := ctWHITE;
-          'Warm White': chanType := ctWARMWHITE;
-          'Cold White': chanType := ctCOLDWHITE;
-          'UV': chanType := ctUV;
-          'Lime': chanType := ctLIME;
-          'Indigo': chanType := ctINDIGO;
+          'Red': begin
+            chanType := ctRED;
+            txt := '0..100%';
           end;
+          'Green': begin
+            chanType := ctGREEN;
+            txt := '0..100%';
+          end;
+          'Blue': begin
+            chanType := ctBLUE;
+            txt := '0..100%';
+          end;
+          'Cyan': begin
+            chanType := ctCYAN;
+            txt := '0..100%';
+          end;
+          'Magenta': begin
+            chanType := ctMAGENTA;
+            txt := '0..100%';
+          end;
+          'Yellow': begin
+            chanType := ctYELLOW;
+            txt := '0..100%';
+          end;
+          'Amber': begin
+            chanType := ctAMBER;
+            txt := '0..100%';
+          end;
+          'White': begin
+            chanType := ctWHITE;
+            txt := '0..100%';
+          end;
+          'Warm White': begin
+            chanType := ctWARMWHITE;
+            txt := '0..100%';
+          end;
+          'Cold White': begin
+            chanType := ctCOLDWHITE;
+            txt := '0..100%';
+          end;
+          'UV': begin
+            chanType := ctUV;
+            txt := '0..100%';
+          end;
+          'Lime': begin
+            chanType := ctLIME;
+            txt := '0..100%';
+          end;
+          'Indigo': begin
+            chanType := ctINDIGO;
+            txt := '0..100%';
+          end;
+        end;
       end;
       if HasRangedProperty('brightness') then ConcatToText(prop);
       if txt = '' then txt := 'Color intensity';
@@ -830,7 +869,7 @@ begin
     end;
     'ColorTemperature': begin
       chanType := ctCOLORTEMPERATURE;
-      txt := 'Color Temperature';
+      txt := ''; //'Color Temperature';
       if HasRangedProperty('colorTemperature') then ConcatToText(prop);
     end;
     'Pan': begin

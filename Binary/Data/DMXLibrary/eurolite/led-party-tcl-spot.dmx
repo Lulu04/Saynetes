@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/42110193-Manual-102442-1.00-eurolite-led-party-tcl-spot-en_de.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn42110193-eurolite-led-party-tcl-spot.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=lrAatXEygvI
+[GENERAL]
+Manufacturer|Eurolite|Name|LED PARty TCL Spot|Type|16|Authors|Adrian Branchadell, Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|150|Height|160|Depth|90|Weight|0.46|Power|10|Connector|3-pin|Bulb|12x 3W TCL RGB LEDs|LensMinDegree|17.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Effects|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Sound Control|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~Strobe slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|5-Channel|ShortName|5ch|Content|Red~Green~Blue~Dimmer~Effects
+[END_MODES]

@@ -1,0 +1,31 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.de/manual/286274/Eurolite-Led-Tmh-14.html|LinkType2|product page|Url2|https://www.musikhaus-korn.de/en/eurolite-led-tmh-14-moving-head-zoom-wash/pd/134357|LinkType3|video|Url3|https://www.youtube.com/watch?v=h45pZVr19tg
+[GENERAL]
+Manufacturer|Eurolite|Name|LED TMH-14|Type|9|Authors|Victor Hampel|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|145|Height|200|Depth|280|Weight|3.25|Power|65|Connector|3-pin|Bulb|3× 12W COB RGBW LEDs|LensMinDegree|4.000|LensMaxDegree|32.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..190deg
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~Strobe 1Hz..18Hz
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset all motors|R3|Begin~201~End~255~Txt~No function
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Colors, color change|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~15~Txt~light blue #61b8ff|R3|Begin~16~End~23~Txt~blue #0000ff|R4|Begin~24~End~31~Txt~purple #ac00ac|R5|Begin~32~End~39~Txt~pink #ff00ff|R6|Begin~40~End~47~Txt~rose #ff0080|R7|Begin~48~End~71~Txt~red #ff0000|R8|Begin~72~End~79~Txt~orange #ff8000|R9|Begin~80~End~87~Txt~warm white (mixed from rgbw) #ffda95|R10|Begin~88~End~95~Txt~yellow #ffff00|R11|Begin~96~End~103~Txt~lime #a6ff00|R12|Begin~104~End~119~Txt~green #00ec27|R13|Begin~120~End~127~Txt~white (mixed rgbw) #ffffff|R14|Begin~128~End~160~Txt~ColorJump|R15|Begin~161~End~200~Txt~ColorFade fade in and fade out|R16|Begin~201~End~255~Txt~ColorFade crossfade
+ID|Color change speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Internal programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~120~Txt~Internal program 1|R3|Begin~121~End~244~Txt~Internal program 2|R4|Begin~245~End~255~Txt~Music control
+ID|Internal programs speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Pan~Tilt~Pan/Tilt Speed~Strobe~Dimmer~Zoom~Red~Green~Blue~White~Reset
+Name|17-channel|ShortName|17ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Strobe~Dimmer~Zoom~Red~Green~Blue~White~Colors, color change~Color change speed~Internal programs~Internal programs speed~Reset
+[END_MODES]
