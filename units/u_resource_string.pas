@@ -462,6 +462,9 @@ resourcestring
   SLaser='Laser';
   SSmallPar='Small PAR';
   SFlower01='Flower 1';
+  SSquareParSingleTransparentLed='Square PAR with single transparent led';
+  SSquareParMultipleTransparentLed='Square PAR with multiple transparent leds';
+  SquareParMultipleColoredLed='Square PAR with multiple colored leds';
 
 implementation
 // exclusion i18n

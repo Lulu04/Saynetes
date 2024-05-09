@@ -3176,6 +3176,10 @@ msgstr ""
 msgid "Square"
 msgstr ""
 
+#: u_resource_string.squareparmultiplecoloredled
+msgid "Square PAR with multiple colored leds"
+msgstr ""
+
 #: u_resource_string.srandomduration
 msgid "Random duration"
 msgstr ""
@@ -3377,6 +3381,14 @@ msgstr ""
 #: u_resource_string.sspeed
 msgctxt "u_resource_string.sspeed"
 msgid "Speed"
+msgstr ""
+
+#: u_resource_string.ssquareparmultipletransparentled
+msgid "Square PAR with multiple transparent leds"
+msgstr ""
+
+#: u_resource_string.ssquareparsingletransparentled
+msgid "Square PAR with single transparent led"
 msgstr ""
 
 #: u_resource_string.sstartsequence

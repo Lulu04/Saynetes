@@ -166,6 +166,9 @@ begin
   ftLaser: Result+='22_Laser.svg';
   ftParSmallTransparentLed: Result+='23_ParSmallTransparentLed.svg';
   ftFlower01: Result+='24_Flower01.svg';
+  ftParSquareSingleTransparentLed: Result+='25_ParSquareSingleTransparentLed.svg';
+  ftParSquareMultipleTransparentLed: Result+='26_ParSquareMultipleTransparentLed.svg';
+  ftParSquareMultipleColoredLed: Result+='27_ParSquareMultipleColoredLed.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -197,11 +200,13 @@ begin
    ftFan: Result := SFan;
    ftLaser: Result := SLaser;
    ftParSmallTransparentLed: Result := SSmallPar;
-   ftFlower01: Result+=SFlower01;
+   ftFlower01: Result := SFlower01;
+   ftParSquareSingleTransparentLed: Result := SSquareParSingleTransparentLed;
+   ftParSquareMultipleTransparentLed: Result := SSquareParMultipleTransparentLed;
+   ftParSquareMultipleColoredLed: Result := SquareParMultipleColoredLed;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
-
 function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
 begin
   Result := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), -1, -1);

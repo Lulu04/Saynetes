@@ -275,13 +275,21 @@ type
                      ftFan,      // 21
                      ftLaser,
                      ftParSmallTransparentLed,
-                     ftFlower01
-                         );
+                     ftFlower01,
+                     ftParSquareSingleTransparentLed,  // square par single transparent led
+                     ftParSquareMultipleTransparentLed, // square par with multiple transparent led
+                     ftParSquareMultipleColoredLed   // square par with multiple colored led
+                     );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
                    ftOther, ftParSmallTransparentLed,
                    ftParShortTransparentLed, ftParLongTransparentLed,
                    ftLedParShortWithColoredLed, ftLedParLongWithColoredLed,
+                   ftParSquareSingleTransparentLed,
+                   ftParSquareMultipleTransparentLed,
+                   ftParSquareMultipleColoredLed,
+
+
                    ftLedBarTransparentLed, ftBarColoredLed,
                    ftMatrixTransparentLed, ftMatrixWithColoredLed,
                    ftParShortBulb, ftParLongBulb,
@@ -320,7 +328,11 @@ const
                True,      // 21
                True,  // laser
                True,  // small par
-               True); // flower01
+               True,  // flower01
+               True,  // square par 1 transparent led
+               True,  // square par multiple transparent led
+               True   // square par multiple colored led
+               );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
                False,
@@ -347,7 +359,11 @@ const
                False, //ftFan,      // 21
                False, //ftLaser
                True,  //small par
-               True);  // flower01
+               True,  // flower01
+               True,  // square par 1 led
+               True,   // square par multiple led
+               True   // square par multiple colored led
+               );
 type
 
     // enum for channels type
