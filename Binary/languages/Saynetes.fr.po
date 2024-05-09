@@ -3282,6 +3282,10 @@ msgstr "Nom du projet"
 msgid "Square"
 msgstr "Carré"
 
+#: u_resource_string.squareparmultiplecoloredled
+msgid "Square PAR with multiple colored leds"
+msgstr "PAR carré avec plusieurs leds colorées"
+
 #: u_resource_string.srandomduration
 msgid "Random duration"
 msgstr "Durée aléatoire"
@@ -3485,6 +3489,14 @@ msgstr "Adoucir sur"
 msgctxt "u_resource_string.sspeed"
 msgid "Speed"
 msgstr "Vitesse"
+
+#: u_resource_string.ssquareparmultipletransparentled
+msgid "Square PAR with multiple transparent leds"
+msgstr "PAR carré avec plusieurs leds transparentes"
+
+#: u_resource_string.ssquareparsingletransparentled
+msgid "Square PAR with single transparent led"
+msgstr "PAR carré avec une seule led transparente"
 
 #: u_resource_string.sstartsequence
 msgid "START"
