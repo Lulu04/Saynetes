@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1521803829.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/bt-coloray-60r
+[GENERAL]
+Manufacturer|Briteq|Name|BT-COLORAY 60R|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|272|Height|305|Depth|242|Weight|4.80|Power|70|Connector|5-pin|Bulb|60W RGBW LED|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer/Strobe|Type|2|R1|Begin~0~End~200~Txt~Intensity|R2|Begin~201~End~247~Txt~Strobe slow..fast|R3|Begin~248~End~255~Txt~bright
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~255~Txt~slow..fast
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+[END_CHAN_DEF]
+[MODES]
+Name|RGB + Dim/Strb|ShortName|4ch|Content|Red~Green~Blue~Dimmer/Strobe
+Name|RGBW + Dim + Strb|ShortName|6ch|Content|Red~Green~Blue~White~Dimmer~Strobe
+Name|RGBW + Dim + Strb + DimSpeed|ShortName|7ch|Content|Red~Green~Blue~White~Dimmer~Strobe~Dimmer Speed
+[END_MODES]

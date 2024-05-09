@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://api.blizzard.lighting/public/Products/hotbox%20exa/downloads/HotBox%20EXA%20Manual%20Rev%20A%20(Web).pdf|LinkType2|product page|Url2|https://www.blizzardpro.com/products/hotbox-exa
+[GENERAL]
+Manufacturer|Blizzard|Name|HotBox EXA|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|127|Height|102|Depth|127|Weight|2.70|Power|58|Connector|3-pin|Bulb|7× 15W RGBAW+UV LEDs|LensMinDegree|26.000|LensMaxDegree|26.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~14~Txt~No function|R2|Begin~15~End~255~Txt~slow..fast
+ID|Fade, Color Change, Sound Active|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~RampUp|R3|Begin~64~End~95~Txt~RampDown|R4|Begin~96~End~127~Txt~RampUpDown|R5|Begin~128~End~164~Txt~ColorFade|R6|Begin~165~End~191~Txt~Fade In / Fade Out, Auto Run|R7|Begin~192~End~223~Txt~ColorJump|R8|Begin~224~End~255~Txt~Sound active, multicolor
+ID|Fade Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Control|Type|0|R1|Begin~0~End~5~Txt~As set in the control menu display|R2|Begin~6~End~55~Txt~Mode 0 = 8-bit, 256 dimming steps|R3|Begin~56~End~105~Txt~Mode 1 = 32-bit, 0-25% intensity range|R4|Begin~106~End~155~Txt~Mode 2 = 32-bit, 0-50% intensity range|R5|Begin~156~End~205~Txt~Mode 3 = 32-bit, 0-75% intensity range|R6|Begin~206~End~255~Txt~Mode 4 = 32-bit, full intensity dimming
+ID|Hue|Type|0|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe~Fade, Color Change, Sound Active~Fade Speed~Dimmer Control
+Name|10-channel|ShortName|10ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe~Fade, Color Change, Sound Active~Fade Speed
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~White~UV
+Name|3-channel|ShortName|3ch|Content|Hue~White~Dimmer
+[END_MODES]

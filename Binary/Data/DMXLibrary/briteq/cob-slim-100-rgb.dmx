@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1496150553.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/cob-slim100-rgb|LinkType3|video|Url3|https://www.youtube.com/watch?v=wAYsrW8YaZM
+[GENERAL]
+Manufacturer|Briteq|Name|COB Slim 100-RGB|Type|25|Authors|Thierry, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|245|Height|280|Depth|140|Weight|3.46|Power|120|Connector|3-pin|Bulb|100W COB RGB LED|Lens|Other|LensMinDegree|15.000|LensMaxDegree|70.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Mode|Type|0|R1|Begin~0~End~190~Txt~Intensity|R2|Begin~191~End~200~Txt~Sound Control (7 colors)|R3|Begin~201~End~247~Txt~Strobe slow..fast|R4|Begin~248~End~255~Txt~bright
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~37~Txt~Strobe Random timing|R3|Begin~38~End~67~Txt~Strobe Sound Strobe|R4|Begin~68~End~255~Txt~Strobe slow..fast
+ID|Effect|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~247~Txt~ColorFade slow..fast|R3|Begin~248~End~255~Txt~Sound Chase
+[END_CHAN_DEF]
+[MODES]
+Name|RGB|ShortName|RGB|Content|Red~Green~Blue
+Name|4LC channel|ShortName|4LC|Content|Red~Green~Blue~Mode
+Name|4+ channel|ShortName|4+|Content|Red~Green~Blue~Master dimmer
+Name|6 channel|ShortName|6ch|Content|Master dimmer~Strobe~Effect~Red~Green~Blue
+[END_MODES]

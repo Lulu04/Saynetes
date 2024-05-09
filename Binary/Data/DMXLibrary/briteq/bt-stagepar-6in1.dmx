@@ -1,0 +1,35 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1517492038.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/bt-stagepar-6in1|LinkType3|video|Url3|https://www.youtube.com/watch?v=dZgixI0Cq5Q
+[GENERAL]
+Manufacturer|Briteq|Name|BT-STAGEPAR 6in1|Type|16|Authors|josequioss, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|300|Height|275|Depth|300|Weight|3.50|Power|120|Connector|3-pin|Bulb|12× 12W 6in1 LEDs (Red, Green, Blue, White, Amber, UV)|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|All Colors|Type|13|R1|Begin~0~End~255~Txt~White R+G+B+W+A
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Simple Strobe|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~3200K..10000K
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer/Chase/Strobe|Type|0|R1|Begin~0~End~190~Txt~Intensity|R2|Begin~191~End~200~Txt~ColorJump|R3|Begin~201~End~247~Txt~Strobe slow..fast|R4|Begin~248~End~255~Txt~100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~5~Txt~Strobe Sound controlled|R3|Begin~6~End~10~Txt~Open|R4|Begin~11~End~255~Txt~Strobe slow..fast
+ID|Color Presets|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Color Preset
+ID|Extended Strobe|Type|0|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~37~Txt~Strobe Random timing|R3|Begin~38~End~67~Txt~Strobe Sound controlled|R4|Begin~68~End~255~Txt~Strobe slow..fast
+ID|Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~247~Txt~ColorFade slow..fast|R3|Begin~248~End~255~Txt~ColorJump
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|All Colors
+Name|2-channel|ShortName|2ch|Content|All Colors~UV
+Name|3-channel|ShortName|3ch|Content|All Colors~UV~Simple Strobe
+Name|3-channel+|ShortName|3ch+|Content|Dimmer~Color Temperature~UV
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Dimmer/Chase/Strobe
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~White~Amber~UV~Dimmer~Strobe
+Name|9-channel|ShortName|9ch|Content|Red~Green~Blue~White~Amber~UV~Dimmer~Strobe~Color Presets
+Name|9-channel+|ShortName|9ch+|Content|Dimmer~Extended Strobe~Programs~Red~Green~Blue~White~Amber~UV
+[END_MODES]
