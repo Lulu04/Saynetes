@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51701970-Manual-58249-1.700-eurolite-n-150-smoke-machine-de_en_es_fr.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51701970-eurolite-n-150-smoke-machine.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=Jwrp7I_kYVs
+[GENERAL]
+Manufacturer|Eurolite|Name|N-150|Type|10|Authors|Matthias Naumann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|300|Height|240|Depth|670|Weight|15.00|Power|1500|Connector|3-pin
+[CHAN_DEF]
+ID|Mode|Type|0|R1|Begin~0~End~13~Txt~Fog off|R2|Begin~14~End~127~Txt~Fog Select volume on channel 2|R3|Begin~128~End~231~Txt~Timer mode|R4|Begin~232~End~255~Txt~Fog strong
+ID|Fog Volume|Type|37|R1|Begin~0~End~70~Txt~Fog output off|R2|Begin~71~End~75~Txt~Fog output 20% permanent|R3|Begin~76~End~100~Txt~Fog output 30% 50sec|R4|Begin~101~End~125~Txt~Fog output 40% 43sec|R5|Begin~126~End~150~Txt~Fog output 50% 34sec|R6|Begin~151~End~175~Txt~Fog output 60% 29sec|R7|Begin~176~End~200~Txt~Fog output 70% 25sec|R8|Begin~201~End~225~Txt~Fog output 80% 23sec|R9|Begin~226~End~245~Txt~Fog output 90% 21sec|R10|Begin~246~End~255~Txt~Fog output 100% 20sec
+ID|Timer Duration|Type|16|R1|Begin~0~End~5~Txt~Time 1s|R2|Begin~6~End~29~Txt~Time 13s|R3|Begin~30~End~54~Txt~Time 33s|R4|Begin~55~End~79~Txt~Time 53s|R5|Begin~80~End~104~Txt~Time 73s|R6|Begin~105~End~129~Txt~Time 92s|R7|Begin~130~End~154~Txt~Time 112s|R8|Begin~155~End~179~Txt~Time 131s|R9|Begin~180~End~204~Txt~Time 151s|R10|Begin~205~End~229~Txt~Time 170s|R11|Begin~230~End~254~Txt~Time 190s|R12|Begin~255~End~255~Txt~Time 200s
+ID|Timer Interval|Type|16|R1|Begin~0~End~5~Txt~Time 1s|R2|Begin~6~End~29~Txt~Time 13s|R3|Begin~30~End~54~Txt~Time 33s|R4|Begin~55~End~79~Txt~Time 53s|R5|Begin~80~End~104~Txt~Time 73s|R6|Begin~105~End~129~Txt~Time 92s|R7|Begin~130~End~154~Txt~Time 112s|R8|Begin~155~End~179~Txt~Time 131s|R9|Begin~180~End~204~Txt~Time 151s|R10|Begin~205~End~229~Txt~Time 170s|R11|Begin~230~End~254~Txt~Time 190s|R12|Begin~255~End~255~Txt~Time 200s
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Mode~Fog Volume~Timer Duration~Timer Interval
+[END_MODES]

@@ -2203,6 +2203,14 @@ msgstr ""
 msgid "Bar colored led"
 msgstr ""
 
+#: u_resource_string.sbarshortcoloredled
+msgid "Short bar colored led"
+msgstr ""
+
+#: u_resource_string.sbarshorttransparentled
+msgid "Short bar transparent led"
+msgstr ""
+
 #: u_resource_string.sbegin
 msgctxt "u_resource_string.sbegin"
 msgid "Begin"
@@ -2703,6 +2711,10 @@ msgstr ""
 msgid "Flower 1"
 msgstr ""
 
+#: u_resource_string.sflower02
+msgid "Flower 2"
+msgstr ""
+
 #: u_resource_string.sfollow
 msgid "Follow"
 msgstr ""
@@ -3070,6 +3082,14 @@ msgstr ""
 msgid "Long PAR transparent led"
 msgstr ""
 
+#: u_resource_string.sparrectangularmultiplecoloredled
+msgid "Rectangular PAR with multiple colored led"
+msgstr ""
+
+#: u_resource_string.sparrectangularmultipletransparentled
+msgid "Rectangular PAR with multiple transparent led"
+msgstr ""
+
 #: u_resource_string.sparshortbulb
 msgid "Short PAR with bulb"
 msgstr ""
@@ -3177,7 +3197,7 @@ msgid "Square"
 msgstr ""
 
 #: u_resource_string.squareparmultiplecoloredled
-msgid "Square PAR with multiple colored leds"
+msgid "Square PAR with multiple colored led"
 msgstr ""
 
 #: u_resource_string.srandomduration
@@ -3384,7 +3404,7 @@ msgid "Speed"
 msgstr ""
 
 #: u_resource_string.ssquareparmultipletransparentled
-msgid "Square PAR with multiple transparent leds"
+msgid "Square PAR with multiple transparent led"
 msgstr ""
 
 #: u_resource_string.ssquareparsingletransparentled

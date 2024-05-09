@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51918662-MANUAL-1.10-de-en_00073902.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=fg8kl3vCfD4|LinkType3|video|Url3|https://www.youtube.com/watch?v=DyPYm84KdFQ
+[GENERAL]
+Manufacturer|Eurolite|Name|LED SVF-1|Type|0|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|580|Height|325|Depth|625|Weight|6.00|Power|60|Connector|3-pin|Bulb|LED 5mm|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Programs|Type|0|R1|Begin~0~End~12~Txt~Program 1|R2|Begin~13~End~25~Txt~Program 2|R3|Begin~26~End~38~Txt~Program 3|R4|Begin~39~End~51~Txt~Program 4|R5|Begin~52~End~64~Txt~Program 5|R6|Begin~65~End~77~Txt~Program 6|R7|Begin~78~End~90~Txt~Program 7|R8|Begin~91~End~103~Txt~Program 8|R9|Begin~104~End~116~Txt~Program 9|R10|Begin~117~End~129~Txt~Program 10|R11|Begin~130~End~142~Txt~Program 11|R12|Begin~143~End~155~Txt~Program 12|R13|Begin~156~End~168~Txt~Program 13|R14|Begin~169~End~181~Txt~Program 14|R15|Begin~182~End~194~Txt~Program 15|R16|Begin~195~End~214~Txt~All programs looping|R17|Begin~215~End~255~Txt~Sound Control
+ID|Program Speed|Type|16|DefaultValue|132|R1|Begin~0~End~10~Txt~Closed All LEDs off|R2|Begin~11~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2-Channel|ShortName|2ch|Content|Programs~Program Speed
+[END_MODES]

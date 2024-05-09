@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51930395-Manual-110557-1.000-eurolite-led-bar-3-hcl-bar-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51930395-eurolite-led-bar-3-hcl-bar.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=SV2AFTdJKNE
+[GENERAL]
+Manufacturer|Eurolite|Name|LED Bar-3 HCL Bar|Type|30|Authors|Rainer Jung|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|265|Height|129|Depth|87|Weight|0.90|Power|12|Connector|3-pin|Bulb|LED|LensMinDegree|20.000|LensMaxDegree|20.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~White~Extra~#ffffff|R6|Begin~50~End~59~Txt~Amber~Extra~#ffbf00|R7|Begin~60~End~69~Txt~UV~Extra~#8800ff|R8|Begin~70~End~79~Txt~Yellow~Extra~#ffff00|R9|Begin~80~End~89~Txt~Magenta~Extra~#ff00ff|R10|Begin~90~End~99~Txt~Cyan~Extra~#00ffff|R11|Begin~100~End~109~Txt~Dark Orange~Extra~#be6500|R12|Begin~110~End~119~Txt~Green Yellow~Extra~#8cff00|R13|Begin~120~End~129~Txt~Salmon~Extra~#ff8c8c|R14|Begin~130~End~139~Txt~Turquoise~Extra~#8cffff|R15|Begin~140~End~149~Txt~Light Green~Extra~#8cff8c|R16|Begin~150~End~159~Txt~Orange~Extra~#ff8c00|R17|Begin~160~End~169~Txt~Lavender~Extra~#ccbfff|R18|Begin~170~End~179~Txt~Light Blue~Extra~#8c8cff|R19|Begin~180~End~189~Txt~Dark Blue~Extra~#00008c|R20|Begin~190~End~255~Txt~Pink~Extra~#ff008c
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Strobe 0.5Hz..20Hz
+ID|Mode|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~69~Txt~ColorFade slow..fast|R3|Begin~70~End~129~Txt~ColorJump slow..fast|R4|Begin~130~End~189~Txt~ColorFade|R5|Begin~190~End~255~Txt~ColorJump
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Dimmer~Color Presets
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Dimmer~Strobe~Color Presets~Mode
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Color Presets~Mode
+[END_MODES]

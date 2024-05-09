@@ -169,6 +169,11 @@ begin
   ftParSquareSingleTransparentLed: Result+='25_ParSquareSingleTransparentLed.svg';
   ftParSquareMultipleTransparentLed: Result+='26_ParSquareMultipleTransparentLed.svg';
   ftParSquareMultipleColoredLed: Result+='27_ParSquareMultipleColoredLed.svg';
+  ftParRectangularMultipleTransparentLed: Result+='28_ParRectangularMultipleTransparentLed.svg';
+  ftParRectangularMultipleColoredLed: Result+='29_ParRectangularMultipleColoredLed.svg';
+  ftBarShortTransparentLed: Result+='30_BarShortTransparentLed.svg';
+  ftBarShortColoredLed: Result+='31_BarShortColoredLed.svg';
+  ftFlower02: Result+='32_Flower02.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -204,9 +209,15 @@ begin
    ftParSquareSingleTransparentLed: Result := SSquareParSingleTransparentLed;
    ftParSquareMultipleTransparentLed: Result := SSquareParMultipleTransparentLed;
    ftParSquareMultipleColoredLed: Result := SquareParMultipleColoredLed;
+   ftParRectangularMultipleTransparentLed: Result := SParRectangularMultipleTransparentLed;
+   ftParRectangularMultipleColoredLed: Result := SParRectangularMultipleColoredLed;
+   ftBarShortTransparentLed: Result := SBarShortTransparentLed;
+   ftBarShortColoredLed: Result := SBarShortColoredLed;
+   ftFlower02: Result := SFlower02;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
+
 function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
 begin
   Result := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), -1, -1);
@@ -292,6 +303,9 @@ begin
     ctROTATION: Result:=Result+'CursorRotation.svg';
     ctPANSPEED: Result:=Result+'CursorPanSpeed.svg';
     ctTILTSPEED: Result:=Result+'CursorTiltSpeed.svg';
+    ctFAN: Result:=Result+'CursorFan.svg';
+    ctSMOKE: Result:=Result+'CursorSmoke.svg';
+    ctPANTILT: Result:=Result+'CursorPanTilt.svg';
     else Result:='';
   end;//case
 end;

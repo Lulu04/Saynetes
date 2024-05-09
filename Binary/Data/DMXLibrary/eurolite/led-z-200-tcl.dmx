@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51918516-Anleitung-58253-1.100-eurolite-led-z-200-strahleneffekt-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/de/mpn51918516-eurolite-led-z-200-strahleneffekt.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=BH7UX8sXT7Y|LinkType4|video|Url4|https://www.steinigke.de/download/51918516-Video-55873-eurolite-led-z-200-strahleneffekt-de_en_es_fr.flv/
+[GENERAL]
+Manufacturer|Eurolite|Name|LED Z-200 TCL|Type|32|Authors|Heiko Fanieng, Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|360|Height|300|Depth|280|Weight|3.00|Power|40|Connector|3-pin|Bulb|LED TCL|LensMinDegree|125.000|LensMaxDegree|125.000
+[CHAN_DEF]
+ID|Motor Rotation|Type|33|R1|Begin~0~End~20~Txt~Rotation stop|R2|Begin~21~End~170~Txt~Rotation slow CCW..fast CCW|R3|Begin~171~End~255~Txt~Rotation slow CW..fast CW Clockwise and counter clockwise rotation
+ID|Program|Type|0|R1|Begin~0~End~35~Txt~No function|R2|Begin~36~End~70~Txt~Strobe|R3|Begin~71~End~105~Txt~Fade|R4|Begin~106~End~140~Txt~Color-change|R5|Begin~141~End~175~Txt~Color-change + strobe|R6|Begin~176~End~210~Txt~Cross-fade|R7|Begin~211~End~255~Txt~Cross-fade + strobe
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Motor Rotation~Program~Program Speed~Red~Green~Blue
+[END_MODES]

@@ -463,8 +463,13 @@ resourcestring
   SSmallPar='Small PAR';
   SFlower01='Flower 1';
   SSquareParSingleTransparentLed='Square PAR with single transparent led';
-  SSquareParMultipleTransparentLed='Square PAR with multiple transparent leds';
-  SquareParMultipleColoredLed='Square PAR with multiple colored leds';
+  SSquareParMultipleTransparentLed='Square PAR with multiple transparent led';
+  SquareParMultipleColoredLed='Square PAR with multiple colored led';
+  SParRectangularMultipleTransparentLed='Rectangular PAR with multiple transparent led';
+  SParRectangularMultipleColoredLed='Rectangular PAR with multiple colored led';
+  SBarShortTransparentLed='Short bar transparent led';
+  SBarShortColoredLed='Short bar colored led';
+  SFlower02='Flower 2';
 
 implementation
 // exclusion i18n

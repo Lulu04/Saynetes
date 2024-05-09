@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51930396-Manual-120587-1.200-eurolite-led-bar-12-qcl-rgba-bar-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51930396-eurolite-led-bar-12-qcl-rgba-bar.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=ZIj0aZyng1Q
+[GENERAL]
+Manufacturer|Eurolite|Name|LED Bar-12 QCL RGBA Bar|Type|19|Authors|Rainer Jung|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|1090|Height|65|Depth|100|Weight|2.90|Power|24|Connector|3-pin|Bulb|LED|LensMinDegree|17.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Auto Program|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~119~Txt~ColorFade|R3|Begin~120~End~255~Txt~ColorFade
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~White~Extra~#ffffff|R6|Begin~50~End~59~Txt~Amber~Extra~#ffbf00|R7|Begin~60~End~69~Txt~UV~Extra~#8800ff|R8|Begin~70~End~79~Txt~Yellow~Extra~#ffff00|R9|Begin~80~End~89~Txt~Magenta~Extra~#ff00ff|R10|Begin~90~End~99~Txt~Cyan~Extra~#00ffff|R11|Begin~100~End~109~Txt~Dark Orange~Extra~#be6500|R12|Begin~110~End~119~Txt~Green Yellow~Extra~#8cff00|R13|Begin~120~End~129~Txt~Salmon~Extra~#ff8c8c|R14|Begin~130~End~139~Txt~Turquoise~Extra~#8cffff|R15|Begin~140~End~149~Txt~Light Green~Extra~#8cff8c|R16|Begin~150~End~159~Txt~Orange~Extra~#ff8c00|R17|Begin~160~End~169~Txt~Lavender~Extra~#ccbfff|R18|Begin~170~End~179~Txt~Light Blue~Extra~#8c8cff|R19|Begin~180~End~189~Txt~Dark Blue~Extra~#00008c|R20|Begin~190~End~255~Txt~Pink~Extra~#ff008c
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Strobe 0.5Hz..20Hz
+ID|Strobe / Program|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~ColorJump|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~Strobe 0.5Hz..20Hz
+ID|Color Temperature|Type|27|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~29~Txt~2700K|R3|Begin~30~End~49~Txt~3200K|R4|Begin~50~End~69~Txt~3400K|R5|Begin~70~End~89~Txt~4200K|R6|Begin~90~End~109~Txt~4900K|R7|Begin~110~End~129~Txt~5600K|R8|Begin~130~End~149~Txt~6000K|R9|Begin~150~End~169~Txt~6500K|R10|Begin~170~End~189~Txt~7500K|R11|Begin~190~End~255~Txt~8000K
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Auto Program~Auto Program Speed
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|5-channel|ShortName|5ch|Content|Dimmer~Color Presets~Strobe~Auto Program~Auto Program Speed
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~Dimmer~Strobe / Program
+Name|9-channel|ShortName|9ch|Content|Red~Green~Blue~Amber~Color Temperature~Dimmer~Strobe~Auto Program~Auto Program Speed
+[END_MODES]

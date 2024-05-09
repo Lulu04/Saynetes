@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://media.steinigke.de/download_t/51915282-MANUAL-1.10-en-de_00102317.pdf
+[GENERAL]
+Manufacturer|Eurolite|Name|LED SLS-6 UV Floor|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|230|Height|230|Depth|110|Weight|1.00|Power|20|Connector|3-pin
+[CHAN_DEF]
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Strobe slow..fast
+ID|Programs|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~199~Txt~Auto mode|R3|Begin~200~End~255~Txt~Sound mode
+ID|Program Speed|Type|16|DefaultValue|128|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2 channel|ShortName|2ch|Content|UV~Strobe
+Name|4 channel|ShortName|4ch|Content|UV~Strobe~Programs~Program Speed
+[END_MODES]

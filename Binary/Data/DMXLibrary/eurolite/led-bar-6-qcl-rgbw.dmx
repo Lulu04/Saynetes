@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/420780_eurolite_led_bar_6_12_rgbw_de_uk.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/eurolite_led_bar_6_qcl_rgbw.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=tXEgjiP5YWA
+[GENERAL]
+Manufacturer|Eurolite|Name|LED Bar-6 QCL RGBW|Type|19|Authors|Luke Nelson|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|585|Height|65|Depth|100|Weight|2.90|Power|15|Connector|3-pin|Bulb|LED|LensMinDegree|17.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Auto Program|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~119~Txt~Auto mode|R3|Begin~120~End~255~Txt~Sound mode
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~White~Extra~#ffffff|R6|Begin~50~End~59~Txt~Green yellow~Extra~#d4fb79|R7|Begin~60~End~69~Txt~Cyan~Extra~#00fdff|R8|Begin~70~End~79~Txt~Magenta~Extra~#ff40ff|R9|Begin~80~End~89~Txt~Yellow~Extra~#fffb00|R10|Begin~90~End~99~Txt~Turquoise~Extra~#00fdff|R11|Begin~100~End~109~Txt~Magenta~Extra~#ff40ff|R12|Begin~110~End~119~Txt~Orange~Extra~#ff9300|R13|Begin~120~End~129~Txt~Light Green~Extra~#73fa79|R14|Begin~130~End~139~Txt~Magenta~Extra~#ff40ff|R15|Begin~140~End~149~Txt~Pink~Extra~#8cff8c|R16|Begin~150~End~159~Txt~Light Green~Extra~#73fa79|R17|Begin~160~End~169~Txt~Light Blue~Extra~#76d6ff|R18|Begin~170~End~179~Txt~Cold White~Extra~#ffffff|R19|Begin~180~End~189~Txt~Warm White~Extra~#fff8af|R20|Begin~190~End~255~Txt~Lavender~Extra~#d783ff
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Strobe 0.5Hz..20Hz
+ID|Strobe / Program|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Sound control|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~Strobe 0.5Hz..20Hz
+ID|Color Temperature|Type|27|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~29~Txt~2700K|R3|Begin~30~End~49~Txt~3200K|R4|Begin~50~End~69~Txt~3400K|R5|Begin~70~End~89~Txt~4200K|R6|Begin~90~End~109~Txt~4900K|R7|Begin~110~End~129~Txt~5600K|R8|Begin~130~End~149~Txt~6000K|R9|Begin~150~End~169~Txt~6500K|R10|Begin~170~End~189~Txt~7500K|R11|Begin~190~End~255~Txt~8000K
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Auto Program~Auto Program Speed
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|5-channel|ShortName|5ch|Content|Dimmer~Color Presets~Strobe~Auto Program~Auto Program Speed
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Dimmer~Strobe / Program
+Name|9-channel|ShortName|9ch|Content|Red~Green~Blue~White~Color Temperature~Dimmer~Strobe~Auto Program~Auto Program Speed
+[END_MODES]

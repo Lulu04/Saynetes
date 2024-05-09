@@ -104,7 +104,7 @@ begin
   FrameViewDMXFixtureChannels1.Visible := aFixtureLocation.Mode <> '';
 
   if FrameFixtureOverview.Visible then FrameFixtureOverview.ShowFixture(aFixtureLocation);
-  if FrameViewDMXFixtureChannels1.Visible then FrameViewDMXFixtureChannels1.ShowFixture(aFixtureLocation, False);
+  if FrameViewDMXFixtureChannels1.Visible then FrameViewDMXFixtureChannels1.ShowFixture(aFixtureLocation, True);
 
   BEditFixture.Enabled := FrameFixtureOverview.Visible;
 end;

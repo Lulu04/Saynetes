@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://media.steinigke.de/download_t/51913503-MANUAL-1.10-de-en_00096357.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=m-E_xYKWuCY
+[GENERAL]
+Manufacturer|Eurolite|Name|LED PS-4 HCL|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|188|Height|196|Depth|117|Weight|1.50|Power|33|Connector|3-pin|Bulb|12 W LED RGBAWUV
+[CHAN_DEF]
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~White~Extra~#ffffff|R6|Begin~50~End~59~Txt~Amber~Extra~#ffbf00|R7|Begin~60~End~69~Txt~UV~Extra~#8800ff|R8|Begin~70~End~79~Txt~Red + Green~Extra~#ffff00|R9|Begin~80~End~89~Txt~Red + Blue~Extra~#ff00ff|R10|Begin~90~End~99~Txt~Red + White~Extra~#ff8080|R11|Begin~100~End~109~Txt~Red + Amber~Extra~#ff6000|R12|Begin~110~End~119~Txt~Red + UV~Extra~_#8800ff|R13|Begin~120~End~129~Txt~Green + Blue~Extra~#00ffff|R14|Begin~130~End~139~Txt~Green + White~Extra~#80ff80|R15|Begin~140~End~149~Txt~Green + Amber~Extra~#92ff00|R16|Begin~150~End~159~Txt~Green + UV~Extra~_#8800ff|R17|Begin~160~End~169~Txt~Blue + White~Extra~#8080ff|R18|Begin~170~End~179~Txt~Blue + Amber~Extra~#ffbfff|R19|Begin~180~End~189~Txt~Blue + UV~Extra~_#8800ff|R20|Begin~190~End~199~Txt~White + Amber~Extra~#ffdf80|R21|Begin~200~End~209~Txt~White + UV~Extra~_#8800ff|R22|Begin~210~End~219~Txt~Amber + UV~Extra~_#8800ff|R23|Begin~220~End~229~Txt~Red + Green + Blue~Extra~#ffffff|R24|Begin~230~End~239~Txt~Red + Blue + Amber~Extra~#ff6080|R25|Begin~240~End~249~Txt~Green + White + UV~Extra~_#8800ff|R26|Begin~250~End~255~Txt~All~Extra~_#8800ff
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Strobe slow..fast
+ID|Programs|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~199~Txt~Auto mode|R3|Begin~200~End~255~Txt~Sound mode
+ID|Program Speed|Type|16|DefaultValue|128|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|4 channel|ShortName|4ch|Content|Color Presets~Strobe~Programs~Program Speed
+Name|10 channel|ShortName|10ch|Content|Red~Green~Blue~White~Amber~UV~Dimmer~Strobe~Programs~Program Speed
+[END_MODES]

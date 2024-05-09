@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/41602126-Manual-106094-1.00-eurolite-led-tha-100f-mk2-theater-spot-en_de.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn41602126-eurolite-led-tha-100f-mk2-theater-spot.html
+[GENERAL]
+Manufacturer|Eurolite|Name|LED THA-100F MK2|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|265|Height|335|Depth|370|Weight|6.00|Power|120|Connector|3-pin and 5-pin|Bulb|COB warm white 100W LED|LensMinDegree|6.000|LensMaxDegree|31.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe slow..fast
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~15~Txt~Control Board setting|R2|Begin~16~End~45~Txt~Linear (halogen)|R3|Begin~46~End~75~Txt~Square (halogen)|R4|Begin~76~End~105~Txt~Inverse (halogen)|R5|Begin~106~End~135~Txt~S-shaped (halogen)|R6|Begin~136~End~165~Txt~Linear (LED)|R7|Begin~166~End~195~Txt~Square (LED)|R8|Begin~196~End~225~Txt~Inverse (LED)|R9|Begin~226~End~255~Txt~S-shaped (LED)
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Dimmer~Strobe~Dimmer Curve
+Name|1-channel|ShortName|1ch|Content|Dimmer
+[END_MODES]
