@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/MotionDrapeLED_UM_Rev9_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/motiondrape-led/|LinkType3|video|Url3|https://www.youtube.com/watch?v=K0w2q8dIJHg
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|MotionDrape LED|Type|28|Authors|Michael H Perbix|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|135|Height|50|Depth|243|Weight|4.40|Power|54|Connector|3-pin|Bulb|176× LED
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~7~Txt~off|R2|Begin~8~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Strobe slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Program 1-15|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~Falling Star|R3|Begin~32~End~47~Txt~Diagonal Color Bands|R4|Begin~48~End~63~Txt~Color Pattern Chase|R5|Begin~64~End~79~Txt~Inward Arrow (L-R)|R6|Begin~80~End~95~Txt~Color Stack|R7|Begin~96~End~111~Txt~Multi-Color Freeway|R8|Begin~112~End~127~Txt~Color Wave (L-R)|R9|Begin~128~End~143~Txt~Color Wave (R-L)|R10|Begin~144~End~159~Txt~Color Bar Chase (L-R)|R11|Begin~160~End~175~Txt~Color Bar Chase (R-L)|R12|Begin~176~End~191~Txt~Windmill|R13|Begin~192~End~207~Txt~Fan|R14|Begin~208~End~223~Txt~Whirlpool|R15|Begin~224~End~239~Txt~Falling Snow|R16|Begin~240~End~255~Txt~Multi Box Frenzy
+ID|Program 16-30|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~Center Burst|R3|Begin~32~End~47~Txt~Outer Burst|R4|Begin~48~End~63~Txt~EQ Effect|R5|Begin~64~End~79~Txt~Rolling Color|R6|Begin~80~End~95~Txt~Horizontal Snow|R7|Begin~96~End~111~Txt~Inner Zone|R8|Begin~112~End~127~Txt~Outer  Zone|R9|Begin~128~End~143~Txt~Diamond Spread|R10|Begin~144~End~159~Txt~Single Diamond Squeeze|R11|Begin~160~End~175~Txt~Follow The Leader|R12|Begin~176~End~191~Txt~Crisscross|R13|Begin~192~End~207~Txt~X-Factor|R14|Begin~208~End~223~Txt~Double Diamond Squeeze|R15|Begin~224~End~239~Txt~Red X-Factor|R16|Begin~240~End~255~Txt~Multi Rain
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Dimmer~Strobe~Red~Green~Blue~Program 1-15~Program 16-30~Effect Speed
+[END_MODES]

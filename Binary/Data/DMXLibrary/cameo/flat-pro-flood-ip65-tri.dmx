@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLFLOODIP65TRI/CLFLOODIP65TRI_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf
+[GENERAL]
+Manufacturer|cameo|Name|Flat Pro Flood IP65 Tri|Type|25|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|180|Height|180|Depth|120|Weight|3.60|Power|75|Connector|3-pin XLR IP65|Bulb|60 W COB LED|LensMinDegree|120.000|LensMaxDegree|120.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros Simple|Type|12|R1|Begin~0~End~36~Txt~Red #ff0000|R2|Begin~37~End~73~Txt~Green #00ff00|R3|Begin~74~End~110~Txt~Blue #0000ff|R4|Begin~111~End~147~Txt~Yellow #ffff00|R5|Begin~148~End~184~Txt~Magenta #ff00ff|R6|Begin~185~End~221~Txt~Cyan #00ffff|R7|Begin~222~End~255~Txt~White #ffffff
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe 1Hz..20Hz
+ID|Color Macros Extended|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~15~Txt~Red #ff0000|R3|Begin~16~End~26~Txt~Green #00ff00|R4|Begin~27~End~37~Txt~Blue #0000ff|R5|Begin~38~End~48~Txt~Yellow #ffff00|R6|Begin~49~End~59~Txt~Magenta #ff00ff|R7|Begin~60~End~70~Txt~Cyan #00ffff|R8|Begin~71~End~80~Txt~White #ffffff|R9|Begin~81~End~150~Txt~ColorJump slow..fast|R10|Begin~151~End~255~Txt~ColorFade slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Dimmer~Color Macros Simple
+Name|3-channel 1|ShortName|3ch1|Content|Dimmer~Strobe~Color Macros Extended
+Name|3-channel 2|ShortName|3ch2|Content|Red~Green~Blue
+Name|6-channel|ShortName|6ch|Content|Dimmer~Strobe~Red~Green~Blue~Color Macros Extended
+[END_MODES]

@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501734|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501408|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/fos/4-Panels/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=VTWd9qrpuW8
+[GENERAL]
+Manufacturer|ETC|Name|fos4PD24|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|610|Height|610|Depth|631|Weight|35.80|Power|1600|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Deep Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Mint|Type|21|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Indigo|Type|22|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~40~Txt~Strobe 1Hz..40Hz Dark Strobe|R3|Begin~41~End~80~Txt~Strobe 1Hz..40Hz Bright Strobe|R4|Begin~81~End~120~Txt~Pulse|R5|Begin~121~End~160~Txt~Pulse Random|R6|Begin~161~End~200~Txt~Spikes Flicker|R7|Begin~201~End~240~Txt~Open|R8|Begin~241~End~254~Txt~Closed|R9|Begin~255~End~255~Txt~Open
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~9~Txt~Incandescent|R2|Begin~10~End~19~Txt~Linear|R3|Begin~20~End~29~Txt~Incandescent Red Shift|R4|Begin~30~End~39~Txt~Linear Red Shift|R5|Begin~40~End~255~Txt~No function Reserved
+ID|Fan|Type|36|R1|Begin~0~End~9~Txt~Fan auto|R2|Begin~10~End~19~Txt~Rotation stop|R3|Begin~20~End~249~Txt~Rotation slow CW..fast CW|R4|Begin~250~End~255~Txt~Fan auto
+ID|Color Temperature|Type|27|R1|Begin~0~End~0~Txt~3200K|R2|Begin~1~End~165~Txt~1900K..6000K|R3|Begin~166~End~254~Txt~6050K..10450K|R4|Begin~255~End~255~Txt~5600K
+ID|Tint|Type|12|R1|Begin~0~End~0~Txt~0 Tint|R2|Begin~1~End~127~Txt~10..0 Tint|R3|Begin~128~End~128~Txt~0 Tint|R4|Begin~129~End~255~Txt~0..-10 Tint
+ID|Tuning|Type|0|R1|Begin~0~End~49~Txt~Brightest|R2|Begin~50~End~99~Txt~Hybrid|R3|Begin~100~End~149~Txt~Spectral|R4|Begin~150~End~255~Txt~No function Reserved
+ID|Mix|Type|0|R1|Begin~0~End~0~Txt~Full Studio|R2|Begin~1~End~254~Txt~Linear interpolation from Studio to RGB|R3|Begin~255~End~255~Txt~Full RGB
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Direct|ShortName|Direct|Content|Intensity~Deep Red~Red~Mint~Cyan~Blue~Indigo~Strobe~Dimmer Curve~Fan
+Name|Expanded|ShortName|Expanded|Content|Intensity~Color Temperature~Tint~Tuning~Mix~Red~Green~Blue~Strobe~Dimmer Curve~Fan
+Name|Studio|ShortName|Studio|Content|Intensity~Color Temperature~Tint~Tuning~Strobe~Dimmer Curve~Fan
+Name|3 Ch RGB|ShortName|3 Ch RGB|Content|Red~Green~Blue
+Name|Intensity|ShortName|Intensity|Content|Intensity
+[END_MODES]

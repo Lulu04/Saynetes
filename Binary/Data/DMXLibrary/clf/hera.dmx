@@ -1,0 +1,38 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.clf-lighting.com/wp-content/uploads/CLF_HERA_Manual.pdf|LinkType2|product page|Url2|https://www.clf-lighting.com/product/hera|LinkType3|video|Url3|https://www.youtube.com/watch?v=lxO2bXqmgJE
+[GENERAL]
+Manufacturer|CLF|Name|Hera|Type|16|Authors|Guigui|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|260|Height|290|Depth|180|Weight|3.80|Power|121|Connector|5-pin|Bulb|12× RGBWAUV LEDs|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~24~Txt~Open|R3|Begin~25~End~64~Txt~Strobe fast..slow|R4|Begin~65~End~69~Txt~Open|R5|Begin~70~End~84~Txt~RampUp fast..slow|R6|Begin~85~End~89~Txt~Open|R7|Begin~90~End~104~Txt~RampDown fast..slow|R8|Begin~105~End~109~Txt~Open|R9|Begin~110~End~124~Txt~Strobe fast..slow Random timing|R10|Begin~125~End~129~Txt~Open|R11|Begin~130~End~144~Txt~RampUp fast..slow Random timing|R12|Begin~145~End~149~Txt~Open|R13|Begin~150~End~164~Txt~RampDown fast..slow Random timing|R14|Begin~165~End~169~Txt~Open|R15|Begin~170~End~184~Txt~Burst fast..slow Burst pulse|R16|Begin~185~End~189~Txt~Open|R17|Begin~190~End~204~Txt~Burst fast..slow Random timing Burst pulse|R18|Begin~205~End~209~Txt~Open|R19|Begin~210~End~224~Txt~Pulse fast..slow Sine wave|R20|Begin~225~End~229~Txt~Open|R21|Begin~230~End~244~Txt~Burst fast..slow|R22|Begin~245~End~255~Txt~Open
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~10000K..2500K
+ID|Color Wheel Effect|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~255~Txt~ColorFade
+ID|Auto Programs|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Auto program 1|R3|Begin~20~End~29~Txt~Auto program 2|R4|Begin~30~End~39~Txt~Auto program 3|R5|Begin~40~End~49~Txt~Auto program 4|R6|Begin~50~End~59~Txt~Auto program 5|R7|Begin~60~End~69~Txt~Auto program 6|R8|Begin~70~End~79~Txt~Auto program 7|R9|Begin~80~End~89~Txt~Auto program 8|R10|Begin~90~End~99~Txt~Auto program 9|R11|Begin~100~End~109~Txt~Auto program 10 (cycle 1-10)|R12|Begin~110~End~119~Txt~Custom program 1|R13|Begin~120~End~129~Txt~Custom program 2|R14|Begin~130~End~139~Txt~Custom program 3|R15|Begin~140~End~149~Txt~Custom program 4|R16|Begin~150~End~159~Txt~Custom program 5|R17|Begin~160~End~169~Txt~Custom program 6|R18|Begin~170~End~179~Txt~Custom program 7|R19|Begin~180~End~189~Txt~Custom program 8|R20|Begin~190~End~199~Txt~Custom program 9|R21|Begin~200~End~255~Txt~Custom program 10
+ID|Speed|Type|16|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Speed slow..fast Auto speed or dimmer speed
+ID|Fixture Control Settings|Type|0|R1|Begin~0~End~94~Txt~No function|R2|Begin~95~End~99~Txt~3s Manual calibration output mode|R3|Begin~100~End~104~Txt~3s Raw color output mode|R4|Begin~105~End~109~Txt~No function|R5|Begin~110~End~114~Txt~3s Normal dimming, speed of changes unrestricted|R6|Begin~115~End~119~Txt~No function|R7|Begin~120~End~124~Txt~3s Smooth dimming, speed of changes restricted slightly|R8|Begin~125~End~129~Txt~No function|R9|Begin~130~End~134~Txt~3s 1600 Hz refresh rate|R10|Begin~135~End~139~Txt~3s 11200 Hz refresh rate|R11|Begin~140~End~144~Txt~3s 12400 Hz refresh rate|R12|Begin~145~End~149~Txt~3s 14800 Hz refresh rate|R13|Begin~150~End~154~Txt~No function|R14|Begin~155~End~159~Txt~3s WDMX on|R15|Begin~160~End~164~Txt~No function|R16|Begin~165~End~169~Txt~3s WDMX off|R17|Begin~170~End~174~Txt~No function|R18|Begin~175~End~179~Txt~3s WDMX reset|R19|Begin~180~End~249~Txt~No function|R20|Begin~250~End~255~Txt~Illuminate display
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~Hue
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~Saturation
+ID|Value|Type|2|R1|Begin~0~End~255~Txt~Value
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100% for HSI color mixing
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|5-channel|ShortName|5ch|Content|Dimmer~Red~Green~Blue~White
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|7-channel|ShortName|7ch|Content|Dimmer~Red~Green~Blue~White~Amber~UV
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~White~Amber~UV~Strobe
+Name|11-channel|ShortName|11ch|Content|Dimmer~Red~Green~Blue~White~Strobe~Color Temperature~Color Wheel Effect~Auto Programs~Speed~Fixture Control Settings
+Name|13-channel|ShortName|13ch|Content|Dimmer~Red~Green~Blue~White~Amber~UV~Strobe~Color Temperature~Color Wheel Effect~Auto Programs~Speed~Fixture Control Settings
+Name|HSV|ShortName|HSV|Content|Hue~Saturation~Value
+Name|HSI|ShortName|HSI|Content|Hue~Saturation~Intensity
+[END_MODES]

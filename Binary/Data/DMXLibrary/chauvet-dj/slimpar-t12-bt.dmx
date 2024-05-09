@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2018/03/SlimPAR_T12BT_UM_Rev4.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-t12-bt/|LinkType3|video|Url3|https://www.youtube.com/watch?v=A2SgybnQo7k
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|SlimPAR T12 BT|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|214|Height|77|Depth|264|Weight|1.20|Power|42|Connector|3-pin|Bulb|12x 2.5W RGBA LED|Lumens|1000|LensMinDegree|14.000|LensMaxDegree|27.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..20Hz
+ID|Auto Program|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~55~Txt~Program 1|R3|Begin~56~End~106~Txt~Program 2|R4|Begin~107~End~157~Txt~Program 3|R5|Begin~158~End~208~Txt~Program 4|R6|Begin~209~End~255~Txt~Program 5
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~250~Txt~slow..fast|R2|Begin~251~End~255~Txt~Sound active mode
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Strobe~Auto Program~Auto Program Speed~Dimmer
+[END_MODES]

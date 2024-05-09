@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://dts-lighting.it/download/scena-led-150-m-pc/|LinkType2|video|Url2|https://www.youtube.com/watch?v=Vvi90cLiRmo
+[GENERAL]
+Manufacturer|DTS|Name|Scena LED 150|Type|1|Authors|Karl Humbug, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|250|Height|185|Depth|330|Weight|5.30|Power|160|Connector|5-pin|Bulb|150W LED|Lumens|7000|Lens|PC|LensMinDegree|8.200|LensMaxDegree|70.000
+[CHAN_DEF]
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~19~Txt~Open|R3|Begin~20~End~29~Txt~Closed|R4|Begin~30~End~119~Txt~Strobe 0.3Hz..33.3Hz|R5|Begin~120~End~149~Txt~RampUp 0.02Hz..8.3Hz|R6|Begin~150~End~179~Txt~RampDown 0.02Hz..8.3Hz|R7|Begin~180~End~204~Txt~Strobe Random timing dimmer active|R8|Begin~205~End~229~Txt~Strobe Random timing dimmer inactive|R9|Begin~230~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Zoom PC|Type|31|R1|Begin~0~End~255~Txt~Zoom 8.2deg..70deg linear
+ID|Reset|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~3s Zoom Motor Reset
+ID|Zoom Fresnel|Type|31|R1|Begin~0~End~255~Txt~Zoom 12.8deg..62deg linear
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel (PC lens)|ShortName|5ch-pc|Content|Shutter / Strobe~Dimmer~Dimmer fine~Zoom PC~Reset
+Name|4-channel (PC lens)|ShortName|4ch-pc|Content|Shutter / Strobe~Dimmer~Zoom PC~Reset
+Name|2-channel (PC lens)|ShortName|2ch-pc|Content|Dimmer~Zoom PC
+Name|5-channel (Fresnel lens)|ShortName|5ch-fres|Content|Shutter / Strobe~Dimmer~Dimmer fine~Zoom Fresnel~Reset
+Name|4-channel (Fresnel lens)|ShortName|4ch-fres|Content|Shutter / Strobe~Dimmer~Zoom Fresnel~Reset
+Name|2-channel (Fresnel lens)|ShortName|2ch-fres|Content|Dimmer~Zoom Fresnel
+Name|1-channel|ShortName|1ch|Content|Dimmer
+[END_MODES]

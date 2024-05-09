@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://m.jam.ua/files/files/KintaX_UM_Rev4_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/news/kinta-x-becomes-an-led-powerhouse/|LinkType3|video|Url3|https://www.youtube.com/watch?v=yM4Mz510LHk
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Kinta X|Type|26|Authors|Mikey Rowlands|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|283|Height|297|Depth|264|Weight|2.70|Power|24|Connector|3-pin|Bulb|3× 3W LEDs (1× red, green, blue each)|LensMinDegree|135.000|LensMaxDegree|135.000
+[CHAN_DEF]
+ID|Mode|Type|0|R1|Begin~0~End~14~Txt~off|R2|Begin~15~End~100~Txt~bright|R3|Begin~101~End~255~Txt~Auto Mode
+ID|Rotation|Type|33|R1|Begin~0~End~85~Txt~Rotation slow CCW..fast CCW|R2|Begin~86~End~170~Txt~Rotation slow CW..fast CW|R3|Begin~171~End~255~Txt~Rotation bounce
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Mode~Rotation
+[END_MODES]

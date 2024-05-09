@@ -1,0 +1,31 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/13274/Stealth%20Wash%20Zoom%20User%20Manual%20Revised%20092018.pdf|LinkType2|product page|Url2|https://www.adj.com/stealth-wash-zoom|LinkType3|video|Url3|https://www.youtube.com/watch?v=M7ALeJ3_jGc|LinkType4|video|Url4|https://www.youtube.com/watch?v=ubeWU8-BfNI
+[GENERAL]
+Manufacturer|Eliminator Lighting|Name|Stealth Wash Zoom|Type|9|Authors|Anonymous, JonahKr|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|234|Height|321|Depth|158|Weight|4.50|Power|95|Connector|3-pin|Bulb|7× 12W RGBW LED|LensMinDegree|4.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Color Macros|Type|12|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~10~Txt~Red~Extra~#ff0000|R3|Begin~11~End~15~Txt~Green~Extra~#00ff00|R4|Begin~16~End~20~Txt~Blue~Extra~#0000ff|R5|Begin~21~End~25~Txt~White~Extra~#ffffff|R6|Begin~26~End~30~Txt~Red + Green aka Yellow~Extra~#ffff00|R7|Begin~31~End~35~Txt~Green + Blue aka Cyan~Extra~#00ffff|R8|Begin~36~End~40~Txt~Blue + White~Extra~#8080ff|R9|Begin~41~End~45~Txt~Red + Blue aka Magenta~Extra~#ff00ff|R10|Begin~46~End~50~Txt~Green + White~Extra~#80ff80|R11|Begin~51~End~55~Txt~Red + White~Extra~#ff8080|R12|Begin~56~End~60~Txt~Red + Green + Blue aka White~Extra~#ffffff|R13|Begin~61~End~65~Txt~Red + Green + White~Extra~#ffff55|R14|Begin~66~End~70~Txt~Green + Blue + White~Extra~#80ffff|R15|Begin~71~End~75~Txt~Red + Green + Blue + White aka brighter White~Extra~#ffffff|R16|Begin~76~End~127~Txt~ColorJump slow..fast|R17|Begin~128~End~133~Txt~No function|R18|Begin~134~End~255~Txt~ColorFade slow..fast
+ID|Internal Programs|Type|0|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~40~Txt~Program 1|R3|Begin~41~End~60~Txt~Program 2|R4|Begin~61~End~80~Txt~Program 3|R5|Begin~81~End~100~Txt~Program 4|R6|Begin~101~End~120~Txt~Program 5|R7|Begin~121~End~140~Txt~Program 6|R8|Begin~141~End~160~Txt~Program 7|R9|Begin~161~End~180~Txt~Program 8|R10|Begin~181~End~200~Txt~No function|R11|Begin~201~End~225~Txt~Reset|R12|Begin~226~End~255~Txt~No function
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 4deg..45deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~245~Txt~Strobe slow..fast|R3|Begin~246~End~255~Txt~Open
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~warm..cold
+ID|Color Macros 2|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Red #ff0000|R3|Begin~21~End~30~Txt~Green #00ff00|R4|Begin~31~End~40~Txt~Blue #0000ff|R5|Begin~41~End~50~Txt~White #ffffff|R6|Begin~51~End~60~Txt~Red + Green aka Yellow #ffff00|R7|Begin~61~End~70~Txt~Green + Blue aka Cyan #00ffff|R8|Begin~71~End~80~Txt~Blue + White #8080ff|R9|Begin~81~End~90~Txt~Red + Blue aka Magenta #ff00ff|R10|Begin~91~End~100~Txt~Green + White #80ff80|R11|Begin~101~End~110~Txt~Red + White #ff8080|R12|Begin~111~End~120~Txt~Red + Green + Blue aka White #ffffff|R13|Begin~121~End~130~Txt~Red + Green + White #ffff55|R14|Begin~131~End~140~Txt~Green + Blue + White #55ffff|R15|Begin~141~End~150~Txt~Red + Green + Blue + White aka brighter White #ffffff|R16|Begin~151~End~255~Txt~ColorJump slow..fast
+ID|Color Fade|Type|16|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~ColorFade slow..fast
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Color Macros~Internal Programs~Zoom
+Name|16-channel|ShortName|16ch|Content|Pan~Pan fine~Tilt~Tilt fine~Red~Green~Blue~White~Dimmer~Shutter / Strobe~Zoom~Color Temperature~Color Macros 2~Color Fade~Pan/Tilt Speed~Internal Programs
+[END_MODES]

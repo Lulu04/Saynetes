@@ -1,0 +1,35 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.cameolight.com/en/downloads/file/id/2096475283|LinkType2|product page|Url2|https://www.cameolight.com/en/solutions/rental/outdoor-lighting/outdoor-lights/18383/zenit-w600|LinkType3|video|Url3|https://www.youtube.com/watch?v=VyPoe5yLPRw
+[GENERAL]
+Manufacturer|cameo|Name|Zenit W600|Type|28|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|463|Height|161|Depth|291|Weight|13.00|Power|565|Connector|5-pin XLR IP65|Bulb|40x 15W Cree LEDs|Lumens|9283|LensMinDegree|18.000|LensMaxDegree|35.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~8500K..3200K
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Burst 5s..1s|R8|Begin~128~End~250~Txt~Strobe 1Hz..20Hz|R9|Begin~251~End~255~Txt~Open
+ID|Color Macros|Type|12|R1|Begin~0~End~5~Txt~No function Color off|R2|Begin~6~End~13~Txt~Red~Extra~#ff0000|R3|Begin~14~End~21~Txt~Amber~Extra~#ffbf00|R4|Begin~22~End~29~Txt~Color temperature warm Yellow~Extra~#f9d716|R5|Begin~30~End~37~Txt~Yellow~Extra~#ffff00|R6|Begin~38~End~45~Txt~Green~Extra~#00ff00|R7|Begin~46~End~53~Txt~Turquoise~Extra~#40e0d0|R8|Begin~54~End~61~Txt~Cyan~Extra~#00ffff|R9|Begin~62~End~69~Txt~Blue~Extra~#0000ff|R10|Begin~70~End~77~Txt~Lavender~Extra~#e6e6fa|R11|Begin~78~End~85~Txt~Mauve~Extra~#e0b0ff|R12|Begin~86~End~93~Txt~Magenta~Extra~#ff00ff|R13|Begin~94~End~101~Txt~Pink~Extra~#ffc0cb|R14|Begin~102~End~109~Txt~Color temperature warm White~Extra~#fffbf2|R15|Begin~110~End~117~Txt~White~Extra~#ffffff|R16|Begin~118~End~125~Txt~Color temperature cold White~Extra~#f2f6fe|R17|Begin~126~End~127~Txt~ColorJump stop|R18|Begin~128~End~191~Txt~ColorJump slow..fast|R19|Begin~192~End~255~Txt~ColorFade slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
+ID|Device Settings|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~5s Dimmer Response LED|R3|Begin~128~End~191~Txt~5s Dimmer Response Halogen|R4|Begin~192~End~200~Txt~5s Fan Auto|R5|Begin~201~End~209~Txt~5s Fan Max|R6|Begin~210~End~218~Txt~5s Fan Silent|R7|Begin~219~End~223~Txt~5s LED Frequency 800Hz|R8|Begin~224~End~228~Txt~5s LED Frequency 1200Hz|R9|Begin~229~End~233~Txt~5s LED Frequency 2000Hz|R10|Begin~234~End~238~Txt~5s LED Frequency 3600Hz|R11|Begin~239~End~243~Txt~5s LED Frequency 12kHz|R12|Begin~244~End~248~Txt~5s LED Frequency 25kHz|R13|Begin~249~End~255~Txt~No function
+ID|Color Temperature 2|Type|27|R1|Begin~0~End~5~Txt~No function Off|R2|Begin~6~End~255~Txt~7300K..3200K
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~63~Txt~Linear Dimmer Curve|R3|Begin~64~End~127~Txt~Exponential Dimmer Curve|R4|Begin~128~End~191~Txt~Logarithmic Dimmer Curve|R5|Begin~192~End~255~Txt~S-Curve Dimmer Curve
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel White|ShortName|2ch|Content|Dimmer~Color Temperature
+Name|3-channel Color Macro|ShortName|3ch|Content|Dimmer~Strobe~Color Macros
+Name|4-channel RGBW|ShortName|4ch|Content|Red~Green~Blue~White
+Name|8-channel RGBW 16bit|ShortName|8ch1|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|8-channel RGBW+Macro|ShortName|8ch2|Content|Dimmer~Strobe~Red~Green~Blue~White~Color Macros~Device Settings
+Name|10-channel 8bit|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Color Macros~Color Temperature 2~Dimmer Curve~Device Settings
+Name|15-channel 16bit|ShortName|15ch|Content|Dimmer~Dimmer fine~Strobe~Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Color Macros~Color Temperature 2~Dimmer Curve~Device Settings
+[END_MODES]

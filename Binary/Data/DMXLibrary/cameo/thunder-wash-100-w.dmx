@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLTW100W/CLTW100W_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=i2ECXkUrtXc
+[GENERAL]
+Manufacturer|cameo|Name|Thunder Wash 100 W|Type|28|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|310|Height|70|Depth|70|Weight|1.00|Power|30|Connector|3-pin|Bulb|LED|LensMinDegree|75.000|LensMaxDegree|75.000
+[CHAN_DEF]
+ID|strobe1|Type|6|R1|Begin~0~End~10~Txt~Closed|R2|Begin~11~End~255~Txt~Strobe 0Hz..30Hz
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|strobe2|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~250~Txt~Strobe 0Hz..30Hz|R4|Begin~251~End~255~Txt~Open
+ID|Flash Duration|Type|28|R1|Begin~0~End~255~Txt~0ms..512ms
+ID|strobe3|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Strobe 5s..1s Break Effect|R8|Begin~128~End~250~Txt~Strobe 0Hz..30Hz|R9|Begin~251~End~255~Txt~Open
+ID|Sound Control|Type|0|R1|Begin~0~End~5~Txt~Sound sensitivity off|R2|Begin~6~End~255~Txt~Sound sensitivity low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|strobe1
+Name|2-channel|ShortName|2ch|Content|Dimmer~strobe2
+Name|3-channel 1|ShortName|3ch1|Content|Dimmer~strobe2~Flash Duration
+Name|3-channel 2|ShortName|3ch2|Content|Dimmer~strobe3~Sound Control
+[END_MODES]
