@@ -32,12 +32,12 @@ Name|HSI|ShortName|hsi|Content|Hue~Saturation~Intensity
 Name|RGBW|ShortName|rgbw|Content|Red~Green~Blue~White
 Name|HSI Dimmer Curve|ShortName|hsi-curve|Content|Hue~Saturation~Intensity~Dimmer Curve
 Name|RGBWD|ShortName|rgbwd|Content|Red~Green~Blue~White~Master dimmer
-Name|RGBWD Strobe|ShortName|rgbw-strb|Content|Shutter / Strobe~Red~Green~Blue~White~Master dimmer
+Name|RGBWD Strobe|ShortName|rgbw-strb|Content|Shutter/Strobe~Red~Green~Blue~White~Master dimmer
 Name|RGBWD fine|ShortName|rgbwd-fine|Content|Red~Green~Blue~White~Master dimmer~Master dimmer fine
-Name|RGBWD fine Strobe|ShortName|rgbwd-fine-strb|Content|Red~Green~Blue~White~Shutter / Strobe~Master dimmer~Master dimmer fine
-Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~White~Shutter / Strobe~Master dimmer~Master dimmer fine~Dimmer Curve
+Name|RGBWD fine Strobe|ShortName|rgbwd-fine-strb|Content|Red~Green~Blue~White~Shutter/Strobe~Master dimmer~Master dimmer fine
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~White~Shutter/Strobe~Master dimmer~Master dimmer fine~Dimmer Curve
 Name|RGBW fine|ShortName|rgbw-fine|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
-Name|HSI Programs|ShortName|hsi-prg|Content|Shutter / Strobe~Hue~Saturation~Intensity~Color Macros~Auto Programs~Program Speed~Program Fade~Dimmer Curve
-Name|RGBW Programs|ShortName|rgbw-prg|Content|Shutter / Strobe~Red~Green~Blue~White~Master dimmer~Color Macros~Auto Programs~Program Speed~Program Fade~Dimmer Curve
-Name|RGBW Programs fine|ShortName|rgbw-prg-fine|Content|Red~Green~Blue~White~Color Macros~Shutter / Strobe~Master dimmer~Master dimmer fine~Auto Programs~Program Speed~Program Fade~Dimmer Curve
+Name|HSI Programs|ShortName|hsi-prg|Content|Shutter/Strobe~Hue~Saturation~Intensity~Color Macros~Auto Programs~Program Speed~Program Fade~Dimmer Curve
+Name|RGBW Programs|ShortName|rgbw-prg|Content|Shutter/Strobe~Red~Green~Blue~White~Master dimmer~Color Macros~Auto Programs~Program Speed~Program Fade~Dimmer Curve
+Name|RGBW Programs fine|ShortName|rgbw-prg-fine|Content|Red~Green~Blue~White~Color Macros~Shutter/Strobe~Master dimmer~Master dimmer fine~Auto Programs~Program Speed~Program Fade~Dimmer Curve
 [END_MODES]
