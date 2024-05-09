@@ -408,7 +408,7 @@ begin
 end;
 
 procedure TFormFixtureWizard.DoSave;
-var i, j: integer;
+var i, j, v: integer;
   libFix: TLibraryFixture;
   A, chanUsed: TStringArray;
   f: string;
@@ -440,15 +440,15 @@ begin
   // physical
   with libFix.Physical do begin
     InitDefault;
-    Width := StrToInt(Edit1.Text);
-    Height := StrToInt(Edit2.Text);
-    Depth := StrToInt(Edit3.Text);
-    Power := StrToInt(Edit5.Text);
-    Weight := Edit4.Text;
-    Connector := CBConnector.Text;
-    Bulb := Edit9.Text;
-    Lumens := StrToInt(Edit6.Text);
-    Lens := CBLens.Text;
+    if TryStrToInt(Trim(Edit1.Text), v) then Width := v else Width := 0;
+    if TryStrToInt(Trim(Edit2.Text), v) then Height := v else Height := 0;
+    if TryStrToInt(Trim(Edit3.Text), v) then Depth := v else Depth := 0;
+    if TryStrToInt(Trim(Edit5.Text), v) then Power := v else Power := 0;
+    if Trim(Edit4.Text) <> '' then Weight := Trim(Edit4.Text) else Weight := '0';
+    Connector := Trim(CBConnector.Text);
+    Bulb := Trim(Edit9.Text);
+    if TryStrToInt(Trim(Edit6.Text), v) then Lumens := v else Lumens := 0;
+    Lens := Trim(CBLens.Text);
     LensMinDegree := FSE2.Value;
     LensMaxDegree := FSE3.Value;
   end;
@@ -622,14 +622,8 @@ begin
   Shape3.Visible := CBConnector.ItemIndex = -1;
   Shape4.Visible := Edit5.Text = '';
 
-  Result := (Trim(Edit1.Text) <> '') and
-            (Trim(Edit2.Text) <> '') and
-            (Trim(Edit3.Text) <> '') and
-            //(Trim(Edit4.Text) <> '') and
-            (Edit4.Color = clDefault) and
+  Result := (Edit4.Color = clDefault) and
             (Trim(Edit5.Text) <> '') and
-            //(Trim(Edit9.Text) <> '') and
-            //(Trim(Edit6.Text) <> '') and
             (CBConnector.ItemIndex <> -1);
 end;
 

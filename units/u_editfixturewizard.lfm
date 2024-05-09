@@ -929,6 +929,7 @@ object FormFixtureWizard: TFormFixtureWizard
           '3.5mm stereo jack'
           'RJ45'
           'Other'
+          'None'
         )
         OnChange = CBConnectorChange
         TabOrder = 9
