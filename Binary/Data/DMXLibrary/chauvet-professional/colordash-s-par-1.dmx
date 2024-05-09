@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2015/07/COLORdash_S-Par_1_UM_Rev1_WO1.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/colordash-s-par-1/|LinkType3|other|Url3|https://www.chauvetprofessional.com/news/chauvet-professionals-ip65-colordash-s-par-1-rgba-wash-breaks-the-led-color-separation-barrier/
+[GENERAL]
+Manufacturer|Chauvet Professional|Name|COLORdash S-Par 1|Type|23|Authors|Max Jöhnk, Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|231|Height|169|Depth|313|Weight|6.50|Power|65|Connector|5-pin|Bulb|LED|LensMinDegree|22.000|LensMaxDegree|42.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~Strobe slow..fast
+ID|Color Macro + White Balance|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red … Yellow|R3|Begin~31~End~50~Txt~Preset Yellow … Green|R4|Begin~51~End~70~Txt~Preset Green … Cyan|R5|Begin~71~End~90~Txt~Preset Cyan … Blue|R6|Begin~91~End~110~Txt~Preset Blue … Magenta|R7|Begin~111~End~130~Txt~Preset Magenta … Red|R8|Begin~131~End~150~Txt~Preset Red … White|R9|Begin~151~End~170~Txt~Preset White … Blue|R10|Begin~171~End~200~Txt~RGBA white #ffebd9|R11|Begin~201~End~205~Txt~White 1 #ffffff|R12|Begin~206~End~210~Txt~White 2 #ffffff|R13|Begin~211~End~215~Txt~White 3 #ffffff|R14|Begin~216~End~220~Txt~White 4 #ffffff|R15|Begin~221~End~225~Txt~White 5 #ffffff|R16|Begin~226~End~230~Txt~White 6 #ffffff|R17|Begin~231~End~235~Txt~White 7 #ffffff|R18|Begin~236~End~240~Txt~White 8 #ffffff|R19|Begin~241~End~245~Txt~White 9 #ffffff|R20|Begin~246~End~250~Txt~White 10 #ffffff|R21|Begin~251~End~255~Txt~White 11 #ffffff
+ID|Color Temperature|Type|27|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~warm..cold|R3|Begin~251~End~255~Txt~No function
+ID|Auto Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~60~Txt~Program 1|R3|Begin~61~End~110~Txt~Program 2|R4|Begin~111~End~160~Txt~Program 3|R5|Begin~161~End~210~Txt~Program 4|R6|Begin~211~End~255~Txt~Program 5
+ID|Auto Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~51~Txt~Preset dimmer speed from display menu|R2|Begin~52~End~101~Txt~Linear Dimmer|R3|Begin~102~End~152~Txt~Nonlinear dimming curve 1 (fastest)|R4|Begin~153~End~203~Txt~Nonlinear dimming curve 2|R5|Begin~204~End~255~Txt~Nonlinear dimming curve 3 (slowest)
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|6-channel|ShortName|6ch|Content|Dimmer~Red~Green~Blue~Amber~Strobe
+Name|11-channel|ShortName|11ch|Content|Dimmer~Red~Green~Blue~Amber~Strobe~Color Macro + White Balance~Color Temperature~Auto Programs~Auto Speed~Dimmer Curve
+[END_MODES]

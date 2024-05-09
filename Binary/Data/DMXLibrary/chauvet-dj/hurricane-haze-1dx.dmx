@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2017/01/Hurricane_Haze_1DX_UM_Rev3.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/hurricane-haze-1dx/
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Hurricane Haze 1DX|Type|10|Authors|David Oleniacz|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|150|Height|223|Depth|278|Weight|3.30|Power|303|Connector|3-pin
+[CHAN_DEF]
+ID|Haze|Type|37|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~weak..strong
+[END_CHAN_DEF]
+[MODES]
+Name|1 Channel|ShortName|1ch|Content|Haze
+[END_MODES]

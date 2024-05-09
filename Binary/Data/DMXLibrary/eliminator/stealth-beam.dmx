@@ -1,0 +1,31 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/13271/Stealth%20Beam%20(1st%20Ed.).pdf|LinkType2|product page|Url2|https://www.adj.com/stealth-beam|LinkType3|video|Url3|https://www.youtube.com/watch?v=A2l0YIFRARA|LinkType4|video|Url4|https://www.youtube.com/watch?v=vMqesfl5Fsk
+[GENERAL]
+Manufacturer|Eliminator Lighting|Name|Stealth Beam|Type|9|Authors|George Qualley IV|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|239|Height|285|Depth|146|Weight|3.80|Power|75|Connector|3-pin|Bulb|1x 60W RGBW 4-in-1 LED|LensMinDegree|11.000|LensMaxDegree|11.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Color Macro|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~17~Txt~Red #ff0000|R3|Begin~18~End~27~Txt~Green #00ff00|R4|Begin~28~End~37~Txt~Blue #0000ff|R5|Begin~38~End~47~Txt~White #ffffff|R6|Begin~48~End~57~Txt~Red/Green #ffff00|R7|Begin~58~End~67~Txt~Green/Blue #00ffff|R8|Begin~68~End~77~Txt~Blue/White #8080ff|R9|Begin~78~End~87~Txt~Red/White #ff8080|R10|Begin~88~End~97~Txt~Red/Green/Blue #ffffff|R11|Begin~98~End~107~Txt~Green/Blue/White #80ffff|R12|Begin~108~End~117~Txt~Red/Blue/White #ff80ff|R13|Begin~118~End~127~Txt~Red/Green/White #ffff80|R14|Begin~128~End~137~Txt~Red/Green/Blue/White #ffffff|R15|Begin~138~End~188~Txt~ColorJump|R16|Begin~189~End~239~Txt~ColorFade|R17|Begin~240~End~255~Txt~ColorJump
+ID|Color Change / Fade Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pan/Tilt Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~32~Txt~Program 1|R3|Begin~33~End~58~Txt~Program 1|R4|Begin~59~End~84~Txt~Program 2|R5|Begin~85~End~110~Txt~Program 3|R6|Begin~111~End~136~Txt~Program 4|R7|Begin~137~End~162~Txt~Program 5|R8|Begin~163~End~188~Txt~Program 6|R9|Begin~189~End~214~Txt~Program 7|R10|Begin~215~End~240~Txt~Program 8|R11|Begin~241~End~255~Txt~Sound Active
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~250~Txt~Strobe slow..fast|R3|Begin~251~End~255~Txt~Open
+ID|Pan Continuous Movement|Type|33|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~127~Txt~Continuous slow CW..fast CW|R3|Begin~128~End~255~Txt~Continuous fast CCW..slow CCW
+ID|Pan Movement Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Tilt Movement Macro|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Tilt movement forth and back slow..fast
+ID|Pan/Tilt Program Speed|Type|9|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~10s Set High Speed Mode|R3|Begin~101~End~150~Txt~No function|R4|Begin~151~End~200~Txt~10s Set Low Speed Mode|R5|Begin~201~End~250~Txt~No function|R6|Begin~251~End~255~Txt~10s Reset
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Color Macro~Color Change / Fade Speed~Pan/Tilt Programs
+Name|17-channel|ShortName|17ch|Content|Pan~Pan fine~Tilt~Tilt fine~Red~Green~Blue~White~Color Macro~Master Dimmer~Shutter / Strobe~Pan Continuous Movement~Pan Movement Speed~Tilt Movement Macro~Color Change / Fade Speed~Pan/Tilt Programs~Pan/Tilt Program Speed
+[END_MODES]

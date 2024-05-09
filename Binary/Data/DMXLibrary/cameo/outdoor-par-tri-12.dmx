@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPSTTRI12IP/CLPSTTRI12IP_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=ln1KAzrTtl0
+[GENERAL]
+Manufacturer|cameo|Name|Outdoor PAR Tri 12|Type|16|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|203|Height|203|Depth|193|Weight|4.25|Power|50|Connector|3-pin XLR IP65|Bulb|LED|Lumens|911|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macro Simple|Type|12|R1|Begin~0~End~31~Txt~Black #000000|R2|Begin~32~End~63~Txt~Red #ff0000|R3|Begin~64~End~95~Txt~Green #00ff00|R4|Begin~96~End~127~Txt~Blue #0000ff|R5|Begin~128~End~159~Txt~Yellow #ffff00|R6|Begin~160~End~191~Txt~Cyan #00ffff|R7|Begin~192~End~223~Txt~Magenta #ff00ff|R8|Begin~224~End~255~Txt~White #ffffff
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0%..100%
+ID|Color Macro Advanced|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~15~Txt~Red #ff0000|R3|Begin~16~End~26~Txt~Green #00ff00|R4|Begin~27~End~37~Txt~Blue #0000ff|R5|Begin~38~End~48~Txt~Yellow #ffff00|R6|Begin~49~End~59~Txt~Cyan #00ffff|R7|Begin~60~End~70~Txt~Magenta #ff00ff|R8|Begin~71~End~80~Txt~White #ffffff|R9|Begin~81~End~150~Txt~ColorJump|R10|Begin~151~End~255~Txt~ColorFade
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Master dimmer~Color Macro Simple
+Name|3-channel 1|ShortName|3ch1|Content|Master dimmer~Strobe~Color Macro Advanced
+Name|3-channel 2|ShortName|3ch2|Content|Red~Green~Blue
+Name|6-channel|ShortName|6ch|Content|Master dimmer~Strobe~Red~Green~Blue~Color Macro Advanced
+[END_MODES]

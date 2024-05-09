@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/Hurricane_Haze_2D_UM_Rev12_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/hurricane-haze-2d/
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Hurricane Haze 2D|Type|10|Authors|Tryll|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|267|Height|350|Depth|285|Weight|8.50|Power|533|Connector|3-pin
+[CHAN_DEF]
+ID|Blower Speed|Type|36|R1|Begin~0~End~5~Txt~Speed stop|R2|Begin~6~End~75~Txt~Speed 20%|R3|Begin~76~End~125~Txt~Speed 40%|R4|Begin~126~End~165~Txt~Speed 60%|R5|Begin~166~End~185~Txt~Speed 80%|R6|Begin~186~End~255~Txt~Speed 100%
+ID|Haze Volume|Type|37|R1|Begin~0~End~38~Txt~Haze off|R2|Begin~39~End~69~Txt~Haze 20%|R3|Begin~70~End~101~Txt~Haze 40%|R4|Begin~102~End~132~Txt~Haze 60%|R5|Begin~133~End~187~Txt~Haze 80%|R6|Begin~188~End~255~Txt~Haze 100%
+[END_CHAN_DEF]
+[MODES]
+Name|2ch|ShortName|2ch|Content|Blower Speed~Haze Volume
+[END_MODES]

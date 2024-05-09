@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/SlimPAR_Pro_RGBA_UM_Rev5_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-pro-rgba/|LinkType3|video|Url3|https://www.youtube.com/watch?v=sXaC7ZqkGy4
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|SlimPAR Pro RGBA|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|256|Height|290|Depth|87|Weight|2.80|Power|90|Connector|3-pin|Bulb|42× 1W RGBA LED|LensMinDegree|21.000|LensMaxDegree|21.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0%..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red … Yellow|R3|Begin~31~End~50~Txt~Preset Yellow … Green|R4|Begin~51~End~70~Txt~Preset Green … Cyan|R5|Begin~71~End~90~Txt~Preset Cyan … Blue|R6|Begin~91~End~110~Txt~Preset Blue … Magenta|R7|Begin~111~End~130~Txt~Preset Magenta … Red|R8|Begin~131~End~150~Txt~Preset Yellow … Magenta|R9|Begin~151~End~170~Txt~Preset White … Blue|R10|Begin~171~End~200~Txt~RGBA~Extra~#ffffff|R11|Begin~201~End~205~Txt~Color temperature 3200K White 1|R12|Begin~206~End~210~Txt~Color temperature 3400K White 2|R13|Begin~211~End~215~Txt~Color temperature 4200K White 3|R14|Begin~216~End~220~Txt~Color temperature 4900K White 4|R15|Begin~221~End~225~Txt~Color temperature 5600K White 5|R16|Begin~226~End~230~Txt~Color temperature 5900K White 6|R17|Begin~231~End~235~Txt~Color temperature 6500K White 7|R18|Begin~236~End~240~Txt~Color temperature 7200K White 8|R19|Begin~241~End~245~Txt~Color temperature 8000K White 9|R20|Begin~246~End~250~Txt~Color temperature 8500K White 10|R21|Begin~251~End~255~Txt~Color temperature 10000K White 11
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Strobe 1Hz..20Hz
+ID|Auto Programs|Type|0|R1|Begin~0~End~51~Txt~No function|R2|Begin~52~End~101~Txt~Auto Program 1|R3|Begin~102~End~152~Txt~Auto Program 2|R4|Begin~153~End~203~Txt~Auto Program 3|R5|Begin~204~End~254~Txt~Auto Program 4|R6|Begin~255~End~255~Txt~Auto Program 5
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~51~Txt~Default speed|R2|Begin~52~End~101~Txt~Linear dimmer|R3|Begin~102~End~152~Txt~Nonlinear dimmer 1|R4|Begin~153~End~203~Txt~Nonlinear dimmer 2|R5|Begin~204~End~255~Txt~Nonlinear dimmer 3
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|5-channel|ShortName|5ch|Content|Dimmer~Red~Green~Blue~Amber
+Name|10-channel|ShortName|10ch|Content|Dimmer~Red~Green~Blue~Amber~Color Macros~Strobe~Auto Programs~Auto Program Speed~Dimmer Curve
+[END_MODES]

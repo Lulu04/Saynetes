@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/GeyserRGB_UM_Rev8_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/geyser-rgb/|LinkType3|video|Url3|https://www.youtube.com/watch?v=hQXFyo28Ndc|LinkType4|video|Url4|https://www.youtube.com/watch?v=pq10ol45HNE
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Geyser RGB|Type|10|Authors|Alex Jacobs|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|375|Height|250|Depth|510|Weight|9.60|Power|1500|Connector|3-pin and 5-pin|Bulb|21× 3W LEDs (7× red, 7× green, 7× blue)
+[CHAN_DEF]
+ID|Fog|Type|37|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Fog 481m^3/min
+ID|Red|Type|3|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0..100%
+ID|Color Mixing|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Preset
+ID|Auto Speed|Type|16|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Speed slow..fast
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Strobe slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Fog~Red~Green~Blue~Color Mixing~Auto Speed~Strobe~Dimmer
+[END_MODES]

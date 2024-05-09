@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.etcconnect.com/Products/Entertainment-Fixtures/S4WRD-C-II/Documentation.aspx#manuals|LinkType2|product page|Url2|https://www.etcconnect.com/Products/Entertainment-Fixtures/S4WRD-C-II/Features.aspx|LinkType3|video|Url3|https://www.youtube.com/watch?v=olWwFKsCU-o
+[GENERAL]
+Manufacturer|ETC|Name|Source 4WRD Color II|Type|23|Authors|Randy Hall|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|178|Height|142|Depth|160|Weight|1.69|Power|150|Connector|RJ45|Bulb|LED|Lumens|6000
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~254~Txt~Strobe 1Hz..33Hz|R3|Begin~255~End~255~Txt~Open
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Intensity~Red~Green~Blue~Amber~Strobe
+[END_MODES]

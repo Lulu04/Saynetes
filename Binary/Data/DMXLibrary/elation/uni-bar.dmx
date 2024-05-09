@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/10326/elation_UNI-BAR_user_manual_090216.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/uni-bar
+[GENERAL]
+Manufacturer|Elation|Name|UNI BAR|Type|12|Authors|Homemdamesadeluz|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|200|Height|67|Depth|82|Weight|1.10|Power|1200|Connector|3-pin
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Dimmer|ShortName|Dimmer|Content|Dimmer
+[END_MODES]

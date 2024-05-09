@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/11387/ELATION%20SIXPAR%20SERIES%20-%20DMX%20TRAITS.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/sixpar-200wmg|LinkType3|video|Url3|https://www.youtube.com/watch?v=vLJvunbVWIU|LinkType4|video|Url4|https://www.youtube.com/watch?v=oZdkqF0vT1I
+[GENERAL]
+Manufacturer|Elation|Name|SIXPAR 200 WMG|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|313|Height|300|Depth|157|Weight|5.70|Power|150|Connector|3-pin XLR IP65|Bulb|12x12W RGBAWUV LEDs|LensMinDegree|23.000|LensMaxDegree|23.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Color Macros|Type|12|R1|Begin~0~End~3~Txt~No function|R2|Begin~4~End~7~Txt~R~Extra~#ff0000|R3|Begin~8~End~11~Txt~G~Extra~#00ff00|R4|Begin~12~End~15~Txt~B~Extra~#0000ff|R5|Begin~16~End~19~Txt~W~Extra~#ffffff|R6|Begin~20~End~23~Txt~A~Extra~#ffbf00|R7|Begin~24~End~27~Txt~UV~Extra~#8800ff|R8|Begin~28~End~31~Txt~RG~Extra~#ffff00|R9|Begin~32~End~35~Txt~RB~Extra~#ff00ff|R10|Begin~36~End~39~Txt~RW~Extra~#ff8080|R11|Begin~40~End~43~Txt~RA~Extra~#ff6000|R12|Begin~44~End~47~Txt~RUV~Extra~_#8800ff|R13|Begin~48~End~51~Txt~GB~Extra~#ff00ff|R14|Begin~52~End~55~Txt~GW~Extra~#80ff80|R15|Begin~56~End~59~Txt~GA~Extra~#92ff00|R16|Begin~60~End~63~Txt~GUV~Extra~_#8800ff|R17|Begin~64~End~67~Txt~BW~Extra~#8080ff|R18|Begin~68~End~71~Txt~BA~Extra~#ffbfff|R19|Begin~72~End~75~Txt~BUV~Extra~_#8800ff|R20|Begin~76~End~79~Txt~WA~Extra~#ffdf80|R21|Begin~80~End~83~Txt~WUV~Extra~_#8800ff|R22|Begin~84~End~87~Txt~AUV~Extra~_#8800ff|R23|Begin~88~End~91~Txt~RGB~Extra~#ffffff|R24|Begin~92~End~95~Txt~RGW~Extra~#ffff80|R25|Begin~96~End~99~Txt~RGA~Extra~#ffdf00|R26|Begin~100~End~103~Txt~RGUV~Extra~_#8800ff|R27|Begin~104~End~107~Txt~RBW~Extra~#ff80ff|R28|Begin~108~End~111~Txt~RBA~Extra~#ff6080|R29|Begin~112~End~115~Txt~RBUV~Extra~_#8800ff|R30|Begin~116~End~119~Txt~RWA~Extra~#ff9555|R31|Begin~120~End~123~Txt~RWUV~Extra~_#8800ff|R32|Begin~124~End~127~Txt~RAUV~Extra~_#8800ff|R33|Begin~128~End~131~Txt~GBW~Extra~#80ffff|R34|Begin~132~End~135~Txt~GBA~Extra~#92ff92|R35|Begin~136~End~139~Txt~GBUV~Extra~_#8800ff|R36|Begin~140~End~143~Txt~GWA~Extra~#baff5d|R37|Begin~144~End~147~Txt~GWUV~Extra~_#8800ff|R38|Begin~148~End~151~Txt~GAUV~Extra~_#8800ff|R39|Begin~152~End~155~Txt~BWA~Extra~#ffdfff|R40|Begin~156~End~159~Txt~BWUV~Extra~_#8800ff|R41|Begin~160~End~163~Txt~BAUV~Extra~_#8800ff|R42|Begin~164~End~167~Txt~WAUV~Extra~_#8800ff|R43|Begin~168~End~171~Txt~RGBW~Extra~#ffffff|R44|Begin~172~End~175~Txt~RGBA~Extra~#ffdf80|R45|Begin~176~End~179~Txt~RGBUV~Extra~_#8800ff|R46|Begin~180~End~183~Txt~RGWA~Extra~#ffea55|R47|Begin~184~End~187~Txt~RGWUV~Extra~_#8800ff|R48|Begin~188~End~191~Txt~RGAUV~Extra~_#8800ff|R49|Begin~192~End~195~Txt~RBWA~Extra~#ff95aa|R50|Begin~196~End~199~Txt~RBWUV~Extra~_#8800ff|R51|Begin~200~End~203~Txt~RBAUV~Extra~_#8800ff|R52|Begin~204~End~207~Txt~RWAUV~Extra~_#8800ff|R53|Begin~208~End~211~Txt~GBWA~Extra~#baffba|R54|Begin~212~End~215~Txt~GBWUV~Extra~_#8800ff|R55|Begin~216~End~219~Txt~GBAUV~Extra~_#8800ff|R56|Begin~220~End~223~Txt~GWAUV~Extra~_#8800ff|R57|Begin~224~End~227~Txt~BWAUV~Extra~_#8800ff|R58|Begin~228~End~231~Txt~RGBWA~Extra~#ffeaaa|R59|Begin~232~End~235~Txt~RGBWUV~Extra~_#8800ff|R60|Begin~236~End~239~Txt~RGBAUV~Extra~_#8800ff|R61|Begin~240~End~243~Txt~RGWAUV~Extra~_#8800ff|R62|Begin~244~End~247~Txt~RBWAUV~Extra~_#8800ff|R63|Begin~248~End~251~Txt~GBWAUV~Extra~_#8800ff|R64|Begin~252~End~255~Txt~RGBWAUV~Extra~_#8800ff
+ID|Color Chase Macros|Type|0|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~40~Txt~ColorJump 30 colors|R3|Begin~41~End~60~Txt~ColorJump 6 colors|R4|Begin~61~End~80~Txt~ColorFade|R5|Begin~81~End~255~Txt~No function
+ID|Color Chase Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimming Modes|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theater|R6|Begin~101~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~White~Amber~UV~Dimmer
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~Amber~White~UV~Dimmer~Strobe
+Name|12-channel|ShortName|12ch|Content|Red~Green~Blue~Amber~White~UV~Dimmer~Strobe~Color Macros~Color Chase Macros~Color Chase Speed~Dimming Modes
+[END_MODES]

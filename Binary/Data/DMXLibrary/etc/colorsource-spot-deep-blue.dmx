@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737494635|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737484146|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/ColorSource-Spot/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=N0JzgjCdSgc
+[GENERAL]
+Manufacturer|ETC|Name|ColorSource Spot Deep Blue|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|339|Height|593|Depth|672|Weight|7.70|Power|147|Connector|5-pin|Bulb|60 Lumileds LUXEON Rebel LED|Lumens|6932
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Indigo|Type|22|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~254~Txt~Strobe 1Hz..33Hz|R3|Begin~255~End~255~Txt~No function
+ID|Lime|Type|21|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|5 Channel (Default)|ShortName|5ch|Content|Intensity~Red~Green~Indigo~Strobe
+Name|Direct|ShortName|dir|Content|Intensity~Red~Green~Indigo~Lime~Strobe
+Name|1 Channel|ShortName|1ch|Content|Intensity
+Name|RGB|ShortName|rgb|Content|Red~Green~Indigo
+[END_MODES]

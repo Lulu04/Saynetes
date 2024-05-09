@@ -1,0 +1,39 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2017/11/Ovation_F-915VW_UM_Rev1_WO.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/ovation-f-915vw/|LinkType3|video|Url3|https://www.youtube.com/watch?v=bSrkOqNl9SI
+[GENERAL]
+Manufacturer|Chauvet Professional|Name|Ovation F-915VW|Type|1|Authors|Nicolas|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|320|Height|275|Depth|569|Weight|8.50|Power|223|Connector|3-pin and 5-pin|Bulb|89× 3W LED (6× red, 15× orange-red, 8× green, 12× blue, 16× royal blue, 32× lime)|Lumens|6792|Lens|Fresnel|LensMinDegree|17.000|LensMaxDegree|54.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Orange|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Orange fine|Type|14|R1|Begin~0~End~255~Txt~
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Royal Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Royal Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|Lime|Type|21|R1|Begin~0~End~255~Txt~0..100%
+ID|Lime fine|Type|21|R1|Begin~0~End~255~Txt~
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Strobe 0Hz..27Hz
+ID|Color Temperature|Type|27|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~244~Txt~2800K..8000K|R3|Begin~245~End~255~Txt~8000K
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~-25° … 25°
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 17deg..54deg
+ID|Dimmer Speed Mode|Type|16|R1|Begin~0~End~51~Txt~No function|R2|Begin~52~End~101~Txt~3s Dimmer speed mode off|R3|Begin~102~End~152~Txt~3s Dimmer speed mode 1|R4|Begin~153~End~203~Txt~3s Dimmer speed mode 2|R5|Begin~204~End~255~Txt~3s Dimmer speed mode 3
+ID|Motor Reset|Type|0|R1|Begin~0~End~200~Txt~No function|R2|Begin~201~End~220~Txt~Motor Reset|R3|Begin~221~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|18-channel|ShortName|18ch|Content|Dimmer~Dimmer fine~Red~Red fine~Orange~Orange fine~Green~Green fine~Royal Blue~Royal Blue fine~Blue~Blue fine~Lime~Lime fine~Strobe~Color Temperature~Hue~Zoom
+Name|16-channel|ShortName|16ch|Content|Dimmer~Dimmer fine~Red~Red fine~Orange~Orange fine~Green~Green fine~Royal Blue~Royal Blue fine~Blue~Blue fine~Lime~Lime fine~Strobe~Zoom
+Name|13-channel|ShortName|13ch|Content|Dimmer~Red~Orange~Green~Royal Blue~Blue~Lime~Strobe~Color Temperature~Hue~Dimmer Speed Mode~Zoom~Motor Reset
+Name|9-channel|ShortName|9ch|Content|Dimmer~Red~Orange~Green~Royal Blue~Blue~Lime~Strobe~Zoom
+Name|7-channel|ShortName|7ch|Content|Red~Orange~Green~Royal Blue~Blue~Lime~Zoom
+Name|6-channel|ShortName|6ch|Content|Dimmer~Dimmer fine~Color Temperature~Hue~Zoom~Strobe
+Name|4-channel|ShortName|4ch|Content|Dimmer~Color Temperature~Hue~Zoom
+[END_MODES]

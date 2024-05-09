@@ -1,0 +1,31 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLTW100RGB/CLTW100RGB_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=i2ECXkUrtXc
+[GENERAL]
+Manufacturer|cameo|Name|Thunder Wash 100 RGB|Type|28|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|310|Height|70|Depth|70|Weight|1.00|Power|30|Connector|3-pin|Bulb|LED|LensMinDegree|75.000|LensMaxDegree|75.000
+[CHAN_DEF]
+ID|strobe1|Type|6|R1|Begin~0~End~10~Txt~Closed|R2|Begin~11~End~255~Txt~Strobe 0Hz..30Hz
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~5~Txt~Color off~Extra~#000000|R2|Begin~6~End~13~Txt~Red~Extra~#ff0000|R3|Begin~14~End~21~Txt~Amber~Extra~#ffbf00|R4|Begin~22~End~29~Txt~Color temperature warm Yellow~Extra~#f9d716|R5|Begin~30~End~37~Txt~Yellow~Extra~#ffff00|R6|Begin~38~End~45~Txt~Green~Extra~#00ff00|R7|Begin~46~End~53~Txt~Turquoise~Extra~#40e0d0|R8|Begin~54~End~61~Txt~Cyan~Extra~#00ffff|R9|Begin~62~End~69~Txt~Blue~Extra~#0000ff|R10|Begin~70~End~77~Txt~Lavender~Extra~#e6e6fa|R11|Begin~78~End~85~Txt~Mauve~Extra~#e0b0ff|R12|Begin~86~End~93~Txt~Magenta~Extra~#ff00ff|R13|Begin~94~End~101~Txt~Pink~Extra~#ffc0cb|R14|Begin~102~End~109~Txt~Color temperature warm White~Extra~#fffbf2|R15|Begin~110~End~117~Txt~White~Extra~#ffffff|R16|Begin~118~End~125~Txt~Color temperature cold White~Extra~#f2f6fe|R17|Begin~126~End~128~Txt~ColorJump stop|R18|Begin~129~End~192~Txt~ColorJump slow..fast|R19|Begin~193~End~255~Txt~ColorFade slow..fast
+ID|strobe2|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~250~Txt~Strobe 0Hz..30Hz|R4|Begin~251~End~255~Txt~Open
+ID|Flash Duration|Type|28|R1|Begin~0~End~255~Txt~0ms..512ms
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|strobe3|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Strobe 5s..1s Break Effect|R8|Begin~128~End~250~Txt~Strobe 0Hz..30Hz|R9|Begin~251~End~255~Txt~Open
+ID|Sound Control|Type|0|R1|Begin~0~End~5~Txt~Sound sensitivity off|R2|Begin~6~End~255~Txt~Sound sensitivity low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|strobe1
+Name|2-channel 1|ShortName|2ch1|Content|Dimmer~Color Macros
+Name|2-channel 2|ShortName|2ch2|Content|Dimmer~strobe2
+Name|3-channel 1|ShortName|3ch1|Content|Dimmer~strobe2~Flash Duration
+Name|3-channel 2|ShortName|3ch2|Content|Dimmer~strobe2~Color Macros
+Name|3-channel 3|ShortName|3ch3|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Dimmer~strobe3~Color Macros~Sound Control
+Name|6-channel 1|ShortName|6ch1|Content|Dimmer~strobe3~Red~Green~Blue~Sound Control
+Name|6-channel 2|ShortName|6ch2|Content|Dimmer~strobe2~Flash Duration~Red~Green~Blue
+[END_MODES]
