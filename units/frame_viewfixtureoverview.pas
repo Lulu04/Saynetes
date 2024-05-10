@@ -23,6 +23,7 @@ type
     Label15: TLabel;
     Label16: TLabel;
     Label17: TLabel;
+    Label18: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -39,6 +40,7 @@ type
     LBLFixturePower4: TLabel;
     LBLFixturePower5: TLabel;
     LBLFixturePower6: TLabel;
+    LBLFixturePower7: TLabel;
     LBLManufacturer: TLabel;
     Panel3: TPanel;
     SBLinks: TScrollBox;
@@ -85,6 +87,7 @@ begin
   Label15.Caption := SMaxDegree+':';
   Label16.Caption := SWebLinks;
   Label17.Caption := SWatt;
+  Label18.Caption := SAuthors+':';
 end;
 
 procedure TFrameFixtureOverview.ShowFixture(const aFixtureLocation: TFixtureLibraryLocation);
@@ -107,6 +110,7 @@ begin
 
       LBLManufacturer.Caption := general.ManufacturerName;
       LBLFixtureName.Caption := general.FixtureName;
+      LBLFixturePower7.Caption := general.Authors + ' / ' + general.Creator;
       Label5.Caption := physical.Width.ToString+' x '+physical.Height.ToString+' x '+physical.Depth.ToString;
       Label8.Caption := physical.Weight;
       LBLFixturePower.Caption := physical.Power.ToString;

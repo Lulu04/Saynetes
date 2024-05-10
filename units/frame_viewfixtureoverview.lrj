@@ -23,5 +23,7 @@
 {"hash":5404860,"name":"tframefixtureoverview.lblfixturepower6.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":114544661,"name":"tframefixtureoverview.label15.caption","sourcebytes":[115,77,97,120,32,100,101,103,114,101,101],"value":"sMax degree"},
 {"hash":192060915,"name":"tframefixtureoverview.label16.caption","sourcebytes":[115,87,101,98,76,105,110,107,115],"value":"sWebLinks"},
-{"hash":7919796,"name":"tframefixtureoverview.label17.caption","sourcebytes":[115,87,97,116,116],"value":"sWatt"}
+{"hash":7919796,"name":"tframefixtureoverview.label17.caption","sourcebytes":[115,87,97,116,116],"value":"sWatt"},
+{"hash":5404860,"name":"tframefixtureoverview.lblfixturepower7.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":147517923,"name":"tframefixtureoverview.label18.caption","sourcebytes":[115,65,117,116,104,111,114,115],"value":"sAuthors"}
 ]}
