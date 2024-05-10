@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.sabretechnology.co.uk/pdfs/allman2.pdf|LinkType2|manual|Url2|https://www.sabretechnology.co.uk/pdfs/hptwis.pdf
+[GENERAL]
+Manufacturer|Abstract|Name|Twister 4|Type|8|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|200|Height|200|Depth|400|Weight|5|Power|250|Connector|3-pin|Bulb|A/259
+[CHAN_DEF]
+ID|Rotation|Type|33|R1|Begin~0~End~11~Txt~stop|R2|Begin~12~End~112~Txt~CW fast..slow|R3|Begin~113~End~140~Txt~stop|R4|Begin~141~End~244~Txt~CCW slow..fast|R5|Begin~245~End~255~Txt~stop
+ID|Color/Gobo wheel|Type|0|R1|Begin~0~End~9~Txt~Shutter closed|R2|Begin~10~End~25~Txt~Open|R3|Begin~26~End~42~Txt~Red (Dot Tunnel)|R4|Begin~43~End~58~Txt~Blue (Slash)|R5|Begin~59~End~74~Txt~Green (Segment)|R6|Begin~75~End~90~Txt~Yellow (Triangle)|R7|Begin~91~End~107~Txt~Cyan (Tunnel)|R8|Begin~108~End~123~Txt~Orange (Bubbles)|R9|Begin~124~End~139~Txt~Pink (Stars)|R10|Begin~140~End~155~Txt~Multicolor (Quadrant)|R11|Begin~156~End~172~Txt~Orange (Bubbles)|R12|Begin~173~End~188~Txt~Cyan (Tunnel)|R13|Begin~189~End~220~Txt~Yellow (Triangle)|R14|Begin~221~End~237~Txt~Blue (Slash)|R15|Begin~238~End~253~Txt~Strobe slow|R16|Begin~254~End~255~Txt~Strobe fast
+ID|Shutter|Type|6|R1|Begin~0~End~23~Txt~Closed|R2|Begin~24~End~225~Txt~Open|R3|Begin~226~End~255~Txt~Strobe slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|1 CE|ShortName|2ch|Content|Rotation~Color/Gobo wheel
+Name|HP|ShortName|3ch|Content|Rotation~Color/Gobo wheel~Shutter
+[END_MODES]
