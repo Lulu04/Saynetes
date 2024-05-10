@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://smoke-factory.de/pdf/datenblatt_tour_hazer_ii.pdf|LinkType2|product page|Url2|https://smoke-factory.de/product-categories/machines/hazer-en/?lang=en
+[GENERAL]
+Manufacturer|Smoke Factory|Name|Tour Hazer II|Type|10|Authors|WaldperlachFabi|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|55|Height|26|Depth|42|Weight|16.50|Power|1500|Connector|5-pin
+[CHAN_DEF]
+ID|Pump|Type|37|R1|Begin~0~End~255~Txt~Haze weak..strong
+ID|Fan|Type|36|R1|Begin~0~End~255~Txt~Speed slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2ch|ShortName|2ch|Content|Pump~Fan
+[END_MODES]

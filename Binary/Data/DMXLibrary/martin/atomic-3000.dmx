@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/35000094G%20UM_Atomic3000DMX_EN_G.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=GMW1aEkfQYQ
+[GENERAL]
+Manufacturer|Martin|Name|Atomic 3000|Type|28|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|450|Height|239|Depth|234|Weight|7.50|Power|3000|Connector|3-pin and 5-pin|Bulb|Xenon 3000W
+[CHAN_DEF]
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~249~Txt~Strobe slow..fast|R3|Begin~250~End~255~Txt~Open Blind
+ID|Intensity|Type|2|R1|Begin~0~End~5~Txt~off|R2|Begin~6~End~255~Txt~dark..bright
+ID|Flash Duration|Type|28|R1|Begin~0~End~255~Txt~0ms..650ms
+ID|Flash Rate|Type|6|R1|Begin~0~End~5~Txt~Single Flash|R2|Begin~6~End~255~Txt~0.5Hz..25Hz
+ID|Effects|Type|0|R1|Begin~0~End~5~Txt~Strobe|R2|Begin~6~End~42~Txt~RampUp|R3|Begin~43~End~85~Txt~RampDown|R4|Begin~86~End~128~Txt~RampUpDown|R5|Begin~129~End~171~Txt~Strobe Random timing|R6|Begin~172~End~214~Txt~Lightning|R7|Begin~215~End~255~Txt~Spikes
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Strobe
+Name|3-channel|ShortName|3ch|Content|Intensity~Flash Duration~Flash Rate
+Name|4-channel|ShortName|4ch|Content|Intensity~Flash Duration~Flash Rate~Effects
+[END_MODES]

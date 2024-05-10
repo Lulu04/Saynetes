@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://www.vlammen.com/sparkular/Sparkular%20fall.pdf|LinkType2|product page|Url2|https://www.sparkular-fx.com/index.php/en/unkategorisiert/sparkular/sparkular-fall-bt04-2|LinkType3|video|Url3|https://www.youtube.com/watch?v=_vun0DvkvgY|LinkType4|video|Url4|https://www.youtube.com/watch?v=nCAtCLBoXxs
+[GENERAL]
+Manufacturer|Showven|Name|Sparkular Fall (BT04)|Type|0|Authors|Alejo Cervera|Creator|OFL
+[PHYSICAL]
+Width|192|Height|208|Depth|192|Weight|6.00|Power|400|Connector|3-pin
+[CHAN_DEF]
+ID|Fountain|Type|0|R1|Begin~0~End~15~Txt~No function Fountain off|R2|Begin~16~End~135~Txt~low Fountain level|R3|Begin~136~End~255~Txt~high Fountain level
+ID|Control|Type|0|R1|Begin~0~End~10~Txt~Pre-Heat OFF|R2|Begin~11~End~19~Txt~No function|R3|Begin~20~End~40~Txt~Emergency Stop|R4|Begin~41~End~59~Txt~No function|R5|Begin~60~End~80~Txt~Clear Material|R6|Begin~81~End~239~Txt~No function|R7|Begin~240~End~255~Txt~Pre-Heat ON
+[END_CHAN_DEF]
+[MODES]
+Name|Default|Content|Fountain~Control
+[END_MODES]

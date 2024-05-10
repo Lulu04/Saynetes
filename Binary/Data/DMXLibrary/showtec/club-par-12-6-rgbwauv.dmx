@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/en/mwdownloads/download/link/id/17430150/|LinkType2|product page|Url2|https://www.highlite.com/en/42651-club-par-12-6-rgbwauv.html|LinkType3|video|Url3|https://vimeo.com/129770259
+[GENERAL]
+Manufacturer|Showtec|Name|Club Par 12/6 RGBWAUV|Type|16|Authors|Tobias|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|0|Power|0|Connector|3-pin
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~12~Txt~Open|R2|Begin~13~End~255~Txt~Strobe 1Hz..20Hz
+ID|Program|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Program 1|R3|Begin~20~End~29~Txt~Program 2|R4|Begin~30~End~39~Txt~Program 3|R5|Begin~40~End~49~Txt~Program 4|R6|Begin~50~End~59~Txt~Program 5|R7|Begin~60~End~69~Txt~Program 6|R8|Begin~70~End~79~Txt~Program 7|R9|Begin~80~End~89~Txt~Program 8|R10|Begin~90~End~99~Txt~Program 9|R11|Begin~100~End~109~Txt~Program 10|R12|Begin~110~End~119~Txt~Program 11|R13|Begin~120~End~129~Txt~Program 12|R14|Begin~130~End~139~Txt~Program 13|R15|Begin~140~End~255~Txt~Sound-controlled
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Program Duration|Type|16|R1|Begin~0~End~255~Txt~instant..long
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~White~UV
+Name|11-channel|ShortName|11ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe~Program~Program Speed~Program Duration
+[END_MODES]

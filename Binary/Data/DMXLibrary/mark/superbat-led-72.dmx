@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.eafg.es/productos/Docs/Manuales/SUPERBAT_LED_72_MANUAL_20160920113641.pdf|LinkType2|product page|Url2|https://products.equipson.es/superbat-led-72
+[GENERAL]
+Manufacturer|Mark|Name|SUPERBAT LED 72|Type|26|Authors|Gerard Fontanillas|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|135|Height|135|Depth|210|Weight|2.50|Power|140|Connector|3-pin|Bulb|6x 12W RGBWAUV LEDs
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe
+ID|Programs|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~29~Txt~Preset Color mixing|R3|Begin~30~End~49~Txt~ColorJump|R4|Begin~50~End~69~Txt~ColorFade Gradual|R5|Begin~70~End~89~Txt~ColorFade Mutation|R6|Begin~90~End~109~Txt~Strobe Red|R7|Begin~110~End~129~Txt~Strobe Green|R8|Begin~130~End~149~Txt~Strobe Blue|R9|Begin~150~End~169~Txt~Strobe White|R10|Begin~170~End~189~Txt~Strobe Amber|R11|Begin~190~End~209~Txt~Strobe UV|R12|Begin~210~End~229~Txt~Sound 1|R13|Begin~230~End~249~Txt~Sound 2|R14|Begin~250~End~255~Txt~Sound 3
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Programs~Effect Speed
+[END_MODES]

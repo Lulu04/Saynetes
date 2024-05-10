@@ -1,0 +1,30 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/40159_MANUAL_GB_V1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=G7dkpbHmG8s
+[GENERAL]
+Manufacturer|Showtec|Name|XS-1 RGBW|Type|9|Authors|Jo|Creator|OFL
+[PHYSICAL]
+Width|125|Height|236|Depth|125|Weight|2.00|Power|25|Connector|3-pin|Bulb|10W RGBW LED|LensMinDegree|3.000|LensMaxDegree|3.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Pan/Tilt Macros|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~35~Txt~Pan/Tilt Macro 1|R3|Begin~36~End~55~Txt~Pan/Tilt Macro 2|R4|Begin~56~End~75~Txt~Pan/Tilt Macro 3|R5|Begin~76~End~95~Txt~Pan/Tilt Macro 4|R6|Begin~96~End~115~Txt~Pan/Tilt Macro 5|R7|Begin~116~End~135~Txt~Pan/Tilt Macro 6|R8|Begin~136~End~155~Txt~Pan/Tilt Macro 7|R9|Begin~156~End~175~Txt~Pan/Tilt Macro 8|R10|Begin~176~End~195~Txt~Pan/Tilt Macro 9|R11|Begin~196~End~215~Txt~Pan/Tilt Macro 10|R12|Begin~216~End~235~Txt~Pan/Tilt Macro 11|R13|Begin~236~End~255~Txt~Pan/Tilt Macro 12
+ID|Pan/Tilt Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp slow..fast|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown slow..fast|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe long..short Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Channel Functions|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~5s Enable Pan/tilt blackout|R3|Begin~80~End~89~Txt~5s Disable Pan/tilt blackout|R4|Begin~90~End~199~Txt~No function|R5|Begin~200~End~209~Txt~5s Reset all|R6|Begin~210~End~249~Txt~No function|R7|Begin~250~End~255~Txt~Sound-controlled mode
+ID|Color Programs|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~127~Txt~Static Colors|R3|Begin~128~End~191~Txt~ColorJump|R4|Begin~192~End~255~Txt~ColorFade
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Shutter / Strobe~Red~Green~Blue~White~Dimmer~Channel Functions
+Name|16-channel|ShortName|16ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Pan/Tilt Macros~Pan/Tilt Macro Speed~Channel Functions~Dimmer~Red~Green~Blue~White~Shutter / Strobe~Color Programs~Program Speed
+[END_MODES]

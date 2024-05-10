@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_531015_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_remus_hexspot_515.htm|LinkType3|video|Url3|https://video1.thomann.de/vidiot/02591c1c/video_i11407p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|Remus HexSpot 515|Type|16|Authors|LGK, Ken Harris, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|225|Height|230|Depth|190|Weight|2.50|Power|100|Connector|3-pin|Bulb|RGBWAUV|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~255~Txt~3200K..7280K
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Burst|R8|Begin~128~End~250~Txt~Strobe 1Hz..20Hz|R9|Begin~251~End~255~Txt~Open
+ID|Color Macros|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~13~Txt~Red~Extra~#ff0000|R3|Begin~14~End~21~Txt~Amber~Extra~#ffbf00|R4|Begin~22~End~29~Txt~Warm yellow~Extra~#ffd000|R5|Begin~30~End~101~Txt~Preset|R6|Begin~102~End~109~Txt~Warm white~Extra~#ffeebe|R7|Begin~110~End~117~Txt~White~Extra~#ffffff|R8|Begin~118~End~125~Txt~Cool white~Extra~#ccffff|R9|Begin~126~End~127~Txt~ColorJump stop|R10|Begin~128~End~191~Txt~ColorJump slow..fast|R11|Begin~192~End~255~Txt~ColorFade slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~63~Txt~Linear course|R3|Begin~64~End~127~Txt~Exponential course|R4|Begin~128~End~191~Txt~Logarithmic course|R5|Begin~192~End~255~Txt~S-curve shaped course
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Dimmer~Color Temperature
+Name|3-channel|ShortName|3ch|Content|Dimmer~Shutter / Strobe~Color Macros
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|9-channel|ShortName|9ch|Content|Dimmer~Shutter / Strobe~Red~Green~Blue~White~Amber~UV~Color Macros
+Name|11-channel|ShortName|11ch|Content|Dimmer~Shutter / Strobe~Red~Green~Blue~White~Amber~UV~Color Macros~Color Temperature~Dimmer Curve
+[END_MODES]

@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/UM_Magnum2500Hz_EN_F.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=wCQePza8akg|LinkType3|video|Url3|https://www.youtube.com/watch?v=Nc0ku6yCe4w
+[GENERAL]
+Manufacturer|Martin|Name|Magnum 2500 HZ|Type|10|Authors|novasfronteiras.co|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|285|Height|286|Depth|455|Weight|15.70|Power|920|Connector|3-pin
+[CHAN_DEF]
+ID|Fog|Type|37|R1|Begin~0~End~29~Txt~No function|R2|Begin~30~End~255~Txt~Haze 0m^3/min..2500m^3/min
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|std|Content|Fog
+[END_MODES]

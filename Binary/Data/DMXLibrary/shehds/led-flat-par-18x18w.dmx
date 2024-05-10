@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://ueeshop.ly200-cdn.com/u_file/UPAG/UPAG904/1912/file/c80fe135df.pdf|LinkType2|product page|Url2|https://www.shehds.com/products/aluminum-alloy-led-flat-par-18x18w-lighting-dj-par-cans-dmx-512-light-wash-stage-lighting|LinkType3|video|Url3|https://www.youtube.com/watch?v=k7ynAEIPEuE
+[GENERAL]
+Manufacturer|Shehds|Name|LED Flat Par 18x18W|Type|16|Authors|V. Mateev|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|200|Height|115|Depth|265|Weight|4.00|Power|324|Connector|3-pin|Bulb|18x18W LEDs
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~Strobe 0Hz..10Hz
+ID|Program|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Color Pulse|R5|Begin~201~End~255~Txt~Sound Control
+ID|Function Speed|Type|16|R1|Begin~0~End~255~Txt~slow..slow
+[END_CHAN_DEF]
+[MODES]
+Name|10-channel|ShortName|10ch|Content|Dimmer~Red~Green~Blue~White~Amber~UV~Strobe~Program~Function Speed
+[END_MODES]

@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://gzhls.at/blob/ldb/5/5/2/1/3a93c224615375e06615bb662d13378e9580.pdf|LinkType2|product page|Url2|https://www.musikhaus-korn.de/de/showtec-phantom-25-led-wash-moving-head/pd/47262|LinkType3|video|Url3|https://www.youtube.com/watch?v=3j6SDpwsrEM
+[GENERAL]
+Manufacturer|Showtec|Name|Phantom 25 LED Wash|Type|9|Authors|Hannes Rüger|Creator|OFL
+[PHYSICAL]
+Width|205|Height|230|Depth|210|Weight|3.70|Power|105|Connector|3-pin|Bulb|25W White LED|Lumens|543|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~132~Txt~0..100%|R3|Begin~133~End~134~Txt~Closed|R4|Begin~135~End~239~Txt~Strobe 0Hz..10Hz|R5|Begin~240~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED Color Saturation|Type|1|R1|Begin~0~End~255~Txt~dark..bright
+ID|Macro|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~21~Txt~RGBW full on~Extra~#ffffff|R3|Begin~22~End~35~Txt~Red~Extra~#ff0000|R4|Begin~36~End~49~Txt~Green~Extra~#00ff00|R5|Begin~50~End~63~Txt~Blue~Extra~#0000ff|R6|Begin~64~End~77~Txt~White~Extra~#ffffff|R7|Begin~78~End~91~Txt~Macro 1|R8|Begin~92~End~105~Txt~Macro 2|R9|Begin~106~End~119~Txt~Macro 3|R10|Begin~120~End~133~Txt~Macro 4|R11|Begin~134~End~147~Txt~Macro 5|R12|Begin~148~End~161~Txt~Macro 6|R13|Begin~162~End~175~Txt~Macro 7|R14|Begin~176~End~189~Txt~Macro 8|R15|Begin~190~End~203~Txt~Macro 9|R16|Begin~204~End~217~Txt~Macro 10|R17|Begin~218~End~231~Txt~Macro 11|R18|Begin~232~End~255~Txt~Rainbow
+ID|LED Speed|Type|16|R1|Begin~0~End~255~Txt~Speed fast..slow
+ID|Channel Functions|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~27~Txt~Blackout during Pan/Tilt movement|R3|Begin~28~End~147~Txt~Disable blackout during Pan/Tilt movement|R4|Begin~148~End~167~Txt~Reset Pan|R5|Begin~168~End~187~Txt~Reset Tilt|R6|Begin~188~End~227~Txt~No function|R7|Begin~228~End~247~Txt~Reset all channels|R8|Begin~248~End~255~Txt~No function
+ID|Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Built-in Program 1|R3|Begin~24~End~39~Txt~Built-in Program 2|R4|Begin~40~End~55~Txt~Built-in Program 3|R5|Begin~56~End~71~Txt~Built-in Program 4|R6|Begin~72~End~87~Txt~Built-in Program 5|R7|Begin~88~End~103~Txt~Built-in Program 6|R8|Begin~104~End~119~Txt~Built-in Program 7|R9|Begin~120~End~135~Txt~Built-in Program 8|R10|Begin~136~End~151~Txt~Sound-controlled Program 1|R11|Begin~152~End~167~Txt~Sound-controlled Program 2|R12|Begin~168~End~183~Txt~Sound-controlled Program 3|R13|Begin~184~End~199~Txt~Sound-controlled Program 4|R14|Begin~200~End~215~Txt~Sound-controlled Program 5|R15|Begin~216~End~231~Txt~Sound-controlled Program 6|R16|Begin~232~End~247~Txt~Sound-controlled Program 7|R17|Begin~248~End~255~Txt~Sound-controlled Program 8
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Pan~Tilt~Shutter / Strobe~White~Macro~LED Color Saturation
+Name|15-channel|ShortName|15ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Shutter / Strobe~Red~Green~Blue~White~LED Color Saturation~Macro~LED Speed~Channel Functions~Programs
+[END_MODES]

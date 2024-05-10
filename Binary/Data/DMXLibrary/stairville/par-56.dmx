@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.thomann.de/pics/atg/atgdata/document/manual/c_193245_v2_r3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/stairville_led_par_56_alu_schwarz.htm|LinkType3|video|Url3|https://video2.thomann.de//vidiot/02591c1c/video_i2192p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|PAR 56|Type|17|Authors|Moritz A. Vieli|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|295|Height|225|Depth|225|Weight|1.40|Power|16|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Mode|Type|0|R1|Begin~0~End~63~Txt~No function RGB Control|R2|Begin~64~End~127~Txt~ColorFade 7 color fades|R3|Begin~128~End~191~Txt~ColorJump 7 color changes|R4|Begin~192~End~255~Txt~ColorJump 3 color changes
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Effect Speed|Type|16|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~100~Txt~fast..slow|R3|Begin~101~End~150~Txt~No function|R4|Begin~151~End~255~Txt~fast Speed control by the device
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Mode~Red~Green~Blue~Effect Speed
+[END_MODES]

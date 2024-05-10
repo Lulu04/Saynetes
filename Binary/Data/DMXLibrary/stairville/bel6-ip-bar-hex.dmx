@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/471167_c_471167_r2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_bel6_ip_bar_hex.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i8892p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|BEL6 IP Bar HEX|Type|19|Authors|B the pulp, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|510|Height|100|Depth|90|Weight|4.50|Power|70|Connector|3-pin XLR IP65|Bulb|6× 15W RGBAWUV LED|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~Strobe slow..fast
+ID|Function Selection|Type|0|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~80~Txt~Preset|R3|Begin~81~End~150~Txt~ColorJump|R4|Begin~151~End~220~Txt~ColorFade|R5|Begin~221~End~255~Txt~Automatic sound-controlled show
+ID|Function Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Function Selection~Function Speed
+[END_MODES]

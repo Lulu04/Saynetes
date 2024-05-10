@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.uking-online.com/product/uking-zq-b20-mini-60w-spider-light/|LinkType2|video|Url2|https://www.youtube.com/watch?v=4KL1MdtnQ34|LinkType3|manual|Url3|https://www.uking-online.com/wp-content/uploads/2020/10/ZQ-B20.pdf
+[GENERAL]
+Manufacturer|U`King|Name|ZQ-B20 Mini Spider Light|Type|33|Authors|Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|280|Height|150|Depth|130|Weight|1.99|Power|80|Connector|3-pin|Bulb|LED|LensMinDegree|3.000|LensMaxDegree|3.000
+[CHAN_DEF]
+ID|Tilt 1|Type|8|R1|Begin~0~End~255~Txt~0deg..135deg
+ID|Tilt 2|Type|8|R1|Begin~0~End~255~Txt~0deg..135deg
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Strobe slow..fast
+ID|Effect|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~17~Txt~Effect 1|R3|Begin~18~End~27~Txt~Effect 2|R4|Begin~28~End~37~Txt~Effect 3|R5|Begin~38~End~47~Txt~Effect 4|R6|Begin~48~End~57~Txt~Effect 5|R7|Begin~58~End~67~Txt~Effect 6|R8|Begin~68~End~77~Txt~Effect 7|R9|Begin~78~End~87~Txt~Effect 8|R10|Begin~88~End~97~Txt~Effect 9|R11|Begin~98~End~107~Txt~Effect 10|R12|Begin~108~End~117~Txt~Effect 11|R13|Begin~118~End~127~Txt~Effect 12|R14|Begin~128~End~136~Txt~Effect 13|R15|Begin~137~End~146~Txt~Effect 14|R16|Begin~147~End~156~Txt~Effect 15|R17|Begin~157~End~166~Txt~Effect 16|R18|Begin~167~End~176~Txt~Effect 17|R19|Begin~177~End~186~Txt~Effect 18|R20|Begin~187~End~196~Txt~Effect 19|R21|Begin~197~End~206~Txt~Effect 20|R22|Begin~207~End~216~Txt~Effect 21|R23|Begin~217~End~226~Txt~Effect 22|R24|Begin~227~End~236~Txt~Effect 23|R25|Begin~237~End~246~Txt~Auto Mode|R26|Begin~247~End~255~Txt~Sound Active Mode
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Reset|Type|0|R1|Begin~0~End~240~Txt~No function|R2|Begin~241~End~255~Txt~5s Reset
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Tilt 1~Tilt 2~Dimmer~Strobe~Effect~Effect Speed~Reset
+Name|15-channel|ShortName|15ch|Content|Tilt 1~Tilt 2~Dimmer~Strobe~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Effect~Effect Speed~Reset
+[END_MODES]

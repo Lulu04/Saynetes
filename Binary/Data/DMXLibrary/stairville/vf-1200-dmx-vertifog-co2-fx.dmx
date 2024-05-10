@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/362289_c_362289_v6_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_vf_1200_dmx_vertifog_co2_fx.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i4452p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|VF-1200 DMX VertiFog CO2 FX|Type|10|Authors|Hannes Rüger|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|305|Height|170|Depth|390|Weight|6.60|Power|1250|Connector|3-pin
+[CHAN_DEF]
+ID|Fog|Type|37|R1|Begin~0~End~255~Txt~off..strong
+[END_CHAN_DEF]
+[MODES]
+Name|1ch|ShortName|1ch|Content|Fog
+[END_MODES]

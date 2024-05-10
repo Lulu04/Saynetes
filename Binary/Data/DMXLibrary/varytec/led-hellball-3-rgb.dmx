@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/278299_c_278299_r3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_led_hellball_3_rgb.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=aZWRgRL9f_E
+[GENERAL]
+Manufacturer|Varytec|Name|LED Hellball 3 RGB|Type|33|Authors|Anonymous|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|180|Height|160|Depth|180|Weight|0.80|Power|15|Connector|3-pin|Bulb|3× 3W RGB LEDs
+[CHAN_DEF]
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~255~Txt~Strobe slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Rotation (Pan)|Type|39|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~0deg..180deg|R3|Begin~128~End~255~Txt~Continuous slow CW..fast CW
+ID|Shows|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~Built-in shows|R3|Begin~128~End~255~Txt~Sound-controlled shows
+[END_CHAN_DEF]
+[MODES]
+Name|default|ShortName|default|Content|Strobe~Red~Green~Blue~Rotation (Pan)~Shows
+[END_MODES]

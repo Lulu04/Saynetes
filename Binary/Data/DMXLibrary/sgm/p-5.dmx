@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://sgmlight.com/Files/Files/Perfion/StrRDDATAUserManualFileGroup/P-5/FileRDDATAUserManualP5SeriesWEB/SGM%20P-5%20Series%20User%20Manual%20STD%20and%20POI%20(Rev.%20J).pdf|LinkType2|manual|Url2|https://sgmlight.com/Files/Files/Perfion/StrRDDATADMXFileGroup/P-5%20RGBW/FileRDDATADMXChartsP5RGBWRnD/DMX_Protocol_P_5_Rev4.pdf|LinkType3|product page|Url3|https://sgmlight.com/products/entertainment/p%c2%b75|LinkType4|video|Url4|https://www.youtube.com/watch?v=xu1JQjSibV0
+[GENERAL]
+Manufacturer|SGM|Name|P-5|Type|28|Authors|Matthias Schlecht, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|497|Height|268|Depth|122|Weight|8.90|Power|450|Connector|5-pin|Bulb|44× 10W RGBW LEDs|Lumens|20031|LensMinDegree|15.000|LensMaxDegree|43.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~151~Txt~Strobe fast..slow|R4|Begin~152~End~175~Txt~RampUp slow..fast|R5|Begin~176~End~199~Txt~RampDown slow..fast|R6|Begin~200~End~244~Txt~Strobe slow..fast Random timing|R7|Begin~245~End~255~Txt~Open
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CTC|Type|27|R1|Begin~0~End~0~Txt~5600K|R2|Begin~1~End~4~Txt~default Raw|R3|Begin~5~End~255~Txt~2000K..10000K
+ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
+ID|Intensity fine|Type|2|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel (Full Color Calibrated)|ShortName|3ch-calibrated|Content|Red~Green~Blue
+Name|4-channel (RAW)|ShortName|4ch-raw|Content|Red~Green~Blue~White
+Name|6-channel (RAW)|ShortName|6ch-raw|Content|Shutter~Intensity~Red~Green~Blue~White
+Name|6-channel (CTC)|ShortName|6ch-ctc|Content|Shutter~Intensity~CTC~Red~Green~Blue
+Name|8-channel (RAW) 16bit|ShortName|8ch-raw 16bit|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|9-channel (RAW) 16bit|ShortName|9ch-raw 16bit|Content|Intensity~Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|10-channel (RAW) 16bit|ShortName|10ch-raw 16bit|Content|Intensity~Intensity fine~Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|10-channel (CTC)|ShortName|10ch-ctc|Content|Shutter~Intensity~Intensity fine~CTC~Red~Red fine~Green~Green fine~Blue~Blue fine
+[END_MODES]

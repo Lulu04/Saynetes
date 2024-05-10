@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.thomann.de/pics/atg/atgdata/document/manual/c_325876_en_online.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=fasqGFMdPOU|LinkType3|video|Url3|https://www.youtube.com/watch?v=Qk0iHZVd5-s
+[GENERAL]
+Manufacturer|Stairville|Name|MH-100|Type|9|Authors|Anonymous|Creator|OFL
+[PHYSICAL]
+Width|260|Height|310|Depth|148|Weight|4.90|Power|150|Connector|3-pin|Bulb|36 × 3 W LEDs (8 × red, 10 × green, 10 × blue, 8 × white)|LensMinDegree|8.000|LensMaxDegree|8.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..220deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~35~Txt~Closed|R2|Begin~36~End~55~Txt~3200K|R3|Begin~56~End~75~Txt~3400K|R4|Begin~76~End~95~Txt~4200K|R5|Begin~96~End~115~Txt~4900K|R6|Begin~116~End~135~Txt~5600K|R7|Begin~136~End~175~Txt~6500K|R8|Begin~176~End~195~Txt~7200K|R9|Begin~196~End~215~Txt~8000K|R10|Begin~216~End~235~Txt~8500K|R11|Begin~236~End~255~Txt~10000K
+ID|Constant Color|Type|12|R1|Begin~0~End~14~Txt~Closed|R2|Begin~15~End~255~Txt~Preset One of 28 preprogrammed colors
+ID|Strobe|Type|6|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~255~Txt~Strobe slow..fast
+ID|Special Functions|Type|0|R1|Begin~0~End~99~Txt~No function|R2|Begin~100~End~199~Txt~Sound control|R3|Begin~200~End~255~Txt~5s Reset
+[END_CHAN_DEF]
+[MODES]
+Name|9-Channel|ShortName|9ch|Content|Pan~Tilt~Pan/Tilt Speed~Dimmer~Red~Green~Blue~White~Strobe
+Name|14-Channel|ShortName|14ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Red~Green~Blue~White~Color Temperature~Constant Color~Strobe~Special Functions
+[END_MODES]

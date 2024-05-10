@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://mdgfog.s3.amazonaws.com/uploads/docs/theONE-User-Guide-Rev-Af.pdf|LinkType2|product page|Url2|https://www.mdgfog.com/en/theone|LinkType3|video|Url3|https://www.youtube.com/watch?v=Fa6w-k2p6l8
+[GENERAL]
+Manufacturer|MDG|Name|theONE Atmospheric Generator|Type|10|Authors|Flo Edelmann, Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|250|Height|610|Depth|300|Weight|23.00|Power|1480|Connector|5-pin
+[CHAN_DEF]
+ID|Power|Type|2|R1|Begin~0~End~127~Txt~Unit off|R2|Begin~128~End~255~Txt~Unit On
+ID|Haze / Fog|Type|0|R1|Begin~0~End~127~Txt~Haze|R2|Begin~128~End~255~Txt~Fog
+ID|Fog output|Type|37|R1|Begin~0~End~255~Txt~Fog output weak..strong
+ID|Fog on/off|Type|0|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Fog
+ID|External Fan|Type|36|R1|Begin~0~End~255~Txt~Rotation slow CW..fast CW
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Power~Haze / Fog~Fog output~Fog on/off~External Fan
+[END_MODES]

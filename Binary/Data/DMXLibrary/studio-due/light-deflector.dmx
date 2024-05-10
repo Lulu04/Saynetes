@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|other|Url1|http://backstageworld.com/StudioDue/deflector.html|LinkType2|other|Url2|http://www.forum.licht-geluid.nl/licht-forum-foto-s/3267-studio-due-light-deflector.html
+[GENERAL]
+Manufacturer|Studio Due|Name|Light Deflector|Type|8|Authors|Manu Larue|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|320|Height|460|Depth|130|Weight|5.00|Power|69|Connector|Other
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Tilt Spin|Type|40|R1|Begin~0~End~255~Txt~Continuous 0.166667rpm..30rpm
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Reset|Type|0|R1|Begin~0~End~255~Txt~Reset Pan/Tilt
+[END_CHAN_DEF]
+[MODES]
+Name|8 bit 4-channel|ShortName|8bit|Content|Pan~Tilt~Tilt Spin~Pan/Tilt Speed
+Name|16 bit 7-channel|ShortName|16bit|Content|Pan~Pan fine~Tilt~Tilt fine~Tilt Spin~Pan/Tilt Speed~Reset
+[END_MODES]

@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/306309_c_306309_r4_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_afh_600_dmx_hazer.htm|LinkType3|video|Url3|https://video1.thomann.de/vidiot/02591c1c/video_i4312p10_yd59vqpa.mp4|LinkType4|video|Url4|https://video1.thomann.de/vidiot/02591c1c/video_i2169p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|AFH-600|Type|10|Authors|LordVonAdel|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|290|Height|265|Depth|450|Weight|5.50|Power|1290|Connector|3-pin
+[CHAN_DEF]
+ID|Haze|Type|37|R1|Begin~0~End~255~Txt~0..850m^3/min
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Haze
+[END_MODES]

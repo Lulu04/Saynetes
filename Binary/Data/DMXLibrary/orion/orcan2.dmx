@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://orion-fxlights.com/downloads/ownersman/om_orcan2.pdf?v=1427215602
+[GENERAL]
+Manufacturer|Orion Effects Lighting|Name|ORCAN2|Type|17|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|255|Height|365|Depth|255|Weight|2.80|Power|0|Connector|3-pin|Bulb|36 x 3W RGB LEDs (12 x Red / 12 x Green / 12 x Blue)
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe
+ID|Effects|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Color pulse|R5|Begin~201~End~255~Txt~Sound control
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Master Dimmer~Strobe~Effects~Effect Speed~Red~Green~Blue
+[END_MODES]

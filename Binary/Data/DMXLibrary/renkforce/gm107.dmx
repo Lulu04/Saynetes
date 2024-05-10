@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://asset.conrad.com/media10/add/160267/c1/-/gl/001368692ML02/bedienungsanleitung-1368692-renkforce-1368692-gm107-led-moving-head-anzahl-leds-details7-x-10-w.pdf|LinkType2|product page|Url2|https://www.amazon.co.uk/1374784-RENKFORCE-GM107-LED-MOVING-HEAD-15/dp/B01AIBNB0Q|LinkType3|video|Url3|https://www.youtube.com/watch?v=tshDiXa8DkE|LinkType4|other|Url4|https://github.com/OpenLightingProject/open-fixture-library/pull/612
+[GENERAL]
+Manufacturer|Renkforce|Name|GM107|Type|9|Authors|Edgar Aichinger|Creator|OFL
+[PHYSICAL]
+Width|180|Height|243|Depth|180|Weight|2.65|Power|70|Connector|3-pin|Bulb|LED|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Strobe effect|Type|6|R1|Begin~0~End~255~Txt~Strobe slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Program|Type|0|R1|Begin~0~End~0~Txt~No function Manual control|R2|Begin~1~End~84~Txt~Auto mode slow|R3|Begin~85~End~169~Txt~Auto mode fast|R4|Begin~170~End~255~Txt~Sound to light
+ID|Reset|Type|0|R1|Begin~0~End~254~Txt~No function|R2|Begin~255~End~255~Txt~Reset
+ID|Color mode|Type|0|R1|Begin~0~End~0~Txt~No function Color intensity channels active|R2|Begin~1~End~255~Txt~Preset Rainbow Effect
+ID|Color selection|Type|12|R1|Begin~0~End~255~Txt~Preset Rainbow Effect
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Pan/Tilt speed~Strobe effect~Color selection
+Name|13-channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt speed~Strobe effect~Red~Green~Blue~White~Color mode~Program~Reset
+[END_MODES]
