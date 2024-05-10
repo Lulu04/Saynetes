@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musicstore.com/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/en_US/ms-us/USD/ViewProductAttachment-ResolveManualURL?File=EN_LIG0015638-000.pdf|LinkType2|product page|Url2|https://www.musicstore.com/en_US/USD/lightmaXX-Vector-Haze-1-0/art-LIG0015638-000|LinkType3|video|Url3|https://www.youtube.com/watch?v=MAu3bCSxxIo
+[GENERAL]
+Manufacturer|lightmaXX|Name|Vector Haze 1.0|Type|10|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|495|Height|235|Depth|405|Weight|16.70|Power|1100|Connector|3-pin and 5-pin
+[CHAN_DEF]
+ID|Fan Speed|Type|36|R1|Begin~0~End~255~Txt~Speed slow..fast
+ID|Haze Output|Type|37|R1|Begin~0~End~255~Txt~Haze weak..strong
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Fan Speed~Haze Output
+[END_MODES]

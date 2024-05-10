@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/en_US/-/EUR/ViewProductAttachment-ResolveManualURL?File=EN_LIG0013274-000.pdf|LinkType2|product page|Url2|https://www.musicstore.com/en_US/USD/lightmaXX-LED-NANO-PAR-black-12-1W-LED-RGBW/art-LIG0013274-000|LinkType3|video|Url3|https://www.youtube.com/watch?v=UakWorWVxpE
+[GENERAL]
+Manufacturer|lightmaXX|Name|LED Nano PAR|Type|16|Authors|Peter Eisemann, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|150|Height|140|Depth|115|Weight|0.40|Power|15|Connector|3-pin|Bulb|12× 1W LED|Lens|15mm Edison EDOL 25|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Program|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~50~Txt~Static Colors|R3|Begin~51~End~100~Txt~ColorJump|R4|Begin~101~End~150~Txt~ColorFade|R5|Begin~151~End~200~Txt~Sound Flash|R6|Begin~201~End~255~Txt~Strobe
+ID|Color Program|Type|12|R1|Begin~0~End~39~Txt~Color Chase|R2|Begin~40~End~49~Txt~Red #ff0000|R3|Begin~50~End~59~Txt~Green #00ff00|R4|Begin~60~End~69~Txt~Blue #0000ff|R5|Begin~70~End~79~Txt~Yellow #ffff00|R6|Begin~80~End~89~Txt~Cyan #00ffff|R7|Begin~90~End~99~Txt~Purple #ff00ff|R8|Begin~100~End~109~Txt~White #ffffff|R9|Begin~110~End~119~Txt~Red + Green _#ff0000|R10|Begin~120~End~129~Txt~Red + Blue _#0000ff|R11|Begin~130~End~139~Txt~Red + White _#ffffff|R12|Begin~140~End~149~Txt~Green + Blue _#0000ff|R13|Begin~150~End~159~Txt~Green + White _#ffffff|R14|Begin~160~End~169~Txt~Blue + White _#ffffff|R15|Begin~170~End~179~Txt~Red + Green + White _#ffffff|R16|Begin~180~End~189~Txt~Red + Blue + White _#ffffff|R17|Begin~190~End~199~Txt~Green + Blue + White _#ffffff|R18|Begin~200~End~209~Txt~Red + Green + Blue _#0000ff|R19|Begin~210~End~255~Txt~Red + Green + Blue + White _#ffffff
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Program~Color Program~Program Speed~Dimmer~Red~Green~Blue~White
+[END_MODES]

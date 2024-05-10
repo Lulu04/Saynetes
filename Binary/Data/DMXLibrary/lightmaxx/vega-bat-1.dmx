@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/2405631/Lightmaxx-Vega-Bat-1.html?page=17|LinkType2|product page|Url2|https://www.musicstore.com/en_OT/EUR/lightmaXX-Vega-BAT-1-6x-10W-RGBWA-UV-Battery/art-LIG0016452-000|LinkType3|video|Url3|https://www.youtube.com/watch?v=Th-FB_z6dj0
+[GENERAL]
+Manufacturer|lightmaXX|Name|Vega BAT-1|Type|16|Authors|lukah, Hasky, Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|180|Height|180|Depth|140|Weight|1.5|Power|60|Connector|3-pin|Bulb|6x10W RGBWAUV|Lens|Other|LensMinDegree|45.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe slow..fast
+ID|Program Mode|Type|0|R1|Begin~0~End~64~Txt~No function Manual Color Adjustment|R2|Begin~65~End~80~Txt~Preset Color Macros|R3|Begin~81~End~150~Txt~ColorJump|R4|Begin~151~End~220~Txt~ColorFade|R5|Begin~221~End~255~Txt~Sound Active Mode
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Program Mode~Program Speed
+[END_MODES]

@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.laserworld.com/en/download-file-51-Laserworld_Diode_Series_web.html|LinkType2|product page|Url2|https://www.laserworld.com/en/laserworld-ds/laserworld-ds-1000rgb.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=IbVylAJv3_0
+[GENERAL]
+Manufacturer|Laserworld|Name|DS-1000RGB|Type|22|Authors|finnTE|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|200|Height|110|Depth|140|Weight|2.80|Power|40|Connector|3-pin
+[CHAN_DEF]
+ID|Mode Select|Type|0|R1|Begin~0~End~63~Txt~Laser Off|R2|Begin~64~End~127~Txt~Sound mode|R3|Begin~128~End~159~Txt~Auto mode (beam patterns)|R4|Begin~160~End~191~Txt~Auto mode (graphics)|R5|Begin~192~End~255~Txt~No function DMX Mode
+ID|Pattern Selection|Type|0|R1|Begin~0~End~87~Txt~Graphics patterns|R2|Begin~88~End~253~Txt~Beam patterns|R3|Begin~254~End~255~Txt~Laser Off
+ID|Strobe Effect|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe fast..slow
+ID|Horizontal Movement|Type|7|R1|Begin~0~End~0~Txt~Beam position center|R2|Begin~1~End~167~Txt~Beam position left..right|R3|Begin~168~End~188~Txt~Movement rightwards slow..fast|R4|Begin~189~End~209~Txt~Movement leftwards slow..fast|R5|Begin~210~End~254~Txt~Movement rightwards/leftwards alternating slow..fast|R6|Begin~255~End~255~Txt~Beam position center
+ID|Vertical Movement|Type|8|R1|Begin~0~End~0~Txt~Beam position center|R2|Begin~1~End~167~Txt~Beam position top..bottom|R3|Begin~168~End~188~Txt~Movement downwards slow..fast|R4|Begin~189~End~209~Txt~Movement upwards slow..fast|R5|Begin~210~End~254~Txt~Movement downwards/upwards alternating slow..fast|R6|Begin~255~End~255~Txt~Beam position center
+ID|Zoom|Type|31|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~167~Txt~Zoom narrow..wide|R3|Begin~168~End~188~Txt~Increasing angle slow..fast|R4|Begin~189~End~209~Txt~Decreasing angle slow..fast|R5|Begin~210~End~254~Txt~Alternate decreasing/increasing angle slow..fast|R6|Begin~255~End~255~Txt~Opposite zoom of X- and Y-axis
+ID|Rotation Y-axis|Type|40|R1|Begin~0~End~150~Txt~Rotation 0deg..360deg|R2|Begin~151~End~255~Txt~Rotation slow CW..fast CW
+ID|Rotation X-axis|Type|39|R1|Begin~0~End~150~Txt~Rotation 0deg..360deg|R2|Begin~151~End~255~Txt~Rotation slow CW..fast CW
+ID|Rotation Z-axis|Type|33|R1|Begin~0~End~180~Txt~Rotation 0deg..360deg|R2|Begin~181~End~217~Txt~Rotation slow CW..fast CW|R3|Begin~218~End~255~Txt~Rotation slow CCW..fast CCW
+ID|Blanking|Type|0|R1|Begin~0~End~70~Txt~No function|R2|Begin~71~End~139~Txt~Dot visibility fast..slow|R3|Begin~140~End~209~Txt~Dashed Lines|R4|Begin~210~End~255~Txt~Point selection
+ID|Wave Movement|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~127~Txt~Wave positioning 0%..100%|R3|Begin~128~End~191~Txt~Wave movement slow..fast|R4|Begin~192~End~255~Txt~Wave movement slow reverse..fast reverse
+ID|Color Selection|Type|12|R1|Begin~0~End~19~Txt~White~Extra~#ffffff|R2|Begin~20~End~39~Txt~Red~Extra~#ff0000|R3|Begin~40~End~59~Txt~Green~Extra~#00ff00|R4|Begin~60~End~79~Txt~Blue~Extra~#0000ff|R5|Begin~80~End~99~Txt~Yellow~Extra~#ffff00|R6|Begin~100~End~119~Txt~Magenta~Extra~#ff00ff|R7|Begin~120~End~138~Txt~Cyan~Extra~#00ffff|R8|Begin~139~End~164~Txt~Preset Multi-color|R9|Begin~165~End~248~Txt~ColorJump fast..slow|R10|Begin~249~End~254~Txt~Changing multi-color fast..slow|R11|Begin~255~End~255~Txt~Preset Multi-color without red
+[END_CHAN_DEF]
+[MODES]
+Name|12-channel|ShortName|12ch|Content|Mode Select~Pattern Selection~Strobe Effect~Horizontal Movement~Vertical Movement~Zoom~Rotation Y-axis~Rotation X-axis~Rotation Z-axis~Blanking~Wave Movement~Color Selection
+[END_MODES]
