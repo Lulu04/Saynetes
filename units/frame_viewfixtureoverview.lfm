@@ -38,9 +38,9 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideLeft.Control = LBLFixtureName
       AnchorSideTop.Control = LBLFixtureName
       AnchorSideTop.Side = asrBottom
-      Left = 212
+      Left = 176
       Height = 15
-      Top = 80
+      Top = 64
       Width = 41
       Anchors = []
       BorderSpacing.Top = 5
@@ -54,9 +54,9 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideLeft.Control = Label2
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Label2
-      Left = 263
+      Left = 227
       Height = 15
-      Top = 80
+      Top = 64
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -106,7 +106,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label3
       Left = 84
       Height = 15
-      Top = 48
+      Top = 32
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -120,7 +120,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 48
+      Top = 32
       Width = 69
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -137,7 +137,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 84
       Height = 15
-      Top = 63
+      Top = 47
       Width = 30
       Caption = 'Label'
       Font.Color = 11842740
@@ -151,7 +151,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label5
       Left = 122
       Height = 15
-      Top = 48
+      Top = 32
       Width = 22
       BorderSpacing.Left = 10
       Caption = 'mm'
@@ -165,7 +165,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 80
+      Top = 64
       Width = 46
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -182,7 +182,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label7
       Left = 61
       Height = 15
-      Top = 80
+      Top = 64
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -196,7 +196,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label8
       Left = 91
       Height = 15
-      Top = 80
+      Top = 64
       Width = 13
       BorderSpacing.Left = 2
       Caption = 'kg'
@@ -210,7 +210,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 104
+      Top = 88
       Width = 63
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -227,7 +227,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label10
       Left = 78
       Height = 15
-      Top = 104
+      Top = 88
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -242,7 +242,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideRight.Control = Label16
       Left = 45
       Height = 15
-      Top = 128
+      Top = 112
       Width = 249
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 10
@@ -258,7 +258,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 128
+      Top = 112
       Width = 30
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -275,7 +275,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label12
       Left = 63
       Height = 15
-      Top = 152
+      Top = 136
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -289,7 +289,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 152
+      Top = 136
       Width = 48
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -306,7 +306,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 176
+      Top = 160
       Width = 30
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -323,7 +323,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label13
       Left = 45
       Height = 15
-      Top = 176
+      Top = 160
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -337,7 +337,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 5
       Height = 15
-      Top = 200
+      Top = 184
       Width = 69
       Anchors = [akLeft]
       BorderSpacing.Left = 5
@@ -354,7 +354,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label14
       Left = 84
       Height = 15
-      Top = 200
+      Top = 184
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -368,7 +368,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Control = Label15
       Left = 231
       Height = 15
-      Top = 200
+      Top = 184
       Width = 28
       BorderSpacing.Left = 10
       Caption = 'Label'
@@ -382,7 +382,7 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideTop.Side = asrBottom
       Left = 149
       Height = 15
-      Top = 200
+      Top = 184
       Width = 72
       Anchors = []
       BorderSpacing.Top = 5
@@ -399,11 +399,11 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideBottom.Side = asrBottom
       Left = 296
       Height = 79
-      Top = 136
+      Top = 120
       Width = 158
       HorzScrollBar.Page = 1
       VertScrollBar.Page = 1
-      Anchors = [akRight, akBottom]
+      Anchors = [akRight]
       BorderSpacing.Right = 3
       BorderSpacing.Bottom = 3
       BorderStyle = bsNone
@@ -414,12 +414,11 @@ object FrameFixtureOverview: TFrameFixtureOverview
     object Label16: TLabel
       AnchorSideLeft.Control = SBLinks
       AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = SBLinks
       Left = 296
       Height = 15
-      Top = 121
+      Top = 104
       Width = 59
-      Anchors = [akLeft, akBottom]
+      Anchors = [akLeft]
       BorderSpacing.Top = 5
       Caption = 'sWebLinks'
       Font.Color = 15395562
@@ -431,13 +430,46 @@ object FrameFixtureOverview: TFrameFixtureOverview
       AnchorSideLeft.Control = LBLFixturePower
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = LBLFixturePower
-      Left = 293
+      Left = 257
       Height = 15
-      Top = 80
+      Top = 64
       Width = 30
       BorderSpacing.Left = 2
       Caption = 'sWatt'
       Font.Color = 15395562
+      ParentColor = False
+      ParentFont = False
+    end
+    object LBLFixturePower7: TLabel
+      AnchorSideLeft.Control = Label18
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label18
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 64
+      Height = 15
+      Top = 203
+      Width = 28
+      BorderSpacing.Left = 10
+      Caption = 'Label'
+      Font.Color = 11842740
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label18: TLabel
+      AnchorSideLeft.Control = Panel3
+      AnchorSideTop.Control = LBLFixtureName
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 15
+      Top = 203
+      Width = 49
+      Anchors = [akLeft]
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      Caption = 'sAuthors'
+      Font.Color = 11842740
+      Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
     end
