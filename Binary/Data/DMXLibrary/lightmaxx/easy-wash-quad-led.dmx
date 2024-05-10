@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://forum.malighting.com/attachment/475-lightmaxx-easy-wash-quad-led-7x10w-rgbw-pdf/|LinkType2|product page|Url2|https://www.musicstore.com/en_RS/EUR/lightmaXX-Easy-Wash-Quad-Moving-Head-LED/art-LIG0009642-000|LinkType3|video|Url3|https://www.youtube.com/watch?v=7gJw-aAvHPg
+[GENERAL]
+Manufacturer|lightmaXX|Name|Easy Wash Quad LED|Type|9|Authors|Paul Maier, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|225|Height|270|Depth|225|Weight|4.20|Power|90|Connector|3-pin|Bulb|7x 10W RGBW LEDs
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Shutter / Dimmer|Type|0|DefaultValue|255|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~134~Txt~0..100%|R3|Begin~135~End~239~Txt~Strobe 0Hz..40Hz|R4|Begin~240~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~21~Txt~White (RGB)~Extra~#ffffff|R3|Begin~22~End~34~Txt~Red~Extra~#ff0000|R4|Begin~35~End~49~Txt~Green~Extra~#00ff00|R5|Begin~50~End~63~Txt~Blue~Extra~#0000ff|R6|Begin~64~End~77~Txt~White~Extra~#ffffff|R7|Begin~78~End~91~Txt~Light blue~Extra~#aad9ff|R8|Begin~92~End~105~Txt~Crimson~Extra~#a21a19|R9|Begin~106~End~119~Txt~Yellow~Extra~#ffff00|R10|Begin~120~End~133~Txt~Purple~Extra~#982aff|R11|Begin~134~End~147~Txt~Orange~Extra~#ffaa00|R12|Begin~148~End~161~Txt~Light green~Extra~#a3ffab|R13|Begin~162~End~175~Txt~Magenta~Extra~#ff00ff|R14|Begin~176~End~189~Txt~Pink~Extra~#ffd0d0|R15|Begin~190~End~203~Txt~Buff~Extra~#a0ab76|R16|Begin~204~End~217~Txt~White (RGW)~Extra~#ffffaa|R17|Begin~218~End~231~Txt~Dark Purple~Extra~#7000b1|R18|Begin~232~End~255~Txt~ColorJump
+ID|Color Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Effects|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~22~Txt~Auto 1|R3|Begin~23~End~37~Txt~Auto 2|R4|Begin~38~End~53~Txt~Auto 3|R5|Begin~54~End~67~Txt~Auto 4|R6|Begin~68~End~82~Txt~Auto 5|R7|Begin~83~End~97~Txt~Auto 6|R8|Begin~98~End~112~Txt~Auto 7|R9|Begin~113~End~127~Txt~Auto 8|R10|Begin~128~End~142~Txt~Sound 1|R11|Begin~143~End~157~Txt~Sound 2|R12|Begin~158~End~172~Txt~Sound 3|R13|Begin~173~End~187~Txt~Sound 4|R14|Begin~188~End~202~Txt~Sound 5|R15|Begin~203~End~217~Txt~Sound 6|R16|Begin~218~End~232~Txt~Sound 7|R17|Begin~233~End~255~Txt~Sound 8
+[END_CHAN_DEF]
+[MODES]
+Name|8-Channel|ShortName|8ch|Content|Pan~Tilt~Shutter / Dimmer~Red~Green~Blue~White~Pan/Tilt Speed
+Name|13-Channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Shutter / Dimmer~Red~Green~Blue~White~Color Macros~Color Speed~Effects
+[END_MODES]

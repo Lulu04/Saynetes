@@ -1,0 +1,16 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.looksolutions.com/uploads/pdf/bed_cryo_hp_1d.pdf|LinkType2|product page|Url2|https://www.looksolutions.com/produkte/cryo_fog/2.html
+[GENERAL]
+Manufacturer|Look Solutions|Name|Cryofog|Type|10|Authors|coffeeholic|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|510|Height|300|Depth|670|Weight|33.00|Power|2300|Connector|5-pin
+[CHAN_DEF]
+ID|Fog Intensity|Type|37|R1|Begin~0~End~255~Txt~Fog off..strong
+ID|Fan|Type|36|R1|Begin~0~End~255~Txt~Rotation slow CW..fast CW
+ID|Cooling|Type|0|R1|Begin~0~End~0~Txt~Cooling valve closed|R2|Begin~1~End~254~Txt~No function|R3|Begin~255~End~255~Txt~Cooling valve open
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Fog Intensity~Fan~Cooling
+[END_MODES]

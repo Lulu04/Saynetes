@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/de_DE/-/EUR/ViewProductAttachment-ResolveManualURL?File=DE_LIG0013617-000.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=tJM8ScD-bLE|LinkType3|video|Url3|https://www.youtube.com/watch?v=RGQ9Nuvg3Xk
+[GENERAL]
+Manufacturer|lightmaXX|Name|Vega Zoom Wash|Type|9|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|260|Height|280|Depth|340|Weight|4.50|Power|95|Connector|3-pin|Bulb|LED|LensMinDegree|6.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..190deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan / Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~245~Txt~Strobe slow..fast|R3|Begin~246~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~cold..warm
+ID|Color Macro|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Red #ff0000|R3|Begin~21~End~30~Txt~Green #00ff00|R4|Begin~31~End~40~Txt~Blue #0000ff|R5|Begin~41~End~50~Txt~White #ffffff|R6|Begin~51~End~60~Txt~Red + Green #ffff00|R7|Begin~61~End~70~Txt~Green + Blue #00ffff|R8|Begin~71~End~80~Txt~Blue + White #8080ff|R9|Begin~81~End~90~Txt~Red + Blue #ff00ff|R10|Begin~91~End~100~Txt~Green + White #80ff80|R11|Begin~101~End~110~Txt~Red + White #ff8080|R12|Begin~111~End~120~Txt~Red + Green + Blue #ffffff|R13|Begin~121~End~130~Txt~Red + Green + White #ffff80|R14|Begin~131~End~140~Txt~Green + Blue + White #80ffff|R15|Begin~141~End~150~Txt~Red + Green + Blue + White #ffffff|R16|Begin~151~End~255~Txt~ColorJump slow..fast
+ID|Macro Speed|Type|0|R1|Begin~0~End~10~Txt~No function Macro off|R2|Begin~11~End~255~Txt~slow..fast
+ID|Program|Type|0|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~40~Txt~Internal Program 1|R3|Begin~41~End~60~Txt~Internal Program 2|R4|Begin~61~End~80~Txt~Internal Program 3|R5|Begin~81~End~100~Txt~Internal Program 4|R6|Begin~101~End~120~Txt~Internal Program 5|R7|Begin~121~End~140~Txt~Internal Program 6|R8|Begin~141~End~160~Txt~Internal Program 7|R9|Begin~161~End~180~Txt~Internal Program 8|R10|Begin~181~End~200~Txt~No function|R11|Begin~201~End~225~Txt~Motor reset|R12|Begin~226~End~255~Txt~No function
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 6deg..46deg
+[END_CHAN_DEF]
+[MODES]
+Name|16-channel|ShortName|16ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan / Tilt Speed~Dimmer~Shutter~Red~Green~Blue~White~Color Temperature~Color Macro~Macro Speed~Program~Zoom
+[END_MODES]

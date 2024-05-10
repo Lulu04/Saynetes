@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/de_DE/-/EUR/ViewProductAttachment-ResolveManualURL?File=DE_LIG0008746-000.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=P5xIg3SfnnY
+[GENERAL]
+Manufacturer|lightmaXX|Name|Platinum Mini TRI-PAR|Type|16|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|170|Height|170|Depth|160|Weight|2.00|Power|30|Connector|3-pin|Bulb|LED|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~9~Txt~White #ffffff|R3|Begin~10~End~14~Txt~Light blue #add8e6|R4|Begin~15~End~19~Txt~Blue #0000ff|R5|Begin~20~End~24~Txt~Purple #800080|R6|Begin~25~End~29~Txt~Light pink #ffb6c1|R7|Begin~30~End~34~Txt~Magenta #ca1f7b|R8|Begin~35~End~39~Txt~Pink #ffc0cb|R9|Begin~40~End~44~Txt~Dark pink #e75480|R10|Begin~45~End~49~Txt~Red #ff0000|R11|Begin~50~End~54~Txt~Orange #ff7f00|R12|Begin~55~End~59~Txt~Light orange #facc00|R13|Begin~60~End~64~Txt~Yellow #ffff00|R14|Begin~65~End~69~Txt~Light green #90ee90|R15|Begin~70~End~74~Txt~Green #00ff00|R16|Begin~75~End~79~Txt~Aquamarine #7fffd4|R17|Begin~80~End~84~Txt~Cyan #00ffff|R18|Begin~85~End~169~Txt~ColorJump slow..fast|R19|Begin~170~End~255~Txt~ColorFade slow..fast
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~255~Txt~Strobe slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Intensity~Red~Green~Blue~Macro~Strobe
+[END_MODES]

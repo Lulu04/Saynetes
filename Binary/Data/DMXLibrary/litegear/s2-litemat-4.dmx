@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.litegear.com/download/300/litemat-s2/10001/s2-litemat-4-data-sheet.pdf|LinkType2|manual|Url2|https://www.litegear.com/download/340/litedimmer-plus-duo/3042/litedimmer-plus-dc200-ac400-user-guide-2.pdf|LinkType3|product page|Url3|https://www.litegear.com/litemat-3-2/|LinkType4|video|Url4|https://www.youtube.com/watch?v=T8otm9VL_gc
+[GENERAL]
+Manufacturer|LiteGear|Name|S2 LiteMat 4|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|1016|Height|533|Depth|23|Weight|2.60|Power|200|Connector|5-pin|Bulb|LED|Lumens|10940
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~2600K..6000K
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Color Temperature fine|Type|27|R1|Begin~0~End~255~Txt~
+ID|Dimmer 2|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature 2|Type|27|R1|Begin~0~End~255~Txt~2600K..6000K
+ID|Dimmer 2 fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Color Temperature 2 fine|Type|27|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|Single 8bit|ShortName|1x8bit|Content|Dimmer~Color Temperature
+Name|Single 16bit|ShortName|1x16bit|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine
+Name|Double 8bit|ShortName|2x8bit|Content|Dimmer~Color Temperature~Dimmer 2~Color Temperature 2
+Name|Double 16bit|ShortName|2x16bit|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Dimmer 2~Dimmer 2 fine~Color Temperature 2~Color Temperature 2 fine
+[END_MODES]
