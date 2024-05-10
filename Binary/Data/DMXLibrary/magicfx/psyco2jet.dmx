@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.magicfx.eu/app/uploads/2020/01/MAGICFX_PSYCO2JET_MANUAL.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20230318035553/https://www.magicfx.eu/product/magicfx-psyco2jet/|LinkType3|video|Url3|https://www.youtube.com/watch?v=l9QZ8UaUbmg|LinkType4|video|Url4|https://www.youtube.com/watch?v=E4rW5SLIgoo
+[GENERAL]
+Manufacturer|MagicFX|Name|PSYCO2JET|Type|10|Authors|MAGIC FX B.V.|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|250|Height|165|Depth|330|Weight|9.00|Power|35|Connector|5-pin
+[CHAN_DEF]
+ID|Safety|Type|0|R1|Begin~0~End~99~Txt~Device disabled|R2|Begin~100~End~155~Txt~Device enabled|R3|Begin~156~End~255~Txt~Device test mode (CO₂ output is disabled)
+ID|Angle|Type|7|DefaultValue|127|R1|Begin~0~End~255~Txt~-90deg..90deg
+ID|Speed|Type|39|R1|Begin~0~End~255~Txt~slow..fast
+ID|Output|Type|2|R1|Begin~0~End~199~Txt~No function Valve off|R2|Begin~200~End~255~Txt~Valve on
+ID|Preset|Type|0|R1|Begin~0~End~24~Txt~Single pulse straight up (0°)|R2|Begin~25~End~49~Txt~2 pulses distributed over 180° (-45° +45°)|R3|Begin~50~End~74~Txt~3 pulses distributed over 180° (-90°, 0°, +90°)|R4|Begin~75~End~99~Txt~4 pulses distributed over 180° (-90°, -30°, +30°, +90°)|R5|Begin~100~End~124~Txt~5 pulses distributed over 180° (-90°, -45°, 0°, +45°, +90°)|R6|Begin~125~End~149~Txt~Random pulses over 180°|R7|Begin~150~End~174~Txt~Pulse at +45°, pulse at -45°, pulse at +45°, sweep from -45° back to +45°|R8|Begin~175~End~199~Txt~Three sweeps over 180° (-90° to -54°, -18° to +18° and +54° to +90°)|R9|Begin~200~End~224~Txt~Pulse at -90°, pulse at +90°, pulse at -60°, pulse at +60°, pulse at -30°, pulse at +30°, long pulse at 0°|R10|Begin~225~End~255~Txt~Sweep over 180°
+ID|Direction|Type|7|R1|Begin~0~End~63~Txt~Left to right|R2|Begin~64~End~127~Txt~Bounce, beginning from left|R3|Begin~128~End~191~Txt~Bounce, beginning from right|R4|Begin~192~End~255~Txt~Right to left
+ID|Go|Type|0|R1|Begin~0~End~199~Txt~Off|R2|Begin~200~End~249~Txt~Continuous mode|R3|Begin~250~End~255~Txt~Step in preset
+[END_CHAN_DEF]
+[MODES]
+Name|Safety|ShortName|Safety|Content|Safety
+Name|Raw|ShortName|Raw|Content|Angle~Speed~Output
+Name|Preset|ShortName|Preset|Content|Preset~Speed~Direction~Go
+[END_MODES]

@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.magicfx.eu/app/uploads/2020/01/MAGICFX_SMOKEJET_MANUAL.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20230318035556/https://www.magicfx.eu/product/magicfx-smokejet/|LinkType3|video|Url3|https://www.youtube.com/watch?v=amAVrtUQr4g
+[GENERAL]
+Manufacturer|MagicFX|Name|SMOKEJET|Type|10|Authors|MAGIC FX B.V.|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|193|Height|380|Depth|345|Weight|12.60|Power|1420|Connector|5-pin
+[CHAN_DEF]
+ID|Fog|Type|37|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~255~Txt~Fog
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Chase|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~15~Txt~Chase 1|R3|Begin~16~End~31~Txt~Chase 2|R4|Begin~32~End~47~Txt~Chase 3|R5|Begin~48~End~63~Txt~Chase 4|R6|Begin~64~End~79~Txt~Chase 5|R7|Begin~80~End~95~Txt~Chase 6|R8|Begin~96~End~111~Txt~Chase 7|R9|Begin~112~End~127~Txt~Chase 8|R10|Begin~128~End~143~Txt~Chase 9|R11|Begin~144~End~159~Txt~Chase 10|R12|Begin~160~End~175~Txt~Chase 11|R13|Begin~176~End~191~Txt~Chase 12|R14|Begin~192~End~207~Txt~Chase 13|R15|Begin~208~End~223~Txt~Chase 14|R16|Begin~224~End~255~Txt~Chase 15
+ID|Chase Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast 0…255 steps per min
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 1Hz..20Hz
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Fog~Red~Green~Blue~Amber~Chase~Chase Speed~Master Dimmer~Strobe
+[END_MODES]
