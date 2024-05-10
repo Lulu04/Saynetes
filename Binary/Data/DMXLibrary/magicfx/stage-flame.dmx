@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.magicfx.eu/app/uploads/2020/01/MAGICFX_STAGE-FLAME_MANUAL.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20230318035553/https://www.magicfx.eu/product/magicfx-stage-flame/|LinkType3|video|Url3|https://www.youtube.com/watch?v=YLeYRexsTmc|LinkType4|video|Url4|https://www.youtube.com/watch?v=HvRzNTf07aY
+[GENERAL]
+Manufacturer|MagicFX|Name|Stage Flame|Type|0|Authors|Alejo Cervera|Creator|OFL
+[PHYSICAL]
+Width|310|Height|210|Depth|360|Weight|11.50|Power|100|Connector|3-pin
+[CHAN_DEF]
+ID|Safety|Type|0|R1|Begin~0~End~139~Txt~Safety ON|R2|Begin~140~End~153~Txt~Safety OFF|R3|Begin~154~End~255~Txt~Safety ON
+ID|Flame|Type|0|R1|Begin~0~End~255~Txt~off..high Flame Intensity
+[END_CHAN_DEF]
+[MODES]
+Name|Default|Content|Safety~Flame
+[END_MODES]

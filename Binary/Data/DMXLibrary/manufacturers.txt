@@ -1,0 +1,126 @@
+Folder|5star-systems|Name|5Star Systems
+Folder|abstract|Name|Abstract|Web|https://www.abstract.co.uk/
+Folder|acoustic-control|Name|Acoustic Control|Web|https://kinson.pro/manufacturers/acoustic-control.html
+Folder|adb|Name|ADB|Web|https://www.adbstagelight.com|RDM|16708
+Folder|afx|Name|AFX|Web|https://lotronic.net/gb/brand/15-afx
+Folder|alien-pro|Name|Alien Pro|Web|http://alienpro.com.mx/
+Folder|american-dj|Name|American DJ|Web|https://www.adj.com/
+Folder|ape-labs|Name|Ape Labs|Web|https://apelabs.com/
+Folder|aputure|Name|Aputure|Web|https://www.aputure.com
+Folder|arri|Name|ARRI|Web|https://www.arri.com/en|RDM|8377
+Folder|astera|Name|Astera|Web|https://astera-led.com/|RDM|16755
+Folder|audibax|Name|Audibax
+Folder|ayra|Name|Ayra|Web|https://www.bax-shop.co.uk/ayra
+Folder|ayrton|Name|Ayrton|Web|https://www.ayrton.eu/
+Folder|beamz|Name|BeamZ|Web|https://www.tronios.com/lighting/filter/brand_beamz/
+Folder|big-dipper|Name|Big Dipper|Web|https://www.bigdipper-laser.com/
+Folder|bitfocus|Name|Bitfocus|Web|https://bitfocus.io/
+Folder|blizzard|Name|Blizzard|Web|https://www.blizzardpro.com/
+Folder|boomtonedj|Name|BoomToneDJ|Web|http://www.boomtonedj.com/
+Folder|briteq|Name|Briteq|Web|https://briteq-lighting.com/|RDM|8482
+Folder|cameo|Name|cameo|Web|https://www.cameolight.com/
+Folder|chauvet-dj|Name|Chauvet DJ|Web|https://www.chauvetdj.com/
+Folder|chauvet-professional|Name|Chauvet Professional|Web|https://www.chauvetprofessional.com/|RDM|8612
+Folder|chroma-q|Name|Chroma-Q|Web|https://chroma-q.com/|RDM|21360
+Folder|cinetec|Name|Cinetec|Web|https://www.dimatec.net/cinetec.html
+Folder|clay-paky|Name|Clay Paky|Web|https://www.claypaky.it/en/|RDM|17232
+Folder|clf|Name|CLF|Web|https://www.clf-lighting.com|RDM|738
+Folder|coemar|Name|Coemar|Web|https://www.coemar.com/|RDM|17229
+Folder|contest|Name|Contest|Web|https://www.contest-lighting.com/en/
+Folder|dedolight|Name|Dedolight|Web|https://www.dedoweigertfilm.de/dwf-en/brands/dedolight_overview.php
+Folder|desisti|Name|Desisti|Web|https://www.desisti.it
+Folder|dmg-lumiere|Name|DMG Lumière|Web|https://emea.rosco.com/en/products/brand/dmg-lighting|RDM|13105
+Folder|dts|Name|DTS|Web|https://dts-lighting.it/|RDM|1808
+Folder|elation|Name|Elation|Web|https://www.elationlighting.com/|RDM|8870
+Folder|eliminator|Name|Eliminator Lighting|Web|https://www.adj.com/eliminator-lighting
+Folder|empire-lighting|Name|EMPiRE Lighting|Web|http://shop.empire-electronic.de/shop-EMPiRE.html
+Folder|epsilon|Name|Epsilon|Web|https://www.epsilon-pro.com/
+Folder|equinox|Name|Equinox|Web|https://www.prolight.co.uk/catalogue/brand-results.aspx?bnd_id=693a0079-5e0a-42b1-86b1-aff800bd5d2c
+Folder|etc|Name|ETC|Web|https://www.etcconnect.com/|RDM|25972
+Folder|eurolite|Name|Eurolite|Web|https://www.steinigke.de/en/Eurolite/
+Folder|event-lighting|Name|Event Lighting|Web|https://event-lighting.com.au/
+Folder|evolight|Name|Evolight
+Folder|explo|Name|Explo|Web|https://www.explo.at/en
+Folder|eyourlife|Name|Eyourlife|Web|https://www.eyourlife.com/
+Folder|fiilex|Name|Fiilex|Web|https://fiilex.com/|RDM|24868
+Folder|flash-professional|Name|Flash Professional|Web|https://flash-butrym.pl/en_US/c/Professional-Series/91
+Folder|fovitec|Name|Fovitec|Web|https://web.archive.org/web/20240324222208/https://www.fovitec.com/
+Folder|fractal-lights|Name|Fractal Lights|Web|http://fractallights.com/
+Folder|fun-generation|Name|Fun Generation|Web|https://www.thomann.de/intl/fun_generation.html
+Folder|futurelight|Name|Futurelight|Web|https://www.steinigke.de/en/futurelight/
+Folder|galaxis|Name|Galaxis|Web|https://www.firing-system.com/
+Folder|gantom|Name|Gantom|Web|https://www.gantom.com
+Folder|generic|Name|Generic
+Folder|ghost|Name|Ghost|Web|https://www.youtube.com/channel/UC8RPLBCgAsJnDpmBZV-3WWA
+Folder|glp|Name|GLP|Web|https://www.glp.de/en/|RDM|26476
+Folder|glx|Name|GLX
+Folder|griven|Name|Griven|Web|https://www.griven.com/
+Folder|gruft|Name|Gruft
+Folder|hazebase|Name|Hazebase|Web|https://hazebase.com/
+Folder|hive|Name|Hive Lighting|Web|https://hivelighting.com
+Folder|hong-yi|Name|Hong Yi|Web|https://en.hongyilights.com/
+Folder|hsl|Name|HSL|Web|https://www.amazon.com/stores/HighIightSpIendidLife/page/C6F4337A-41CC-4560-880E-06BCA9E96924
+Folder|ibiza-light|Name|Ibiza light|Web|https://lotronic.net/gb/brand/16-ibiza
+Folder|ignition|Name|Ignition
+Folder|infinity|Name|Infinity|Web|https://www.highlite.com/en/brands/infinity.html
+Folder|jb-lighting|Name|JB-Lighting|Web|https://jb-lighting.de/
+Folder|jb-systems|Name|JB Systems|Web|https://jb-systems.eu/
+Folder|kam|Name|KAM
+Folder|kino-flo|Name|Kino Flo|Web|https://kinoflo.com/|RDM|19270
+Folder|lalucenatz|Name|LaluceNatz
+Folder|laserworld|Name|Laserworld|Web|https://www.laserworld.com/en/
+Folder|ledj|Name|LEDJ|Web|https://www.prolight.co.uk/catalogue/brand-results.aspx?bnd_id=a46e50d8-13da-4112-95d7-aff800bd5d2c
+Folder|lep-laser|Name|LEP-LASER
+Folder|light-sky|Name|LIGHT SKY|Web|https://en.lightsky.com.cn/|RDM|14472
+Folder|lightmaxx|Name|lightmaXX|Web|https://www.musicstore.de/en_DE/EUR/brands/lightmaxx
+Folder|lite-tek|Name|Lite-Tek|Web|https://lite-tek.com.mx/
+Folder|litecraft|Name|Litecraft|Web|https://lmp.de/marken/litecraft/
+Folder|litegear|Name|LiteGear|Web|https://www.litegear.com/
+Folder|lixada|Name|Lixada|Web|https://www.lixada.com/
+Folder|look|Name|Look Solutions|Web|https://www.looksolutions.com/
+Folder|lupo|Name|Lupo|Web|https://www.lupo.it/en/
+Folder|magicfx|Name|MagicFX|Web|https://www.magicfx.eu/|RDM|18008
+Folder|mark|Name|Mark|Web|https://products.equipson.es/mark
+Folder|martin|Name|Martin|Web|https://www.martin.com/en-US|RDM|19792
+Folder|mdg|Name|MDG|Web|https://www.mdgfog.com/en|RDM|19780
+Folder|mega-led-lighting|Name|Mega LED Lighting|Web|https://www.mjledlighting.com/
+Folder|mega-lite|Name|MegaLite|Web|https://mega.lighting/
+Folder|minuit-une|Name|Minuit Une|Web|https://minuitune.com/
+Folder|nicols|Name|Nicols|Web|https://nicols-lighting.fr/
+Folder|orion|Name|Orion Effects Lighting|Web|https://orion-fxlights.com/
+Folder|panasonic|Name|Panasonic|Web|https://panasonic.net/cns/projector/
+Folder|phocea-light|Name|Phocea Light|Web|https://www.phocealight.fr/
+Folder|powerlighting|Name|Power Lighting
+Folder|pr-lighting|Name|PR LIGHTING|Web|http://www.pr-lighting.com/
+Folder|prolights|Name|Prolights|Web|https://prolights.it/|RDM|5584
+Folder|qtx|Name|QTX|Web|https://www.avsl.com/brands/qtx
+Folder|renkforce|Name|Renkforce|Web|https://www.conrad.at/de/marken/renkforce.html
+Folder|robe|Name|Robe|Web|https://www.robe.cz/|RDM|21075
+Folder|robert-juliat|Name|Robert Juliat|Web|https://www.robertjuliat.com/
+Folder|rockville|Name|Rockville|Web|https://www.rockvilleaudio.com/
+Folder|sgm|Name|SGM|Web|https://sgmlight.com/|RDM|21319
+Folder|shehds|Name|Shehds|Web|https://www.shehds.com/
+Folder|showline|Name|Showline|Web|https://www.vari-lite.com/global
+Folder|showlite|Name|Showlite|Web|https://www.kirstein.de/en/By-Brand/Showlite/
+Folder|showpro|Name|ShowPRO|Web|https://www.showtech.com.au/our-brands/showpro/
+Folder|showtec|Name|Showtec|Web|https://www.highlite.com/en/brands/showtec.html|RDM|10676
+Folder|showven|Name|Showven|Web|https://showven.en.alibaba.com/
+Folder|silver-star|Name|Silver Star|Web|http://yajiang.cn/english.php
+Folder|skypix|Name|Skypix|Web|https://skypixlight.com.br/
+Folder|smoke-factory|Name|Smoke Factory|Web|https://smoke-factory.de/
+Folder|solaris|Name|Solaris
+Folder|solena|Name|Solena|Web|https://www.pssl.com/collections/solena-professional
+Folder|soundlight|Name|SoundLight|Web|https://soundlight.de/|RDM|21324
+Folder|stage-right|Name|Stage Right|Web|https://www.monoprice.com/
+Folder|stairville|Name|Stairville|Web|https://www.thomann.de/intl/stairville.html
+Folder|starway|Name|Starway|Web|https://en.starway.eu/|RDM|2537
+Folder|studio-due|Name|Studio Due|Web|https://www.studiodue.com/
+Folder|sun-star|Name|Sun Star|Web|https://www.sunstarprolight.com/
+Folder|tecshow|Name|Tecshow|Web|http://tecshow.amproweb.com/en/
+Folder|tiptop-stage-light|Name|TIPTOP Stage Light|Web|https://www.tiptopstagelight.com/
+Folder|tmb|Name|TMB|Web|https://tmb.com/|RDM|6906
+Folder|uking|Name|U`King|Web|https://www.uking-online.com/
+Folder|ultratec|Name|Ultratec|Web|https://ultratecfx.com|RDM|19533
+Folder|varytec|Name|Varytec|Web|https://www.thomann.de/intl/varytec.html
+Folder|velleman|Name|Velleman|Web|https://www.velleman.eu/
+Folder|venue|Name|Venue|Web|https://venuelightingeffects.com/
