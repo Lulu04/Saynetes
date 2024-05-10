@@ -388,13 +388,14 @@ begin
 end;
 
 procedure TFrameViewDMXLibrary.FillTreeViewWithLibraryContent;
-  procedure ScanFolder ( folder: string; aNode: TTreeNode );
+var c: integer;
+  procedure ScanFolder (folder: string; aNode: TTreeNode);
   var sr: TSearchRec;
     n, n1: TTreeNode;
     modes: TStringArray;
     i: Integer;
   begin
-   if LazFileUtils.FindFirstUTF8( folder + DirectorySeparator + '*', faAnyFile, sr ) = 0 then
+   if LazFileUtils.FindFirstUTF8(folder + DirectorySeparator + '*', faAnyFile, sr) = 0 then
    begin
     repeat
      if Sr.Attr and faDirectory > 0 then
@@ -407,13 +408,14 @@ procedure TFrameViewDMXLibrary.FillTreeViewWithLibraryContent;
          n.SelectedIndex := 1;  // icon folder
          n.ImageIndex := 1;     // icon folder
          n.MakeVisible;
-         n.Collapse( True );
-         ScanFolder( folder + DirectorySeparator + Sr.Name, n );
+         n.Collapse(True);
+         ScanFolder(folder + DirectorySeparator + Sr.Name, n);
        end;
      end
-     else if LowerCase( ExtractFileExt( sr.Name )) = DMX_LIBRARY_FILE_EXTENSION then
+     else if LowerCase(ExtractFileExt(sr.Name)) = DMX_LIBRARY_FILE_EXTENSION then
      begin
-       // one found a dmx fixture file
+       // found dmx fixture file
+      inc(c);
        n := TV.Items.AddChild( aNode, ChangeFileExt(Sr.Name, ''));
        // set icon
        n.SelectedIndex := 2;
@@ -428,19 +430,21 @@ procedure TFrameViewDMXLibrary.FillTreeViewWithLibraryContent;
      end;
     until LazFileUtils.FindNextUTF8(Sr) <> 0;
    end;
-   LazFileUtils.FindCloseUTF8( Sr );
+   LazFileUtils.FindCloseUTF8(Sr);
   end;
 
 begin
+ c := 0;
  TV.BeginUpdate;
  TV.Items.Clear; // clear the TreeView
- with TV.Items.AddFirst( nil, SDMXLibrary ) do
+ with TV.Items.AddFirst(nil, SDMXLibrary) do
    begin
     Selected := true;
     ImageIndex := 0;
     SelectedIndex := 0;
    end;
- ScanFolder( GetAppDMXLibraryFolder, TV.Items.GetFirstNode );
+ ScanFolder(GetAppDMXLibraryFolder, TV.Items.GetFirstNode);
+ TV.Items.GetFirstNode.Text := SDMXLibrary+' - '+c.ToString+' '+SFixtures;
  TV.EndUpdate;
 end;
 

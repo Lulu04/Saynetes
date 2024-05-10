@@ -2790,6 +2790,10 @@ msgstr "Il y a déjà un appareil avec ce nom de fichier. Le nouveau est renomm�
 msgid "fixture not in library"
 msgstr "appareil introuvable"
 
+#: u_resource_string.sfixtures
+msgid "fixtures"
+msgstr "appareils"
+
 #: u_resource_string.sflame
 msgctxt "u_resource_string.sflame"
 msgid "Flame"

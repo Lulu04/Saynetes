@@ -146,6 +146,7 @@ resourcestring
   SUnknowSequence='UNKNOW SEQUENCE !!';
   SUniverse='Universe';
   SFixture='Fixture';
+  SFixtures='fixtures';
   SAdress='Adress';
   SFile='File';
   SNotFound='NOT FOUND !!';
