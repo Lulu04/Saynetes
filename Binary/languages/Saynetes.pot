@@ -2690,6 +2690,10 @@ msgstr ""
 msgid "fixture not in library"
 msgstr ""
 
+#: u_resource_string.sfixtures
+msgid "fixtures"
+msgstr ""
+
 #: u_resource_string.sflame
 msgctxt "u_resource_string.sflame"
 msgid "Flame"
