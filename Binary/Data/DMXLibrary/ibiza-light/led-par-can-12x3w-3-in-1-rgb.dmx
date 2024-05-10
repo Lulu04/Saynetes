@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://lotronic.net/gb/index.php?controller=attachment&id_attachment=84|LinkType2|product page|Url2|https://lotronic.net/gb/projector/159-PAR-MINI-RGB3-5420047129680.html
+[GENERAL]
+Manufacturer|Ibiza light|Name|LED PAR CAN 12x3W 3-in-1 RGB|Type|16|Authors|RAZAKANIRINA, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|120|Height|120|Depth|90|Weight|0.60|Power|40|Connector|3-pin|Bulb|12x 3W RGB LEDs
+[CHAN_DEF]
+ID|Mode|Type|0|R1|Begin~0~End~10~Txt~No function Manual control|R2|Begin~11~End~50~Txt~Color Macro|R3|Begin~51~End~100~Txt~ColorJump|R4|Begin~101~End~150~Txt~ColorFade|R5|Begin~151~End~200~Txt~Sound control|R6|Begin~201~End~255~Txt~Strobe
+ID|Color Macro|Type|12|R1|Begin~0~End~39~Txt~7 Color Recycle|R2|Begin~40~End~59~Txt~Red #ff0000|R3|Begin~60~End~79~Txt~Green #00ff00|R4|Begin~80~End~99~Txt~Blue #0000ff|R5|Begin~100~End~119~Txt~Yellow #ffff00|R6|Begin~120~End~139~Txt~Cyan #00ffff|R7|Begin~140~End~159~Txt~Purple #ff00ff|R8|Begin~160~End~179~Txt~RG _#00ff00|R9|Begin~180~End~199~Txt~RB _#0000ff|R10|Begin~200~End~219~Txt~GB _#0000ff|R11|Begin~220~End~255~Txt~RGB _#0000ff
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|PAR-MINI-RGB3|ShortName|PAR-MINI-RGB3|Content|Mode~Color Macro~Effect Speed~Dimmer~Red~Green~Blue
+[END_MODES]

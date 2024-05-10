@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.kinoflotest2.com/PDF/News/Operational%20Manual%20for%20the%20web/3100084%20Rev%20A%20Celeb%20201%20LED%20DMX%2007-01-2015.pdf|LinkType2|product page|Url2|https://www.kinoflotest2.com/Products%20Button/LED/Celeb%20200%20DMX/Celeb200_DMX.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=TK2RRkvcjL8
+[GENERAL]
+Manufacturer|Kino Flo|Name|Celeb LED 201 DMX|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|61|Height|36|Depth|13|Weight|6.80|Power|100|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~22~Txt~2700K..3030K|R2|Begin~23~End~32~Txt~3045K..3171K|R3|Begin~33~End~114~Txt~3185K..4400K|R4|Begin~115~End~119~Txt~4415K..4471K|R5|Begin~120~End~181~Txt~4485K..5400K|R6|Begin~182~End~186~Txt~5415K..5471K|R7|Begin~187~End~249~Txt~5485K..6415K|R8|Begin~250~End~255~Txt~6430K..6500K
+[END_CHAN_DEF]
+[MODES]
+Name|DIMMING + CCT|ShortName|DIM+CCT|Content|Dimmer~Color Temperature
+[END_MODES]

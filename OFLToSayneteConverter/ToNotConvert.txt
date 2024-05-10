@@ -1,4 +1,6 @@
 CHANNEL 16 bits
 dmg-lumiere\maxi-mix.json
 dmg-lumiere\mini-mix.json
-dmg-lumiere\sl1-mix.dmx
+dmg-lumiere\sl1-mix.json
+fiilex\p3-color.json
+generic\*.json

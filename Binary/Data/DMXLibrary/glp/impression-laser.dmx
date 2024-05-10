@@ -1,0 +1,33 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/de/produkte?format=raw&task=download&fid=65|LinkType2|video|Url2|https://www.youtube.com/watch?v=xtjhMXGvLiE
+[GENERAL]
+Manufacturer|GLP|Name|impression Laser|Type|9|Authors|Felix Edelmann, Ryan Goodwin|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|340|Height|145|Depth|370|Weight|7.50|Power|170|Connector|3-pin|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..660deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..300deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Access|Type|0|DefaultValue|255|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~95~Txt~Basic range (8ch)|R3|Begin~96~End~159~Txt~Standard range (12ch)|R4|Begin~160~End~223~Txt~Extended range (16ch)|R5|Begin~224~End~255~Txt~Full range (20ch)
+ID|Folder|Type|0|R1|Begin~0~End~15~Txt~Page 1|R2|Begin~16~End~31~Txt~Page 2|R3|Begin~32~End~47~Txt~Page 3|R4|Begin~48~End~63~Txt~Page 4|R5|Begin~64~End~79~Txt~Page 5|R6|Begin~80~End~95~Txt~Page 6|R7|Begin~96~End~111~Txt~Page 7|R8|Begin~112~End~127~Txt~Page 8|R9|Begin~128~End~255~Txt~Page 9
+ID|File|Type|0|R1|Begin~0~End~32~Txt~Closed|R2|Begin~33~End~36~Txt~Cue 1|R3|Begin~37~End~40~Txt~Cue 2|R4|Begin~41~End~44~Txt~Cue 3|R5|Begin~45~End~48~Txt~Cue 4|R6|Begin~49~End~52~Txt~Cue 5|R7|Begin~53~End~56~Txt~Cue 6|R8|Begin~57~End~60~Txt~Cue 7|R9|Begin~61~End~64~Txt~Cue 8|R10|Begin~65~End~68~Txt~Cue 9|R11|Begin~69~End~72~Txt~Cue 10|R12|Begin~73~End~76~Txt~Cue 11|R13|Begin~77~End~80~Txt~Cue 12|R14|Begin~81~End~84~Txt~Cue 13|R15|Begin~85~End~88~Txt~Cue 14|R16|Begin~89~End~92~Txt~Cue 15|R17|Begin~93~End~96~Txt~Cue 16|R18|Begin~97~End~100~Txt~Cue 17|R19|Begin~101~End~104~Txt~Cue 18|R20|Begin~105~End~108~Txt~Cue 19|R21|Begin~109~End~112~Txt~Cue 20|R22|Begin~113~End~116~Txt~Cue 21|R23|Begin~117~End~120~Txt~Cue 22|R24|Begin~121~End~124~Txt~Cue 23|R25|Begin~125~End~128~Txt~Cue 24|R26|Begin~129~End~132~Txt~Cue 25|R27|Begin~133~End~136~Txt~Cue 26|R28|Begin~137~End~140~Txt~Cue 27|R29|Begin~141~End~144~Txt~Cue 28|R30|Begin~145~End~148~Txt~Cue 29|R31|Begin~149~End~152~Txt~Cue 30|R32|Begin~153~End~156~Txt~Cue 31|R33|Begin~157~End~160~Txt~Cue 32|R34|Begin~161~End~164~Txt~Cue 33|R35|Begin~165~End~168~Txt~Cue 34|R36|Begin~169~End~172~Txt~Cue 35|R37|Begin~173~End~176~Txt~Cue 36|R38|Begin~177~End~180~Txt~Cue 37|R39|Begin~181~End~184~Txt~Cue 38|R40|Begin~185~End~188~Txt~Cue 39|R41|Begin~189~End~192~Txt~Cue 40|R42|Begin~193~End~196~Txt~Cue 41|R43|Begin~197~End~200~Txt~Cue 42|R44|Begin~201~End~204~Txt~Cue 43|R45|Begin~205~End~208~Txt~Cue 44|R46|Begin~209~End~212~Txt~Cue 45|R47|Begin~213~End~216~Txt~Cue 46|R48|Begin~217~End~220~Txt~Cue 47|R49|Begin~221~End~255~Txt~Cue 48
+ID|Playback Speed|Type|0|R1|Begin~0~End~16~Txt~100% Normal speed|R2|Begin~17~End~32~Txt~stop|R3|Begin~33~End~127~Txt~25%..99%|R4|Begin~128~End~128~Txt~100%|R5|Begin~129~End~255~Txt~101%..200%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Zoom|Type|31|DefaultValue|128|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|X Size|Type|0|R1|Begin~0~End~255~Txt~Beam angle 0deg..40deg
+ID|Y Size|Type|0|R1|Begin~0~End~255~Txt~Beam angle 0deg..40deg
+ID|Rotation|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
+ID|X Position|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam position 0deg..40deg
+ID|Y Position|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam position 0deg..40deg
+ID|Visible Points|Type|0|DefaultValue|255|R1|Begin~0~End~255~Txt~0%..100% Visible points
+ID|Scan Rate|Type|0|R1|Begin~0~End~31~Txt~30000 Default Scan Rate|R2|Begin~32~End~255~Txt~6000..30000 Scan Rate
+ID|Release|Type|0|R1|Begin~0~End~31~Txt~Default|R2|Begin~32~End~95~Txt~Hold|R3|Begin~96~End~159~Txt~Loop|R4|Begin~160~End~223~Txt~Next|R5|Begin~224~End~255~Txt~Stop
+ID|Color|Type|12|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~42~Txt~Red~Extra~#ff0000|R3|Begin~43~End~53~Txt~Orange~Extra~#ffaa00|R4|Begin~54~End~75~Txt~Yellow~Extra~#ffff00|R5|Begin~76~End~86~Txt~Lime~Extra~#66ff00|R6|Begin~87~End~109~Txt~Green~Extra~#00dd00|R7|Begin~110~End~163~Txt~Cyan~Extra~#00ffff|R8|Begin~164~End~189~Txt~Blue~Extra~#0000ff|R9|Begin~190~End~220~Txt~Pink~Extra~#ffbbaa|R10|Begin~221~End~228~Txt~Red~Extra~#ff0000|R11|Begin~229~End~255~Txt~White~Extra~#ffffff
+ID|Reserved|Type|17|R1|Begin~0~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|Normal|ShortName|Normal|Content|Pan~Pan fine~Tilt~Tilt fine~Access~Folder~File~Playback Speed~Intensity~Zoom~X Size~Y Size~Rotation~X Position~Y Position~Visible Points~Scan Rate~Release~Color~Reserved
+[END_MODES]

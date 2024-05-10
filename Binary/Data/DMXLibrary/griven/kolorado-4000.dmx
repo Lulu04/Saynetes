@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://www.carlosmendoza.com.mx/Descargas/Griven_Kolorado_4000_manual.pdf
+[GENERAL]
+Manufacturer|Griven|Name|Kolorado 4000|Type|25|Authors|David Olvera|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|620|Height|821|Depth|623|Weight|53.00|Power|4000|Connector|3-pin|Bulb|HMI 4000W SE G38|Lumens|380000
+[CHAN_DEF]
+ID|Lamp On/Off|Type|0|R1|Begin~0~End~126~Txt~Lamp on|R2|Begin~127~End~255~Txt~Lamp off
+ID|Shutter/Strobe|Type|6|DefaultValue|128|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~127~Txt~0..100%|R3|Begin~128~End~159~Txt~Open|R4|Begin~160~End~191~Txt~Strobe slow..fast Mechanical|R5|Begin~192~End~239~Txt~Strobe 1Hz..20Hz Electronic|R6|Begin~240~End~255~Txt~Open
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Lamp On/Off~Shutter/Strobe
+Name|5-channel|ShortName|5ch|Content|Lamp On/Off~Shutter/Strobe~Yellow~Cyan~Magenta
+[END_MODES]

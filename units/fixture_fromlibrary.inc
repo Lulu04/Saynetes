@@ -9,7 +9,7 @@ TFixtureLibraryLocation = record
   procedure InitDefault;
   procedure CopyTo(var aFixLibLocation: TFixtureLibraryLocation);
   function SaveToString: string;
-  procedure LoadFromString(const s: string);
+  function LoadFromString(const s: string): boolean;
   // concat the subfolder and the filename
   function RelativePathInLibrary: string;
   function AbsolutPath: string;
@@ -99,7 +99,7 @@ end;
     Extra: string;
     procedure InitDefault;
     function SaveToString: string;
-    procedure LoadFromString(const s: string);
+    function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibSingleRange);
     procedure CopyTo(var aTarget: TChannelRange);
     function ToReadableString: string;
@@ -117,7 +117,7 @@ end;
 
     procedure InitDefault;
     function SaveToString: string;
-    procedure LoadFromString(const s: string);
+    function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibAvailableChannel);
     // checks the integrity of each channel ranges
     function HaveError: boolean;
@@ -186,14 +186,19 @@ begin
   p^ := NIL;
   k := t.IndexOf('[CHAN_DEF]');
   kEnd := t.IndexOf('[END_CHAN_DEF]');
-  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then exit(False);
+
+  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then begin
+    Log.Error('[CHAN_DEF]/[END_CHAN_DEF] block not found', 1);
+    exit(False);
+  end;
+
   try
+    Result := True;
     SetLength(p^, kEnd-k-1);
     for i:=0 to High(p^) do begin
       inc(k);
-      p^[i].LoadFromString(t.Strings[k]);
+      Result := Result and p^[i].LoadFromString(t.Strings[k]);
     end;
-    Result := True;
   except
     Result := False;
   end;
@@ -227,7 +232,12 @@ begin
   p^ := Nil;
   k := t.IndexOf('[MODES]');
   kEnd := t.IndexOf('[END_MODES]');
-  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then exit(False);
+
+  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then begin
+    Log.Error('Header block [MODES] [END_MODES] not found or empty', 1);
+    exit(False);
+  end;
+
   try
     SetLength(p^, kEnd-k-1);
     for i:=0 to High(p^) do begin
@@ -296,13 +306,14 @@ begin
   Result := prop.PackedProperty;
 end;
 
-procedure TFixtureLibraryLocation.LoadFromString(const s: string);
+function TFixtureLibraryLocation.LoadFromString(const s: string): boolean;
 var prop: TProperties;
 begin
+  Result := True;
   prop.Split(s, FIXTURELOCATION_SEPARATOR);
-  prop.StringValueOf('SubFolder', SubFolder, '');
-  prop.StringValueOf('Filename', Filename, '');
-  prop.StringValueOf('Mode', Mode, '');
+  Result := Result and prop.StringValueOf('SubFolder', SubFolder, '');
+  Result := Result and prop.StringValueOf('Filename', Filename, '');
+  Result := Result and prop.StringValueOf('Mode', Mode, '');
   SubFolder := AdjustDirectorySeparator(SubFolder);
 end;
 
@@ -338,36 +349,42 @@ end;
 function TLibraryFixture.LoadFromFile(const aFileName: string): boolean;
 var t: TStringList;
     i, m, k: integer;
+    f: string;
 begin
   InitDefault;
   Result := False;
   t := TStringList.Create;
+  f := RepertoireParent(ExtractFilePath(aFileName));
+  Log.Info('Loading fixture "'+f+ExtractFileName(aFileName)+'"', 1);
   try
     try
       t.LoadFromFile(aFileName);
       k := t.indexOf('[SAYNETE]');
-      if k = -1 then exit(False);
+      if k = -1 then begin
+        Log.Error('Header [SAYNETE] not found', 2);
+        exit(False);
+      end;
 
       WebLinks.LoadFrom(t);
-      Result := General.LoadFrom(t);
-      if Result then Physical.LoadFrom(t);
-      if Result then DipSwitchs.LoadFrom(t);
-      if Result then Result := LoadAvailableChannelsFrom(t, @AvailableChannels);
-      if Result then Result := LoadModesFrom(t, @Modes);
+
+      if not General.LoadFrom(t) then exit(False);
+
+      Physical.LoadFrom(t);
+      DipSwitchs.LoadFrom(t);
+      if not LoadAvailableChannelsFrom(t, @AvailableChannels) then exit(False);
+      if not LoadModesFrom(t, @Modes) then exit(False);
 
       // Check if the channels ID used by the modes are defined
       for m:=0 to High(Modes) do
         for i:=0 to High(Modes[m].ChannelsIDToUse) do
           if IndexOfChannel(Modes[m].ChannelsIDToUse[i], @AvailableChannels) = -1 then begin
-            Log.Error('TLibraryFixture.LoadFromFile('+aFileName+')');
-            Log.Error('channel "'+Modes[m].ChannelsIDToUse[i]+'" used by mode "'+Modes[m].Name+'" is not defined !',1);
+            Log.Error('Channel "'+Modes[m].ChannelsIDToUse[i]+'" used by mode "'+Modes[m].Name+'" is not defined !',1);
             exit(False);
           end;
       Result := True;
     except
       On E: Exception do begin
         Result := False;
-        Log.Error('TLibraryFixture.LoadFromFile('+aFileName+')');
         Log.Error('Exception occurs "'+E.Message+'"', 1);
       end;
     end;
@@ -472,14 +489,19 @@ var prop: TProperties;
   temp: string;
   A: TStringArray;
   i: Integer;
+  procedure LogError(aProp: string);
+  begin
+    Log.Error('Missing property '+aProp, 1);
+  end;
+
 begin
   temp := '';
   InitDefault;
   prop.Split(s, '|');
-  prop.StringValueOf('Name', Name, '');
-  prop.StringValueOf('ShortName', ShortName, Name);
+  if not prop.StringValueOf('Name', Name, '') then LogError('Name');
+  if not prop.StringValueOf('ShortName', ShortName, Name) then LogError('ShortName');
 
-  prop.StringValueOf('Content', temp, '');
+  if not prop.StringValueOf('Content', temp, '') then LogError('Content');
   if Length(temp) > 0 then begin
     A := temp.Split(['~']);
     SetLength(ChannelsIDToUse, Length(A));
@@ -509,19 +531,27 @@ begin
   Result := prop.PackedProperty;
 end;
 
-procedure TFixLibSingleRange.LoadFromString(const s: string);
+function TFixLibSingleRange.LoadFromString(const s: string): boolean;
 var prop: TProperties;
   vi: Integer;
 begin
+  Result := False;
   vi := 0;
   InitDefault;
-  prop.Split(s, '~');
-  prop.IntegerValueOf('Begin', vi, BeginValue);
-  BeginValue := vi;
-  prop.IntegerValueOf('End', vi, EndValue);
-  EndValue := vi;
-  prop.StringValueOf('Txt', Text, Text);
-  prop.StringValueOf('Extra', Extra, Extra);
+  try
+    prop.Split(s, '~');
+    prop.IntegerValueOf('Begin', vi, BeginValue);
+    BeginValue := vi;
+    prop.IntegerValueOf('End', vi, EndValue);
+    EndValue := vi;
+    prop.StringValueOf('Txt', Text, Text);
+    prop.StringValueOf('Extra', Extra, Extra);
+    Result := True;
+  except
+    On E :Exception do begin
+      Log.Error('exception occurs while reading range values "'+s+'"'+ E.Message, 3);
+    end;
+  end;
 end;
 
 procedure TFixLibSingleRange.CopyTo(var aTarget: TFixLibSingleRange);
@@ -568,37 +598,47 @@ begin
   Result := prop.PackedProperty;
 end;
 
-procedure TFixLibAvailableChannel.LoadFromString(const s: string);
+function TFixLibAvailableChannel.LoadFromString(const s: string): boolean;
 var prop: TProperties;
   vi, i: integer;
   temp: string;
 begin
+  Result := False;
   vi := 0;
   temp := '';
   InitDefault;
   prop.Split(s, '|');
-  prop.StringValueOf('ID', NameID, NameID);
-  prop.IntegerValueOf('Type', vi, Ord(ChanType));
-  ChanType := TChannelType(vi);
-  prop.IntegerValueOf('DefaultValue', vi, DefaultValue);
-  DefaultValue := vi;
-  // search the number of ranges present
-  vi := 0;
-  repeat
-    inc(vi);
-  until not prop.CheckProperties(['R'+vi.ToString]);
 
-  if vi-1 = 0 then begin
-    // no range data found -> we force a single one
-    SetLength(Ranges, 1);
-    Ranges[0].InitDefault;
-    Ranges[0].Text := '';
-  end else begin
-    // read range's data
-    SetLength(Ranges, vi-1);
-    for i:=0 to High(Ranges) do begin
-      prop.StringValueOf('R'+(i+1).ToString, temp, '');
-      Ranges[i].LoadFromString(temp);
+  try
+    prop.StringValueOf('ID', NameID, NameID);
+    prop.IntegerValueOf('Type', vi, Ord(ChanType));
+    ChanType := TChannelType(vi);
+    prop.IntegerValueOf('DefaultValue', vi, DefaultValue);
+    DefaultValue := vi;
+    // search the number of ranges present
+    vi := 0;
+    repeat
+      inc(vi);
+    until not prop.CheckProperties(['R'+vi.ToString]);
+
+    Result := True;
+    if vi-1 = 0 then begin
+      // no range data found -> we force a single one
+      SetLength(Ranges, 1);
+      Ranges[0].InitDefault;
+      Ranges[0].Text := '';
+    end else begin
+      // read range's data
+      SetLength(Ranges, vi-1);
+      for i:=0 to High(Ranges) do begin
+        prop.StringValueOf('R'+(i+1).ToString, temp, '');
+        Result := Result and Ranges[i].LoadFromString(temp);
+      end;
+    end;
+  except
+    On E :Exception do begin
+      Log.Error('TFixLibAvailableChannel.LoadFromString - exception occurs while reading channel''s data "'+s+'"'+ E.Message, 3);
+      Result := False;
     end;
   end;
 end;
@@ -687,7 +727,11 @@ var prop: TProperties;
 begin
   InitDefault;
   k := t.IndexOf(SECTION_HEADER);
-  if (k = -1) or (k = t.Count-1) then exit;
+
+  if (k = -1) or (k = t.Count-1) then begin
+    Log.Error('Header '+SECTION_HEADER+' not found', 1);
+    exit;
+  end;
 
   prop.Split(t.Strings[k+1], '|');
   DecodePropertyFrom(prop);
@@ -749,10 +793,10 @@ var prop: TProperties;
   var s: string;
   begin
     if not flagError then
-      s := 'TFixLibGeneral.LoadFrom - property "'+aProp+'" not found in "'+t.Strings[k+1]+'"'
+      s := SECTION_HEADER+' property "'+aProp+'" not found in "'+t.Strings[k+1]+'"'
     else
-      s := 'TFixLibGeneral.LoadFrom - property "'+aProp+'" not found';
-    Log.Error(s, 3);
+      s := SECTION_HEADER+' property "'+aProp+'" not found';
+    Log.Error(s, 1);
     flagError := True;
   end;
 
@@ -760,7 +804,10 @@ begin
   InitDefault;
   Result := False;
   k := t.IndexOf(SECTION_HEADER);
-  if (k = -1) or (k = t.Count-1) then exit;
+  if (k = -1) or (k = t.Count-1) then begin
+    Log.Error('Header '+SECTION_HEADER+' not found or empty', 1);
+    exit;
+  end;
 
   flagError := False;
   prop.Split(t.Strings[k+1], '|');

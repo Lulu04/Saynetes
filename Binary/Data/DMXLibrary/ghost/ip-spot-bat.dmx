@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|video|Url1|https://www.youtube.com/watch?v=_nbH55XYGYU
+[GENERAL]
+Manufacturer|Ghost|Name|IP Spot Bat|Type|16|Authors|zampano|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|240|Height|165|Depth|210|Weight|3.00|Power|72|Connector|3-pin|Bulb|6x12W RGWAUV LEDs|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..10Hz
+ID|Programs|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~8 predefined colors|R3|Begin~101~End~150~Txt~ColorJump|R4|Begin~151~End~200~Txt~ColorFade|R5|Begin~201~End~250~Txt~ColorPulse|R6|Begin~251~End~255~Txt~Sound control
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Master Intensity~Red~Green~Blue~White~Amber~UV~Strobe~Programs~Program Speed
+[END_MODES]

@@ -470,6 +470,7 @@ resourcestring
   SBarShortTransparentLed='Short bar transparent led';
   SBarShortColoredLed='Short bar colored led';
   SFlower02='Flower 2';
+  SFlower03='Flower 3';
 
 implementation
 // exclusion i18n

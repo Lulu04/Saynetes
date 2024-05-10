@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://drive.google.com/file/d/1pJK6BaAhvOGTwMP1VhfO8GH25YicCDwS/view|LinkType2|product page|Url2|https://hivelighting.com/wasp-100-cx/|LinkType3|video|Url3|https://www.youtube.com/watch?v=5JuWHXsTSXI&t=22s
+[GENERAL]
+Manufacturer|Hive Lighting|Name|Wasp 100-CX|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|100|Height|100|Depth|199|Weight|0.90|Power|75|Connector|5-pin|Bulb|LED|LensMinDegree|13.000|LensMaxDegree|180.000
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CCT|Type|27|R1|Begin~0~End~255~Txt~1650K..8025K
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~0…100%
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~0…360°
+[END_CHAN_DEF]
+[MODES]
+Name|HSI|ShortName|HSI|Content|Intensity~CCT~Saturation~Hue
+[END_MODES]

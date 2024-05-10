@@ -197,6 +197,9 @@ begin
   CB.Items.Add(Ord(ctTILTSPEED).ToString+'|Tilt speed|Fast..Slow');
   CB.Items.Add(Ord(ctPANTILTSPEED).ToString+'|Pan/Tilt speed|Slow..Fast');
   CB.Items.Add(Ord(ctPANTILTSPEED).ToString+'|Pan/Tilt speed|Fast..Slow');
+  CB.Items.Add(Ord(ctPANCONTINUOUS).ToString+'|Pan continuous');
+  CB.Items.Add(Ord(ctTILTCONTINUOUS).ToString+'|Tilt continuous');
+
 
   CB.Items.Add(Ord(ctPANTILT).ToString+'|Movement macros');
   CB.Items.Add(Ord(ctPANTILTSPEED).ToString+'|Movement macros speed|Slow..Fast');
@@ -250,10 +253,14 @@ begin
   CB.Items.Add(Ord(ctCONFIG).ToString);
   CB.Items.Add(Ord(ctSTROBE).ToString);
   CB.Items.Add(Ord(ctSTROBESPEED).ToString);
+
   CB.Items.Add(Ord(ctPAN).ToString);
   CB.Items.Add(Ord(ctTILT).ToString);
   CB.Items.Add(Ord(ctPANTILT).ToString);
   CB.Items.Add(Ord(ctPANTILTSPEED).ToString);
+  CB.Items.Add(Ord(ctPANCONTINUOUS).ToString);
+  CB.Items.Add(Ord(ctTILTCONTINUOUS).ToString);
+
   CB.Items.Add(Ord(ctGOBO).ToString);
   CB.Items.Add(Ord(ctGOBOROTATION).ToString);
   CB.Items.Add(Ord(ctIRIS).ToString);

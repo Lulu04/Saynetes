@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.amazon.com/dp/B011QEVO44|LinkType2|video|Url2|https://www.youtube.com/watch?v=jYfDDvw0aEU
+[GENERAL]
+Manufacturer|LaluceNatz|Name|DJ Lights|Type|33|Authors|Anonymous|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|20|Height|14|Depth|16|Weight|1.30|Power|0|Connector|3-pin|Bulb|30W LED
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red + Orange Dimmer|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green + Purple Dimmer|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue + White|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Green + Yellow Dimmer|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|28|R1|Begin~0~End~255~Txt~slow..fast
+ID|Light Always On|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Mode|Type|0|R1|Begin~0~End~255~Txt~Sound mode
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red + Orange Dimmer~Green + Purple Dimmer~Blue + White~Green + Yellow Dimmer~Shutter / Strobe~Light Always On~Sound Mode
+[END_MODES]

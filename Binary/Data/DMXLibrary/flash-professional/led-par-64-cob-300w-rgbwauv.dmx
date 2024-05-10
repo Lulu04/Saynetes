@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://flash-butrym.pl/en_US/p/file/cd8d1457c24013dd694ecd6d9294b1bd/P7100400-LED-PAR-COB-300W-RGBWA-UV.pdf|LinkType2|product page|Url2|https://flash-butrym.pl/en_US/p/LED-PAR-64-300W-6in1-COB-RGBWA-UV-BARNDOOR/406|LinkType3|video|Url3|https://www.youtube.com/watch?v=TJtqvw6y7ss
+[GENERAL]
+Manufacturer|Flash Professional|Name|LED PAR 64 COB 300W RGBWAUV|Type|23|Authors|Jeppe Toftdahl cohrt|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|270|Height|280|Depth|240|Weight|3.40|Power|354|Connector|3-pin|Bulb|300W COB RGBAUV LED|LensMinDegree|37.000|LensMaxDegree|37.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~11~Txt~No function|R2|Begin~12~End~255~Txt~Strobe 1Hz..20Hz
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro|Type|12|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~39~Txt~Macro 1|R3|Begin~40~End~59~Txt~Macro 2|R4|Begin~60~End~79~Txt~Macro 3|R5|Begin~80~End~99~Txt~Macro 4|R6|Begin~100~End~119~Txt~Preset Color 1|R7|Begin~120~End~139~Txt~Preset Color 2|R8|Begin~140~End~159~Txt~Preset Color 3|R9|Begin~160~End~179~Txt~Preset Color 4|R10|Begin~180~End~199~Txt~Preset Color 5|R11|Begin~200~End~219~Txt~Preset Color 6|R12|Begin~220~End~239~Txt~Preset Color 7|R13|Begin~240~End~255~Txt~Sound Mode
+ID|Color Change|Type|0|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~39~Txt~ColorJump Color 1|R3|Begin~40~End~59~Txt~ColorJump Color 2|R4|Begin~60~End~79~Txt~ColorJump Color 3|R5|Begin~80~End~99~Txt~ColorJump Color 4|R6|Begin~100~End~119~Txt~ColorJump Color 5|R7|Begin~120~End~139~Txt~ColorJump Color 6|R8|Begin~140~End~159~Txt~ColorJump Color 7|R9|Begin~160~End~179~Txt~ColorJump Color 8|R10|Begin~180~End~199~Txt~ColorJump Color 9|R11|Begin~200~End~219~Txt~ColorJump Color 10|R12|Begin~220~End~239~Txt~ColorJump Color 11|R13|Begin~240~End~255~Txt~ColorJump Color 12
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV
+Name|10-channel 1|ShortName|10ch1|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Macro~Color Change
+Name|10-channel 2|ShortName|10ch2|Content|Dimmer~Strobe~Red~Green~Blue~White~Macro~Color Change~Amber~UV
+[END_MODES]

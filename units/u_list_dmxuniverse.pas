@@ -437,7 +437,8 @@ var
 
 implementation
 uses u_resource_string, u_logfile, u_dmx_util,
-  Math, LCLIntf, u_global_var, u_project_manager, u_apputils, u_helper;
+  Math, LCLIntf, u_global_var, u_project_manager, u_apputils, u_helper,
+  utilitaire_fichier;
 
 {$define SectionImplementation}
 {$include fixture_fromlibrary.inc}
@@ -864,12 +865,12 @@ var i, j, vi: integer;
 
   prop: TSplitProperty;
   s1: string;
-  flag, vb: boolean;
+  vb: boolean;
   vs: single;
   A: TFixLibAvailableChannels;
   procedure LogMissingProperty(const apropName: string);
   begin
-    Log.Error('TDMXFixture.LoadFromString - Property '+apropName+' not found', 3);
+    Log.Error('Property '+apropName+' not found for fixture "'+libfix.General.ManufacturerName+':'+libfix.General.FixtureName, 3);
   end;
 
 begin
@@ -882,18 +883,17 @@ begin
 
   if not prop.StringValueOf('FixtureLocation', s1, '') then begin
     LogMissingProperty('FixtureLocation');
-     exit(False);
+    exit(False);
   end;
 
   try
-    FixLibLocation.LoadFromString(s1);
-    if libfix.LoadFrom(FixLibLocation) then begin
-      Name := libfix.General.FixtureName;
-      Power := libfix.Physical.Power;
-      FixtureType := libfix.General.FixtureType;
-      FDipSwitchs.LoadFrom(libfix.DipSwitchs);
-    end else begin
-      Log.Error('TDMXFixture.LoadFromString - Fail to load fixture "'+FixLibLocation.RelativePathInLibrary+'" from library');
+    if not FixLibLocation.LoadFromString(s1) then begin
+      Log.Error('Property "FixtureLocation" have invalid data', 4);
+      exit(False);
+    end;
+
+    if not libfix.LoadFrom(FixLibLocation) then begin
+      Log.Error('Fail to load fixture from library "'+FixLibLocation.RelativePathInLibrary+'"', 4);
       Name := SFixtureNotInLibrary;
       Power := 0;
       FixtureType := ftOther;
@@ -901,8 +901,18 @@ begin
       exit(False);
     end;
 
-    flag := prop.IntegerValueOf('ID', integer(ID), 0);
-    if not flag then begin
+    Name := libfix.General.FixtureName;
+    Power := libfix.Physical.Power;
+    FixtureType := libfix.General.FixtureType;
+    try
+      FDipSwitchs.LoadFrom(libfix.DipSwitchs);
+    except
+       On E :Exception do begin
+         Log.Error('exception occurs while reading DipSwitchs data: "'+E.Message+'"', 4);
+       end;
+    end;
+
+    if not prop.IntegerValueOf('ID', integer(ID), 0) then begin
       LogMissingProperty('ID');
       exit(False);
     end;
@@ -930,27 +940,30 @@ begin
     if not prop.BooleanValueOf('FlipV', FlipV, False) then
       LogMissingProperty('FlipV');
 
-//    if not prop.IntegerValueOf('ChannelCount', c, 1) then
-//      LogMissingProperty('ChannelCount');
+    try
+      A := libfix.GetChannelsForMode(FixLibLocation.Mode);
+    except
+       On E :Exception do begin
+         Log.Error('an exception accurs while reading the channel in fixture "'+FixLibLocation.RelativePathInLibrary+'" mode "'+FixLibLocation.Mode+'"', 4);
+         exit(False);
+       end;
+    end;
 
-    A := libfix.GetChannelsForMode(FixLibLocation.Mode);
     if Length(A) = 0 then begin
-      Log.Error('TDMXFixture.LoadFromString - no channel found in fixture "'+FixLibLocation.RelativePathInLibrary+'"', 1);
+      Log.Error('no channel found in fixture "'+FixLibLocation.RelativePathInLibrary+'" mode "'+FixLibLocation.Mode+'"', 1);
       exit(False);
     end;
 
-    for i:=0 to High(A) do
-     begin
+    for i:=0 to High(A) do begin
       chan := TDMXChannel.Create;
       chan.Fixture := Self;
       FChannels.Add(chan);
 
-      if not prop.StringValueOf('ChanName'+(i+1).ToString, s1, SUnknown) then
-        LogMissingProperty('ChanName'+(i+1).ToString);
+      prop.StringValueOf('ChanName'+(i+1).ToString, s1, A[i].NameID);
       chan.Name := s1;
 
       if not prop.BooleanValueOf('Locked'+(i+1).ToString, vb, False) then
-        LogMissingProperty('Locked'+(i+1).ToString);
+        Log.Warning('Property '+'Locked'+(i+1).ToString+' not found for fixture "'+libfix.General.ManufacturerName+':'+libfix.General.FixtureName, 3);
       chan.Locked := vb;
 
       chan.Universe := Universe;
@@ -1636,7 +1649,7 @@ var vi, i, k, c: integer;
   s1, s2: string;
   procedure LogMissingProperty(const apropName: string);
   begin
-    Log.Error('TDmxUniverse.LoadFrom - Property '+apropName+' not found', 3);
+    Log.Error('Property '+apropName+' not found', 3);
   end;
 
 begin
@@ -1653,15 +1666,13 @@ begin
 
   if (k = -1) or (k = t.Count-1) then
   begin
-    Log.Error('TDmxUniverse.LoadFrom - Section for universe '+aIndex.ToString+' not found...');
-    prop.SetEmpty;
-    inc(k);
-  end
-  else begin
-    prop.Split(t.Strings[k+1], '|');
-    Log.Info('loading universe'+(aIndex+1).Tostring, 2);
-    inc(k, 2);
+    Log.Error('Header '+UNIVERSEHEAD+aIndex.ToString+UNIVERSETRAIL+' not found', 3);
+    exit(False);
   end;
+
+  prop.Split(t.Strings[k+1], '|');
+  Log.Info('loading '+UNIVERSEHEAD+aIndex.ToString+UNIVERSETRAIL, 3);
+  inc(k, 2);
 
   try
     if not prop.IntegerValueOf('ID', integer(ID), 0) then
@@ -1706,31 +1717,36 @@ begin
       Log.Info('connected to device "'+DevicePath.DeviceNameSerialPort+'"', 3);
     end;
 
-    if not prop.IntegerValueOf('FixtureCount', c, 0) then
-      LogMissingProperty('FixtureCount')
-    else Log.Info(c.ToString+' fixture(s)', 3);
-    for i:=0 to c-1 do
-    begin
+    if not prop.IntegerValueOf('FixtureCount', c, 0) then begin
+      LogMissingProperty('FixtureCount');
+      exit(False);
+    end;
+
+    Log.Info('this universe have '+c.ToString+' fixture(s)', 3);
+
+    for i:=0 to c-1 do begin
       fix := TDMXFixture.Create;
       fix.Universe := Self;
-      if not fix.LoadFromString(t.Strings[k]) then
-      begin
+      if not fix.LoadFromString(t.Strings[k]) then begin
         Log.Error('Fail to Load the fixture from string "'+t.Strings[k]+'"', 3);
         fix.Free;
         Clear;
-        exit;
-      end
-      else begin
-        FFixtures.Add(fix);
-        if TUniverseManager.FixtureIDValue < fix.ID then
-          TUniverseManager.FixtureIDValue := fix.ID;
+        exit(False);
       end;
+
+      FFixtures.Add(fix);
+      if TUniverseManager.FixtureIDValue < fix.ID then
+        TUniverseManager.FixtureIDValue := fix.ID;
       inc(k);
     end;
+
     DoOptimizeUsedChannels;
     Result := TRUE;
   except
-    Log.Error('Exception occured while loading universe U'+(aIndex+1).ToString, 3);
+     On E :Exception do begin
+      Log.Error('Exception occured: "'+E.Message+'"', 3);
+      Result := False;
+     end;
   end;
 end;
 
@@ -2128,12 +2144,14 @@ var t: TStringList;
     Log.Error('TUniverseManager.Load - property '+apropName+' not found', 3);
   end;
 begin
-  Log.Info('Loading universe', 2);
-
   Clear;
   Result := False;
   f := ConcatPaths([Project.GetFolderCommonData, COMMON_PROJECT_DMX_FILENAME]);
-  if not FileExists(f) then exit(True);
+  if not FileExists(f) then begin
+    Log.Info('Project don''t have dmx defined', 2);
+    exit(True);
+  end;
+  Log.Info('Loading universe(s)', 2);
 
   t := TStringList.Create;
   try
@@ -2141,7 +2159,7 @@ begin
       t.LoadFromFile(f);
       Result := LoadFrom(t, aInitDevice);
     except
-      Log.Error('TUniverseManager.Load - Failure when loading '+f, 3);
+      Log.Error('Cannot load '+f, 3);
     end;
   finally
     t.Free;
@@ -2165,13 +2183,13 @@ begin
   k := t.IndexOf(UNIVERSE_HEADER);
   if k = -1 then
   begin
-    Result := TRUE;
-    exit;
+    Result := TRUE;  // no header found means no universe defined -> no error
+    exit;            // (user can define a project without dmx stuff)
   end;
 
   if k = t.Count-1 then
   begin
-    log.Error('TUniverseManager.LoadFrom - Line with universe data is missing', 3);
+    log.Error('Header have no data', 3);
     Result := False;
     exit;
   end;

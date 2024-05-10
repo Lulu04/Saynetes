@@ -283,7 +283,8 @@ type
                      ftParRectangularMultipleColoredLed,
                      ftBarShortTransparentLed,  // 30
                      ftBarShortColoredLed,
-                     ftFlower02
+                     ftFlower02,
+                     ftFlower03
                      );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
@@ -306,7 +307,7 @@ const
                    ftProfile,
                    ftScanner, ftMovingHead, ftLaser,
 
-                   ftFlower01, ftFlower02,
+                   ftFlower01, ftFlower02, ftFlower03,
 
                    ftColorChanger,
                    ftSmokeMachine, ftBubbleMachine, ftFan,
@@ -346,7 +347,8 @@ const
                True,  // ParRectangularColoredTransparentLed
                False, // ftBarShortTransparentLed
                False, // ftBarShortColoredLed
-               True   // flower02
+               True,  // flower02
+               True   // flower03
                );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
@@ -382,7 +384,8 @@ const
                True,  // ParRectangularColoredTransparentLed
                False, // ftBarShortTransparentLed
                False, // ftBarShortColoredLed
-               True   // flower02
+               True,  // flower02
+               True   // flower03
                );
 type
 
@@ -426,7 +429,9 @@ type
                      ctTILTSPEED,       // 35
                      ctFAN,
                      ctSMOKE,
-                     ctPANTILT
+                     ctPANTILT,
+                     ctPANCONTINUOUS,
+                     ctTILTCONTINUOUS
                    );
 
     // stage shape rendered in the stage view

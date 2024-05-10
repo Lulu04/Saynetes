@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://bklumitec.com/out/media/87401_BA_E_Ignition_Accu_Par_RGB_W.pdf|LinkType2|product page|Url2|https://bklumitec.com/en/LIGHT/Light-technics/Spotlights/Battery/LED-Accu-PAR-64-Floor-RGB-W-polish.html
+[GENERAL]
+Manufacturer|Ignition|Name|LED Accu PAR|Type|16|Authors|Karl Humbug|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|285|Height|378|Depth|274|Weight|7.10|Power|65|Connector|3-pin|Bulb|10× 3W RGB LEDs + 5× 3W Cool White LEDs|LensMinDegree|25.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Color Presets|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Preset 36 color presets
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Strobe 1Hz..12Hz
+ID|Effects|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~RampUp|R3|Begin~64~End~95~Txt~RampDown|R4|Begin~96~End~127~Txt~RampUpDown|R5|Begin~128~End~159~Txt~ColorJump|R6|Begin~160~End~191~Txt~ColorJump 3-color, random|R7|Begin~192~End~223~Txt~ColorJump 7-color, random|R8|Begin~224~End~255~Txt~Sound to light
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer 2|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1 / 1-channel|ShortName|1-1ch|Content|Color Presets
+Name|2 / 2-channel|ShortName|2-2ch|Content|Color Presets~Dimmer
+Name|3 / 3-channel|ShortName|3-3ch|Content|Red~Green~Blue
+Name|4 / 4-channel|ShortName|4-4ch|Content|Red~Green~Blue~White
+Name|5 / 6-channel|ShortName|5-6ch|Content|Red~Green~Blue~White~Strobe~Dimmer
+Name|6 / 8-channel 1|ShortName|6-8ch1|Content|Red~Green~Blue~White~Strobe~Dimmer~Effects~Effect Speed
+Name|7 / 8-channel 2|ShortName|7-8ch2|Content|Red~Green~Blue~White~Strobe~Dimmer~Effects~Dimmer 2
+[END_MODES]

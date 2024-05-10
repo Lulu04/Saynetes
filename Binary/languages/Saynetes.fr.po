@@ -2300,11 +2300,11 @@ msgstr "Barre de LED colorées"
 
 #: u_resource_string.sbarshortcoloredled
 msgid "Short bar colored led"
-msgstr ""
+msgstr "Barre courte de LED colorées"
 
 #: u_resource_string.sbarshorttransparentled
 msgid "Short bar transparent led"
-msgstr ""
+msgstr "Barre courte de LED transparentes"
 
 #: u_resource_string.sbegin
 msgctxt "u_resource_string.sbegin"
@@ -2814,7 +2814,11 @@ msgstr "Flower 1"
 
 #: u_resource_string.sflower02
 msgid "Flower 2"
-msgstr ""
+msgstr "Flower 2"
+
+#: u_resource_string.sflower03
+msgid "Flower 3"
+msgstr "Flower 3"
 
 #: u_resource_string.sfollow
 msgid "Follow"
@@ -3187,11 +3191,11 @@ msgstr "PAR long à LED transparentes"
 
 #: u_resource_string.sparrectangularmultiplecoloredled
 msgid "Rectangular PAR with multiple colored led"
-msgstr ""
+msgstr "PAR rectangulaire avec plusieurs LED colorées"
 
 #: u_resource_string.sparrectangularmultipletransparentled
 msgid "Rectangular PAR with multiple transparent led"
-msgstr ""
+msgstr "PAR rectangulaire avec plusieurs LED transparentes"
 
 #: u_resource_string.sparshortbulb
 msgid "Short PAR with bulb"
@@ -3303,10 +3307,8 @@ msgid "Square"
 msgstr "Carré"
 
 #: u_resource_string.squareparmultiplecoloredled
-#, fuzzy
-#| msgid "Square PAR with multiple colored leds"
 msgid "Square PAR with multiple colored led"
-msgstr "PAR carré avec plusieurs leds colorées"
+msgstr "PAR carré avec plusieurs LED colorées"
 
 #: u_resource_string.srandomduration
 msgid "Random duration"
@@ -3513,10 +3515,8 @@ msgid "Speed"
 msgstr "Vitesse"
 
 #: u_resource_string.ssquareparmultipletransparentled
-#, fuzzy
-#| msgid "Square PAR with multiple transparent leds"
 msgid "Square PAR with multiple transparent led"
-msgstr "PAR carré avec plusieurs leds transparentes"
+msgstr "PAR carré avec plusieurs LED transparentes"
 
 #: u_resource_string.ssquareparsingletransparentled
 msgid "Square PAR with single transparent led"
@@ -3705,4 +3705,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-

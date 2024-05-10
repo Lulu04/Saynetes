@@ -174,6 +174,7 @@ begin
   ftBarShortTransparentLed: Result+='30_BarShortTransparentLed.svg';
   ftBarShortColoredLed: Result+='31_BarShortColoredLed.svg';
   ftFlower02: Result+='32_Flower02.svg';
+  ftFlower03: Result+='33_Flower03.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -214,6 +215,7 @@ begin
    ftBarShortTransparentLed: Result := SBarShortTransparentLed;
    ftBarShortColoredLed: Result := SBarShortColoredLed;
    ftFlower02: Result := SFlower02;
+   ftFlower03: Result := SFlower03;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
