@@ -106,6 +106,8 @@ begin
   AddImageToImageList('Fan.svg', ILChannelType);
   AddImageToImageList('Smoke.svg', ILChannelType);
   AddImageToImageList('PanTilt.svg', ILChannelType);
+  AddImageToImageList('PanContinuous.svg', ILChannelType);
+  AddImageToImageList('TiltContinuous.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

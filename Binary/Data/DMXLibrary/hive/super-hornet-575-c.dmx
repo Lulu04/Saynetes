@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://drive.google.com/file/d/1pJK6BaAhvOGTwMP1VhfO8GH25YicCDwS/view|LinkType2|product page|Url2|https://hivelighting.com/c-series/575-C/|LinkType3|video|Url3|https://www.youtube.com/watch?v=gzvpdeNpK3o
+[GENERAL]
+Manufacturer|Hive Lighting|Name|Super Hornet 575-C|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|100|Height|100|Depth|305|Weight|6.90|Power|600|Connector|5-pin|Bulb|LED|LensMinDegree|19.000|LensMaxDegree|180.000
+[CHAN_DEF]
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CCT|Type|27|R1|Begin~0~End~255~Txt~1650K..8025K
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~0…100%
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~0…360°
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Sources|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~15~Txt~Violet Glow Stick #f20dcc|R3|Begin~16~End~21~Txt~Pink Glow Stick #f9066b|R4|Begin~22~End~27~Txt~Yellow Glow Stick #daec13|R5|Begin~28~End~34~Txt~Red Glow Stick #ff0000|R6|Begin~35~End~41~Txt~Green Glow Stick #00fff7|R7|Begin~42~End~46~Txt~Blue Glow Stick #0055ff|R8|Begin~47~End~52~Txt~Red Traffic Light #f2330d|R9|Begin~53~End~58~Txt~Yellow Traffic Light #b9f20d|R10|Begin~59~End~64~Txt~Green Traffic Light #03fcf4|R11|Begin~65~End~70~Txt~Amber Caution #f2cc0d|R12|Begin~71~End~76~Txt~Road Flare #ec1313|R13|Begin~77~End~82~Txt~Blowtorch #0da6f2|R14|Begin~83~End~88~Txt~Luminescence #04f3fb|R15|Begin~89~End~94~Txt~Computer Monitor #99666f|R16|Begin~95~End~100~Txt~Mobile Phone #7b738c|R17|Begin~101~End~106~Txt~Sun Blue Hour #667f99|R18|Begin~107~End~112~Txt~Sun Overcast #8c8073|R19|Begin~113~End~123~Txt~Sun Direct #808080|R20|Begin~124~End~130~Txt~Gas Light #8c737b|R21|Begin~131~End~136~Txt~Candlelight #aabf40|R22|Begin~137~End~142~Txt~Antique Bulb #919966|R23|Begin~143~End~148~Txt~Warm Antique Bulb #889966|R24|Begin~149~End~154~Txt~Christmas Lights #848c73|R25|Begin~155~End~160~Txt~Night Light #69705c|R26|Begin~161~End~166~Txt~Heat Lamp #cc2200|R27|Begin~167~End~177~Txt~Grow Light #26d9bb|R28|Begin~178~End~184~Txt~Tungsten Bulb #86797b|R29|Begin~185~End~190~Txt~Incandescent #808080|R30|Begin~191~End~196~Txt~Halogen #867d79|R31|Begin~197~End~202~Txt~HMI #666f99|R32|Begin~203~End~208~Txt~High Pressure Sodium Vapor #dbf20d|R33|Begin~209~End~214~Txt~Low Pressure Sodium Vapor #e5e619|R34|Begin~215~End~220~Txt~Mercury Vapor #59a6a6|R35|Begin~221~End~225~Txt~Metal Halide #59a699|R36|Begin~226~End~230~Txt~Ceramic #996666|R37|Begin~231~End~235~Txt~Carbon Arc #84738c|R38|Begin~236~End~240~Txt~Xenon #84738c|R39|Begin~241~End~245~Txt~Blacklight #5500ff|R40|Begin~246~End~250~Txt~Cool White Fluorescent #609f67|R41|Begin~251~End~255~Txt~Warm White Fluorescent #609f67
+ID|Corrective|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Full +Green Daylight|R3|Begin~21~End~30~Txt~1/2 +Green Daylight|R4|Begin~31~End~40~Txt~1/4 +Green Daylight|R5|Begin~41~End~50~Txt~1/8 +Green Daylight|R6|Begin~51~End~60~Txt~Full +Green Tungsten|R7|Begin~61~End~70~Txt~1/2 +Green Tungsten|R8|Begin~71~End~80~Txt~1/4 +Green Tungsten|R9|Begin~81~End~90~Txt~1/8 +Green Tungsten|R10|Begin~91~End~100~Txt~Full -Green Daylight|R11|Begin~101~End~110~Txt~1/2 -Green Daylight|R12|Begin~111~End~120~Txt~1/4 -Green Daylight|R13|Begin~121~End~130~Txt~1/8 -Green Daylight|R14|Begin~131~End~140~Txt~Full -Green Tungsten|R15|Begin~141~End~150~Txt~1/2 -Green Tungsten|R16|Begin~151~End~160~Txt~1/4 -Green Tungsten|R17|Begin~161~End~170~Txt~1/8 -Green Tungsten|R18|Begin~171~End~180~Txt~Full CTS Daylight|R19|Begin~181~End~190~Txt~1/2 CTS Daylight|R20|Begin~191~End~200~Txt~1/4 CTS Daylight|R21|Begin~201~End~210~Txt~1/8 CTS Daylight|R22|Begin~211~End~220~Txt~Full CTS Tungsten|R23|Begin~221~End~230~Txt~1/2 CTS Tungsten|R24|Begin~231~End~240~Txt~1/4 CTS Tungsten|R25|Begin~241~End~255~Txt~1/8 CTS Tungsten
+ID|EFX|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~28~Txt~Police Car 1|R3|Begin~29~End~46~Txt~Police Car 2|R4|Begin~47~End~64~Txt~Emergency 1|R5|Begin~65~End~82~Txt~Emergency 2|R6|Begin~83~End~100~Txt~Emergency 3|R7|Begin~101~End~118~Txt~Club Lights|R8|Begin~119~End~136~Txt~Paparazzi|R9|Begin~137~End~154~Txt~Color Chase|R10|Begin~155~End~172~Txt~Fire|R11|Begin~173~End~190~Txt~Fireworks|R12|Begin~191~End~208~Txt~Pulsing|R13|Begin~209~End~226~Txt~TV|R14|Begin~227~End~255~Txt~Lightning
+ID|EFX Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|HSI|ShortName|HSI|Content|Intensity~CCT~Saturation~Hue
+Name|RGB+CCT|ShortName|RGB+CCT|Content|Intensity~CCT~Red~Green~Blue
+Name|FX+|ShortName|FX+|Content|Intensity~CCT~Saturation~Hue~Sources~Corrective~EFX~EFX Speed
+[END_MODES]

@@ -1,0 +1,80 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.kinoflotest2.com/PDF/News/Operational%20Manual%20for%20the%20web/3100105%20Rev%20A%20Celeb%C2%AE%20250-450-450@%20LED%20DMX%2008-10-2017.pdf|LinkType2|manual|Url2|https://www.kinoflotest2.com/PDF/True%20Match%20Firmware%204.0/True%20Match%20Firmware%205.0%20RDM%20DMX%20Personalities%20May%202021.pdf|LinkType3|product page|Url3|https://www.kinoflotest2.com/Products%20Button/LED/Celeb%20450%20DMX/Celeb_450_DMX.html|LinkType4|video|Url4|https://www.youtube.com/watch?v=WIFVkzYkArE
+[GENERAL]
+Manufacturer|Kino Flo|Name|Celeb 450 LED DMX|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|115|Height|36|Depth|13|Weight|12.00|Power|300|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~2500K..9900K
+ID|Green-Magenta Point|Type|0|R1|Begin~0~End~10~Txt~Neutral|R2|Begin~11~End~20~Txt~Full minus green|R3|Begin~21~End~119~Txt~-99%…-1%|R4|Begin~120~End~145~Txt~Neutral|R5|Begin~146~End~244~Txt~1%…99%|R6|Begin~245~End~255~Txt~Full plus green
+ID|Gel|Type|12|R1|Begin~0~End~3~Txt~No function|R2|Begin~4~End~5~Txt~KF Candle Flame #fc8004|R3|Begin~6~End~7~Txt~KF Flo Warm White #ffffcc|R4|Begin~8~End~9~Txt~KF Flo Cool White #ccffff|R5|Begin~10~End~11~Txt~KF LP Sodium Vpr #ff9933|R6|Begin~12~End~13~Txt~KF Mercury Vpr #ccccff|R7|Begin~14~End~15~Txt~KF 20K Blue Sky #9bc2e6|R8|Begin~16~End~17~Txt~KF Green Screen #92d050|R9|Begin~18~End~19~Txt~KF Blue Screen #0070c0|R10|Begin~20~End~21~Txt~Smokey Pink #ff99cc|R11|Begin~22~End~23~Txt~Dark Magenta #cc00ff|R12|Begin~24~End~25~Txt~Bright Rose #ff33cc|R13|Begin~26~End~27~Txt~Pale Salmon #ff66cc|R14|Begin~28~End~29~Txt~Light Rose #ff6699|R15|Begin~30~End~31~Txt~Light Salmon #ff9999|R16|Begin~32~End~33~Txt~Magenta #ff00ff|R17|Begin~34~End~35~Txt~Pink #ff66cc|R18|Begin~36~End~37~Txt~Rosy Amber #ff7c80|R19|Begin~38~End~39~Txt~Pale Red #ff5050|R20|Begin~40~End~41~Txt~Scarlet #ff3300|R21|Begin~42~End~43~Txt~Loving Amber #ff9933|R22|Begin~44~End~45~Txt~Pale Rose #ff7c80|R23|Begin~46~End~47~Txt~Medium Red #ff5050|R24|Begin~48~End~49~Txt~Gold Tint #ffcc00|R25|Begin~50~End~51~Txt~M Bastard Amber #ffcc99|R26|Begin~52~End~53~Txt~Bright Red #ff3300|R27|Begin~54~End~55~Txt~Flame Red #ff6600|R28|Begin~56~End~57~Txt~Primary Red #ff0000|R29|Begin~58~End~59~Txt~Light Red #ff5050|R30|Begin~60~End~61~Txt~Dark Salmon #f96435|R31|Begin~62~End~63~Txt~Fire #f95427|R32|Begin~64~End~65~Txt~Sunset Red #ee6612|R33|Begin~66~End~67~Txt~Pale Gold #f0b31c|R34|Begin~68~End~69~Txt~English Rose #f68276|R35|Begin~70~End~71~Txt~Bastard Amber #f3a25f|R36|Begin~72~End~73~Txt~Surprise Peach #f4ae74|R37|Begin~74~End~75~Txt~Deep Gld Amber #f8a714|R38|Begin~76~End~77~Txt~Dark Amber #f3c003|R39|Begin~78~End~79~Txt~Apricot #f98545|R40|Begin~80~End~81~Txt~Gold Amber #f98545|R41|Begin~82~End~83~Txt~Cosmetic Peach #fecaba|R42|Begin~84~End~85~Txt~Deep Orange #ef7903|R43|Begin~86~End~87~Txt~Chocolate #bb6209|R44|Begin~88~End~89~Txt~Orange #e55809|R45|Begin~90~End~91~Txt~White Flame #f0fed2|R46|Begin~92~End~93~Txt~Medium Amber #f9cf59|R47|Begin~94~End~95~Txt~Pale Amber Gold #f7d36d|R48|Begin~96~End~97~Txt~Chrome Orange #fd8c4d|R49|Begin~98~End~99~Txt~Straw Tint #fafcaa|R50|Begin~100~End~101~Txt~Straw #fffc79|R51|Begin~102~End~103~Txt~Deep Straw #f6f000|R52|Begin~104~End~105~Txt~Deep Amber #f3c003|R53|Begin~106~End~107~Txt~Light Amber #fddb5f|R54|Begin~108~End~109~Txt~Yellow #fffb37|R55|Begin~110~End~111~Txt~Medium Yellow #fdfda1|R56|Begin~112~End~113~Txt~Spring Yellow #ffff66|R57|Begin~114~End~115~Txt~Pale Yellow #fdfda1|R58|Begin~116~End~117~Txt~Lime Green #8ffc0c|R59|Begin~118~End~119~Txt~Pale Green #b9fd67|R60|Begin~120~End~121~Txt~Leaf Green #92d050|R61|Begin~122~End~123~Txt~Fern Green #00cc66|R62|Begin~124~End~125~Txt~Primary Green #00ff00|R63|Begin~126~End~127~Txt~Moss Green #05fc10|R64|Begin~128~End~129~Txt~Dark Y Green #91fb03|R65|Begin~130~End~131~Txt~Dark Green #03df03|R66|Begin~132~End~133~Txt~Marine Blue #4088fe|R67|Begin~134~End~135~Txt~Peacock Blue #0099ff|R68|Begin~136~End~137~Txt~Med Blue-Green #3399ff|R69|Begin~138~End~139~Txt~Sp Steel Blue #89c4ff|R70|Begin~140~End~141~Txt~Lagoon Blue #4bd1fb|R71|Begin~142~End~143~Txt~Steel Blue #c1e0ff|R72|Begin~144~End~145~Txt~Lighter Blue #c1eaff|R73|Begin~146~End~147~Txt~Summer Blue #92d6f8|R74|Begin~148~End~149~Txt~Light Blue #c1e0ff|R75|Begin~150~End~151~Txt~Moonlight Blue #3a7bfc|R76|Begin~152~End~153~Txt~Pale Blue #aec1fc|R77|Begin~154~End~155~Txt~Pale Navy Blue #6387f9|R78|Begin~156~End~157~Txt~Mist Blue #99ccff|R79|Begin~158~End~159~Txt~Bright Blue #0066cc|R80|Begin~160~End~161~Txt~True Blue #2190ff|R81|Begin~162~End~163~Txt~Dark Steel Blue #2994ff|R82|Begin~164~End~165~Txt~Daylight Blue #99ccff|R83|Begin~166~End~167~Txt~Slate Blue #006f6c|R84|Begin~168~End~169~Txt~Medium Blue #2994ff|R85|Begin~170~End~171~Txt~Sky Blue #5badff|R86|Begin~172~End~173~Txt~Paler Lavender #acaefe|R87|Begin~174~End~175~Txt~Alice Blue #7b7efd|R88|Begin~176~End~177~Txt~Special Lavender #8859fd|R89|Begin~178~End~179~Txt~Pale Violet #af83fd|R90|Begin~180~End~181~Txt~Just Blue #7c58fe|R91|Begin~182~End~183~Txt~Violet #9b39fd|R92|Begin~184~End~185~Txt~Dark Blue #5c41fd|R93|Begin~186~End~187~Txt~Surprise Pink #fb6efe|R94|Begin~188~End~189~Txt~Deeper Blue #2b08fc|R95|Begin~190~End~191~Txt~Special M Blue #745dfd|R96|Begin~192~End~193~Txt~Zenith Blue #b694fa|R97|Begin~194~End~195~Txt~Light Lavender #cdb6fc|R98|Begin~196~End~197~Txt~Palace Blue #745dfd|R99|Begin~198~End~199~Txt~Lilac Tint #d77def|R100|Begin~200~End~201~Txt~Deep Blue #5c41fd|R101|Begin~202~End~203~Txt~Lavender Tint #ba35ef|R102|Begin~204~End~205~Txt~Pale Lavender #d37ff5|R103|Begin~206~End~207~Txt~Dark Lavender #a011d9|R104|Begin~208~End~209~Txt~Lavender #a011d9|R105|Begin~210~End~211~Txt~Deep Lavender #780da3|R106|Begin~212~End~213~Txt~Congo Blue #471aee|R107|Begin~214~End~215~Txt~Rose Purple #da10d0|R108|Begin~216~End~217~Txt~Mauve #f0346a|R109|Begin~218~End~219~Txt~Rose Pink #f35b86|R110|Begin~220~End~221~Txt~Follies Pink #f46c93|R111|Begin~222~End~223~Txt~Bright Pink #f2548c|R112|Begin~224~End~225~Txt~Middle Rose #f577a4|R113|Begin~226~End~227~Txt~Medium Pink #f8a6c3|R114|Begin~228~End~229~Txt~Light Pink #fcd4e2|R115|Begin~230~End~231~Txt~Dark Pink #f2548c|R116|Begin~232~End~233~Txt~Flesh Pink #fdd3d3|R117|Begin~234~End~255~Txt~No function
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~0…360°
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~0…100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Effect|Type|0|R1|Begin~0~End~19~Txt~Candle|R2|Begin~20~End~29~Txt~Fire|R3|Begin~30~End~39~Txt~TV|R4|Begin~40~End~49~Txt~Police|R5|Begin~50~End~59~Txt~Lightning|R6|Begin~60~End~69~Txt~Paparazzi|R7|Begin~70~End~79~Txt~Pulse|R8|Begin~80~End~89~Txt~Scroll|R9|Begin~90~End~255~Txt~No function Reserved
+ID|FX Param 1|Type|0|R1|Begin~0~End~255~Txt~
+ID|FX Param 2|Type|0|R1|Begin~0~End~255~Txt~
+ID|FX Param 3|Type|0|R1|Begin~0~End~255~Txt~
+ID|FX Param 4|Type|0|R1|Begin~0~End~255~Txt~
+ID|FX Param 5|Type|0|R1|Begin~0~End~255~Txt~
+ID|CIE x|Type|0|R1|Begin~0~End~255~Txt~0…0.85
+ID|CIE y|Type|0|R1|Begin~0~End~255~Txt~0…0.85
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Color Temperature fine|Type|27|R1|Begin~0~End~255~Txt~
+ID|Hue fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Saturation fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|CIE x fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|CIE y fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Crossfade|Type|0|R1|Begin~0~End~255~Txt~CCT … Color Mix
+ID|Color Temperature 2|Type|27|R1|Begin~0~End~255~Txt~2500K..9900K
+ID|Crossfade fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Color Temperature 2 fine|Type|27|R1|Begin~0~End~255~Txt~
+ID|CIE x2|Type|0|R1|Begin~0~End~255~Txt~0…0.85
+ID|CIE y2|Type|0|R1|Begin~0~End~255~Txt~0…0.85
+ID|CIE x2 fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|CIE y2 fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Tungsten|Type|1|R1|Begin~0~End~255~Txt~0..100% Tungsten
+ID|Daylight|Type|1|R1|Begin~0~End~255~Txt~0..100% Daylight
+ID|Tungsten fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Daylight fine|Type|1|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|P1 DIMMING & CCT|ShortName|P1|Content|Dimmer~Color Temperature
+Name|P2 HSI + CCT, Gel 8bit|ShortName|P2|Content|Dimmer~Color Temperature~Green-Magenta Point~Gel~Hue~Saturation
+Name|P3 CCT, RGB 8bit|ShortName|P3|Content|Dimmer~Color Temperature~Green-Magenta Point~Red~Green~Blue
+Name|P4 FX 8bit|ShortName|P4|Content|Dimmer~Effect~Color Temperature~FX Param 1~FX Param 2~FX Param 3~FX Param 4~FX Param 5
+Name|P5 CIE xy 8bit|ShortName|P5|Content|Dimmer~CIE x~CIE y
+Name|P6 CCT 16bit|ShortName|P6|Content|Dimmer~Dimmer fine~Color Temperature~Green-Magenta Point
+Name|P7 HSI & CCT, Gel 16bit|ShortName|P7|Content|Dimmer~Dimmer fine~Color Temperature~Green-Magenta Point~Gel~Hue~Saturation
+Name|P8 CCT, RGB 16bit|ShortName|P8|Content|Dimmer~Dimmer fine~Color Temperature~Green-Magenta Point~Red~Green~Blue
+Name|P9 FX 16bit|ShortName|P9|Content|Dimmer~Dimmer fine~Effect~Color Temperature~FX Param 1~FX Param 2~FX Param 3~FX Param 4~FX Param 5
+Name|P10 CIE xy 16bit|ShortName|P10|Content|Dimmer~Dimmer fine~CIE x~CIE y
+Name|P11 CCT 8bit|ShortName|P11|Content|Dimmer~Color Temperature~Green-Magenta Point
+Name|P12 CCT 16bit|ShortName|P12|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Green-Magenta Point
+Name|P13 Gel 8bit|ShortName|P13|Content|Dimmer~Color Temperature~Gel
+Name|P14 Gel 16bit|ShortName|P14|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Gel
+Name|P15 HSI & CCT 8bit|ShortName|P15|Content|Dimmer~Color Temperature~Hue~Saturation
+Name|P16 HSI & CCT 16bit|ShortName|P16|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Hue~Hue fine~Saturation~Saturation fine
+Name|P17 RGB & CCT 8bit|ShortName|P17|Content|Dimmer~Color Temperature~Red~Green~Blue
+Name|P18 RGB & CCT 16bit|ShortName|P18|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Red~Red fine~Green~Green fine~Blue~Blue fine
+Name|P19 CIE xy 8bit|ShortName|P19|Content|Dimmer~CIE x~CIE y
+Name|P20 CIE xy 16bit|ShortName|P20|Content|Dimmer~Dimmer fine~CIE x~CIE x fine~CIE y~CIE y fine
+Name|P21 FX 8bit|ShortName|P21|Content|Dimmer~Effect~Color Temperature~FX Param 1~FX Param 2~FX Param 3~FX Param 4~FX Param 5
+Name|P22 FX 16bit|ShortName|P22|Content|Dimmer~Dimmer fine~Effect~Color Temperature~Color Temperature fine~FX Param 1~FX Param 2~FX Param 3~FX Param 4~FX Param 5
+Name|P23 xfade CCT & HSI 8bit|ShortName|P23|Content|Dimmer~Color Temperature~Green-Magenta Point~Crossfade~Color Temperature 2~Hue~Saturation
+Name|P24 xfade CCT & HSI 16bit|ShortName|P24|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Green-Magenta Point~Crossfade~Crossfade fine~Color Temperature 2~Color Temperature 2 fine~Hue~Hue fine~Saturation~Saturation fine
+Name|P25 xfade CCT & RBG 8bit|ShortName|P25|Content|Dimmer~Color Temperature~Green-Magenta Point~Crossfade~Color Temperature 2~Red~Green~Blue
+Name|P26 xfade CCT & RBG 16bit|ShortName|P26|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Green-Magenta Point~Crossfade~Crossfade fine~Color Temperature 2~Color Temperature 2 fine~Red~Red fine~Green~Green fine~Blue~Blue fine
+Name|P27 xfade CIE xy1 & CIE xy2 8bit|ShortName|P27|Content|Dimmer~CIE x~CIE y~Crossfade~CIE x2~CIE y2
+Name|P28 xfade CIE xy1 & CIE xy2 16bit|ShortName|P28|Content|Dimmer~Dimmer fine~CIE x~CIE x fine~CIE y~CIE y fine~Crossfade~Crossfade fine~CIE x2~CIE x2 fine~CIE y2~CIE y2 fine
+Name|P29 xfade CCT & TDRGB 8bit|ShortName|P29|Content|Dimmer~Color Temperature~Green-Magenta Point~Crossfade~Tungsten~Daylight~Red~Green~Blue
+Name|P30 xfade CCT & TDRGB 16bit|ShortName|P30|Content|Dimmer~Dimmer fine~Color Temperature~Color Temperature fine~Green-Magenta Point~Crossfade~Crossfade fine~Tungsten~Tungsten fine~Daylight~Daylight fine~Red~Red fine~Green~Green fine~Blue~Blue fine
+[END_MODES]

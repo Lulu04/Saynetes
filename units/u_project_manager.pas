@@ -281,22 +281,20 @@ begin
     else
     begin
       fileVersion := t.Strings[k];
-      Log.Info('project''s file version: '+fileVersion, 2);
+      Log.Info('project''s file version: '+fileVersion, 1);
 
       projectfolder := ExtractFileName(aFilename);
       projectfolder := ChangeFileExt(projectfolder, '');
       path := ConcatPaths([ExtractFilePath(aFilename), projectfolder]);
       FAudioStorage.AbsoluteBaseFolder := path;
       FImageStorage.AbsoluteBaseFolder := path;
-      Log.Info('project storage setting to '+path, 2);
+      Log.Info('project storage setting to '+path, 1);
 
       Result := TRUE;
       SoundManager.Load(t, FAudioStorage.AbsoluteStorageFolder);
 
-      if not KeepUniverseManager then
-        Result := Result and UniverseManager.Load
-      else
-        Log.Info('Keep the same universes as previous', 2);
+      if not KeepUniverseManager then Result := Result and UniverseManager.Load
+        else Log.Info('Keep the same universes as previous', 1);
 
       FormDMXGroup.LoadFrom(GetFolderCommonData+COMMON_PROJECT_DMX_GROUP_FILENAME);
       Sequences.Load(t);

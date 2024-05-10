@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|video|Url1|https://www.youtube.com/watch?v=Ojwpf-J7rvQ
+[GENERAL]
+Manufacturer|Ibiza light|Name|LS-005LED|Type|28|Authors|Tormant|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|460|Height|160|Depth|140|Weight|0|Power|30|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Dimmer/Strobe|Type|1|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~127~Txt~Strobe slow..fast|R3|Begin~128~End~128~Txt~No function|R4|Begin~129~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Dimmer/Strobe~Red~Green~Blue
+[END_MODES]

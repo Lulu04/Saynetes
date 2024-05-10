@@ -1347,6 +1347,8 @@ begin
                          (s1 = 'uv') or (s1 = 'cyan') or (s1 = 'magenta') or (s1 = 'yellow') or
                          (s1 = 'lime') or (s1 = 'indigo');
 
+    if (s1 = 'saturation') or (s1 = 'hue') then coarseChannel^.ChanType := ctDIMMER;
+
     // check if the name of the channel is the same as a wheel
     FSourceWheelIndex := IndexOfWheel(coarseChannel^.ID);
 

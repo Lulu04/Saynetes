@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://github.com/FloEdelmann/DMX-Ventilator
+[GENERAL]
+Manufacturer|Gruft|Name|Ventilator|Type|21|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|1000|Height|1000|Depth|160|Weight|10.00|Power|48|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Motor Speed|Type|36|DefaultValue|128|R1|Begin~0~End~3~Txt~Rotation stop|R2|Begin~4~End~119~Txt~Rotation fast CCW..slow CCW|R3|Begin~120~End~139~Txt~Rotation stop|R4|Begin~140~End~255~Txt~Rotation slow CW..fast CW
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~29~Txt~Open|R2|Begin~30~End~244~Txt~Strobe slow..fast|R3|Begin~245~End~255~Txt~Strobe fast
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Motor Speed~Red~Green~Blue~Strobe
+[END_MODES]

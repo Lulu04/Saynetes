@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[GENERAL]
+Manufacturer|Ghost|Name|IP Spot Pro|Type|16|Authors|zampano|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|340|Height|240|Depth|240|Weight|4.50|Power|200|Connector|3-pin|Bulb|15W RGBWA LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe 1Hz..30Hz
+ID|Macros|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Function macro
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Dimmer~Red~Green~Blue~White~Amber~Strobe~Macros~Macro Speed
+[END_MODES]
