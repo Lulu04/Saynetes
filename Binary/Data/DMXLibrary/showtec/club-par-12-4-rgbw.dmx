@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/42650_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/42650-club-par-12-4-rgbw.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=9CTsLX5hNuU
+[GENERAL]
+Manufacturer|Showtec|Name|Club PAR 12/4 RGBW|Type|16|Authors|Voyo|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|288|Height|170|Depth|113|Weight|2.20|Power|77|Connector|3-pin|Bulb|12x 8W RGBW LEDs|Lumens|3200|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~12~Txt~Closed|R2|Begin~13~End~255~Txt~Strobe 0Hz..20Hz
+ID|Built in programs|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Program 1|R3|Begin~20~End~29~Txt~Program 2|R4|Begin~30~End~39~Txt~Program 3|R5|Begin~40~End~49~Txt~Program 4|R6|Begin~50~End~59~Txt~Program 5|R7|Begin~60~End~69~Txt~Program 6|R8|Begin~70~End~79~Txt~Program 7|R9|Begin~80~End~89~Txt~Program 8|R10|Begin~90~End~99~Txt~Program 9|R11|Begin~100~End~109~Txt~Program 10|R12|Begin~110~End~119~Txt~Program 11|R13|Begin~120~End~129~Txt~Program 12|R14|Begin~130~End~139~Txt~Program 13|R15|Begin~140~End~255~Txt~Sound-controlled
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Fade Time|Type|16|R1|Begin~0~End~255~Txt~Time instant..long
+[END_CHAN_DEF]
+[MODES]
+Name|RGBW|ShortName|rgbw|Content|Red~Green~Blue~White
+Name|DRGBW Strobe & Program|ShortName|drgbw-strb-prg|Content|Dimmer~Red~Green~Blue~White~Strobe~Built in programs~Program Speed~Fade Time
+[END_MODES]

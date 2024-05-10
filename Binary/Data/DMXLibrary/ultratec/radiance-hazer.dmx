@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://gmbh.ultratecfx.com/docs/default-source/downloads-radiance-hazer/radiance-haze-manual-2020.pdf?sfvrsn=2|LinkType2|product page|Url2|https://ultratecfx.com/atmospherics/products-catalog/radiance-hazer/|LinkType3|video|Url3|https://www.youtube.com/watch?v=yOKOLkTNOuw
+[GENERAL]
+Manufacturer|Ultratec|Name|Radiance Hazer|Type|10|Authors|Ken Harris|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|279|Height|180|Depth|419|Weight|13.00|Power|500|Connector|5-pin
+[CHAN_DEF]
+ID|Haze|Type|37|R1|Begin~0~End~255~Txt~0%..100%
+ID|Fan|Type|36|R1|Begin~0~End~255~Txt~Rotation CW slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Haze~Fan
+[END_MODES]

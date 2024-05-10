@@ -1,0 +1,16 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/414220_c_414220_427226_r5_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_led_theater_spot_100_3000k.htm|LinkType3|video|Url3|https://www.thomann.de/gb/thomanntv_video_varytec_led_theater_spot_100_3000k_5959.html
+[GENERAL]
+Manufacturer|Varytec|Name|LED Theater Spot 100|Type|23|Authors|benni|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|160|Height|185|Depth|260|Weight|5.00|Power|115|Connector|3-pin|Bulb|100W COB LED|LensMinDegree|15.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Dimmer
+Name|2-channel|ShortName|2ch|Content|Dimmer~Strobe
+[END_MODES]

@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musiclights.it/download.php?id=3844|LinkType2|product page|Url2|https://www.musiclights.it/product/SMARTBAT|LinkType3|video|Url3|https://www.youtube.com/watch?v=2A7gp6_6tMQ
+[GENERAL]
+Manufacturer|Prolights|Name|SMARTBAT|Type|26|Authors|Matteo Piccina|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|138|Height|184|Depth|145|Weight|3.40|Power|30|Connector|3-pin|Bulb|4× 8W RGBW LED|Lumens|1127|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Strobe slow..fast
+ID|Color Presets / Temperature|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red … Yellow|R3|Begin~31~End~50~Txt~Preset Yellow … Green|R4|Begin~51~End~70~Txt~Preset Green … Cyan|R5|Begin~71~End~90~Txt~Preset Cyan … Blue|R6|Begin~91~End~110~Txt~Preset Blue … Magenta|R7|Begin~111~End~130~Txt~Preset Magenta … Red|R8|Begin~131~End~150~Txt~Preset Red … White|R9|Begin~151~End~170~Txt~Preset White … Blue|R10|Begin~171~End~200~Txt~White~Extra~#ffffff|R11|Begin~201~End~255~Txt~warm..cold
+ID|Auto/Sound Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~60~Txt~Auto Program 1|R3|Begin~61~End~120~Txt~Auto Program 2|R4|Begin~121~End~180~Txt~Auto Program 3|R5|Begin~181~End~240~Txt~Auto Program 4|R6|Begin~241~End~255~Txt~Sound Show
+ID|Auto Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Use device setting|R2|Begin~52~End~101~Txt~off Dimmer speed|R3|Begin~102~End~152~Txt~fast Dimmer speed|R4|Begin~153~End~203~Txt~50% Dimmer speed|R5|Begin~204~End~255~Txt~slow Dimmer speed
+[END_CHAN_DEF]
+[MODES]
+Name|4-Channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|6-Channel|ShortName|6ch|Content|Dimmer~Red~Green~Blue~White~Strobe
+Name|10-Channel|ShortName|10ch|Content|Dimmer~Red~Green~Blue~White~Color Presets / Temperature~Strobe~Auto/Sound Programs~Auto Speed~Dimmer Speed
+[END_MODES]

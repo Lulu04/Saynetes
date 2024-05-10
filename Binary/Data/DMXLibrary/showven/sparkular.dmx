@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://www.vlammen.com/sparkular/Sparkular%20Manual.pdf|LinkType2|product page|Url2|https://www.sparkular-fx.com/index.php/en/unkategorisiert/sparkular/sparkular-2|LinkType3|video|Url3|https://www.youtube.com/watch?v=U1PnWVvIn2w
+[GENERAL]
+Manufacturer|Showven|Name|Sparkular (BT01)|Type|0|Authors|Alejo Cervera|Creator|OFL
+[PHYSICAL]
+Width|200|Height|215|Depth|285|Weight|8.50|Power|365|Connector|3-pin
+[CHAN_DEF]
+ID|Fountain|Type|0|R1|Begin~0~End~15~Txt~No function Fountain Off|R2|Begin~16~End~39~Txt~1 Height|R3|Begin~40~End~63~Txt~2 Height|R4|Begin~64~End~87~Txt~3 Height|R5|Begin~88~End~111~Txt~4 Height|R6|Begin~112~End~135~Txt~5 Height|R7|Begin~136~End~159~Txt~6 Height|R8|Begin~160~End~183~Txt~7 Height|R9|Begin~184~End~207~Txt~8 Height|R10|Begin~208~End~231~Txt~9 Height|R11|Begin~232~End~255~Txt~10 Height
+ID|Control|Type|0|R1|Begin~0~End~10~Txt~Pre-Heat OFF|R2|Begin~11~End~19~Txt~No function|R3|Begin~20~End~40~Txt~EMERGENCY STOP|R4|Begin~41~End~59~Txt~No function|R5|Begin~60~End~80~Txt~Clear Material|R6|Begin~81~End~239~Txt~No function|R7|Begin~240~End~255~Txt~Pre-Heat ON
+[END_CHAN_DEF]
+[MODES]
+Name|Default|Content|Fountain~Control
+[END_MODES]

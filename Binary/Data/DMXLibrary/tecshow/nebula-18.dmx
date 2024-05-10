@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://amproweb.com/_admin/files/750646Tecshow%20Nebula%2018%20B.pdf|LinkType2|product page|Url2|http://tecshow.amproweb.com/en/nebula18|LinkType3|video|Url3|https://www.youtube.com/watch?v=i1yWs5f5GKQ
+[GENERAL]
+Manufacturer|Tecshow|Name|Nebula 18|Type|16|Authors|Anonymous, JonahKr|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|310|Height|125|Depth|310|Weight|6.00|Power|216|Connector|3-pin|Bulb|18 RGBAW+UV 12W LEDs|Lumens|4389
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|16|R1|Begin~0~End~255~Txt~Speed slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Color|Type|12|R1|Begin~0~End~255~Txt~Preset
+ID|Strobe Effect|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~99~Txt~RampUp slow..fast|R3|Begin~100~End~149~Txt~RampDown fast..slow|R4|Begin~150~End~199~Txt~Strobe Strobe effect 1|R5|Begin~200~End~245~Txt~Strobe Strobe effect 2|R6|Begin~246~End~255~Txt~Strobe 100%
+ID|Color Walking|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~ColorJump White - Red - Yellow - Pink - Green - Orange - Blue - Light salmon pink
+ID|Effect Speed / Sound Sensitivity|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~199~Txt~slow..fast|R3|Begin~200~End~255~Txt~Sound sensitivity low..high
+[END_CHAN_DEF]
+[MODES]
+Name|8ch|ShortName|8ch|Content|Dimmer~Strobe~Red~Green~Blue~White~UV~Amber
+Name|11ch|ShortName|11ch|Content|Dimmer~Red~Green~Blue~White~UV~Amber~Color~Strobe Effect~Color Walking~Effect Speed / Sound Sensitivity
+[END_MODES]

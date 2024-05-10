@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.shehds.com/u_file/1908/file/4109b920cd.pdf|LinkType2|product page|Url2|https://www.shehds.com/products/fast-shipping-led-54x3w-rgbw-led-flat-par-rgbw-color-mixing-dj-wash-light-stage-uplighting-ktv-disco-dj-dmx512|LinkType3|video|Url3|https://www.youtube.com/watch?v=Pv0_x9BYBug
+[GENERAL]
+Manufacturer|Shehds|Name|LED Flat Par 54x3W|Type|16|Authors|J2M|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|260|Height|280|Depth|130|Weight|0.40|Power|162|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Program|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Program pulse|R5|Begin~201~End~255~Txt~Open sound control function
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..10Hz
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Master dimmer~Red~Green~Blue~White~Program~Strobe
+[END_MODES]

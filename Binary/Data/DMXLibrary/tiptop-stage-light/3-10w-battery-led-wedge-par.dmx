@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.tiptopstagelight.com/products/triangle-led-par-light/
+[GENERAL]
+Manufacturer|TIPTOP Stage Light|Name|3*10W Battery LED WEDGE PAR|Type|16|Authors|DJMaxone.de|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|118|Height|105|Depth|114|Weight|0.35|Power|36|Connector|3-pin|Bulb|3× 10W RGBW LEDs
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Program|Type|0|R1|Begin~0~End~50~Txt~Strobe|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~Color Dimmer|R4|Begin~151~End~200~Txt~Color Change|R5|Begin~201~End~255~Txt~Sound control
+ID|Function speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Dimmer~Red~Green~Blue~White~Program~Function speed
+[END_MODES]

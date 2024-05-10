@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://downloads.monoprice.com/files/manuals/612980_Manual_180122.pdf|LinkType2|product page|Url2|https://www.monoprice.com/product?p_id=612980|LinkType3|product page|Url3|https://www.lixada.com/p-l1239eu.html
+[GENERAL]
+Manufacturer|Stage Right|Name|Mini Beam RGBW|Type|9|Authors|Anonymous|Creator|OFL
+[PHYSICAL]
+Width|200|Height|127|Depth|122|Weight|2.00|Power|50|Connector|3-pin|Bulb|RGBW LED|Lens|Fresnel
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..18Hz
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Colors|Type|12|R1|Begin~0~End~30~Txt~No function|R2|Begin~31~End~125~Txt~ColorJump fast|R3|Begin~126~End~249~Txt~ColorJump slow|R4|Begin~250~End~255~Txt~ColorJump
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~255~Txt~Reset
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Strobe~Red~Green~Blue~White
+Name|13-channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Strobe~Red~Green~Blue~White~Colors~Reset
+[END_MODES]

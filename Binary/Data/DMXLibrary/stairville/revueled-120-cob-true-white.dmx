@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/443734_c_443734_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_revueled_120_cob_true_white.htm
+[GENERAL]
+Manufacturer|Stairville|Name|RevueLED 120 COB True White|Type|23|Authors|Hannes Rüger|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|440|Height|250|Depth|160|Weight|5.50|Power|120|Connector|3-pin|Bulb|1× 120W COB CW/WW LED|Lumens|7000|LensMinDegree|50.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~5~Txt~No function Color temperature adjustment (2800K…7800K) follows dimmer value|R2|Begin~6~End~255~Txt~2800K..7800K
+ID|Intensity Warm White|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity Cold White|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~255~Txt~Strobe 1Hz..30Hz
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Dimmer
+Name|2-channel 1|ShortName|2ch-1|Content|Dimmer~Color Temperature
+Name|2-channel 2|ShortName|2ch-2|Content|Intensity Warm White~Intensity Cold White
+Name|3-channel|ShortName|3ch|Content|Dimmer~Strobe~Color Temperature
+Name|4-channel|ShortName|4ch|Content|Dimmer~Strobe~Intensity Warm White~Intensity Cold White
+[END_MODES]

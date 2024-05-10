@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://amproweb.com/_admin/files/02b55bNebula%206%20B.pdf|LinkType2|product page|Url2|http://tecshow.amproweb.com/es/nebula6|LinkType3|video|Url3|https://www.youtube.com/watch?v=IQQqpnKiArE|LinkType4|other|Url4|http://amproweb.com/_admin/files/6a5bd4Nebula6.zip
+[GENERAL]
+Manufacturer|Tecshow|Name|Nebula 6|Type|16|Authors|Esteban Zallocco|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|260|Height|260|Depth|360|Weight|1.00|Power|80|Connector|3-pin|Bulb|LED|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~99~Txt~0Hz..100Hz|R3|Begin~100~End~149~Txt~100Hz..0Hz|R4|Begin~150~End~199~Txt~strobe1|R5|Begin~200~End~245~Txt~strobe2|R6|Begin~246~End~255~Txt~200Hz..200Hz
+ID|Color Wheel Rotation|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~red,yellow,magenta,green,orange,cyan,pink~Extra~_#ff3355
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~199~Txt~slow..fast|R3|Begin~200~End~255~Txt~Sound control
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Red~Green~Blue~White~Amber~UV~Dimmer~Strobe~Color Wheel Rotation~Color Macros
+[END_MODES]

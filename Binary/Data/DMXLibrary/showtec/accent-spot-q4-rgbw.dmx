@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/en/mwdownloads/download/link/id/17433647|LinkType2|product page|Url2|https://www.highlite.com/en/42541-accent-spot-q4-rgbw.html
+[GENERAL]
+Manufacturer|Showtec|Name|Accent Spot Q4 RGBW|Type|23|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|160|Height|105|Depth|245|Weight|1.70|Power|21|Connector|3-pin|Bulb|1× 25W RGBW LED|Lumens|572|LensMinDegree|4.500|LensMaxDegree|4.500
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Linear Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~Strobe 0Hz..20Hz
+ID|FX Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~Strobe 0Hz..20Hz Random timing
+ID|CCT|Type|27|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~24~Txt~1800K|R3|Begin~25~End~39~Txt~2200K|R4|Begin~40~End~54~Txt~2700K|R5|Begin~55~End~69~Txt~3000K|R6|Begin~70~End~84~Txt~3200K|R7|Begin~85~End~99~Txt~4000K|R8|Begin~100~End~114~Txt~4500K|R9|Begin~115~End~129~Txt~5000K|R10|Begin~130~End~144~Txt~5600K|R11|Begin~145~End~159~Txt~6000K|R12|Begin~160~End~174~Txt~6500K|R13|Begin~175~End~189~Txt~7000K|R14|Begin~190~End~204~Txt~8000K|R15|Begin~205~End~255~Txt~10000K
+ID|Color Presets|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~13~Txt~Red~Extra~#ff0000|R3|Begin~14~End~20~Txt~Lexiconian Red~Extra~#fe4548|R4|Begin~21~End~27~Txt~Lush Peach Sunsets~Extra~#fe6e73|R5|Begin~28~End~34~Txt~Neon Red~Extra~#ff3200|R6|Begin~35~End~41~Txt~Orange~Extra~#ff9600|R7|Begin~42~End~48~Txt~Yellow~Extra~#ffff00|R8|Begin~49~End~55~Txt~Citrus Yellow~Extra~#fcfe3a|R9|Begin~56~End~62~Txt~Fairy Green~Extra~#77fe82|R10|Begin~63~End~69~Txt~Fake Ground Green~Extra~#58fe5f|R11|Begin~70~End~76~Txt~Viber Green~Extra~#26fe2a|R12|Begin~77~End~83~Txt~Green~Extra~#00ff00|R13|Begin~84~End~90~Txt~Neon Green~Extra~#00ff32|R14|Begin~91~End~97~Txt~Nightpaw~Extra~#00ff96|R15|Begin~98~End~104~Txt~Cyan~Extra~#00ffff|R16|Begin~105~End~111~Txt~Anime Sky Light Blue~Extra~#35fcfe|R17|Begin~112~End~118~Txt~Neon Poolside~Extra~#56fbfe|R18|Begin~119~End~125~Txt~Summer Azure~Extra~#75acfe|R19|Begin~126~End~132~Txt~Vibrant Sea Glass~Extra~#4144fe|R20|Begin~133~End~139~Txt~Excel Blue~Extra~#2628fe|R21|Begin~140~End~146~Txt~Blue~Extra~#0000ff|R22|Begin~147~End~153~Txt~Perceptive Azure~Extra~#4b00ff|R23|Begin~154~End~160~Txt~Purple~Extra~#a000ff|R24|Begin~161~End~167~Txt~Magenta~Extra~#ff00ff|R25|Begin~168~End~174~Txt~Magenta Rose~Extra~#ff00af|R26|Begin~175~End~181~Txt~Fuchsia~Extra~#ff0064|R27|Begin~182~End~188~Txt~Flaming Melon~Extra~#fe287f|R28|Begin~189~End~195~Txt~Rosanna Red~Extra~#fe2840|R29|Begin~196~End~202~Txt~Vogue Red~Extra~#fe162f|R30|Begin~203~End~209~Txt~Chaos Red~Extra~#ff0019|R31|Begin~210~End~216~Txt~White~Extra~#ffffff|R32|Begin~217~End~223~Txt~Warm White~Extra~#f6fecb|R33|Begin~224~End~230~Txt~Cold White~Extra~#a8b0fe|R34|Begin~231~End~255~Txt~RGBW White~Extra~#f4f9fe
+ID|Effect|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~ColorJump 1|R3|Begin~32~End~47~Txt~ColorJump 2|R4|Begin~48~End~63~Txt~ColorJump 3|R5|Begin~64~End~79~Txt~ColorJump 4|R6|Begin~80~End~95~Txt~ColorJump 5|R7|Begin~96~End~111~Txt~ColorJump 6|R8|Begin~112~End~127~Txt~ColorJump 7|R9|Begin~128~End~143~Txt~ColorJump 8|R10|Begin~144~End~159~Txt~ColorFade 1|R11|Begin~160~End~175~Txt~ColorFade 2|R12|Begin~176~End~191~Txt~ColorFade 3|R13|Begin~192~End~207~Txt~ColorFade 4|R14|Begin~208~End~223~Txt~ColorFade 5|R15|Begin~224~End~239~Txt~ColorFade 6|R16|Begin~240~End~255~Txt~ColorFade 7
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Control|Type|0|R1|Begin~0~End~50~Txt~Sound sensitivity off|R2|Begin~51~End~255~Txt~Sound sensitivity low..high
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|6-channel|ShortName|6ch|Content|Master Dimmer~Linear Strobe~Red~Green~Blue~White
+Name|12-channel|ShortName|12ch|Content|Master Dimmer~Linear Strobe~FX Strobe~CCT~Color Presets~Effect~Effect Speed~Sound Control~Red~Green~Blue~White
+[END_MODES]

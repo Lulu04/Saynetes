@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/301511_c_301511_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_easy_move_xs_hp_wash_7x8w_rgbw.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=xYcylXUi5EA
+[GENERAL]
+Manufacturer|Varytec|Name| Easy Move XS HP Wash 7x8W RGBW|Type|9|Authors|AL_DAVE, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|177|Height|238|Depth|176|Weight|5.00|Power|75|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt fine|Type|8
+ID|Dimmer & Strobe|Type|0|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~134~Txt~0%..100%|R3|Begin~135~End~239~Txt~Strobe 0Hz..40Hz|R4|Begin~240~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Presets|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~15~Txt~Preset Red|R3|Begin~16~End~63~Txt~Preset Yellow|R4|Begin~64~End~79~Txt~Preset Green|R5|Begin~80~End~127~Txt~Preset Cyan|R6|Begin~128~End~143~Txt~Preset Blue|R7|Begin~144~End~175~Txt~Preset Violet|R8|Begin~176~End~191~Txt~Preset Light blue|R9|Begin~192~End~223~Txt~Preset White|R10|Begin~224~End~237~Txt~ColorFade slow..fast|R11|Begin~238~End~255~Txt~ColorJump slow..fast
+ID|Auto Programs|Type|0|R1|Begin~0~End~3~Txt~No function|R2|Begin~4~End~203~Txt~Auto Programs|R3|Begin~204~End~255~Txt~Sound Programs
+ID|Reset|Type|0|R1|Begin~0~End~254~Txt~No function|R2|Begin~255~End~255~Txt~Reset
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Pan~Tilt~Dimmer & Strobe~Red~Green~Blue~White~Pan/Tilt Speed
+Name|13-channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer & Strobe~Red~Green~Blue~White~Color Presets~Auto Programs~Reset
+[END_MODES]

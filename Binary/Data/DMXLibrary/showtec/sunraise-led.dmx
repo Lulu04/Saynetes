@@ -1,0 +1,17 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/43078_MANUAL_GB_V2.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=0OWjGQxuBY8
+[GENERAL]
+Manufacturer|Showtec|Name|Sunraise LED|Type|32|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|266|Height|260|Depth|266|Weight|2.80|Power|35|Connector|3-pin|Bulb|55 x 3W RGBWA LEDs|Lumens|1000
+[CHAN_DEF]
+ID|Color Macros|Type|12|R1|Begin~0~End~9~Txt~Black~Extra~#000000|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Green~Extra~#00ff00|R4|Begin~30~End~39~Txt~Blue~Extra~#0000ff|R5|Begin~40~End~49~Txt~White~Extra~#ffffff|R6|Begin~50~End~59~Txt~Amber~Extra~#ffbf00|R7|Begin~60~End~69~Txt~Red + Green~Extra~_#00ff00|R8|Begin~70~End~79~Txt~Red + Blue~Extra~_#0000ff|R9|Begin~80~End~89~Txt~Red + White~Extra~_#ffffff|R10|Begin~90~End~99~Txt~Red + Amber~Extra~_#ffbf00|R11|Begin~100~End~109~Txt~Green + Blue~Extra~_#0000ff|R12|Begin~110~End~119~Txt~Green + White~Extra~_#ffffff|R13|Begin~120~End~129~Txt~Green + Amber~Extra~_#ffbf00|R14|Begin~130~End~139~Txt~Blue + White~Extra~_#ffffff|R15|Begin~140~End~149~Txt~Blue + Amber~Extra~_#ffbf00|R16|Begin~150~End~159~Txt~White + Amber~Extra~_#ffbf00|R17|Begin~160~End~169~Txt~Red + Green + Blue~Extra~_#0000ff|R18|Begin~170~End~179~Txt~Red + Green + Blue + White~Extra~_#ffffff|R19|Begin~180~End~189~Txt~Red + Green + Blue + Amber~Extra~_#ffbf00|R20|Begin~190~End~199~Txt~Red + Green + Blue + White + Amber~Extra~_#ffbf00|R21|Begin~200~End~229~Txt~Auto|R22|Begin~230~End~255~Txt~Sound Control
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Strobe 0Hz..12Hz
+ID|Auto Speed|Type|16|R1|Begin~0~End~9~Txt~stop|R2|Begin~10~End~255~Txt~slow..fast
+ID|Motor Rotation|Type|33|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~119~Txt~Rotation slow CW..fast CW|R3|Begin~120~End~129~Txt~Rotation stop|R4|Begin~130~End~255~Txt~Rotation slow CCW..fast CCW
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Color Macros~Strobe~Auto Speed~Motor Rotation
+[END_MODES]

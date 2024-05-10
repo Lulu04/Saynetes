@@ -1,0 +1,36 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://eww.pavc.panasonic.co.jp/projector/extranet/main/products/rz120/manual.html|LinkType2|product page|Url2|https://panasonic.net/cns/projector/products/rz120/|LinkType3|video|Url3|https://www.youtube.com/watch?v=2DrfjBJxjYA
+[GENERAL]
+Manufacturer|Panasonic|Name|PT-RZ120|Type|7|Authors|Walter Ponce, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|498|Height|200|Depth|581|Weight|23.60|Power|1100|Connector|None|Bulb|Laser Diode|Lumens|12000
+[CHAN_DEF]
+ID|Shutter|Type|6|DefaultValue|128|R1|Begin~0~End~63~Txt~Open|R2|Begin~64~End~191~Txt~No function|R3|Begin~192~End~255~Txt~Closed
+ID|Input Select (1)|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~RGB1|R3|Begin~16~End~23~Txt~RGB2|R4|Begin~24~End~31~Txt~No function|R5|Begin~32~End~39~Txt~DVI-D|R6|Begin~40~End~47~Txt~HDMI|R7|Begin~48~End~55~Txt~Digital Link|R8|Begin~56~End~63~Txt~SDI|R9|Begin~64~End~255~Txt~No function
+ID|Lens Function Select|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~Lens H Shift|R3|Begin~32~End~47~Txt~Lens V Shift|R4|Begin~48~End~63~Txt~Lens Focus|R5|Begin~64~End~79~Txt~Lens Zoom|R6|Begin~80~End~95~Txt~Move to home position|R7|Begin~96~End~255~Txt~No function
+ID|Lens Control|Type|0|DefaultValue|100|R1|Begin~0~End~31~Txt~Speed fast Lens adjustment –|R2|Begin~32~End~63~Txt~Speed 50% Lens adjustment –|R3|Begin~64~End~95~Txt~Speed 1% Lens adjustment –|R4|Begin~96~End~127~Txt~Speed stop Lens adjustment|R5|Begin~128~End~159~Txt~Speed slow Lens adjustment +|R6|Begin~160~End~191~Txt~Speed 50% Lens adjustment +|R7|Begin~192~End~223~Txt~Speed fast Lens adjustment +|R8|Begin~224~End~255~Txt~Execute command action
+ID|Power|Type|2|DefaultValue|128|R1|Begin~0~End~63~Txt~Standby|R2|Begin~64~End~191~Txt~No function|R3|Begin~192~End~255~Txt~Power on
+ID|Light Output|Type|1|R1|Begin~0~End~255~Txt~bright..off
+ID|Enable/Disable|Type|0|R1|Begin~0~End~127~Txt~Disable|R2|Begin~128~End~255~Txt~Enable
+ID|Fade in|Type|2|DefaultValue|255|R1|Begin~0~End~15~Txt~instant|R2|Begin~16~End~31~Txt~0.5s|R3|Begin~32~End~47~Txt~1s|R4|Begin~48~End~63~Txt~1.5s|R5|Begin~64~End~79~Txt~2s|R6|Begin~80~End~95~Txt~2.5s|R7|Begin~96~End~111~Txt~3s|R8|Begin~112~End~127~Txt~3.5s|R9|Begin~128~End~143~Txt~4s|R10|Begin~144~End~159~Txt~5s|R11|Begin~160~End~175~Txt~7s|R12|Begin~176~End~191~Txt~10s|R13|Begin~192~End~255~Txt~No function
+ID|Fade out|Type|2|DefaultValue|255|R1|Begin~0~End~15~Txt~instant|R2|Begin~16~End~31~Txt~0.5s|R3|Begin~32~End~47~Txt~1s|R4|Begin~48~End~63~Txt~1.5s|R5|Begin~64~End~79~Txt~2s|R6|Begin~80~End~95~Txt~2.5s|R7|Begin~96~End~111~Txt~3s|R8|Begin~112~End~127~Txt~3.5s|R9|Begin~128~End~143~Txt~4s|R10|Begin~144~End~159~Txt~5s|R11|Begin~160~End~175~Txt~7s|R12|Begin~176~End~191~Txt~10s|R13|Begin~192~End~255~Txt~No function
+ID|Custom Masking|Type|0|DefaultValue|255|R1|Begin~0~End~31~Txt~off|R2|Begin~32~End~63~Txt~PC-1|R3|Begin~64~End~95~Txt~PC-2|R4|Begin~96~End~127~Txt~PC-3|R5|Begin~128~End~255~Txt~No function
+ID|Geometry|Type|0|DefaultValue|255|R1|Begin~0~End~15~Txt~Off|R2|Begin~16~End~31~Txt~Keystone|R3|Begin~32~End~47~Txt~Curved correction|R4|Begin~48~End~63~Txt~PC-1|R5|Begin~64~End~79~Txt~PC-2|R6|Begin~80~End~95~Txt~PC-3|R7|Begin~96~End~111~Txt~Corner correction|R8|Begin~112~End~255~Txt~No function
+ID|Input Select (2 / User)|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~RGB1|R3|Begin~16~End~23~Txt~RGB2|R4|Begin~24~End~31~Txt~DVI-D|R5|Begin~32~End~39~Txt~HDMI|R6|Begin~40~End~47~Txt~Digital Link|R7|Begin~48~End~55~Txt~SDI|R8|Begin~56~End~255~Txt~No function
+ID|Lens Position|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~Move to home position|R3|Begin~64~End~255~Txt~No function
+ID|Lens H Shift|Type|7|DefaultValue|128|R1|Begin~0~End~31~Txt~Speed fast Lens adjustment –|R2|Begin~32~End~63~Txt~Speed 50% Lens adjustment –|R3|Begin~64~End~95~Txt~Speed 1% Lens adjustment –|R4|Begin~96~End~159~Txt~Speed stop Lens adjustment|R5|Begin~160~End~191~Txt~Speed slow Lens adjustment +|R6|Begin~192~End~223~Txt~Speed 50% Lens adjustment +|R7|Begin~224~End~255~Txt~Speed fast Lens adjustment +
+ID|Lens V Shift|Type|8|DefaultValue|128|R1|Begin~0~End~31~Txt~Speed fast Lens adjustment –|R2|Begin~32~End~63~Txt~Speed 50% Lens adjustment –|R3|Begin~64~End~95~Txt~Speed 1% Lens adjustment –|R4|Begin~96~End~159~Txt~Speed stop Lens adjustment|R5|Begin~160~End~191~Txt~Speed slow Lens adjustment +|R6|Begin~192~End~223~Txt~Speed 50% Lens adjustment +|R7|Begin~224~End~255~Txt~Speed fast Lens adjustment +
+ID|Lens Focus|Type|32|DefaultValue|128|R1|Begin~0~End~31~Txt~Speed fast Lens adjustment –|R2|Begin~32~End~63~Txt~Speed 50% Lens adjustment –|R3|Begin~64~End~95~Txt~Speed 1% Lens adjustment –|R4|Begin~96~End~159~Txt~Speed stop Lens adjustment|R5|Begin~160~End~191~Txt~Speed slow Lens adjustment +|R6|Begin~192~End~223~Txt~Speed 50% Lens adjustment +|R7|Begin~224~End~255~Txt~Speed fast Lens adjustment +
+ID|Lens Zoom|Type|31|DefaultValue|128|R1|Begin~0~End~31~Txt~Speed fast Lens adjustment –|R2|Begin~32~End~63~Txt~Speed 50% Lens adjustment –|R3|Begin~64~End~95~Txt~Speed 1% Lens adjustment –|R4|Begin~96~End~159~Txt~Speed stop Lens adjustment|R5|Begin~160~End~191~Txt~Speed slow Lens adjustment +|R6|Begin~192~End~223~Txt~Speed 50% Lens adjustment +|R7|Begin~224~End~255~Txt~Speed fast Lens adjustment +
+ID|Freeze|Type|0|DefaultValue|255|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~95~Txt~off|R3|Begin~96~End~159~Txt~No function|R4|Begin~160~End~223~Txt~on|R5|Begin~224~End~255~Txt~No function
+ID|Color|Type|12|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~Factory default setting|R3|Begin~64~End~127~Txt~-31..-1|R4|Begin~128~End~129~Txt~0|R5|Begin~130~End~191~Txt~1..31|R6|Begin~192~End~255~Txt~No function
+ID|Tint|Type|12|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~Factory default setting|R3|Begin~64~End~127~Txt~-31..-1|R4|Begin~128~End~129~Txt~0|R5|Begin~130~End~191~Txt~1..31|R6|Begin~192~End~255~Txt~No function
+ID|Raster Pattern|Type|10|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~off|R3|Begin~32~End~47~Txt~white|R4|Begin~48~End~63~Txt~yellow|R5|Begin~64~End~79~Txt~cyan|R6|Begin~80~End~95~Txt~green|R7|Begin~96~End~111~Txt~magenta|R8|Begin~112~End~127~Txt~red|R9|Begin~128~End~143~Txt~blue|R10|Begin~144~End~159~Txt~black|R11|Begin~160~End~175~Txt~User logo|R12|Begin~176~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|1|ShortName|1|Content|Shutter~Input Select (1)~Lens Function Select~Lens Control~Power~Light Output~Enable/Disable~Fade in~Fade out~Custom Masking~Geometry
+Name|2|ShortName|2|Content|Light Output~Input Select (2 / User)~Lens Position~Lens H Shift~Lens V Shift~Lens Focus~Lens Zoom~Power~Geometry~Custom Masking~Enable/Disable
+Name|Additional user channels|ShortName|Additional user channels|Content|Freeze~Color~Tint~Raster Pattern
+[END_MODES]

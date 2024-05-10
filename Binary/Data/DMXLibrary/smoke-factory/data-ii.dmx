@@ -1,0 +1,15 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://smoke-factory.de/pdf/datenblatt_data_ii.pdf|LinkType2|product page|Url2|https://smoke-factory.de/produkt/data-ii/?lang=en
+[GENERAL]
+Manufacturer|Smoke Factory|Name|Data II|Type|10|Authors|WaldperlachFabi|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|58|Height|23|Depth|25|Weight|12.80|Power|2600|Connector|5-pin
+[CHAN_DEF]
+ID|Pump|Type|37|R1|Begin~0~End~255~Txt~Fog weak..strong
+ID|Fan|Type|36|R1|Begin~0~End~255~Txt~Speed slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2ch|ShortName|2ch|Content|Pump~Fan
+[END_MODES]
