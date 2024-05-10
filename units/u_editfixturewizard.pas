@@ -148,6 +148,7 @@ type
   private
     FManufacturers: TManufacturers;
     FEditingExistingFixture: boolean;
+    FEditedFixtureCreator: string;
     FFixtureLocationToSave: TFixtureLibraryLocation;
     procedure LoadFixtureToEdit;
     function FormatFixtureNameToFilename(s: string): string;
@@ -433,7 +434,8 @@ begin
     ManufacturerName := CBManufacturers.Text;
     FixtureName := Trim(Edit7.Text);
     Authors := Trim(EditAuthors.Text);
-    Creator := 'Saynètes '+APP_VERSION;
+    if not FEditingExistingFixture then Creator := 'Saynètes '+APP_VERSION
+      else Creator := FEditedFixtureCreator;
     FixtureType := FFixtureType;
   end;
 
@@ -697,6 +699,7 @@ begin
     Edit7.Text := libFix.General.FixtureName;
     FFixtureType := libFix.General.FixtureType;
     EditAuthors.Text := libFix.General.Authors;
+    FEditedFixtureCreator := libFix.General.Creator;
     for j in TFixtureType do begin  // select the right image
       FFrameFixtureImages[j].Checked := FFrameFixtureImages[j].FixtureType = FFixtureType;
      // if FFrameFixtureImages[j].Checked then ScrollBox1.ScrollBy(0, FFrameFixtureImages[j].Top);
