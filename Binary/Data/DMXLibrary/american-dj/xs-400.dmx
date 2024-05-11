@@ -27,6 +27,6 @@ ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
 ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
 [END_CHAN_DEF]
 [MODES]
-Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan / Tilt Speed~Special Functions~Dimmer Curve
-Name|18-channel|ShortName|18ch|Content|Pan~Pan fine~Tilt~Tilt fine~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan / Tilt Speed~Special Functions~Dimmer Curve
+Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan/Tilt Speed~Special Functions~Dimmer Curve
+Name|18-channel|ShortName|18ch|Content|Pan~Pan fine~Tilt~Tilt fine~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan/Tilt Speed~Special Functions~Dimmer Curve
 [END_MODES]

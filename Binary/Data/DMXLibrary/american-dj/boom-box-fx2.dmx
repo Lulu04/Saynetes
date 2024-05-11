@@ -11,8 +11,8 @@ ID|Show mode|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Sho
 ID|Show speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
 ID|Special Functions|Type|0|R1|Begin~0~End~139~Txt~No function|R2|Begin~140~End~209~Txt~Reset all|R3|Begin~210~End~249~Txt~No function|R4|Begin~250~End~255~Txt~Sound active
 ID|Center LED|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~Color Preset Color Macros
-ID|Red Laser|Type|0|R1|Begin~0~End~127~Txt~No function Closed|R2|Begin~128~End~255~Txt~Open
-ID|Green Laser|Type|0|R1|Begin~0~End~127~Txt~No function Closed|R2|Begin~128~End~255~Txt~Open
+ID|Red Laser|Type|43|R1|Begin~0~End~127~Txt~No function Closed|R2|Begin~128~End~255~Txt~Open
+ID|Green Laser|Type|43|R1|Begin~0~End~127~Txt~No function Closed|R2|Begin~128~End~255~Txt~Open
 ID|Laser Patterns|Type|0|R1|Begin~0~End~255~Txt~Laser patterns
 ID|Red Beam|Type|3|R1|Begin~0~End~255~Txt~Intensity 0..100%
 ID|Green Beam|Type|4|R1|Begin~0~End~255~Txt~Intensity 0..100%

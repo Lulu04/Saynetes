@@ -12,7 +12,7 @@ ID|Programs|Type|0|R1|Begin~0~End~3~Txt~Effect 1|R2|Begin~4~End~7~Txt~Effect 2|R
 ID|Horizontal Position|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam position -15.5deg..15.5deg
 ID|Vertical Position|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam position -15.5deg..15.5deg
 ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
-ID|Rotation Speed|Type|33|R1|Begin~0~End~255~Txt~Rotation fast CW..slow CW
+ID|Rotation Speed|Type|44|R1|Begin~0~End~255~Txt~Rotation fast CW..slow CW
 [END_CHAN_DEF]
 [MODES]
 Name|Default|ShortName|Default|Content|Mode~Programs~Horizontal Position~Vertical Position~Effect Speed~Rotation Speed
