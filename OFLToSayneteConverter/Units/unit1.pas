@@ -16,6 +16,7 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    CBConvertOnlyExisting: TCheckBox;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -23,6 +24,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     LB: TListBox;
     Memo1: TMemo;
     Panel1: TPanel;
@@ -32,9 +34,12 @@ type
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
+    procedure DeleteEmptyFolderInConvertedFolder;
+    procedure DeleteLBEntriesWith16BitRangeValues(aList: TStringList);
     procedure ConvertManufacturers;
-    function OriginalPath: string;
-    function DestPath: string;
+    function OFLPath: string;
+    function ConvertedPath: string;
+    function SayneteDMXLibraryPath: string;
     function ManufacturerNameOf(const f: string): string;
     function Convert(const SrcFilename, DstFilename: string): boolean;
   public
@@ -106,7 +111,6 @@ type
   TSlotDescriptor = record
     Txt,
     Extra: string;
-    Symbol: word;
     procedure InitDefault;
   end;
 
@@ -210,8 +214,8 @@ type
                  out extra: string): boolean;
     function TranslateSlotType(aItem: TJSONData;
                  const aOFLType: string;
-                 out chanType: TChannelType; out txt: string;
-                 out symbol: word; out extra: string): boolean;
+                 {out chanType: TChannelType;} out txt: string;
+                 out extra: string): boolean;
     function AddRangeFrom(aChanIndex: integer; aItem: TJSONData): boolean;
 
     function InitWheelsFrom(aItem: TJSONData): boolean;
@@ -302,7 +306,6 @@ procedure TSlotDescriptor.InitDefault;
 begin
   Txt := '';
   Extra := '';
-  Symbol := 0;
 end;
 
 { TWheel }
@@ -745,17 +748,18 @@ var sub: TJSONData;
   end;
   procedure CheckPropertySlotNumber;
   var iSlot: integer;
+    //fSlot: single;
   begin
     if HasSteppedProperty('slotNumber')  then begin
       if not TryStrToInt(prop, iSlot) then begin
-iSlot:=Trunc(sub.AsFloat)-1;
-       // iSlot := Trunc(StringToSingle(prop));
-        ConcatToText(Wheels[wheelIndex].Slots[iSlot].Txt);
+        iSlot := Trunc(sub.AsFloat)-1;
+        //fSlot := sub.AsFloat; // StringToSingle(prop);
+        //iSlot := Trunc(fSlot);
+        ConcatToText('Split '+Wheels[wheelIndex].Slots[iSlot].Txt);
         if iSlot+1 <= High(Wheels[wheelIndex].Slots) then
-          txt := txt+'..'+Wheels[wheelIndex].Slots[iSlot+1].Txt;
+          txt := txt+' / '+Wheels[wheelIndex].Slots[iSlot+1].Txt;
         extra := Wheels[wheelIndex].Slots[iSlot].Extra;
-      end
-      else begin
+      end else begin
         dec(iSlot);
         ConcatToText(Wheels[wheelIndex].Slots[iSlot].Txt);
         extra := Wheels[wheelIndex].Slots[iSlot].Extra;
@@ -899,7 +903,7 @@ begin
       if HasRangedProperty('duration') then ConcatToText(prop);
       if txt = '' then txt := 'Pan/Tilt speed';
     end;
-{    'WheelSlot': begin
+    'WheelSlot': begin
       chanType := ctConfig;
       CheckPropertyWheel;
       CheckPropertySlotNumber;
@@ -940,7 +944,7 @@ begin
       if HasRangedProperty('speed') then ConcatToText(prop);
       if HasRangedProperty('angle') then ConcatToText(prop);
       if txt = '' then txt := 'Wheel rotation';
-    end;  }
+    end;
 
     'Effect': begin
       chanType := ctConfig;
@@ -1095,8 +1099,7 @@ begin
 end;
 
 function TFixtureFromLibrary.TranslateSlotType(aItem: TJSONData;
-  const aOFLType: string; out chanType: TChannelType; out txt: string; out
-  symbol: word; out extra: string): boolean;
+  const aOFLType: string; {out chanType: TChannelType;} out txt: string; out extra: string): boolean;
 var sub: TJSONData;
   prop: string;
   // search for this property only
@@ -1107,6 +1110,19 @@ var sub: TJSONData;
     Result := sub <> NIL;
     if Result then prop := sub.AsString;
   end;
+  // search for 'resource' property node
+  function HasSteppedPropertyGoboResource: boolean;
+  var sub1: TJSONData;
+  begin
+    prop := '';
+    sub := aItem.FindPath('resource');
+    Result := sub <> NIL;
+    if Result then begin
+      sub1 := sub.FindPath('name');
+      if sub1 <> NIL then prop := sub1.AsString;
+    end;
+  end;
+
   // search for this property + propertyStart + propertyEnd
   function HasRangedProperty(const aPropName: string): boolean;
   begin
@@ -1158,10 +1174,9 @@ begin
   Result := True;
   txt := '';
   extra := '';
-  symbol := 0;
   case aOFLType of
     'Open': begin
-      chanType := ctCONFIG;
+      //chanType := ctCONFIG;
       txt := 'Open';
       if HasRangedProperty('fogOutput') then ConcatToText(prop);
     end;
@@ -1175,7 +1190,7 @@ begin
     end;
     'Gobo': begin
       if HasSteppedProperty('name') then ConcatToText(prop);
-      if HasSteppedProperty('resource') then extra := prop;
+      if HasSteppedPropertyGoboResource then extra := prop;
       if txt = '' then txt := 'Gobo';
     end;
     'Prism': begin
@@ -1261,8 +1276,6 @@ var item, sub, sub1: TJSONData;
   arr: TJSONArray;
   i, j, k, iSlot: integer;
   s, s1, txt, extra: string;
-  chanType: TChannelType;
-  symbol: word;
 begin
   Result := False;
 
@@ -1287,14 +1300,13 @@ begin
             sub1 := arr.Items[k];
             sub1 := sub1.FindPath('type');
             s1 := sub1.AsString;
-            if not TranslateSlotType(sub1, s1, chanType, txt, symbol,extra) then
-              exit;
-            SetLength(Wheels[i].Slots, Length(Wheels[i].Slots)+1);
-            iSlot := High(Wheels[i].Slots);
+            if not TranslateSlotType(arr.Items[k], s1, txt, extra) then exit(False);
+            if txt = 'Gobo' then txt := txt + ' '+(iSlot+1).ToString;
+            iSlot := Length(Wheels[i].Slots);
+            SetLength(Wheels[i].Slots, iSlot+1);
             Wheels[i].Slots[iSlot].InitDefault;
             Wheels[i].Slots[iSlot].Txt := txt;
             Wheels[i].Slots[iSlot].Extra := extra;
-            Wheels[i].Slots[iSlot].Symbol := symbol;
           end;
         end;
         'direction': begin
@@ -1306,6 +1318,19 @@ begin
     end;// for j
   end;// for i
   Result := True;
+
+  // DEBUG: dump the wheel data
+  if Result then begin
+    LogMessage('InitWheelsFrom() - '+IntToStr(Length(Wheels))+' wheels defined');
+    for i:=0 to High(Wheels) do begin
+      LogMessage('  '+Wheels[i].SlotID);
+      s := '';
+      for j:=0 to high(Wheels[i].Slots) do begin
+        LogMessage('    Txt="'+Wheels[i].Slots[j].Txt+'"');
+        LogMessage('    Extra="'+Wheels[i].Slots[j].Extra+'"');
+      end;
+    end;
+  end;
 end;
 
 function TFixtureFromLibrary.InitAvailableChannelsfrom(aItem: TJSONData): boolean;
@@ -1393,10 +1418,6 @@ begin
             CreateNewChannel;
             coarseChannel := @AvailableChannels[coarseChannelIndex]; // necessary !
             coarseChannel^.FineChannelIndexes[k] := iChan; // keep the index of the fine channel
-//            AvailableChannels[iChan].ChanType := coarseChannel^.ChanType;
-//            AvailableChannels[iChan].ID := coarseChannel^.ID+' fine value';
-//            AvailableChannels[iChan].DefaultValue := 0;
-            //AvailableChannels[iChan].FineChannelAliases[k] := arr.Items[k].AsString; // name of the fine channel alias
           end;
         end;
 
@@ -1669,20 +1690,31 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 var
   i, c, tot: Integer;
-  fSrc, fDest: string;
+  fSrc, fDest, current: string;
 begin
   // empty the dest folder
-  VideLeRepertoire(DestPath);
+  VideLeRepertoire(ConvertedPath);
+
+  if CBConvertOnlyExisting.Checked then begin
+    // delete all existing fixture definition that exists in Saynète DMXLibrary
+    for i:=LB.Count-1 downto 0 do begin
+      current := LB.Items.Strings[i];
+      if ExtractFileExt(current) = '.json' then begin
+        fDest := ConcatPaths([SayneteDMXLibraryPath, ChangeFileExt(current, '.dmx')]);
+        if FileExists(fDest) then LB.Items.Delete(i);
+      end;
+    end;
+  end;
 
   // If they don't exists, we create all sub-folders in destination
   // and delete them from the list
   for i:=LB.Count-1 downto 0 do
   begin
-    fSrc := ConcatPaths([OriginalPath, LB.Items.Strings[i]]);
+    fSrc := ConcatPaths([OFLPath, LB.Items.Strings[i]]);
     if IsFolder(fSrc) then
     begin
-      if not RepertoireExistant(ConcatPaths([DestPath, LB.Items.Strings[i]])) then
-        CreerRepertoire(ConcatPaths([DestPath, LB.Items.Strings[i]]));
+      if not RepertoireExistant(ConcatPaths([ConvertedPath, LB.Items.Strings[i]])) then
+        CreerRepertoire(ConcatPaths([ConvertedPath, LB.Items.Strings[i]]));
       LB.Items.Delete(i);
     end;
   end;
@@ -1704,11 +1736,11 @@ begin
     PB.Position := PB.Max-(i+1);
     Application.ProcessMessages;
 
-    fSrc := ConcatPaths([OriginalPath, LB.Items.Strings[i]]);
-    fDest := ChangeFileExt(ConcatPaths([DestPath, LB.Items.Strings[i]]), '.dmx');
-//ShowMessage('Try to convert'+LineEnding+fSrc);
+    fSrc := ConcatPaths([OFLPath, LB.Items.Strings[i]]);
+    fDest := ChangeFileExt(ConcatPaths([ConvertedPath, LB.Items.Strings[i]]), '.dmx');
+
     if Convert(fSrc, fDest) then inc(c)
-    else LogMessage('FAIL: '+fSrc);
+      else LogMessage('FAIL: '+fSrc);
     LogMessage(' ');
   end;
 
@@ -1717,6 +1749,11 @@ begin
   Label4.Caption := 'Remains: '+(tot-c).ToString;
   Label6.Caption := 'Wheels error: '+FWheelsErrorCount.ToString;
   Label7.Caption := 'Matrix error: '+FMatrixErrorCount.ToString;
+
+  // delete empty folder in Converted
+  if CBConvertOnlyExisting.Checked then begin
+    DeleteEmptyFolderInConvertedFolder;
+  end;
 
   // convert the manufacturer list
   ConvertManufacturers;
@@ -1727,12 +1764,50 @@ begin
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
-var
-  F: TStringList;
+var F: TStringList;
+  i: integer;
 begin
-  F := ContenuDuRepertoire(OriginalPath, '.json', True, True);
+  F := ContenuDuRepertoire(OFLPath, '.json', True, True);
+  // delete fixture with 16 bits range values
+  DeleteLBEntriesWith16BitRangeValues(F);
+  // delete manufacturers.json file from the list
+  for i:=0 to F.Count-1 do
+    if F.Strings[i] = 'manufacturers.json' then begin
+      F.Delete(i);
+      break;
+    end;
+
   LB.Items.Assign(F);
   F.Free;
+end;
+
+procedure TForm1.DeleteEmptyFolderInConvertedFolder;
+var t: TStringList;
+  i: integer;
+  f: string;
+begin
+  t := GetDirectoryContent(ConvertedPath, ['.ImpossibleExtension'], True, 0);
+  for i:=0 to t.Count-1 do begin
+    f := ConcatPaths([ConvertedPath, t.Strings[i]]);
+    if IsFolder(f) and RepertoireEstVide(f) then
+      SupprimeRepertoire(f);
+  end;
+  t.Free;
+end;
+
+procedure TForm1.DeleteLBEntriesWith16BitRangeValues(aList: TStringList);
+var i: integer;
+  f: string;
+begin
+  for i:=aList.Count-1 downto 0 do begin
+    f := aList.Strings[i];
+    if (Pos('arri', f) = 1) or
+       (Pos('dmg-lumiere', f) = 1) or
+       (Pos('fiilex', f) = 1) or
+       (Pos('generic\', f) = 1) or
+       (Pos('lupo\', f) = 1)
+      then aList.Delete(i);
+  end;
 end;
 
 procedure TForm1.ConvertManufacturers;
@@ -1745,7 +1820,7 @@ var stream: TFileStream;
   t: TStringList;
 begin
   // Open a stream and parse the manufacturer file
-  m := ConcatPaths([OriginalPath, 'manufacturers.json']);
+  m := ConcatPaths([OFLPath, 'manufacturers.json']);
   stream := TFileStream.Create(m, fmOpenRead);
   t := TStringList.Create;
   try
@@ -1771,7 +1846,7 @@ begin
     end;
 
     try
-      m := ConcatPaths([DestPath,'manufacturers.txt']);
+      m := ConcatPaths([ConvertedPath,'manufacturers.txt']);
       t.SaveToFile(m);
       ShowMessage('Manufacturer list created !');
     except
@@ -1786,14 +1861,20 @@ begin
   end;
 end;
 
-function TForm1.OriginalPath: string;
+function TForm1.OFLPath: string;
 begin
   Result := ConcatPaths([Application.Location, 'OFL']);
 end;
 
-function TForm1.DestPath: string;
+function TForm1.ConvertedPath: string;
 begin
   Result := ConcatPaths([Application.Location, 'ConvertedFixtures']);
+end;
+
+function TForm1.SayneteDMXLibraryPath: string;
+begin
+  Result := Application.Location+'..'+PathDelim+'Binary'+PathDelim+'Data'+PathDelim+'DMXLibrary';
+  Result := ExpandFileName(Result);
 end;
 
 function TForm1.ManufacturerNameOf(const f: string): string;
@@ -1805,7 +1886,7 @@ begin
   Result := '';
 
   // Open a stream and parse the source file
-  m := ConcatPaths([OriginalPath, 'manufacturers.json']);
+  m := ConcatPaths([OFLPath, 'manufacturers.json']);
   Fstr := TFileStream.Create(m, fmOpenRead);
   try
     FParser := TJSONParser.Create(Fstr, [joUTF8]);
@@ -1955,10 +2036,11 @@ begin
             inc(FMatrixErrorCount);
           end;
           'wheels': begin
-            //Result := fix.InitWheelsFrom(item);
-            LogMessage('  property "'+itemEnum.Key+'":"'{+item.AsJSON}+'" found but not implemented!');
-            Result := False;
-            inc(FWheelsErrorCount);
+            Result := fix.InitWheelsFrom(itemEnum.Value);
+            if not Result then begin
+              LogMessage('  property "'+itemEnum.Key+'":"'+itemEnum.Value.AsJSON+'" fail ti InitWheelsFrom');
+              inc(FWheelsErrorCount);
+            end;
           end;
           'availableChannels': begin
             Result := fix.InitAvailableChannelsfrom(itemEnum.Value);
