@@ -13,7 +13,7 @@ ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|Shutter/Strobe|Type|6|DefaultValue|8|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp slow..fast|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown slow..fast|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~248~Txt~Strobe slow..fast Random timing|R10|Begin~249~End~255~Txt~Open
+ID|Shutter / Strobe|Type|6|DefaultValue|8|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp slow..fast|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown slow..fast|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~248~Txt~Strobe slow..fast Random timing|R10|Begin~249~End~255~Txt~Open
 ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Maintenance|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout by pan/tilt movement|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout by color change|R5|Begin~100~End~199~Txt~No function|R6|Begin~200~End~209~Txt~Reset all|R7|Begin~210~End~249~Txt~No function|R8|Begin~250~End~255~Txt~Sound active
