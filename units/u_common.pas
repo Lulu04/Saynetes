@@ -431,7 +431,9 @@ type
                      ctSMOKE,
                      ctPANTILT,
                      ctPANCONTINUOUS,
-                     ctTILTCONTINUOUS
+                     ctTILTCONTINUOUS,
+                     ctPRISM,
+                     ctPRISMROTATION
                    );
 
     // stage shape rendered in the stage view

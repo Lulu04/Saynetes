@@ -207,6 +207,10 @@ begin
 
   CB.Items.Add(Ord(ctGOBO).ToString+'|Gobo');
   CB.Items.Add(Ord(ctGOBOROTATION).ToString+'|Gobo rotation');
+
+  CB.Items.Add(Ord(ctPRISM).ToString+'|Prism');
+  CB.Items.Add(Ord(ctPRISMROTATION).ToString+'|Prism rotation');
+
   CB.Items.Add(Ord(ctIRIS).ToString+'|Iris');
   CB.Items.Add(Ord(ctBLADEINSERTION).ToString+'|Blade insertion');
   CB.Items.Add(Ord(ctBLADEROTATION).ToString+'|Blade rotation');
@@ -263,6 +267,10 @@ begin
 
   CB.Items.Add(Ord(ctGOBO).ToString);
   CB.Items.Add(Ord(ctGOBOROTATION).ToString);
+
+  CB.Items.Add(Ord(ctPRISM).ToString);
+  CB.Items.Add(Ord(ctPRISMROTATION).ToString);
+
   CB.Items.Add(Ord(ctIRIS).ToString);
   CB.Items.Add(Ord(ctBLADEINSERTION).ToString);
   CB.Items.Add(Ord(ctBLADEROTATION).ToString);

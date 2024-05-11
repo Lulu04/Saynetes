@@ -108,6 +108,8 @@ begin
   AddImageToImageList('PanTilt.svg', ILChannelType);
   AddImageToImageList('PanContinuous.svg', ILChannelType);
   AddImageToImageList('TiltContinuous.svg', ILChannelType);
+  AddImageToImageList('Prism.svg', ILChannelType);
+  AddImageToImageList('PrismRotation.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 
