@@ -1,0 +1,47 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.claypaky.it/media/documents/Spheriscan-Spherilight_Manual_04.2017_EN.pdf|LinkType2|manual|Url2|https://www.claypaky.it/media/documents/Spheriscan_DMX-Channels_08.2016.pdf|LinkType3|video|Url3|https://www.youtube.com/watch?v=d3FvqNGtDx8&t=320|LinkType4|video|Url4|https://www.youtube.com/watch?v=pHfReMDC78E|LinkType5|video|Url5|https://www.youtube.com/watch?v=ZUiQGT95se8
+[GENERAL]
+Manufacturer|Clay Paky|Name|Spheriscan|Type|8|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|497|Height|886|Depth|282|Weight|31.50|Power|1600|Connector|5-pin|Bulb|OSRAM Lok-it 1400-PS L|Lumens|120000|Lens|80mm|LensMinDegree|13.000|LensMaxDegree|34.000
+[CHAN_DEF]
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Split Open / Dark red|R3|Begin~16~End~23~Txt~Dark red~Extra~#dc2919|R4|Begin~24~End~31~Txt~Split Dark red / Brilliant blue~Extra~#dc2919|R5|Begin~32~End~39~Txt~Brilliant blue~Extra~#234faa|R6|Begin~40~End~47~Txt~Split Brilliant blue / Green~Extra~#234faa|R7|Begin~48~End~55~Txt~Green~Extra~#51bc49|R8|Begin~56~End~63~Txt~Split Green / Half minus green~Extra~#51bc49|R9|Begin~64~End~71~Txt~Half minus green~Extra~#eee2d8|R10|Begin~72~End~79~Txt~Split Half minus green / Light orange~Extra~#eee2d8|R11|Begin~80~End~87~Txt~Light orange~Extra~#ff9c35|R12|Begin~88~End~95~Txt~Split Light orange / Dark orange~Extra~#ff9c35|R13|Begin~96~End~103~Txt~Dark orange~Extra~#ff4f23|R14|Begin~104~End~111~Txt~Split Dark orange / Navy blue~Extra~#ff4f23|R15|Begin~112~End~119~Txt~Navy blue~Extra~#1356a4|R16|Begin~120~End~127~Txt~Split Navy blue~Extra~#1356a4|R17|Begin~128~End~255~Txt~0.73rpm..160rpm
+ID|Shutter / Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~103~Txt~Strobe 1Hz..12Hz|R3|Begin~104~End~107~Txt~Open|R4|Begin~108~End~207~Txt~Pulse slow..fast|R5|Begin~208~End~212~Txt~Open|R6|Begin~213~End~225~Txt~Strobe slow Random timing|R7|Begin~226~End~238~Txt~Strobe 50% Random timing|R8|Begin~239~End~251~Txt~Strobe fast Random timing|R9|Begin~252~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Iris|Type|25|DefaultValue|255|R1|Begin~0~End~127~Txt~Iris open closed..open|R2|Begin~128~End~131~Txt~Iris open open|R3|Begin~132~End~171~Txt~Pulse slow..fast|R4|Begin~172~End~211~Txt~Ramp down slow..fast|R5|Begin~212~End~251~Txt~Ramp up slow..fast|R6|Begin~252~End~255~Txt~Iris open open
+ID|Static Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Small Dots|R3|Begin~16~End~23~Txt~Shuffle|R4|Begin~24~End~31~Txt~Floating Squares|R5|Begin~32~End~39~Txt~Random Lines|R6|Begin~40~End~47~Txt~Large Bubbles|R7|Begin~48~End~55~Txt~Shattered|R8|Begin~56~End~63~Txt~Big Dots|R9|Begin~64~End~71~Txt~Tunnel|R10|Begin~72~End~113~Txt~60rpm..5rpm|R11|Begin~114~End~117~Txt~stop|R12|Begin~118~End~159~Txt~-5rpm..-60rpm|R13|Begin~160~End~171~Txt~Small Dots 24bpm..600bpm|R14|Begin~172~End~183~Txt~Shuffle 24bpm..600bpm|R15|Begin~184~End~195~Txt~Floating Squares 24bpm..600bpm|R16|Begin~196~End~207~Txt~Random Lines 24bpm..600bpm|R17|Begin~208~End~219~Txt~Large Bubbles 24bpm..600bpm|R18|Begin~220~End~231~Txt~Shattered 24bpm..600bpm|R19|Begin~232~End~243~Txt~Big Dots 24bpm..600bpm|R20|Begin~244~End~255~Txt~Tunnel 24bpm..600bpm
+ID|Rotating Gobo Wheel|Type|10|R1|Begin~0~End~18~Txt~Open|R2|Begin~19~End~37~Txt~Clouds|R3|Begin~38~End~56~Txt~Eccentric Circle|R4|Begin~57~End~74~Txt~Multiple Cones|R5|Begin~75~End~92~Txt~Fat Line|R6|Begin~93~End~111~Txt~Half Circle|R7|Begin~112~End~129~Txt~Linear Dots|R8|Begin~130~End~150~Txt~Clouds slow..fast|R9|Begin~151~End~171~Txt~Eccentric Circle slow..fast|R10|Begin~172~End~192~Txt~Multiple Cones slow..fast|R11|Begin~193~End~213~Txt~Fat Line slow..fast|R12|Begin~214~End~234~Txt~Half Circle slow..fast|R13|Begin~235~End~255~Txt~Linear Dots slow..fast
+ID|Gobo Stencil Rotation|Type|11|R1|Begin~0~End~125~Txt~0deg..540deg|R2|Begin~126~End~190~Txt~180rpm..0.36rpm|R3|Begin~191~End~192~Txt~stop|R4|Begin~193~End~255~Txt~-0.36rpm..-180rpm
+ID|Gobo Stencil Rotation fine|Type|11|R1|Begin~0~End~255~Txt~
+ID|Prism insertion|Type|41|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Prism 8-facet
+ID|Prism Rotation|Type|42|R1|Begin~0~End~127~Txt~Prism rotation 0deg..540deg|R2|Begin~128~End~190~Txt~Prism rotation 80rpm..0.05rpm|R3|Begin~191~End~192~Txt~Prism rotation stop|R4|Begin~193~End~255~Txt~Prism rotation -0.05rpm..-80rpm
+ID|Frost|Type|47|R1|Begin~0~End~255~Txt~Frost off..high
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 13deg..34deg
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
+ID|Function|Type|0|R1|Begin~0~End~11~Txt~No function|R2|Begin~12~End~24~Txt~5s Fast pan / tilt speed (default)|R3|Begin~25~End~37~Txt~5s Normal pan / tilt speed|R4|Begin~38~End~50~Txt~5s Conventional dimmer curve|R5|Begin~51~End~62~Txt~5s Standard dimmer curve (default)|R6|Begin~63~End~139~Txt~No function|R7|Begin~140~End~152~Txt~5s Fast gobo change (default)|R8|Begin~153~End~164~Txt~5s Normal Gobo change|R9|Begin~165~End~177~Txt~No function|R10|Begin~178~End~203~Txt~Mirror rotation inversion|R11|Begin~204~End~255~Txt~No function
+ID|Reset|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~76~Txt~5s Zoom reset|R3|Begin~77~End~127~Txt~5s Pan / tilt reset|R4|Begin~128~End~255~Txt~5s Complete reset
+ID|Lamp control|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~100~Txt~5s Lamp off|R3|Begin~101~End~255~Txt~5s Lamp on
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..720deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan Continuous|Type|0|DefaultValue|128|R1|Begin~0~End~0~Txt~Continuous stop|R2|Begin~1~End~126~Txt~Continuous fast CW..slow CW|R3|Begin~127~End~129~Txt~Continuous stop|R4|Begin~130~End~255~Txt~Continuous slow CCW..fast CCW
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..60deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Strip LED Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Strip LED Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Strip LED Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Time|Type|0|R1|Begin~0~End~254~Txt~0s..310s|R2|Begin~255~End~255~Txt~Follow cue data
+ID|Color Time|Type|16|R1|Begin~0~End~254~Txt~Time 0s..310s|R2|Begin~255~End~255~Txt~Follow cue data
+ID|Beam Time|Type|16|R1|Begin~0~End~254~Txt~Time 0s..310s|R2|Begin~255~End~255~Txt~Follow cue data
+ID|Gobo Time|Type|16|R1|Begin~0~End~254~Txt~Time 0s..310s|R2|Begin~255~End~255~Txt~Follow cue data
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|std|Content|Cyan~Magenta~Yellow~Color Wheel~Shutter / Strobe~Dimmer~Dimmer fine~Iris~Static Gobo Wheel~Rotating Gobo Wheel~Gobo Stencil Rotation~Gobo Stencil Rotation fine~Prism insertion~Prism Rotation~Frost~Zoom~Focus~Focus fine~Function~Reset~Lamp control~Pan~Pan fine~Pan Continuous~Tilt~Tilt fine~Strip LED Red~Strip LED Green~Strip LED Blue
+Name|Vector|ShortName|vec|Content|Cyan~Magenta~Yellow~Color Wheel~Shutter / Strobe~Dimmer~Dimmer fine~Iris~Static Gobo Wheel~Rotating Gobo Wheel~Gobo Stencil Rotation~Gobo Stencil Rotation fine~Prism insertion~Prism Rotation~Frost~Zoom~Focus~Focus fine~Function~Reset~Lamp control~Pan~Pan fine~Pan Continuous~Tilt~Tilt fine~Strip LED Red~Strip LED Green~Strip LED Blue~Pan/Tilt Time~Color Time~Beam Time~Gobo Time
+[END_MODES]

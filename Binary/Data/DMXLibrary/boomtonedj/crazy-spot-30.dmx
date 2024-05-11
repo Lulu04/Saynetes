@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://static.boomtonedj.com/pdf/manual/49/49502_manuelboomtonedjcrazyspot30.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=UAhS61D0V94|LinkType3|video|Url3|https://www.youtube.com/watch?v=7Cle6ROY1UQ
+[GENERAL]
+Manufacturer|BoomToneDJ|Name|Crazy Spot 30|Type|9|Authors|zampano|Creator|OFL
+[PHYSICAL]
+Width|265|Height|300|Depth|210|Weight|2.95|Power|50|Connector|3-pin|Bulb|30W Cree LED|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Color|R2|Begin~8~End~14~Txt~Color|R3|Begin~15~End~21~Txt~Color|R4|Begin~22~End~28~Txt~Color|R5|Begin~29~End~35~Txt~Color|R6|Begin~36~End~42~Txt~Color|R7|Begin~43~End~49~Txt~Color|R8|Begin~50~End~56~Txt~Color|R9|Begin~57~End~127~Txt~Split colors|R10|Begin~128~End~189~Txt~fast CW..slow CW|R11|Begin~190~End~193~Txt~stop|R12|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Gobo 8|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~71~Txt~Gobo 8|R10|Begin~72~End~79~Txt~Gobo 1|R11|Begin~80~End~87~Txt~Gobo 2|R12|Begin~88~End~95~Txt~Gobo 3|R13|Begin~96~End~103~Txt~Gobo 4|R14|Begin~104~End~111~Txt~Gobo 5|R15|Begin~112~End~119~Txt~Gobo 6|R16|Begin~120~End~127~Txt~Gobo 7|R17|Begin~128~End~189~Txt~fast CW..slow CW|R18|Begin~190~End~193~Txt~stop|R19|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~Strobe|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~Strobe|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Function|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout on Pan/Tilt|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout on color change|R5|Begin~100~End~109~Txt~No function|R6|Begin~110~End~119~Txt~Blackout on gobo change|R7|Begin~120~End~199~Txt~No function|R8|Begin~200~End~209~Txt~Total reset|R9|Begin~210~End~249~Txt~No function|R10|Begin~250~End~255~Txt~Sound mode
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Dimmer~Shutter~Function
+Name|10-channel|ShortName|10ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Dimmer~Shutter~Function
+[END_MODES]

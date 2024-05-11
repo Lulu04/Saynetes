@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://3live.ru/upload/iblock/e0b/LS90.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=TM9r-1u0gyI|LinkType3|other|Url3|https://www.qlcplus.org/forum/viewtopic.php?t=12338
+[GENERAL]
+Manufacturer|Big Dipper|Name|LS90|Type|9|Authors|zhefskie, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|245|Height|235|Depth|350|Weight|7.00|Power|150|Connector|3-pin XLR IP65|Bulb|90W LED|Lumens|4500
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~249~Txt~Strobe slow..fast|R3|Begin~250~End~255~Txt~Open
+ID|Color Wheel|Type|12|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Red #ff0000|R3|Begin~20~End~29~Txt~Green #00ff00|R4|Begin~30~End~39~Txt~Blue #0000ff|R5|Begin~40~End~49~Txt~Yellow #ffff00|R6|Begin~50~End~59~Txt~Fuchsia #ff00ff|R7|Begin~60~End~69~Txt~Blue Green #00ffff|R8|Begin~70~End~79~Txt~Dark Yellow #ccaa00|R9|Begin~80~End~89~Txt~Split Dark Yellow #ccaa00|R10|Begin~90~End~99~Txt~Split Blue Green / Dark Yellow #00ffff|R11|Begin~100~End~109~Txt~Split Fuchsia / Blue Green #ff00ff|R12|Begin~110~End~119~Txt~Split Yellow / Fuchsia #ffff00|R13|Begin~120~End~129~Txt~Split Blue / Yellow #0000ff|R14|Begin~130~End~139~Txt~Split Green / Blue #00ff00|R15|Begin~140~End~149~Txt~Split Red / Green #ff0000|R16|Begin~150~End~255~Txt~slow CCW..fast CCW
+ID|Glass Gobo Wheel|Type|10|R1|Begin~0~End~35~Txt~Open|R2|Begin~36~End~71~Txt~Gobo 1|R3|Begin~72~End~107~Txt~Gobo 2|R4|Begin~108~End~143~Txt~Gobo 3|R5|Begin~144~End~179~Txt~Gobo 4|R6|Begin~180~End~215~Txt~Gobo 5|R7|Begin~216~End~219~Txt~Gobo 6|R8|Begin~220~End~255~Txt~slow CCW..fast CCW
+ID|Glass Gobo Rotation|Type|11|R1|Begin~0~End~89~Txt~0deg..360deg|R2|Begin~90~End~167~Txt~fast CCW..slow CCW|R3|Begin~168~End~178~Txt~stop|R4|Begin~179~End~255~Txt~slow CW..fast CW
+ID|Glass Gobo Shake|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~250~Txt~slow..fast|R3|Begin~251~End~255~Txt~No function
+ID|Metal Gobo Wheel|Type|10|R1|Begin~0~End~26~Txt~Open|R2|Begin~27~End~53~Txt~Gobo 1|R3|Begin~54~End~80~Txt~Gobo 2|R4|Begin~81~End~107~Txt~Gobo 3|R5|Begin~108~End~134~Txt~Gobo 4|R6|Begin~135~End~161~Txt~Gobo 5|R7|Begin~162~End~188~Txt~Gobo 6|R8|Begin~189~End~214~Txt~Gobo 7|R9|Begin~215~End~219~Txt~Gobo 8|R10|Begin~220~End~255~Txt~slow CCW..fast CCW
+ID|Metal Gobo Shake|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~250~Txt~slow..fast|R3|Begin~251~End~255~Txt~No function
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus 0%..100%
+ID|Prism|Type|41|R1|Begin~0~End~49~Txt~No function|R2|Begin~50~End~100~Txt~Prism|R3|Begin~101~End~255~Txt~Prism slow CW..fast CW
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset all motors|R3|Begin~201~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Dimmer~Strobe~Color Wheel~Glass Gobo Wheel~Glass Gobo Rotation~Glass Gobo Shake~Metal Gobo Wheel~Metal Gobo Shake~Focus~Prism~Pan/Tilt Speed~Pan fine~Tilt fine~Reset
+[END_MODES]
