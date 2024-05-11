@@ -436,7 +436,9 @@ type
                      ctPRISMROTATION,
                      ctLASER,
                      ctLASERROTATION,
-                     ctLASERSTROBE      // 45
+                     ctLASERSTROBE,     // 45
+                     ctGOBOSHAKE,
+                     ctFROST
                    );
 
     // stage shape rendered in the stage view

@@ -207,9 +207,12 @@ begin
 
   CB.Items.Add(Ord(ctGOBO).ToString+'|Gobo');
   CB.Items.Add(Ord(ctGOBOROTATION).ToString+'|Gobo rotation');
+  CB.Items.Add(Ord(ctGOBOSHAKE).ToString);
 
   CB.Items.Add(Ord(ctPRISM).ToString+'|Prism');
   CB.Items.Add(Ord(ctPRISMROTATION).ToString+'|Prism rotation');
+
+  CB.Items.Add(Ord(ctFROST).ToString+'|Frost');
 
   CB.Items.Add(Ord(ctLASER).ToString+'|Laser');
   CB.Items.Add(Ord(ctLASERROTATION).ToString+'|Laser rotation');
@@ -271,9 +274,12 @@ begin
 
   CB.Items.Add(Ord(ctGOBO).ToString);
   CB.Items.Add(Ord(ctGOBOROTATION).ToString);
+  CB.Items.Add(Ord(ctGOBOSHAKE).ToString);
 
   CB.Items.Add(Ord(ctPRISM).ToString);
   CB.Items.Add(Ord(ctPRISMROTATION).ToString);
+
+   CB.Items.Add(Ord(ctFROST).ToString);
 
   CB.Items.Add(Ord(ctLASER).ToString);
   CB.Items.Add(Ord(ctLASERROTATION).ToString);
