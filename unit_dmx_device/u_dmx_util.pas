@@ -308,6 +308,8 @@ begin
     ctFAN: Result:=Result+'CursorFan.svg';
     ctSMOKE: Result:=Result+'CursorSmoke.svg';
     ctPANTILT: Result:=Result+'CursorPanTilt.svg';
+    ctPRISM: Result:=Result+'CursorPrism.svg';
+    ctPRISMROTATION: Result:=Result+'CursorPrismRotation.svg';
     else Result:='';
   end;//case
 end;
