@@ -113,6 +113,8 @@ begin
   AddImageToImageList('Laser.svg', ILChannelType);
   AddImageToImageList('LaserRotation.svg', ILChannelType);
   AddImageToImageList('LaserStrobe.svg', ILChannelType);
+  AddImageToImageList('GoboShake.svg', ILChannelType);
+  AddImageToImageList('Frost.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

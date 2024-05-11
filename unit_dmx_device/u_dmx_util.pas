@@ -313,6 +313,8 @@ begin
     ctLASER: Result:=Result+'CursorLaser.svg';
     ctLASERROTATION: Result:=Result+'CursorLaserRotation.svg';
     ctLASERSTROBE: Result:=Result+'CursorLaserStrobe.svg';
+    ctGOBOSHAKE: Result:=Result+'CursorGoboShake.svg';
+    ctFROST: Result:=Result+'CursorFrost.svg';
     else Result:='';
   end;//case
 end;
