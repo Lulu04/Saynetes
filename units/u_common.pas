@@ -431,9 +431,12 @@ type
                      ctSMOKE,
                      ctPANTILT,
                      ctPANCONTINUOUS,
-                     ctTILTCONTINUOUS,
+                     ctTILTCONTINUOUS,  // 40
                      ctPRISM,
-                     ctPRISMROTATION
+                     ctPRISMROTATION,
+                     ctLASER,
+                     ctLASERROTATION,
+                     ctLASERSTROBE      // 45
                    );
 
     // stage shape rendered in the stage view

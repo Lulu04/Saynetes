@@ -110,6 +110,9 @@ begin
   AddImageToImageList('TiltContinuous.svg', ILChannelType);
   AddImageToImageList('Prism.svg', ILChannelType);
   AddImageToImageList('PrismRotation.svg', ILChannelType);
+  AddImageToImageList('Laser.svg', ILChannelType);
+  AddImageToImageList('LaserRotation.svg', ILChannelType);
+  AddImageToImageList('LaserStrobe.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 
