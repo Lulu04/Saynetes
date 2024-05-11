@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/7650/Auto%20Spot%20150.pdf
+[GENERAL]
+Manufacturer|American DJ|Name|Auto Spot 150|Type|9|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|295|Height|451|Depth|373|Weight|13.00|Power|68|Connector|3-pin|Bulb|LL-HTI150 discharge lamp|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|DefaultValue|128|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Gobo 1|R3|Begin~32~End~47~Txt~Gobo 2|R4|Begin~48~End~63~Txt~Gobo 3|R5|Begin~64~End~79~Txt~Gobo 4|R6|Begin~80~End~95~Txt~Gobo 5|R7|Begin~96~End~111~Txt~Gobo 6|R8|Begin~112~End~127~Txt~Gobo 7|R9|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Gobo Rotation|Type|11|DefaultValue|127|R1|Begin~0~End~9~Txt~stop|R2|Begin~10~End~120~Txt~fast CW..slow CW|R3|Begin~121~End~134~Txt~stop|R4|Begin~135~End~245~Txt~slow CCW..fast CCW|R5|Begin~246~End~255~Txt~stop
+ID|Full Colors|Type|12|R1|Begin~0~End~12~Txt~Open|R2|Begin~13~End~25~Txt~Blue #0000ff|R3|Begin~26~End~38~Txt~Yellow #ffff00|R4|Begin~39~End~51~Txt~Green #00ff00|R5|Begin~52~End~63~Txt~Light Blue #aaddff|R6|Begin~64~End~76~Txt~Orange #ff7f00|R7|Begin~77~End~89~Txt~Pink #ffaaaa|R8|Begin~90~End~102~Txt~Magenta #ff00ff|R9|Begin~103~End~115~Txt~Amber #ffbf00|R10|Begin~116~End~127~Txt~Light Green #aaffaa|R11|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Shutter / Dimmer|Type|0|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~131~Txt~off..bright|R3|Begin~132~End~252~Txt~Strobe slow..fast|R4|Begin~253~End~255~Txt~Open
+ID|Split Colors|Type|12|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Split Open / Blue|R3|Begin~14~End~20~Txt~Blue #0000ff|R4|Begin~21~End~26~Txt~Split Blue / Yellow #0000ff|R5|Begin~27~End~33~Txt~Yellow #ffff00|R6|Begin~34~End~40~Txt~Split Yellow / Green #ffff00|R7|Begin~41~End~46~Txt~Green #00ff00|R8|Begin~47~End~53~Txt~Split Green / Light Blue #00ff00|R9|Begin~54~End~60~Txt~Light Blue #aaddff|R10|Begin~61~End~66~Txt~Split Light Blue / Orange #aaddff|R11|Begin~67~End~73~Txt~Orange #ff7f00|R12|Begin~74~End~80~Txt~Split Orange / Pink #ff7f00|R13|Begin~81~End~87~Txt~Pink #ffaaaa|R14|Begin~88~End~93~Txt~Split Pink / Magenta #ffaaaa|R15|Begin~94~End~100~Txt~Magenta #ff00ff|R16|Begin~101~End~107~Txt~Split Magenta / Amber #ff00ff|R17|Begin~108~End~113~Txt~Amber #ffbf00|R18|Begin~114~End~120~Txt~Split Amber / Light Green #ffbf00|R19|Begin~121~End~127~Txt~Light Green #aaffaa|R20|Begin~128~End~255~Txt~slow CW..fast CW
+[END_CHAN_DEF]
+[MODES]
+Name|Full Color|ShortName|Full Color|Content|Pan~Tilt~Gobo Wheel~Gobo Rotation~Full Colors~Shutter / Dimmer
+Name|Split Color|ShortName|Split Color|Content|Pan~Tilt~Gobo Wheel~Gobo Rotation~Split Colors~Shutter / Dimmer
+[END_MODES]

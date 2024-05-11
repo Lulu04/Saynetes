@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.ghl.be/?wpfb_dl=134|LinkType2|video|Url2|https://www.youtube.com/watch?v=AY2xw4sXFQs
+[GENERAL]
+Manufacturer|5Star Systems|Name|Spica 250M|Type|9|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|427|Height|459|Depth|373|Weight|18.00|Power|500|Connector|3-pin|Bulb|Sylvania BA 250/2 GY-9.5|LensMinDegree|18.000|LensMaxDegree|18.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..530deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..280deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~249~Txt~fast..slow|R2|Begin~250~End~255~Txt~fast black while moving
+ID|Reset|Type|0|DefaultValue|170|R1|Begin~0~End~127~Txt~fast..slow Fan speed|R2|Begin~128~End~139~Txt~lamp on|R3|Begin~140~End~179~Txt~No function|R4|Begin~180~End~189~Txt~reset|R5|Begin~190~End~229~Txt~No function|R6|Begin~230~End~239~Txt~5s lamp off|R7|Begin~240~End~255~Txt~No function
+ID|Color Wheel|Type|0|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Split Open / Yellow|R3|Begin~14~End~20~Txt~Yellow~Extra~#ffff00|R4|Begin~21~End~27~Txt~Split Yellow / Orange~Extra~#ffff00|R5|Begin~28~End~34~Txt~Orange~Extra~#ff7f00|R6|Begin~35~End~41~Txt~Split Orange / Red~Extra~#ff7f00|R7|Begin~42~End~48~Txt~Red~Extra~#ff0000|R8|Begin~49~End~55~Txt~Split Red / Blue~Extra~#ff0000|R9|Begin~56~End~62~Txt~Blue~Extra~#0000ff|R10|Begin~63~End~69~Txt~Split Blue / Green~Extra~#0000ff|R11|Begin~70~End~76~Txt~Green~Extra~#00ff00|R12|Begin~77~End~83~Txt~Split Green / Pink~Extra~#00ff00|R13|Begin~84~End~90~Txt~Pink~Extra~#ffc0cb|R14|Begin~91~End~97~Txt~Split Pink / Turquoise~Extra~#ffc0cb|R15|Begin~98~End~104~Txt~Turquoise~Extra~#40e0d0|R16|Begin~105~End~111~Txt~Split Turquoise / Purple~Extra~#40e0d0|R17|Begin~112~End~118~Txt~Purple~Extra~#9800ff|R18|Begin~119~End~127~Txt~Split Purple~Extra~#9800ff|R19|Begin~128~End~189~Txt~fast CW..slow CW|R20|Begin~190~End~193~Txt~stop|R21|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Prism|Type|0|R1|Begin~0~End~95~Txt~No function|R2|Begin~96~End~159~Txt~Prism|R3|Begin~160~End~167~Txt~Prism Macro 1|R4|Begin~168~End~175~Txt~Prism Macro 2|R5|Begin~176~End~183~Txt~Prism Macro 3|R6|Begin~184~End~191~Txt~Prism Macro 4|R7|Begin~192~End~199~Txt~Prism Macro 5|R8|Begin~200~End~207~Txt~Prism Macro 6|R9|Begin~208~End~215~Txt~Prism Macro 7|R10|Begin~216~End~223~Txt~Prism Macro 8|R11|Begin~224~End~231~Txt~Prism Macro 9|R12|Begin~232~End~239~Txt~Prism Macro 10|R13|Begin~240~End~247~Txt~Prism Macro 11|R14|Begin~248~End~255~Txt~Prism Macro 12
+ID|Prism rotation|Type|0|R1|Begin~0~End~0~Txt~Prism rotation stop|R2|Begin~1~End~126~Txt~Prism rotation fast CW..slow CW|R3|Begin~127~End~128~Txt~Prism rotation stop|R4|Begin~129~End~255~Txt~Prism rotation slow CCW..fast CCW
+ID|Gobo Wheel|Type|0|R1|Begin~0~End~31~Txt~Open|R2|Begin~32~End~63~Txt~Gobo|R3|Begin~64~End~95~Txt~Gobo|R4|Begin~96~End~127~Txt~Gobo|R5|Begin~128~End~159~Txt~Gobo|R6|Begin~160~End~223~Txt~Gobo|R7|Begin~224~End~255~Txt~slow CW..fast CW
+ID|Gobo rotation|Type|11|R1|Begin~0~End~127~Txt~0%..100%|R2|Begin~128~End~190~Txt~fast CW..slow CW|R3|Begin~191~End~192~Txt~stop|R4|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|16bit|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
+Name|8bit|Content|Pan~Tilt~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
+[END_MODES]
