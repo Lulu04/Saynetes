@@ -310,6 +310,9 @@ begin
     ctPANTILT: Result:=Result+'CursorPanTilt.svg';
     ctPRISM: Result:=Result+'CursorPrism.svg';
     ctPRISMROTATION: Result:=Result+'CursorPrismRotation.svg';
+    ctLASER: Result:=Result+'CursorLaser.svg';
+    ctLASERROTATION: Result:=Result+'CursorLaserRotation.svg';
+    ctLASERSTROBE: Result:=Result+'CursorLaserStrobe.svg';
     else Result:='';
   end;//case
 end;

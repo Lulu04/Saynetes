@@ -211,6 +211,10 @@ begin
   CB.Items.Add(Ord(ctPRISM).ToString+'|Prism');
   CB.Items.Add(Ord(ctPRISMROTATION).ToString+'|Prism rotation');
 
+  CB.Items.Add(Ord(ctLASER).ToString+'|Laser');
+  CB.Items.Add(Ord(ctLASERROTATION).ToString+'|Laser rotation');
+  CB.Items.Add(Ord(ctLASERSTROBE).ToString+'|Laser strobe');
+
   CB.Items.Add(Ord(ctIRIS).ToString+'|Iris');
   CB.Items.Add(Ord(ctBLADEINSERTION).ToString+'|Blade insertion');
   CB.Items.Add(Ord(ctBLADEROTATION).ToString+'|Blade rotation');
@@ -270,6 +274,10 @@ begin
 
   CB.Items.Add(Ord(ctPRISM).ToString);
   CB.Items.Add(Ord(ctPRISMROTATION).ToString);
+
+  CB.Items.Add(Ord(ctLASER).ToString);
+  CB.Items.Add(Ord(ctLASERROTATION).ToString);
+  CB.Items.Add(Ord(ctLASERSTROBE).ToString);
 
   CB.Items.Add(Ord(ctIRIS).ToString);
   CB.Items.Add(Ord(ctBLADEINSERTION).ToString);
