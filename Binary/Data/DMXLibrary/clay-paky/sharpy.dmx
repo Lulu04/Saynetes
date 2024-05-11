@@ -1,0 +1,34 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://e-assist.tech/servlet/checkDocumentsFile?Id=284|LinkType2|product page|Url2|https://www.claypaky.it/products/sharpy/|LinkType3|video|Url3|https://www.youtube.com/watch?v=wcwxPytxm10|LinkType4|video|Url4|https://www.youtube.com/watch?v=XNa2c79-Wgw
+[GENERAL]
+Manufacturer|Clay Paky|Name|Sharpy|Type|9|Authors|Massimo Callegari, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|405|Height|450|Depth|330|Weight|19.00|Power|200|Connector|3-pin|Bulb|MSD 200W|Lumens|7950|Lens|Other|LensMaxDegree|3.800
+[CHAN_DEF]
+ID|Color Wheel|Type|12|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~8~Txt~Open..Red|R3|Begin~9~End~12~Txt~Red~Extra~#c41c1a|R4|Begin~13~End~17~Txt~Red..Orange|R5|Begin~18~End~21~Txt~Orange~Extra~#ed8229|R6|Begin~22~End~25~Txt~Orange..Aquamarine|R7|Begin~26~End~29~Txt~Aquamarine~Extra~#7abd82|R8|Begin~30~End~34~Txt~Aquamarine..Green|R9|Begin~35~End~38~Txt~Green~Extra~#05822b|R10|Begin~39~End~42~Txt~Green..Light Green|R11|Begin~43~End~46~Txt~Light Green~Extra~#9ec233|R12|Begin~47~End~51~Txt~Light Green..Lavender|R13|Begin~52~End~55~Txt~Lavender~Extra~#8f73ad|R14|Begin~56~End~59~Txt~Lavender..Pink|R15|Begin~60~End~63~Txt~Pink~Extra~#ed8080|R16|Begin~64~End~68~Txt~Pink..Yellow|R17|Begin~69~End~72~Txt~Yellow~Extra~#ffed00|R18|Begin~73~End~76~Txt~Yellow..Magenta|R19|Begin~77~End~81~Txt~Magenta~Extra~#e30082|R20|Begin~82~End~85~Txt~Magenta..Cyan|R21|Begin~86~End~89~Txt~Cyan~Extra~#00a6eb|R22|Begin~90~End~93~Txt~Cyan..CTO 260|R23|Begin~94~End~98~Txt~CTO 260~Extra~#f5c745|R24|Begin~99~End~102~Txt~CTO 260..CTO 190|R25|Begin~103~End~106~Txt~CTO 190~Extra~#f5d985|R26|Begin~107~End~110~Txt~CTO 190..CTB 8000|R27|Begin~111~End~115~Txt~CTB 8000~Extra~#96c7b8|R28|Begin~116~End~119~Txt~CTB 8000..Blue|R29|Begin~120~End~123~Txt~Blue~Extra~#004f99|R30|Begin~124~End~127~Txt~Blue|R31|Begin~128~End~255~Txt~0.2rpm..160rpm
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~103~Txt~Strobe 1Hz..12Hz|R3|Begin~104~End~107~Txt~Open|R4|Begin~108~End~207~Txt~Pulse 30bpm..360bpm|R5|Begin~208~End~212~Txt~Open|R6|Begin~213~End~225~Txt~Strobe slow Random timing|R7|Begin~226~End~238~Txt~Strobe 50% Random timing|R8|Begin~239~End~251~Txt~Strobe fast Random timing|R9|Begin~252~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~3~Txt~Open|R2|Begin~4~End~7~Txt~Gobo 1|R3|Begin~8~End~11~Txt~Gobo 2|R4|Begin~12~End~15~Txt~Gobo 3|R5|Begin~16~End~19~Txt~Gobo 4|R6|Begin~20~End~23~Txt~Gobo 5|R7|Begin~24~End~27~Txt~Gobo 6|R8|Begin~28~End~31~Txt~Gobo 7|R9|Begin~32~End~35~Txt~Gobo 8|R10|Begin~36~End~39~Txt~Gobo 9|R11|Begin~40~End~43~Txt~Gobo 10|R12|Begin~44~End~47~Txt~Gobo 11|R13|Begin~48~End~51~Txt~Gobo 12|R14|Begin~52~End~55~Txt~Gobo 13|R15|Begin~56~End~59~Txt~Gobo 14|R16|Begin~60~End~63~Txt~Gobo 15|R17|Begin~64~End~67~Txt~Gobo 16|R18|Begin~68~End~71~Txt~Gobo 17|R19|Begin~72~End~113~Txt~-60rpm..-5rpm|R20|Begin~114~End~117~Txt~stop|R21|Begin~118~End~159~Txt~5rpm..60rpm|R22|Begin~160~End~166~Txt~Gobo 2 24bpm..600bpm|R23|Begin~167~End~172~Txt~Gobo 3 24bpm..600bpm|R24|Begin~173~End~179~Txt~Gobo 4 24bpm..600bpm|R25|Begin~180~End~185~Txt~Gobo 5 24bpm..600bpm|R26|Begin~186~End~191~Txt~Gobo 6 24bpm..600bpm|R27|Begin~192~End~198~Txt~Gobo 7 24bpm..600bpm|R28|Begin~199~End~204~Txt~Gobo 8 24bpm..600bpm|R29|Begin~205~End~211~Txt~Gobo 9 24bpm..600bpm|R30|Begin~212~End~217~Txt~Gobo 10 24bpm..600bpm|R31|Begin~218~End~223~Txt~Gobo 11 24bpm..600bpm|R32|Begin~224~End~230~Txt~Gobo 12 24bpm..600bpm|R33|Begin~231~End~236~Txt~Gobo 13 24bpm..600bpm|R34|Begin~237~End~243~Txt~Gobo 14 24bpm..600bpm|R35|Begin~244~End~249~Txt~Gobo 15 24bpm..600bpm|R36|Begin~250~End~255~Txt~Gobo 16 24bpm..600bpm
+ID|Prism Insertion|Type|41|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Prism
+ID|Prism Rotation|Type|42|R1|Begin~0~End~20~Txt~Prism rotation 0deg|R2|Begin~21~End~41~Txt~Prism rotation 90deg|R3|Begin~42~End~62~Txt~Prism rotation 180deg|R4|Begin~63~End~83~Txt~Prism rotation 270deg|R5|Begin~84~End~104~Txt~Prism rotation 360deg|R6|Begin~105~End~126~Txt~Prism rotation 450deg|R7|Begin~127~End~127~Txt~Prism rotation 540deg|R8|Begin~128~End~190~Txt~Prism rotation -43rpm..-0.183rpm|R9|Begin~191~End~192~Txt~Prism rotation stop|R10|Begin~193~End~255~Txt~Prism rotation 0.183rpm..43rpm
+ID|Effects Movement|Type|16|R1|Begin~0~End~255~Txt~instant..long
+ID|Frost|Type|47|R1|Begin~0~End~255~Txt~Frost off..high
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..250deg
+ID|Tilt fine|Type|8
+ID|Function|Type|0|R1|Begin~0~End~11~Txt~No function|R2|Begin~12~End~24~Txt~5s Pan-Tilt Function (Fast - Default)|R3|Begin~25~End~37~Txt~5s Pan-Tilt Function (Normal)|R4|Begin~38~End~50~Txt~5s Dimmer Curve Function (Conventional)|R5|Begin~51~End~62~Txt~5s Dimmer Curve Function (Linear - Default)|R6|Begin~63~End~255~Txt~No function
+ID|Reset|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~76~Txt~5s Effects Reset|R3|Begin~77~End~127~Txt~5s Pan/Tilt Reset|R4|Begin~128~End~255~Txt~5s Complete Reset
+ID|Lamp Control|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~100~Txt~5s Lamp off|R3|Begin~101~End~255~Txt~5s Lamp on
+ID|Pan/Tilt Time|Type|9|R1|Begin~0~End~255~Txt~0s..310s
+ID|Color Wheel Time|Type|16|R1|Begin~0~End~255~Txt~Time 0s..310s
+ID|Beam Time|Type|16|R1|Begin~0~End~255~Txt~Time 0s..310s Dimmer, Frost, Prism
+ID|Gobo Time|Type|16|R1|Begin~0~End~255~Txt~Time 0s..310s
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|Content|Color Wheel~Shutter / Strobe~Dimmer~Gobo Wheel~Prism Insertion~Prism Rotation~Effects Movement~Frost~Focus~Pan~Pan fine~Tilt~Tilt fine~Function~Reset~Lamp Control
+Name|Vector|Content|Color Wheel~Shutter / Strobe~Dimmer~Gobo Wheel~Prism Insertion~Prism Rotation~Effects Movement~Frost~Focus~Pan~Pan fine~Tilt~Tilt fine~Function~Reset~Lamp Control~Pan/Tilt Time~Color Wheel Time~Beam Time~Gobo Time
+[END_MODES]

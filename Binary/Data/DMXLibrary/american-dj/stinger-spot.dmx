@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/11167/ADJ%20Stinger%20Spot%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/stinger-spot|LinkType3|video|Url3|https://www.youtube.com/watch?v=nOYqH2oVWZg
+[GENERAL]
+Manufacturer|American DJ|Name|Stinger Spot|Type|9|Authors|unk, Felix Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|174|Height|273|Depth|145|Weight|3.00|Power|36|Connector|3-pin|Bulb|10W white LED|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..210deg
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~White #ffffff|R2|Begin~8~End~14~Txt~Red #ff0000|R3|Begin~15~End~21~Txt~Orange #ff9900|R4|Begin~22~End~28~Txt~Yellow #ffff00|R5|Begin~29~End~35~Txt~Green #00ff00|R6|Begin~36~End~42~Txt~Blue #0000ff|R7|Begin~43~End~49~Txt~Light blue #0099ff|R8|Begin~50~End~56~Txt~Pink #ff00ff|R9|Begin~57~End~127~Txt~Split Colors|R10|Begin~128~End~189~Txt~fast CW..slow CW|R11|Begin~190~End~193~Txt~stop|R12|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~71~Txt~Open|R10|Begin~72~End~79~Txt~Gobo 1|R11|Begin~80~End~87~Txt~Gobo 2|R12|Begin~88~End~95~Txt~Gobo 3|R13|Begin~96~End~103~Txt~Gobo 4|R14|Begin~104~End~111~Txt~Gobo 5|R15|Begin~112~End~119~Txt~Gobo 6|R16|Begin~120~End~127~Txt~Gobo 7|R17|Begin~128~End~189~Txt~fast CW..slow CW|R18|Begin~190~End~193~Txt~stop|R19|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe|Type|6|DefaultValue|8|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Movement Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Function|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout with pan/tilt|R3|Begin~80~End~89~Txt~No blackout with pan/tilt|R4|Begin~90~End~99~Txt~Blackout with color change|R5|Begin~100~End~109~Txt~No blackout with color change|R6|Begin~110~End~119~Txt~Blackout with gobo change|R7|Begin~120~End~129~Txt~No blackout with gobo change|R8|Begin~130~End~199~Txt~No function|R9|Begin~200~End~209~Txt~Reset all|R10|Begin~210~End~249~Txt~No function|R11|Begin~250~End~255~Txt~Sound-active mode
+ID|Dimmer Curves|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~No function Default unit curve
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Shutter / Strobe~Dimmer~Movement Speed~Function~Dimmer Curves
+Name|11-channel|ShortName|11ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Wheel~Gobo Wheel~Shutter / Strobe~Dimmer~Movement Speed~Function~Dimmer Curves
+[END_MODES]

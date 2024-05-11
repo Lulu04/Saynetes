@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2018/08/Intimidator_Spot_260_UM_Rev3.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/intimidator-spot-260/|LinkType3|video|Url3|https://www.youtube.com/watch?v=PW1Yz53xUyk
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Intimidator Spot 260|Type|9|Authors|Peter Chave, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|232|Height|351|Depth|163|Weight|5.60|Power|107|Connector|3-pin|Bulb|White 75W LED|LensMinDegree|12.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Wheel|Type|12|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Orange~Extra~#fd8008|R3|Begin~14~End~20~Txt~Lime Green~Extra~#ccff66|R4|Begin~21~End~27~Txt~Cyan~Extra~#20ffff|R5|Begin~28~End~34~Txt~Red~Extra~#ff0000|R6|Begin~35~End~41~Txt~Green~Extra~#21ff06|R7|Begin~42~End~48~Txt~Magenta~Extra~#fc02ff|R8|Begin~49~End~55~Txt~Yellow~Extra~#ffff0a|R9|Begin~56~End~62~Txt~Dark Blue~Extra~#0000ff|R10|Begin~63~End~64~Txt~Open|R11|Begin~65~End~189~Txt~0deg..360deg|R12|Begin~190~End~221~Txt~fast CW..slow CW|R13|Begin~222~End~223~Txt~stop|R14|Begin~224~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~71~Txt~Gobo 7 slow..fast|R10|Begin~72~End~79~Txt~Gobo 6 slow..fast|R11|Begin~80~End~87~Txt~Gobo 5 slow..fast|R12|Begin~88~End~95~Txt~Gobo 4 slow..fast|R13|Begin~96~End~103~Txt~Gobo 3 slow..fast|R14|Begin~104~End~111~Txt~Gobo 2 slow..fast|R15|Begin~112~End~119~Txt~Gobo 1 slow..fast|R16|Begin~120~End~127~Txt~Open|R17|Begin~128~End~189~Txt~slow CW..fast CW|R18|Begin~190~End~193~Txt~stop|R19|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~119~Txt~slow CW..fast CW|R3|Begin~120~End~231~Txt~slow CCW..fast CCW|R4|Begin~232~End~255~Txt~Gobo bounce short..long
+ID|Prism|Type|41|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Prism 3-facet
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 17deg..12deg
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|DefaultValue|4|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~7~Txt~Open|R3|Begin~8~End~76~Txt~Strobe 0Hz..20.6Hz|R4|Begin~77~End~145~Txt~Pulse slow..fast|R5|Begin~146~End~215~Txt~Strobe slow..fast Random timing|R6|Begin~216~End~255~Txt~Open
+ID|Function|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Blackout on pan/tilt movement|R3|Begin~16~End~23~Txt~Blackout on color wheel movement|R4|Begin~24~End~31~Txt~Blackout on gobo wheel movement|R5|Begin~32~End~39~Txt~Blackout on pan/tilt/color wheel movement|R6|Begin~40~End~47~Txt~Blackout on pan/tilt/gobo wheel movement|R7|Begin~48~End~55~Txt~Blackout on pan/tilt/color/gobo wheel movement|R8|Begin~56~End~95~Txt~No function|R9|Begin~96~End~103~Txt~Pan reset|R10|Begin~104~End~111~Txt~Tilt reset|R11|Begin~112~End~119~Txt~Color wheel reset|R12|Begin~120~End~127~Txt~Gobo wheel reset|R13|Begin~128~End~135~Txt~No function|R14|Begin~136~End~143~Txt~Prism reset|R15|Begin~144~End~151~Txt~Focus reset|R16|Begin~152~End~159~Txt~Reset all|R17|Begin~160~End~255~Txt~No function
+ID|Movement Macro|Type|38|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Movement macro 1|R3|Begin~24~End~39~Txt~Movement macro 2|R4|Begin~40~End~55~Txt~Movement macro 3|R5|Begin~56~End~71~Txt~Movement macro 4|R6|Begin~72~End~87~Txt~Movement macro 5|R7|Begin~88~End~103~Txt~Movement macro 6|R8|Begin~104~End~119~Txt~Movement macro 7|R9|Begin~120~End~135~Txt~Movement macro 8|R10|Begin~136~End~151~Txt~Sound-active movement macro 1|R11|Begin~152~End~167~Txt~Sound-active movement macro 2|R12|Begin~168~End~183~Txt~Sound-active movement macro 3|R13|Begin~184~End~199~Txt~Sound-active movement macro 4|R14|Begin~200~End~215~Txt~Sound-active movement macro 5|R15|Begin~216~End~231~Txt~Sound-active movement macro 6|R16|Begin~232~End~247~Txt~Sound-active movement macro 7|R17|Begin~248~End~255~Txt~Sound-active movement macro 8
+[END_CHAN_DEF]
+[MODES]
+Name|14-channel|ShortName|14ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Prism~Zoom~Dimmer~Strobe~Function~Movement Macro
+Name|8-channel|ShortName|8ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Prism~Zoom~Strobe
+[END_MODES]

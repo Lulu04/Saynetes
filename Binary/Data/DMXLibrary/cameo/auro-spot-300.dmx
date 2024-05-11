@@ -1,0 +1,40 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.adamhall.com/shop/us-en/downloads/file/id/-354715156|LinkType2|product page|Url2|https://www.adamhall.com/shop/us-en/archiv/2074/auro-spot-300?c=5621
+[GENERAL]
+Manufacturer|cameo|Name|Auro Spot 300|Type|9|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|285|Height|485|Depth|180|Weight|8.75|Power|320|Connector|3-pin and 5-pin|Bulb|180W white LED|Lumens|4371|LensMinDegree|12.000|LensMaxDegree|12.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~Strobe 1Hz..20Hz
+ID|Auto Programs|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~38~Txt~Program 1|R3|Begin~39~End~70~Txt~Program 2|R4|Begin~71~End~102~Txt~Program 3|R5|Begin~103~End~134~Txt~Program 4|R6|Begin~135~End~166~Txt~Program 5|R7|Begin~167~End~198~Txt~Program 6|R8|Begin~199~End~230~Txt~Program 7|R9|Begin~231~End~255~Txt~Program 8
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~Speed slow..fast
+ID|Reset|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~Reset pan / tilt|R3|Begin~128~End~191~Txt~Reset effects (prism, gobo, ...)|R4|Begin~192~End~255~Txt~Reset all functions
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..235deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Strobe Functions|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Burst 5s..1s|R8|Begin~128~End~250~Txt~Strobe 1Hz..20Hz|R9|Begin~251~End~255~Txt~Open
+ID|Color Wheel|Type|12|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Split Open / Red|R3|Begin~11~End~15~Txt~Red~Extra~#ff0000|R4|Begin~16~End~20~Txt~Split Red / Orange~Extra~#ff0000|R5|Begin~21~End~28~Txt~Orange~Extra~#ffaa00|R6|Begin~29~End~35~Txt~Split Orange / Yellow~Extra~#ffaa00|R7|Begin~36~End~43~Txt~Yellow~Extra~#ffff00|R8|Begin~44~End~50~Txt~Split Yellow / Green~Extra~#ffff00|R9|Begin~51~End~58~Txt~Green~Extra~#00ff00|R10|Begin~59~End~65~Txt~Split Green / Cyan~Extra~#00ff00|R11|Begin~66~End~73~Txt~Cyan~Extra~#00ffff|R12|Begin~74~End~80~Txt~Split Cyan / Blue~Extra~#00ffff|R13|Begin~81~End~88~Txt~Blue~Extra~#0000ff|R14|Begin~89~End~95~Txt~Split Blue / Lavender~Extra~#0000ff|R15|Begin~96~End~103~Txt~Lavender~Extra~#ccbfff|R16|Begin~104~End~110~Txt~Split Lavender / Magenta~Extra~#ccbfff|R17|Begin~111~End~118~Txt~Magenta~Extra~#ff00ff|R18|Begin~119~End~125~Txt~Split Magenta~Extra~#ff00ff|R19|Begin~126~End~128~Txt~stop|R20|Begin~129~End~255~Txt~slow CW..fast CW
+ID|Gobo Wheel 1|Type|10|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~25~Txt~Gobo 1|R3|Begin~26~End~45~Txt~Gobo 2|R4|Begin~46~End~65~Txt~Gobo 3|R5|Begin~66~End~85~Txt~Gobo 4|R6|Begin~86~End~105~Txt~Gobo 5|R7|Begin~106~End~127~Txt~Gobo 6|R8|Begin~128~End~128~Txt~stop|R9|Begin~129~End~191~Txt~slow CW..fast CW|R10|Begin~192~End~255~Txt~fast CCW..slow CCW
+ID|Gobo 1 Rotation|Type|11|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~0deg..360deg|R3|Begin~128~End~128~Txt~stop|R4|Begin~129~End~191~Txt~slow CW..fast CW|R5|Begin~192~End~250~Txt~fast CCW..slow CCW|R6|Begin~251~End~255~Txt~stop
+ID|Gobo 1 Shake|Type|46|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~37~Txt~12.5%|R3|Begin~38~End~69~Txt~25%|R4|Begin~70~End~101~Txt~37.5%|R5|Begin~102~End~133~Txt~50%|R6|Begin~134~End~165~Txt~62.5%|R7|Begin~166~End~197~Txt~75%|R8|Begin~198~End~229~Txt~87.5%|R9|Begin~230~End~255~Txt~100%
+ID|Gobo Wheel 2|Type|10|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~20~Txt~Gobo 1|R3|Begin~21~End~35~Txt~Gobo 2|R4|Begin~36~End~50~Txt~Gobo 3|R5|Begin~51~End~65~Txt~Gobo 4|R6|Begin~66~End~80~Txt~Gobo 5|R7|Begin~81~End~95~Txt~Gobo 6|R8|Begin~96~End~110~Txt~Gobo 7|R9|Begin~111~End~127~Txt~Gobo 8|R10|Begin~128~End~128~Txt~stop|R11|Begin~129~End~191~Txt~slow CW..fast CW|R12|Begin~192~End~255~Txt~fast CCW..slow CCW
+ID|Gobo 2 Shake|Type|46|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~37~Txt~12.5%|R3|Begin~38~End~69~Txt~25%|R4|Begin~70~End~101~Txt~37.5%|R5|Begin~102~End~133~Txt~50%|R6|Begin~134~End~165~Txt~62.5%|R7|Begin~166~End~197~Txt~75%|R8|Begin~198~End~229~Txt~87.5%|R9|Begin~230~End~255~Txt~100%
+ID|Prism|Type|41|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~10~Txt~Prism|R3|Begin~11~End~127~Txt~Prism 0deg..360deg|R4|Begin~128~End~128~Txt~Prism stop|R5|Begin~129~End~191~Txt~Prism slow CW..fast CW|R6|Begin~192~End~250~Txt~Prism fast CCW..slow CCW|R7|Begin~251~End~255~Txt~Prism stop
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus 0%..100%
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
+ID|Pan/Tilt Macro|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~47~Txt~Pan small..big|R3|Begin~48~End~89~Txt~Tilt small..big|R4|Begin~90~End~131~Txt~Pan/Tilt small..big|R5|Begin~132~End~173~Txt~Pan/Tilt inverse small..big|R6|Begin~174~End~215~Txt~Ellipse small..big|R7|Begin~216~End~255~Txt~Random small..big
+ID|Pan/Tilt Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~Linear Dimmer Curve|R3|Begin~128~End~191~Txt~Exponential Dimmer Curve|R4|Begin~192~End~250~Txt~Logarithmic Dimmer Curve|R5|Begin~251~End~255~Txt~S-Curve Dimmer Curve
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Device Settings|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~37~Txt~3s Blackout while Moving on|R3|Begin~38~End~69~Txt~5s Blackout while Moving off|R4|Begin~70~End~101~Txt~3s Invert Pan on|R5|Begin~102~End~133~Txt~5s Invert Pan off|R6|Begin~134~End~165~Txt~3s Invert Tilt on|R7|Begin~166~End~197~Txt~5s Invert Tilt off|R8|Begin~198~End~229~Txt~3s Silent Fan on|R9|Begin~230~End~255~Txt~5s Silent Fan off
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Dimmer~Strobe~Auto Programs~Auto Program Speed~Reset
+Name|15-channel|ShortName|15ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Strobe Functions~Color Wheel~Gobo Wheel 1~Gobo 1 Rotation~Gobo 1 Shake~Gobo Wheel 2~Gobo 2 Shake~Prism~Focus~Reset
+Name|24-channel|ShortName|24ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Dimmer fine~Strobe Functions~Color Wheel~Gobo Wheel 1~Gobo 1 Rotation~Gobo 1 Shake~Gobo Wheel 2~Gobo 2 Shake~Prism~Focus~Focus fine~Auto Programs~Auto Program Speed~Pan/Tilt Macro~Pan/Tilt Macro Speed~Dimmer Curve~Pan/Tilt Speed~Device Settings~Reset
+[END_MODES]

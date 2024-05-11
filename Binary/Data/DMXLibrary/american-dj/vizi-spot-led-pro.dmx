@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/7080/vizi_spot_led_pro.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=gxV-Hpqi2kc|LinkType3|video|Url3|https://www.youtube.com/watch?v=XQBC1wotMAQ
+[GENERAL]
+Manufacturer|American DJ|Name|Vizi Spot LED Pro|Type|9|Authors|Bram Nauta|Creator|OFL
+[PHYSICAL]
+Width|303|Height|442|Depth|253|Weight|10.50|Power|130|Connector|3-pin|Bulb|LED|Lumens|1480|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Color Wheel|Type|12|R1|Begin~0~End~14~Txt~Open|R2|Begin~15~End~29~Txt~Red #ff0000|R3|Begin~30~End~44~Txt~Blue #0000ff|R4|Begin~45~End~59~Txt~Green #00ff00|R5|Begin~60~End~74~Txt~Yellow #ffff00|R6|Begin~75~End~89~Txt~Purple #800080|R7|Begin~90~End~104~Txt~Orange #ffa500|R8|Begin~105~End~119~Txt~UV #3e0694|R9|Begin~120~End~127~Txt~Pink #ffc0cb|R10|Begin~128~End~189~Txt~fast CW..slow CW|R11|Begin~190~End~193~Txt~stop|R12|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Gobo 1|R3|Begin~20~End~29~Txt~Gobo 2|R4|Begin~30~End~39~Txt~Gobo 3|R5|Begin~40~End~49~Txt~Gobo 4|R6|Begin~50~End~59~Txt~Gobo 5|R7|Begin~60~End~69~Txt~Gobo 6|R8|Begin~70~End~79~Txt~Gobo 7|R9|Begin~80~End~95~Txt~Gobo 1|R10|Begin~96~End~111~Txt~Gobo 2|R11|Begin~112~End~127~Txt~Gobo 3|R12|Begin~128~End~143~Txt~Gobo 4|R13|Begin~144~End~159~Txt~Gobo 5|R14|Begin~160~End~175~Txt~Gobo 6|R15|Begin~176~End~191~Txt~Gobo 7|R16|Begin~192~End~255~Txt~slow CW..fast CW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~189~Txt~fast CW..slow CW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Prism/Gobo Macro|Type|0|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~Prism 3-Facet|R3|Begin~64~End~95~Txt~Prism Trapezoid|R4|Begin~96~End~127~Txt~Frost 100%|R5|Begin~128~End~135~Txt~Gobo Macro 1|R6|Begin~136~End~143~Txt~Gobo Macro 2|R7|Begin~144~End~151~Txt~Gobo Macro 3|R8|Begin~152~End~159~Txt~Gobo Macro 4|R9|Begin~160~End~167~Txt~Gobo Macro 5|R10|Begin~168~End~175~Txt~Gobo Macro 6|R11|Begin~176~End~183~Txt~Gobo Macro 7|R12|Begin~184~End~191~Txt~Gobo Macro 8|R13|Begin~192~End~199~Txt~Gobo Macro 9|R14|Begin~200~End~207~Txt~Gobo Macro 10|R15|Begin~208~End~215~Txt~Gobo Macro 11|R16|Begin~216~End~223~Txt~Gobo Macro 12|R17|Begin~224~End~231~Txt~Gobo Macro 13|R18|Begin~232~End~239~Txt~Gobo Macro 14|R19|Begin~240~End~247~Txt~Gobo Macro 15|R20|Begin~248~End~255~Txt~Gobo Macro 16
+ID|Prism Rotation|Type|42|R1|Begin~0~End~127~Txt~Prism rotation 0deg..360deg|R2|Begin~128~End~189~Txt~Prism rotation fast CW..slow CW|R3|Begin~190~End~193~Txt~Prism rotation stop|R4|Begin~194~End~255~Txt~Prism rotation slow CCW..fast CCW
+ID|Focus|Type|32|DefaultValue|127|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Shutter/Strobe|Type|0|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse in sequences|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~Blackout while moving|R3|Begin~236~End~245~Txt~Blackout while wheel is changing|R4|Begin~246~End~255~Txt~No function
+ID|Reset & Internal Programs|Type|0|R1|Begin~0~End~19~Txt~Color Change Normal|R2|Begin~20~End~39~Txt~Color Change To Any Position|R3|Begin~40~End~79~Txt~No function|R4|Begin~80~End~84~Txt~All Motor Reset|R5|Begin~85~End~87~Txt~P/T Motor Reset|R6|Begin~88~End~90~Txt~Color Motor Reset|R7|Begin~91~End~93~Txt~Gobo Motor Reset|R8|Begin~94~End~96~Txt~No function|R9|Begin~97~End~99~Txt~Other Motor Reset|R10|Begin~100~End~119~Txt~Internal Program 1|R11|Begin~120~End~139~Txt~Internal Program 2|R12|Begin~140~End~159~Txt~Internal Program 3|R13|Begin~160~End~179~Txt~Internal Program 4|R14|Begin~180~End~199~Txt~Internal Program 5|R15|Begin~200~End~219~Txt~Internal Program 6|R16|Begin~220~End~239~Txt~Internal Program 7|R17|Begin~240~End~255~Txt~Sound Active Program
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|12-channel|ShortName|12ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Prism/Gobo Macro~Prism Rotation~Focus~Shutter/Strobe~Dimmer~Pan/Tilt Speed~Reset & Internal Programs
+Name|14-channel|ShortName|14ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Wheel~Gobo Wheel~Gobo Rotation~Prism/Gobo Macro~Prism Rotation~Focus~Shutter/Strobe~Dimmer~Pan/Tilt Speed~Reset & Internal Programs
+[END_MODES]
