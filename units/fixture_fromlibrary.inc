@@ -473,7 +473,7 @@ var prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('Name', Name);
-  prop.Add('ShortName', ShortName);
+  if ShortName <> '' then prop.Add('ShortName', ShortName);
 
   temp := '';
   for i:=0 to High(ChannelsIDToUse) do
@@ -593,8 +593,12 @@ begin
   prop.Add('ID', NameID);
   prop.Add('Type', Ord(ChanType));
   if DefaultValue <> 0 then prop.Add('DefaultValue', DefaultValue);
-  for i:=0 to High(Ranges) do
-    prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
+  // we save range only if it's not an empty 0..255 range
+  if (Length(Ranges) >= 1) and ((Ranges[0].EndValue <> 255) or
+     (Ranges[0].Text <> '') or (Ranges[0].Extra <> '')) then
+    for i:=0 to High(Ranges) do
+      prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
+
   Result := prop.PackedProperty;
 end;
 
