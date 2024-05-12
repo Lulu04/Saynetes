@@ -1790,7 +1790,6 @@ begin
       raise exception.create('impossible de sauver '+t.Strings[i]);
   end;
   t.Free;
-  Log.Free;
   ShowMessage('Done');
 end;
 
