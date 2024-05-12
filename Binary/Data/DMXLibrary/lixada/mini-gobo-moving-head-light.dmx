@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://forums.pioneerdj.com/hc/en-us/community/posts/360000675466-Lixada-25W-DMX-512-Mini-Moving-Head-8-Colours-with-9-11-channels|LinkType2|product page|Url2|https://www.lixada.com/p-l0686us.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=VY0OZTM9W68
+[GENERAL]
+Manufacturer|Lixada|Name|Mini Gobo Moving Head Light|Type|9|Authors|Freasy, edohard|Creator|OFL
+[PHYSICAL]
+Width|210|Height|260|Depth|280|Weight|2.67|Power|25|Connector|3-pin|Bulb|10W LED|LensMinDegree|11.000|LensMaxDegree|11.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt fine|Type|8
+ID|Color Wheel|Type|12|R1|Begin~0~End~127~Txt~Blue..Open blue/pink/red/pale blue/yellow/green/orange/white|R2|Begin~128~End~189~Txt~fast CCW..slow CCW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CW..fast CW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~63~Txt~Open..Gobo 7|R2|Begin~64~End~127~Txt~Open..Gobo 7|R3|Begin~128~End~189~Txt~slow CCW..fast CCW|R4|Begin~190~End~193~Txt~stop|R5|Begin~194~End~255~Txt~slow CW..fast CW
+ID|Shutter|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe|R10|Begin~248~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Control|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout while Pan/Tilt moving|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout while Color Wheel moving|R5|Begin~100~End~109~Txt~No function|R6|Begin~110~End~119~Txt~Blackout while Gobo Wheel moving|R7|Begin~120~End~199~Txt~No function|R8|Begin~200~End~209~Txt~Reset|R9|Begin~210~End~249~Txt~No function|R10|Begin~250~End~255~Txt~Sound active mode
+ID|Dimmer Type|Type|0|R1|Begin~0~End~20~Txt~Standard Dimmer|R2|Begin~21~End~40~Txt~Stage Dimmer|R3|Begin~41~End~60~Txt~TV Dimmer|R4|Begin~61~End~80~Txt~Architectural Dimmer|R5|Begin~81~End~100~Txt~Theatrical Dimmer|R6|Begin~101~End~255~Txt~Tacitly approve Dimmer
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Shutter~Dimmer~Pan/Tilt Speed~Control~Dimmer Type
+Name|11-channel|ShortName|11ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Wheel~Gobo Wheel~Shutter~Dimmer~Pan/Tilt Speed~Control~Dimmer Type
+[END_MODES]

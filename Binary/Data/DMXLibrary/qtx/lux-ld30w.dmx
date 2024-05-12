@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.discoworld.dk/manuals/avsl/150447.pdf
+[GENERAL]
+Manufacturer|QTX|Name|LUX-LD30W|Type|9|Authors|Nerijus Mongirdas, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|345|Height|435|Depth|340|Weight|6.80|Connector|5-pin|Bulb|1x 30W White LED|Lumens|265|LensMinDegree|12.000|LensMaxDegree|12.000
+[CHAN_DEF]
+ID|Color Wheel|Type|12|R1|Begin~0~End~17~Txt~Open|R2|Begin~18~End~33~Txt~Red~Extra~#ff0000|R3|Begin~34~End~50~Txt~Yellow~Extra~#ffff00|R4|Begin~51~End~67~Txt~Cyan~Extra~#00ffff|R5|Begin~68~End~84~Txt~Green~Extra~#00ff00|R6|Begin~85~End~101~Txt~Orange~Extra~#ff7700|R7|Begin~102~End~107~Txt~Purple~Extra~#ff00aa|R8|Begin~108~End~127~Txt~Blue~Extra~#0000ff|R9|Begin~128~End~192~Txt~fast CCW..slow CCW|R10|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~20~Txt~Open|R2|Begin~21~End~41~Txt~Gobo 1|R3|Begin~42~End~62~Txt~Gobo 2|R4|Begin~63~End~83~Txt~Gobo 3|R5|Begin~84~End~104~Txt~Gobo 4|R6|Begin~105~End~119~Txt~Gobo 5|R7|Begin~120~End~127~Txt~Gobo 6|R8|Begin~128~End~192~Txt~fast CCW..slow CCW|R9|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Gobo rotation|Type|11|R1|Begin~0~End~0~Txt~stop|R2|Begin~1~End~127~Txt~fast CW..slow CW|R3|Begin~128~End~255~Txt~slow CCW..fast CCW
+ID|Dimmer / Strobe|Type|2|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~115~Txt~off..bright|R3|Begin~116~End~243~Txt~Strobe slow..fast|R4|Begin~244~End~255~Txt~Open
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0%..100%
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0%..100%
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Electronic reset|R3|Begin~201~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|10-channel|ShortName|10ch|Content|Color Wheel~Gobo Wheel~Gobo rotation~Dimmer / Strobe~Pan~Tilt~Pan/Tilt Speed~Pan fine~Tilt fine~Reset
+[END_MODES]

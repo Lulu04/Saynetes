@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/424284_c_424284_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/fun_generation_picospot_45_led.htm
+[GENERAL]
+Manufacturer|Fun Generation|Name|PicoSpot 45 LED|Type|9|Authors|Felix Edelmann, Peter Käning, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|162|Height|242|Depth|174|Weight|3.00|Power|70|Connector|3-pin|Bulb|45W white CREE LED|Lumens|400|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..200deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~White~Extra~#ffffff|R2|Begin~11~End~21~Txt~Red~Extra~#ff0000|R3|Begin~22~End~32~Txt~Orange~Extra~#ff9900|R4|Begin~33~End~43~Txt~Yellow~Extra~#ffff00|R5|Begin~44~End~54~Txt~Green~Extra~#00ff00|R6|Begin~55~End~65~Txt~Blue~Extra~#0000ff|R7|Begin~66~End~76~Txt~Cyan~Extra~#00ffff|R8|Begin~77~End~87~Txt~Purple~Extra~#ff00ff|R9|Begin~88~End~98~Txt~White..Red|R10|Begin~99~End~109~Txt~Red..Orange|R11|Begin~110~End~120~Txt~Orange..Yellow|R12|Begin~121~End~131~Txt~Yellow..Green|R13|Begin~132~End~142~Txt~Green..Blue|R14|Begin~143~End~153~Txt~Blue..Cyan|R15|Begin~154~End~164~Txt~Cyan..Purple|R16|Begin~165~End~175~Txt~Purple|R17|Begin~176~End~255~Txt~slow CW..fast CW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Gobo 1|R3|Begin~32~End~47~Txt~Gobo 2|R4|Begin~48~End~63~Txt~Gobo 3|R5|Begin~64~End~79~Txt~Gobo 4|R6|Begin~80~End~95~Txt~Gobo 5|R7|Begin~96~End~111~Txt~Gobo 6|R8|Begin~112~End~124~Txt~Gobo 7|R9|Begin~125~End~140~Txt~Gobo 7 slow..fast|R10|Begin~141~End~156~Txt~Gobo 6 slow..fast|R11|Begin~157~End~172~Txt~Gobo 5 slow..fast|R12|Begin~173~End~188~Txt~Gobo 4 slow..fast|R13|Begin~189~End~204~Txt~Gobo 3 slow..fast|R14|Begin~205~End~220~Txt~Gobo 2 slow..fast|R15|Begin~221~End~236~Txt~Gobo 1 slow..fast|R16|Begin~237~End~249~Txt~Open|R17|Begin~250~End~255~Txt~slow CW..fast CW
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Strobe 1Hz..25Hz
+ID|Program|Type|0|R1|Begin~0~End~49~Txt~No function|R2|Begin~50~End~59~Txt~White~Extra~#ffffff|R3|Begin~60~End~69~Txt~Scene 02 (empty)|R4|Begin~70~End~79~Txt~Scene 03 (empty)|R5|Begin~80~End~89~Txt~Scene 04 (empty)|R6|Begin~90~End~99~Txt~Scene 05 (empty)|R7|Begin~100~End~109~Txt~Scene 06 (empty)|R8|Begin~110~End~119~Txt~Scene 07 (empty)|R9|Begin~120~End~129~Txt~Scene 08 (empty)|R10|Begin~130~End~139~Txt~Scene 09 (empty)|R11|Begin~140~End~149~Txt~Programme 1|R12|Begin~150~End~159~Txt~Programme 2|R13|Begin~160~End~169~Txt~Programme 3|R14|Begin~170~End~179~Txt~Programme 4|R15|Begin~180~End~189~Txt~Programme 5|R16|Begin~190~End~199~Txt~Programme 6|R17|Begin~200~End~209~Txt~Programme 7|R18|Begin~210~End~219~Txt~Programme 8 (empty)|R19|Begin~220~End~229~Txt~Programme 9 (empty)|R20|Begin~230~End~239~Txt~No function Empty|R21|Begin~240~End~249~Txt~No function Empty|R22|Begin~250~End~255~Txt~Sound-controlled operation
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Dimmer
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Dimmer~Shutter / Strobe
+Name|11-channel|ShortName|11ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Dimmer~Shutter / Strobe~Program~Program Speed
+[END_MODES]

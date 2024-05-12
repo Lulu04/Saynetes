@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.levenly.com/photo/maxi/nicols_pat_252_dmx_fiche_technique.jpg|LinkType2|video|Url2|https://www.youtube.com/watch?v=YbxBEFb9ACk
+[GENERAL]
+Manufacturer|Nicols|Name|PAT 252|Type|8|Authors|MIE, Mikael|Creator|OFL
+[PHYSICAL]
+Width|155|Height|500|Depth|200|Weight|11.00|Power|350|Connector|3-pin|Bulb|ELC 250W|Lens|Other
+[CHAN_DEF]
+ID|Shutter|Type|6|R1|Begin~0~End~16~Txt~Open|R2|Begin~17~End~92~Txt~Strobe slow..fast Gobo|R3|Begin~93~End~136~Txt~Strobe slow..fast Color|R4|Begin~137~End~196~Txt~Strobe slow..fast Gobo + Color|R5|Begin~197~End~255~Txt~Shake
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~23~Txt~Gobo 1|R4|Begin~24~End~31~Txt~Gobo 2|R5|Begin~32~End~39~Txt~Gobo 3|R6|Begin~40~End~47~Txt~Gobo 4|R7|Begin~48~End~55~Txt~Gobo 5|R8|Begin~56~End~63~Txt~Gobo 6|R9|Begin~64~End~71~Txt~Gobo 7|R10|Begin~72~End~79~Txt~Gobo 8|R11|Begin~80~End~87~Txt~Gobo 9|R12|Begin~88~End~95~Txt~Gobo 10|R13|Begin~96~End~103~Txt~Gobo 11|R14|Begin~104~End~111~Txt~Gobo 12|R15|Begin~112~End~119~Txt~Gobo 13|R16|Begin~120~End~127~Txt~Gobo 14|R17|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Color Wheel|Type|12|R1|Begin~0~End~11~Txt~Open|R2|Begin~12~End~22~Txt~Green~Extra~#58b848|R3|Begin~23~End~33~Txt~Orange 306~Extra~#f46f34|R4|Begin~34~End~44~Txt~Light blue~Extra~#95d8e0|R5|Begin~45~End~55~Txt~Y52-Yellow~Extra~#e8ea7c|R6|Begin~56~End~66~Txt~Red~Extra~#ef332d|R7|Begin~67~End~77~Txt~Purple~Extra~#73479a|R8|Begin~78~End~88~Txt~Pink~Extra~#f097c0|R9|Begin~89~End~99~Txt~Light green~Extra~#39b773|R10|Begin~100~End~110~Txt~Blue~Extra~#1857a7|R11|Begin~111~End~121~Txt~Yellow~Extra~#e6e74d|R12|Begin~122~End~128~Txt~Magenta~Extra~#a65a9d|R13|Begin~129~End~255~Txt~slow CW..fast CW
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..60deg
+[END_CHAN_DEF]
+[MODES]
+Name|Default|Content|Shutter~Gobo Wheel~Color Wheel~Pan~Tilt
+[END_MODES]

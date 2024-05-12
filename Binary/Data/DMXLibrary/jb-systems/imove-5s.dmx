@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://jb-systems.eu/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1437572496.pdf|LinkType2|product page|Url2|https://jb-systems.eu/imove-5s-elc-250w-24v-incl|LinkType3|video|Url3|https://www.youtube.com/watch?v=OQB-kBAp3eU
+[GENERAL]
+Manufacturer|JB Systems|Name|iMove 5S|Type|9|Authors|Duende AV, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|290|Height|330|Depth|380|Weight|12.00|Power|250|Connector|3-pin|Bulb|ELC 250W/24V|LensMinDegree|16.000|LensMaxDegree|16.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Shutter / Shaking|Type|0|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~247~Txt~slow..fast|R5|Begin~248~End~255~Txt~Open
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~8~Txt~Open|R2|Begin~9~End~17~Txt~Gobo 1~Extra~10 circles|R3|Begin~18~End~25~Txt~Donut|R4|Begin~26~End~34~Txt~Gobo 3~Extra~Biohazard|R5|Begin~35~End~43~Txt~Spider web|R6|Begin~44~End~51~Txt~3 circling drops|R7|Begin~52~End~59~Txt~Sprinkles|R8|Begin~60~End~68~Txt~Segmented square|R9|Begin~69~End~76~Txt~Radioactive|R10|Begin~77~End~85~Txt~Emblem|R11|Begin~86~End~93~Txt~5-pointed star|R12|Begin~94~End~102~Txt~5 dots row|R13|Begin~103~End~110~Txt~Segmented circle|R14|Begin~111~End~119~Txt~Atomic orbits|R15|Begin~120~End~127~Txt~Cross pattern|R16|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~21~Txt~Green~Extra~#00c200|R3|Begin~22~End~31~Txt~Magenta~Extra~#ff00ff|R4|Begin~32~End~42~Txt~Light Blue~Extra~#99ccff|R5|Begin~43~End~53~Txt~Amber~Extra~#ffbf00|R6|Begin~54~End~63~Txt~Red~Extra~#ff0000|R7|Begin~64~End~74~Txt~Blue~Extra~#0000ff|R8|Begin~75~End~85~Txt~UV Purple~Extra~#8800ff|R9|Begin~86~End~95~Txt~Light Green~Extra~#8aff8a|R10|Begin~96~End~106~Txt~Orange~Extra~#ff8800|R11|Begin~107~End~117~Txt~Yellow~Extra~#ffff00|R12|Begin~118~End~127~Txt~Pink~Extra~#ff88ff|R13|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Color Wheel Split|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Green~Extra~#00c200|R3|Begin~16~End~22~Txt~Split Green / Magenta~Extra~#00c200|R4|Begin~23~End~30~Txt~Magenta~Extra~#ff00ff|R5|Begin~31~End~37~Txt~Light Blue~Extra~#99ccff|R6|Begin~38~End~45~Txt~Amber~Extra~#ffbf00|R7|Begin~46~End~52~Txt~Red~Extra~#ff0000|R8|Begin~53~End~60~Txt~Split Red / Blue~Extra~#ff0000|R9|Begin~61~End~67~Txt~Blue~Extra~#0000ff|R10|Begin~68~End~75~Txt~UV Purple~Extra~#8800ff|R11|Begin~76~End~82~Txt~Light Green~Extra~#8aff8a|R12|Begin~83~End~90~Txt~Split Light Green / Orange~Extra~#8aff8a|R13|Begin~91~End~97~Txt~Orange~Extra~#ff8800|R14|Begin~98~End~105~Txt~Split Orange / Yellow~Extra~#ff8800|R15|Begin~106~End~112~Txt~Yellow~Extra~#ffff00|R16|Begin~113~End~120~Txt~Split Yellow / Pink~Extra~#ffff00|R17|Begin~121~End~127~Txt~Pink~Extra~#ff88ff|R18|Begin~128~End~255~Txt~slow CW..fast CW
+[END_CHAN_DEF]
+[MODES]
+Name|Normal|ShortName|no|Content|Pan~Tilt~Shutter / Shaking~Gobo Wheel~Color Wheel
+Name|Split Color|ShortName|SC|Content|Pan~Tilt~Shutter / Shaking~Gobo Wheel~Color Wheel Split
+[END_MODES]

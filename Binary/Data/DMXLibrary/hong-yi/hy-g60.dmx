@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|video|Url1|https://www.youtube.com/watch?v=M98TE_nUW9U
+[GENERAL]
+Manufacturer|Hong Yi|Name|HY-G60|Type|9|Authors|DJMaxone.de|Creator|OFL
+[PHYSICAL]
+Width|170|Height|190|Depth|150|Weight|4.50|Power|100|Connector|3-pin|Bulb|60W white LED|LensMinDegree|12.000|LensMaxDegree|12.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt fine|Type|8
+ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~21~Txt~Split Open / Red|R3|Begin~22~End~32~Txt~Red~Extra~#ff0000|R4|Begin~33~End~43~Txt~Split Red / Orange~Extra~#ff0000|R5|Begin~44~End~54~Txt~Orange~Extra~#ffaa00|R6|Begin~55~End~65~Txt~Split Orange / Yellow~Extra~#ffaa00|R7|Begin~66~End~76~Txt~Yellow~Extra~#ffff00|R8|Begin~77~End~87~Txt~Split Yellow / Green~Extra~#ffff00|R9|Begin~88~End~98~Txt~Green~Extra~#19ff00|R10|Begin~99~End~109~Txt~Split Green / Blue~Extra~#19ff00|R11|Begin~110~End~120~Txt~Blue~Extra~#0000ff|R12|Begin~121~End~131~Txt~Split Blue / Purple~Extra~#0000ff|R13|Begin~132~End~142~Txt~Purple~Extra~#ff01fb|R14|Begin~143~End~153~Txt~Split Purple / Cyan~Extra~#ff01fb|R15|Begin~154~End~159~Txt~Cyan~Extra~#00fbff|R16|Begin~160~End~207~Txt~slow CW..fast CW|R17|Begin~208~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Gobo 1|R3|Begin~20~End~29~Txt~Gobo 2|R4|Begin~30~End~39~Txt~Gobo 3|R5|Begin~40~End~49~Txt~Gobo 4|R6|Begin~50~End~59~Txt~Gobo 5|R7|Begin~60~End~69~Txt~Gobo 6|R8|Begin~70~End~79~Txt~Gobo 7|R9|Begin~80~End~89~Txt~Gobo 7|R10|Begin~90~End~99~Txt~Gobo 6|R11|Begin~100~End~109~Txt~Gobo 5|R12|Begin~110~End~119~Txt~Gobo 4|R13|Begin~120~End~129~Txt~Gobo 3|R14|Begin~130~End~139~Txt~Gobo 2|R15|Begin~140~End~149~Txt~Gobo 1|R16|Begin~150~End~202~Txt~slow CW..fast CW|R17|Begin~203~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~slow..fast
+ID|Internal Programs|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~151~Txt~Fast Moving|R3|Begin~152~End~255~Txt~Sound Control
+ID|Reset|Type|0|R1|Begin~0~End~254~Txt~No function|R2|Begin~255~End~255~Txt~Reset
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Wheel~Gobo Wheel~Shutter / Strobe~Dimmer~Pan/Tilt Speed~Internal Programs~Reset
+[END_MODES]

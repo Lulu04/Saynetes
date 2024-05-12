@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdn.velleman.eu/downloads/4/vdp250sc8m2gbnlfresd.pdf|LinkType2|product page|Url2|https://www.velleman.eu/products/view/?id=371050|LinkType3|video|Url3|https://www.youtube.com/watch?v=K54gwldy2_8
+[GENERAL]
+Manufacturer|Velleman|Name|Aeron 250 II|Type|8|Authors|Max Jöhnk|Creator|OFL
+[PHYSICAL]
+Width|535|Height|295|Depth|180|Weight|13.95|Power|350|Connector|3-pin|Bulb|lamp not included
+[CHAN_DEF]
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~128~Txt~0%..100%|R2|Begin~129~End~133~Txt~Open|R3|Begin~134~End~243~Txt~Strobe fast..slow Random timing|R4|Begin~244~End~249~Txt~Closed|R5|Begin~250~End~255~Txt~Open
+ID|Color Wheel|Type|12|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Magenta~Extra~#ff00ff|R3|Begin~32~End~47~Txt~Yellow~Extra~#ffff00|R4|Begin~48~End~63~Txt~Orange~Extra~#ff8000|R5|Begin~64~End~79~Txt~Green~Extra~#00ff00|R6|Begin~80~End~95~Txt~Red~Extra~#ff0000|R7|Begin~96~End~111~Txt~Blue~Extra~#0000ff|R8|Begin~112~End~127~Txt~Violet~Extra~#7f00ff|R9|Begin~128~End~191~Txt~slow CW..fast CW|R10|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Gobo 1|R3|Begin~32~End~47~Txt~Gobo 2|R4|Begin~48~End~63~Txt~Gobo 3|R5|Begin~64~End~79~Txt~Gobo 4|R6|Begin~80~End~95~Txt~Gobo 5|R7|Begin~96~End~111~Txt~Gobo 6|R8|Begin~112~End~127~Txt~Gobo 7|R9|Begin~128~End~191~Txt~slow CW..fast CW|R10|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~15~Txt~stop|R2|Begin~16~End~135~Txt~slow CW..fast CW|R3|Begin~136~End~255~Txt~slow CCW..fast CCW
+ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Tilt|Type|8|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Prism Rotation|Type|42|R1|Begin~0~End~63~Txt~No function|R2|Begin~64~End~159~Txt~Prism rotation slow CW..fast CW|R3|Begin~160~End~255~Txt~Prism rotation slow CCW..fast CCW
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Shutter / Strobe~Color Wheel~Gobo Wheel~Gobo Rotation~Pan~Tilt~Prism Rotation~Focus
+[END_MODES]

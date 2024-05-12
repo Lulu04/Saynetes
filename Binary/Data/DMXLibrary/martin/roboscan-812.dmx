@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/UM_RoboScan812_EN_C.PDF|LinkType2|video|Url2|https://www.youtube.com/watch?v=C2AqCvZnVes|LinkType3|video|Url3|https://www.youtube.com/watch?v=8l6v8Ndsyp4
+[GENERAL]
+Manufacturer|Martin|Name|RoboScan 812|Type|8|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|190|Height|165|Depth|436|Weight|9.40|Power|170|Connector|3-pin (swapped +/-)|LensMinDegree|15.500|LensMaxDegree|15.500
+[CHAN_DEF]
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~74~Txt~Strobe fast..slow Gobo strobe|R3|Begin~75~End~138~Txt~Strobe fast..slow Color strobe|R4|Begin~139~End~170~Txt~Strobe Remote Auto Trigger|R5|Begin~171~End~202~Txt~Strobe Sound controlled|R6|Begin~203~End~235~Txt~Reset fixture|R7|Begin~236~End~255~Txt~Open
+ID|Color Wheel|Type|12|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~14~Txt~Closed..Open|R3|Begin~15~End~15~Txt~Open|R4|Begin~16~End~29~Txt~Open..Magenta|R5|Begin~30~End~30~Txt~Magenta~Extra~#ca1f7b|R6|Begin~31~End~44~Txt~Magenta..Pink|R7|Begin~45~End~45~Txt~Pink~Extra~#ffc0cb|R8|Begin~46~End~59~Txt~Pink..Red|R9|Begin~60~End~60~Txt~Red~Extra~#ff0000|R10|Begin~61~End~74~Txt~Red..Orange|R11|Begin~75~End~75~Txt~Orange~Extra~#ff7f00|R12|Begin~76~End~89~Txt~Orange..Amber|R13|Begin~90~End~90~Txt~Amber~Extra~#ffbf00|R14|Begin~91~End~104~Txt~Amber..Yellow|R15|Begin~105~End~105~Txt~Yellow~Extra~#ffff00|R16|Begin~106~End~119~Txt~Yellow..Light Green|R17|Begin~120~End~120~Txt~Light Green~Extra~#90ee90|R18|Begin~121~End~134~Txt~Light Green..Green|R19|Begin~135~End~135~Txt~Green~Extra~#00ff00|R20|Begin~136~End~149~Txt~Green..Cyan|R21|Begin~150~End~150~Txt~Cyan~Extra~#00ffff|R22|Begin~151~End~164~Txt~Cyan..Blue|R23|Begin~165~End~165~Txt~Blue~Extra~#0000ff|R24|Begin~166~End~179~Txt~Blue..Dark Blue|R25|Begin~180~End~184~Txt~Dark Blue~Extra~#00008b|R26|Begin~185~End~189~Txt~Blue~Extra~#0000ff|R27|Begin~190~End~194~Txt~Cyan~Extra~#00ffff|R28|Begin~195~End~199~Txt~Green~Extra~#00ff00|R29|Begin~200~End~204~Txt~Light Green~Extra~#90ee90|R30|Begin~205~End~209~Txt~Yellow~Extra~#ffff00|R31|Begin~210~End~214~Txt~Amber~Extra~#ffbf00|R32|Begin~215~End~219~Txt~Orange~Extra~#ff7f00|R33|Begin~220~End~224~Txt~Red~Extra~#ff0000|R34|Begin~225~End~229~Txt~Pink~Extra~#ffc0cb|R35|Begin~230~End~234~Txt~Magenta~Extra~#ca1f7b|R36|Begin~235~End~239~Txt~Open|R37|Begin~240~End~255~Txt~Closed
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~14~Txt~Closed..Open|R3|Begin~15~End~15~Txt~Open|R4|Begin~16~End~29~Txt~Open..Dot|R5|Begin~30~End~30~Txt~Dot|R6|Begin~31~End~44~Txt~Dot..Line|R7|Begin~45~End~45~Txt~Line|R8|Begin~46~End~59~Txt~Line..Stars|R9|Begin~60~End~60~Txt~Stars|R10|Begin~61~End~74~Txt~Stars..Triangles|R11|Begin~75~End~75~Txt~Triangles|R12|Begin~76~End~89~Txt~Triangles..Star|R13|Begin~90~End~90~Txt~Star|R14|Begin~91~End~104~Txt~Star..Dots|R15|Begin~105~End~105~Txt~Dots|R16|Begin~106~End~119~Txt~Dots..Bells|R17|Begin~120~End~120~Txt~Bells|R18|Begin~121~End~134~Txt~Bells..Cone|R19|Begin~135~End~135~Txt~Cone|R20|Begin~136~End~149~Txt~Cone..Phone|R21|Begin~150~End~150~Txt~Phone|R22|Begin~151~End~164~Txt~Phone..Window|R23|Begin~165~End~165~Txt~Window|R24|Begin~166~End~179~Txt~Window..Triangle|R25|Begin~180~End~184~Txt~Triangle|R26|Begin~185~End~189~Txt~Window|R27|Begin~190~End~194~Txt~Phone|R28|Begin~195~End~199~Txt~Cone|R29|Begin~200~End~204~Txt~Bells|R30|Begin~205~End~209~Txt~Dots|R31|Begin~210~End~214~Txt~Star|R32|Begin~215~End~219~Txt~Triangles|R33|Begin~220~End~224~Txt~Stars|R34|Begin~225~End~229~Txt~Line|R35|Begin~230~End~234~Txt~Dot|R36|Begin~235~End~239~Txt~Open|R37|Begin~240~End~255~Txt~Closed
+ID|Pan|Type|7|DefaultValue|127|R1|Begin~0~End~255~Txt~0deg..173deg
+ID|Tilt|Type|8|DefaultValue|127|R1|Begin~0~End~255~Txt~0deg..83deg
+ID|Movement Speed|Type|16|R1|Begin~0~End~0~Txt~fast Tracking mode|R2|Begin~1~End~255~Txt~fast..slow
+ID|Color/Gobo Speed|Type|16|R1|Begin~0~End~0~Txt~Speed fast Tracking mode|R2|Begin~1~End~255~Txt~Speed fast..slow
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel tracking|ShortName|tracking|Content|Strobe~Color Wheel~Gobo Wheel~Pan~Tilt
+Name|7-channel vector|ShortName|vector|Content|Strobe~Color Wheel~Gobo Wheel~Pan~Tilt~Movement Speed~Color/Gobo Speed
+[END_MODES]

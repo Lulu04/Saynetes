@@ -1,0 +1,42 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/8887/crazy_pocket_8.pdf
+[GENERAL]
+Manufacturer|American DJ|Name|Crazy Pocket 8|Type|9|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|297|Height|262|Depth|149|Weight|3.5|Power|59|Connector|3-pin|Bulb|8×3WLED 2×red 2×green 2×blue 2 amber|LensMinDegree|4.000|LensMaxDegree|4.000
+[CHAN_DEF]
+ID|Show|Type|0|R1|Begin~0~End~7~Txt~Blackout|R2|Begin~8~End~69~Txt~Show 1|R3|Begin~70~End~131~Txt~Show 2|R4|Begin~132~End~193~Txt~Show 3|R5|Begin~194~End~247~Txt~Show 4|R6|Begin~248~End~255~Txt~Show 0
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0..540deg
+ID|Tilt Top|Type|8|R1|Begin~0~End~255~Txt~0..205deg
+ID|Tilt Bottom|Type|8|R1|Begin~0~End~255~Txt~0..205deg
+ID|Shutter/Strobe|Type|6|R1|Begin~0~End~7~Txt~Shutter open|R2|Begin~8~End~131~Txt~Strobe slow..fast|R3|Begin~132~End~139~Txt~Shutter open|R4|Begin~140~End~181~Txt~Ramp up strobe|R5|Begin~182~End~189~Txt~Shutter open|R6|Begin~190~End~231~Txt~Ramp down strobe|R7|Begin~232~End~239~Txt~Shutter open|R8|Begin~240~End~247~Txt~Strobe sound controlled|R9|Begin~248~End~255~Txt~Shutter open
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Chase|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~22~Txt~Chase 1|R3|Begin~23~End~37~Txt~Chase 2|R4|Begin~38~End~52~Txt~Chase 3|R5|Begin~53~End~67~Txt~Chase 4|R6|Begin~68~End~82~Txt~Chase 5|R7|Begin~83~End~97~Txt~Chase 6|R8|Begin~98~End~112~Txt~Chase 7|R9|Begin~113~End~127~Txt~Chase 8|R10|Begin~128~End~142~Txt~Chase 9|R11|Begin~143~End~157~Txt~Chase 10|R12|Begin~158~End~172~Txt~Chase 11|R13|Begin~173~End~187~Txt~Chase 12|R14|Begin~188~End~202~Txt~Chase 13|R15|Begin~203~End~217~Txt~Chase 14|R16|Begin~218~End~232~Txt~Chase 15|R17|Begin~233~End~247~Txt~Chase 16|R18|Begin~248~End~255~Txt~Full ON
+ID|Chase Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~Fast..Slow
+ID|Reset/Blackout|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout at pan tilt movement|R3|Begin~80~End~89~Txt~Reset tilt top|R4|Begin~90~End~99~Txt~Reset tilt bottom|R5|Begin~100~End~109~Txt~Reset pan|R6|Begin~110~End~199~Txt~No function|R7|Begin~200~End~209~Txt~Reset all|R8|Begin~210~End~255~Txt~No function
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt Top fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt Bottom fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber Master|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Mode|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default setting
+ID|Red Top|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Top|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Top|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber Top|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Bottom|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Bottom|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Bottom|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber Bottom|Type|14|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Show
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt Top~Tilt Bottom~Shutter/Strobe~Master dimmer~Chase~Chase Speed~Pan/Tilt Speed~Reset/Blackout
+Name|17-channel|ShortName|17ch|Content|Pan~Pan fine~Tilt Top~Tilt Top fine~Tilt Bottom~Tilt Bottom fine~Red Master~Green Master~Blue Master~Amber Master~Shutter/Strobe~Master dimmer~Chase~Chase Speed~Pan/Tilt Speed~Reset/Blackout~Dimmer Mode
+Name|21-channel|ShortName|21ch|Content|Pan~Pan fine~Tilt Top~Tilt Top fine~Tilt Bottom~Tilt Bottom fine~Red Top~Green Top~Blue Top~Amber Top~Red Bottom~Green Bottom~Blue Bottom~Amber Bottom~Shutter/Strobe~Master dimmer~Chase~Chase Speed~Pan/Tilt Speed~Reset/Blackout~Dimmer Mode
+[END_MODES]

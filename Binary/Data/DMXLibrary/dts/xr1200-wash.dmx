@@ -1,0 +1,30 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://dts-lighting.it/download/xr1200-wash/|LinkType2|video|Url2|https://www.youtube.com/watch?v=uu0jVaHAUXU
+[GENERAL]
+Manufacturer|DTS|Name|XR1200 WASH|Type|9|Authors|novasfronteiras.co|Creator|OFL
+[PHYSICAL]
+Width|490|Height|685|Depth|500|Weight|38.00|Power|1320|Connector|3-pin and 5-pin|Bulb|Phililps MSR Gold 1200 Fastfit|Lumens|50000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..320deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Movement Speed|Type|9|R1|Begin~0~End~10~Txt~No function Standard|R2|Begin~11~End~25~Txt~fast|R3|Begin~26~End~127~Txt~fast..slow Vector mode|R4|Begin~128~End~247~Txt~fast..slow Reaction time to DMX signal|R5|Begin~248~End~255~Txt~slow Reaction time to DMX signal
+ID|Dimmer|Type|2|R1|Begin~0~End~8~Txt~off|R2|Begin~9~End~255~Txt~dark..bright
+ID|Shutter|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~23~Txt~Strobe Random timing|R3|Begin~24~End~107~Txt~Strobe slow..fast|R4|Begin~108~End~163~Txt~Strobe slow..fast Flash open|R5|Begin~164~End~219~Txt~Strobe slow..fast Flash closed|R6|Begin~220~End~227~Txt~Colors / Macros in black-out|R7|Begin~228~End~233~Txt~Pan / Tilt in black-out|R8|Begin~234~End~255~Txt~Open
+ID|Color Wheel|Type|12|R1|Begin~0~End~12~Txt~Open|R2|Begin~13~End~25~Txt~CTO~Extra~#ffd85e|R3|Begin~26~End~38~Txt~CTB~Extra~#d1ffff|R4|Begin~39~End~51~Txt~Purple~Extra~#7038aa|R5|Begin~52~End~64~Txt~Split Purple / Orange~Extra~#7038aa|R6|Begin~65~End~77~Txt~Orange~Extra~#ff7000|R7|Begin~78~End~90~Txt~Split Orange / Green~Extra~#ff7000|R8|Begin~91~End~103~Txt~Green~Extra~#00c628|R9|Begin~104~End~116~Txt~Split Green / Red~Extra~#00c628|R10|Begin~117~End~129~Txt~Red~Extra~#f4001c|R11|Begin~130~End~142~Txt~Split Red / Dark Blue~Extra~#f4001c|R12|Begin~143~End~155~Txt~Dark Blue~Extra~#660adb|R13|Begin~156~End~168~Txt~Split Dark Blue / Amber~Extra~#660adb|R14|Begin~169~End~181~Txt~Amber~Extra~#ffbf00|R15|Begin~182~End~197~Txt~Split Amber~Extra~#ffbf00|R16|Begin~198~End~224~Txt~fast CW..slow CW|R17|Begin~225~End~228~Txt~stop|R18|Begin~229~End~255~Txt~slow CCW..fast CCW
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Speed CMY / Dimmer|Type|16|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Speed fast..slow
+ID|Macro CMY / Color|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~14~Txt~Macro 1|R3|Begin~15~End~19~Txt~Macro 2|R4|Begin~20~End~24~Txt~Macro 3|R5|Begin~25~End~29~Txt~Macro 4|R6|Begin~30~End~34~Txt~Macro 5|R7|Begin~35~End~39~Txt~Macro 6|R8|Begin~40~End~44~Txt~Macro 7|R9|Begin~45~End~49~Txt~Macro 8|R10|Begin~50~End~54~Txt~Macro 9|R11|Begin~55~End~59~Txt~Macro 10|R12|Begin~60~End~64~Txt~Macro 11|R13|Begin~65~End~69~Txt~Macro 12|R14|Begin~70~End~74~Txt~Macro 13|R15|Begin~75~End~79~Txt~Macro 14|R16|Begin~80~End~84~Txt~Macro 15|R17|Begin~85~End~89~Txt~Macro 16|R18|Begin~90~End~94~Txt~Macro 17|R19|Begin~95~End~99~Txt~Macro 18|R20|Begin~100~End~104~Txt~Macro 19|R21|Begin~105~End~109~Txt~Macro 20|R22|Begin~110~End~114~Txt~Macro 21|R23|Begin~115~End~121~Txt~ColorFade instant Macros wait = 0|R24|Begin~122~End~128~Txt~ColorFade 20% Macros wait = 2|R25|Begin~129~End~135~Txt~ColorFade 30% Macros wait = 3|R26|Begin~136~End~142~Txt~ColorFade 40% Macros wait = 4|R27|Begin~143~End~149~Txt~ColorFade 50% Macros wait = 5|R28|Begin~150~End~156~Txt~ColorFade 60% Macros wait = 6|R29|Begin~157~End~163~Txt~ColorFade 70% Macros wait = 7|R30|Begin~164~End~170~Txt~ColorFade 80% Macros wait = 8|R31|Begin~171~End~177~Txt~ColorFade 90% Macros wait = 9|R32|Begin~178~End~184~Txt~ColorFade 100% Macros wait = 10|R33|Begin~185~End~191~Txt~ColorFade instant Full Colors wait = 0|R34|Begin~192~End~198~Txt~ColorFade 20% Full Colors wait = 2|R35|Begin~199~End~205~Txt~ColorFade 30% Full Colors wait = 3|R36|Begin~206~End~212~Txt~ColorFade 40% Full Colors wait = 4|R37|Begin~213~End~219~Txt~ColorFade 50% Full Colors wait = 5|R38|Begin~220~End~226~Txt~ColorFade 60% Full Colors wait = 6|R39|Begin~227~End~233~Txt~ColorFade 70% Full Colors wait = 7|R40|Begin~234~End~240~Txt~ColorFade 80% Full Colors wait = 8|R41|Begin~241~End~247~Txt~ColorFade 90% Full Colors wait = 9|R42|Begin~248~End~255~Txt~ColorFade 100% Full Colors wait = 10
+ID|Effects|Type|0|R1|Begin~0~End~19~Txt~Frost 100%|R2|Begin~20~End~39~Txt~Frost 0%|R3|Begin~40~End~255~Txt~Beam shape
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 0%..100%
+ID|Lamp / Reset|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~60~Txt~3s Lamp OFF|R3|Begin~61~End~129~Txt~No function|R4|Begin~130~End~179~Txt~3s Lamp ON|R5|Begin~180~End~200~Txt~No function|R6|Begin~201~End~239~Txt~Internal Motors Reset|R7|Begin~240~End~255~Txt~Total Reset
+[END_CHAN_DEF]
+[MODES]
+Name|Fresnel|ShortName|Fresnel|Content|Pan~Pan fine~Tilt~Tilt fine~Movement Speed~Dimmer~Shutter~Color Wheel~Cyan~Magenta~Yellow~Speed CMY / Dimmer~Macro CMY / Color~Effects~Zoom~Lamp / Reset
+Name|PC|ShortName|PC|Content|Pan~Pan fine~Tilt~Tilt fine~Movement Speed~Dimmer~Shutter~Color Wheel~Cyan~Magenta~Yellow~Speed CMY / Dimmer~Macro CMY / Color~Effects~Zoom~Lamp / Reset
+[END_MODES]

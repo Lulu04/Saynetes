@@ -1,0 +1,61 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://alienpro.com.mx/wp-content/uploads/Manual-Bar-Alien-S.pdf
+[GENERAL]
+Manufacturer|Alien Pro|Name|Alien S|Type|19|Authors|Yéred Zabdiel, Flo Edelmann|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|1070|Height|65|Depth|88|Weight|2.6|Power|30|Connector|3-pin|Bulb|240× 10mm LED (96 red, 72 green, 72 blue)|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Flash Speed|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Strobe slow..fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color macro|Type|12|R1|Begin~0~End~7~Txt~OFF|R2|Begin~8~End~15~Txt~Red|R3|Begin~16~End~23~Txt~Yellow|R4|Begin~24~End~31~Txt~Green|R5|Begin~32~End~39~Txt~Cyan|R6|Begin~40~End~47~Txt~Blue|R7|Begin~48~End~55~Txt~Purple|R8|Begin~56~End~63~Txt~White|R9|Begin~64~End~71~Txt~Program 01|R10|Begin~72~End~79~Txt~Program 02|R11|Begin~80~End~87~Txt~Program 03|R12|Begin~88~End~95~Txt~Program 04|R13|Begin~96~End~103~Txt~Program 05|R14|Begin~104~End~111~Txt~Program 06|R15|Begin~112~End~119~Txt~Program 07|R16|Begin~120~End~127~Txt~Program 08|R17|Begin~128~End~135~Txt~Program 09|R18|Begin~136~End~143~Txt~Program 10|R19|Begin~144~End~151~Txt~Program 11|R20|Begin~152~End~159~Txt~Program 12|R21|Begin~160~End~167~Txt~Program 13|R22|Begin~168~End~175~Txt~Program 14|R23|Begin~176~End~183~Txt~Program 15|R24|Begin~184~End~191~Txt~Program 16|R25|Begin~192~End~199~Txt~Program 17|R26|Begin~200~End~207~Txt~Program 18|R27|Begin~208~End~215~Txt~Program 19|R28|Begin~216~End~223~Txt~Program 20|R29|Begin~224~End~231~Txt~Program 21|R30|Begin~232~End~255~Txt~Sound
+ID|Program Speed / Sound Sensitivity|Type|16|R1|Begin~0~End~255~Txt~speed slow..fast  sensitivity low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel d-P1|ShortName|d-P1|Content|Red Master~Green Master~Blue Master
+Name|4-channel d-P2|ShortName|d-P2|Content|Red Master~Green Master~Blue Master~Master dimmer
+Name|14-channel d-P3|ShortName|d-P3|Content|Red 1/4~Green 1/4~Blue 1/4~Red 2/4~Green 2/4~Blue 2/4~Red 3/4~Green 3/4~Blue 3/4~Red 4/4~Green 4/4~Blue 4/4~Flash Speed~Master dimmer
+Name|26-channel d-P4|ShortName|d-P4|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Flash Speed~Master dimmer
+Name|2-channel d-P5|ShortName|d-P5|Content|Color macro~Program Speed / Sound Sensitivity
+Name|7-channel d-P6|ShortName|d-P6|Content|Red Master~Green Master~Blue Master~Color macro~Program Speed / Sound Sensitivity~Flash Speed~Master dimmer
+[END_MODES]

@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://media.steinigke.de/documents_t/992-MANUAL-1.10-de-en_00110800.pdf|LinkType2|product page|Url2|https://www.steinigke.de/de/mpn51785992-eurolite-led-tmh-x12-moving-head-spot.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=-jWRxuu8q6U
+[GENERAL]
+Manufacturer|Eurolite|Name|LED TMH-X12|Type|9|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|320|Height|400|Depth|330|Weight|10.50|Power|170|Connector|3-pin|Bulb|120W white COB LED|LensMinDegree|12.000|LensMaxDegree|12.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~slow..fast
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~109~Txt~Strobe slow..fast|R3|Begin~110~End~209~Txt~Pulse slow..fast|R4|Begin~210~End~251~Txt~Strobe slow..fast Random timing|R5|Begin~252~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Wheel|Type|12|R1|Begin~0~End~8~Txt~Split Open / Red|R2|Begin~9~End~10~Txt~Red~Extra~#ff0000|R3|Begin~11~End~18~Txt~Split Red / Orange~Extra~#ff0000|R4|Begin~19~End~20~Txt~Orange~Extra~#ffaa00|R5|Begin~21~End~28~Txt~Split Orange / Green~Extra~#ffaa00|R6|Begin~29~End~30~Txt~Green~Extra~#00ff00|R7|Begin~31~End~38~Txt~Split Green / Light Blue~Extra~#00ff00|R8|Begin~39~End~40~Txt~Light Blue~Extra~#aaccff|R9|Begin~41~End~48~Txt~Split Light Blue / Purple~Extra~#aaccff|R10|Begin~49~End~50~Txt~Purple~Extra~#cc00bb|R11|Begin~51~End~58~Txt~Split Purple / Yellow~Extra~#cc00bb|R12|Begin~59~End~60~Txt~Yellow~Extra~#ffff00|R13|Begin~61~End~68~Txt~Split Yellow / Blue~Extra~#ffff00|R14|Begin~69~End~70~Txt~Blue~Extra~#0000ff|R15|Begin~71~End~78~Txt~Split Blue / Pink~Extra~#0000ff|R16|Begin~79~End~80~Txt~Pink~Extra~#ff00ff|R17|Begin~81~End~88~Txt~Split Pink~Extra~#ff00ff|R18|Begin~89~End~90~Txt~Open|R19|Begin~91~End~255~Txt~slow CW..fast CW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~9~Txt~Gobo 1|R3|Begin~10~End~14~Txt~Gobo 2|R4|Begin~15~End~19~Txt~Gobo 3|R5|Begin~20~End~24~Txt~Gobo 4|R6|Begin~25~End~29~Txt~Gobo 5|R7|Begin~30~End~34~Txt~Gobo 6|R8|Begin~35~End~39~Txt~Gobo 7|R9|Begin~40~End~129~Txt~fast CCW..slow CCW|R10|Begin~130~End~134~Txt~Open|R11|Begin~135~End~220~Txt~slow CW..fast CW|R12|Begin~221~End~225~Txt~Gobo 1|R13|Begin~226~End~230~Txt~Gobo 2|R14|Begin~231~End~235~Txt~Gobo 3|R15|Begin~236~End~240~Txt~Gobo 4|R16|Begin~241~End~245~Txt~Gobo 5|R17|Begin~246~End~250~Txt~Gobo 6|R18|Begin~251~End~255~Txt~Gobo 7
+ID|Gobo Stencil Rotation|Type|11|R1|Begin~0~End~63~Txt~No function|R2|Begin~64~End~126~Txt~CCW fast..slow|R3|Begin~127~End~127~Txt~stop|R4|Begin~128~End~191~Txt~CW slow..fast|R5|Begin~192~End~192~Txt~stop|R6|Begin~193~End~255~Txt~Gobo Stencil Shake slow..fast
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Prism|Type|41|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Prism 3-facet
+ID|Prism Rotation|Type|42|R1|Begin~0~End~63~Txt~Prism rotation stop|R2|Begin~64~End~127~Txt~Prism rotation fast CCW..slow CCW|R3|Begin~128~End~191~Txt~Prism rotation slow CW..fast CW|R4|Begin~192~End~255~Txt~Prism Shake slow..fast
+ID|Internal Programs|Type|0|R1|Begin~0~End~5~Txt~Fade delay off|R2|Begin~6~End~10~Txt~Fade delay on|R3|Begin~11~End~15~Txt~No function|R4|Begin~16~End~75~Txt~Internal Program Auto 1|R5|Begin~76~End~135~Txt~Internal Program Auto 2|R6|Begin~136~End~195~Txt~Internal Program Auto 3|R7|Begin~196~End~255~Txt~Internal Program Auto 4
+ID|Reset|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~45~Txt~Reset others|R3|Begin~46~End~103~Txt~No function|R4|Begin~104~End~119~Txt~Reset Pan/Tilt|R5|Begin~120~End~190~Txt~No function|R6|Begin~191~End~205~Txt~Reset all|R7|Begin~206~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|13-channel|ShortName|13ch|Content|Pan~Tilt~Pan/Tilt Speed~Shutter / Strobe~Dimmer~Color Wheel~Gobo Wheel~Gobo Stencil Rotation~Focus~Prism~Prism Rotation~Internal Programs~Reset
+Name|15-channel|ShortName|15ch|Content|Pan~Tilt~Pan/Tilt Speed~Shutter / Strobe~Dimmer~Color Wheel~Gobo Wheel~Gobo Stencil Rotation~Focus~Prism~Prism Rotation~Internal Programs~Reset~Pan fine~Tilt fine
+[END_MODES]

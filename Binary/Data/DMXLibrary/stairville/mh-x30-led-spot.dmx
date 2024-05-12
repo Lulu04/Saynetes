@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.thomann.de/pics/atg/atgdata/document/manual/398853_c_398853_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_mh_x30_led_spot_moving_head.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i5728p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|MH-x30 LED Spot|Type|9|Authors|Voyo, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|280|Height|374|Depth|150|Weight|5.80|Power|94|Connector|3-pin|Bulb|30W white LED|LensMinDegree|14.000|LensMaxDegree|14.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..200deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~128~Txt~Strobe 0Hz..20Hz Random timing|R3|Begin~129~End~255~Txt~Strobe 0Hz..20Hz
+ID|Color Wheel|Type|12|R1|Begin~0~End~11~Txt~White~Extra~#ffffff|R2|Begin~12~End~23~Txt~Red~Extra~#ff0000|R3|Begin~24~End~35~Txt~Green~Extra~#00ff00|R4|Begin~36~End~47~Txt~Light blue~Extra~#00ccff|R5|Begin~48~End~59~Txt~Purple~Extra~#ff00ff|R6|Begin~60~End~71~Txt~Light yellow~Extra~#ffff99|R7|Begin~72~End~83~Txt~Blue~Extra~#0000ff|R8|Begin~84~End~95~Txt~Yellow~Extra~#ffff00|R9|Begin~96~End~107~Txt~Split White / Red~Extra~#ffffff|R10|Begin~108~End~119~Txt~Split Red / Green~Extra~#ff0000|R11|Begin~120~End~131~Txt~Split Green / Light blue~Extra~#00ff00|R12|Begin~132~End~143~Txt~Split Light blue / Purple~Extra~#00ccff|R13|Begin~144~End~155~Txt~Split Purple / Light yellow~Extra~#ff00ff|R14|Begin~156~End~167~Txt~Split Light yellow / Blue~Extra~#ffff99|R15|Begin~168~End~179~Txt~Split Blue / Yellow~Extra~#0000ff|R16|Begin~180~End~191~Txt~Split Yellow~Extra~#ffff00|R17|Begin~192~End~223~Txt~fast CW..slow CW|R18|Begin~224~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~11~Txt~Open|R2|Begin~12~End~23~Txt~Gobo 1|R3|Begin~24~End~35~Txt~Gobo 2|R4|Begin~36~End~47~Txt~Gobo 3|R5|Begin~48~End~59~Txt~Gobo 4|R6|Begin~60~End~71~Txt~Gobo 5|R7|Begin~72~End~83~Txt~Gobo 6|R8|Begin~84~End~95~Txt~Gobo 7|R9|Begin~96~End~107~Txt~Gobo 1 slow..fast|R10|Begin~108~End~119~Txt~Gobo 2 slow..fast|R11|Begin~120~End~131~Txt~Gobo 3 slow..fast|R12|Begin~132~End~143~Txt~Gobo 4 slow..fast|R13|Begin~144~End~155~Txt~Gobo 5 slow..fast|R14|Begin~156~End~167~Txt~Gobo 6 slow..fast|R15|Begin~168~End~179~Txt~Gobo 7 slow..fast|R16|Begin~180~End~191~Txt~Open|R17|Begin~192~End~223~Txt~fast CW..slow CW|R18|Begin~224~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~191~Txt~slow CW..fast CW|R3|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
+ID|Maintenance|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~20~Txt~5s Reset|R3|Begin~21~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Pan/Tilt Speed~Dimmer~Strobe~Color Wheel~Gobo Wheel~Gobo Rotation~Focus
+Name|12-channel|ShortName|12ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Strobe~Color Wheel~Gobo Wheel~Gobo Rotation~Focus~Maintenance
+[END_MODES]

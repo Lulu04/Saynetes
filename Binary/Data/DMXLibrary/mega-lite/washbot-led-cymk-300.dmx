@@ -1,0 +1,37 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://mega.lighting/wp-content/uploads/2020/01/Washbot-Manual-V2.pdf|LinkType2|product page|Url2|https://mega.lighting/product/washbot/|LinkType3|video|Url3|https://www.youtube.com/watch?v=5fLSs0VkQ1c
+[GENERAL]
+Manufacturer|MegaLite|Name|Washbot LED CYMK 300|Type|9|Authors|Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|431|Height|260|Depth|685|Weight|23.20|Power|363|Connector|3-pin and 5-pin|Bulb|LumiEngin 300W LED|LensMinDegree|7.000|LensMaxDegree|31.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..240deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|DefaultValue|255|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~103~Txt~Strobe 1Hz..18Hz|R3|Begin~104~End~107~Txt~Open|R4|Begin~108~End~207~Txt~Pulse 1Hz..18Hz|R5|Begin~208~End~212~Txt~Open|R6|Begin~213~End~251~Txt~Strobe 1Hz..18Hz Random timing|R7|Begin~252~End~255~Txt~Open
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Kelvin|Type|27|R1|Begin~0~End~255~Txt~3920K..5262K
+ID|Color Selection 1|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~74~Txt~Red #ff0000|R3|Begin~75~End~140~Txt~UV #3e0694|R4|Begin~141~End~200~Txt~Dark Blue #000070|R5|Begin~201~End~255~Txt~Cyan #00ffff
+ID|Color Selection 2|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~74~Txt~Lime Green #70ff00|R3|Begin~75~End~140~Txt~Orange #ff7000|R4|Begin~141~End~200~Txt~Green #00ff00|R5|Begin~201~End~255~Txt~Magenta #ff00ff
+ID|Color Selection 3|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~74~Txt~Light Pink #ff40aa|R3|Begin~75~End~140~Txt~Teal #00ffff|R4|Begin~141~End~200~Txt~RBG _#00ff00|R5|Begin~201~End~255~Txt~Yellow #ffff00
+ID|Color Selection 4|Type|27|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~74~Txt~4789K #ffffc6|R3|Begin~75~End~140~Txt~3513K #ffc489|R4|Begin~141~End~200~Txt~3301K #ffbe7e|R5|Begin~201~End~255~Txt~5262K #ffe9d9
+ID|Color Wheel|Type|12|R1|Begin~0~End~1~Txt~Open|R2|Begin~2~End~17~Txt~Red & Orange~Extra~#ff3000|R3|Begin~18~End~32~Txt~Purple~Extra~#7000ff|R4|Begin~33~End~46~Txt~Aqua~Extra~#0070ff|R5|Begin~47~End~64~Txt~Hot Pink~Extra~#ff0070|R6|Begin~65~End~79~Txt~Yellow~Extra~#ffff00|R7|Begin~80~End~97~Txt~Blue~Extra~#0000ff|R8|Begin~98~End~125~Txt~1/4 CTB~Extra~#b6c2da|R9|Begin~126~End~190~Txt~fast CW..slow CW|R10|Begin~191~End~255~Txt~slow CCW..fast CCW
+ID|Prism|Type|41|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Prism
+ID|Prism Rotation|Type|42|R1|Begin~0~End~127~Txt~Prism rotation 0deg..360deg|R2|Begin~128~End~191~Txt~Prism rotation slow CW..fast CW|R3|Begin~192~End~255~Txt~Prism rotation fast CCW..slow CCW
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
+ID|Control|Type|0|R1|Begin~0~End~119~Txt~No function|R2|Begin~120~End~160~Txt~Pan / Tilt Reset|R3|Begin~161~End~200~Txt~Motor Function Reset|R4|Begin~201~End~255~Txt~All Reset
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
+ID|Zoom fine|Type|31|R1|Begin~0~End~255~Txt~
+[END_CHAN_DEF]
+[MODES]
+Name|20-channel|ShortName|20ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Shutter~Cyan~Magenta~Yellow~Kelvin~Color Selection 1~Color Selection 2~Color Selection 3~Color Selection 4~Color Wheel~Prism~Prism Rotation~Focus~Zoom~Control
+Name|23-channel|ShortName|23ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter~Cyan~Magenta~Yellow~Kelvin~Color Selection 1~Color Selection 2~Color Selection 3~Color Selection 4~Color Wheel~Prism~Prism Rotation~Focus~Focus fine~Zoom~Zoom fine~Control
+[END_MODES]

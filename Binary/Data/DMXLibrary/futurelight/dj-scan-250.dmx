@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/55802/Future-Light-Dj-Scan-250.html|LinkType2|video|Url2|https://www.youtube.com/watch?v=8GOpwwclPAc
+[GENERAL]
+Manufacturer|Futurelight|Name|DJ-Scan 250|Type|8|Authors|Max Jöhnk|Creator|OFL
+[PHYSICAL]
+Width|525|Height|300|Depth|150|Weight|15.00|Power|500|Connector|3-pin
+[CHAN_DEF]
+ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Tilt|Type|8|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Color Wheel|Type|12|R1|Begin~0~End~18~Txt~Open|R2|Begin~19~End~35~Txt~Dark blue|R3|Begin~36~End~53~Txt~Pink|R4|Begin~54~End~71~Txt~Light green|R5|Begin~72~End~89~Txt~Orange|R6|Begin~90~End~107~Txt~Light Blue|R7|Begin~108~End~126~Txt~Yellow|R8|Begin~127~End~127~Txt~Cherry red|R9|Begin~128~End~191~Txt~slow CW..fast CW|R10|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Gobo 1|R3|Begin~32~End~47~Txt~Gobo 2|R4|Begin~48~End~63~Txt~Gobo 3|R5|Begin~64~End~79~Txt~Gobo 4|R6|Begin~80~End~95~Txt~Gobo 5|R7|Begin~96~End~111~Txt~Gobo 6|R8|Begin~112~End~127~Txt~Gobo 7|R9|Begin~128~End~191~Txt~slow CW..fast CW|R10|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~15~Txt~stop|R2|Begin~16~End~135~Txt~fast CW..slow CW|R3|Begin~136~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~128~Txt~0..100%|R3|Begin~129~End~131~Txt~5s Reset|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~199~Txt~Strobe 1Hz..10Hz|R6|Begin~200~End~249~Txt~Strobe 1Hz..10Hz Random timing|R7|Begin~250~End~255~Txt~Open
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Shutter / Strobe
+[END_MODES]
