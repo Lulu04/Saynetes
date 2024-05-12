@@ -16,6 +16,7 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     CBConvertOnlyExisting: TCheckBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -32,6 +33,7 @@ type
     PB: TProgressBar;
     Splitter1: TSplitter;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     procedure DeleteEmptyFolderInConvertedFolder;
@@ -50,13 +52,14 @@ var
   Form1: TForm1;
 
 implementation
-uses utilitaire_fichier, PropertyUtils, jsonscanner;
+uses utilitaire_fichier, PropertyUtils, jsonscanner, u_list_dmxuniverse, u_logfile;
 
 {$R *.lfm}
 
 var
   FWheelsErrorCount,
-  FMatrixErrorCount: integer;
+  FMatrixErrorCount,
+  FSwitchErrorCount: integer;
   FChannelNotTyped: TStringList;
 
 
@@ -1264,6 +1267,7 @@ begin
 
       'switchChannels': begin
         LogMessage('-> HAVE SWITCH CHANNEL');
+        inc(FSwitchErrorCount);
         exit;
       end;
     end;
@@ -1720,7 +1724,7 @@ begin
   end;
 
   tot := LB.Count;
-  Label2.Caption := 'Total: '+tot.ToString+' fixtures';
+  Label2.Caption := 'Found: '+tot.ToString+' fixtures';
   PB.Max := tot;
   Application.ProcessMessages;
   Memo1.Visible := False;
@@ -1730,6 +1734,7 @@ begin
   // Try to convert each JSON file
   FWheelsErrorCount := 0;
   FMatrixErrorCount := 0;
+  FSwitchErrorCount := 0;
   c := 0;
   for i:=LB.Count-1 downto 0 do
   begin
@@ -1747,8 +1752,10 @@ begin
   Memo1.Visible := True;
   Label3.Caption := 'Done: '+c.ToString;
   Label4.Caption := 'Remains: '+(tot-c).ToString;
+  Label5.Caption := 'SwitchChannel error: '+FSwitchErrorCount.ToString;
   Label6.Caption := 'Wheels error: '+FWheelsErrorCount.ToString;
   Label7.Caption := 'Matrix error: '+FMatrixErrorCount.ToString;
+
 
   // delete empty folder in Converted
   if CBConvertOnlyExisting.Checked then begin
@@ -1761,6 +1768,30 @@ begin
   // save the non converted channel types
   FChannelNotTyped.SaveToFile(Application.Location+'not_recognized_channel_type.txt');
   FChannelNotTyped.Free;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var t: TStringList;
+  libFix: TLibraryFixture;
+  i: Integer;
+  f: string;
+begin
+  t := ContenuDuRepertoire(SayneteDMXLibraryPath, '.dmx', True, True);
+  Log := TLog.Create(Application.Location+'library.log');
+  for i:=0 to t.Count-1 do begin
+    if ExtractFileExt(t.Strings[i]) <> '.dmx' then continue;
+
+    f := ConcatPaths([SayneteDMXLibraryPath, t.Strings[i]]);
+    libFix.InitDefault;
+    if not libFix.LoadFromFile(f) then
+      raise exception.Create('impossible de charger '+t.Strings[i]);
+    libFix.General.Creator := 'OFL';
+    if not libFix.SaveToFile(ConcatPaths([SayneteDMXLibraryPath, t.Strings[i]])) then
+      raise exception.create('impossible de sauver '+t.Strings[i]);
+  end;
+  t.Free;
+  Log.Free;
+  ShowMessage('Done');
 end;
 
 procedure TForm1.FormShow(Sender: TObject);

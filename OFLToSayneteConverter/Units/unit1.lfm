@@ -208,6 +208,15 @@ object Form1: TForm1
       ParentColor = False
       WordWrap = True
     end
+    object Button2: TButton
+      Left = 588
+      Height = 66
+      Top = 385
+      Width = 144
+      Caption = 'Creator to OFL'
+      OnClick = Button2Click
+      TabOrder = 4
+    end
   end
   object Splitter1: TSplitter
     Cursor = crVSplit

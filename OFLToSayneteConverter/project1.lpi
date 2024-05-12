@@ -57,6 +57,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="LazControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="BGLControls"/>
+      </Item>
+      <Item>
         <PackageName Value="BGRABitmapPack"/>
       </Item>
       <Item>
@@ -91,7 +97,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Units;..\..\UnitsCommon;..\units;..\unit_dmx_device"/>
+      <OtherUnitFiles Value="Units;..\..\UnitsCommon;..\..\UnitsCommon\BGLVirtualScreenTimeLine;..\units;..\lib\x86_64-win64;..\unit_dmx_device"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
