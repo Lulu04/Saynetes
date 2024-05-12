@@ -316,76 +316,76 @@ const
 
   FixtureCanFlipH: array[TFixtureType] of boolean =(
                False,
-               True,     // plan convex
-               True,   // short PAR with bulb
-               True,        // halogen
-               True, // PAR with transparent led long version
-               False,
-               False,        // découpe
-               True,
-               True,
-               True,
-               True,
-               True,
-               False,
-               False,
-               True,
-               True,   //15
-               True, // PAR with transparent led short version
-               True,  // PAR with colored led RGB long version
-               True, // PAR with colored led RGB short version
-               False,
-               True,     // long PAR with bulb
-               True,      // 21
-               True,  // laser
-               True,  // small par
-               True,  // flower01
-               True,  // square par 1 transparent led
-               True,  // square par multiple transparent led
-               True,  // square par multiple colored led
-               True,  // ParRectangularMultipleTransparentLed
-               True,  // ParRectangularColoredTransparentLed
-               False, // ftBarShortTransparentLed
-               False, // ftBarShortColoredLed
-               True,  // flower02
-               True   // flower03
+               True,   // ftPlanConvex
+               True,   // ftParShortBulb
+               True,   // ftHalogen
+               True,   // ftParLongTransparentLed
+               False,  // ftBarColoredLed
+               False,  // ftProfile
+               True,   // ftColorChanger
+               True,   // ftScanner
+               True,   // ftMovingHead
+               True,   // ftSmokeMachine
+               True,   // ftBubbleMachine
+               False,  // ftDimmer1Channel
+               False,  // ftDimmer4Channel
+               True,   // ftMatrixTransparentLed
+               True,   // ftMatrixWithColoredLed
+               True,   // ftParShortTransparentLed
+               True,   // ftLedParLongWithColoredLed
+               True,   // ftLedParShortWithColoredLed
+               False,  // ftLedBarTransparentLed
+               True,   // ftParLongBulb
+               True,   // ftFan
+               True,   // ftLaser
+               True,   // ftParSmallTransparentLed
+               True,   // ftFlower01
+               True,   // ftParSquareSingleTransparentLed
+               True,   // ftParSquareMultipleTransparentLed
+               True,   // ftParSquareMultipleColoredLed
+               True,   // ftParRectangularMultipleTransparentLed
+               True,   // ftParRectangularMultipleColoredLed
+               False,  // ftBarShortTransparentLed
+               False,  // ftBarShortColoredLed
+               True,   // ftFlower02
+               True    // ftFlower03
                );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
-               False,
-               True,   // plan convex
-               True,   // short PAR with bulb
-               True,   // halogen
-               True,   // PAR with transparent led long version
-               False,
-               True,   // profile
-               False,
-               False,
-               False,
-               False,
-               False,
-               False,
-               False,
-               False, //ftMatrixTransparentLed,
-               False, //ftMatrixWithColoredLed,   //15
-               True, // PAR with transparent led short version
-               True,  // PAR with colored led RGB long version
-               True, // PAR with colored led RGB short version
-               False, //ftLedBarTransparentLed,
-               True,     // long PAR with bulb
-               False, //ftFan,      // 21
-               False, //ftLaser
-               True,  //small par
-               True,  // flower01
-               True,  // square par 1 led
-               True,   // square par multiple led
-               True,   // square par multiple colored led
-               True,  // ParRectangularMultipleTransparentLed
-               True,  // ParRectangularColoredTransparentLed
-               False, // ftBarShortTransparentLed
-               False, // ftBarShortColoredLed
-               True,  // flower02
-               True   // flower03
+               False,  // ftOther
+               True,   // ftPlanConvex
+               True,   // ftParShortBulb
+               True,   // ftHalogen
+               True,   // ftParLongTransparentLed
+               False,  // ftBarColoredLed
+               True,   // ftProfile
+               False,  // ftColorChanger
+               False,  // ftScanner
+               False,  // ftMovingHead
+               False,  // ftSmokeMachine
+               False,  // ftBubbleMachine
+               False,  // ftDimmer1Channel
+               False,  // ftDimmer4Channel
+               False,  // ftMatrixTransparentLed
+               False,  // ftMatrixWithColoredLed
+               True,   // ftParShortTransparentLed
+               True,   // ftLedParLongWithColoredLed
+               True,   // ftLedParShortWithColoredLed
+               False,  // ftLedBarTransparentLed
+               True,   // ftParLongBulb
+               False,  // ftFan
+               False,  // ftLaser
+               True,   // ftParSmallTransparentLed
+               True,   // ftFlower01
+               True,   // ftParSquareSingleTransparentLed
+               True,   // ftParSquareMultipleTransparentLed
+               True,   // ftParSquareMultipleColoredLed
+               True,   // ftParRectangularMultipleTransparentLed
+               True,   // ftParRectangularMultipleColoredLed
+               False,  // ftBarShortTransparentLed
+               False,  // ftBarShortColoredLed
+               True,   // ftFlower02
+               True    // ftFlower03
                );
 type
 
