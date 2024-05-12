@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/786449/Martin-Mania-Scx500.html|LinkType2|manual|Url2|https://adn.harmanpro.com/site_elements/executables/5792_1526694868/UM_ManiaSCX500_EN_C_original.pdf|LinkType3|product page|Url3|https://www.martin.com/en-US/products/mania-scx500|LinkType4|video|Url4|https://www.youtube.com/watch?v=0Vl3DwUR9Xo
+[GENERAL]
+Manufacturer|Martin|Name|Mania SCX500|Type|8|Authors|Michael Stiller, Ryan Goodwin, Ken Harris|Creator|OFL
+[PHYSICAL]
+Width|445|Height|178|Depth|204|Weight|6.70|Power|164|Connector|3-pin|Bulb|H5 MR16 halogen|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Effects|Type|0|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~68~Txt~Strobe slow..fast|R3|Begin~69~End~100~Txt~Remote stand-alone, auto trig|R4|Begin~101~End~112~Txt~Macro 1|R5|Begin~113~End~124~Txt~Macro 2|R6|Begin~125~End~136~Txt~Macro 3|R7|Begin~137~End~148~Txt~Macro 4|R8|Begin~149~End~160~Txt~Macro 5|R9|Begin~161~End~172~Txt~Macro 6|R10|Begin~173~End~184~Txt~Macro 7|R11|Begin~185~End~196~Txt~Macro 8|R12|Begin~197~End~208~Txt~Macro 9|R13|Begin~209~End~220~Txt~Macro 10|R14|Begin~221~End~232~Txt~Macro 11|R15|Begin~233~End~249~Txt~Macro 12|R16|Begin~250~End~255~Txt~5s Reset
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Wheel|Type|12|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~11~Txt~Split Open / Blue B04|R3|Begin~12~End~17~Txt~Blue B04~Extra~#0000ff|R4|Begin~18~End~23~Txt~Split Blue B04 / Orange B09~Extra~#0000ff|R5|Begin~24~End~29~Txt~Orange B09~Extra~#ff8000|R6|Begin~30~End~35~Txt~Split Orange B09 / Red B01~Extra~#ff8000|R7|Begin~36~End~41~Txt~Red B01~Extra~#ff0000|R8|Begin~42~End~47~Txt~Split Red B01 / Light Yellow B03~Extra~#ff0000|R9|Begin~48~End~53~Txt~Light Yellow B03~Extra~#ffff99|R10|Begin~54~End~59~Txt~Split Light Yellow B03 / Pink B12~Extra~#ffff99|R11|Begin~60~End~65~Txt~Pink B12~Extra~#ffc0cb|R12|Begin~66~End~71~Txt~Split Pink B12 / Medium Blue B13~Extra~#ffc0cb|R13|Begin~72~End~77~Txt~Medium Blue B13~Extra~#0000cd|R14|Begin~78~End~83~Txt~Split Medium Blue B13 / Light Red B19~Extra~#0000cd|R15|Begin~84~End~89~Txt~Light Red B19~Extra~#ff7f7f|R16|Begin~90~End~95~Txt~Split Light Red B19 / Light Green B08~Extra~#ff7f7f|R17|Begin~96~End~101~Txt~Light Green B08~Extra~#90ee90|R18|Begin~102~End~107~Txt~Split Light Green B08 / Blue B05~Extra~#90ee90|R19|Begin~108~End~113~Txt~Blue B05~Extra~#0000ff|R20|Begin~114~End~119~Txt~Split Blue B05 / Pink B11~Extra~#0000ff|R21|Begin~120~End~125~Txt~Pink B11~Extra~#ffc0cb|R22|Begin~126~End~131~Txt~Split Pink B11 / Light Blue B06~Extra~#ffc0cb|R23|Begin~132~End~137~Txt~Light Blue B06~Extra~#add8e6|R24|Begin~138~End~143~Txt~Split Light Blue B06 / Yellow B02~Extra~#add8e6|R25|Begin~144~End~149~Txt~Yellow B02~Extra~#ffff00|R26|Begin~150~End~155~Txt~Split Yellow B02 / Primary Red B14~Extra~#ffff00|R27|Begin~156~End~161~Txt~Primary Red B14~Extra~#ff0000|R28|Begin~162~End~167~Txt~Split Primary Red B14 / Green B07~Extra~#ff0000|R29|Begin~168~End~173~Txt~Green B07~Extra~#00ff00|R30|Begin~174~End~179~Txt~Mix 1|R31|Begin~180~End~185~Txt~Mix 2|R32|Begin~186~End~191~Txt~Mix 3|R33|Begin~192~End~197~Txt~Mix 4|R34|Begin~198~End~203~Txt~Mix 5|R35|Begin~204~End~229~Txt~fast CW..slow CW|R36|Begin~230~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~11~Txt~Open|R2|Begin~12~End~23~Txt~Dune|R3|Begin~24~End~35~Txt~Sunburst|R4|Begin~36~End~47~Txt~Gemini|R5|Begin~48~End~59~Txt~Mr. Spok|R6|Begin~60~End~71~Txt~Triptych|R7|Begin~72~End~83~Txt~Space lice|R8|Begin~84~End~95~Txt~Nova|R9|Begin~96~End~107~Txt~Circular saw|R10|Begin~108~End~119~Txt~Racer|R11|Begin~120~End~131~Txt~Black hole|R12|Begin~132~End~143~Txt~Bat|R13|Begin~144~End~155~Txt~Beep|R14|Begin~156~End~167~Txt~Fame|R15|Begin~168~End~179~Txt~Thatch|R16|Begin~180~End~191~Txt~Closed|R17|Begin~192~End~223~Txt~fast CW..slow CW|R18|Begin~224~End~255~Txt~slow CCW..fast CCW
+ID|Pan|Type|7|DefaultValue|127|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt|Type|8|DefaultValue|127|R1|Begin~0~End~255~Txt~0deg..72deg
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~1~Txt~No function Tracking (default)|R2|Begin~2~End~255~Txt~fast..slow
+ID|Color/Gobo Wheel Speed|Type|16|R1|Begin~0~End~1~Txt~No function Tracking (default)|R2|Begin~2~End~255~Txt~Speed 1Hz..0Hz Change speed from one color/gobo to the next one
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Effects~Intensity~Color Wheel~Gobo Wheel~Pan~Tilt
+Name|8-channel|ShortName|8ch|Content|Effects~Intensity~Color Wheel~Gobo Wheel~Pan~Tilt~Pan/Tilt Speed~Color/Gobo Wheel Speed
+[END_MODES]

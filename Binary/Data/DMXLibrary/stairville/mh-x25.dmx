@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.thomann.de/pics/prod/c_238185_en_online.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=QmIARRiHV48|LinkType3|video|Url3|https://www.youtube.com/watch?v=ecWyJqRIWAs
+[GENERAL]
+Manufacturer|Stairville|Name|MH-X25|Type|9|Authors|p_0g_8mm3_, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|240|Height|370|Depth|280|Weight|10.30|Power|102|Connector|3-pin|Bulb|4x LED (all white)
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Color|Type|12|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~9~Txt~Yellow~Extra~#ffff00|R3|Begin~10~End~14~Txt~Pink~Extra~#ff00ff|R4|Begin~15~End~19~Txt~Green~Extra~#00ff00|R5|Begin~20~End~24~Txt~Peachblow~Extra~#d7735b|R6|Begin~25~End~29~Txt~Light Blue~Extra~#add8e6|R7|Begin~30~End~34~Txt~Yellow-Green~Extra~#ccfe50|R8|Begin~35~End~39~Txt~Red~Extra~#ff0000|R9|Begin~40~End~44~Txt~Blue~Extra~#0000ff|R10|Begin~45~End~54~Txt~Open..Yellow|R11|Begin~55~End~64~Txt~Yellow..Pink|R12|Begin~65~End~73~Txt~Pink..Green|R13|Begin~74~End~83~Txt~Green..Peachblow|R14|Begin~84~End~92~Txt~Peachblow..Light Blue|R15|Begin~93~End~101~Txt~Light Blue..Yellow-Green|R16|Begin~102~End~110~Txt~Yellow-Green..Red|R17|Begin~111~End~119~Txt~Red..Blue|R18|Begin~120~End~127~Txt~Blue|R19|Begin~128~End~191~Txt~ColorFade slow..fast|R20|Begin~192~End~255~Txt~ColorFade slow reverse..fast reverse
+ID|Shutter|Type|6|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~7~Txt~Open|R3|Begin~8~End~215~Txt~Strobe slow..fast|R4|Begin~216~End~255~Txt~Open
+ID|Gobo|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 2|R3|Begin~16~End~23~Txt~Gobo 3|R4|Begin~24~End~31~Txt~Gobo 4|R5|Begin~32~End~39~Txt~Gobo 5|R6|Begin~40~End~47~Txt~Gobo 6|R7|Begin~48~End~55~Txt~Gobo 7|R8|Begin~56~End~63~Txt~Gobo 8|R9|Begin~64~End~71~Txt~Gobo 8|R10|Begin~72~End~79~Txt~Gobo 7|R11|Begin~80~End~87~Txt~Gobo 6|R12|Begin~88~End~95~Txt~Gobo 5|R13|Begin~96~End~103~Txt~Gobo 4|R14|Begin~104~End~111~Txt~Gobo 3|R15|Begin~112~End~119~Txt~Gobo 2|R16|Begin~120~End~127~Txt~Open|R17|Begin~128~End~191~Txt~slow CW..fast CW|R18|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo rotation|Type|11|R1|Begin~0~End~63~Txt~0deg..360deg|R2|Begin~64~End~147~Txt~slow CW..fast CW|R3|Begin~148~End~231~Txt~slow CCW..fast CCW|R4|Begin~232~End~255~Txt~Yo-yo effect
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Special functions|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Blackout while pan / tilt change|R3|Begin~16~End~23~Txt~No Blackout while move|R4|Begin~24~End~31~Txt~Blackout while color change|R5|Begin~32~End~39~Txt~No Blackout while color change|R6|Begin~40~End~47~Txt~Blackout while gobo change|R7|Begin~48~End~55~Txt~No Blackout while gobo change|R8|Begin~56~End~87~Txt~No function|R9|Begin~88~End~95~Txt~Blackout during movement|R10|Begin~96~End~103~Txt~Reset pan and tilt|R11|Begin~104~End~111~Txt~No function|R12|Begin~112~End~119~Txt~Reset color wheel|R13|Begin~120~End~127~Txt~Reset gobo wheel|R14|Begin~128~End~135~Txt~Reset gobo rotation|R15|Begin~136~End~151~Txt~No function|R16|Begin~152~End~159~Txt~Reset all channels|R17|Begin~160~End~255~Txt~No function
+ID|Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Program 1|R3|Begin~24~End~39~Txt~Program 2|R4|Begin~40~End~55~Txt~Program 3|R5|Begin~56~End~71~Txt~Program 4|R6|Begin~72~End~87~Txt~Program 5|R7|Begin~88~End~103~Txt~Program 6|R8|Begin~104~End~119~Txt~Program 7|R9|Begin~120~End~135~Txt~Program 8|R10|Begin~136~End~150~Txt~Sound control 1|R11|Begin~151~End~165~Txt~Sound control 2|R12|Begin~166~End~180~Txt~Sound control 3|R13|Begin~181~End~195~Txt~Sound control 4|R14|Begin~196~End~210~Txt~Sound control 5|R15|Begin~211~End~225~Txt~Sound control 6|R16|Begin~226~End~240~Txt~Sound control 7|R17|Begin~241~End~255~Txt~Sound control 8
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Pan~Tilt~Color~Shutter~Gobo~Gobo rotation
+Name|12-channel|ShortName|12ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color~Shutter~Dimmer~Gobo~Gobo rotation~Special functions~Programs
+[END_MODES]

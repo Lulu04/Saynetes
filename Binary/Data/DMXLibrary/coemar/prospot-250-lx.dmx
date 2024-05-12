@@ -1,0 +1,39 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.coemar.com/wp-content/uploads/2018/02/Prospot_250_LX_E1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=6Oa7vMm9c4Y|LinkType3|video|Url3|https://www.youtube.com/watch?v=QwHsxx6IGE8|LinkType4|video|Url4|https://www.youtube.com/watch?v=zOzbAp4v6wg
+[GENERAL]
+Manufacturer|Coemar|Name|ProSpot 250 LX|Type|9|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|350|Height|510|Depth|377|Weight|23.50|Power|460|Connector|3-pin|Bulb|Philips MSD 250W/2|Lumens|18000|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..530deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..284deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~10~Txt~fast standard|R2|Begin~11~End~25~Txt~200% for programming|R3|Begin~26~End~127~Txt~fast..slow Vector mode|R4|Begin~128~End~247~Txt~fast..slow Tracking mode|R5|Begin~248~End~255~Txt~slow Tracking mode
+ID|Dimmer|Type|2|R1|Begin~0~End~7~Txt~off|R2|Begin~8~End~255~Txt~dark..bright
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~66~Txt~Strobe 0Hz..10Hz|R3|Begin~67~End~68~Txt~Open|R4|Begin~69~End~125~Txt~RampDown slow..fast|R5|Begin~126~End~127~Txt~Open|R6|Begin~128~End~184~Txt~RampUp slow..fast|R7|Begin~185~End~187~Txt~Open|R8|Begin~188~End~244~Txt~Strobe slow..fast Random timing|R9|Begin~245~End~255~Txt~Open
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
+ID|Gobo selection|Type|10|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~30~Txt~Gobo 1|R3|Begin~31~End~50~Txt~Gobo 2|R4|Begin~51~End~70~Txt~Gobo 3|R5|Begin~71~End~90~Txt~Gobo 4|R6|Begin~91~End~110~Txt~Gobo 5|R7|Begin~111~End~127~Txt~Gobo 6|R8|Begin~128~End~192~Txt~0deg..360deg|R9|Begin~193~End~255~Txt~slow CW..fast CW
+ID|Gobo stencil rotation angle|Type|11|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~0deg..360deg
+ID|Gobo stencil rotation speed|Type|16|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~131~Txt~fast CW..slow CW|R3|Begin~132~End~134~Txt~stop|R4|Begin~135~End~255~Txt~slow CCW..fast CCW
+ID|Prism|Type|41|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Prism 3-facet|R3|Begin~21~End~136~Txt~Prism fast CW..slow CW 3-facet|R4|Begin~137~End~139~Txt~Prism stop 3-facet|R5|Begin~140~End~255~Txt~Prism slow CCW..fast CCW 3-facet
+ID|Color Wheel|Type|12|R1|Begin~0~End~4~Txt~OpenWhite|R2|Begin~5~End~9~Txt~Color 1|R3|Begin~10~End~14~Txt~ Color 2|R4|Begin~15~End~19~Txt~Color 3|R5|Begin~20~End~24~Txt~Color 4|R6|Begin~25~End~29~Txt~Color 5|R7|Begin~30~End~34~Txt~Color 6|R8|Begin~35~End~39~Txt~Color 7|R9|Begin~40~End~44~Txt~Color 8|R10|Begin~45~End~49~Txt~Color 9|R11|Begin~50~End~54~Txt~Color 10|R12|Begin~55~End~59~Txt~Color 11|R13|Begin~60~End~127~Txt~From white to Color 11, 0..360|R14|Begin~128~End~190~Txt~CW Forward rainbow effect Fast..Slow|R15|Begin~191~End~192~Txt~stop|R16|Begin~193~End~255~Txt~CCW Backward rainbow effect Slow..Fast
+ID|Gobo shake / Blackout effect|Type|46|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~249~Txt~slow..fast|R3|Begin~250~End~255~Txt~Blackout during movements
+ID|Gobo shake amplitude|Type|0|R1|Begin~0~End~23~Txt~100%|R2|Begin~24~End~47~Txt~91%|R3|Begin~48~End~71~Txt~82%|R4|Begin~72~End~95~Txt~73%|R5|Begin~96~End~119~Txt~64%|R6|Begin~120~End~143~Txt~55%|R7|Begin~144~End~167~Txt~45%|R8|Begin~168~End~191~Txt~36%|R9|Begin~192~End~215~Txt~27%|R10|Begin~216~End~239~Txt~18%|R11|Begin~240~End~255~Txt~9%
+ID|Lamp on / Motor reset|Type|0|DefaultValue|255|R1|Begin~0~End~19~Txt~6s Lamp off|R2|Begin~20~End~100~Txt~6s No effects (idle)|R3|Begin~101~End~170~Txt~6s Effects reset (once), no Pan / Tilt movement|R4|Begin~171~End~200~Txt~6s All motor reset (once)|R5|Begin~201~End~240~Txt~6s Silent fans (if external temperature allows it)|R6|Begin~241~End~255~Txt~6s Lamp on
+ID|Pan/Tilt Speed (Emulation mode)|Type|9|R1|Begin~0~End~0~Txt~fast|R2|Begin~1~End~249~Txt~fast..slow|R3|Begin~250~End~255~Txt~fast Blackout during movements
+ID|Lamp on / Fan speed|Type|0|R1|Begin~0~End~127~Txt~fast..slow Fan speed|R2|Begin~128~End~139~Txt~Lamp on, reset|R3|Begin~140~End~229~Txt~No function|R4|Begin~230~End~239~Txt~3s Lamp off|R5|Begin~240~End~255~Txt~No function
+ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Effect wheel|Type|0|R1|Begin~0~End~95~Txt~No function Open / hole|R2|Begin~96~End~159~Txt~Prism 3-facet rotating|R3|Begin~160~End~167~Txt~Prism / Gobo macro 1|R4|Begin~168~End~175~Txt~Prism / Gobo macro 2|R5|Begin~176~End~183~Txt~Prism / Gobo macro 3|R6|Begin~184~End~191~Txt~Prism / Gobo macro 4|R7|Begin~192~End~199~Txt~Prism / Gobo macro 5|R8|Begin~200~End~207~Txt~Prism / Gobo macro 6|R9|Begin~208~End~215~Txt~Prism / Gobo macro 7|R10|Begin~216~End~223~Txt~Prism / Gobo macro 8|R11|Begin~224~End~231~Txt~Prism / Gobo macro 9|R12|Begin~232~End~239~Txt~Prism / Gobo macro 10|R13|Begin~240~End~247~Txt~Prism / Gobo macro 11|R14|Begin~248~End~255~Txt~Prism / Gobo macro 12
+ID|3 facet prism rotation|Type|42|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~126~Txt~Prism rotation fast CW..slow CW|R3|Begin~127~End~128~Txt~Prism rotation stop|R4|Begin~129~End~255~Txt~Prism rotation slow CCW..fast CCW
+ID|Gobo selection (Emulation mode)|Type|10|R1|Begin~0~End~31~Txt~Open|R2|Begin~32~End~63~Txt~Gobo 1|R3|Begin~64~End~95~Txt~Gobo 2|R4|Begin~96~End~127~Txt~Gobo 3|R5|Begin~128~End~159~Txt~Gobo 4|R6|Begin~160~End~191~Txt~Gobo 5|R7|Begin~192~End~223~Txt~Gobo 6|R8|Begin~224~End~255~Txt~slow CW..fast CW
+ID|Gobo stencil rotation|Type|0|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~190~Txt~fast CW..slow CW|R3|Begin~191~End~192~Txt~stop|R4|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe (Emulation mode)|Type|6|DefaultValue|255|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe 0Hz..10Hz|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer (Emulation mode)|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|strd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter / Strobe~Focus~Gobo selection~Gobo stencil rotation angle~Gobo stencil rotation speed~Prism~Color Wheel~Gobo shake / Blackout effect~Gobo shake amplitude~Lamp on / Motor reset
+Name|ProSpot emulation|ShortName|emul|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed (Emulation mode)~Lamp on / Fan speed~Color Wheel~NotUsed~Effect wheel~3 facet prism rotation~Gobo selection (Emulation mode)~Gobo stencil rotation~NotUsed~Focus~Shutter / Strobe (Emulation mode)~Dimmer (Emulation mode)
+[END_MODES]

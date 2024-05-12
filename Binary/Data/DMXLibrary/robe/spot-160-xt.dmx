@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.aesono.fr/manuel/Robe-Spot-160XT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=rchX19BOlV0|LinkType3|other|Url3|https://spares.robe.cz/category/spot_160_xt
+[GENERAL]
+Manufacturer|Robe|Name|Spot 160 XT|Type|9|Authors|Ringo333|Creator|OFL
+[PHYSICAL]
+Width|292|Height|415|Depth|378|Weight|10.50|Power|300|Connector|3-pin|Bulb|Philips CDM-SA/T150W/942|Lumens|14000|LensMinDegree|19.000|LensMaxDegree|19.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..530deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..280deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~0~Txt~fast|R2|Begin~1~End~249~Txt~fast..fast|R3|Begin~250~End~252~Txt~fast Blackout on color/gobo change|R4|Begin~253~End~255~Txt~fast Blackout on pan/tilt/color/gobo change
+ID|Color Wheel|Type|12|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~9~Txt~Open..Turquoise|R3|Begin~10~End~10~Txt~Turquoise~Extra~#00ffaa|R4|Begin~11~End~20~Txt~Turquoise..Red|R5|Begin~21~End~21~Txt~Red~Extra~#ff0000|R6|Begin~22~End~31~Txt~Red..Cyan|R7|Begin~32~End~32~Txt~Cyan~Extra~#00ffff|R8|Begin~33~End~41~Txt~Cyan..Light green|R9|Begin~42~End~42~Txt~Light green~Extra~#aaffaa|R10|Begin~43~End~52~Txt~Light green..Magenta|R11|Begin~53~End~53~Txt~Magenta~Extra~#ff00ff|R12|Begin~54~End~63~Txt~Magenta..Light blue|R13|Begin~64~End~64~Txt~Light blue~Extra~#00ccff|R14|Begin~65~End~73~Txt~Light blue..Yellow|R15|Begin~74~End~74~Txt~Yellow~Extra~#ffff00|R16|Begin~75~End~84~Txt~Yellow..Green|R17|Begin~85~End~85~Txt~Green~Extra~#00ff00|R18|Begin~86~End~95~Txt~Green..Pink|R19|Begin~96~End~96~Txt~Pink~Extra~#ffaacc|R20|Begin~97~End~105~Txt~Pink..Blue|R21|Begin~106~End~106~Txt~Blue~Extra~#0000ff|R22|Begin~107~End~116~Txt~Blue..Orange|R23|Begin~117~End~117~Txt~Orange~Extra~#ffaa00|R24|Begin~118~End~127~Txt~Orange|R25|Begin~128~End~189~Txt~fast CW..slow CW|R26|Begin~190~End~193~Txt~stop|R27|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~11~Txt~Open|R2|Begin~12~End~23~Txt~Gobo 1|R3|Begin~24~End~35~Txt~Gobo 2|R4|Begin~36~End~47~Txt~Gobo 3|R5|Begin~48~End~59~Txt~Gobo 4|R6|Begin~60~End~71~Txt~Gobo 5|R7|Begin~72~End~83~Txt~Gobo 6|R8|Begin~84~End~95~Txt~Gobo 7|R9|Begin~96~End~115~Txt~Gobo 1 slow..fast|R10|Begin~116~End~135~Txt~Gobo 2 slow..fast|R11|Begin~136~End~155~Txt~Gobo 3 slow..fast|R12|Begin~156~End~175~Txt~Gobo 4 slow..fast|R13|Begin~176~End~195~Txt~Gobo 5 slow..fast|R14|Begin~196~End~215~Txt~Gobo 6 slow..fast|R15|Begin~216~End~235~Txt~Gobo 7 slow..fast|R16|Begin~236~End~255~Txt~slow CW..fast CW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~189~Txt~fast CW..slow CW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Dimmer / Shutter / Reset|Type|0|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~63~Txt~0..100%|R3|Begin~64~End~95~Txt~Open|R4|Begin~96~End~127~Txt~Strobe 1Hz..10Hz|R5|Begin~128~End~139~Txt~Reset, shutter closed|R6|Begin~140~End~159~Txt~Closed|R7|Begin~160~End~175~Txt~Pulse slow..fast|R8|Begin~176~End~191~Txt~Pulse fast..slow|R9|Begin~192~End~223~Txt~Pulse slow..fast|R10|Begin~224~End~255~Txt~Open
+[END_CHAN_DEF]
+[MODES]
+Name|1st|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|2nd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|3rd|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|4th|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+[END_MODES]

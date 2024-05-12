@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/752487/Qtx-Lux-Ld01.html|LinkType2|video|Url2|https://www.youtube.com/watch?v=EKwxFZwRC3M
+[GENERAL]
+Manufacturer|QTX|Name|Lux Ld01|Type|9|Authors|Thomaxz, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|173|Height|249|Depth|173|Weight|3.80|Power|84|Connector|3-pin|Bulb|14W RGB LED|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer / Strobe|Type|2|DefaultValue|255|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~134~Txt~100%..0%|R3|Begin~135~End~239~Txt~Strobe slow..fast|R4|Begin~240~End~255~Txt~Open
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~21~Txt~White~Extra~#ffffff|R3|Begin~22~End~34~Txt~Red~Extra~#ff0000|R4|Begin~35~End~49~Txt~Green~Extra~#00ff00|R5|Begin~50~End~63~Txt~Blue~Extra~#0000ff|R6|Begin~64~End~77~Txt~Cyan~Extra~#00ffff|R7|Begin~78~End~91~Txt~Magenta~Extra~#ff00ff|R8|Begin~92~End~105~Txt~Yellow~Extra~#ffff00|R9|Begin~106~End~119~Txt~Purple~Extra~#cc00ff|R10|Begin~120~End~133~Txt~Orange~Extra~#ffaa00|R11|Begin~134~End~147~Txt~Chartreuse~Extra~#7fff00|R12|Begin~148~End~161~Txt~Pink~Extra~#ff66cc|R13|Begin~162~End~175~Txt~Brown~Extra~#aa6600|R14|Begin~176~End~189~Txt~Gold~Extra~#ffcc00|R15|Begin~190~End~203~Txt~Crimson~Extra~#dc143c|R16|Begin~204~End~217~Txt~Violet~Extra~#6600ff|R17|Begin~218~End~231~Txt~Crape~Extra~#ff66aa|R18|Begin~232~End~255~Txt~ColorJump
+ID|Vector Speed (Color)|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Movement Macros|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~22~Txt~Auto Program 1|R3|Begin~23~End~37~Txt~Auto Program 2|R4|Begin~38~End~52~Txt~Auto Program 3|R5|Begin~53~End~67~Txt~Auto Program 4|R6|Begin~68~End~82~Txt~Auto Program 5|R7|Begin~83~End~97~Txt~Auto Program 6|R8|Begin~98~End~112~Txt~Auto Program 7|R9|Begin~113~End~127~Txt~Auto Program 8|R10|Begin~128~End~142~Txt~Sound-active Program 1|R11|Begin~143~End~157~Txt~Sound-active Program 2|R12|Begin~158~End~172~Txt~Sound-active Program 3|R13|Begin~173~End~187~Txt~Sound-active Program 4|R14|Begin~188~End~202~Txt~Sound-active Program 5|R15|Begin~203~End~217~Txt~Sound-active Program 6|R16|Begin~218~End~232~Txt~Sound-active Program 7|R17|Begin~233~End~255~Txt~Sound-active Program 8
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Flower|R3|Begin~16~End~23~Txt~Light Swirl|R4|Begin~24~End~31~Txt~Triangle Circle|R5|Begin~32~End~39~Txt~Small Hearts|R6|Begin~40~End~47~Txt~Small lights|R7|Begin~48~End~55~Txt~Star like|R8|Begin~56~End~63~Txt~Big swirl|R9|Begin~64~End~71~Txt~Lines in quads|R10|Begin~72~End~79~Txt~Flowers|R11|Begin~80~End~94~Txt~Flower|R12|Begin~95~End~109~Txt~Light Swirl|R13|Begin~110~End~124~Txt~Triangle Circle|R14|Begin~125~End~139~Txt~Small Hearts|R15|Begin~140~End~154~Txt~Small lights|R16|Begin~155~End~169~Txt~Star like|R17|Begin~170~End~184~Txt~Big swirl|R18|Begin~185~End~199~Txt~Lines in quads|R19|Begin~200~End~214~Txt~Flowers|R20|Begin~215~End~235~Txt~slow CW..fast CW|R21|Begin~236~End~255~Txt~slow CCW..fast CCW
+[END_CHAN_DEF]
+[MODES]
+Name|13-Channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer / Strobe~Red~Green~Blue~Color Macros~Vector Speed (Color)~Movement Macros~Gobo Wheel
+Name|12-Channel for Wash|ShortName|12ch-wash|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer / Strobe~Red~Green~Blue~Color Macros~Vector Speed (Color)~Movement Macros
+Name|5-Channel for Spot|ShortName|5ch-spot|Content|Pan~Tilt~Dimmer / Strobe~Color Macros~Gobo Wheel
+Name|4-Channel for Wash|ShortName|4ch-wash|Content|Pan~Tilt~Dimmer / Strobe~Color Macros
+[END_MODES]

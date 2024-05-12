@@ -1,0 +1,38 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/UM_MACViperWash_EN_B.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=K5KV7ngATCU
+[GENERAL]
+Manufacturer|Martin|Name|MAC Viper Wash (DX)|Type|9|Authors|novasfronteiras.co|Creator|OFL
+[PHYSICAL]
+Width|473|Height|749|Depth|566|Weight|33.00|Power|1225|Connector|5-pin|Bulb|1000 W short-arc discharge|Lumens|33000|LensMinDegree|13.500|LensMaxDegree|59.000
+[CHAN_DEF]
+ID|Strobe / Shutter|Type|6|R1|Begin~0~End~19~Txt~Closed Lamp switches to 800 watt mode after shutter is closed for 10 seconds|R2|Begin~20~End~49~Txt~Open|R3|Begin~50~End~200~Txt~Strobe slow..fast|R4|Begin~201~End~210~Txt~Open|R5|Begin~211~End~255~Txt~Strobe slow..fast Random timing
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|CTO|Type|27|R1|Begin~0~End~255~Txt~6000K..3200K
+ID|Color Wheel|Type|12|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~14~Txt~Open..Color|R3|Begin~15~End~15~Txt~Color|R4|Begin~16~End~29~Txt~Color..Color|R5|Begin~30~End~30~Txt~Color|R6|Begin~31~End~44~Txt~Color..Color|R7|Begin~45~End~45~Txt~Color|R8|Begin~46~End~59~Txt~Color..Color|R9|Begin~60~End~60~Txt~Color|R10|Begin~61~End~74~Txt~Color..Color|R11|Begin~75~End~75~Txt~Color|R12|Begin~76~End~89~Txt~Color..Color|R13|Begin~90~End~90~Txt~Color|R14|Begin~91~End~104~Txt~Color..Color|R15|Begin~105~End~105~Txt~Color|R16|Begin~106~End~119~Txt~Color|R17|Begin~120~End~120~Txt~Open|R18|Begin~121~End~125~Txt~Color|R19|Begin~126~End~130~Txt~Color|R20|Begin~131~End~135~Txt~Color|R21|Begin~136~End~140~Txt~Color|R22|Begin~141~End~145~Txt~Color|R23|Begin~146~End~150~Txt~Color|R24|Begin~151~End~155~Txt~Color|R25|Begin~156~End~160~Txt~Open|R26|Begin~161~End~200~Txt~fast CW..slow CW|R27|Begin~201~End~203~Txt~stop|R28|Begin~204~End~243~Txt~slow CCW..fast CCW|R29|Begin~244~End~247~Txt~Random color fast|R30|Begin~248~End~251~Txt~Random color 50%|R31|Begin~252~End~255~Txt~Random color slow
+ID|Iris|Type|25|R1|Begin~0~End~255~Txt~Iris open open..closed
+ID|Internal barndoor 1|Type|26|R1|Begin~0~End~255~Txt~Blade insertion 1 out..in
+ID|Internal barndoor 2|Type|26|R1|Begin~0~End~255~Txt~Blade insertion 2 out..in
+ID|Internal barndoors rotation|Type|0|DefaultValue|100|R1|Begin~0~End~9~Txt~Blade system rotation -10deg..-1deg|R2|Begin~10~End~10~Txt~Blade system rotation 0deg|R3|Begin~11~End~99~Txt~Blade system rotation 1deg..89deg|R4|Begin~100~End~100~Txt~Blade system rotation 90deg|R5|Begin~101~End~189~Txt~Blade system rotation 91deg..179deg|R6|Begin~190~End~190~Txt~Blade system rotation 180deg|R7|Begin~191~End~200~Txt~Blade system rotation 181deg..190deg|R8|Begin~201~End~255~Txt~No function
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..268deg
+ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Fixture control / settings|Type|0|R1|Begin~0~End~9~Txt~5s No function (disables calibration)|R2|Begin~10~End~14~Txt~5s Reset entire fixture|R3|Begin~15~End~19~Txt~5s Reset dimmer and shutter only|R4|Begin~20~End~24~Txt~5s Reset color (CMY and CTO plus color wheel if fitted) only|R5|Begin~25~End~29~Txt~5s Reset beam (zoom, focus plus iris if fitted) only|R6|Begin~30~End~34~Txt~5s Reset pan and tilt only|R7|Begin~35~End~39~Txt~No function|R8|Begin~40~End~44~Txt~Lamp on|R9|Begin~45~End~49~Txt~5s Lamp off|R10|Begin~50~End~54~Txt~No function|R11|Begin~55~End~59~Txt~5s Enable calibration|R12|Begin~60~End~64~Txt~1s Linear dimming curve (menu override, setting unaffected by power off/on)|R13|Begin~65~End~69~Txt~1s Square law dimming curve (menu override, factory default setting, setting unaffected by power off/on)|R14|Begin~70~End~74~Txt~1s Inverse square law dimming curve (menu override, setting unaffected by power off/on)|R15|Begin~75~End~79~Txt~1s S-curve dimming curve (menu override, setting unaffected by power off/on)|R16|Begin~80~End~84~Txt~1s Normal pan and tilt speed (menu override - setting returns to MENU setting after power on/off)|R17|Begin~85~End~89~Txt~1s Fast pan and tilt speed (default setting, menu override - setting returns to MENU setting after power on/off)|R18|Begin~90~End~94~Txt~1s Slow pan and tilt speed (menu override - setting returns to MENU setting after power on/off)|R19|Begin~95~End~99~Txt~1s Effect shortcuts = ON (default setting, menu override, setting stays at factory default ON at power off/on)|R20|Begin~100~End~104~Txt~1s Effect shortcuts = OFF (menu override, setting returns to factory default ON at power off/on)|R21|Begin~105~End~109~Txt~1s Disable zoom/focus linkin|R22|Begin~110~End~114~Txt~1s Enable zoom/focus linking, near distance|R23|Begin~115~End~119~Txt~1s Enable zoom/focus linking, medium distance (default setting)|R24|Begin~120~End~124~Txt~1s Enable zoom/focus linking, far distance|R25|Begin~125~End~126~Txt~Ballast output full, set to 100% (default setting)|R26|Begin~127~End~128~Txt~Ballast output reduced to 90%|R27|Begin~129~End~130~Txt~Ballast output reduced to 80%|R28|Begin~131~End~132~Txt~Ballast output reduced to 70%|R29|Begin~133~End~134~Txt~Ballast output reduced to 60%|R30|Begin~135~End~139~Txt~1s Auto blackout = ON|R31|Begin~140~End~144~Txt~1s Auto blackout = OFF (default setting)|R32|Begin~145~End~149~Txt~No function|R33|Begin~150~End~154~Txt~Turn on control panel display|R34|Begin~155~End~159~Txt~1s Turn off control panel display|R35|Begin~160~End~164~Txt~No function|R36|Begin~165~End~169~Txt~5s Store pan and tilt calibration|R37|Begin~170~End~174~Txt~5s Store dimmer calibration|R38|Begin~175~End~179~Txt~5s Store cyan calibration|R39|Begin~180~End~184~Txt~5s Store magenta calibration|R40|Begin~185~End~189~Txt~5s Store yellow calibration|R41|Begin~190~End~194~Txt~5s Store CTC calibration|R42|Begin~195~End~199~Txt~5s Store all CMY and CTC calibration|R43|Begin~200~End~214~Txt~No function|R44|Begin~215~End~219~Txt~5s Store internal barndoors calibration|R45|Begin~220~End~224~Txt~5s Store iris calibration|R46|Begin~225~End~229~Txt~5s Store focus calibration|R47|Begin~230~End~234~Txt~5s Store zoom calibration|R48|Begin~235~End~239~Txt~5s Store pan calibration|R49|Begin~240~End~244~Txt~5s Store tilt calibration|R50|Begin~245~End~249~Txt~5s Reset all calibration values to factory defaults|R51|Begin~250~End~255~Txt~No function
+ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Reserved for future use 1|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Reserved for future use 2|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Reserved for future use 3|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Reserved for future use 4|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Reserved for future use 5|Type|17|R1|Begin~0~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|Basic|ShortName|basic|Content|Strobe / Shutter~Dimmer~Cyan~Magenta~Yellow~CTO~Color Wheel~Iris~Internal barndoor 1~Internal barndoor 2~Internal barndoors rotation~Zoom~Focus~Pan~Pan fine~Tilt~Tilt fine~Fixture control / settings
+Name|Extended|ShortName|ext|Content|Strobe / Shutter~Dimmer~Dimmer fine~Cyan~Magenta~Yellow~CTO~Color Wheel~Iris~Internal barndoor 1~Internal barndoor 2~Internal barndoors rotation~Zoom~Focus~Pan~Pan fine~Tilt~Tilt fine~Fixture control / settings~Reserved for future use 1~Reserved for future use 2~Reserved for future use 3~Reserved for future use 4~Reserved for future use 5
+[END_MODES]

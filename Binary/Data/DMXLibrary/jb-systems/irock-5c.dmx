@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/1117275/Jb-Systems-Irock-5c.html|LinkType2|video|Url2|https://www.youtube.com/watch?v=1kusKMALR0w
+[GENERAL]
+Manufacturer|JB Systems|Name|iRock 5C|Type|0|Authors|Andres Robles, Duende AV, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|340|Height|360|Depth|250|Weight|9.20|Power|300|Connector|3-pin|Bulb|HSD 250W|Lumens|8600|Lens|PC|LensMinDegree|17.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Shutter/Shaking|Type|0|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~247~Txt~slow..fast|R5|Begin~248~End~255~Txt~Open
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Gobo 1~Extra~10 circles|R3|Begin~32~End~47~Txt~Shattered|R4|Begin~48~End~63~Txt~Frost|R5|Begin~64~End~79~Txt~3D Donut|R6|Begin~80~End~95~Txt~Gobo 5~Extra~Raindrops on window|R7|Begin~96~End~111~Txt~Color~Extra~#ffad32|R8|Begin~112~End~127~Txt~Color~Extra~#ffd6a1|R9|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Dark Green~Extra~#005500|R3|Begin~16~End~22~Txt~Dark Green..Dark Magenta|R4|Begin~23~End~30~Txt~Dark Magenta~Extra~#7f005f|R5|Begin~31~End~37~Txt~Dark Magenta..Light Blue|R6|Begin~38~End~45~Txt~Light Blue~Extra~#00aaff|R7|Begin~46~End~52~Txt~Light Blue..Yellow|R8|Begin~53~End~60~Txt~Yellow~Extra~#ffff00|R9|Begin~61~End~67~Txt~Yellow..Orange|R10|Begin~68~End~75~Txt~Orange~Extra~#ff9100|R11|Begin~76~End~82~Txt~Orange..Dark Blue|R12|Begin~83~End~90~Txt~Dark Blue~Extra~#00007f|R13|Begin~91~End~97~Txt~Dark Blue..Purple|R14|Begin~98~End~105~Txt~Purple~Extra~#aa55ff|R15|Begin~106~End~112~Txt~Purple..Light Green|R16|Begin~113~End~120~Txt~Light Green~Extra~#aaff7f|R17|Begin~121~End~127~Txt~Light Magenta~Extra~#fd78e7|R18|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~9~Txt~stop|R2|Begin~10~End~120~Txt~fast CCW..slow CCW|R3|Begin~121~End~134~Txt~stop|R4|Begin~135~End~245~Txt~slow CW..fast CW|R5|Begin~246~End~255~Txt~stop
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~bright..off
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Shutter/Shaking~Gobo Wheel~Color Wheel~Gobo Rotation~Dimmer
+[END_MODES]

@@ -1,0 +1,34 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://flash-butrym.pl/en_US/p/file/e1559f5a07f45db28b9ecaea49bc8fdd/7100506-LED-MOVING-HEAD-150W-2-31-AUTO-FOCUS%2C-ROTO-PRISM.pdf|LinkType2|product page|Url2|https://flash-butrym.pl/en_US/p/4x-LED-MOVING-HEAD-150W-2-31-ROTO-PRISM-SET/559|LinkType3|video|Url3|https://www.youtube.com/watch?v=LHWkp4Wu2io
+[GENERAL]
+Manufacturer|Flash Professional|Name|LED Moving Head 150W|Type|9|Authors|Flo Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|250|Height|452|Depth|256|Weight|12.00|Power|189|Connector|3-pin|Bulb|1× 150W white LED|LensMinDegree|2.000|LensMaxDegree|28.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Show Mode|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~63~Txt~Show 1|R3|Begin~64~End~127~Txt~Show 2|R4|Begin~128~End~191~Txt~Show 3|R5|Begin~192~End~255~Txt~Show 4
+ID|Pan/Tilt Macro|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Macro 1|R3|Begin~16~End~23~Txt~Macro 2|R4|Begin~24~End~31~Txt~Macro 3|R5|Begin~32~End~39~Txt~Macro 4|R6|Begin~40~End~47~Txt~Macro 5|R7|Begin~48~End~55~Txt~Macro 6|R8|Begin~56~End~63~Txt~Macro 7|R9|Begin~64~End~71~Txt~Macro 8|R10|Begin~72~End~79~Txt~Macro 9|R11|Begin~80~End~87~Txt~Macro 10|R12|Begin~88~End~95~Txt~Macro 11|R13|Begin~96~End~103~Txt~Macro 12|R14|Begin~104~End~111~Txt~Macro 13|R15|Begin~112~End~119~Txt~Macro 14|R16|Begin~120~End~127~Txt~Macro 15|R17|Begin~128~End~135~Txt~Macro 16|R18|Begin~136~End~143~Txt~Macro 17|R19|Begin~144~End~151~Txt~Macro 18|R20|Begin~152~End~159~Txt~Macro 19|R21|Begin~160~End~167~Txt~Macro 20|R22|Begin~168~End~175~Txt~Macro 21|R23|Begin~176~End~183~Txt~Macro 22|R24|Begin~184~End~191~Txt~Macro 23|R25|Begin~192~End~199~Txt~Macro 24|R26|Begin~200~End~207~Txt~Macro 25|R27|Begin~208~End~215~Txt~Macro 26|R28|Begin~216~End~223~Txt~Macro 27|R29|Begin~224~End~231~Txt~Macro 28|R30|Begin~232~End~239~Txt~Macro 29|R31|Begin~240~End~247~Txt~Macro 30|R32|Begin~248~End~255~Txt~Macro 31
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Wheel|Type|12|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~18~Txt~Open..Red|R3|Begin~19~End~21~Txt~Red~Extra~#ff0000|R4|Begin~22~End~24~Txt~Red..Orange|R5|Begin~25~End~27~Txt~Orange~Extra~#ffaa00|R6|Begin~28~End~30~Txt~Orange..Yellow|R7|Begin~31~End~33~Txt~Yellow~Extra~#ffff00|R8|Begin~34~End~36~Txt~Yellow..Green|R9|Begin~37~End~39~Txt~Green~Extra~#00ff00|R10|Begin~40~End~42~Txt~Green..Blue|R11|Begin~43~End~45~Txt~Blue~Extra~#0000ff|R12|Begin~46~End~48~Txt~Blue..Magenta|R13|Begin~49~End~51~Txt~Magenta~Extra~#ff00cc|R14|Begin~52~End~54~Txt~Magenta..Turquoise|R15|Begin~55~End~57~Txt~Turquoise~Extra~#00ffcc|R16|Begin~58~End~60~Txt~Turquoise..Pink|R17|Begin~61~End~63~Txt~Pink~Extra~#ffaaff|R18|Begin~64~End~127~Txt~0deg..360deg|R19|Begin~128~End~189~Txt~fast CCW..slow CCW|R20|Begin~190~End~193~Txt~stop|R21|Begin~194~End~255~Txt~slow CW..fast CW
+ID|Static Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~16~Txt~10%|R3|Begin~17~End~25~Txt~25%|R4|Begin~26~End~34~Txt~40%|R5|Begin~35~End~43~Txt~50%|R6|Begin~44~End~52~Txt~75%|R7|Begin~53~End~61~Txt~Biohazard|R8|Begin~62~End~67~Txt~Fuzzy rays|R9|Begin~68~End~72~Txt~10% slow..fast|R10|Begin~73~End~81~Txt~25% slow..fast|R11|Begin~82~End~90~Txt~40% slow..fast|R12|Begin~91~End~99~Txt~50% slow..fast|R13|Begin~100~End~108~Txt~75% slow..fast|R14|Begin~109~End~117~Txt~Biohazard slow..fast|R15|Begin~118~End~127~Txt~Fuzzy rays slow..fast|R16|Begin~128~End~189~Txt~fast CCW..slow CCW|R17|Begin~190~End~193~Txt~stop|R18|Begin~194~End~255~Txt~slow CW..fast CW
+ID|Rotating Gobo Wheel|Type|10|R1|Begin~0~End~8~Txt~Open|R2|Begin~9~End~17~Txt~Bar|R3|Begin~18~End~26~Txt~Striped shutter|R4|Begin~27~End~35~Txt~Life|R5|Begin~36~End~44~Txt~Flower|R6|Begin~45~End~53~Txt~Arrows|R7|Begin~54~End~63~Txt~Stars|R8|Begin~64~End~73~Txt~Bar slow..fast|R9|Begin~74~End~83~Txt~Striped shutter slow..fast|R10|Begin~84~End~93~Txt~Life slow..fast|R11|Begin~94~End~103~Txt~Flower slow..fast|R12|Begin~104~End~113~Txt~Arrows slow..fast|R13|Begin~114~End~127~Txt~Stars slow..fast|R14|Begin~128~End~189~Txt~fast CCW..slow CCW|R15|Begin~190~End~193~Txt~stop|R16|Begin~194~End~255~Txt~slow CW..fast CW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~189~Txt~fast CW..slow CW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CCW..fast CCW
+ID|Angle / Frost|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~128~Txt~Zoom 20deg|R3|Begin~129~End~255~Txt~Frost high
+ID|Prism|Type|41|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Prism 3-facet
+ID|Prism Rotation|Type|42|R1|Begin~0~End~127~Txt~Prism rotation 0deg..360deg|R2|Begin~128~End~189~Txt~Prism rotation fast CCW..slow CCW|R3|Begin~190~End~193~Txt~Prism rotation stop|R4|Begin~194~End~255~Txt~Prism rotation slow CW..fast CW
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Shutter|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Special Function|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Enable blackout during Pan/Tilt movement|R3|Begin~80~End~89~Txt~Disable blackout during Pan/Tilt movement|R4|Begin~90~End~99~Txt~Enable blackout during Color change|R5|Begin~100~End~109~Txt~Disable blackout during Color change|R6|Begin~110~End~119~Txt~Enable blackout during Gobo change|R7|Begin~120~End~129~Txt~Disable blackout during Gobo change|R8|Begin~130~End~139~Txt~No function|R9|Begin~140~End~149~Txt~Pan/Tilt reset|R10|Begin~150~End~159~Txt~Effect reset|R11|Begin~160~End~199~Txt~No function|R12|Begin~200~End~209~Txt~All reset|R13|Begin~210~End~219~Txt~Enable blackout during Pan/Tilt movement / Color/Gobo change|R14|Begin~220~End~229~Txt~Disable blackout during Pan/Tilt movement / Color/Gobo change|R15|Begin~230~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|17-channel|ShortName|17ch|Content|Pan~Tilt~Pan/Tilt Speed~Show Mode~Pan/Tilt Macro~Macro Speed~Color Wheel~Static Gobo Wheel~Rotating Gobo Wheel~Gobo Rotation~Angle / Frost~Prism~Prism Rotation~Focus~Shutter~Dimmer~Special Function
+Name|20-channel|ShortName|20ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Show Mode~Pan/Tilt Macro~Macro Speed~Color Wheel~Static Gobo Wheel~Rotating Gobo Wheel~Gobo Rotation~Angle / Frost~Prism~Prism Rotation~Focus~Shutter~Dimmer~Dimmer fine~Special Function
+[END_MODES]

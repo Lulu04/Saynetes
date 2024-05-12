@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/250558_c_250558_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_mhx50_led_spot_moving_head.htm|LinkType3|video|Url3|https://video2.thomann.de//vidiot/02591c1c/video_i2514p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|MH-X50+|Type|9|Authors|Hannes Rüger|Creator|OFL
+[PHYSICAL]
+Width|240|Height|370|Depth|280|Weight|10.30|Power|135|Connector|3-pin|Bulb|50W LED|Lumens|940|LensMinDegree|14.000|LensMaxDegree|14.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Color Wheel|Type|12|R1|Begin~0~End~6~Txt~White~Extra~#ffffff|R2|Begin~7~End~13~Txt~Yellow~Extra~#ffff00|R3|Begin~14~End~20~Txt~Pink~Extra~#ff00ff|R4|Begin~21~End~27~Txt~Green~Extra~#00ff00|R5|Begin~28~End~34~Txt~Peachblow~Extra~#d7735b|R6|Begin~35~End~41~Txt~Blue~Extra~#00aeff|R7|Begin~42~End~48~Txt~Kelly-Green~Extra~#4cbb17|R8|Begin~49~End~55~Txt~Dark Orange~Extra~#ffb300|R9|Begin~56~End~63~Txt~Dark blue~Extra~#1e00ff|R10|Begin~64~End~70~Txt~Split White / Yellow~Extra~#ffffff|R11|Begin~71~End~77~Txt~Split Yellow / Pink~Extra~#ffff00|R12|Begin~78~End~84~Txt~Split Pink / Green~Extra~#ff00ff|R13|Begin~85~End~91~Txt~Split Green / Peachblow~Extra~#00ff00|R14|Begin~92~End~98~Txt~Split Peachblow / Blue~Extra~#d7735b|R15|Begin~99~End~105~Txt~Split Blue / Kelly-Green~Extra~#00aeff|R16|Begin~106~End~112~Txt~Split Kelly-Green / Dark Orange~Extra~#4cbb17|R17|Begin~113~End~119~Txt~Split Dark Orange / Dark blue~Extra~#ffb300|R18|Begin~120~End~127~Txt~Split Dark blue~Extra~#1e00ff|R19|Begin~128~End~191~Txt~slow CW..fast CW|R20|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Shutter|Type|6|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~7~Txt~Open|R3|Begin~8~End~215~Txt~Strobe 0Hz..13Hz|R4|Begin~216~End~255~Txt~Open
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 1~Extra~10 circles|R3|Begin~16~End~23~Txt~Gobo 2~Extra~Raindrops on window|R4|Begin~24~End~31~Txt~Gobo 3~Extra~Swirl|R5|Begin~32~End~39~Txt~Gobo 4~Extra~Biohazard|R6|Begin~40~End~47~Txt~Gobo 5~Extra~Rose petal|R7|Begin~48~End~55~Txt~Gobo 6~Extra~Triangle/hexagon pattern|R8|Begin~56~End~63~Txt~Gobo 7~Extra~Dot spiral|R9|Begin~64~End~71~Txt~Gobo 7 slow..fast~Extra~Dot spiral|R10|Begin~72~End~79~Txt~Gobo 6 slow..fast~Extra~Triangle/hexagon pattern|R11|Begin~80~End~87~Txt~Gobo 5 slow..fast~Extra~Rose petal|R12|Begin~88~End~95~Txt~Gobo 4 slow..fast~Extra~Biohazard|R13|Begin~96~End~103~Txt~Gobo 3 slow..fast~Extra~Swirl|R14|Begin~104~End~111~Txt~Gobo 2 slow..fast~Extra~Raindrops on window|R15|Begin~112~End~119~Txt~Gobo 1 slow..fast~Extra~10 circles|R16|Begin~120~End~127~Txt~Open|R17|Begin~128~End~191~Txt~slow CW..fast CW|R18|Begin~192~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Rotation|Type|11|R1|Begin~0~End~63~Txt~stop|R2|Begin~64~End~147~Txt~slow CW..fast CW|R3|Begin~148~End~231~Txt~slow CCW..fast CCW|R4|Begin~232~End~255~Txt~Shake range
+ID|Prism|Type|41|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~247~Txt~Prism slow CW..fast CW|R3|Begin~248~End~255~Txt~Prism stop
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus far..near
+ID|Speed|Type|16|R1|Begin~0~End~255~Txt~Speed fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Special Functions|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Blackout while Pan and Tilt|R3|Begin~16~End~23~Txt~No blackout while Pan and Tilt|R4|Begin~24~End~31~Txt~Blackout while changing color|R5|Begin~32~End~39~Txt~No blackout while changing color|R6|Begin~40~End~47~Txt~Blackout while changing gobo|R7|Begin~48~End~55~Txt~No blackout while changing gobo|R8|Begin~56~End~87~Txt~No function|R9|Begin~88~End~95~Txt~Blackout while moving|R10|Begin~96~End~103~Txt~Reset pan|R11|Begin~104~End~111~Txt~Reset tilt|R12|Begin~112~End~119~Txt~Reset color wheel|R13|Begin~120~End~127~Txt~Reset gobo wheel|R14|Begin~128~End~135~Txt~Rset gobo rotation|R15|Begin~136~End~143~Txt~Reset prism|R16|Begin~144~End~151~Txt~Reset focus|R17|Begin~152~End~159~Txt~Reset all channels|R18|Begin~160~End~255~Txt~No function
+ID|Built-in Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Program 1|R3|Begin~24~End~39~Txt~Program 2|R4|Begin~40~End~55~Txt~Program 3|R5|Begin~56~End~71~Txt~Program 4|R6|Begin~72~End~87~Txt~Program 5|R7|Begin~88~End~103~Txt~Program 6|R8|Begin~104~End~119~Txt~Program 7|R9|Begin~120~End~135~Txt~Program 8|R10|Begin~136~End~151~Txt~Music controlled 1|R11|Begin~152~End~167~Txt~Music controlled 2|R12|Begin~168~End~183~Txt~Music controlled 3|R13|Begin~184~End~199~Txt~Music controlled 4|R14|Begin~200~End~215~Txt~Music controlled 5|R15|Begin~216~End~231~Txt~Music controlled 6|R16|Begin~232~End~247~Txt~Music controlled 7|R17|Begin~248~End~255~Txt~Music controlled 8
+[END_CHAN_DEF]
+[MODES]
+Name|8ch|Content|Pan~Tilt~Color Wheel~Shutter~Gobo Wheel~Gobo Rotation~Prism~Focus
+Name|14ch|Content|Pan~Tilt~Pan fine~Tilt fine~Speed~Color Wheel~Shutter~Dimmer~Gobo Wheel~Gobo Rotation~Special Functions~Built-in Programs~Prism~Focus
+[END_MODES]

@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.robe.cz/api/support-files/download/downloads/user_manuals/User%20manual%20DJ%20Scan%20250%20XT.pdf|LinkType2|product page|Url2|https://www.robe.cz/scan-250-xt|LinkType3|video|Url3|https://www.youtube.com/watch?v=XLChI_YjDFM
+[GENERAL]
+Manufacturer|Robe|Name|DJ Scan 250 XT|Type|8|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|308|Height|163|Depth|483|Weight|9.50|Power|500|Connector|3-pin|Bulb|MSD 250|LensMinDegree|19.000|LensMaxDegree|19.000
+[CHAN_DEF]
+ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Tilt|Type|8|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Turquoise~Extra~#40e0d0|R3|Begin~16~End~23~Txt~Red~Extra~#ff0000|R4|Begin~24~End~31~Txt~Cyan~Extra~#00ffff|R5|Begin~32~End~39~Txt~Light green~Extra~#90ee90|R6|Begin~40~End~47~Txt~Magenta~Extra~#ca1f7b|R7|Begin~48~End~55~Txt~Light blue~Extra~#add8e6|R8|Begin~56~End~63~Txt~Yellow~Extra~#ffff00|R9|Begin~64~End~71~Txt~Green~Extra~#00ff00|R10|Begin~72~End~79~Txt~Pink~Extra~#ffc0cb|R11|Begin~80~End~87~Txt~Blue~Extra~#0000ff|R12|Begin~88~End~95~Txt~Orange~Extra~#ff7f00|R13|Begin~96~End~103~Txt~UV~Extra~#bf00fe|R14|Begin~104~End~111~Txt~Split Red / Blue~Extra~_#0000ff|R15|Begin~112~End~119~Txt~Split Yellow / Green~Extra~_#00ff00|R16|Begin~120~End~127~Txt~Split Pink / Blue~Extra~_#0000ff|R17|Begin~128~End~190~Txt~fast CW..slow CW|R18|Begin~191~End~192~Txt~stop|R19|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~23~Txt~Open|R2|Begin~24~End~47~Txt~Gobo 1|R3|Begin~48~End~79~Txt~Gobo 2|R4|Begin~80~End~103~Txt~Gobo 3|R5|Begin~104~End~127~Txt~Gobo 4|R6|Begin~128~End~151~Txt~Gobo 5|R7|Begin~152~End~175~Txt~Gobo 6|R8|Begin~176~End~207~Txt~Gobo 7|R9|Begin~208~End~231~Txt~Gobo 8|R10|Begin~232~End~255~Txt~Gobo 9
+ID|Gobo rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~190~Txt~fast CW..slow CW|R3|Begin~191~End~192~Txt~stop|R4|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~63~Txt~off..bright|R3|Begin~64~End~95~Txt~Open|R4|Begin~96~End~127~Txt~Strobe 0Hz..8Hz|R5|Begin~128~End~139~Txt~Reset|R6|Begin~140~End~159~Txt~Closed|R7|Begin~160~End~175~Txt~Pulse slow..fast|R8|Begin~176~End~191~Txt~Pulse fast..slow|R9|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R10|Begin~224~End~255~Txt~Open
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo rotation~Shutter / Strobe
+[END_MODES]

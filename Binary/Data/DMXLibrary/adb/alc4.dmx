@@ -1,0 +1,46 @@
+[SAYNETE]
+Version|3.1.0
+[GENERAL]
+Manufacturer|ADB|Name|ALC4|Type|30|Authors|ameisso|Creator|OFL
+[PHYSICAL]
+Width|496|Height|268|Depth|182|Weight|10|Power|200|Connector|5-pin|Bulb|LED|Lumens|4000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color temperature (Preset)|Type|27|R1|Begin~0~End~76~Txt~RGB Mode|R2|Begin~77~End~101~Txt~2700K|R3|Begin~102~End~127~Txt~3000K|R4|Begin~128~End~152~Txt~3200K|R5|Begin~153~End~178~Txt~4200K|R6|Begin~179~End~203~Txt~5600K|R7|Begin~204~End~229~Txt~6000K|R8|Begin~230~End~255~Txt~6500K
+ID|Color temperature (Linear)|Type|27|R1|Begin~0~End~50~Txt~RGB Mode|R2|Begin~51~End~255~Txt~2700K..6500K
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Color temperature 1 (Preset)|Type|27|R1|Begin~0~End~76~Txt~RGB Mode|R2|Begin~77~End~101~Txt~2700K|R3|Begin~102~End~127~Txt~3000K|R4|Begin~128~End~152~Txt~3200K|R5|Begin~153~End~178~Txt~4200K|R6|Begin~179~End~203~Txt~5600K|R7|Begin~204~End~229~Txt~6000K|R8|Begin~230~End~255~Txt~6500K
+ID|Color temperature 1 (Linear)|Type|27|R1|Begin~0~End~50~Txt~RGB Mode|R2|Begin~51~End~255~Txt~2700K..6500K
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Color temperature 2 (Preset)|Type|27|R1|Begin~0~End~76~Txt~RGB Mode|R2|Begin~77~End~101~Txt~2700K|R3|Begin~102~End~127~Txt~3000K|R4|Begin~128~End~152~Txt~3200K|R5|Begin~153~End~178~Txt~4200K|R6|Begin~179~End~203~Txt~5600K|R7|Begin~204~End~229~Txt~6000K|R8|Begin~230~End~255~Txt~6500K
+ID|Color temperature 2 (Linear)|Type|27|R1|Begin~0~End~50~Txt~RGB Mode|R2|Begin~51~End~255~Txt~2700K..6500K
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Color temperature 3 (Preset)|Type|27|R1|Begin~0~End~76~Txt~RGB Mode|R2|Begin~77~End~101~Txt~2700K|R3|Begin~102~End~127~Txt~3000K|R4|Begin~128~End~152~Txt~3200K|R5|Begin~153~End~178~Txt~4200K|R6|Begin~179~End~203~Txt~5600K|R7|Begin~204~End~229~Txt~6000K|R8|Begin~230~End~255~Txt~6500K
+ID|Color temperature 3 (Linear)|Type|27|R1|Begin~0~End~50~Txt~RGB Mode|R2|Begin~51~End~255~Txt~2700K..6500K
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Color temperature 4 (Preset)|Type|27|R1|Begin~0~End~76~Txt~RGB Mode|R2|Begin~77~End~101~Txt~2700K|R3|Begin~102~End~127~Txt~3000K|R4|Begin~128~End~152~Txt~3200K|R5|Begin~153~End~178~Txt~4200K|R6|Begin~179~End~203~Txt~5600K|R7|Begin~204~End~229~Txt~6000K|R8|Begin~230~End~255~Txt~6500K
+ID|Color temperature 4 (Linear)|Type|27|R1|Begin~0~End~50~Txt~RGB Mode|R2|Begin~51~End~255~Txt~2700K..6500K
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard (CT 7 Preset)|ShortName|std7|Content|Master dimmer~Color temperature (Preset)~Red~Green~Blue
+Name|Matrix (CT 7 Preset)|ShortName|mat7|Content|Dimmer 1~Color temperature 1 (Preset)~Red 1~Green 1~Blue 1~Dimmer 2~Color temperature 2 (Preset)~Red 2~Green 2~Blue 2~Dimmer 3~Color temperature 3 (Preset)~Red 3~Green 3~Blue 3~Dimmer 4~Color temperature 4 (Preset)~Red 4~Green 4~Blue 4
+Name|Extended (CT 7 Preset)|ShortName|ext7|Content|Master dimmer~Dimmer 1~Color temperature 1 (Preset)~Red 1~Green 1~Blue 1~Dimmer 2~Color temperature 2 (Preset)~Red 2~Green 2~Blue 2~Dimmer 3~Color temperature 3 (Preset)~Red 3~Green 3~Blue 3~Dimmer 4~Color temperature 4 (Preset)~Red 4~Green 4~Blue 4
+Name|Standard (CT Linear)|ShortName|stdl|Content|Master dimmer~Color temperature (Linear)~Red~Green~Blue
+Name|Matrix (CT Linear)|ShortName|matl|Content|Dimmer 1~Color temperature 1 (Linear)~Red 1~Green 1~Blue 1~Dimmer 2~Color temperature 2 (Linear)~Red 2~Green 2~Blue 2~Dimmer 3~Color temperature 3 (Linear)~Red 3~Green 3~Blue 3~Dimmer 4~Color temperature 4 (Linear)~Red 4~Green 4~Blue 4
+Name|Extended (CT Linear)|ShortName|extl|Content|Master dimmer~Dimmer 1~Color temperature 1 (Linear)~Red 1~Green 1~Blue 1~Dimmer 2~Color temperature 2 (Linear)~Red 2~Green 2~Blue 2~Dimmer 3~Color temperature 3 (Linear)~Red 3~Green 3~Blue 3~Dimmer 4~Color temperature 4 (Linear)~Red 4~Green 4~Blue 4
+[END_MODES]

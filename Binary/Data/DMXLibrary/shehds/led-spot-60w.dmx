@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.shehds.com/products/good-technology-led-60w-gobos-moving-head-lighting-for-dmx512-stage-effect-dj-festivals-disco-home-entertainments-in-9-11-channels|LinkType2|manual|Url2|https://ueeshop.ly200-cdn.com/u_file/UPAG/UPAG904/2005/file/f56ea62fb9.pdf|LinkType3|video|Url3|https://www.youtube.com/watch?v=2ob8XVgcoRw
+[GENERAL]
+Manufacturer|Shehds|Name|LED Spot 60W|Type|9|Authors|yids|Creator|OFL
+[PHYSICAL]
+Width|198|Height|272|Depth|144|Weight|3.20|Power|60|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Color wheel|Type|12|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000|R3|Begin~20~End~29~Txt~Orange~Extra~#ed7d31|R4|Begin~30~End~39~Txt~Lemon Yellow~Extra~#ffff00|R5|Begin~40~End~49~Txt~Green~Extra~#00b050|R6|Begin~50~End~59~Txt~Blue~Extra~#2e75b6|R7|Begin~60~End~69~Txt~Pink~Extra~#e98cc9|R8|Begin~70~End~79~Txt~Sky Blue~Extra~#00b0f0|R9|Begin~80~End~89~Txt~Split Pink / Sky Blue~Extra~#e98cc9|R10|Begin~90~End~99~Txt~Split Blue / Pink~Extra~#2e75b6|R11|Begin~100~End~109~Txt~Split Green / Blue~Extra~#00b050|R12|Begin~110~End~119~Txt~Split Lemon Yellow / Green~Extra~#ffff00|R13|Begin~120~End~129~Txt~Split Orange / Lemon Yellow~Extra~#ed7d31|R14|Begin~130~End~139~Txt~Split Red / Orange~Extra~#ff0000|R15|Begin~140~End~255~Txt~slow CW..fast CW
+ID|Gobo wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Rose|R3|Begin~16~End~23~Txt~Radial Dots|R4|Begin~24~End~31~Txt~Triangle|R5|Begin~32~End~39~Txt~Hexagon|R6|Begin~40~End~47~Txt~Swirl|R7|Begin~48~End~55~Txt~Swirl|R8|Begin~56~End~63~Txt~Jigsaw|R9|Begin~64~End~71~Txt~Open|R10|Begin~72~End~79~Txt~Shake range Rose|R11|Begin~80~End~87~Txt~Shake range Radial Dots|R12|Begin~88~End~95~Txt~Shake range Triangle|R13|Begin~96~End~103~Txt~Shake range Hexagon|R14|Begin~104~End~111~Txt~Shake range Swirl|R15|Begin~112~End~119~Txt~Shake range Swirl|R16|Begin~120~End~127~Txt~Shake range Jigsaw|R17|Begin~128~End~255~Txt~slow CW..fast CW
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0Hz..10Hz
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Auto|Type|0|R1|Begin~0~End~48~Txt~No function|R2|Begin~49~End~99~Txt~Auto Mode 1|R3|Begin~100~End~199~Txt~Auto Mode 2|R4|Begin~200~End~255~Txt~Sound Mode
+ID|Reset|Type|0|R1|Begin~0~End~249~Txt~No function|R2|Begin~250~End~255~Txt~Reset
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color wheel~Gobo wheel~Strobe~Dimmer~Pan/Tilt speed~Auto~Reset
+Name|11-channel|ShortName|11ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color wheel~Gobo wheel~Strobe~Dimmer~Pan/Tilt speed~Auto~Reset
+[END_MODES]

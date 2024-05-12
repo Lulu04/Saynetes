@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/837961/Showtec-Explorer-250-Wash.html|LinkType2|video|Url2|https://www.youtube.com/watch?v=_E7AQH2ugoM
+[GENERAL]
+Manufacturer|Showtec|Name|Explorer 250 Wash|Type|0|Authors|Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|379|Height|476|Depth|428|Weight|33.50|Power|350|Connector|3-pin|Bulb|MSD 250|Lumens|6700|Lens|Fresnel|LensMinDegree|8.000|LensMaxDegree|22.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..530deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..280deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Lamp On, Off & Reset|Type|0|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~139~Txt~3s Lamp on / reset|R3|Begin~140~End~229~Txt~No function|R4|Begin~230~End~239~Txt~3s Lamp off|R5|Begin~240~End~255~Txt~No function
+ID|Color Wheel|Type|12|R1|Begin~0~End~17~Txt~Open|R2|Begin~18~End~35~Txt~Red~Extra~#ff0000|R3|Begin~36~End~53~Txt~Blue~Extra~#0000ff|R4|Begin~54~End~72~Txt~Green~Extra~#00ff00|R5|Begin~73~End~90~Txt~CTF 3200K|R6|Begin~91~End~108~Txt~CTF 5300K|R7|Begin~109~End~127~Txt~UV~Extra~#8000ff|R8|Begin~128~End~190~Txt~fast CW..slow CW|R9|Begin~191~End~192~Txt~stop|R10|Begin~193~End~255~Txt~slow CCW..fast CCW
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe 0Hz..10Hz|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|CMY speed adjust|Type|16|R1|Begin~0~End~255~Txt~Speed fast..slow
+ID|Effect Wheel|Type|0|R1|Begin~0~End~70~Txt~Open|R2|Begin~71~End~180~Txt~Frost|R3|Begin~181~End~255~Txt~Beam shaper 0%..100%
+ID|Keep|Type|0|R1|Begin~0~End~255~Txt~Keep this Color setting
+ID|CMY Color effect-wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Color 1|R3|Begin~16~End~23~Txt~Color 2|R4|Begin~24~End~31~Txt~Color 3|R5|Begin~32~End~39~Txt~Color 4|R6|Begin~40~End~47~Txt~Color 5|R7|Begin~48~End~55~Txt~Color 6|R8|Begin~56~End~63~Txt~Color 7|R9|Begin~64~End~71~Txt~Color 8|R10|Begin~72~End~79~Txt~Color 9|R11|Begin~80~End~87~Txt~Color 10|R12|Begin~88~End~95~Txt~Color 11|R13|Begin~96~End~103~Txt~Color 12|R14|Begin~104~End~111~Txt~Color 13|R15|Begin~112~End~119~Txt~Color 14|R16|Begin~120~End~127~Txt~Color 15|R17|Begin~128~End~135~Txt~Color 16|R18|Begin~136~End~143~Txt~Color 17|R19|Begin~144~End~151~Txt~Color 18|R20|Begin~152~End~159~Txt~Color 19|R21|Begin~160~End~167~Txt~Color 20|R22|Begin~168~End~175~Txt~Color 21|R23|Begin~176~End~183~Txt~Color 22|R24|Begin~184~End~191~Txt~Color 23|R25|Begin~192~End~199~Txt~Color 24|R26|Begin~200~End~207~Txt~Color 25|R27|Begin~208~End~215~Txt~Color 26|R28|Begin~216~End~223~Txt~Color 27|R29|Begin~224~End~231~Txt~Color 28|R30|Begin~232~End~239~Txt~Color 29|R31|Begin~240~End~247~Txt~Color 30|R32|Begin~248~End~255~Txt~Color 31
+[END_CHAN_DEF]
+[MODES]
+Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Lamp On, Off & Reset~Color Wheel~Cyan~Magenta~Yellow~CMY speed adjust~CMY Color effect-wheel~Effect Wheel~Keep~Shutter / Strobe~Dimmer
+[END_MODES]
