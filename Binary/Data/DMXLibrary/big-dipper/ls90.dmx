@@ -20,8 +20,8 @@ ID|Metal Gobo Shake|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~250
 ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus 0%..100%
 ID|Prism|Type|41|R1|Begin~0~End~49~Txt~No function|R2|Begin~50~End~100~Txt~Prism|R3|Begin~101~End~255~Txt~Prism slow CW..fast CW
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset all motors|R3|Begin~201~End~255~Txt~No function
 [END_CHAN_DEF]
 [MODES]

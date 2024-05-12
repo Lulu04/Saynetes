@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLIA1000PRO/CLIA1000PRO_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.PDF|LinkType2|product page|Url2|https://www.muziker.co.uk/cameo-instant-air-1000-pro|LinkType3|video|Url3|https://www.youtube.com/watch?v=YYE02A0awqo
 [GENERAL]
-Manufacturer|cameo|Name|Instant Air 1000 Pro|Type|21|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Instant Air 1000 Pro|Type|21|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|385|Height|385|Depth|515|Weight|10.90|Power|74|Connector|3-pin and 5-pin
 [CHAN_DEF]

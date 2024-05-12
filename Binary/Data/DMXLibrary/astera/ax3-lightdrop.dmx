@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.astera-led.com/Downloads/manual/AX3%20Manual%20%28EN%29.pdf|LinkType2|product page|Url2|https://astera-led.com/products/ax3-lightdrop/|LinkType3|video|Url3|https://www.youtube.com/watch?v=1QZb19aNqAg|LinkType4|video|Url4|https://www.youtube.com/watch?v=u9XPp9icNiA
 [GENERAL]
-Manufacturer|Astera|Name|AX3 Lightdrop|Type|23|Authors|Fredje Gallon, Anomes|Creator|Saynètes 3.1.0
+Manufacturer|Astera|Name|AX3 Lightdrop|Type|23|Authors|Fredje Gallon, Anomes|Creator|OFL
 [PHYSICAL]
 Width|96|Height|96|Depth|59|Weight|0.40|Power|15|Connector|Other|Bulb|LED|Lumens|420|LensMinDegree|13.000|LensMaxDegree|13.000
 [CHAN_DEF]

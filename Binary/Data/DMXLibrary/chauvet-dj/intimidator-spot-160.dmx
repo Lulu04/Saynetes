@@ -8,9 +8,9 @@ Manufacturer|Chauvet DJ|Name|Intimidator Spot 160|Type|9|Authors|Ken Harris|Crea
 Width|207|Height|149|Depth|308|Weight|4.00|Power|60|Connector|3-pin|Bulb|1× 32W cool white LED|LensMinDegree|17.000|LensMaxDegree|17.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Color Wheel|Type|12|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Orange~Extra~#ffa500|R3|Begin~14~End~20~Txt~Lime green~Extra~#66f83a|R4|Begin~21~End~27~Txt~Cyan~Extra~#00ffff|R5|Begin~28~End~34~Txt~Red~Extra~#ff0000|R6|Begin~35~End~41~Txt~Green~Extra~#16b116|R7|Begin~42~End~48~Txt~Magenta~Extra~#ff00ff|R8|Begin~49~End~55~Txt~Yellow~Extra~#ffff00|R9|Begin~56~End~62~Txt~Dark blue~Extra~#00008b|R10|Begin~63~End~64~Txt~White~Extra~#ffffff|R11|Begin~65~End~189~Txt~0deg..360deg|R12|Begin~190~End~221~Txt~fast CW..slow CW|R13|Begin~222~End~223~Txt~stop..stop|R14|Begin~224~End~255~Txt~slow CCW..fast CCW
 ID|Gobo Wheel|Type|10|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~11~Txt~Gobo 1~Extra~10 circles|R3|Begin~12~End~17~Txt~Gobo 2|R4|Begin~18~End~23~Txt~Gobo 3|R5|Begin~24~End~29~Txt~Gobo 4|R6|Begin~30~End~35~Txt~Gobo 5|R7|Begin~36~End~41~Txt~Gobo 6|R8|Begin~42~End~47~Txt~Gobo 7~Extra~Biohazard|R9|Begin~48~End~53~Txt~Gobo 8|R10|Begin~54~End~63~Txt~Gobo 9|R11|Begin~64~End~69~Txt~Gobo 9 slow..fast|R12|Begin~70~End~75~Txt~Gobo 8 slow..fast|R13|Begin~76~End~81~Txt~Gobo 7 slow..fast~Extra~Biohazard|R14|Begin~82~End~87~Txt~Gobo 6 slow..fast|R15|Begin~88~End~93~Txt~Gobo 5 slow..fast|R16|Begin~94~End~99~Txt~Gobo 4 slow..fast|R17|Begin~100~End~105~Txt~Gobo 3 slow..fast|R18|Begin~106~End~111~Txt~Gobo 2 slow..fast|R19|Begin~112~End~117~Txt~Gobo 1 slow..fast~Extra~10 circles|R20|Begin~118~End~127~Txt~Open|R21|Begin~128~End~189~Txt~slow CW..fast CW|R22|Begin~190~End~193~Txt~stop|R23|Begin~194~End~255~Txt~slow CCW..fast CCW

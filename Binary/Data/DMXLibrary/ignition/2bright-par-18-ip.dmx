@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_481058_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/ignition_2bright_par_18_ip.htm|LinkType3|video|Url3|https://video1.thomann.de/vidiot/02591c1c/video_i8896p10_yd59vqpa.mp4
 [GENERAL]
-Manufacturer|Ignition|Name|2bright Par 18 IP|Type|16|Authors|Hannes Rüger|Creator|Saynètes 3.1.0
+Manufacturer|Ignition|Name|2bright Par 18 IP|Type|16|Authors|Hannes Rüger|Creator|OFL
 [PHYSICAL]
 Width|290|Height|220|Depth|140|Weight|7.50|Power|200|Connector|3-pin|Bulb|18× 12W 6in1 RGBWA UV LED|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

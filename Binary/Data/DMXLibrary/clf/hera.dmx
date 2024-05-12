@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.clf-lighting.com/wp-content/uploads/CLF_HERA_Manual.pdf|LinkType2|product page|Url2|https://www.clf-lighting.com/product/hera|LinkType3|video|Url3|https://www.youtube.com/watch?v=lxO2bXqmgJE
 [GENERAL]
-Manufacturer|CLF|Name|Hera|Type|16|Authors|Guigui|Creator|Saynètes 3.1.0
+Manufacturer|CLF|Name|Hera|Type|16|Authors|Guigui|Creator|OFL
 [PHYSICAL]
 Width|260|Height|290|Depth|180|Weight|3.80|Power|121|Connector|5-pin|Bulb|12× RGBWAUV LEDs|LensMinDegree|30.000|LensMaxDegree|30.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|video|Url1|https://www.youtube.com/watch?v=Ojwpf-J7rvQ
 [GENERAL]
-Manufacturer|Ibiza light|Name|LS-005LED|Type|28|Authors|Tormant|Creator|Saynètes 3.1.0
+Manufacturer|Ibiza light|Name|LS-005LED|Type|28|Authors|Tormant|Creator|OFL
 [PHYSICAL]
 Width|460|Height|160|Depth|140|Weight|0|Power|30|Connector|3-pin|Bulb|LED
 [CHAN_DEF]

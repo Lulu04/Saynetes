@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/Products/Entertainment-Fixtures/S4WRD-C-II/Documentation.aspx#manuals|LinkType2|product page|Url2|https://www.etcconnect.com/Products/Entertainment-Fixtures/S4WRD-C-II/Features.aspx|LinkType3|video|Url3|https://www.youtube.com/watch?v=olWwFKsCU-o
 [GENERAL]
-Manufacturer|ETC|Name|Source 4WRD Color II|Type|23|Authors|Randy Hall|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|Source 4WRD Color II|Type|23|Authors|Randy Hall|Creator|OFL
 [PHYSICAL]
 Width|178|Height|142|Depth|160|Weight|1.69|Power|150|Connector|RJ45|Bulb|LED|Lumens|6000
 [CHAN_DEF]

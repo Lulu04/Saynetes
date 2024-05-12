@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.cameolight.com/en/downloads/file/id/-1031133774|LinkType2|video|Url2|https://www.youtube.com/watch?v=LwszbJE4mg4
 [GENERAL]
-Manufacturer|cameo|Name|IODA 400 RGY|Type|22|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|IODA 400 RGY|Type|22|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|188|Height|201|Depth|210|Weight|5.60|Power|75|Connector|3-pin|Bulb|300 mW red laser (637 nm), 120 mW green DPSS laser (532 nm)
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51930396-Manual-120587-1.200-eurolite-led-bar-12-qcl-rgba-bar-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51930396-eurolite-led-bar-12-qcl-rgba-bar.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=ZIj0aZyng1Q
 [GENERAL]
-Manufacturer|Eurolite|Name|LED Bar-12 QCL RGBA Bar|Type|19|Authors|Rainer Jung|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED Bar-12 QCL RGBA Bar|Type|19|Authors|Rainer Jung|Creator|OFL
 [PHYSICAL]
 Width|1090|Height|65|Depth|100|Weight|2.90|Power|24|Connector|3-pin|Bulb|LED|LensMinDegree|17.000|LensMaxDegree|17.000
 [CHAN_DEF]

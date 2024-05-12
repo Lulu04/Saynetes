@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/41602126-Manual-106094-1.00-eurolite-led-tha-100f-mk2-theater-spot-en_de.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn41602126-eurolite-led-tha-100f-mk2-theater-spot.html
 [GENERAL]
-Manufacturer|Eurolite|Name|LED THA-100F MK2|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED THA-100F MK2|Type|23|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|265|Height|335|Depth|370|Weight|6.00|Power|120|Connector|3-pin and 5-pin|Bulb|COB warm white 100W LED|LensMinDegree|6.000|LensMaxDegree|31.000
 [CHAN_DEF]

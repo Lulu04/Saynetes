@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://adjmedia.s3-website-eu-west-1.amazonaws.com/manuals/boom_box_fx2.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=E3-njFee518|LinkType3|video|Url3|https://www.youtube.com/watch?v=DXzJ8QSDcmw
 [GENERAL]
-Manufacturer|American DJ|Name|Boom Box Fx2|Type|9|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|American DJ|Name|Boom Box Fx2|Type|9|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|634|Height|319|Depth|232|Weight|8.00|Power|62|Connector|3-pin|Bulb|8x3W LEDs, 8x1W LEDs, 8x10W RGBW LEDs|Lens|Other
 [CHAN_DEF]

@@ -3,14 +3,14 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/de_DE/-/EUR/ViewProductAttachment-ResolveManualURL?File=DE_LIG0013617-000.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=tJM8ScD-bLE|LinkType3|video|Url3|https://www.youtube.com/watch?v=RGQ9Nuvg3Xk
 [GENERAL]
-Manufacturer|lightmaXX|Name|Vega Zoom Wash|Type|9|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|lightmaXX|Name|Vega Zoom Wash|Type|9|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|260|Height|280|Depth|340|Weight|4.50|Power|95|Connector|3-pin|Bulb|LED|LensMinDegree|6.000|LensMaxDegree|45.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..190deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan / Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~245~Txt~Strobe slow..fast|R3|Begin~246~End~255~Txt~Open

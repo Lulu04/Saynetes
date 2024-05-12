@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.adamhall.com/shop/gr-en/downloads/file/id/864775656|LinkType2|video|Url2|https://www.youtube.com/watch?v=q3aCVNj3t7M
 [GENERAL]
-Manufacturer|cameo|Name|Zenit Z120|Type|23|Authors|EP, Ken Harris, Luke Nelson|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Zenit Z120|Type|23|Authors|EP, Ken Harris, Luke Nelson|Creator|OFL
 [PHYSICAL]
 Width|230|Height|230|Depth|300|Weight|8.30|Power|180|Connector|5-pin|Bulb|1× RGBW LED|Lumens|2117|LensMinDegree|7.000|LensMaxDegree|55.000
 [CHAN_DEF]
@@ -17,13 +17,13 @@ ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100% 0%..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100% 0%..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100% 0%..100%
 ID|Settings|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~5s Dimmer response LED|R3|Begin~128~End~191~Txt~5s Dimmer response Halogen|R4|Begin~192~End~255~Txt~5s reset all functions
-ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
-ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
-ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
-ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
-ID|Zoom fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|Zoom fine|Type|31
 ID|Dimmer Curve|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~63~Txt~Linear Dimmer Curve|R3|Begin~64~End~127~Txt~Exponential Dimmer Curve|R4|Begin~128~End~191~Txt~Logarithmic Dimmer Curve|R5|Begin~192~End~255~Txt~S-Curve Dimmer Curve
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 [END_CHAN_DEF]
 [MODES]
 Name|3-channel|ShortName|3ch|Content|Dimmer~Color Temperature~Zoom

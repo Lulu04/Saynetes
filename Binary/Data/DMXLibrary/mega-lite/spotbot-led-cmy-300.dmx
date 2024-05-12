@@ -28,10 +28,10 @@ ID|Frost|Type|47|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~255~Txt~Fro
 ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
 ID|Control|Type|0|R1|Begin~0~End~119~Txt~No function|R2|Begin~120~End~160~Txt~Pan / Tilt Reset|R3|Begin~161~End~200~Txt~Motor Function Reset|R4|Begin~201~End~255~Txt~All Reset
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
-ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
-ID|Zoom fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Focus fine|Type|32
+ID|Zoom fine|Type|31
 ID|Auto Focus|Type|0|R1|Begin~0~End~255~Txt~Auto Focus (5 positions)
 [END_CHAN_DEF]
 [MODES]

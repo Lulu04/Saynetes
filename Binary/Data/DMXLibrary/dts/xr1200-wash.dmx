@@ -8,9 +8,9 @@ Manufacturer|DTS|Name|XR1200 WASH|Type|9|Authors|novasfronteiras.co|Creator|OFL
 Width|490|Height|685|Depth|500|Weight|38.00|Power|1320|Connector|3-pin and 5-pin|Bulb|Phililps MSR Gold 1200 Fastfit|Lumens|50000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..320deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Movement Speed|Type|9|R1|Begin~0~End~10~Txt~No function Standard|R2|Begin~11~End~25~Txt~fast|R3|Begin~26~End~127~Txt~fast..slow Vector mode|R4|Begin~128~End~247~Txt~fast..slow Reaction time to DMX signal|R5|Begin~248~End~255~Txt~slow Reaction time to DMX signal
 ID|Dimmer|Type|2|R1|Begin~0~End~8~Txt~off|R2|Begin~9~End~255~Txt~dark..bright
 ID|Shutter|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~23~Txt~Strobe Random timing|R3|Begin~24~End~107~Txt~Strobe slow..fast|R4|Begin~108~End~163~Txt~Strobe slow..fast Flash open|R5|Begin~164~End~219~Txt~Strobe slow..fast Flash closed|R6|Begin~220~End~227~Txt~Colors / Macros in black-out|R7|Begin~228~End~233~Txt~Pan / Tilt in black-out|R8|Begin~234~End~255~Txt~Open

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/43078_MANUAL_GB_V2.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=0OWjGQxuBY8
 [GENERAL]
-Manufacturer|Showtec|Name|Sunraise LED|Type|32|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Sunraise LED|Type|32|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|266|Height|260|Depth|266|Weight|2.80|Power|35|Connector|3-pin|Bulb|55 x 3W RGBWA LEDs|Lumens|1000
 [CHAN_DEF]

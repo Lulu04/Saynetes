@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://drive.google.com/file/d/1pJK6BaAhvOGTwMP1VhfO8GH25YicCDwS/view|LinkType2|product page|Url2|https://hivelighting.com/hornet-200-cx/|LinkType3|video|Url3|https://www.youtube.com/watch?v=n0JaoCZWXVc
 [GENERAL]
-Manufacturer|Hive Lighting|Name|Hornet 200-CX|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Hive Lighting|Name|Hornet 200-CX|Type|23|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|100|Height|100|Depth|222|Weight|2.20|Power|150|Connector|5-pin|Bulb|LED|LensMinDegree|19.000|LensMaxDegree|180.000
 [CHAN_DEF]

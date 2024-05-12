@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/42110192-Manual-101530-1.10-eurolite-led-party-spot-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn42110192-eurolite-led-party-spot.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=fJKxgmbVv4A
 [GENERAL]
-Manufacturer|Eurolite|Name|LED PARty Spot|Type|18|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED PARty Spot|Type|18|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|145|Height|155|Depth|90|Weight|0.46|Power|15|Connector|3-pin|Bulb|12x 1W LEDs (3x red, 3x green, 3x blue, 3x white)|LensMinDegree|13.000|LensMaxDegree|13.000
 [CHAN_DEF]

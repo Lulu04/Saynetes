@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPSTTRI12IP/CLPSTTRI12IP_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=ln1KAzrTtl0
 [GENERAL]
-Manufacturer|cameo|Name|Outdoor PAR Tri 12|Type|16|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Outdoor PAR Tri 12|Type|16|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|203|Height|203|Depth|193|Weight|4.25|Power|50|Connector|3-pin XLR IP65|Bulb|LED|Lumens|911|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

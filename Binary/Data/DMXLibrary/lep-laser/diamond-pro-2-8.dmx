@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|video|Url1|https://www.youtube.com/watch?v=YHbKlJp-M9k
 [GENERAL]
-Manufacturer|LEP-LASER|Name|Diamond PRO 2.8|Type|22|Authors|Dirk|Creator|Saynètes 3.1.0
+Manufacturer|LEP-LASER|Name|Diamond PRO 2.8|Type|22|Authors|Dirk|Creator|OFL
 [PHYSICAL]
 Width|334|Height|125|Depth|390|Weight|7.00|Power|50|Connector|3-pin
 [CHAN_DEF]

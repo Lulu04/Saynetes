@@ -1,15 +1,15 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.explo.at/_Resources/Persistent/459c14f10f9fddad03748a108704cb345c719266/Gasbrenner%20GX2%202.0%20EN.pdf|LinkType2|product page|Url2|https://www.explo.at/en/effektgeraete/gas/gx2-12v.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=nRJiaLzVk0Y|LinkType4|video|Url4|https://www.youtube.com/watch?v=ut26zDS3Z4c
 [GENERAL]
 Manufacturer|Explo|Name|Gasprojector GX2|Type|0|Authors|Gloryfire|Creator|OFL
 [PHYSICAL]
-Width|260|Height|390|Depth|260|Weight|6.80|Connector|3-pin
+Width|260|Height|390|Depth|260|Weight|6.80|Power|0|Connector|3-pin
 [CHAN_DEF]
 ID|Ignition|Type|0|R1|Begin~0~End~252~Txt~No function No ignition|R2|Begin~253~End~255~Txt~Single ignition
 ID|Valve Opening Time|Type|0|R1|Begin~0~End~10~Txt~No function Saftety zone|R2|Begin~11~End~13~Txt~Time 20ms..60ms Small fireball|R3|Begin~14~End~34~Txt~Time 80ms..480ms Flame pillar|R4|Begin~35~End~60~Txt~Time 500ms..1000ms Larger flames|R5|Begin~61~End~200~Txt~Time 1020ms..3800ms Extra large flames|R6|Begin~201~End~250~Txt~Flame every 5 seconds|R7|Begin~251~End~255~Txt~No function Safety zone
 [END_CHAN_DEF]
 [MODES]
-Name|Standard|Content|Ignition~Valve Opening Time
+Name|Standard|ShortName|Standard|Content|Ignition~Valve Opening Time
 [END_MODES]

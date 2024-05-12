@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.tronios.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2F153.252_153.255_153.258+PLS-Series+IRC+Batt+DMX+V1.1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=Kd83PELCiGo
 [GENERAL]
-Manufacturer|BeamZ|Name|PLS25 Par|Type|23|Authors|Marek Jędrzejewski|Creator|Saynètes 3.1.0
+Manufacturer|BeamZ|Name|PLS25 Par|Type|23|Authors|Marek Jędrzejewski|Creator|OFL
 [PHYSICAL]
 Width|160|Height|115|Depth|120|Weight|0.60|Power|15|Connector|3-pin|Bulb|12× 1W LEDs (3× red, 3× green, 3× blue, 3× white)|LensMinDegree|13.000|LensMaxDegree|13.000
 [CHAN_DEF]

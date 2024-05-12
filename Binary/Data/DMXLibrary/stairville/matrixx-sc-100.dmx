@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.thomann.de/pics/atg/atgdata/document/manual/119950_c_119950_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_matrixx_sc100_dmx_led_effect.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=h0Ih3R4Rldc
 [GENERAL]
@@ -13,5 +13,5 @@ ID|Patterns / Shows|Type|0|R1|Begin~0~End~9~Txt~off Blackout|R2|Begin~10~End~19~
 ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~249~Txt~Strobe slow..fast|R3|Begin~250~End~255~Txt~Sound control
 [END_CHAN_DEF]
 [MODES]
-Name|DMX|Content|Pan~Tilt~Patterns / Shows~Strobe
+Name|DMX|ShortName|DMX|Content|Pan~Tilt~Patterns / Shows~Strobe
 [END_MODES]

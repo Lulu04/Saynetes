@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51700100-Manual-82145-hazebase-basehazerpro-hazer-en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51700100-hazebase-basehazerpro-hazer.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=m1Z7sziCdL0
 [GENERAL]
-Manufacturer|Hazebase|Name|base*hazer*pro|Type|10|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Hazebase|Name|base*hazer*pro|Type|10|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|59|Height|18|Depth|54|Weight|18.00|Power|1500|Connector|5-pin
 [CHAN_DEF]

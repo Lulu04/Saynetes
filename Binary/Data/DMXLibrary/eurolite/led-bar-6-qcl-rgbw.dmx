@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/420780_eurolite_led_bar_6_12_rgbw_de_uk.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/eurolite_led_bar_6_qcl_rgbw.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=tXEgjiP5YWA
 [GENERAL]
-Manufacturer|Eurolite|Name|LED Bar-6 QCL RGBW|Type|19|Authors|Luke Nelson|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED Bar-6 QCL RGBW|Type|19|Authors|Luke Nelson|Creator|OFL
 [PHYSICAL]
 Width|585|Height|65|Depth|100|Weight|2.90|Power|15|Connector|3-pin|Bulb|LED|LensMinDegree|17.000|LensMaxDegree|17.000
 [CHAN_DEF]

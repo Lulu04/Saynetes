@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://adjmedia.s3-website-eu-west-1.amazonaws.com/manuals/Inno%20Pocket%20Beam%20Q4.pdf|LinkType2|product page|Url2|https://www.adj.eu/inno-pocket-beam-q4|LinkType3|video|Url3|https://www.youtube.com/watch?v=ldCt6rDwOQM|LinkType4|video|Url4|https://www.youtube.com/watch?v=zG4iWzimoqU
 [GENERAL]
-Manufacturer|American DJ|Name|Inno Pocket Beam Q4|Type|9|Authors|jc|Creator|Saynètes 3.1.0
+Manufacturer|American DJ|Name|Inno Pocket Beam Q4|Type|9|Authors|jc|Creator|OFL
 [PHYSICAL]
 Width|147|Height|265|Depth|159|Weight|3.00|Power|46|Connector|3-pin|Bulb|15W RGBW LED|LensMinDegree|4.000|LensMaxDegree|4.000
 [CHAN_DEF]
@@ -18,8 +18,8 @@ ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Maintenance|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout by pan/tilt movement|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout by color change|R5|Begin~100~End~199~Txt~No function|R6|Begin~200~End~209~Txt~Reset all|R7|Begin~210~End~249~Txt~No function|R8|Begin~250~End~255~Txt~Sound active
 ID|Dimmer Curves|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default to unit curve setting
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|10-channel|ShortName|10ch|Content|Pan~Tilt~Red~Green~Blue~White~Shutter / Strobe~Master dimmer~Pan/Tilt Speed~Maintenance

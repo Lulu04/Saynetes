@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://bklumitec.com/out/media/106619_BA_D_E_Light_Can.pdf|LinkType2|product page|Url2|https://apelabs.com/produkt/lightcan-roadbag/|LinkType3|video|Url3|https://www.youtube.com/watch?v=323kJeW-KT0
 [GENERAL]
-Manufacturer|Ape Labs|Name|LightCan|Type|0|Authors|Gloryfire|Creator|Saynètes 3.1.0
+Manufacturer|Ape Labs|Name|LightCan|Type|0|Authors|Gloryfire|Creator|OFL
 [PHYSICAL]
 Width|55|Height|136|Depth|55|Weight|0.39|Power|0|Connector|Other|Bulb|15W RGBW LED|Lens|Effect lens|LensMinDegree|65.000|LensMaxDegree|65.000
 [CHAN_DEF]
@@ -14,10 +14,10 @@ ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
-ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
-ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
-ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
 [END_CHAN_DEF]
 [MODES]
 Name|3-Channel|ShortName|3ch|Content|Master dimmer~Programs~Program Speed

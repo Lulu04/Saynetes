@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/SlimPAR_Pro_RGBA_UM_Rev5_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-pro-rgba/|LinkType3|video|Url3|https://www.youtube.com/watch?v=sXaC7ZqkGy4
 [GENERAL]
-Manufacturer|Chauvet DJ|Name|SlimPAR Pro RGBA|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet DJ|Name|SlimPAR Pro RGBA|Type|16|Authors|Ken Harris|Creator|OFL
 [PHYSICAL]
 Width|256|Height|290|Depth|87|Weight|2.80|Power|90|Connector|3-pin|Bulb|42× 1W RGBA LED|LensMinDegree|21.000|LensMaxDegree|21.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://mdgfog.s3.amazonaws.com/uploads/docs/theONE-User-Guide-Rev-Af.pdf|LinkType2|product page|Url2|https://www.mdgfog.com/en/theone|LinkType3|video|Url3|https://www.youtube.com/watch?v=Fa6w-k2p6l8
 [GENERAL]
-Manufacturer|MDG|Name|theONE Atmospheric Generator|Type|10|Authors|Flo Edelmann, Ryan Goodwin|Creator|Saynètes 3.1.0
+Manufacturer|MDG|Name|theONE Atmospheric Generator|Type|10|Authors|Flo Edelmann, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|250|Height|610|Depth|300|Weight|23.00|Power|1480|Connector|5-pin
 [CHAN_DEF]

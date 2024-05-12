@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2015/07/COLORdash_S-Par_1_UM_Rev1_WO1.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/colordash-s-par-1/|LinkType3|other|Url3|https://www.chauvetprofessional.com/news/chauvet-professionals-ip65-colordash-s-par-1-rgba-wash-breaks-the-led-color-separation-barrier/
 [GENERAL]
-Manufacturer|Chauvet Professional|Name|COLORdash S-Par 1|Type|23|Authors|Max Jöhnk, Ryan Goodwin|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet Professional|Name|COLORdash S-Par 1|Type|23|Authors|Max Jöhnk, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|231|Height|169|Depth|313|Weight|6.50|Power|65|Connector|5-pin|Bulb|LED|LensMinDegree|22.000|LensMaxDegree|42.000
 [CHAN_DEF]

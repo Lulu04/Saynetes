@@ -1,11 +1,11 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.firing-system.com/wp-content/uploads/User-Manual-G-Flame-V2.43-036.pdf|LinkType2|product page|Url2|https://www.firing-system.com/project/g-flame/|LinkType3|video|Url3|https://www.youtube.com/watch?v=8wesqf4VVOQ
 [GENERAL]
 Manufacturer|Galaxis|Name|G-Flame|Type|0|Authors|William Tessier|Creator|OFL
 [PHYSICAL]
-Width|300|Height|300|Depth|350|Weight|10.50|Connector|5-pin XLR IP65
+Width|300|Height|300|Depth|350|Weight|10.50|Power|0|Connector|5-pin XLR IP65
 [CHAN_DEF]
 ID|Flame|Type|0|R1|Begin~0~End~228~Txt~No function Flame Off|R2|Begin~229~End~255~Txt~Flame On when Safety is off
 ID|Safety|Type|0|R1|Begin~0~End~15~Txt~Safety ON|R2|Begin~16~End~255~Txt~Safety OFF

@@ -1,11 +1,11 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/de_DE/-/EUR/ViewProductAttachment-ResolveManualURL?File=DE_LIG0007774-000.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=eNepec8pVrg
 [GENERAL]
 Manufacturer|lightmaXX|Name|DJ Scan LED|Type|8|Authors|Thilo Billerbeck|Creator|OFL
 [PHYSICAL]
-Width|465|Height|150|Depth|150|Weight|3.00|Connector|3-pin|Bulb|25W LED
+Width|465|Height|150|Depth|150|Weight|3.00|Power|0|Connector|3-pin|Bulb|25W LED
 [CHAN_DEF]
 ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
 ID|Tilt|Type|8|DefaultValue|128|R1|Begin~0~End~255~Txt~0%..100%
@@ -16,5 +16,5 @@ ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Function/Program|Type|0|R1|Begin~0~End~59~Txt~No function|R2|Begin~60~End~79~Txt~C/G Motor reset|R3|Begin~80~End~99~Txt~All Motor reset|R4|Begin~100~End~119~Txt~Internal Program 1|R5|Begin~120~End~139~Txt~Internal Program 2|R6|Begin~140~End~159~Txt~Internal Program 3|R7|Begin~160~End~179~Txt~Internal Program 4|R8|Begin~180~End~199~Txt~Internal Program 5|R9|Begin~200~End~219~Txt~Internal Program 6|R10|Begin~220~End~239~Txt~Internal Program 7|R11|Begin~240~End~255~Txt~Internal Program 8
 [END_CHAN_DEF]
 [MODES]
-Name|Normal|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Shutter~Dimmer~Function/Program
+Name|Normal|ShortName|Normal|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Shutter~Dimmer~Function/Program
 [END_MODES]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/278299_c_278299_r3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_led_hellball_3_rgb.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=aZWRgRL9f_E
 [GENERAL]
-Manufacturer|Varytec|Name|LED Hellball 3 RGB|Type|33|Authors|Anonymous|Creator|Saynètes 3.1.0
+Manufacturer|Varytec|Name|LED Hellball 3 RGB|Type|33|Authors|Anonymous|Creator|OFL
 [PHYSICAL]
 Width|180|Height|160|Depth|180|Weight|0.80|Power|15|Connector|3-pin|Bulb|3× 3W RGB LEDs
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.kinoflotest2.com/PDF/News/Operational%20Manual%20for%20the%20web/3100084%20Rev%20A%20Celeb%20201%20LED%20DMX%2007-01-2015.pdf|LinkType2|product page|Url2|https://www.kinoflotest2.com/Products%20Button/LED/Celeb%20200%20DMX/Celeb200_DMX.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=TK2RRkvcjL8
 [GENERAL]
-Manufacturer|Kino Flo|Name|Celeb LED 201 DMX|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Kino Flo|Name|Celeb LED 201 DMX|Type|28|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|61|Height|36|Depth|13|Weight|6.80|Power|100|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

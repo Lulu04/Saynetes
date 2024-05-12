@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://drive.google.com/file/d/1pJK6BaAhvOGTwMP1VhfO8GH25YicCDwS/view|LinkType2|product page|Url2|https://hivelighting.com/c-series/wasp-100-c/|LinkType3|video|Url3|https://www.youtube.com/watch?v=IkXY_vIUm8U|LinkType4|video|Url4|https://www.youtube.com/watch?v=5JuWHXsTSXI
 [GENERAL]
-Manufacturer|Hive Lighting|Name|Wasp 100-C|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Hive Lighting|Name|Wasp 100-C|Type|23|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|100|Height|100|Depth|199|Weight|1.10|Power|75|Connector|5-pin|Bulb|LED|LensMinDegree|13.000|LensMaxDegree|180.000
 [CHAN_DEF]

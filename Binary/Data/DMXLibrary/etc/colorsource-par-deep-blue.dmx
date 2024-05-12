@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737484145|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737494638|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/ColorSource-PAR/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=8yZygyTDANU
 [GENERAL]
-Manufacturer|ETC|Name|ColorSource PAR Deep Blue|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|ColorSource PAR Deep Blue|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|203|Height|310|Depth|240|Weight|3.77|Power|90|Connector|5-pin|Bulb|40 Lumileds LUXEON Z LED|Lumens|2429|LensMinDegree|14.500|LensMaxDegree|14.500
 [CHAN_DEF]

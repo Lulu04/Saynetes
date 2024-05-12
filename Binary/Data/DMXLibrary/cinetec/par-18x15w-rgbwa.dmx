@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|other|Url1|https://www.9pboutik.com/boutique/lumieres/par-led/par-18x15-rgbwa-pro.html
 [GENERAL]
-Manufacturer|Cinetec|Name|PAR 18x15W RGBWA|Type|16|Authors|Arthur|Creator|Saynètes 3.1.0
+Manufacturer|Cinetec|Name|PAR 18x15W RGBWA|Type|16|Authors|Arthur|Creator|OFL
 [PHYSICAL]
 Width|0|Height|0|Depth|0|Weight|6.60|Power|270|Connector|3-pin|Bulb|18x15W RGBWA LEDs|LensMinDegree|15.000|LensMaxDegree|45.000
 [CHAN_DEF]

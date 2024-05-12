@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://mdgfog.s3.amazonaws.com/uploads/docs/ATM-MAX-User-Guide-120815-Rev-Ad.pdf|LinkType2|manual|Url2|https://mdgfog.s3.amazonaws.com/uploads/docs/DMX-M35A-X-2012.pdf|LinkType3|product page|Url3|https://www.mdgfog.com/en/atmosphereaps|LinkType4|video|Url4|https://www.youtube.com/watch?v=C9u31D-4icQ
 [GENERAL]
-Manufacturer|MDG|Name|Hazer ATMOSPHERE APS|Type|10|Authors|novasfronteiras.co|Creator|Saynètes 3.1.0
+Manufacturer|MDG|Name|Hazer ATMOSPHERE APS|Type|10|Authors|novasfronteiras.co|Creator|OFL
 [PHYSICAL]
 Width|180|Height|300|Depth|68|Weight|23.00|Power|715|Connector|5-pin
 [CHAN_DEF]

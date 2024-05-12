@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.laserworld.com/en/download-file-51-Laserworld_Diode_Series_web.html|LinkType2|product page|Url2|https://www.laserworld.com/en/laserworld-ds/laserworld-ds-1000rgb.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=IbVylAJv3_0
 [GENERAL]
-Manufacturer|Laserworld|Name|DS-1000RGB|Type|22|Authors|finnTE|Creator|Saynètes 3.1.0
+Manufacturer|Laserworld|Name|DS-1000RGB|Type|22|Authors|finnTE|Creator|OFL
 [PHYSICAL]
 Width|200|Height|110|Depth|140|Weight|2.80|Power|40|Connector|3-pin
 [CHAN_DEF]

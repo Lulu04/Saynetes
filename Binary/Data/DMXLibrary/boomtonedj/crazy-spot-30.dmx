@@ -15,8 +15,8 @@ ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Gobo 8|R2|Begin~8~End~15~Txt~Gobo 1|R
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~Strobe|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~Strobe|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
 ID|Function|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout on Pan/Tilt|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout on color change|R5|Begin~100~End~109~Txt~No function|R6|Begin~110~End~119~Txt~Blackout on gobo change|R7|Begin~120~End~199~Txt~No function|R8|Begin~200~End~209~Txt~Total reset|R9|Begin~210~End~249~Txt~No function|R10|Begin~250~End~255~Txt~Sound mode
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|8-channel|ShortName|8ch|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Dimmer~Shutter~Function

@@ -17,8 +17,8 @@ ID|Beam Shaper 1|Type|26|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt
 ID|Beam Shaper 2|Type|26|R1|Begin~0~End~2~Txt~No function|R2|Begin~3~End~170~Txt~Blade insertion 2 out..in Beam shaper left…right|R3|Begin~171~End~255~Txt~Frost high
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..440deg
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..306deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~2~Txt~No function Tracking (default speed)|R2|Begin~3~End~245~Txt~fast..slow|R3|Begin~246~End~248~Txt~slow Tracking|R4|Begin~249~End~251~Txt~fast Tracking|R5|Begin~252~End~255~Txt~fast Blackout while moving
 ID|Dimmer / CMY / Color Wheel / Beam Shaper speed|Type|0|R1|Begin~0~End~2~Txt~No function Tracking (default speed)|R2|Begin~3~End~239~Txt~Speed fast..slow|R3|Begin~240~End~242~Txt~Tracking, studio mode off|R4|Begin~243~End~245~Txt~Tracking, studio mode on|R5|Begin~246~End~248~Txt~Tracking, shortcuts off|R6|Begin~249~End~251~Txt~Tracking, shortcuts on|R7|Begin~252~End~255~Txt~Speed fast Blackout while moving
 [END_CHAN_DEF]

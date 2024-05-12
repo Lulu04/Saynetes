@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51918516-Anleitung-58253-1.100-eurolite-led-z-200-strahleneffekt-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/de/mpn51918516-eurolite-led-z-200-strahleneffekt.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=BH7UX8sXT7Y|LinkType4|video|Url4|https://www.steinigke.de/download/51918516-Video-55873-eurolite-led-z-200-strahleneffekt-de_en_es_fr.flv/
 [GENERAL]
-Manufacturer|Eurolite|Name|LED Z-200 TCL|Type|32|Authors|Heiko Fanieng, Ryan Goodwin|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED Z-200 TCL|Type|32|Authors|Heiko Fanieng, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|360|Height|300|Depth|280|Weight|3.00|Power|40|Connector|3-pin|Bulb|LED TCL|LensMinDegree|125.000|LensMaxDegree|125.000
 [CHAN_DEF]

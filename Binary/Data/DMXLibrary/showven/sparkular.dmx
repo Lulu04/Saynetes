@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://www.vlammen.com/sparkular/Sparkular%20Manual.pdf|LinkType2|product page|Url2|https://www.sparkular-fx.com/index.php/en/unkategorisiert/sparkular/sparkular-2|LinkType3|video|Url3|https://www.youtube.com/watch?v=U1PnWVvIn2w
 [GENERAL]
@@ -11,5 +11,5 @@ ID|Fountain|Type|0|R1|Begin~0~End~15~Txt~No function Fountain Off|R2|Begin~16~En
 ID|Control|Type|0|R1|Begin~0~End~10~Txt~Pre-Heat OFF|R2|Begin~11~End~19~Txt~No function|R3|Begin~20~End~40~Txt~EMERGENCY STOP|R4|Begin~41~End~59~Txt~No function|R5|Begin~60~End~80~Txt~Clear Material|R6|Begin~81~End~239~Txt~No function|R7|Begin~240~End~255~Txt~Pre-Heat ON
 [END_CHAN_DEF]
 [MODES]
-Name|Default|Content|Fountain~Control
+Name|Default|ShortName|Default|Content|Fountain~Control
 [END_MODES]

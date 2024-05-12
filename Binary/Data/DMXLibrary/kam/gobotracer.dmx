@@ -13,11 +13,11 @@ ID|Color Wheel|Type|12|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Red~Extr
 ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~127~Txt~Gobo 1..Gobo 7|R10|Begin~128~End~255~Txt~slow CW..fast CW
 ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~stop..fast
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Horizontal Vertical Run|Type|0|R1|Begin~0~End~255~Txt~
+ID|Horizontal Vertical Run|Type|0
 ID|Auto Mode|Type|0|R1|Begin~0~End~59~Txt~No function Other channels on|R2|Begin~60~End~84~Txt~Auto mode 3|R3|Begin~85~End~109~Txt~Auto mode 2|R4|Begin~110~End~134~Txt~Auto mode 1|R5|Begin~135~End~159~Txt~Sound-to-light mode 0|R6|Begin~160~End~184~Txt~Sound-to-light mode 3|R7|Begin~185~End~209~Txt~Sound-to-light mode 2|R8|Begin~210~End~234~Txt~Sound-to-light mode 1|R9|Begin~235~End~255~Txt~Sound-to-light mode 0
 ID|Reset|Type|0|R1|Begin~0~End~249~Txt~No function|R2|Begin~250~End~255~Txt~5s Reset
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|9ch|ShortName|9ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Strobe~Dimmer~Horizontal Vertical Run~Auto Mode~Reset

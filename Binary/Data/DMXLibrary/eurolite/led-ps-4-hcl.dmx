@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/download_t/51913503-MANUAL-1.10-de-en_00096357.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=m-E_xYKWuCY
 [GENERAL]
-Manufacturer|Eurolite|Name|LED PS-4 HCL|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED PS-4 HCL|Type|16|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|188|Height|196|Depth|117|Weight|1.50|Power|33|Connector|3-pin|Bulb|12 W LED RGBAWUV
 [CHAN_DEF]

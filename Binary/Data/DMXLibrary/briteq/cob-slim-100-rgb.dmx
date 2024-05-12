@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1496150553.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/cob-slim100-rgb|LinkType3|video|Url3|https://www.youtube.com/watch?v=wAYsrW8YaZM
 [GENERAL]
-Manufacturer|Briteq|Name|COB Slim 100-RGB|Type|25|Authors|Thierry, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Briteq|Name|COB Slim 100-RGB|Type|25|Authors|Thierry, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|245|Height|280|Depth|140|Weight|3.46|Power|120|Connector|3-pin|Bulb|100W COB RGB LED|Lens|Other|LensMinDegree|15.000|LensMaxDegree|70.000
 [CHAN_DEF]

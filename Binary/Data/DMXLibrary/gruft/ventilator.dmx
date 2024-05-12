@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://github.com/FloEdelmann/DMX-Ventilator
 [GENERAL]
-Manufacturer|Gruft|Name|Ventilator|Type|21|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Gruft|Name|Ventilator|Type|21|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|1000|Height|1000|Depth|160|Weight|10.00|Power|48|Connector|3-pin|Bulb|LED
 [CHAN_DEF]

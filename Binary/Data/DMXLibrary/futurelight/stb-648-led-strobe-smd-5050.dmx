@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51841370-MANUAL-1.00-de-en_00068855.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=M_syNbUd4iY
 [GENERAL]
-Manufacturer|Futurelight|Name|STB-648 LED Strobe SMD 5050|Type|28|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Futurelight|Name|STB-648 LED Strobe SMD 5050|Type|28|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|420|Height|225|Depth|165|Weight|4.50|Power|160|Connector|3-pin and 5-pin|Bulb|648x SMD 5050 LEDs
 [CHAN_DEF]

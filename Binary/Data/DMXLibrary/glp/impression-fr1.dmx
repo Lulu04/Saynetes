@@ -3,14 +3,14 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=699|LinkType2|product page|Url2|https://www.glp.de/en/products/moving-lights-led/impression-fr1|LinkType3|video|Url3|https://www.youtube.com/watch?v=m7rz8ALXmkc|LinkType4|video|Url4|https://www.youtube.com/watch?v=zP2-DSfA1y4|LinkType5|video|Url5|https://www.youtube.com/watch?v=OobOrRDEdDo
 [GENERAL]
-Manufacturer|GLP|Name|impression FR1|Type|9|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|GLP|Name|impression FR1|Type|9|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|190|Height|355|Depth|140|Weight|4.00|Power|80|Connector|5-pin|Bulb|Osram Ostar RGBW LED|Lens|Micro-Fresnel|LensMinDegree|3.700|LensMaxDegree|35.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..220deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Color Presets|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Color temperature warm Yellow~Extra~#ffff00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffbb|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavender~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Mauve~Extra~#e0b0ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ffc0cb|R14|Begin~104~End~111~Txt~Color temperature CTO White~Extra~#ffffff|R15|Begin~112~End~119~Txt~White~Extra~#ffffff|R16|Begin~120~End~127~Txt~Color temperature CTB White~Extra~#ffffff|R17|Begin~128~End~128~Txt~ColorFade stop|R18|Begin~129~End~223~Txt~ColorFade|R19|Begin~224~End~255~Txt~Random colors slow..fast
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
@@ -18,7 +18,7 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter / Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~47~Txt~Pulse Random timing|R3|Begin~48~End~79~Txt~RampUp Random timing|R4|Begin~80~End~111~Txt~RampDown Random timing|R5|Begin~112~End~143~Txt~RampUpDown Random timing|R6|Begin~144~End~199~Txt~Strobe blackout pause|R7|Begin~200~End~239~Txt~Strobe 0Hz..14Hz|R8|Begin~240~End~255~Txt~Open
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 ID|CTC|Type|27|R1|Begin~0~End~255~Txt~10000K..2500K
 ID|Settings|Type|0|R1|Begin~0~End~38~Txt~No function|R2|Begin~39~End~41~Txt~3s Dimmer curve extra-soft|R3|Begin~42~End~44~Txt~3s Dimmer curve soft|R4|Begin~45~End~47~Txt~3s Dimmer curve linear|R5|Begin~48~End~56~Txt~No function|R6|Begin~57~End~59~Txt~3s Display auto-off|R7|Begin~60~End~62~Txt~3s Display permanently on|R8|Begin~63~End~65~Txt~3s Display invert off|R9|Begin~66~End~68~Txt~3s Display invert on|R10|Begin~69~End~71~Txt~No function|R11|Begin~72~End~74~Txt~3s No DMX: Blackout|R12|Begin~75~End~77~Txt~3s No DMX: Hold current effect|R13|Begin~78~End~86~Txt~No function|R14|Begin~87~End~89~Txt~3s Fans temperature-regulated|R15|Begin~90~End~92~Txt~3s Fans constant high|R16|Begin~93~End~95~Txt~3s Fans constant medium|R17|Begin~96~End~98~Txt~3s Fans constant low|R18|Begin~99~End~104~Txt~No function|R19|Begin~105~End~107~Txt~3s P/T position feedback off|R20|Begin~108~End~110~Txt~3s P/T position feedback on|R21|Begin~111~End~116~Txt~No function|R22|Begin~117~End~119~Txt~3s Tilt invert off|R23|Begin~120~End~122~Txt~3s Tilt invert on|R24|Begin~123~End~125~Txt~3s Pan invert off|R25|Begin~126~End~128~Txt~3s Pan invert on|R26|Begin~129~End~131~Txt~3s Zoom invert off|R27|Begin~132~End~134~Txt~3s Zoom invert off|R28|Begin~135~End~149~Txt~No function|R29|Begin~150~End~186~Txt~582..618 5s PWM frequency (Hz)|R30|Begin~187~End~191~Txt~No function|R31|Begin~192~End~194~Txt~5s PWM frequency 1200Hz|R32|Begin~195~End~197~Txt~5s PWM frequency 2400Hz|R33|Begin~198~End~200~Txt~5s PWM frequency 4800Hz|R34|Begin~201~End~203~Txt~5s PWM frequency 9600Hz|R35|Begin~204~End~251~Txt~No function|R36|Begin~252~End~255~Txt~3s Reset entire fixture
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 35deg..3.7deg

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2020/06/Nova_P300c_Manual_20200722-EN.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/nova-p300c/|LinkType3|video|Url3|https://www.youtube.com/watch?v=qr-QiRpwijI|LinkType4|other|Url4|https://www.aputure.com/wp-content/uploads/2021/02/Nova-P300c-DMX-Table_2020-12-09.xlsx
 [GENERAL]
-Manufacturer|Aputure|Name|Nova P300c|Type|3|Authors|Peter Zuiderent, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Aputure|Name|Nova P300c|Type|3|Authors|Peter Zuiderent, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|562|Height|457|Depth|166|Weight|10.35|Power|300|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

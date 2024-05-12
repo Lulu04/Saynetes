@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/60873_MANUAL_GB_V1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=0WMvc7GCGFQ
 [GENERAL]
-Manufacturer|Showtec|Name|Atmos 2000|Type|10|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Atmos 2000|Type|10|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|320|Height|320|Depth|500|Weight|7.04|Power|2000|Connector|3-pin
 [CHAN_DEF]

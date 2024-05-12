@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/8787/ADJ%20Starburst%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/starburst|LinkType3|video|Url3|https://www.youtube.com/watch?v=SetHSmR7J6c|LinkType4|video|Url4|https://www.youtube.com/watch?v=haRjymezIig|LinkType5|video|Url5|https://www.youtube.com/watch?v=WXHROB4soLs
 [GENERAL]
-Manufacturer|American DJ|Name|Starburst|Type|33|Authors|Gerard Fontanillas|Creator|Saynètes 3.1.0
+Manufacturer|American DJ|Name|Starburst|Type|33|Authors|Gerard Fontanillas|Creator|OFL
 [PHYSICAL]
 Width|318|Height|412|Depth|318|Weight|3.65|Power|55|Connector|3-pin|Bulb|5x 15W RGBWAUV LEDs|Lens|34 beams|LensMinDegree|1.000|LensMaxDegree|1.000
 [CHAN_DEF]

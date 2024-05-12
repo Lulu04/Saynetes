@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/42110196-Manual-102442-1.00-eurolite-led-big-party-tcl-spot-en_de.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn42110196-eurolite-led-big-party-tcl-spot.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=2zlm7RiVOKY
 [GENERAL]
-Manufacturer|Eurolite|Name|LED Big PARty TCL Spot|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED Big PARty TCL Spot|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|150|Height|245|Depth|255|Weight|1.00|Power|50|Connector|3-pin|Bulb|54x 3W TCL RGB LEDs|LensMinDegree|12.000|LensMaxDegree|12.000
 [CHAN_DEF]

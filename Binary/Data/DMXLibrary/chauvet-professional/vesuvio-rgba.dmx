@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://web.archive.org/web/20160421173724/http://www.chauvetprofessional.com/products/vesuvio-rgba/|LinkType2|manual|Url2|https://www.chauvetprofessional.com/wp-content/uploads/2015/06/Vesuvio-RGBA_UM_Rev4_WO.pdf|LinkType3|video|Url3|https://www.youtube.com/watch?v=HH5G92l4USw
 [GENERAL]
-Manufacturer|Chauvet Professional|Name|Vesuvio RGBA|Type|10|Authors|Beerady, Luke Nelson|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet Professional|Name|Vesuvio RGBA|Type|10|Authors|Beerady, Luke Nelson|Creator|OFL
 [PHYSICAL]
 Width|336|Height|488|Depth|231|Weight|13.60|Power|1590|Connector|3-pin and 5-pin|Bulb|LED
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_531015_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_remus_hexspot_515.htm|LinkType3|video|Url3|https://video1.thomann.de/vidiot/02591c1c/video_i11407p10_yd59vqpa.mp4
 [GENERAL]
-Manufacturer|Stairville|Name|Remus HexSpot 515|Type|16|Authors|LGK, Ken Harris, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Stairville|Name|Remus HexSpot 515|Type|16|Authors|LGK, Ken Harris, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|225|Height|230|Depth|190|Weight|2.50|Power|100|Connector|3-pin|Bulb|RGBWAUV|LensMinDegree|30.000|LensMaxDegree|30.000
 [CHAN_DEF]

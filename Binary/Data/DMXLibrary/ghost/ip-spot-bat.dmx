@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|video|Url1|https://www.youtube.com/watch?v=_nbH55XYGYU
 [GENERAL]
-Manufacturer|Ghost|Name|IP Spot Bat|Type|16|Authors|zampano|Creator|Saynètes 3.1.0
+Manufacturer|Ghost|Name|IP Spot Bat|Type|16|Authors|zampano|Creator|OFL
 [PHYSICAL]
 Width|240|Height|165|Depth|210|Weight|3.00|Power|72|Connector|3-pin|Bulb|6x12W RGWAUV LEDs|LensMinDegree|40.000|LensMaxDegree|40.000
 [CHAN_DEF]

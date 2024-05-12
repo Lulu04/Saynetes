@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/en_US/-/EUR/ViewProductAttachment-ResolveManualURL?File=EN_LIG0013274-000.pdf|LinkType2|product page|Url2|https://www.musicstore.com/en_US/USD/lightmaXX-LED-NANO-PAR-black-12-1W-LED-RGBW/art-LIG0013274-000|LinkType3|video|Url3|https://www.youtube.com/watch?v=UakWorWVxpE
 [GENERAL]
-Manufacturer|lightmaXX|Name|LED Nano PAR|Type|16|Authors|Peter Eisemann, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|lightmaXX|Name|LED Nano PAR|Type|16|Authors|Peter Eisemann, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|150|Height|140|Depth|115|Weight|0.40|Power|15|Connector|3-pin|Bulb|12× 1W LED|Lens|15mm Edison EDOL 25|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

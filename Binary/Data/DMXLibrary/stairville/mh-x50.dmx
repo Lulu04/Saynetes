@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/250558_c_250558_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_mhx50_led_spot_moving_head.htm|LinkType3|video|Url3|https://video2.thomann.de//vidiot/02591c1c/video_i2514p10_yd59vqpa.mp4
 [GENERAL]
@@ -23,6 +23,6 @@ ID|Special Functions|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~15~T
 ID|Built-in Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Program 1|R3|Begin~24~End~39~Txt~Program 2|R4|Begin~40~End~55~Txt~Program 3|R5|Begin~56~End~71~Txt~Program 4|R6|Begin~72~End~87~Txt~Program 5|R7|Begin~88~End~103~Txt~Program 6|R8|Begin~104~End~119~Txt~Program 7|R9|Begin~120~End~135~Txt~Program 8|R10|Begin~136~End~151~Txt~Music controlled 1|R11|Begin~152~End~167~Txt~Music controlled 2|R12|Begin~168~End~183~Txt~Music controlled 3|R13|Begin~184~End~199~Txt~Music controlled 4|R14|Begin~200~End~215~Txt~Music controlled 5|R15|Begin~216~End~231~Txt~Music controlled 6|R16|Begin~232~End~247~Txt~Music controlled 7|R17|Begin~248~End~255~Txt~Music controlled 8
 [END_CHAN_DEF]
 [MODES]
-Name|8ch|Content|Pan~Tilt~Color Wheel~Shutter~Gobo Wheel~Gobo Rotation~Prism~Focus
-Name|14ch|Content|Pan~Tilt~Pan fine~Tilt fine~Speed~Color Wheel~Shutter~Dimmer~Gobo Wheel~Gobo Rotation~Special Functions~Built-in Programs~Prism~Focus
+Name|8ch|ShortName|8ch|Content|Pan~Tilt~Color Wheel~Shutter~Gobo Wheel~Gobo Rotation~Prism~Focus
+Name|14ch|ShortName|14ch|Content|Pan~Tilt~Pan fine~Tilt fine~Speed~Color Wheel~Shutter~Dimmer~Gobo Wheel~Gobo Rotation~Special Functions~Built-in Programs~Prism~Focus
 [END_MODES]

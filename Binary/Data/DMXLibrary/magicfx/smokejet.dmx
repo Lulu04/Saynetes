@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.magicfx.eu/app/uploads/2020/01/MAGICFX_SMOKEJET_MANUAL.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20230318035556/https://www.magicfx.eu/product/magicfx-smokejet/|LinkType3|video|Url3|https://www.youtube.com/watch?v=amAVrtUQr4g
 [GENERAL]
-Manufacturer|MagicFX|Name|SMOKEJET|Type|10|Authors|MAGIC FX B.V.|Creator|Saynètes 3.1.0
+Manufacturer|MagicFX|Name|SMOKEJET|Type|10|Authors|MAGIC FX B.V.|Creator|OFL
 [PHYSICAL]
 Width|193|Height|380|Depth|345|Weight|12.60|Power|1420|Connector|5-pin
 [CHAN_DEF]

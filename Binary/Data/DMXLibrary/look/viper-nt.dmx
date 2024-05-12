@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.looksolutions.com/uploads/pdf/bed_vipernt_1d.pdf|LinkType2|product page|Url2|https://www.looksolutions.com/produkte/viper_nt/2.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=uw4HNAFkKgQ|LinkType4|video|Url4|https://www.youtube.com/watch?v=QYufuVasJWc
 [GENERAL]
-Manufacturer|Look Solutions|Name|Viper NT|Type|10|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Look Solutions|Name|Viper NT|Type|10|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|230|Height|240|Depth|470|Weight|8.60|Power|1300|Connector|5-pin
 [CHAN_DEF]

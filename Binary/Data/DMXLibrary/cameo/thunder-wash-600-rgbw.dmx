@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.cameolight.com/en/downloads/file/id/1645193924|LinkType2|product page|Url2|https://www.cameolight.com/en/solutions/dj-musicians/static-lighting/floodlights/20046/thunder-wash-600-rgbw|LinkType3|video|Url3|https://www.youtube.com/watch?v=25oJ8szwaIg
 [GENERAL]
-Manufacturer|cameo|Name|Thunder Wash 600 RGBW|Type|28|Authors|Paolo, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Thunder Wash 600 RGBW|Type|28|Authors|Paolo, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|338|Height|197|Depth|87|Weight|3.10|Power|160|Connector|3-pin|Bulb|648× 0.2W quad LEDs|LensMinDegree|75.000|LensMaxDegree|75.000
 [CHAN_DEF]

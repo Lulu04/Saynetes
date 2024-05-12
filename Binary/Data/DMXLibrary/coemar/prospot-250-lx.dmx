@@ -8,9 +8,9 @@ Manufacturer|Coemar|Name|ProSpot 250 LX|Type|9|Authors|Flo Edelmann|Creator|OFL
 Width|350|Height|510|Depth|377|Weight|23.50|Power|460|Connector|3-pin|Bulb|Philips MSD 250W/2|Lumens|18000|LensMinDegree|15.000|LensMaxDegree|15.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..530deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..284deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~10~Txt~fast standard|R2|Begin~11~End~25~Txt~200% for programming|R3|Begin~26~End~127~Txt~fast..slow Vector mode|R4|Begin~128~End~247~Txt~fast..slow Tracking mode|R5|Begin~248~End~255~Txt~slow Tracking mode
 ID|Dimmer|Type|2|R1|Begin~0~End~7~Txt~off|R2|Begin~8~End~255~Txt~dark..bright
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Closed|R2|Begin~10~End~66~Txt~Strobe 0Hz..10Hz|R3|Begin~67~End~68~Txt~Open|R4|Begin~69~End~125~Txt~RampDown slow..fast|R5|Begin~126~End~127~Txt~Open|R6|Begin~128~End~184~Txt~RampUp slow..fast|R7|Begin~185~End~187~Txt~Open|R8|Begin~188~End~244~Txt~Strobe slow..fast Random timing|R9|Begin~245~End~255~Txt~Open

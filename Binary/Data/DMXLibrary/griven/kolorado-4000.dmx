@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://www.carlosmendoza.com.mx/Descargas/Griven_Kolorado_4000_manual.pdf
 [GENERAL]
-Manufacturer|Griven|Name|Kolorado 4000|Type|25|Authors|David Olvera|Creator|Saynètes 3.1.0
+Manufacturer|Griven|Name|Kolorado 4000|Type|25|Authors|David Olvera|Creator|OFL
 [PHYSICAL]
 Width|620|Height|821|Depth|623|Weight|53.00|Power|4000|Connector|3-pin|Bulb|HMI 4000W SE G38|Lumens|380000
 [CHAN_DEF]

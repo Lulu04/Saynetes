@@ -19,8 +19,8 @@ ID|Shutter/Strobe|Type|0|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Ope
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~Blackout while moving|R3|Begin~236~End~245~Txt~Blackout while wheel is changing|R4|Begin~246~End~255~Txt~No function
 ID|Reset & Internal Programs|Type|0|R1|Begin~0~End~19~Txt~Color Change Normal|R2|Begin~20~End~39~Txt~Color Change To Any Position|R3|Begin~40~End~79~Txt~No function|R4|Begin~80~End~84~Txt~All Motor Reset|R5|Begin~85~End~87~Txt~P/T Motor Reset|R6|Begin~88~End~90~Txt~Color Motor Reset|R7|Begin~91~End~93~Txt~Gobo Motor Reset|R8|Begin~94~End~96~Txt~No function|R9|Begin~97~End~99~Txt~Other Motor Reset|R10|Begin~100~End~119~Txt~Internal Program 1|R11|Begin~120~End~139~Txt~Internal Program 2|R12|Begin~140~End~159~Txt~Internal Program 3|R13|Begin~160~End~179~Txt~Internal Program 4|R14|Begin~180~End~199~Txt~Internal Program 5|R15|Begin~200~End~219~Txt~Internal Program 6|R16|Begin~220~End~239~Txt~Internal Program 7|R17|Begin~240~End~255~Txt~Sound Active Program
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|12-channel|ShortName|12ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Prism/Gobo Macro~Prism Rotation~Focus~Shutter/Strobe~Dimmer~Pan/Tilt Speed~Reset & Internal Programs

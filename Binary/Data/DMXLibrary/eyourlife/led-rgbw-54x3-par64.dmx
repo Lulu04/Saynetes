@@ -1,7 +1,7 @@
 [SAYNETE]
 Version|3.1.0
 [GENERAL]
-Manufacturer|Eyourlife|Name|LED RGBW 54x3 Par64|Type|17|Authors|Moss|Creator|Saynètes 3.1.0
+Manufacturer|Eyourlife|Name|LED RGBW 54x3 Par64|Type|17|Authors|Moss|Creator|OFL
 [PHYSICAL]
 Width|230|Height|220|Depth|255|Weight|4.50|Power|170|Connector|3-pin|Bulb|LED|Lumens|500|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

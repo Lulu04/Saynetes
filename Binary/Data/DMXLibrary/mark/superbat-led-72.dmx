@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.eafg.es/productos/Docs/Manuales/SUPERBAT_LED_72_MANUAL_20160920113641.pdf|LinkType2|product page|Url2|https://products.equipson.es/superbat-led-72
 [GENERAL]
-Manufacturer|Mark|Name|SUPERBAT LED 72|Type|26|Authors|Gerard Fontanillas|Creator|Saynètes 3.1.0
+Manufacturer|Mark|Name|SUPERBAT LED 72|Type|26|Authors|Gerard Fontanillas|Creator|OFL
 [PHYSICAL]
 Width|135|Height|135|Depth|210|Weight|2.50|Power|140|Connector|3-pin|Bulb|6x 12W RGBWAUV LEDs
 [CHAN_DEF]

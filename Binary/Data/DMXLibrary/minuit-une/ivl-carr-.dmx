@@ -3,56 +3,56 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://minuitune.com/wp-content/uploads/2018/04/DMX_sheet_IVL_Carre_and_IVL_Pyramide.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=YAKrrMRgdIo
 [GENERAL]
-Manufacturer|Minuit Une|Name|IVL Carré|Type|22|Authors|ameisso|Creator|Saynètes 3.1.0
+Manufacturer|Minuit Une|Name|IVL Carré|Type|22|Authors|ameisso|Creator|OFL
 [PHYSICAL]
 Width|594|Height|200|Depth|552|Weight|13.00|Power|125|Connector|5-pin|Bulb|Laser
 [CHAN_DEF]
 ID|Control|Type|0|DefaultValue|191|R1|Begin~0~End~23~Txt~Off|R2|Begin~24~End~49~Txt~Reset|R3|Begin~50~End~255~Txt~On
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Blade Rotation|Type|30|R1|Begin~0~End~255~Txt~0deg..360deg
-ID|Blade Rotation fine|Type|30|R1|Begin~0~End~255~Txt~
+ID|Blade Rotation fine|Type|30
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter|Type|6|R1|Begin~0~End~14~Txt~Open|R2|Begin~15~End~27~Txt~Closed|R3|Begin~28~End~227~Txt~Strobe 30bpm..1440bpm|R4|Begin~228~End~255~Txt~Open
 ID|Tilt All|Type|8|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~255~Txt~0deg..360deg
-ID|Tilt All fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt All fine|Type|8
 ID|Tilt 1|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
-ID|Tilt 1 fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt 1 fine|Type|8
 ID|Tilt 2|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
-ID|Tilt 2 fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt 2 fine|Type|8
 ID|Tilt 3|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
-ID|Tilt 3 fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt 3 fine|Type|8
 ID|Tilt 4|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
-ID|Tilt 4 fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt 4 fine|Type|8
 ID|Gobo All|Type|10|R1|Begin~0~End~36~Txt~1 Beam|R2|Begin~37~End~73~Txt~2 Beams|R3|Begin~74~End~110~Txt~3 Beams|R4|Begin~111~End~147~Txt~8 Beams|R5|Begin~148~End~184~Txt~16 Beams|R6|Begin~185~End~255~Txt~32 Beams
 ID|Index|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
-ID|Index fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Index fine|Type|33
 ID|Rotation|Type|33|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~122~Txt~Rotation fast CCW|R3|Begin~123~End~133~Txt~Rotation stop|R4|Begin~134~End~242~Txt~Rotation fast CW|R5|Begin~243~End~255~Txt~No function
 ID|Gobo Beam Angle all|Type|0|R1|Begin~0~End~255~Txt~Beam angle 0deg..360deg
-ID|Gobo Beam Angle all fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Gobo Beam Angle all fine|Type|0
 ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
 ID|Red Gobo|Type|10|R1|Begin~0~End~36~Txt~1 Beam|R2|Begin~37~End~73~Txt~2 Beams|R3|Begin~74~End~110~Txt~4 Beams|R4|Begin~111~End~147~Txt~8 Beams|R5|Begin~148~End~184~Txt~16 Beams|R6|Begin~185~End~221~Txt~32 Beams|R7|Begin~222~End~255~Txt~64 Beams
 ID|Index Red|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
-ID|Index Red fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Index Red fine|Type|33
 ID|Rotation Red|Type|33|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~122~Txt~Rotation fast CCW|R3|Begin~123~End~133~Txt~Rotation stop|R4|Begin~134~End~242~Txt~Rotation fast CW|R5|Begin~243~End~255~Txt~No function
-ID|Rotation Red fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Rotation Red fine|Type|33
 ID|Gobo Beam Angle Red|Type|31|R1|Begin~0~End~255~Txt~Zoom 0deg..360deg
-ID|Gobo Beam Angle Red fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Gobo Beam Angle Red fine|Type|31
 ID|Green Gobo|Type|10|R1|Begin~0~End~36~Txt~1 Beam|R2|Begin~37~End~73~Txt~2 Beams|R3|Begin~74~End~110~Txt~3 Beams|R4|Begin~111~End~147~Txt~8 Beams|R5|Begin~148~End~184~Txt~16 Beams|R6|Begin~185~End~221~Txt~32 Beams|R7|Begin~222~End~255~Txt~64 Beams
 ID|Index Green|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
-ID|Index Green fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Index Green fine|Type|33
 ID|Rotation Green|Type|33|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~122~Txt~Rotation fast CCW|R3|Begin~123~End~133~Txt~Rotation stop|R4|Begin~134~End~242~Txt~Rotation fast CW|R5|Begin~243~End~255~Txt~No function
-ID|Rotation Green fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Rotation Green fine|Type|33
 ID|Gobo Beam Angle Green|Type|31|R1|Begin~0~End~255~Txt~Zoom 0deg..360deg
-ID|Gobo Beam Angle Green fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Gobo Beam Angle Green fine|Type|31
 ID|Blue Gobo|Type|10|R1|Begin~0~End~36~Txt~1 Beam|R2|Begin~37~End~73~Txt~2 Beams|R3|Begin~74~End~110~Txt~3 Beams|R4|Begin~111~End~147~Txt~8 Beams|R5|Begin~148~End~184~Txt~16 Beams|R6|Begin~185~End~221~Txt~32 Beams|R7|Begin~222~End~255~Txt~64 Beams
 ID|Index Blue|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
-ID|Index Blue fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Index Blue fine|Type|33
 ID|Rotation Blue|Type|33|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~122~Txt~Rotation fast CCW|R3|Begin~123~End~133~Txt~Rotation stop|R4|Begin~134~End~242~Txt~Rotation fast CW|R5|Begin~243~End~255~Txt~No function
-ID|Rotation Blue fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Rotation Blue fine|Type|33
 ID|Gobo Beam Angle Blue|Type|31|R1|Begin~0~End~255~Txt~Zoom 0deg..360deg
-ID|Gobo Beam Angle Blue fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Gobo Beam Angle Blue fine|Type|31
 [END_CHAN_DEF]
 [MODES]
 Name|25 channel|ShortName|25ch|Content|Control~Dimmer~Blade Rotation~Blade Rotation fine~Red~Green~Blue~Shutter~Tilt All~Tilt All fine~Tilt 1~Tilt 1 fine~Tilt 2~Tilt 2 fine~Tilt 3~Tilt 3 fine~Tilt 4~Tilt 4 fine~Gobo All~Index~Index fine~Rotation~Gobo Beam Angle all~Gobo Beam Angle all fine~NotUsed

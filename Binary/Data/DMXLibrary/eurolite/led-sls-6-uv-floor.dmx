@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/download_t/51915282-MANUAL-1.10-en-de_00102317.pdf
 [GENERAL]
-Manufacturer|Eurolite|Name|LED SLS-6 UV Floor|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED SLS-6 UV Floor|Type|16|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|230|Height|230|Depth|110|Weight|1.00|Power|20|Connector|3-pin
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/7156/dekker_led.pdf|LinkType2|product page|Url2|https://www.adj.com/dekker-led|LinkType3|video|Url3|https://www.youtube.com/watch?v=vq36Zvue0dU
 [GENERAL]
-Manufacturer|American DJ|Name|Dekker LED|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|American DJ|Name|Dekker LED|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|280|Height|260|Depth|251|Weight|3.85|Power|25|Connector|3-pin|Bulb|2x 5W RGBW LEDs
 [CHAN_DEF]

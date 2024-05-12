@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLTW600RGB/CLTW600RGB_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=bAnmeHVZfe0
 [GENERAL]
-Manufacturer|cameo|Name|Thunder Wash 600 RGB|Type|28|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Thunder Wash 600 RGB|Type|28|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|335|Height|182|Depth|93|Weight|3.25|Power|130|Connector|3-pin|Bulb|LED|LensMinDegree|75.000|LensMaxDegree|75.000
 [CHAN_DEF]

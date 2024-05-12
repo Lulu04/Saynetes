@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.robertjuliat.com/Product_Specifications/Fiches_EN/Standard/DSEN045_613SX.pdf|LinkType2|product page|Url2|https://www.robertjuliat.com/profilespots/600SX.html
 [GENERAL]
-Manufacturer|Robert Juliat|Name|613SX|Type|6|Authors|dariovideo|Creator|Saynètes 3.1.0
+Manufacturer|Robert Juliat|Name|613SX|Type|6|Authors|dariovideo|Creator|OFL
 [PHYSICAL]
 Width|330|Height|415|Depth|565|Weight|11.00|Power|1000|Connector|Other|Bulb|Tungsten T19|Lumens|21000|LensMinDegree|28.000|LensMaxDegree|54.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/41602125-Manual-90256-1.10-eurolite-led-tha-100f-theatre-spot-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn41602125-eurolite-led-tha-100f-theatre-spot.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=EByMlz4lq94
 [GENERAL]
-Manufacturer|Eurolite|Name|LED THA-100F|Type|23|Authors|RAZAKANIRINA|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED THA-100F|Type|23|Authors|RAZAKANIRINA|Creator|OFL
 [PHYSICAL]
 Width|305|Height|370|Depth|387|Weight|5.50|Power|120|Connector|3-pin and 5-pin|Bulb|COB warm white 100W LED|LensMinDegree|10.000|LensMaxDegree|50.000
 [CHAN_DEF]

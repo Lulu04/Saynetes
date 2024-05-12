@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/9889/ELATION%20SIXPAR%20200IP%20-%20USER%20MANUAL%202022-02-21.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/sixpar-200ip|LinkType3|video|Url3|https://www.youtube.com/watch?v=vLJvunbVWIU|LinkType4|video|Url4|https://www.youtube.com/watch?v=qQ3m_RDZoMg|LinkType5|video|Url5|https://www.youtube.com/watch?v=oZdkqF0vT1I
 [GENERAL]
-Manufacturer|Elation|Name|SIXPAR 200 IP|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Elation|Name|SIXPAR 200 IP|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|313|Height|300|Depth|157|Weight|5.70|Power|150|Connector|3-pin XLR IP65|Bulb|12x12W RGBAWUV LEDs|LensMinDegree|15.000|LensMaxDegree|15.000
 [CHAN_DEF]

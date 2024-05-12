@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://api.blizzard.lighting/public/Products/hotbox%20exa/downloads/HotBox%20EXA%20Manual%20Rev%20A%20(Web).pdf|LinkType2|product page|Url2|https://www.blizzardpro.com/products/hotbox-exa
 [GENERAL]
-Manufacturer|Blizzard|Name|HotBox EXA|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+Manufacturer|Blizzard|Name|HotBox EXA|Type|16|Authors|Ken Harris|Creator|OFL
 [PHYSICAL]
 Width|127|Height|102|Depth|127|Weight|2.70|Power|58|Connector|3-pin|Bulb|7× 15W RGBAW+UV LEDs|LensMinDegree|26.000|LensMaxDegree|26.000
 [CHAN_DEF]
