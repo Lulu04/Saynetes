@@ -819,12 +819,12 @@ procedure TFormFixtureWizard.EditAuthorsUTF8KeyPress(Sender: TObject; var UTF8Ke
 var flag: boolean;
   c: Char;
 begin
-  flag := Length(UTF8Key) = 1;
+ { flag := Length(UTF8Key) = 1;
   if flag then begin
     c := UTF8Key[1];
     flag := (c in ['a'..'z', 'A'..'Z', '0'..'9', ',', '-', '_', ' ', chr(VK_BACK)]);
   end;
-  if not flag then UTF8Key := '';
+  if not flag then UTF8Key := '';  }
 end;
 
 procedure TFormFixtureWizard.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
