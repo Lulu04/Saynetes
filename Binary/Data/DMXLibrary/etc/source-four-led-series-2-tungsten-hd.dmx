@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737483869|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501163|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/Source-Four-LED-Series-2/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=FXQDFq9jxI0|LinkType5|video|Url5|https://www.youtube.com/watch?v=oEjG8XLzuvs
 [GENERAL]
-Manufacturer|ETC|Name|Source Four LED Series 2 Tungsten HD|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|Source Four LED Series 2 Tungsten HD|Type|23|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|338|Height|615|Depth|631|Weight|8.30|Power|208|Connector|5-pin|Bulb|60× 5-color Lumileds LUXEON® Rebel LED|Lumens|11512|LensMinDegree|5.000|LensMaxDegree|90.000
 [CHAN_DEF]
@@ -18,9 +18,9 @@ ID|Red Orange|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Mint|Type|21|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Indigo|Type|22|R1|Begin~0~End~255~Txt~0..100%
-ID|Hue|Type|2|R1|Begin~0~End~255~Txt~
-ID|Hue fine|Type|2|R1|Begin~0~End~255~Txt~
-ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~
+ID|Hue|Type|2
+ID|Hue fine|Type|2
+ID|Saturation|Type|2
 ID|Red Emulated|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green Emulated|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue Emulated|Type|5|R1|Begin~0~End~255~Txt~0..100%

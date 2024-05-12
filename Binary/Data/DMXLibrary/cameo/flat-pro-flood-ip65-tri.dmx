@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLFLOODIP65TRI/CLFLOODIP65TRI_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf
 [GENERAL]
-Manufacturer|cameo|Name|Flat Pro Flood IP65 Tri|Type|25|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Flat Pro Flood IP65 Tri|Type|25|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|180|Height|180|Depth|120|Weight|3.60|Power|75|Connector|3-pin XLR IP65|Bulb|60 W COB LED|LensMinDegree|120.000|LensMaxDegree|120.000
 [CHAN_DEF]

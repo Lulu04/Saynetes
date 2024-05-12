@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501734|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501408|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/fos/4-Panels/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=VTWd9qrpuW8
 [GENERAL]
-Manufacturer|ETC|Name|fos4PD16|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|fos4PD16|Type|28|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|406|Height|610|Depth|631|Weight|25.40|Power|1070|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

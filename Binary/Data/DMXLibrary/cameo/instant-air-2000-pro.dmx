@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLIA2000PRO/CLIA2000PRO_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|product page|Url2|https://www.cameolight.com/en/solutions/rental/fog-effect-machines/wind-machines/20175/instant-air-2000-pro
 [GENERAL]
-Manufacturer|cameo|Name|Instant Air 2000 Pro|Type|21|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Instant Air 2000 Pro|Type|21|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|385|Height|385|Depth|515|Weight|8.60|Power|250|Connector|3-pin and 5-pin
 [CHAN_DEF]

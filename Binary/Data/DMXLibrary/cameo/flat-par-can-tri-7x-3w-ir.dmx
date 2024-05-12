@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPFLAT1TRI3WIR/CLPFLAT1TRI3WIR_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|manual|Url2|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPFLAT1RGB10IR/CLPFLAT1RGB10IR_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType3|product page|Url3|https://www.coolshop.co.uk/product/cameo-flat-par-tri-3w-ir-led-rgb-par-light-white/AB5D8Y/|LinkType4|video|Url4|https://www.youtube.com/watch?v=mKLHiZFlf4Y
 [GENERAL]
-Manufacturer|cameo|Name|Flat PAR Can Tri 7x 3W IR|Type|16|Authors|Fabian|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Flat PAR Can Tri 7x 3W IR|Type|16|Authors|Fabian|Creator|OFL
 [PHYSICAL]
 Width|180|Height|175|Depth|115|Weight|1.20|Power|25|Connector|3-pin|Bulb|7x 3W RGB LEDs|LensMinDegree|30.000|LensMaxDegree|30.000
 [CHAN_DEF]

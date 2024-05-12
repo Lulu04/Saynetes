@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://drive.google.com/drive/folders/1MNU9qpVMQ3880Og8qXIOpQl60UShyjXo
 [GENERAL]
-Manufacturer|Acoustic Control|Name|PAR 180 COB 3in1|Type|16|Authors|Sergio Collantes|Creator|Saynètes 3.1.0
+Manufacturer|Acoustic Control|Name|PAR 180 COB 3in1|Type|16|Authors|Sergio Collantes|Creator|OFL
 [PHYSICAL]
 Width|220|Height|220|Depth|90|Weight|1.50|Power|150|Connector|3-pin|Bulb|3× 30W COB RGB LED|LensMinDegree|80.000|LensMaxDegree|80.000
 [CHAN_DEF]

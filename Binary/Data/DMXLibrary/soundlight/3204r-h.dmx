@@ -1,11 +1,11 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://soundlight.de/produkte/manuals/3204r-h/english/3204r-h%20rdm%20mk1%20e.pdf|LinkType2|product page|Url2|https://soundlight.de/produkte/3204r-h/index.htm
 [GENERAL]
 Manufacturer|SoundLight|Name|3204R-H|Type|0|Authors|LT-P|Creator|OFL
 [PHYSICAL]
-Width|86|Height|67|Depth|90|Power|3|Connector|3-pin
+Width|86|Height|67|Depth|90|Weight|0|Power|3|Connector|3-pin
 [CHAN_DEF]
 ID|Relay 1|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Relay 2|Type|1|R1|Begin~0~End~255~Txt~0..100%
@@ -13,5 +13,5 @@ ID|Relay 3|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Relay 4|Type|1|R1|Begin~0~End~255~Txt~0..100%
 [END_CHAN_DEF]
 [MODES]
-Name|Relay control|Content|Relay 1~Relay 2~Relay 3~Relay 4
+Name|Relay control|ShortName|Relay control|Content|Relay 1~Relay 2~Relay 3~Relay 4
 [END_MODES]

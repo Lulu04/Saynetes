@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51701970-Manual-58249-1.700-eurolite-n-150-smoke-machine-de_en_es_fr.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51701970-eurolite-n-150-smoke-machine.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=Jwrp7I_kYVs
 [GENERAL]
-Manufacturer|Eurolite|Name|N-150|Type|10|Authors|Matthias Naumann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|N-150|Type|10|Authors|Matthias Naumann|Creator|OFL
 [PHYSICAL]
 Width|300|Height|240|Depth|670|Weight|15.00|Power|1500|Connector|3-pin
 [CHAN_DEF]

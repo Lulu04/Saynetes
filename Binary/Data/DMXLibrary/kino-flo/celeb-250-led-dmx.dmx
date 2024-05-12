@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.kinoflotest2.com/PDF/News/Operational%20Manual%20for%20the%20web/3100105%20Rev%20A%20Celeb%C2%AE%20250-450-450@%20LED%20DMX%2008-10-2017.pdf|LinkType2|manual|Url2|https://www.kinoflotest2.com/PDF/True%20Match%20Firmware%204.0/True%20Match%20Firmware%205.0%20RDM%20DMX%20Personalities%20May%202021.pdf|LinkType3|product page|Url3|https://www.kinoflotest2.com/Products%20Button/LED/Celeb%20250%20DMX/Celeb_250_DMX.html|LinkType4|video|Url4|https://www.youtube.com/watch?v=O_970WxLhdo
 [GENERAL]
-Manufacturer|Kino Flo|Name|Celeb 250 LED DMX|Type|28|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Kino Flo|Name|Celeb 250 LED DMX|Type|28|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|61|Height|36|Depth|13|Weight|6.80|Power|144|Connector|5-pin|Bulb|LED
 [CHAN_DEF]
@@ -17,34 +17,34 @@ ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Effect|Type|0|R1|Begin~0~End~19~Txt~Candle|R2|Begin~20~End~29~Txt~Fire|R3|Begin~30~End~39~Txt~TV|R4|Begin~40~End~49~Txt~Police|R5|Begin~50~End~59~Txt~Lightning|R6|Begin~60~End~69~Txt~Paparazzi|R7|Begin~70~End~79~Txt~Pulse|R8|Begin~80~End~89~Txt~Scroll|R9|Begin~90~End~255~Txt~No function Reserved
-ID|FX Param 1|Type|0|R1|Begin~0~End~255~Txt~
-ID|FX Param 2|Type|0|R1|Begin~0~End~255~Txt~
-ID|FX Param 3|Type|0|R1|Begin~0~End~255~Txt~
-ID|FX Param 4|Type|0|R1|Begin~0~End~255~Txt~
-ID|FX Param 5|Type|0|R1|Begin~0~End~255~Txt~
+ID|FX Param 1|Type|0
+ID|FX Param 2|Type|0
+ID|FX Param 3|Type|0
+ID|FX Param 4|Type|0
+ID|FX Param 5|Type|0
 ID|CIE x|Type|0|R1|Begin~0~End~255~Txt~0…0.85
 ID|CIE y|Type|0|R1|Begin~0~End~255~Txt~0…0.85
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
-ID|Color Temperature fine|Type|27|R1|Begin~0~End~255~Txt~
-ID|Hue fine|Type|0|R1|Begin~0~End~255~Txt~
-ID|Saturation fine|Type|0|R1|Begin~0~End~255~Txt~
-ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
-ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
-ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
-ID|CIE x fine|Type|0|R1|Begin~0~End~255~Txt~
-ID|CIE y fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
+ID|Color Temperature fine|Type|27
+ID|Hue fine|Type|0
+ID|Saturation fine|Type|0
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|CIE x fine|Type|0
+ID|CIE y fine|Type|0
 ID|Crossfade|Type|0|R1|Begin~0~End~255~Txt~CCT … Color Mix
 ID|Color Temperature 2|Type|27|R1|Begin~0~End~255~Txt~2500K..9900K
-ID|Crossfade fine|Type|0|R1|Begin~0~End~255~Txt~
-ID|Color Temperature 2 fine|Type|27|R1|Begin~0~End~255~Txt~
+ID|Crossfade fine|Type|0
+ID|Color Temperature 2 fine|Type|27
 ID|CIE x2|Type|0|R1|Begin~0~End~255~Txt~0…0.85
 ID|CIE y2|Type|0|R1|Begin~0~End~255~Txt~0…0.85
-ID|CIE x2 fine|Type|0|R1|Begin~0~End~255~Txt~
-ID|CIE y2 fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|CIE x2 fine|Type|0
+ID|CIE y2 fine|Type|0
 ID|Tungsten|Type|1|R1|Begin~0~End~255~Txt~0..100% Tungsten
 ID|Daylight|Type|1|R1|Begin~0~End~255~Txt~0..100% Daylight
-ID|Tungsten fine|Type|1|R1|Begin~0~End~255~Txt~
-ID|Daylight fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Tungsten fine|Type|1
+ID|Daylight fine|Type|1
 [END_CHAN_DEF]
 [MODES]
 Name|P1 DIMMING & CCT|ShortName|P1|Content|Dimmer~Color Temperature

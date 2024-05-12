@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.laserworld.com/en/download-file-1243-ShowNET_extern_2020_web.html|LinkType2|product page|Url2|https://www.laserworld.com/en/laser-software/showeditor-set.html
 [GENERAL]
-Manufacturer|Laserworld|Name|ShowNET|Type|0|Authors|elixxx, Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Laserworld|Name|ShowNET|Type|0|Authors|elixxx, Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|0|Height|0|Depth|0|Weight|0|Power|0|Connector|3-pin
 [CHAN_DEF]
@@ -14,9 +14,9 @@ ID|Size|Type|0|R1|Begin~0~End~127~Txt~Beam angle wide..closed width and height|R
 ID|Automatic Size|Type|0|R1|Begin~0~End~63~Txt~No function|R2|Begin~64~End~127~Txt~changing width and height slow..fast|R3|Begin~128~End~191~Txt~changing width slow..fast|R4|Begin~192~End~255~Txt~changing height slow..fast
 ID|Rotation DJ|Type|0|R1|Begin~0~End~192~Txt~Rotation -180deg..180deg|R2|Begin~193~End~224~Txt~Rotation slow CCW..fast CCW|R3|Begin~225~End~255~Txt~Rotation slow CW..fast CW
 ID|Horizontal Position|Type|7|R1|Begin~0~End~255~Txt~Beam position left..right
-ID|Horizontal Position fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Horizontal Position fine|Type|7
 ID|Vertical Position|Type|8|R1|Begin~0~End~255~Txt~Beam position top..bottom
-ID|Vertical Position fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Vertical Position fine|Type|8
 ID|Color Effects|Type|12|R1|Begin~0~End~15~Txt~No function Original colors|R2|Begin~16~End~79~Txt~Single color (monochrome)|R3|Begin~80~End~143~Txt~Replace colors|R4|Begin~144~End~255~Txt~Color change
 ID|Color Effects Extended|Type|0|R1|Begin~0~End~127~Txt~ColorFade|R2|Begin~128~End~192~Txt~ColorJump|R3|Begin~193~End~255~Txt~Automatic change of color fade effects
 ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Strobe slow..fast
@@ -28,7 +28,7 @@ ID|Blanking|Type|0|R1|Begin~0~End~192~Txt~Manual blanking|R2|Begin~193~End~255~T
 ID|Blank Shift|Type|0|R1|Begin~0~End~192~Txt~Manual blank shift|R2|Begin~193~End~255~Txt~slow..fast Automatic blank shift
 ID|Pattern Speed|Type|16|DefaultValue|128|R1|Begin~0~End~255~Txt~0Hz..100Hz
 ID|Rotation|Type|33|R1|Begin~0~End~255~Txt~Rotation -180deg..180deg
-ID|Rotation fine|Type|33|R1|Begin~0~End~255~Txt~
+ID|Rotation fine|Type|33
 ID|Horizontal Size|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam angle wide..closed
 ID|Vertical Size|Type|0|DefaultValue|128|R1|Begin~0~End~255~Txt~Beam angle wide..closed
 ID|Inversion|Type|0|R1|Begin~0~End~63~Txt~No function|R2|Begin~64~End~127~Txt~Invert X axis|R3|Begin~128~End~191~Txt~Invert Y axis|R4|Begin~192~End~255~Txt~Invert X and Y axes

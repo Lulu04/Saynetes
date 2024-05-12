@@ -3,26 +3,26 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R1_Wash_UM_Rev2_WO1.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/rogue-r1-wash/|LinkType3|video|Url3|https://www.youtube.com/watch?v=YWUMAocTR_w
 [GENERAL]
-Manufacturer|Chauvet Professional|Name|Rogue R1 Wash|Type|9|Authors|Ken Harris, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet Professional|Name|Rogue R1 Wash|Type|9|Authors|Ken Harris, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|265|Height|354|Depth|187|Weight|5.90|Power|161|Connector|3-pin and 5-pin|Bulb|7× 15W RGBW LEDs|Lumens|2300|LensMinDegree|8.000|LensMaxDegree|30.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 ID|Shutter|Type|6|R1|Begin~0~End~19~Txt~Closed|R2|Begin~20~End~24~Txt~Open|R3|Begin~25~End~64~Txt~Strobe 20Hz..0Hz|R4|Begin~65~End~69~Txt~Open|R5|Begin~70~End~84~Txt~RampDown fast..slow|R6|Begin~85~End~89~Txt~Open|R7|Begin~90~End~104~Txt~RampUp fast..slow|R8|Begin~105~End~109~Txt~Open|R9|Begin~110~End~124~Txt~Strobe fast..slow Random timing|R10|Begin~125~End~129~Txt~Open|R11|Begin~130~End~144~Txt~RampDown fast..slow Random timing|R12|Begin~145~End~149~Txt~Open|R13|Begin~150~End~164~Txt~RampUp fast..slow Random timing|R14|Begin~165~End~169~Txt~Open|R15|Begin~170~End~184~Txt~Pulse fast..slow|R16|Begin~185~End~189~Txt~Open|R17|Begin~190~End~204~Txt~Pulse Random timing|R18|Begin~205~End~209~Txt~Open|R19|Begin~210~End~224~Txt~RampUpDown fast..slow|R20|Begin~225~End~229~Txt~Open|R21|Begin~230~End~244~Txt~Pulse fast..slow|R22|Begin~245~End~255~Txt~Open
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
-ID|Red fine|Type|3|R1|Begin~0~End~255~Txt~
+ID|Red fine|Type|3
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
-ID|Green fine|Type|4|R1|Begin~0~End~255~Txt~
+ID|Green fine|Type|4
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
-ID|Blue fine|Type|5|R1|Begin~0~End~255~Txt~
+ID|Blue fine|Type|5
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|White fine|Type|13|R1|Begin~0~End~255~Txt~
+ID|White fine|Type|13
 ID|Color Presets|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~9~Txt~Color 1 = White~Extra~#ffffff|R3|Begin~10~End~14~Txt~Color 2~Extra~#ffeb34|R4|Begin~15~End~19~Txt~Color 3~Extra~#d68630|R5|Begin~20~End~24~Txt~Color 4~Extra~#ff002c|R6|Begin~25~End~29~Txt~Color 5~Extra~#ff3b71|R7|Begin~30~End~34~Txt~Color 6~Extra~#ff8adb|R8|Begin~35~End~39~Txt~Color 7~Extra~#e2afe2|R9|Begin~40~End~44~Txt~Color 8~Extra~#2801ff|R10|Begin~45~End~49~Txt~Color 9~Extra~#0000ff|R11|Begin~50~End~54~Txt~Color 10~Extra~#004eff|R12|Begin~55~End~59~Txt~Color 11~Extra~#00c7ff|R13|Begin~60~End~64~Txt~Color 12~Extra~#00ffea|R14|Begin~65~End~69~Txt~Color 13~Extra~#95f6ff|R15|Begin~70~End~74~Txt~Color 14~Extra~#89ffe3|R16|Begin~75~End~79~Txt~Color 15~Extra~#d5dcde|R17|Begin~80~End~84~Txt~Color 16~Extra~#dbe8af|R18|Begin~85~End~89~Txt~Color 17~Extra~#cdffc7|R19|Begin~90~End~94~Txt~Color 18~Extra~#73ffa5|R20|Begin~95~End~99~Txt~Color 19~Extra~#06ff8f|R21|Begin~100~End~104~Txt~Color 20~Extra~#00ff5e|R22|Begin~105~End~109~Txt~Color 21~Extra~#1dff00|R23|Begin~110~End~114~Txt~Color 22~Extra~#20df00|R24|Begin~115~End~119~Txt~Color 23~Extra~#4bff00|R25|Begin~120~End~124~Txt~Color 24~Extra~#50e800|R26|Begin~125~End~129~Txt~Color 25~Extra~#6ce200|R27|Begin~130~End~134~Txt~Color 26~Extra~#91c200|R28|Begin~135~End~139~Txt~Color 27~Extra~#d2ff00|R29|Begin~140~End~144~Txt~Color 28~Extra~#e1e800|R30|Begin~145~End~149~Txt~Color 29~Extra~#17d700|R31|Begin~150~End~154~Txt~Color 30~Extra~#f7d600|R32|Begin~155~End~159~Txt~Color 31~Extra~#ffa300|R33|Begin~160~End~164~Txt~Color 32~Extra~#ff9800|R34|Begin~165~End~169~Txt~Color 33~Extra~#ff6c00|R35|Begin~170~End~174~Txt~Color 34 = Full White~Extra~#ffffff|R36|Begin~175~End~179~Txt~Closed~Extra~#000000|R37|Begin~180~End~201~Txt~ColorFade fast..slow|R38|Begin~202~End~207~Txt~ColorFade stop|R39|Begin~208~End~229~Txt~ColorFade fast reverse..slow reverse|R40|Begin~230~End~234~Txt~Closed~Extra~#000000|R41|Begin~235~End~249~Txt~ColorFade|R42|Begin~250~End~255~Txt~Closed~Extra~#000000
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 8deg..30deg
 ID|Movement Macros|Type|38|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Effect 1|R3|Begin~24~End~39~Txt~Effect 2|R4|Begin~40~End~55~Txt~Effect 3|R5|Begin~56~End~71~Txt~Effect 4|R6|Begin~72~End~87~Txt~Effect 5|R7|Begin~88~End~103~Txt~Effect 6|R8|Begin~104~End~119~Txt~Effect 7|R9|Begin~120~End~135~Txt~Effect 8|R10|Begin~136~End~151~Txt~Effect 9|R11|Begin~152~End~167~Txt~Effect 10|R12|Begin~168~End~183~Txt~Effect 11|R13|Begin~184~End~199~Txt~Effect 12|R14|Begin~200~End~215~Txt~Effect 13|R15|Begin~216~End~231~Txt~Effect 14|R16|Begin~232~End~247~Txt~Effect 15|R17|Begin~248~End~255~Txt~Effect 16

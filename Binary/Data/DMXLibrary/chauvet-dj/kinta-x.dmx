@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://m.jam.ua/files/files/KintaX_UM_Rev4_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/news/kinta-x-becomes-an-led-powerhouse/|LinkType3|video|Url3|https://www.youtube.com/watch?v=yM4Mz510LHk
 [GENERAL]
-Manufacturer|Chauvet DJ|Name|Kinta X|Type|26|Authors|Mikey Rowlands|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet DJ|Name|Kinta X|Type|26|Authors|Mikey Rowlands|Creator|OFL
 [PHYSICAL]
 Width|283|Height|297|Depth|264|Weight|2.70|Power|24|Connector|3-pin|Bulb|3× 3W LEDs (1× red, green, blue each)|LensMinDegree|135.000|LensMaxDegree|135.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPFLAT1RGB10IR/CLPFLAT1RGB10IR_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|manual|Url2|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPFLAT1TRI3WIR/CLPFLAT1TRI3WIR_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType3|product page|Url3|https://blog.adamhall.com/en/2015/03/09/cameo-clpflat1rgb10ir-led-scheinwerfer-fur-kleine-events-testbericht-von-delamar-de/|LinkType4|video|Url4|https://www.youtube.com/watch?v=7otHVQmaCfw
 [GENERAL]
-Manufacturer|cameo|Name|Flat PAR Can RGB 10 IR|Type|18|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Flat PAR Can RGB 10 IR|Type|18|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|180|Height|175|Depth|115|Weight|1.20|Power|15|Connector|3-pin|Bulb|144x 10mm LEDs (48 red, 48 green, 48 blue)|LensMinDegree|14.000|LensMaxDegree|14.000
 [CHAN_DEF]

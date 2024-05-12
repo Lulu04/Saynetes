@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.levenly.com/photo/maxi/nicols_pat_252_dmx_fiche_technique.jpg|LinkType2|video|Url2|https://www.youtube.com/watch?v=YbxBEFb9ACk
 [GENERAL]
@@ -14,5 +14,5 @@ ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..180deg
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..60deg
 [END_CHAN_DEF]
 [MODES]
-Name|Default|Content|Shutter~Gobo Wheel~Color Wheel~Pan~Tilt
+Name|Default|ShortName|Default|Content|Shutter~Gobo Wheel~Color Wheel~Pan~Tilt
 [END_MODES]

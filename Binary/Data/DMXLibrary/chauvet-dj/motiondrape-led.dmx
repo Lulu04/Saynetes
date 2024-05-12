@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/MotionDrapeLED_UM_Rev9_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/motiondrape-led/|LinkType3|video|Url3|https://www.youtube.com/watch?v=K0w2q8dIJHg
 [GENERAL]
-Manufacturer|Chauvet DJ|Name|MotionDrape LED|Type|28|Authors|Michael H Perbix|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet DJ|Name|MotionDrape LED|Type|28|Authors|Michael H Perbix|Creator|OFL
 [PHYSICAL]
 Width|135|Height|50|Depth|243|Weight|4.40|Power|54|Connector|3-pin|Bulb|176× LED
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.magicfx.eu/app/uploads/2020/01/MAGICFX_PSYCO2JET_MANUAL.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20230318035553/https://www.magicfx.eu/product/magicfx-psyco2jet/|LinkType3|video|Url3|https://www.youtube.com/watch?v=l9QZ8UaUbmg|LinkType4|video|Url4|https://www.youtube.com/watch?v=E4rW5SLIgoo
 [GENERAL]
-Manufacturer|MagicFX|Name|PSYCO2JET|Type|10|Authors|MAGIC FX B.V.|Creator|Saynètes 3.1.0
+Manufacturer|MagicFX|Name|PSYCO2JET|Type|10|Authors|MAGIC FX B.V.|Creator|OFL
 [PHYSICAL]
 Width|250|Height|165|Depth|330|Weight|9.00|Power|35|Connector|5-pin
 [CHAN_DEF]

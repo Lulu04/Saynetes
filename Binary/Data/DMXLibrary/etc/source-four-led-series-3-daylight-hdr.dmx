@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737510600|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737506242|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/Source-Four-LED-Series-3/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=OjdVerorbMs
 [GENERAL]
-Manufacturer|ETC|Name|Source Four LED Series 3 Daylight HDR|Type|23|Authors|Jeppe Cohrt, Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|Source Four LED Series 3 Daylight HDR|Type|23|Authors|Jeppe Cohrt, Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|216|Height|298|Depth|700|Weight|8.90|Power|307|Connector|5-pin|Bulb|90 Lumileds LUXEON® C and CZ|Lumens|10889|LensMinDegree|5.000|LensMaxDegree|90.000
 [CHAN_DEF]

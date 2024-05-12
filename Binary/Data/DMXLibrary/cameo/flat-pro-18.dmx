@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLPFLATPRO7/CLPFLATPRO7-12-18_Cameo_Bedienungsanleitung_EN_DE_FR_ES.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=MtzWwkFTuFk
 [GENERAL]
-Manufacturer|cameo|Name|Flat Pro 18|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Flat Pro 18|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|280|Height|280|Depth|130|Weight|7.40|Power|200|Connector|3-pin and 5-pin
 [CHAN_DEF]

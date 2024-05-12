@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2018/03/SlimPAR_T12BT_UM_Rev4.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-t12-bt/|LinkType3|video|Url3|https://www.youtube.com/watch?v=A2SgybnQo7k
 [GENERAL]
-Manufacturer|Chauvet DJ|Name|SlimPAR T12 BT|Type|16|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet DJ|Name|SlimPAR T12 BT|Type|16|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|214|Height|77|Depth|264|Weight|1.20|Power|42|Connector|3-pin|Bulb|12x 2.5W RGBA LED|Lumens|1000|LensMinDegree|14.000|LensMaxDegree|27.000
 [CHAN_DEF]

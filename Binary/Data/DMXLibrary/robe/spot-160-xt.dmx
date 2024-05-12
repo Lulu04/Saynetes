@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.aesono.fr/manuel/Robe-Spot-160XT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=rchX19BOlV0|LinkType3|other|Url3|https://spares.robe.cz/category/spot_160_xt
 [GENERAL]
@@ -18,8 +18,8 @@ ID|Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~18
 ID|Dimmer / Shutter / Reset|Type|0|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~63~Txt~0..100%|R3|Begin~64~End~95~Txt~Open|R4|Begin~96~End~127~Txt~Strobe 1Hz..10Hz|R5|Begin~128~End~139~Txt~Reset, shutter closed|R6|Begin~140~End~159~Txt~Closed|R7|Begin~160~End~175~Txt~Pulse slow..fast|R8|Begin~176~End~191~Txt~Pulse fast..slow|R9|Begin~192~End~223~Txt~Pulse slow..fast|R10|Begin~224~End~255~Txt~Open
 [END_CHAN_DEF]
 [MODES]
-Name|1st|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
-Name|2nd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
-Name|3rd|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
-Name|4th|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|1st|ShortName|1st|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|2nd|ShortName|2nd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|3rd|ShortName|3rd|Content|Pan~Tilt~Pan/Tilt Speed~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
+Name|4th|ShortName|4th|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Gobo Rotation~Dimmer / Shutter / Reset
 [END_MODES]

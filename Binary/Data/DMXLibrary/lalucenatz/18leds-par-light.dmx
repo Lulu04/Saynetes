@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images-na.ssl-images-amazon.com/images/I/B1vDZm6YD0S.pdf|LinkType2|product page|Url2|https://www.amazon.com/dp/B00WU5OM5M/|LinkType3|video|Url3|https://www.youtube.com/watch?v=tXqQy4PfIeA
 [GENERAL]
-Manufacturer|LaluceNatz|Name|18LEDs Par Light|Type|18|Authors|Anomes|Creator|Saynètes 3.1.0
+Manufacturer|LaluceNatz|Name|18LEDs Par Light|Type|18|Authors|Anomes|Creator|OFL
 [PHYSICAL]
 Width|175|Height|175|Depth|99|Weight|0.80|Power|21|Connector|3-pin|Bulb|18× 1W LEDs (6× red, 6× green, 6× blue)|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]
@@ -13,7 +13,7 @@ ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|RGB|Type|12|R1|Begin~0~End~255~Txt~Preset
 ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~Strobe fast..slow
-ID|Mode|Type|0|R1|Begin~0~End~255~Txt~
+ID|Mode|Type|0
 [END_CHAN_DEF]
 [MODES]
 Name|4-channel|ShortName|4ch|Content|Master~Red~Green~Blue

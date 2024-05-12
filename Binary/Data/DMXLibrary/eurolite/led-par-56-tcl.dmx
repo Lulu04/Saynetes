@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51913611-MANUAL-1.00-de-en_00066247.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=wS_oUSBZGgM
 [GENERAL]
-Manufacturer|Eurolite|Name|LED PAR-56 TCL|Type|2|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED PAR-56 TCL|Type|2|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|165|Height|205|Depth|215|Weight|1.50|Power|45|Connector|3-pin|Bulb|LED|LensMinDegree|14.000|LensMaxDegree|14.000
 [CHAN_DEF]

@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLSCAN80W/CLSCAN80W_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=QebhUtJIB78
 [GENERAL]
@@ -21,6 +21,6 @@ ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Settings|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~55~Txt~3s Invert Pan on|R3|Begin~56~End~105~Txt~5s Invert Pan off|R4|Begin~106~End~155~Txt~3s Invert Tilt on|R5|Begin~156~End~205~Txt~5s Invert Tilt off|R6|Begin~206~End~255~Txt~3s Reset All Functions
 [END_CHAN_DEF]
 [MODES]
-Name|12ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Strobe~Flash Duration~Color Wheel~Gobo Wheel~Pan/Tilt Macros~Pan/Tilt Speed~Settings
-Name|9ch|Content|Pan~Tilt~Dimmer~Strobe~Flash Duration~Color Wheel~Gobo Wheel~Pan/Tilt Macros~Settings
+Name|12ch|ShortName|12ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Strobe~Flash Duration~Color Wheel~Gobo Wheel~Pan/Tilt Macros~Pan/Tilt Speed~Settings
+Name|9ch|ShortName|9ch|Content|Pan~Tilt~Dimmer~Strobe~Flash Duration~Color Wheel~Gobo Wheel~Pan/Tilt Macros~Settings
 [END_MODES]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://www.cameolight.com/en/solutions/dj-musicians/static-lighting/spotlights/16459/q-spot-40-rgbw|LinkType2|manual|Url2|https://www.cameolight.com/en/downloads/file/id/694585978|LinkType3|video|Url3|https://www.youtube.com/watch?v=RzElVR8wCVA|LinkType4|other|Url4|https://www.cameolight.com/en/downloads/file/id/940935430
 [GENERAL]
-Manufacturer|cameo|Name|Q-Spot 40 RGBW|Type|23|Authors|HS-Event, Luke Nelson|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Q-Spot 40 RGBW|Type|23|Authors|HS-Event, Luke Nelson|Creator|OFL
 [PHYSICAL]
 Width|151|Height|130|Depth|168|Weight|2.75|Power|55|Connector|3-pin|Bulb|LED|Lumens|780|Lens|Manual|LensMinDegree|4.500|LensMaxDegree|25.000
 [CHAN_DEF]
@@ -14,7 +14,7 @@ ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 ID|Strobe functions|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Strobe 5s..1s Strobe Break Effect|R8|Begin~128~End~250~Txt~Strobe 1Hz..20Hz|R9|Begin~251~End~255~Txt~Open
 ID|Color Temperature|Type|27|R1|Begin~0~End~5~Txt~default|R2|Begin~6~End~255~Txt~cold..warm
 [END_CHAN_DEF]

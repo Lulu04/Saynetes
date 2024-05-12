@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1476262257.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/beamspot1-dmx-fc|LinkType3|video|Url3|https://www.facebook.com/MRProducts/videos/briteq-sound-lightshow-2016-hq-video/1103561746357817/
 [GENERAL]
-Manufacturer|Briteq|Name|BEAMSPOT1-DMX FC|Type|23|Authors|Aleksey Khoroshev|Creator|Saynètes 3.1.0
+Manufacturer|Briteq|Name|BEAMSPOT1-DMX FC|Type|23|Authors|Aleksey Khoroshev|Creator|OFL
 [PHYSICAL]
 Width|124|Height|196|Depth|172|Weight|1.23|Power|15|Connector|3-pin|Bulb|15W RGBW LED|Lumens|275|LensMinDegree|4.000|LensMaxDegree|45.000
 [CHAN_DEF]

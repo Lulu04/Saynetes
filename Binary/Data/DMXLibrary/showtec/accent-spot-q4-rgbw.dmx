@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/en/mwdownloads/download/link/id/17433647|LinkType2|product page|Url2|https://www.highlite.com/en/42541-accent-spot-q4-rgbw.html
 [GENERAL]
-Manufacturer|Showtec|Name|Accent Spot Q4 RGBW|Type|23|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Accent Spot Q4 RGBW|Type|23|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|160|Height|105|Depth|245|Weight|1.70|Power|21|Connector|3-pin|Bulb|1× 25W RGBW LED|Lumens|572|LensMinDegree|4.500|LensMaxDegree|4.500
 [CHAN_DEF]

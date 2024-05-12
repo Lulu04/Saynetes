@@ -13,9 +13,9 @@ ID|Auto Programs|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~30~Txt~P
 ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~Speed slow..fast
 ID|Reset|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~Reset pan / tilt|R3|Begin~128~End~191~Txt~Reset effects (iris, prism, gobo, ...)|R4|Begin~192~End~255~Txt~Reset all functions
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Strobe Functions|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~Strobe slow..fast Random timing|R7|Begin~103~End~127~Txt~Burst 5s..1s|R8|Begin~128~End~250~Txt~Strobe 1Hz..20Hz|R9|Begin~251~End~255~Txt~Open
 ID|Color Wheel 1|Type|12|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~13~Txt~Split Open / Red|R3|Begin~14~End~21~Txt~Red~Extra~#ff0000|R4|Begin~22~End~29~Txt~Split Red / Orange~Extra~#ff0000|R5|Begin~30~End~37~Txt~Orange~Extra~#ffaa00|R6|Begin~38~End~45~Txt~Split Orange / Yellow~Extra~#ffaa00|R7|Begin~46~End~53~Txt~Yellow~Extra~#ffff00|R8|Begin~54~End~61~Txt~Split Yellow / Green~Extra~#ffff00|R9|Begin~62~End~69~Txt~Green~Extra~#00ff00|R10|Begin~70~End~77~Txt~Split Green / Cyan~Extra~#00ff00|R11|Begin~78~End~85~Txt~Cyan~Extra~#00ffff|R12|Begin~86~End~93~Txt~Split Cyan / Blue~Extra~#00ffff|R13|Begin~94~End~101~Txt~Blue~Extra~#0000ff|R14|Begin~102~End~109~Txt~Split Blue / Magenta~Extra~#0000ff|R15|Begin~110~End~117~Txt~Magenta~Extra~#ff00ff|R16|Begin~118~End~125~Txt~Split Magenta~Extra~#ff00ff|R17|Begin~126~End~128~Txt~stop|R18|Begin~129~End~255~Txt~slow CW..fast CW
 ID|Color Wheel 2|Type|12|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~13~Txt~Split Open / Amber|R3|Begin~14~End~21~Txt~Amber~Extra~#ffaa00|R4|Begin~22~End~29~Txt~Split Amber / Yellow warm~Extra~#ffaa00|R5|Begin~30~End~37~Txt~Yellow warm~Extra~#ffd500|R6|Begin~38~End~45~Txt~Split Yellow warm / Lavender~Extra~#ffd500|R7|Begin~46~End~53~Txt~Lavender~Extra~#ccbfff|R8|Begin~54~End~61~Txt~Split Lavender / Lime~Extra~#ccbfff|R9|Begin~62~End~69~Txt~Lime~Extra~#92ff00|R10|Begin~70~End~77~Txt~Split Lime / Turquoise~Extra~#92ff00|R11|Begin~78~End~85~Txt~Turquoise~Extra~#00ffbb|R12|Begin~86~End~93~Txt~Split Turquoise / Warm White~Extra~#00ffbb|R13|Begin~94~End~101~Txt~Warm White~Extra~#fffbf2|R14|Begin~102~End~109~Txt~Split Warm White / Cold White~Extra~#fffbf2|R15|Begin~110~End~117~Txt~Cold White~Extra~#f2f6fe|R16|Begin~118~End~125~Txt~Split Cold White~Extra~#f2f6fe|R17|Begin~126~End~128~Txt~stop|R18|Begin~129~End~255~Txt~slow CW..fast CW
@@ -29,8 +29,8 @@ ID|Prism Wheel Rotation|Type|42|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~
 ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus 0%..100%
 ID|Frost|Type|47|R1|Begin~0~End~255~Txt~Frost off..high
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
-ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
+ID|Focus fine|Type|32
 ID|Pan/Tilt Macro|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~47~Txt~Pan small..big|R3|Begin~48~End~89~Txt~Tilt small..big|R4|Begin~90~End~131~Txt~Pan/Tilt small..big|R5|Begin~132~End~173~Txt~Pan/Tilt inverse small..big|R6|Begin~174~End~215~Txt~Ellipse small..big|R7|Begin~216~End~255~Txt~Random small..big
 ID|Pan/Tilt Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
 ID|Dimmer Curve|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~127~Txt~Linear Dimmer Curve|R3|Begin~128~End~191~Txt~Exponential Dimmer Curve|R4|Begin~192~End~250~Txt~Logarithmic Dimmer Curve|R5|Begin~251~End~255~Txt~S-Curve Dimmer Curve

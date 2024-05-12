@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/GeyserRGB_UM_Rev8_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/geyser-rgb/|LinkType3|video|Url3|https://www.youtube.com/watch?v=hQXFyo28Ndc|LinkType4|video|Url4|https://www.youtube.com/watch?v=pq10ol45HNE
 [GENERAL]
-Manufacturer|Chauvet DJ|Name|Geyser RGB|Type|10|Authors|Alex Jacobs|Creator|Saynètes 3.1.0
+Manufacturer|Chauvet DJ|Name|Geyser RGB|Type|10|Authors|Alex Jacobs|Creator|OFL
 [PHYSICAL]
 Width|375|Height|250|Depth|510|Weight|9.60|Power|1500|Connector|3-pin and 5-pin|Bulb|21× 3W LEDs (7× red, 7× green, 7× blue)
 [CHAN_DEF]

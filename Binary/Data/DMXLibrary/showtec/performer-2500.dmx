@@ -3,16 +3,16 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://www.highlite.com/en/33141-performer-2500-fresnel.html|LinkType2|manual|Url2|https://www.highlite.com/en/mwdownloads/download/link/id/17429015/|LinkType3|video|Url3|https://vimeo.com/439925462
 [GENERAL]
-Manufacturer|Showtec|Name|Performer 2500|Type|1|Authors|purple, Luke Nelson|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Performer 2500|Type|1|Authors|purple, Luke Nelson|Creator|OFL
 [PHYSICAL]
 Width|450|Height|380|Depth|470|Weight|10.00|Power|265|Connector|5-pin|Bulb|LED|Lumens|6959|Lens|Fresnel|LensMinDegree|10.000|LensMaxDegree|60.000
 [CHAN_DEF]
 ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Master Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Master Dimmer fine|Type|1
 ID|Warm White|Type|23|R1|Begin~0~End~255~Txt~0..100%
 ID|Natural White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|Warm White fine|Type|23|R1|Begin~0~End~255~Txt~
-ID|Natural White fine|Type|13|R1|Begin~0~End~255~Txt~
+ID|Warm White fine|Type|23
+ID|Natural White fine|Type|13
 ID|CCT|Type|27|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~35~Txt~2700K|R3|Begin~36~End~60~Txt~3000K|R4|Begin~61~End~85~Txt~3200K|R5|Begin~86~End~110~Txt~3400K|R6|Begin~111~End~135~Txt~3600K|R7|Begin~136~End~160~Txt~3800K|R8|Begin~161~End~185~Txt~4000K|R9|Begin~186~End~210~Txt~4200K|R10|Begin~211~End~235~Txt~4500K|R11|Begin~236~End~255~Txt~No function
 ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~99~Txt~Strobe 0Hz..25Hz|R3|Begin~100~End~109~Txt~Open|R4|Begin~110~End~179~Txt~Lightning 0Hz..25Hz|R5|Begin~180~End~189~Txt~Open|R6|Begin~190~End~255~Txt~Strobe 0Hz..25Hz Random timing
 [END_CHAN_DEF]

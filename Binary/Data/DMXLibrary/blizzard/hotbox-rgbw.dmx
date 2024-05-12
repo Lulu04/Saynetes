@@ -3,13 +3,13 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://api.blizzard.lighting/public/Products/hotbox%20rgbw/downloads/hotbox-manual-rev-b.pdf|LinkType2|product page|Url2|https://www.blizzardpro.com/products/hotbox-rgbw
 [GENERAL]
-Manufacturer|Blizzard|Name|HotBox RGBW|Type|16|Authors|Ken Harris|Creator|Saynètes 3.1.0
+Manufacturer|Blizzard|Name|HotBox RGBW|Type|16|Authors|Ken Harris|Creator|OFL
 [PHYSICAL]
 Width|127|Height|102|Depth|127|Weight|2.70|Power|47|Connector|3-pin|Bulb|7× 10W RGBW LEDs|LensMinDegree|26.000|LensMaxDegree|26.000
 [CHAN_DEF]
-ID|Hue|Type|0|R1|Begin~0~End~255~Txt~
-ID|Saturation|Type|0|R1|Begin~0~End~255~Txt~
-ID|Value|Type|0|R1|Begin~0~End~255~Txt~
+ID|Hue|Type|0
+ID|Saturation|Type|0
+ID|Value|Type|0
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%

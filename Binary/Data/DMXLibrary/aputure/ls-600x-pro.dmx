@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2022/06/LS600X-Pro-DMX-Profile-Specification-V1.0-.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/ls-600x-pro/
 [GENERAL]
-Manufacturer|Aputure|Name|LS 600X Pro|Type|23|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Aputure|Name|LS 600X Pro|Type|23|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|302|Height|147|Depth|149|Weight|5.20|Power|600|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

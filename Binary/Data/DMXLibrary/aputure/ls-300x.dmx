@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2020/04/LS_300x-Product_Manual_EN.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/ls-300x/|LinkType3|other|Url3|https://www.aputure.com/wp-content/uploads/2021/02/LS-300x-DMX-Table.xlsx
 [GENERAL]
-Manufacturer|Aputure|Name|LS 300x|Type|23|Authors|Peter Zuiderent, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Aputure|Name|LS 300x|Type|23|Authors|Peter Zuiderent, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|298|Height|216|Depth|345|Weight|11.40|Power|300|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

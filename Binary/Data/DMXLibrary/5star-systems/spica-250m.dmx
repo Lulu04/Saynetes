@@ -1,5 +1,5 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.ghl.be/?wpfb_dl=134|LinkType2|video|Url2|https://www.youtube.com/watch?v=AY2xw4sXFQs
 [GENERAL]
@@ -24,6 +24,6 @@ ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
 [END_CHAN_DEF]
 [MODES]
-Name|16bit|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
-Name|8bit|Content|Pan~Tilt~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
+Name|16bit|ShortName|16bit|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
+Name|8bit|ShortName|8bit|Content|Pan~Tilt~Pan/Tilt Speed~Reset~Color Wheel~NotUsed~Prism~Prism rotation~Gobo Wheel~Gobo rotation~NotUsed~Focus~Shutter / Strobe~Dimmer
 [END_MODES]

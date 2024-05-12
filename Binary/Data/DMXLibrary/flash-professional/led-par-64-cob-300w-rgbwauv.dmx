@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://flash-butrym.pl/en_US/p/file/cd8d1457c24013dd694ecd6d9294b1bd/P7100400-LED-PAR-COB-300W-RGBWA-UV.pdf|LinkType2|product page|Url2|https://flash-butrym.pl/en_US/p/LED-PAR-64-300W-6in1-COB-RGBWA-UV-BARNDOOR/406|LinkType3|video|Url3|https://www.youtube.com/watch?v=TJtqvw6y7ss
 [GENERAL]
-Manufacturer|Flash Professional|Name|LED PAR 64 COB 300W RGBWAUV|Type|23|Authors|Jeppe Toftdahl cohrt|Creator|Saynètes 3.1.0
+Manufacturer|Flash Professional|Name|LED PAR 64 COB 300W RGBWAUV|Type|23|Authors|Jeppe Toftdahl cohrt|Creator|OFL
 [PHYSICAL]
 Width|270|Height|280|Depth|240|Weight|3.40|Power|354|Connector|3-pin|Bulb|300W COB RGBAUV LED|LensMinDegree|37.000|LensMaxDegree|37.000
 [CHAN_DEF]

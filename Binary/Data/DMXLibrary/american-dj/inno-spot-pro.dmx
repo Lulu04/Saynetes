@@ -8,9 +8,9 @@ Manufacturer|American DJ|Name|Inno Spot Pro|Type|9|Authors|Ken Harris|Creator|OF
 Width|288|Height|425|Depth|167|Weight|8.50|Power|140|Connector|3-pin|Bulb|1× 80W White LED|LensMinDegree|12.000|LensMaxDegree|17.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..240deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~14~Txt~Red #ff0000|R3|Begin~15~End~21~Txt~Orange #ff7f00|R4|Begin~22~End~28~Txt~Yellow #ffff00|R5|Begin~29~End~35~Txt~Green #00ff00|R6|Begin~36~End~42~Txt~Blue #0000ff|R7|Begin~43~End~49~Txt~Purple #b803b8|R8|Begin~50~End~56~Txt~Light Blue #007fff|R9|Begin~57~End~63~Txt~Pink #ff6aff|R10|Begin~64~End~127~Txt~Color Mixing|R11|Begin~128~End~189~Txt~fast CW..slow CW|R12|Begin~190~End~193~Txt~stop|R13|Begin~194~End~255~Txt~slow CCW..fast CCW
 ID|Gobo Wheel|Type|10|R1|Begin~0~End~9~Txt~Spot|R2|Begin~10~End~18~Txt~Gobo 1|R3|Begin~19~End~27~Txt~Gobo 2|R4|Begin~28~End~36~Txt~Gobo 3|R5|Begin~37~End~45~Txt~Gobo 4|R6|Begin~46~End~54~Txt~Gobo 5|R7|Begin~55~End~63~Txt~Gobo 6|R8|Begin~64~End~73~Txt~Spot|R9|Begin~74~End~82~Txt~Gobo 1|R10|Begin~83~End~91~Txt~Gobo 2|R11|Begin~92~End~100~Txt~Gobo 3|R12|Begin~101~End~109~Txt~Gobo 4|R13|Begin~110~End~118~Txt~Gobo 5|R14|Begin~119~End~127~Txt~Gobo 6|R15|Begin~128~End~189~Txt~slow CW..fast CW|R16|Begin~190~End~193~Txt~stop|R17|Begin~194~End~255~Txt~fast CCW..slow CCW
 ID|Gobo Stencil Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~189~Txt~fast CW..slow CW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CCW..fast CCW

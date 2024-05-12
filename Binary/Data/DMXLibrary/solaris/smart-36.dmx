@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://docplayer.net/211549995-Safety-information-table-of-contents-solaris-smart-solaris-smart36-warning.html
 [GENERAL]
-Manufacturer|Solaris|Name|SMART 36|Type|16|Authors|Felix Edelmann, ziopix|Creator|Saynètes 3.1.0
+Manufacturer|Solaris|Name|SMART 36|Type|16|Authors|Felix Edelmann, ziopix|Creator|OFL
 [PHYSICAL]
 Width|118|Height|237|Depth|230|Weight|3.00|Power|150|Connector|3-pin|Bulb|36x 3W LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/40915_MANUAL_GB_V1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=VjIP45vs_mk
 [GENERAL]
-Manufacturer|Showtec|Name|Archi Painter 24/8 Q4|Type|28|Authors|1st truc|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Archi Painter 24/8 Q4|Type|28|Authors|1st truc|Creator|OFL
 [PHYSICAL]
 Width|430|Height|425|Depth|265|Weight|16.00|Power|140|Connector|3-pin|Bulb|24× 8W RGBW LEDs|LensMinDegree|45.000|LensMaxDegree|45.000
 [CHAN_DEF]

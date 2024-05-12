@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51930395-Manual-110557-1.000-eurolite-led-bar-3-hcl-bar-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51930395-eurolite-led-bar-3-hcl-bar.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=SV2AFTdJKNE
 [GENERAL]
-Manufacturer|Eurolite|Name|LED Bar-3 HCL Bar|Type|30|Authors|Rainer Jung|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED Bar-3 HCL Bar|Type|30|Authors|Rainer Jung|Creator|OFL
 [PHYSICAL]
 Width|265|Height|129|Depth|87|Weight|0.90|Power|12|Connector|3-pin|Bulb|LED|LensMinDegree|20.000|LensMaxDegree|20.000
 [CHAN_DEF]

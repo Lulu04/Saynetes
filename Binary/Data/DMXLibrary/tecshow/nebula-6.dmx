@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://amproweb.com/_admin/files/02b55bNebula%206%20B.pdf|LinkType2|product page|Url2|http://tecshow.amproweb.com/es/nebula6|LinkType3|video|Url3|https://www.youtube.com/watch?v=IQQqpnKiArE|LinkType4|other|Url4|http://amproweb.com/_admin/files/6a5bd4Nebula6.zip
 [GENERAL]
-Manufacturer|Tecshow|Name|Nebula 6|Type|16|Authors|Esteban Zallocco|Creator|Saynètes 3.1.0
+Manufacturer|Tecshow|Name|Nebula 6|Type|16|Authors|Esteban Zallocco|Creator|OFL
 [PHYSICAL]
 Width|260|Height|260|Depth|360|Weight|1.00|Power|80|Connector|3-pin|Bulb|LED|LensMinDegree|40.000|LensMaxDegree|40.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://lotronic.net/gb/index.php?controller=attachment&id_attachment=202|LinkType2|product page|Url2|https://lotronic.net/gb/projector/411-LP64LED-PROMO-5420047121066.html
 [GENERAL]
-Manufacturer|Ibiza light|Name|LP64 LED-PROMO|Type|4|Authors|Proteus|Creator|Saynètes 3.1.0
+Manufacturer|Ibiza light|Name|LP64 LED-PROMO|Type|4|Authors|Proteus|Creator|OFL
 [PHYSICAL]
 Width|220|Height|220|Depth|325|Weight|2.80|Power|36|Connector|3-pin|Bulb|177× 5mm RGB LEDs
 [CHAN_DEF]

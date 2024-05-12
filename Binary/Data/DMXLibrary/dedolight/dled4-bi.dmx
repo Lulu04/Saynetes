@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://www.dedoweigertfilm.de/dwf-en/products/dedolight/dedolight-dled-series4.php|LinkType2|other|Url2|https://www.mediatec.de/media/pdf/fa/f8/cb/DLED4_DATENBLATT_0005.pdf
 [GENERAL]
-Manufacturer|Dedolight|Name|DLED4-BI|Type|23|Authors|Jean-François Losson|Creator|Saynètes 3.1.0
+Manufacturer|Dedolight|Name|DLED4-BI|Type|23|Authors|Jean-François Losson|Creator|OFL
 [PHYSICAL]
 Width|109|Height|200|Depth|100|Weight|1.30|Power|47|Connector|5-pin|Bulb|Bicolor 40W LED|LensMinDegree|4.000|LensMaxDegree|60.000
 [CHAN_DEF]

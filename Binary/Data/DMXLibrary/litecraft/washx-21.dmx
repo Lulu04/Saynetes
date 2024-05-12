@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/426053_washx21_de_uk.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/litecraft_washx.21.htm
 [GENERAL]
-Manufacturer|Litecraft|Name|WashX.21|Type|28|Authors|birk, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Litecraft|Name|WashX.21|Type|28|Authors|birk, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|493|Height|320|Depth|99|Weight|8.80|Power|184|Connector|5-pin|Bulb|21× RGBW LEDs|LensMinDegree|40.000|LensMaxDegree|40.000
 [CHAN_DEF]

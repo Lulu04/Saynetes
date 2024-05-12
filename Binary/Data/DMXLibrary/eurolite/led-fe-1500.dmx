@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51741080-MANUAL-1.00-de-en_00089092.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=3bB3ZE9Rm-o|LinkType3|video|Url3|https://www.youtube.com/watch?v=anZ5xqb2MEY
 [GENERAL]
-Manufacturer|Eurolite|Name|LED FE-1500|Type|24|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED FE-1500|Type|24|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|313|Height|315|Depth|246|Weight|4.20|Power|40|Connector|3-pin|Bulb|5x 3W RGBWA, 8x 1W white, red & green laser|LensMinDegree|17.000|LensMaxDegree|17.000
 [CHAN_DEF]

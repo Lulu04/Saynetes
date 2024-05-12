@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/340945_c_340945_v5_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/stairville_af_250_fog_machine_1300w_dmx.htm|LinkType3|video|Url3|https://video1.thomann.de/vidiot/02591c1c/video_i3289p10_yd59vqpa.mp4
 [GENERAL]
-Manufacturer|Stairville|Name|AF-250|Type|10|Authors|Jan Dalheimer|Creator|Saynètes 3.1.0
+Manufacturer|Stairville|Name|AF-250|Type|10|Authors|Jan Dalheimer|Creator|OFL
 [PHYSICAL]
 Width|310|Height|190|Depth|430|Weight|7.10|Power|1300|Connector|3-pin
 [CHAN_DEF]

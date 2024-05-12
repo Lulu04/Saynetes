@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.adbstagelight.com/wp-content/uploads/2017/04/DS5153-E-Europe105-data-sheet.pdf
 [GENERAL]
-Manufacturer|ADB|Name|Europe 105|Type|20|Authors|ameisso|Creator|Saynètes 3.1.0
+Manufacturer|ADB|Name|Europe 105|Type|20|Authors|ameisso|Creator|OFL
 [PHYSICAL]
 Width|0|Height|0|Depth|0|Weight|0|Power|0|Connector|3-pin|Bulb|Tungsten halogen
 [CHAN_DEF]

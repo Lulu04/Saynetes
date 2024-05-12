@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737483869|LinkType2|manual|Url2|https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501163|LinkType3|product page|Url3|https://www.etcconnect.com/Products/Lighting-Fixtures/Source-Four-LED-Series-2/Features.aspx|LinkType4|video|Url4|https://www.youtube.com/watch?v=oEjG8XLzuvs
 [GENERAL]
-Manufacturer|ETC|Name|Source Four LED Series 2 Lustr|Type|23|Authors|Jeppe Cohrt, Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|ETC|Name|Source Four LED Series 2 Lustr|Type|23|Authors|Jeppe Cohrt, Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|338|Height|615|Depth|631|Weight|8.30|Power|171|Connector|5-pin|Bulb|60× 7-color Lumileds LUXEON® Rebel LED|Lumens|8667|LensMinDegree|5.000|LensMaxDegree|90.000
 [CHAN_DEF]
@@ -17,9 +17,9 @@ ID|Indigo|Type|22|R1|Begin~0~End~255~Txt~0..100%
 ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~Strobe slow..fast
 ID|Fan Control|Type|36|R1|Begin~0~End~0~Txt~Fan auto|R2|Begin~1~End~255~Txt~Rotation slow CW..fast CW
-ID|Hue|Type|2|R1|Begin~0~End~255~Txt~
-ID|Hue fine|Type|2|R1|Begin~0~End~255~Txt~
-ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~
+ID|Hue|Type|2
+ID|Hue fine|Type|2
+ID|Saturation|Type|2
 ID|Color Point|Type|27|R1|Begin~0~End~1~Txt~3200K|R2|Begin~2~End~253~Txt~2725K..6450K|R3|Begin~254~End~255~Txt~5600K
 ID|Red Emulated|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green Emulated|Type|4|R1|Begin~0~End~255~Txt~0..100%

@@ -8,9 +8,9 @@ Manufacturer|Chauvet DJ|Name|Intimidator Spot 260|Type|9|Authors|Peter Chave, Fe
 Width|232|Height|351|Depth|163|Weight|5.60|Power|107|Connector|3-pin|Bulb|White 75W LED|LensMinDegree|12.000|LensMaxDegree|17.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Color Wheel|Type|12|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Orange~Extra~#fd8008|R3|Begin~14~End~20~Txt~Lime Green~Extra~#ccff66|R4|Begin~21~End~27~Txt~Cyan~Extra~#20ffff|R5|Begin~28~End~34~Txt~Red~Extra~#ff0000|R6|Begin~35~End~41~Txt~Green~Extra~#21ff06|R7|Begin~42~End~48~Txt~Magenta~Extra~#fc02ff|R8|Begin~49~End~55~Txt~Yellow~Extra~#ffff0a|R9|Begin~56~End~62~Txt~Dark Blue~Extra~#0000ff|R10|Begin~63~End~64~Txt~Open|R11|Begin~65~End~189~Txt~0deg..360deg|R12|Begin~190~End~221~Txt~fast CW..slow CW|R13|Begin~222~End~223~Txt~stop|R14|Begin~224~End~255~Txt~slow CCW..fast CCW
 ID|Gobo Wheel|Type|10|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~71~Txt~Gobo 7 slow..fast|R10|Begin~72~End~79~Txt~Gobo 6 slow..fast|R11|Begin~80~End~87~Txt~Gobo 5 slow..fast|R12|Begin~88~End~95~Txt~Gobo 4 slow..fast|R13|Begin~96~End~103~Txt~Gobo 3 slow..fast|R14|Begin~104~End~111~Txt~Gobo 2 slow..fast|R15|Begin~112~End~119~Txt~Gobo 1 slow..fast|R16|Begin~120~End~127~Txt~Open|R17|Begin~128~End~189~Txt~slow CW..fast CW|R18|Begin~190~End~193~Txt~stop|R19|Begin~194~End~255~Txt~slow CCW..fast CCW

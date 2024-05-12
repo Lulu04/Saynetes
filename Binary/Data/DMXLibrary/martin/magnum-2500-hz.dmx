@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/UM_Magnum2500Hz_EN_F.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=wCQePza8akg|LinkType3|video|Url3|https://www.youtube.com/watch?v=Nc0ku6yCe4w
 [GENERAL]
-Manufacturer|Martin|Name|Magnum 2500 HZ|Type|10|Authors|novasfronteiras.co|Creator|Saynètes 3.1.0
+Manufacturer|Martin|Name|Magnum 2500 HZ|Type|10|Authors|novasfronteiras.co|Creator|OFL
 [PHYSICAL]
 Width|285|Height|286|Depth|455|Weight|15.70|Power|920|Connector|3-pin
 [CHAN_DEF]

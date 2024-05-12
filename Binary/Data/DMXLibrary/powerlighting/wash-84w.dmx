@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|other|Url1|https://github.com/OpenLightingProject/open-fixture-library/pull/461|LinkType2|other|Url2|https://github.com/OpenLightingProject/open-fixture-library/issues/792
 [GENERAL]
-Manufacturer|Power Lighting|Name|Wash 84W|Type|9|Authors|Millumin, CypGit|Creator|Saynètes 3.1.0
+Manufacturer|Power Lighting|Name|Wash 84W|Type|9|Authors|Millumin, CypGit|Creator|OFL
 [PHYSICAL]
 Width|177|Height|230|Depth|177|Weight|2.70|Power|90|Connector|3-pin|Bulb|LED
 [CHAN_DEF]
@@ -16,8 +16,8 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
 ID|Movement Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset|R3|Begin~201~End~255~Txt~No function
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|RGBW Presets|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~44~Txt~Preset static|R3|Begin~45~End~49~Txt~No function|R4|Begin~50~End~94~Txt~ColorJump cut|R5|Begin~95~End~99~Txt~No function|R6|Begin~100~End~149~Txt~ColorFade smooth|R7|Begin~150~End~154~Txt~No function|R8|Begin~155~End~255~Txt~ColorFade soft
 ID|Strobe|Type|6|R1|Begin~0~End~6~Txt~No function|R2|Begin~7~End~65~Txt~Strobe|R3|Begin~66~End~69~Txt~No function|R4|Begin~70~End~128~Txt~Strobe Random timing|R5|Begin~129~End~132~Txt~No function|R6|Begin~133~End~191~Txt~RampUp|R7|Begin~192~End~195~Txt~No function|R8|Begin~196~End~255~Txt~RampDown

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.looksolutions.com/uploads/pdf/bed_cryo_hp_1d.pdf|LinkType2|product page|Url2|https://www.looksolutions.com/produkte/cryo_fog/2.html
 [GENERAL]
-Manufacturer|Look Solutions|Name|Cryofog|Type|10|Authors|coffeeholic|Creator|Saynètes 3.1.0
+Manufacturer|Look Solutions|Name|Cryofog|Type|10|Authors|coffeeholic|Creator|OFL
 [PHYSICAL]
 Width|510|Height|300|Depth|670|Weight|33.00|Power|2300|Connector|5-pin
 [CHAN_DEF]

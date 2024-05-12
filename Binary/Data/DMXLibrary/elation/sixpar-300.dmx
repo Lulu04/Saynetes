@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/9851/Elation%20Sixpar%20300%20-%20User%20Manual%202022-02-21.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/sixpar-300|LinkType3|video|Url3|https://www.youtube.com/watch?v=vLJvunbVWIU|LinkType4|video|Url4|https://www.youtube.com/watch?v=oZdkqF0vT1I
 [GENERAL]
-Manufacturer|Elation|Name|SIXPAR 300|Type|16|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Elation|Name|SIXPAR 300|Type|16|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|365|Height|365|Depth|125|Weight|8.10|Power|220|Connector|3-pin and 5-pin|Bulb|18x12W RGBAWUV LEDs|LensMinDegree|15.000|LensMaxDegree|15.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.scherloc.com/_media/notice-par56led-10mm.pdf|LinkType2|product page|Url2|https://www.musicstore.de/en_US/USD/lightmaXX-LED-Par-56-RGB-Short-Polish-10mm-LEDs/art-LIG0002658-000
 [GENERAL]
-Manufacturer|lightmaXX|Name|LED Par 56|Type|2|Authors|Hannes Rüger|Creator|Saynètes 3.1.0
+Manufacturer|lightmaXX|Name|LED Par 56|Type|2|Authors|Hannes Rüger|Creator|OFL
 [PHYSICAL]
 Width|220|Height|210|Depth|220|Weight|1.40|Power|22|Connector|3-pin|Bulb|108x LED
 [CHAN_DEF]

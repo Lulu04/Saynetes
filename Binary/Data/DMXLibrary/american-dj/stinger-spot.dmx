@@ -16,8 +16,8 @@ ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Movement Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Function|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout with pan/tilt|R3|Begin~80~End~89~Txt~No blackout with pan/tilt|R4|Begin~90~End~99~Txt~Blackout with color change|R5|Begin~100~End~109~Txt~No blackout with color change|R6|Begin~110~End~119~Txt~Blackout with gobo change|R7|Begin~120~End~129~Txt~No blackout with gobo change|R8|Begin~130~End~199~Txt~No function|R9|Begin~200~End~209~Txt~Reset all|R10|Begin~210~End~249~Txt~No function|R11|Begin~250~End~255~Txt~Sound-active mode
 ID|Dimmer Curves|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~No function Default unit curve
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Shutter / Strobe~Dimmer~Movement Speed~Function~Dimmer Curves

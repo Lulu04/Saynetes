@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://alienpro.com.mx/wp-content/uploads/Manual-Bar-Alien-S.pdf
 [GENERAL]
-Manufacturer|Alien Pro|Name|Alien S|Type|19|Authors|Yéred Zabdiel, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Alien Pro|Name|Alien S|Type|19|Authors|Yéred Zabdiel, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|1070|Height|65|Depth|88|Weight|2.6|Power|30|Connector|3-pin|Bulb|240× 10mm LED (96 red, 72 green, 72 blue)|LensMinDegree|30.000|LensMaxDegree|30.000
 [CHAN_DEF]

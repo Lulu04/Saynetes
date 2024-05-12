@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://eww.pavc.panasonic.co.jp/projector/extranet/main/products/rz120/manual.html|LinkType2|product page|Url2|https://panasonic.net/cns/projector/products/rz120/|LinkType3|video|Url3|https://www.youtube.com/watch?v=2DrfjBJxjYA
 [GENERAL]
-Manufacturer|Panasonic|Name|PT-RZ120L|Type|7|Authors|Walter Ponce, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Panasonic|Name|PT-RZ120L|Type|7|Authors|Walter Ponce, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|498|Height|200|Depth|538|Weight|22.80|Power|1100|Connector|None|Bulb|Laser Diode|Lumens|12000
 [CHAN_DEF]

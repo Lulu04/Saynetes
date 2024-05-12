@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1521803829.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/bt-coloray-60r
 [GENERAL]
-Manufacturer|Briteq|Name|BT-COLORAY 60R|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Briteq|Name|BT-COLORAY 60R|Type|23|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|272|Height|305|Depth|242|Weight|4.80|Power|70|Connector|5-pin|Bulb|60W RGBW LED|LensMinDegree|15.000|LensMaxDegree|15.000
 [CHAN_DEF]

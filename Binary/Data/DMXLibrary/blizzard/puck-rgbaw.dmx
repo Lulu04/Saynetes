@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://cdn.shopify.com/s/files/1/1741/5055/files/puck-rgbaw-couch-potato-series_manual_rev_c.pdf|LinkType2|other|Url2|https://github.com/OpenLightingProject/open-fixture-library/pull/462
 [GENERAL]
-Manufacturer|Blizzard|Name|Puck RGBAW|Type|18|Authors|smokris|Creator|Saynètes 3.1.0
+Manufacturer|Blizzard|Name|Puck RGBAW|Type|18|Authors|smokris|Creator|OFL
 [PHYSICAL]
 Width|210|Height|210|Depth|64|Weight|1.80|Power|20|Connector|3-pin|Bulb|198x 10mm RGBWA LEDs|LensMinDegree|21.000|LensMaxDegree|32.000
 [CHAN_DEF]

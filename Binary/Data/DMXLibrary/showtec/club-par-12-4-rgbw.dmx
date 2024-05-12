@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/42650_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/42650-club-par-12-4-rgbw.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=9CTsLX5hNuU
 [GENERAL]
-Manufacturer|Showtec|Name|Club PAR 12/4 RGBW|Type|16|Authors|Voyo|Creator|Saynètes 3.1.0
+Manufacturer|Showtec|Name|Club PAR 12/4 RGBW|Type|16|Authors|Voyo|Creator|OFL
 [PHYSICAL]
 Width|288|Height|170|Depth|113|Weight|2.20|Power|77|Connector|3-pin|Bulb|12x 8W RGBW LEDs|Lumens|3200|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.aputure.com/wp-content/uploads/2022/06/LS1200D-Pro-DMX-Profile-Specification-V1.0-.pdf|LinkType2|product page|Url2|https://www.aputure.com/products/ls-1200d-pro/
 [GENERAL]
-Manufacturer|Aputure|Name|LS 1200D Pro|Type|6|Authors|Dyami Caliri|Creator|Saynètes 3.1.0
+Manufacturer|Aputure|Name|LS 1200D Pro|Type|6|Authors|Dyami Caliri|Creator|OFL
 [PHYSICAL]
 Width|332|Height|231|Depth|216|Weight|7.60|Power|1200|Connector|5-pin|Bulb|LED
 [CHAN_DEF]

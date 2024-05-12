@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://smoke-factory.de/pdf/datenblatt_data_ii.pdf|LinkType2|product page|Url2|https://smoke-factory.de/produkt/data-ii/?lang=en
 [GENERAL]
-Manufacturer|Smoke Factory|Name|Data II|Type|10|Authors|WaldperlachFabi|Creator|Saynètes 3.1.0
+Manufacturer|Smoke Factory|Name|Data II|Type|10|Authors|WaldperlachFabi|Creator|OFL
 [PHYSICAL]
 Width|58|Height|23|Depth|25|Weight|12.80|Power|2600|Connector|5-pin
 [CHAN_DEF]

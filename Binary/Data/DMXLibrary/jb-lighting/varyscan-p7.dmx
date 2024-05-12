@@ -8,9 +8,9 @@ Manufacturer|JB-Lighting|Name|Varyscan P7|Type|9|Authors|Felix Edelmann|Creator|
 Width|380|Height|580|Depth|264|Weight|17.00|Power|380|Connector|3-pin and 5-pin|Bulb|White light LED module 270W|Lumens|11020|LensMinDegree|8.000|LensMaxDegree|48.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..433.6deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..280deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Control|Type|0|DefaultValue|8|R1|Begin~0~End~7~Txt~slow..fast Dimmer fade out with Fader (fast reaction)|R2|Begin~8~End~31~Txt~No function|R3|Begin~32~End~39~Txt~slow..fast Dimmer fade out with Fader (semi-fast reaction)|R4|Begin~40~End~63~Txt~No function|R5|Begin~64~End~71~Txt~slow..fast Dimmer fade out with Fader (medium reaction)|R6|Begin~72~End~95~Txt~No function|R7|Begin~96~End~103~Txt~slow..fast Dimmer fade out with Fader (semi-slow reaction)|R8|Begin~104~End~127~Txt~No function|R9|Begin~128~End~135~Txt~slow..fast Dimmer fade out with Fader (slow reaction)|R10|Begin~136~End~207~Txt~No function|R11|Begin~208~End~215~Txt~2s Camera mode, 50Hz|R12|Begin~216~End~223~Txt~2s Camera mode, 60Hz|R13|Begin~224~End~231~Txt~2s Camera mode, FLEX|R14|Begin~232~End~239~Txt~Save|R15|Begin~240~End~247~Txt~2s Reset|R16|Begin~248~End~255~Txt~Save
 ID|Shutter|Type|6|DefaultValue|16|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~95~Txt~Open|R3|Begin~96~End~110~Txt~RampUp fast..slow >20Hz|R4|Begin~111~End~111~Txt~Open|R5|Begin~112~End~125~Txt~Dimmer fade effect slow..fast|R6|Begin~126~End~126~Txt~Open|R7|Begin~127~End~127~Txt~Closed|R8|Begin~128~End~142~Txt~RampUp fast..slow <20Hz|R9|Begin~143~End~143~Txt~Open|R10|Begin~144~End~158~Txt~RampDown fast..slow|R11|Begin~159~End~159~Txt~Closed|R12|Begin~160~End~174~Txt~Strobe slow..fast Fade 0%|R13|Begin~175~End~175~Txt~Open|R14|Begin~176~End~190~Txt~Strobe slow..fast Fade 100%|R15|Begin~191~End~191~Txt~Closed|R16|Begin~192~End~206~Txt~Strobe slow..fast Random timing 0%|R17|Begin~207~End~207~Txt~Open|R18|Begin~208~End~222~Txt~Strobe slow..fast Random timing 100%|R19|Begin~223~End~223~Txt~Closed|R20|Begin~224~End~238~Txt~Strobe slow..fast Random timing Fade 0%|R21|Begin~239~End~239~Txt~Open|R22|Begin~240~End~254~Txt~Strobe slow..fast Random timing Fade 100%|R23|Begin~255~End~255~Txt~Open
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
@@ -33,11 +33,11 @@ ID|Macro|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Macro 00
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~3~Txt~fast|R2|Begin~4~End~255~Txt~fast..slow
 ID|Effect Speed|Type|16|R1|Begin~0~End~3~Txt~fast|R2|Begin~4~End~255~Txt~fast..slow
 ID|Blackout on Move|Type|0|R1|Begin~0~End~95~Txt~No function|R2|Begin~96~End~127~Txt~Blackout at pan/tilt|R3|Begin~128~End~159~Txt~Blackout at gobo, color, prism, CMY, iris, frost|R4|Begin~160~End~191~Txt~Blackout at gobo, color, prism, CMY, iris, frost, zoom, focus|R5|Begin~192~End~223~Txt~Blackout at gobo, color, prism, CMY, iris, frost, pan/tilt|R6|Begin~224~End~255~Txt~Blackout at gobo, color, prism, CMY, iris, frost, zoom, focus, pan/tilt
-ID|Gobo Wheel 2 Position / Rotation fine|Type|11|R1|Begin~0~End~255~Txt~
-ID|Cyan fine|Type|18|R1|Begin~0~End~255~Txt~
-ID|Magenta fine|Type|19|R1|Begin~0~End~255~Txt~
-ID|Yellow fine|Type|20|R1|Begin~0~End~255~Txt~
-ID|Prism Position / Rotation fine|Type|42|R1|Begin~0~End~255~Txt~
+ID|Gobo Wheel 2 Position / Rotation fine|Type|11
+ID|Cyan fine|Type|18
+ID|Magenta fine|Type|19
+ID|Yellow fine|Type|20
+ID|Prism Position / Rotation fine|Type|42
 [END_CHAN_DEF]
 [MODES]
 Name|1st|ShortName|M1|Content|Pan~Pan fine~Tilt~Tilt fine~Control~Shutter~Dimmer~Focus~Zoom~Iris~Gobo Wheel 1~Gobo Wheel 2~Gobo Wheel 2 Position / Rotation~Color Wheel~Cyan~Magenta~Yellow~Sparkle~Sparkle Speed~Prism~Prism Position / Rotation~Frost~Macro~Pan/Tilt Speed~Effect Speed~Blackout on Move

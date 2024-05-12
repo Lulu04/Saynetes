@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/35000094G%20UM_Atomic3000DMX_EN_G.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=GMW1aEkfQYQ
 [GENERAL]
-Manufacturer|Martin|Name|Atomic 3000|Type|28|Authors|Flo Edelmann, Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Martin|Name|Atomic 3000|Type|28|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|450|Height|239|Depth|234|Weight|7.50|Power|3000|Connector|3-pin and 5-pin|Bulb|Xenon 3000W
 [CHAN_DEF]

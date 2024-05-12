@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://cdn.shopify.com/s/files/1/1741/5055/files/rokbox_manual_rev_a.pdf?6943537019800087189|LinkType2|product page|Url2|https://web.archive.org/web/20221208100256/https://www.blizzardpro.com/products/rokbox|LinkType3|video|Url3|https://www.youtube.com/watch?v=jMTYqICI3Ng
 [GENERAL]
-Manufacturer|Blizzard|Name|RokBox RGBW|Type|16|Authors|DMS|Creator|Saynètes 3.1.0
+Manufacturer|Blizzard|Name|RokBox RGBW|Type|16|Authors|DMS|Creator|OFL
 [PHYSICAL]
 Width|229|Height|228|Depth|165|Weight|3.30|Power|126|Connector|3-pin|Bulb|18× 10W 4-in-1 LEDs|LensMinDegree|25.000|LensMaxDegree|30.000
 [CHAN_DEF]

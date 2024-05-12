@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51913667-Anleitung-56894-1.00-eurolite-led-ml-56-rgbw-36x3w-sil-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51913667-eurolite-led-ml-56-rgbw-36x3w-sil.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=gEsY_2H1XfI
 [GENERAL]
-Manufacturer|Eurolite|Name|LED ML-56 RGBW|Type|16|Authors|Nominari UG|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED ML-56 RGBW|Type|16|Authors|Nominari UG|Creator|OFL
 [PHYSICAL]
 Width|240|Height|300|Depth|310|Weight|5.00|Power|150|Connector|3-pin|Bulb|36× 3W RGBW LEDs
 [CHAN_DEF]

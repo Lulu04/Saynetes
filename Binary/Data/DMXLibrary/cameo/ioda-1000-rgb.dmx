@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.cameolight.com/en/downloads/file/id/-1031133774|LinkType2|product page|Url2|https://www.cameolight.com/en/solutions/dj-musicians/lasers/show-lasers/2163/ioda-1000-rgb|LinkType3|video|Url3|https://www.youtube.com/watch?v=LwszbJE4mg4
 [GENERAL]
-Manufacturer|cameo|Name|IODA 1000 RGB|Type|22|Authors|benni|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|IODA 1000 RGB|Type|22|Authors|benni|Creator|OFL
 [PHYSICAL]
 Width|188|Height|201|Depth|210|Weight|6.50|Power|100|Connector|3-pin|Bulb|250 mW red laser (638 nm), 150 mW green DPSS laser (532nm), 600 mW blue laser (447 nm)
 [CHAN_DEF]

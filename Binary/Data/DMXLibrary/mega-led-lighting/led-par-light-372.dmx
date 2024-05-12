@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.jackodance.it/wp-content/uploads/2019/01/MJ-3001-72-LED-PAR-LIGHT-372.pdf
 [GENERAL]
-Manufacturer|Mega LED Lighting|Name|LED PAR Light-372|Type|17|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Mega LED Lighting|Name|LED PAR Light-372|Type|17|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|310|Height|250|Depth|325|Weight|3.50|Power|216|Connector|3-pin|Bulb|72x3W LEDs (18x red/green/blue/white each)|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

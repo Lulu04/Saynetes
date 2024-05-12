@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://bklumitec.com/out/media/87401_BA_E_Ignition_Accu_Par_RGB_W.pdf|LinkType2|product page|Url2|https://bklumitec.com/en/LIGHT/Light-technics/Spotlights/Battery/LED-Accu-PAR-64-Floor-RGB-W-polish.html
 [GENERAL]
-Manufacturer|Ignition|Name|LED Accu PAR|Type|16|Authors|Karl Humbug|Creator|Saynètes 3.1.0
+Manufacturer|Ignition|Name|LED Accu PAR|Type|16|Authors|Karl Humbug|Creator|OFL
 [PHYSICAL]
 Width|285|Height|378|Depth|274|Weight|7.10|Power|65|Connector|3-pin|Bulb|10× 3W RGB LEDs + 5× 3W Cool White LEDs|LensMinDegree|25.000|LensMaxDegree|40.000
 [CHAN_DEF]

@@ -8,28 +8,28 @@ Manufacturer|Elation|Name|Platinum HFX|Type|9|Authors|Flo Edelmann|Creator|OFL
 Width|466|Height|676|Depth|340|Weight|22.70|Power|450|Connector|5-pin|Bulb|Philips MSD Platinum 14R 280W
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~19~Txt~Red~Extra~#ed2024|R3|Begin~20~End~28~Txt~Blue~Extra~#20409a|R4|Begin~29~End~37~Txt~Green~Extra~#0ba14b|R5|Begin~38~End~46~Txt~Yellow~Extra~#fff200|R6|Begin~47~End~55~Txt~Pink~Extra~#d93595|R7|Begin~56~End~64~Txt~Orange~Extra~#f26522|R8|Begin~65~End~73~Txt~Aqua~Extra~#149389|R9|Begin~74~End~82~Txt~Magenta~Extra~#ec008c|R10|Begin~83~End~91~Txt~Quad color~Extra~_#991b1e|R11|Begin~92~End~100~Txt~Cyan~Extra~#00aeef|R12|Begin~101~End~109~Txt~CTO~Extra~#f26751|R13|Begin~110~End~118~Txt~CTB~Extra~#c3e7ec|R14|Begin~119~End~127~Txt~UV~Extra~#3e69b3|R15|Begin~128~End~189~Txt~fast CW..slow CW|R16|Begin~190~End~193~Txt~stop|R17|Begin~194~End~255~Txt~slow CCW..fast CCW
-ID|Color Wheel fine|Type|12|R1|Begin~0~End~255~Txt~
+ID|Color Wheel fine|Type|12
 ID|Rotating Gobo Wheel|Type|10|R1|Begin~0~End~11~Txt~No function Beam open|R2|Begin~12~End~21~Txt~Open|R3|Begin~22~End~31~Txt~Gobo 1|R4|Begin~32~End~41~Txt~Gobo 2|R5|Begin~42~End~51~Txt~Gobo 3|R6|Begin~52~End~61~Txt~Gobo 4|R7|Begin~62~End~71~Txt~Gobo 5|R8|Begin~72~End~81~Txt~Gobo 6|R9|Begin~82~End~91~Txt~Gobo 7|R10|Begin~92~End~101~Txt~Gobo 8|R11|Begin~102~End~112~Txt~Gobo 1 slow..fast|R12|Begin~113~End~123~Txt~Gobo 2 slow..fast|R13|Begin~124~End~134~Txt~Gobo 3 slow..fast|R14|Begin~135~End~145~Txt~Gobo 4 slow..fast|R15|Begin~146~End~156~Txt~Gobo 5 slow..fast|R16|Begin~157~End~167~Txt~Gobo 6 slow..fast|R17|Begin~168~End~178~Txt~Gobo 7 slow..fast|R18|Begin~179~End~189~Txt~Gobo 8 slow..fast|R19|Begin~190~End~223~Txt~fast CW..slow CW|R20|Begin~224~End~255~Txt~slow CCW..fast CCW
 ID|Gobo Stencil Rotation|Type|11|R1|Begin~0~End~127~Txt~0deg..360deg|R2|Begin~128~End~189~Txt~fast CW..slow CW|R3|Begin~190~End~193~Txt~stop|R4|Begin~194~End~255~Txt~slow CCW..fast CCW
-ID|Gobo Stencil Rotation fine|Type|11|R1|Begin~0~End~255~Txt~
+ID|Gobo Stencil Rotation fine|Type|11
 ID|Static Gobo Wheel|Type|10|R1|Begin~0~End~21~Txt~Open|R2|Begin~22~End~28~Txt~Gobo 1|R3|Begin~29~End~35~Txt~Gobo 2|R4|Begin~36~End~42~Txt~Gobo 3|R5|Begin~43~End~49~Txt~Gobo 4|R6|Begin~50~End~56~Txt~Gobo 5|R7|Begin~57~End~63~Txt~Gobo 6|R8|Begin~64~End~70~Txt~Gobo 7|R9|Begin~71~End~77~Txt~Gobo 8|R10|Begin~78~End~84~Txt~Gobo 9|R11|Begin~85~End~91~Txt~Gobo 10|R12|Begin~92~End~98~Txt~Gobo 11|R13|Begin~99~End~105~Txt~Gobo 12|R14|Begin~106~End~112~Txt~Gobo 1 slow..fast|R15|Begin~113~End~119~Txt~Gobo 2 slow..fast|R16|Begin~120~End~126~Txt~Gobo 3 slow..fast|R17|Begin~127~End~133~Txt~Gobo 4 slow..fast|R18|Begin~134~End~140~Txt~Gobo 5 slow..fast|R19|Begin~141~End~147~Txt~Gobo 6 slow..fast|R20|Begin~148~End~154~Txt~Gobo 7 slow..fast|R21|Begin~155~End~161~Txt~Gobo 8 slow..fast|R22|Begin~162~End~168~Txt~Gobo 9 slow..fast|R23|Begin~169~End~175~Txt~Gobo 10 slow..fast|R24|Begin~176~End~182~Txt~Gobo 11 slow..fast|R25|Begin~183~End~189~Txt~Gobo 12 slow..fast|R26|Begin~190~End~221~Txt~fast CW..slow CW|R27|Begin~222~End~223~Txt~stop|R28|Begin~224~End~255~Txt~slow CCW..fast CCW
-ID|Static Gobo Wheel fine|Type|10|R1|Begin~0~End~255~Txt~
+ID|Static Gobo Wheel fine|Type|10
 ID|Prism|Type|41|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~50~Txt~Prism 8-facet rotating|R3|Begin~51~End~69~Txt~Prism linear rotating|R4|Begin~70~End~88~Txt~Prism 10-facet static|R5|Begin~89~End~107~Txt~Prism 8-facet + 10-facet|R6|Begin~108~End~127~Txt~Prism 10-facet + linear|R7|Begin~128~End~135~Txt~linear prism / Gobo macro 1|R8|Begin~136~End~143~Txt~linear prism / Gobo macro 2|R9|Begin~144~End~151~Txt~linear prism / Gobo macro 3|R10|Begin~152~End~159~Txt~linear prism / Gobo macro 4|R11|Begin~160~End~167~Txt~linear prism / Gobo macro 5|R12|Begin~168~End~175~Txt~linear prism / Gobo macro 6|R13|Begin~176~End~183~Txt~linear prism / Gobo macro 7|R14|Begin~184~End~191~Txt~linear prism / Gobo macro 8|R15|Begin~192~End~199~Txt~linear prism / Gobo macro 9|R16|Begin~200~End~207~Txt~linear prism / Gobo macro 10|R17|Begin~208~End~215~Txt~linear prism / Gobo macro 11|R18|Begin~216~End~223~Txt~linear prism / Gobo macro 12|R19|Begin~224~End~231~Txt~linear prism / Gobo macro 13|R20|Begin~232~End~239~Txt~linear prism / Gobo macro 14|R21|Begin~240~End~247~Txt~linear prism / Gobo macro 15|R22|Begin~248~End~255~Txt~linear prism / Gobo macro 16
 ID|Prism Index|Type|42|R1|Begin~0~End~127~Txt~Prism rotation 0deg..360deg|R2|Begin~128~End~189~Txt~Prism rotation fast CW..slow CW|R3|Begin~190~End~193~Txt~Prism rotation stop|R4|Begin~194~End~255~Txt~Prism rotation slow CCW..fast CCW
-ID|Prism Index fine|Type|42|R1|Begin~0~End~255~Txt~
+ID|Prism Index fine|Type|42
 ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
-ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
+ID|Focus fine|Type|32
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
-ID|Zoom fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Zoom fine|Type|31
 ID|Auto focus|Type|0|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~150~Txt~Focus 15m|R3|Begin~151~End~255~Txt~Focus 20m
-ID|Auto focus fine|Type|0|R1|Begin~0~End~255~Txt~
+ID|Auto focus fine|Type|0
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 ID|Frost|Type|47|R1|Begin~0~End~127~Txt~Frost off|R2|Begin~128~End~255~Txt~Frost high
 ID|Pan / Tilt speed|Type|9|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~Blackout with Pan / Tilt movement|R3|Begin~236~End~245~Txt~Blackout with all movement|R4|Begin~246~End~255~Txt~No function
 ID|Special functions|Type|0|R1|Begin~0~End~19~Txt~Color change normal|R2|Begin~20~End~29~Txt~Color change to any position|R3|Begin~30~End~39~Txt~color + static-fixed Gobo change to any position|R4|Begin~40~End~59~Txt~lamp on|R5|Begin~60~End~79~Txt~Lamp switch off|R6|Begin~80~End~84~Txt~all motor reset|R7|Begin~85~End~87~Txt~Pan / Tilt motor reset|R8|Begin~88~End~90~Txt~Gobo motor reset|R9|Begin~91~End~93~Txt~Gobo motor reset|R10|Begin~94~End~96~Txt~Shutter + dimmer motor reset|R11|Begin~97~End~99~Txt~other motor reset|R12|Begin~100~End~119~Txt~Internal program 1 (scene 1 - 8)|R13|Begin~120~End~139~Txt~Internal Program 2 (scene 9 - 16)|R14|Begin~140~End~159~Txt~Internal Program 3 (scene 17 - 24)|R15|Begin~160~End~179~Txt~Internal Program 4 (scene 25 - 32)|R16|Begin~180~End~199~Txt~Internal Program 5 (scene 33 - 40)|R17|Begin~200~End~219~Txt~Internal Program 6 (scene 41 - 48)|R18|Begin~220~End~239~Txt~Internal Program 7 (scene 49 - 56)|R19|Begin~240~End~255~Txt~No function Reserved

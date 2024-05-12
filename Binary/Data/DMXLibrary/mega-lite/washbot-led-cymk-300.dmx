@@ -8,9 +8,9 @@ Manufacturer|MegaLite|Name|Washbot LED CYMK 300|Type|9|Authors|Ryan Goodwin|Crea
 Width|431|Height|260|Depth|685|Weight|23.20|Power|363|Connector|3-pin and 5-pin|Bulb|LumiEngin 300W LED|LensMinDegree|7.000|LensMaxDegree|31.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..240deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter|Type|6|DefaultValue|255|R1|Begin~0~End~3~Txt~Closed|R2|Begin~4~End~103~Txt~Strobe 1Hz..18Hz|R3|Begin~104~End~107~Txt~Open|R4|Begin~108~End~207~Txt~Pulse 1Hz..18Hz|R5|Begin~208~End~212~Txt~Open|R6|Begin~213~End~251~Txt~Strobe 1Hz..18Hz Random timing|R7|Begin~252~End~255~Txt~Open
 ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
@@ -28,8 +28,8 @@ ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Focus near..far
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
 ID|Control|Type|0|R1|Begin~0~End~119~Txt~No function|R2|Begin~120~End~160~Txt~Pan / Tilt Reset|R3|Begin~161~End~200~Txt~Motor Function Reset|R4|Begin~201~End~255~Txt~All Reset
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
-ID|Focus fine|Type|32|R1|Begin~0~End~255~Txt~
-ID|Zoom fine|Type|31|R1|Begin~0~End~255~Txt~
+ID|Focus fine|Type|32
+ID|Zoom fine|Type|31
 [END_CHAN_DEF]
 [MODES]
 Name|20-channel|ShortName|20ch|Content|Pan~Pan fine~Tilt~Tilt fine~Dimmer~Shutter~Cyan~Magenta~Yellow~Kelvin~Color Selection 1~Color Selection 2~Color Selection 3~Color Selection 4~Color Wheel~Prism~Prism Rotation~Focus~Zoom~Control

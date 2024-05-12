@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://www.dedoweigertfilm.de/dwf-en/products/dedolight/turbo-series.php|LinkType2|other|Url2|https://www.mediatec.de/media/pdf/04/d6/8c/TURBO_SERIE_BROSCHUERE_0005.pdf
 [GENERAL]
-Manufacturer|Dedolight|Name|DLED7-BI|Type|23|Authors|PY DOUGNAC|Creator|Saynètes 3.1.0
+Manufacturer|Dedolight|Name|DLED7-BI|Type|23|Authors|PY DOUGNAC|Creator|OFL
 [PHYSICAL]
 Width|109|Height|200|Depth|100|Weight|1.30|Power|90|Connector|5-pin|Bulb|Bicolor 90W LED|LensMinDegree|4.000|LensMaxDegree|60.000
 [CHAN_DEF]

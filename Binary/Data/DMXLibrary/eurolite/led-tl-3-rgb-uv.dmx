@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51915445-Manual-128720-1.100-eurolite-led-tl-3-rgb+uv-trusslight-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51915445-eurolite-led-tl-3-rgb+uv-trusslight.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=0MoC10E_w90
 [GENERAL]
-Manufacturer|Eurolite|Name|LED TL-3 RGB+UV|Type|16|Authors|Barnaby Collins|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED TL-3 RGB+UV|Type|16|Authors|Barnaby Collins|Creator|OFL
 [PHYSICAL]
 Width|122|Height|108|Depth|117|Weight|0.89|Power|15|Connector|3-pin|Bulb|3× 7W RGB+UV 4in1 LEDs
 [CHAN_DEF]

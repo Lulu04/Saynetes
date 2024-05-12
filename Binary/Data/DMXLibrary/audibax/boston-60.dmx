@@ -16,8 +16,8 @@ ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~slow..fast
 ID|Auto Programs|Type|0|R1|Begin~0~End~59~Txt~No function|R2|Begin~60~End~84~Txt~Auto Mode 3|R3|Begin~85~End~109~Txt~Auto Mode 2|R4|Begin~110~End~134~Txt~Auto Mode 1|R5|Begin~135~End~159~Txt~Auto Mode 0|R6|Begin~160~End~184~Txt~Sound Mode 3|R7|Begin~185~End~209~Txt~Sound Mode 2|R8|Begin~210~End~234~Txt~Sound Mode 1|R9|Begin~235~End~255~Txt~Sound Mode 0
 ID|Reset|Type|0|R1|Begin~0~End~249~Txt~No function|R2|Begin~250~End~255~Txt~5s Reset
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Strobe Speed~Dimmer~Pan/Tilt Speed~Auto Programs~Reset

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.manualslib.com/manual/1407632/Big-Dipper-Lp001.html|LinkType2|video|Url2|https://www.youtube.com/watch?v=8HeYSPE-Ejk|LinkType3|video|Url3|https://www.youtube.com/watch?v=EfBSQLccAHE
 [GENERAL]
-Manufacturer|Big Dipper|Name|LP001|Type|17|Authors|simo|Creator|Saynètes 3.1.0
+Manufacturer|Big Dipper|Name|LP001|Type|17|Authors|simo|Creator|OFL
 [PHYSICAL]
 Width|255|Height|255|Depth|365|Weight|2.80|Power|180|Connector|Other|Bulb|54× 3W LEDs (12red, 18green, 18blue, 6white)
 [CHAN_DEF]

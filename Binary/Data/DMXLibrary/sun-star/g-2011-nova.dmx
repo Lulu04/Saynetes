@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://sunstarprolight.com.ar/manuales/NOVA-3D.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=FatnsLLsyKA
 [GENERAL]
-Manufacturer|Sun Star|Name|G-2011 NOVA|Type|22|Authors|Nils Van Zuijlen|Creator|Saynètes 3.1.0
+Manufacturer|Sun Star|Name|G-2011 NOVA|Type|22|Authors|Nils Van Zuijlen|Creator|OFL
 [PHYSICAL]
 Width|150|Height|130|Depth|210|Weight|8.00|Power|30|Connector|3-pin|Bulb|Green laser 532nm
 [CHAN_DEF]

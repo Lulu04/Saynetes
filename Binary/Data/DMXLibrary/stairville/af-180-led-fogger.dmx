@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.thomann.de/pics/atg/atgdata/document/manual/c_334044_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_af_180_led_fogger_co2_fx_dmx.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i2656p10_yd59vqpa.mp4
 [GENERAL]
-Manufacturer|Stairville|Name|AF-180 LED Fogger|Type|10|Authors|peaceman|Creator|Saynètes 3.1.0
+Manufacturer|Stairville|Name|AF-180 LED Fogger|Type|10|Authors|peaceman|Creator|OFL
 [PHYSICAL]
 Width|340|Height|190|Depth|300|Weight|8.90|Power|850|Connector|3-pin|Bulb|LED (3× red, 3× green, 3× blue)
 [CHAN_DEF]

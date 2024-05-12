@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.steinigke.de/download/51915448-Manual-122742-1.000-eurolite-led-tl-4-qcl-rgb+uv-trusslight-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51915448-eurolite-led-tl-4-qcl-rgb+uv-trusslight.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=FZe4SH3rlaQ
 [GENERAL]
-Manufacturer|Eurolite|Name|LED TL-4 QCL|Type|16|Authors|Clemens Mair|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED TL-4 QCL|Type|16|Authors|Clemens Mair|Creator|OFL
 [PHYSICAL]
 Width|145|Height|130|Depth|155|Weight|1.30|Power|15|Connector|3-pin|Bulb|4× 8W 4in1 QCL RGB+UV LED|LensMinDegree|13.000|LensMaxDegree|30.000
 [CHAN_DEF]

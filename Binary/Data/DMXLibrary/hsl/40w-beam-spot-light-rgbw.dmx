@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|product page|Url1|https://www.amazon.com/Stage-Spotlight-Beam-Light-Package/dp/B07XYYK28H|LinkType2|other|Url2|https://www.amazon.com/ask/questions/Tx3CE66RTIHOGZL/ref=ask_dp_dpmw_al_hza
 [GENERAL]
-Manufacturer|HSL|Name|40W Beam Spot Light RGBW|Type|23|Authors|David Oleniacz, Ryan Goodwin|Creator|Saynètes 3.1.0
+Manufacturer|HSL|Name|40W Beam Spot Light RGBW|Type|23|Authors|David Oleniacz, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|127|Height|127|Depth|190|Weight|1.36|Power|40|Connector|3-pin
 [CHAN_DEF]

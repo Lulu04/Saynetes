@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|http://adjmedia.s3-website-eu-west-1.amazonaws.com/manuals/XS%20400.pdf|LinkType2|product page|Url2|https://www.adj.eu/xs-400|LinkType3|video|Url3|https://www.youtube.com/watch?v=Don23z-XN-s|LinkType4|video|Url4|https://www.youtube.com/watch?v=AjbBAu8UHW8|LinkType5|video|Url5|https://www.youtube.com/watch?v=EpWMiggfdBM
 [GENERAL]
-Manufacturer|American DJ|Name|XS 400|Type|9|Authors|Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|American DJ|Name|XS 400|Type|9|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|170|Height|284|Depth|124|Weight|2.50|Power|45|Connector|3-pin|Bulb|4x 10W RGBW LEDs|Lumens|454|LensMinDegree|5.000|LensMaxDegree|5.000
 [CHAN_DEF]
@@ -23,8 +23,8 @@ ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Special Functions|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout with Pan / Tilt movement|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout with RGBW value change|R5|Begin~100~End~199~Txt~No function|R6|Begin~200~End~209~Txt~Reset all|R7|Begin~210~End~255~Txt~No function
 ID|Dimmer Curve|Type|0|DefaultValue|255|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default setting
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Tilt Continuous Rotation~Tilt Continuous Rotation Speed~Red~Green~Blue~White~Color Macros & Effects~Strobing~Master dimmer~Programs~Program Speed~Pan/Tilt Speed~Special Functions~Dimmer Curve

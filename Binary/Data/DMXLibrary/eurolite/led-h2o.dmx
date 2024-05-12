@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/700-MANUAL-1.20-en-de_00079684.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51918700-eurolite-led-h2o-water-effect.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=idoxSYB6oHk
 [GENERAL]
-Manufacturer|Eurolite|Name|LED H2O|Type|23|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Eurolite|Name|LED H2O|Type|23|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|165|Height|170|Depth|135|Weight|0.80|Power|26|Connector|3.5mm stereo jack|Bulb|9W TCL LED|LensMinDegree|35.000|LensMaxDegree|35.000
 [CHAN_DEF]

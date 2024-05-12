@@ -8,9 +8,9 @@ Manufacturer|Chauvet DJ|Name|Intimidator Spot 110|Type|9|Authors|Flo Edelmann, L
 Width|190|Height|279|Depth|127|Weight|2.30|Power|41|Connector|3-pin|Bulb|1× 10W cool white LED|LensMinDegree|13.000|LensMaxDegree|13.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7|R1|Begin~0~End~255~Txt~
+ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
-ID|Tilt fine|Type|8|R1|Begin~0~End~255~Txt~
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Color Wheel|Type|12|R1|Begin~0~End~31~Txt~Open|R2|Begin~32~End~63~Txt~Red~Extra~#ff0000|R3|Begin~64~End~95~Txt~Green~Extra~#00ff00|R4|Begin~96~End~127~Txt~Blue~Extra~#0000ff|R5|Begin~128~End~159~Txt~Yellow~Extra~#ffff00|R6|Begin~160~End~191~Txt~Purple~Extra~#ff55ff|R7|Begin~192~End~223~Txt~Orange~Extra~#ffaa00|R8|Begin~224~End~255~Txt~Light Blue~Extra~#00aaff
 ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~131~Txt~Strobe 0Hz..23Hz|R3|Begin~132~End~139~Txt~Open|R4|Begin~140~End~181~Txt~RampUp 0Hz..23Hz|R5|Begin~182~End~189~Txt~Open|R6|Begin~190~End~231~Txt~RampDown 0Hz..23Hz|R7|Begin~232~End~239~Txt~Open|R8|Begin~240~End~247~Txt~Strobe Random timing|R9|Begin~248~End~255~Txt~Open

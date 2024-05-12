@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLSW1000/CLSW1000_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=7itkJUl1CnM
 [GENERAL]
-Manufacturer|cameo|Name|Steam Wizard 1000|Type|10|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|cameo|Name|Steam Wizard 1000|Type|10|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|405|Height|200|Depth|310|Weight|7.50|Power|800|Connector|3-pin|Bulb|9x 3W LEDs (3x red, 3x green, 3x blue)
 [CHAN_DEF]

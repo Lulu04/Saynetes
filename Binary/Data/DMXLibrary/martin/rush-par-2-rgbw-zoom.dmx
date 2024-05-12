@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://adn.harmanpro.com/site_elements/executables/6829_1526699833/UM_RUSHPAR2RGBWZoom_EN_I_original.pdf|LinkType2|product page|Url2|https://www.martin.com/en/products/rush-par-2-rgbw-zoom|LinkType3|video|Url3|https://www.youtube.com/watch?v=pXoW-NA1lK4|LinkType4|video|Url4|https://www.youtube.com/watch?v=N_loyyozkzE
 [GENERAL]
-Manufacturer|Martin|Name|Rush PAR 2 RGBW Zoom|Type|23|Authors|stevebrush, Flo Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Martin|Name|Rush PAR 2 RGBW Zoom|Type|23|Authors|stevebrush, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|287|Height|329|Depth|266|Weight|5.50|Power|151|Connector|5-pin|Bulb|12× 10W RGBW LEDs|LensMinDegree|10.000|LensMaxDegree|60.000
 [CHAN_DEF]
@@ -13,7 +13,7 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
 ID|Zoom|Type|31|DefaultValue|128|R1|Begin~0~End~255~Txt~Zoom 60deg..10deg
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1|R1|Begin~0~End~255~Txt~
+ID|Dimmer fine|Type|1
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~Strobe slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp slow..fast|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown slow..fast|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Strobe Random timing|R10|Begin~248~End~255~Txt~Open
 ID|Color Presets|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~15~Txt~Color 1~Extra~#ff0000|R3|Begin~16~End~20~Txt~Color 2~Extra~#ff9b00|R4|Begin~21~End~25~Txt~Color 3~Extra~#ffd866|R5|Begin~26~End~30~Txt~Color 4~Extra~#ffe100|R6|Begin~31~End~35~Txt~Color 5~Extra~#fff500|R7|Begin~36~End~40~Txt~Color 6~Extra~#fffe71|R8|Begin~41~End~45~Txt~Color 7~Extra~#ffff00|R9|Begin~46~End~50~Txt~Color 8~Extra~#f5ff00|R10|Begin~51~End~55~Txt~Color 9~Extra~#ebff53|R11|Begin~56~End~60~Txt~Color 10~Extra~#cdff00|R12|Begin~61~End~65~Txt~Color 11~Extra~#ccff6f|R13|Begin~66~End~70~Txt~Color 12~Extra~#00ff00|R14|Begin~71~End~75~Txt~Color 13~Extra~#00ff9b|R15|Begin~76~End~80~Txt~Color 14~Extra~#37ffc8|R16|Begin~81~End~85~Txt~Color 15~Extra~#00ffd2|R17|Begin~86~End~90~Txt~Color 16~Extra~#00ffe6|R18|Begin~91~End~95~Txt~Color 17~Extra~#48fff4|R19|Begin~96~End~100~Txt~Color 18~Extra~#00ffff|R20|Begin~101~End~105~Txt~Color 19~Extra~#00faff|R21|Begin~106~End~110~Txt~Color 20~Extra~#62e9ff|R22|Begin~111~End~115~Txt~Color 21~Extra~#00d7e1|R23|Begin~116~End~120~Txt~Color 22~Extra~#6ddaff|R24|Begin~121~End~125~Txt~Color 23~Extra~#0000ff|R25|Begin~126~End~130~Txt~Color 24~Extra~#a500ff|R26|Begin~131~End~135~Txt~Color 25~Extra~#c300ff|R27|Begin~136~End~140~Txt~Color 26~Extra~#e100ff|R28|Begin~141~End~145~Txt~Color 27~Extra~#f666ff|R29|Begin~146~End~150~Txt~Color 28~Extra~#fd00ff|R30|Begin~151~End~155~Txt~Color 29~Extra~#ff00ff|R31|Begin~156~End~160~Txt~Color 30~Extra~#ff00f5|R32|Begin~161~End~165~Txt~Color 31~Extra~#ff00eb|R33|Begin~166~End~170~Txt~Color 32~Extra~#ff00dc|R34|Begin~171~End~175~Txt~Color 33~Extra~#ff6bd6|R35|Begin~176~End~180~Txt~Color 34~Extra~#ff00a5|R36|Begin~181~End~185~Txt~Color 35~Extra~#ffffff|R37|Begin~186~End~190~Txt~Color 36~Extra~#ffffff|R38|Begin~191~End~192~Txt~No function|R39|Begin~193~End~214~Txt~ColorJump fast..slow|R40|Begin~215~End~221~Txt~ColorJump stop|R41|Begin~222~End~243~Txt~ColorJump slow reverse..fast reverse|R42|Begin~244~End~247~Txt~ColorJump fast random|R43|Begin~248~End~251~Txt~ColorJump 50% random|R44|Begin~252~End~255~Txt~ColorJump slow random
 [END_CHAN_DEF]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://orion-fxlights.com/downloads/ownersman/om_orcan2.pdf?v=1427215602
 [GENERAL]
-Manufacturer|Orion Effects Lighting|Name|ORCAN2|Type|17|Authors|Felix Edelmann|Creator|Saynètes 3.1.0
+Manufacturer|Orion Effects Lighting|Name|ORCAN2|Type|17|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|255|Height|365|Depth|255|Weight|2.80|Power|0|Connector|3-pin|Bulb|36 x 3W RGB LEDs (12 x Red / 12 x Green / 12 x Blue)
 [CHAN_DEF]
