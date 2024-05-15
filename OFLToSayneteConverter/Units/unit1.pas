@@ -18,6 +18,9 @@ type
     Button1: TButton;
     Button2: TButton;
     CBConvertOnlyExisting: TCheckBox;
+    CBConvertSwitch: TCheckBox;
+    CBConvertWheels: TCheckBox;
+    CBConvertMatrix: TCheckBox;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -125,6 +128,11 @@ type
     procedure InitDefault;
   end;
 
+  TFixLibSwitchDescriptor = record
+    SwitchVirtualChannel: string; // ex: "Strobe / Program Speed / Sound Sensitivity" (from mode definition)
+    SwitchToSubChannel: string;   // ex: "Program Speed"
+  end;
+
   { TSingleRange }
 
   TSingleRange = record
@@ -132,6 +140,9 @@ type
     EndValue: integer;
     Txt,
     Extra: string;
+
+    SwitchDescriptors: array of TFixLibSwitchDescriptor;
+    procedure AddChannelSwitch(const aVirtualName, aSubChannelName: string);
 
     procedure InitDefault;
     function SaveToString: string;
@@ -162,6 +173,31 @@ type
   end;
   TAvailableChannels = array of TAvailableChannel;
 
+  { TVirtualChannelForSwitch }
+
+  TVirtualChannelForSwitch = record
+    VirtualName: string;
+    SubChannelIDs: TStringArray;      // list of used channel
+    procedure InitDefault;
+    // add single instance of channel ID
+    procedure AddSubChannel(const aID: string);
+  end;
+  TVirtualChannelForSwitchs = array of TVirtualChannelForSwitch;
+
+  { TVirtualChannelForSwitchsHelper }
+
+  TVirtualChannelForSwitchsHelper = type helper for TVirtualChannelForSwitchs
+    function IndexOfVirtualName(const aVirtualName: string): integer;
+    // we must have single instance of virtual name
+    function AddVirtualName(const aVirtualChannelName: string): integer;
+    // if aVirtualName doesn't exists in self, the function returns aVirtualName
+    // else it returns a formatted string like:
+    //  aVirtualName:SubChannel1;SubChannel2;...
+    function FormatVirtualIfNeeded(const aVirtualName: string): string;
+  end;
+
+var
+  FVirtualChannelInMode: TVirtualChannelForSwitchs;
 
 type
 
@@ -234,6 +270,63 @@ type
     property HaveColorChannel: boolean read FHaveColorChannel; // used to set the right fixture type
   end;
 
+{ TVirtualChannelForSwitchsHelper }
+
+function TVirtualChannelForSwitchsHelper.IndexOfVirtualName(const aVirtualName: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].VirtualName = aVirtualName then exit(i);
+  Result := -1;
+end;
+
+function TVirtualChannelForSwitchsHelper.AddVirtualName(const aVirtualChannelName: string): integer;
+var i: integer;
+begin
+  i := IndexOfVirtualName(aVirtualChannelName);
+  if i <> -1 then exit(i);
+
+  i := Length(Self);
+  SetLength(Self, i+1);
+  Self[i].InitDefault;
+  Self[i].VirtualName := aVirtualChannelName;
+  Result := i;
+end;
+
+function TVirtualChannelForSwitchsHelper.FormatVirtualIfNeeded(const aVirtualName: string): string;
+var i, j: integer;
+begin
+  Result := aVirtualName;
+
+  i := IndexOfVirtualName(aVirtualName);
+  if i = -1 then exit;
+
+  Result := aVirtualName+':';
+  for j:=0 to High(Self[i].SubChannelIDs) do begin
+    Result := Result + Self[i].SubChannelIDs[j];
+    if j < High(Self[i].SubChannelIDs) then Result := Result+';';
+  end;
+
+end;
+
+{ TVirtualChannelForSwitch }
+
+procedure TVirtualChannelForSwitch.InitDefault;
+begin
+  VirtualName := '';
+  SubChannelIDs := NIL;
+end;
+
+procedure TVirtualChannelForSwitch.AddSubChannel(const aID: string);
+var i: integer;
+begin
+  for i:=0 to High(SubChannelIDs) do
+    if SubChannelIDs[i] = aID then exit;
+  i := Length(SubChannelIDs);
+  SetLength(SubChannelIDs, i+1);
+  SubChannelIDs[i] := aID;
+end;
+
 
 { TFixtureMode }
 
@@ -267,7 +360,8 @@ begin
   s := '';
   for i:=0 to High(ChannelsIDToUse) do
   begin
-    s := s + ChannelsIDToUse[i];
+    s := s + FVirtualChannelInMode.FormatVirtualIfNeeded(ChannelsIDToUse[i]);
+    //s := s + ChannelsIDToUse[i];
     if i < High(ChannelsIDToUse) then s := s+'~';
   end;
   prop.Add('Content', s);
@@ -322,21 +416,42 @@ end;
 
 { TSingleRange }
 
+procedure TSingleRange.AddChannelSwitch(const aVirtualName, aSubChannelName: string);
+var i: integer;
+begin
+  i := Length(SwitchDescriptors);
+  SetLength(SwitchDescriptors, i+1);
+  SwitchDescriptors[i].SwitchVirtualChannel := aVirtualName;
+  SwitchDescriptors[i].SwitchToSubChannel := aSubChannelName;
+
+  // add entries to the list of virtual channel for switch
+  i := FVirtualChannelInMode.AddVirtualName(aVirtualName);
+  FVirtualChannelInMode[i].AddSubChannel(aSubChannelName);
+end;
+
 procedure TSingleRange.InitDefault;
 begin
   BeginValue := 0;
   EndValue := 0;
   txt := '';
+  SwitchDescriptors := NIL;
 end;
 
 function TSingleRange.SaveToString: string;
 var prop: PropertyUtils.TProperties;
+  i: integer;
 begin
   prop.Init('~');
   prop.Add('Begin', BeginValue);
   prop.Add('End', EndValue);
   prop.Add('Txt', txt);
   if Extra <> '' then prop.Add('Extra', Extra);
+
+  for i:=0 to High(SwitchDescriptors) do begin
+    prop.Add('Switch'+(i+1).ToString,
+             SwitchDescriptors[i].SwitchVirtualChannel+':'+SwitchDescriptors[i].SwitchToSubChannel);
+  end;
+
   Result := prop.PackedProperty;
 end;
 
@@ -448,6 +563,7 @@ begin
   Ranges[0].txt := aText;
   Ranges[0].BeginValue := 0;
   Ranges[0].EndValue := 255;
+  Ranges[0].SwitchDescriptors := NIL;
 end;
 
 function TAvailableChannel.HaveFineChannels: boolean;
@@ -469,7 +585,6 @@ begin
   flag :=  (Length(Ranges) = 1) and (Ranges[0].BeginValue = 0) and
            (Ranges[0].EndValue = 255) and (Trim(Ranges[0].Txt) = '') and
            (Trim(Ranges[0].Extra) = '');
-
   if not flag then
     for i:=0 to High(Ranges) do
       prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
@@ -630,6 +745,7 @@ begin
   AvailableChannels := NIL;
   Wheels := NIL;
   Matrix.InitDefault;
+  FVirtualChannelInMode := NIL;
 end;
 
 function TFixtureFromLibrary.ProcessItemCapability(aItem: TJSONData; aChanIndex: integer): boolean;
@@ -783,6 +899,7 @@ begin
     'ShutterStrobe': begin
       chanType := ctSTROBE;
       if HasSteppedProperty('shutterEffect') then ConcatToText(prop);
+      if txt = 'Strobe' then txt := '';
       if HasSteppedProperty('soundControlled') then ConcatToText('Sound controlled');
       if HasRangedProperty('speed') then ConcatToText(prop);
       if HasRangedProperty('duration') then ConcatToText(prop);
@@ -978,7 +1095,7 @@ begin
     end;
     'SoundSensitivity': begin
       chanType := ctSOUNDSENSITIVITY;
-      txt := 'Sound sensitivity';
+      //txt := 'Sound sensitivity';
       if HasRangedProperty('soundSensitivity') then ConcatToText(prop);
     end;
     'BeamAngle': begin
@@ -1223,10 +1340,10 @@ end;
 
 function TFixtureFromLibrary.AddRangeFrom(aChanIndex: integer; aItem: TJSONData): boolean;
 var
-  i, iRange: Integer;
+  i, j, iRange: Integer;
   sub: TJSONData;
   arr: TJSONArray;
-  s, txt, extra: String;
+  s, txt, extra, virtualChan, subChan: String;
   chanType: TChannelType;
 begin
   Result := False;
@@ -1266,9 +1383,13 @@ begin
       end;
 
       'switchChannels': begin
-        LogMessage('-> HAVE SWITCH CHANNEL');
-        inc(FSwitchErrorCount);
-        exit;
+        if Form1.CBConvertSwitch.Checked then begin
+          for j:=0 to sub.Count-1 do begin
+            virtualChan := TJSONObject(sub).Names[j];
+            subChan := sub.FindPath(virtualChan).AsString;
+            AvailableChannels[aChanIndex].Ranges[iRange].AddChannelSwitch(virtualChan, subChan);
+          end;
+        end else exit(False);
       end;
     end;
   end;
@@ -1741,6 +1862,8 @@ begin
     PB.Position := PB.Max-(i+1);
     Application.ProcessMessages;
 
+    Log.Info('Converting "'+LB.Items.Strings[i]+'"');
+
     fSrc := ConcatPaths([OFLPath, LB.Items.Strings[i]]);
     fDest := ChangeFileExt(ConcatPaths([ConvertedPath, LB.Items.Strings[i]]), '.dmx');
 
@@ -1777,7 +1900,6 @@ var t: TStringList;
   f: string;
 begin
   t := ContenuDuRepertoire(SayneteDMXLibraryPath, '.dmx', True, True);
-  Log := TLog.Create(Application.Location+'library.log');
   for i:=0 to t.Count-1 do begin
     if ExtractFileExt(t.Strings[i]) <> '.dmx' then continue;
 
@@ -1797,6 +1919,9 @@ procedure TForm1.FormShow(Sender: TObject);
 var F: TStringList;
   i: integer;
 begin
+  Log := TLog.Create(Application.Location+'library.log');
+  Log.DeleteLogFile;
+
   F := ContenuDuRepertoire(OFLPath, '.json', True, True);
   // delete fixture with 16 bits range values
   DeleteLBEntriesWith16BitRangeValues(F);
@@ -2042,6 +2167,8 @@ begin
                LogMessage(SrcFilename+' - "physical" not found');
           end;
           'matrix': begin
+            if not Form1.CBConvertMatrix.Checked then exit(False);
+
             for itemEnum2 in itemEnum.Value do begin
               case itemEnum2.Key of
                 'pixelCount': begin
@@ -2066,9 +2193,11 @@ begin
             inc(FMatrixErrorCount);
           end;
           'wheels': begin
+            if not Form1.CBConvertWheels.Checked then exit(False);
+
             Result := fix.InitWheelsFrom(itemEnum.Value);
             if not Result then begin
-              LogMessage('  property "'+itemEnum.Key+'":"'+itemEnum.Value.AsJSON+'" fail ti InitWheelsFrom');
+              LogMessage('  property "'+itemEnum.Key+'":"'+itemEnum.Value.AsJSON+'" fail to InitWheelsFrom');
               inc(FWheelsErrorCount);
             end;
           end;
