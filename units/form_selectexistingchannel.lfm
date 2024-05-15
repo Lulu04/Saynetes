@@ -1,7 +1,7 @@
 object FormSelectExistingChannel: TFormSelectExistingChannel
-  Left = 361
+  Left = 359
   Height = 246
-  Top = 221
+  Top = 261
   Width = 398
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle

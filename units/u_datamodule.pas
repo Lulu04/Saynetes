@@ -115,6 +115,8 @@ begin
   AddImageToImageList('LaserStrobe.svg', ILChannelType);
   AddImageToImageList('GoboShake.svg', ILChannelType);
   AddImageToImageList('Frost.svg', ILChannelType);
+
+  AddImageToImageList('SwitchingChannel.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

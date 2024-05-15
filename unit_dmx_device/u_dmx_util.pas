@@ -41,12 +41,6 @@ uses
   function EffectToText(aFX: TDmxEffect): string;
   function IsChannelEffect(aFX: TDmxEffect): boolean;
 
-  // decode a dmx channel range 'begin-->end : description'
-  // and return the 3 values
-  procedure DecodeDMXChannelRange( const s: string; out be, en: integer; out description: string );
-  function EncodeDMXChannelRange( be, en: integer; const description: string ): string;
-
-
   function GetFixtureFromCmd(const aCmd: TSingleCmd): TDMXFixture;
 
 
@@ -228,7 +222,7 @@ end;
 procedure ShowFixtureImage(aImage: TImage; aFT:TFixtureType);
 var ima: TBGRABitmap;
     bmp: TBitmap;
-     function LoadBitmapFromFile(AFileName: String): TCustomBitmap;
+{     function LoadBitmapFromFile(AFileName: String): TCustomBitmap;
      var
        Stream: TStream;
        GraphicClass: TGraphicClass;
@@ -246,7 +240,7 @@ var ima: TBGRABitmap;
        finally
          Stream.Free;
        end;
-     end;
+     end; }
 begin
   ima := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), aImage.ClientWidth, aImage.ClientHeight);
   bmp := TBitmap.Create;
@@ -285,7 +279,7 @@ begin
     ctWHITE: Result:=Result+'CursorWhite.svg';
     ctAMBER: Result:=Result+'CursorAmber.svg';
     ctUV: Result:=Result+'CursorUV.svg';
-    ctSPEED: Result:=Result+'CursorSpeedPanTilt.svg';
+    ctSPEED: Result:=Result+'CursorSpeed.svg';
     ctNOFUNCTION: Result:=Result+'CursorNoFunction.svg';
     ctCYAN: Result:=Result+'CursorCyan.svg';
     ctMAGENTA: Result:=Result+'CursorMagenta.svg';
@@ -347,26 +341,6 @@ begin
   end;
 end;
 
-// decode a dmx channel range 'begin-->end : description'
-procedure DecodeDMXChannelRange(const s: string; out be, en: integer; out description: string);
-var i, j: integer;
-begin
-  i:=Pos('-', s)-1;    // 1 based 0 if not found
-  be:=Copy(s,1,i).ToInteger;       // 1 based
-  inc(i,4);
-  j:=Pos(' ', s);
-  en:=Copy(s,i,j-i).ToInteger;
-  inc(j,3);
-  if j<Length(s)
-    then description:=Copy(s,j,Length(s)-j+1)
-    else description:='';
-end;
-
-function EncodeDMXChannelRange(be, en: integer; const description: string ): string;
-begin
-  Result:=be.ToString+'-->'+en.ToString+' : '+description;
-end;
-
 function GetFixtureFromCmd(const aCmd: TSingleCmd): TDMXFixture;
 var A: TParamArray;
   uni: TDMXUniverse;
@@ -407,7 +381,7 @@ begin
   t := TStringList.Create;
   try
     t.LoadFromFile(aFixtureFilename);
-    LoadModesFrom(t, @modes);
+    modes.LoadModesFrom(t);
     SetLength(Result, Length(modes));
       for i:=0 to High(modes) do
         Result[i] := modes[i].Name;

@@ -96,13 +96,14 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 335
+      Height = 329
       Top = 155
       Width = 537
       AlternateColor = 4345425
       Anchors = [akTop, akLeft, akBottom]
       BorderSpacing.Left = 6
       BorderSpacing.Top = 20
+      BorderSpacing.Bottom = 6
       Color = 2896950
       ColCount = 3
       Columns = <      

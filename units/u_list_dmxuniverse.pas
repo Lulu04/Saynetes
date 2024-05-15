@@ -36,51 +36,92 @@ type
               deFlash
              );
 
+  {$define SectionInterface}
+  {$I fixture_fromlibrary.inc}
+  {$undef SectionInterface}
+
+type
 
   TDmxUniverse = class;
   TDMXFixture = class;
 
+  { TSwitchDescriptor }
+
+  TSwitchDescriptor = record
+    ChannelIndexToSwitch,
+    SubChannelIndex: integer;
+    procedure CopyFrom(p: PFixLibSwitchDescriptor);
+  end;
+
   { TChannelRange }
-
+  PChannelRange = ^TChannelRange;
   TChannelRange = record
-    private
-      FText: string;
-      FExtra: string;
-      procedure SetExtra(AValue: string);
-      procedure SetText(AValue: string);
-    public
-      BeginValue,
-      EndValue: byte;
-      function Duplicate: TChannelRange;
-      // Decode/Encode are reserved for dmx library
-      procedure Decode(s: string);
-      function Encode: string;
-      property Text: string read FText write SetText; // range description
-      property Extra: string read FExtra write SetExtra;
-    end;
-  TArrayOfChannelRange = array of TChannelRange;
+    BeginValue,
+    EndValue: byte;
+    Text: string;
+    Extra: string;
 
-{$define SectionInterface}
+    SwitchDescriptors: array of TSwitchDescriptor;
+    procedure CopyFrom(p: PFixLibSingleRange);
+    function HaveSwitch: boolean;
+    function Duplicate: TChannelRange;
+  end;
+  TArrayOfChannelRange = array of TChannelRange;
+  PArrayOfChannelRange = ^TArrayOfChannelRange;
+
+  PSubChannel = ^TSubChannel;
+
+  { TSubChannel }
+
+  TSubChannel = record
+    Name: string;
+    ChannelType: TChannelType;
+    DefaultValue: byte;
+    Ranges: TArrayOfChannelRange;
+    procedure CopyFrom(p: PFixLibAvailableChannel);
+  end;
+  TSubChannels = array of TSubChannel;
+
+{{$define SectionInterface}
 {$I fixture_fromlibrary.inc}
-{$undef SectionInterface}
+{$undef SectionInterface}        }
+
 
 type
   { TBaseDMXChannel }
+  // this class have sub-channel: single one for normal channel, several for switched channel
   TBaseDMXChannel = class
+   private // sub channels to manage switching
+    FSubChannels: TSubChannels;
+    FSubChannelIndex: integer;
+    function GetSubChannelName: string;
+    function GetSubChannelType: TChannelType;
+    function GetSubChannelRanges: PArrayOfChannelRange;
+    function GetDefaultValue: byte;
    private
-     FDefaultValue: byte;
+//    FDefaultValue: byte;
     FPercentValue: single;
+    procedure SetChannelType(AValue: TChannelType);
     procedure SetDefaultValue(AValue: byte);
     procedure SetPercentValue(AValue: single);
+    procedure SetSubChannelIndex(AValue: integer);
+    procedure SetSubChannelName(AValue: string);
+   private
+    FNeedToRepaintWholeChannel: boolean;
    public
     EffectPainted: integer;
     ByteValuePainted: integer;
     SelectedPainted: boolean;
     RangeIndexPainted: integer;
    public
-    Name: string;
-    Ranges: TArrayOfChannelRange;
-    ChannelType: TChannelType;
+    property SubChannelIndex: integer read FSubChannelIndex write SetSubChannelIndex;
+    property Name: string read GetSubChannelName write SetSubChannelName;
+    property ChannelType: TChannelType read GetSubChannelType write SetChannelType;
+    property Ranges: PArrayOfChannelRange read GetSubChannelRanges;
+//    Name: string;
+//    ChannelType: TChannelType;
+//    Ranges: TArrayOfChannelRange;
+   public
     Universe: TDmxUniverse;
     Fixture: TDMXFixture;
     Adress: TDMXAdress;
@@ -101,7 +142,7 @@ type
     function CurrentTextRange: string;
 
     function ByteValue: byte;
-    property DefaultValue: byte read FDefaultValue write SetDefaultValue;
+    property DefaultValue: byte read GetDefaultValue write SetDefaultValue;
     // [0..1]
     property PercentValue: single read FPercentValue write SetPercentValue;
   end;
@@ -240,7 +281,7 @@ type
      function ChannelsCount: integer;
 
      // -1 if not found
-     function IndexOfChannel( aChan: TDMXChannel): integer;
+     function IndexOfChannel(aChan: TDMXChannel): integer;
 
      procedure UnselectAllChannels;
      function GetChannelByIndex(aChanIndex: integer): TDMXChannel;
@@ -316,9 +357,8 @@ type
      // Fixture
      function FixturesCount: integer;
      procedure Fixture_Add(f: TDmxFixture);
-// TO DELETE
-//     function Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
-     // IS REPLACED BY THIS ONE
+
+     // called by frame projector view
      function Fixture_AddFromFixLib(const aLibFix: TLibraryFixture;
                                     const aFixtureLocation: TFixtureLibraryLocation): TDmxFixture;
 
@@ -477,7 +517,8 @@ var b: byte;
  vf: single;
  flagUpdateCursorView: boolean;
 begin
-  flagUpdateCursorView := False;
+  flagUpdateCursorView := FNeedToRepaintWholeChannel;
+  FNeedToRepaintWholeChannel := False;
 
   if HandledByUser then
   begin
@@ -485,7 +526,7 @@ begin
     if CurrentEffect in [deFlameRGB, deAudioFollowerRGB] then
       Fixture.CurrentFixtureEffect := deNOEFFECT;
 
-    flagUpdateCursorView := CurrentEffect <> deNOEFFECT;
+    flagUpdateCursorView := flagUpdateCursorView or (CurrentEffect <> deNOEFFECT);
     CurrentEffect := deNOEFFECT;
     ValueFromEffect := PercentValue;
   end
@@ -566,8 +607,9 @@ begin
 
     end;//case
 
-    flagUpdateCursorView := ((PercentToDMXByte(ValueFromEffect) <> ByteValue) and not FLocked)
-                             or (CurrentEffect = deNOEFFECT);
+    flagUpdateCursorView := flagUpdateCursorView or
+                            ((PercentToDMXByte(ValueFromEffect) <> ByteValue) and not FLocked) or
+                            (CurrentEffect = deNOEFFECT);
 
     if not FLocked then
       PercentValue := ValueFromEffect;
@@ -583,7 +625,7 @@ begin
     FFlashIsActive := FFlashDuration > 0;
     flagUpdateCursorView := flagUpdateCursorView or not FFlashIsActive;
   end
-  else b := PercentToDMXByte(FPercentValue);
+  else b := PercentToDMXByte(PercentValue);
 
 
   // redraw on projector view
@@ -718,34 +760,92 @@ end;
 { TBaseDMXChannel }
 
 procedure TBaseDMXChannel.SetPercentValue(AValue: single);
+var b: byte;
+  p: PArrayOfChannelRange;
+  pp: PChannelRange;
+  i: integer;
 begin
   FPercentValue := AValue;
+
+  // process switch channel
+  try
+    p := Ranges;
+    if p = NIL then exit;
+    b := Round(FPercentValue*255);
+    pp := p^.GetRangeFromByteValue(b);
+    if (pp <> NIL) and (pp^.HaveSwitch) then begin
+      for i:=0 to High(pp^.SwitchDescriptors) do
+        Fixture.Channels[pp^.SwitchDescriptors[i].ChannelIndexToSwitch].SubChannelIndex := pp^.SwitchDescriptors[i].SubChannelIndex;
+    end;
+  except
+  end;
+end;
+
+procedure TBaseDMXChannel.SetSubChannelIndex(AValue: integer);
+begin
+  if FSubChannelIndex = AValue then Exit;
+  FSubChannelIndex := AValue;
+  FNeedToRepaintWholeChannel := True;
+end;
+
+procedure TBaseDMXChannel.SetSubChannelName(AValue: string);
+begin
+  FSubChannels[FSubChannelIndex].Name := AValue
+end;
+
+function TBaseDMXChannel.GetSubChannelName: string;
+begin
+  Result := FSubChannels[FSubChannelIndex].Name;
+end;
+
+function TBaseDMXChannel.GetSubChannelType: TChannelType;
+begin
+  Result := FSubChannels[FSubChannelIndex].ChannelType;
+end;
+
+function TBaseDMXChannel.GetSubChannelRanges: PArrayOfChannelRange;
+begin
+ Result := @FSubChannels[FSubChannelIndex].Ranges;
+end;
+
+function TBaseDMXChannel.GetDefaultValue: byte;
+begin
+  Result := FSubChannels[FSubChannelIndex].DefaultValue;
 end;
 
 procedure TBaseDMXChannel.SetDefaultValue(AValue: byte);
 begin
-  if FDefaultValue = AValue then Exit;
-  FDefaultValue := AValue;
-  FPercentValue := FDefaultValue/255;
+  if DefaultValue = AValue then Exit;
+  DefaultValue := AValue;
+  FPercentValue := AValue/255;
+end;
+
+procedure TBaseDMXChannel.SetChannelType(AValue: TChannelType);
+begin
+  FSubChannels[FSubChannelIndex].ChannelType := AValue;
 end;
 
 constructor TBaseDMXChannel.Create;
 begin
- Name := SUnknown;
- Adress := 0;
- ChannelType := ctDimmer;
- SetLength(Ranges, 1);
- Ranges[0].BeginValue := 0;
- Ranges[0].EndValue := 255;
- Ranges[0].Text := SUnknown;
- Selected := FALSE;
- Freezed := FALSE;
- HandledByUser := FALSE;
- CurrentEffect := deNOEFFECT;
- ValueFromEffect := 0.0;
- PercentValue := 0.0;
- LastByteSendedValue := -1;
- RangeIndexPainted := -1;
+  FSubChannels := NIL;
+  SetLength(FSubChannels, 1);
+  FSubChannelIndex := 0;
+  Name := SUnknown;
+  Adress := 0;
+  ChannelType := ctDimmer;
+
+  SetLength(FSubChannels[0].Ranges, 1);
+  FSubChannels[0].Ranges[0].BeginValue := 0;
+  FSubChannels[0].Ranges[0].EndValue := 255;
+  FSubChannels[0].Ranges[0].Text := SUnknown;
+  Selected := FALSE;
+  Freezed := FALSE;
+  HandledByUser := FALSE;
+  CurrentEffect := deNOEFFECT;
+  ValueFromEffect := 0.0;
+  PercentValue := 0.0;
+  LastByteSendedValue := -1;
+  RangeIndexPainted := -1;
 end;
 
 destructor TBaseDMXChannel.Destroy;
@@ -756,37 +856,42 @@ end;
 function TBaseDMXChannel.CurrentRangeIndex: integer;
 var b: byte;
     i: integer;
+    p: PArrayOfChannelRange;
 begin
   b := ByteValue;
-  for i:=0 to High(Ranges) do
-   if (b >= Ranges[i].BeginValue) and (b <= Ranges[i].EndValue) then
-   begin
-     Result := i;
-     exit;
-   end;
+  p := Ranges;
+
+  if p <> NIL then
+    for i:=0 to High(p^) do
+     if (b >= p^[i].BeginValue) and (b <= p^[i].EndValue) then exit(i);
+
   Result := -1;
 end;
 
 function TBaseDMXChannel.TextRange(aRangeIndex: integer): string;
+var p: PArrayOfChannelRange;
 begin
-  if (aRangeIndex >= 0) and (aRangeIndex <= High(Ranges)) then
-    Result := Ranges[aRangeIndex].FText
-  else
-    Result := SNotDefined;
+  p := Ranges;
+  if p = NIL then Result := ''
+    else begin
+      if (aRangeIndex >= 0) and (aRangeIndex <= High(p^)) then Result := p^[aRangeIndex].Text
+       else Result := SNotDefined;
+    end;
 end;
 
 function TBaseDMXChannel.CurrentTextRange: string;
 var b: byte;
     i: integer;
+    p: PArrayOfChannelRange;
 begin
-  b := ByteValue;
-  for i:=0 to High(Ranges) do
-   if (b >= Ranges[i].BeginValue) and (b <= Ranges[i].EndValue) then
-   begin
-     Result := Ranges[i].FText;
-     exit;
-   end;
-  Result := SNotDefined;
+  p := Ranges;
+  if p = NIL then Result := ''
+    else begin
+      b := ByteValue;
+      for i:=0 to High(p^) do
+       if (b >= p^[i].BeginValue) and (b <= p^[i].EndValue) then Result := p^[i].Text
+         else Result := SNotDefined;
+    end;
 end;
 
 function TBaseDMXChannel.ByteValue: byte;
@@ -797,38 +902,28 @@ end;
 
 { TChannelRange }
 
-procedure TChannelRange.SetText(AValue: string);
+procedure TChannelRange.CopyFrom(p: PFixLibSingleRange);
+var i: integer;
 begin
-  if FText = AValue then Exit;
-  FText := ReplaceForbidenCharByUnderscore(AValue, FIXTURESEPARATOR+CHANNELRANGESEPARATOR+CHANNELRANGEPARAMSEPARATOR);
+  BeginValue := p^.BeginValue;
+  EndValue := p^.EndValue;
+  Text := p^.Text;
+  Extra := p^.Extra;
+  SwitchDescriptors := NIL;
+  SetLength(SwitchDescriptors, Length(p^.SwitchDescriptors));
+  for i:=0 to High(SwitchDescriptors) do
+   SwitchDescriptors[i].CopyFrom(@p^.SwitchDescriptors[i]);
 end;
 
-procedure TChannelRange.SetExtra(AValue: string);
+function TChannelRange.HaveSwitch: boolean;
 begin
-  if FExtra = AValue then Exit;
-  FExtra := ReplaceForbidenCharByUnderscore(AValue, FIXTURESEPARATOR+CHANNELRANGESEPARATOR+CHANNELRANGEPARAMSEPARATOR);
+  Result := Length(SwitchDescriptors) > 0;
 end;
-
 function TChannelRange.Duplicate: TChannelRange;
 begin
  Result.BeginValue := BeginValue;
  Result.EndValue := EndValue;
  Result.Text := Text;
-end;
-
-procedure TChannelRange.Decode(s: string);
-var be, en: integer;
-    des: string;
-begin
-  DecodeDMXChannelRange(s, be, en, des);
-  BeginValue := be;       // 1 based
-  EndValue := en;
-  Text := des;
-end;
-
-function TChannelRange.Encode: string;
-begin
- Result := EncodeDMXChannelRange(BeginValue, EndValue, Text);
 end;
 
 function TDMXFixture.SaveToString: string;
@@ -848,9 +943,7 @@ begin
   prop.Add('FlipH', FlipH);
   prop.Add('FlipV', FlipV);
   i := 1;
-  for chan in FChannels do
-  begin
-    prop.Add('ChanName'+i.ToString, chan.Name);
+  for chan in FChannels do begin
     prop.Add('Locked'+i.ToString, chan.Locked);
     inc(i);
   end;
@@ -862,12 +955,12 @@ function TDMXFixture.LoadFromString(const s: string): boolean;
 var i, j, vi: integer;
   libfix: TLibraryFixture;
   chan: TDMXChannel;
-
   prop: TSplitProperty;
-  s1: string;
+  s1, virtualName: string;
   vb: boolean;
   vs: single;
-  A: TFixLibAvailableChannels;
+  A, subChannels: TStringArray;
+  pchan: PFixLibAvailableChannel;
   procedure LogMissingProperty(const apropName: string);
   begin
     Log.Error('Property '+apropName+' not found for fixture "'+libfix.General.ManufacturerName+':'+libfix.General.FixtureName, 3);
@@ -891,6 +984,8 @@ begin
       Log.Error('Property "FixtureLocation" have invalid data', 4);
       exit(False);
     end;
+
+    Log.Info('Loading fixture "'+FixLibLocation.RelativePathInLibrary+'" - mode "'+FixLibLocation.Mode+'"', 3);
 
     if not libfix.LoadFrom(FixLibLocation) then begin
       Log.Error('Fail to load fixture from library "'+FixLibLocation.RelativePathInLibrary+'"', 4);
@@ -941,7 +1036,7 @@ begin
       LogMissingProperty('FlipV');
 
     try
-      A := libfix.GetChannelsForMode(FixLibLocation.Mode);
+      A := libfix.GetChannelNamesForMode(FixLibLocation.Mode);
     except
        On E :Exception do begin
          Log.Error('an exception accurs while reading the channel in fixture "'+FixLibLocation.RelativePathInLibrary+'" mode "'+FixLibLocation.Mode+'"', 4);
@@ -950,45 +1045,48 @@ begin
     end;
 
     if Length(A) = 0 then begin
-      Log.Error('no channel found in fixture "'+FixLibLocation.RelativePathInLibrary+'" mode "'+FixLibLocation.Mode+'"', 1);
+      Log.Error('no channel defined in fixture "'+FixLibLocation.RelativePathInLibrary+'" mode "'+FixLibLocation.Mode+'"', 1);
       exit(False);
     end;
 
+    // copy channels parameters
     for i:=0 to High(A) do begin
       chan := TDMXChannel.Create;
       chan.Fixture := Self;
       FChannels.Add(chan);
-
-      prop.StringValueOf('ChanName'+(i+1).ToString, s1, A[i].NameID);
-      chan.Name := s1;
+      if not TrySplitVirtual(A[i], virtualName, subChannels) then begin
+        // its a normal (single) channel
+        pchan := libfix.AvailableChannels.GetChannelsByName(A[i]);
+        chan.SubChannelIndex := 0;
+        chan.FSubChannels[0].CopyFrom(pchan);
+      end else begin
+        // its a virtual channel + sub-channels
+        SetLength(chan.FSubChannels, Length(subChannels));
+        for j:=0 to High(subChannels) do begin
+          pchan := libfix.AvailableChannels.GetChannelsByName(subChannels[j]);
+          chan.FSubChannels[j].CopyFrom(pchan);
+        end;
+      end;
 
       if not prop.BooleanValueOf('Locked'+(i+1).ToString, vb, False) then
         Log.Warning('Property '+'Locked'+(i+1).ToString+' not found for fixture "'+libfix.General.ManufacturerName+':'+libfix.General.FixtureName, 3);
       chan.Locked := vb;
 
       chan.Universe := Universe;
-
-      chan.ChannelType := A[i].ChanType;
-      SetLength(chan.Ranges, Length(A[i].Ranges));
-      for j:=0 to High(chan.Ranges) do begin
-       chan.Ranges[j].BeginValue := A[i].Ranges[j].BeginValue;
-       chan.Ranges[j].EndValue := A[i].Ranges[j].EndValue;
-       chan.Ranges[j].Text := A[i].Ranges[j].Text+' '+ A[i].Ranges[j].Extra;
-      end;
-
-      chan.DefaultValue := A[i].DefaultValue;
     end;
 
     if not prop.IntegerValueOf('Adress', vi, 1) then begin
       LogMissingProperty('Adress');
       exit(False);
     end;
-
     Adress := vi; // to do after channels creation !!
     UpdateHasRGB;
     Result := TRUE;
   except
-    Result := FALSE;
+     On E :Exception do begin
+       Log.Error('an exception occurs "'+E.Message+'"',3);
+      Result := FALSE;
+    end;
   end;
 end;
 
@@ -1357,43 +1455,14 @@ begin
   DoOptimizeUsedChannels;
 end;
 
-{function TDmxUniverse.Fixture_AddFromDMXLib(const aFullFileName: string): TDmxFixture;
-var libfix: TLibraryFixture;
-  f: TDmxFixture;
-  chan: TDMXChannel;
-  i: integer;
-begin
-  Result := NIL;
-  if not libfix.LoadFromFile(aFullFileName) then exit;
-
-  f := TDmxFixture.Create;
-  // copy channels parameters
-
-  for i:=0 to High(libfix.Channels) do
-  begin
-    chan := TDMXChannel.Create;
-    chan.Name := libfix.Channels[i].Name;
-    chan.ChannelType := libfix.Channels[i].ChannelType;
-    chan.Ranges := libfix.Channels[i].Ranges;
-    f.FChannels.Add(chan);
-  end;
-
-  f.FixtureType := libfix.FixtureType;
-  f.Power := libfix.Power;
-  f.Name := libfix.Name;
-  f.FullFilename := aFullFileName;
-  f.Universe := Self;
-  f.DipSwitchs.LoadFrom(libfix.DipSwitch);
-
-  Fixture_Add(f);
-  Result := f;
-end; }
-
 function TDmxUniverse.Fixture_AddFromFixLib(const aLibFix: TLibraryFixture;
   const aFixtureLocation: TFixtureLibraryLocation): TDmxFixture;
-var A: TFixLibAvailableChannels;
+var A: TStringArray;
   i, j: integer;
   chan: TDMXChannel;
+  virtualName: string;
+  subChannels: TStringArray;
+  pchan: PFixLibAvailableChannel;
 begin
   Result := TDmxFixture.Create;
   aFixtureLocation.CopyTo(Result.FixLibLocation);
@@ -1404,15 +1473,22 @@ begin
   Result.DipSwitchs.LoadFrom(aLibFix.DipSwitchs);
 
   // copy channels parameters
-  A := aLibFix.GetChannelsForMode(aFixtureLocation.Mode);
+  A := aLibFix.GetChannelNamesForMode(aFixtureLocation.Mode);
   for i:=0 to High(A) do begin
     chan := TDMXChannel.Create;
-    chan.Name := A[i].NameID;
-    chan.ChannelType := A[i].ChanType;
-    chan.DefaultValue := A[i].DefaultValue;
-    SetLength(chan.Ranges, Length(A[i].Ranges));
-    for j:=0 to High(chan.Ranges) do
-      A[i].Ranges[j].CopyTo(chan.Ranges[j]);
+    if not TrySplitVirtual(A[i], virtualName, subChannels) then begin
+      // its a normal (single) channel
+      pchan := aLibFix.AvailableChannels.GetChannelsByName(A[i]);
+      chan.SubChannelIndex := 0;
+      chan.FSubChannels[0].CopyFrom(pchan);
+    end else begin
+      // its a virtual channel + sub-channels
+      SetLength(chan.FSubChannels, Length(subChannels));
+      for j:=0 to High(subChannels) do begin
+        pchan := aLibFix.AvailableChannels.GetChannelsByName(subChannels[j]);
+        chan.FSubChannels[j].CopyFrom(pchan);
+      end;
+    end;
     Result.FChannels.Add(chan);
   end;
 

@@ -1126,7 +1126,13 @@ msgid "Disconnects all effects that were previously connected to the sound."
 msgstr ""
 
 #: tframeeditmode.baddchannel.caption
+msgctxt "tframeeditmode.baddchannel.caption"
 msgid "Add channel"
+msgstr ""
+
+#: tframeeditmode.baddswitchingchannel.caption
+msgctxt "tframeeditmode.baddswitchingchannel.caption"
+msgid "Add switching channel"
 msgstr ""
 
 #: tframeeditmode.bdeletechannel.hint
@@ -1768,23 +1774,6 @@ msgstr ""
 #: tframeviewdmxfixturechannels.menuitem9.caption
 msgctxt "tframeviewdmxfixturechannels.menuitem9.caption"
 msgid "Amber"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.miaddrange.caption
-msgctxt "tframeviewdmxfixturechannels.miaddrange.caption"
-msgid "Add a range to the channel"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.mideleterange.caption
-msgid "Delete the range"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.mimodifyrange.caption
-msgid "Modify the range"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.mi_renamechannel.caption
-msgid "Rename the channel"
 msgstr ""
 
 #: tframeviewdmxlibrary.micollapsetree.caption
@@ -3064,6 +3053,10 @@ msgstr ""
 msgid "Opacity"
 msgstr ""
 
+#: u_resource_string.sor
+msgid "or"
+msgstr ""
+
 #: u_resource_string.sother
 msgctxt "u_resource_string.sother"
 msgid "Other"
@@ -3481,6 +3474,10 @@ msgstr ""
 
 #: u_resource_string.storight
 msgid "to RIGHT"
+msgstr ""
+
+#: u_resource_string.sunabletoloadfixturedata
+msgid "Unable to load fixture data..."
 msgstr ""
 
 #: u_resource_string.suniverse
