@@ -100,6 +100,7 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
+    Shape5: TShape;
     SpeedButton4: TSpeedButton;
     SpeedButton5: TSpeedButton;
     SpeedButton6: TSpeedButton;
@@ -571,7 +572,7 @@ var i, y: integer;
 begin
   y := 0;
   for i:=0 to High(ModeFrames) do
-    y := Max(y, ModeFrames[i].Top + ModeFrames[i].Height + ScaleDesignToForm(5));
+    y := Max(y, ModeFrames[i].Top + ModeFrames[i].Height + Shape5.Height);
   BAddmode.Top := y;
 end;
 
@@ -689,7 +690,11 @@ var libFix: TLibraryFixture;
 begin
   // we load the fixture to edit
   libFix.InitDefault;
-  if not libFix.LoadFrom(FFixtureLocationToSave) then exit;
+  if not libFix.LoadFrom(FFixtureLocationToSave) then begin
+    ShowMess(SUnableToLoadFixtureData, SClose, mtError);
+    Close;
+    exit;
+  end;
 
   FInitializing := True;
   try

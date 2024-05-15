@@ -436,6 +436,8 @@ resourcestring
                                  '(its content will be lost)';
   SThisFilenamAlreadyExists='this filename already exists !';
   SSaveTheChangeBeforeQuit='Save the change before quit?';
+  SUnableToLoadFixtureData='Unable to load fixture data...';
+  SOr='or';
 
 // fixture name
   SOther='Other';

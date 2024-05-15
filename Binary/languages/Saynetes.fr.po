@@ -1193,8 +1193,14 @@ msgid "Disconnects all effects that were previously connected to the sound."
 msgstr "Déconnecte tous les effets qui étaient précédemment connectés au son."
 
 #: tframeeditmode.baddchannel.caption
+msgctxt "tframeeditmode.baddchannel.caption"
 msgid "Add channel"
 msgstr "Ajouter un canal"
+
+#: tframeeditmode.baddswitchingchannel.caption
+msgctxt "tframeeditmode.baddswitchingchannel.caption"
+msgid "Add switching channel"
+msgstr "Ajouter un canal Switch"
 
 #: tframeeditmode.bdeletechannel.hint
 msgctxt "tframeeditmode.bdeletechannel.hint"
@@ -1855,25 +1861,6 @@ msgstr "Gradateur principal"
 msgctxt "tframeviewdmxfixturechannels.menuitem9.caption"
 msgid "Amber"
 msgstr "Ambre"
-
-#: tframeviewdmxfixturechannels.miaddrange.caption
-msgctxt "tframeviewdmxfixturechannels.miaddrange.caption"
-msgid "Add a range to the channel"
-msgstr "Ajoute une plage au canal"
-
-#: tframeviewdmxfixturechannels.mideleterange.caption
-msgctxt "tframeviewdmxfixturechannels.mideleterange.caption"
-msgid "Delete the range"
-msgstr "Supprime la plage"
-
-#: tframeviewdmxfixturechannels.mimodifyrange.caption
-msgctxt "tframeviewdmxfixturechannels.mimodifyrange.caption"
-msgid "Modify the range"
-msgstr "Modifier la plage"
-
-#: tframeviewdmxfixturechannels.mi_renamechannel.caption
-msgid "Rename the channel"
-msgstr "Renommer le canal"
 
 #: tframeviewdmxlibrary.micollapsetree.caption
 msgid "Collapse folders"
@@ -3167,6 +3154,10 @@ msgstr "sur"
 msgid "Opacity"
 msgstr "Opacité"
 
+#: u_resource_string.sor
+msgid "or"
+msgstr "ou"
+
 #: u_resource_string.sother
 msgctxt "u_resource_string.sother"
 msgid "Other"
@@ -3589,6 +3580,10 @@ msgstr "à GAUCHE"
 #: u_resource_string.storight
 msgid "to RIGHT"
 msgstr "à DROITE"
+
+#: u_resource_string.sunabletoloadfixturedata
+msgid "Unable to load fixture data..."
+msgstr "Impossible de charger les données de l'appareil..."
 
 #: u_resource_string.suniverse
 msgctxt "u_resource_string.suniverse"

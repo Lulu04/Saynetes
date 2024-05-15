@@ -94,6 +94,11 @@ TTStepListHelper = class helper for TStepList
                                aCurveID: word);
 end;
 
+{ TArrayOfChannelRangeHelper }
+
+TArrayOfChannelRangeHelper = type helper for TArrayOfChannelRange
+  function GetRangeFromByteValue(aValue: byte): PChannelRange;
+end;
 
 { TManufacturersHelper }
 
@@ -121,9 +126,166 @@ TWebLinksHelper = type helper for TWebLinks
 end;
 
 
+{ TVirtualChannelForSwitchsHelper }
+
+TVirtualChannelForSwitchsHelper = type helper for TVirtualChannelForSwitchs
+  function IndexOfVirtualName(const aVirtualName: string): integer;
+  function IndexOfSubChannel(const aVirtualName, aSubChannel: string): integer;
+  // we must have single instance of virtual name
+  function AddVirtualName(const aVirtualChannelName: string): integer;
+  // if aVirtualName doesn't exists in self, the function returns aVirtualName
+  // else it returns a formatted string like: aVirtualName:SubChannel1;SubChannel2;...
+  function FormatVirtualIfNeeded(const aVirtualName: string): string;
+  // Split a formatted virtual name in its virtual name and sub-channel names
+  // returns the parameters and True if sucess
+  function TrySplitVirtual(const aFormattedVirtualName: string;
+                           out aVirtualName: string;
+                           out aSubChannels: TStringArray): boolean;
+end;
+
+{ TFixLibModesHelper }
+
+TFixLibModesHelper = type helper for TFixLibModes
+  function IndexOf(const aModeName: string): integer;
+  function GetChannelUsed(const aModeName: string): TStringArray;
+  procedure SaveModesTo(t: TStringList);
+  function LoadModesFrom(t: TStringList): boolean;
+end;
+
 implementation
 
-uses frame_sequencer, u_utils, u_apputils, PropertyUtils;
+uses frame_sequencer, u_utils, u_apputils, u_logfile, PropertyUtils;
+
+{ TFixLibModesHelper }
+
+function TFixLibModesHelper.IndexOf(const aModeName: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].Name = aModeName then exit(i);
+  Result := -1;
+end;
+
+function TFixLibModesHelper.GetChannelUsed(const aModeName: string): TStringArray;
+var i, j: integer;
+begin
+  Result := NIL;
+  i := IndexOf(aModeName);
+  if i = -1 then exit;
+  SetLength(Result, Length(Self[i].ChannelsIDToUse));
+  for j:=0 to High(Result) do
+    Result[j] := Self[i].ChannelsIDToUse[j];
+end;
+
+procedure TFixLibModesHelper.SaveModesTo(t: TStringList);
+var i: integer;
+begin
+  t.Add('[MODES]');
+  for i:=0 to High(Self) do
+    t.Add(Self[i].SaveToString);
+  t.Add('[END_MODES]');
+end;
+
+function TFixLibModesHelper.LoadModesFrom(t: TStringList): boolean;
+var i, k, kEnd: Integer;
+begin
+  Self := NIL;
+  k := t.IndexOf('[MODES]');
+  kEnd := t.IndexOf('[END_MODES]');
+
+  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then begin
+    Log.Error('Header block [MODES] [END_MODES] not found or empty', 1);
+    exit(False);
+  end;
+
+  try
+    SetLength(Self, kEnd-k-1);
+    for i:=0 to High(Self) do begin
+      inc(k);
+      Self[i].LoadFromString(t.Strings[k]);
+    end;
+    Result := True;
+  except
+    Result := False;
+  end;
+end;
+
+{ TVirtualChannelForSwitchsHelper }
+
+function TVirtualChannelForSwitchsHelper.IndexOfVirtualName(const aVirtualName: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].VirtualName = aVirtualName then exit(i);
+  Result := -1;
+end;
+
+function TVirtualChannelForSwitchsHelper.IndexOfSubChannel(const aVirtualName, aSubChannel: string): integer;
+var i, j: integer;
+begin
+  i := IndexOfVirtualName(aVirtualName);
+  if i = -1 then exit(-1);
+
+  for j:=0 to High(Self[i].SubChannelIDs) do
+    if Self[i].SubChannelIDs[j] = aSubChannel then exit(i);
+
+  Result := -1;
+end;
+
+function TVirtualChannelForSwitchsHelper.AddVirtualName(const aVirtualChannelName: string): integer;
+var i: integer;
+begin
+  i := IndexOfVirtualName(aVirtualChannelName);
+  if i <> -1 then exit(i);
+
+  i := Length(Self);
+  SetLength(Self, i+1);
+  Self[i].InitDefault;
+  Self[i].VirtualName := aVirtualChannelName;
+  Result := i;
+end;
+
+function TVirtualChannelForSwitchsHelper.FormatVirtualIfNeeded(const aVirtualName: string): string;
+var i, j: integer;
+begin
+  Result := aVirtualName;
+
+  i := IndexOfVirtualName(aVirtualName);
+  if i = -1 then exit;
+
+  Result := aVirtualName+':';
+  for j:=0 to High(Self[i].SubChannelIDs) do begin
+    Result := Result + Self[i].SubChannelIDs[j];
+    if j < High(Self[i].SubChannelIDs) then Result := Result+';';
+  end;
+
+end;
+
+function TVirtualChannelForSwitchsHelper.TrySplitVirtual(const aFormattedVirtualName: string;
+  out aVirtualName: string; out aSubChannels: TStringArray): boolean;
+var A, B: TStringArray;
+begin
+  A := aFormattedVirtualName.Split([':']);
+  if Length(A) <> 2 then exit(False);
+  aVirtualName := A[0];
+
+  aSubChannels := A[1].Split([';']);
+  if Length(aSubChannels) = 0 then exit(False);
+  Result := True;
+end;
+
+{ TArrayOfChannelRangeHelper }
+
+function TArrayOfChannelRangeHelper.GetRangeFromByteValue(aValue: byte): PChannelRange;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if (aValue >= Self[i].BeginValue) and (aValue <= Self[i].EndValue) then begin
+      Result := @Self[i];
+      exit;
+    end;
+  Result := NIL;
+end;
 
 { TWebLinksHelper }
 
@@ -180,7 +342,7 @@ end;
 { TFixLibAvailableChannelsHelper }
 
 function TFixLibAvailableChannelsHelper.GetChannelsByName(const aName: string): PFixLibAvailableChannel;
-var i: integer;
+var i, j: integer;
 begin
   for i:=0 to High(Self) do
     if Self[i].NameID = aName then begin

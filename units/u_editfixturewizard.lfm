@@ -1,7 +1,7 @@
 object FormFixtureWizard: TFormFixtureWizard
-  Left = 285
+  Left = 241
   Height = 785
-  Top = 111
+  Top = 92
   Width = 1024
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -38,7 +38,7 @@ object FormFixtureWizard: TFormFixtureWizard
     Height = 738
     Top = 37
     Width = 1004
-    PageIndex = 0
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 10
     BorderSpacing.Right = 10
@@ -1026,20 +1026,21 @@ object FormFixtureWizard: TFormFixtureWizard
         Height = 690
         Top = 48
         Width = 1004
-        HorzScrollBar.Page = 72
+        HorzScrollBar.Page = 1
+        HorzScrollBar.Visible = False
         VertScrollBar.Increment = 44
-        VertScrollBar.Page = 671
+        VertScrollBar.Page = 686
         VertScrollBar.Tracking = True
         Anchors = [akTop, akLeft, akRight, akBottom]
         ClientHeight = 686
-        ClientWidth = 1000
+        ClientWidth = 983
         Color = 3028536
         ParentColor = False
         TabOrder = 0
         object Shape2: TShape
           Left = 40
           Height = 71
-          Top = 600
+          Top = 624
           Width = 32
           Brush.Style = bsClear
           Pen.Style = psClear
@@ -1048,7 +1049,7 @@ object FormFixtureWizard: TFormFixtureWizard
           AnchorSideLeft.Control = ScrollBox2
           AnchorSideLeft.Side = asrCenter
           Cursor = crHandPoint
-          Left = 374
+          Left = 365
           Height = 37
           Top = 296
           Width = 252
@@ -1062,6 +1063,19 @@ object FormFixtureWizard: TFormFixtureWizard
           Transparent = False
           OnClick = BAddModeClick
           ParentFont = False
+        end
+        object Shape5: TShape
+          AnchorSideLeft.Control = BAddMode
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = BAddMode
+          AnchorSideTop.Side = asrBottom
+          Left = 475
+          Height = 20
+          Top = 333
+          Width = 32
+          Anchors = [akTop]
+          Brush.Style = bsClear
+          Pen.Style = psClear
         end
       end
     end

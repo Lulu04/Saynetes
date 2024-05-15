@@ -160,16 +160,17 @@ object FrameEditMode: TFrameEditMode
       ParentFont = False
     end
     object PanelTools: TPanel
+      AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 346
+      Left = 381
       Height = 26
       Top = 144
-      Width = 128
-      Anchors = []
-      BorderSpacing.Right = 20
+      Width = 111
+      Anchors = [akRight]
+      BorderSpacing.Right = 2
       BevelOuter = bvNone
       ClientHeight = 26
-      ClientWidth = 128
+      ClientWidth = 111
       TabOrder = 2
       Visible = False
       object BEditChannel: TSpeedButton
@@ -177,12 +178,12 @@ object FrameEditMode: TFrameEditMode
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = PanelTools
         Cursor = crHandPoint
-        Left = 68
+        Left = 58
         Height = 24
         Hint = 'Modify channel'
         Top = 0
         Width = 24
-        BorderSpacing.Left = 10
+        BorderSpacing.Left = 5
         Images = DataModule1.ImageList1
         ImageIndex = 6
         OnClick = BDeleteModeClick
@@ -194,12 +195,12 @@ object FrameEditMode: TFrameEditMode
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = PanelTools
         Cursor = crHandPoint
-        Left = 102
+        Left = 87
         Height = 24
         Hint = 'Delete channel'
         Top = 0
         Width = 24
-        BorderSpacing.Left = 10
+        BorderSpacing.Left = 5
         Images = DataModule1.ImageList1
         ImageIndex = 2
         OnClick = BDeleteModeClick
@@ -226,12 +227,12 @@ object FrameEditMode: TFrameEditMode
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = PanelTools
         Cursor = crHandPoint
-        Left = 34
+        Left = 29
         Height = 24
         Hint = 'Move the channel down'
         Top = 0
         Width = 24
-        BorderSpacing.Left = 10
+        BorderSpacing.Left = 5
         Images = DataModule1.ImageList1
         ImageIndex = 11
         OnClick = BDeleteModeClick
@@ -270,6 +271,30 @@ object FrameEditMode: TFrameEditMode
       ParentColor = False
       ParentFont = False
       Visible = False
+    end
+    object BAddSwitchingChannel: TSpeedButton
+      AnchorSideLeft.Control = BAddChannel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = BAddChannel
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 120
+      Height = 20
+      Top = 148
+      Width = 148
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 20
+      Caption = 'Add switching channel'
+      Color = 16433669
+      Flat = True
+      Font.Color = clWhite
+      Font.Style = [fsBold]
+      Images = DataModule1.ILChannelType
+      ImageIndex = 0
+      Transparent = False
+      OnClick = BAddSwitchingChannelClick
+      ParentFont = False
     end
   end
 end

@@ -89,6 +89,19 @@ end;
     procedure DecodePropertyFrom(const prop: TProperties);
   end;
 
+  { TFixLibSwitchDescriptor }
+  PFixLibSwitchDescriptor = ^TFixLibSwitchDescriptor;
+  TFixLibSwitchDescriptor = record
+    SwitchVirtualChannel: string; // ex: "Strobe / Program Speed / Sound Sensitivity" (from mode definition)
+    SwitchToSubChannel: string;   // ex: "Program Speed"
+
+    IndexOfVirtualChannel: integer;
+    IndexOfSubChannel: integer;
+
+    function SaveToString: string;
+    procedure LoadFromString(const s: string);
+  end;
+
 
   { TFixLibSingleRange }
 
@@ -97,12 +110,18 @@ end;
     EndValue: byte;
     Text,
     Extra: string;
+
+    SwitchDescriptors: array of TFixLibSwitchDescriptor;
+    procedure AddChannelSwitch(const aVirtualName, aSubChannelName: string);
+
     procedure InitDefault;
     function SaveToString: string;
     function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibSingleRange);
-    procedure CopyTo(var aTarget: TChannelRange);
+//    procedure CopyTo(var aTarget: TChannelRange);
     function ToReadableString: string;
+    function HaveSwitch: boolean;
+    procedure SetSwitchIndexes(const aVirtualName: string; aIndex: integer; const aSubChannels: TStringArray);
   end;
   PFixLibSingleRange = ^TFixLibSingleRange;
 
@@ -120,17 +139,34 @@ end;
     function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibAvailableChannel);
     // checks the integrity of each channel ranges
-    function HaveError: boolean;
+    function HaveRangesError: boolean;
   end;
   TFixLibAvailableChannels = array of TFixLibAvailableChannel;
   PFixLibAvailableChannels = ^TFixLibAvailableChannels;
 
-  { TFixLibMode }
+
+{ TVirtualChannelForSwitch }
+
+TVirtualChannelForSwitch = record
+  VirtualName: string;
+  SubChannelIDs: TStringArray;      // list of used channel
+  procedure InitDefault;
+  // add single instance of channel ID
+  procedure AddSubChannel(const aID: string);
+end;
+TVirtualChannelForSwitchs = array of TVirtualChannelForSwitch;
+
+var
+  FVirtualChannelInMode: TVirtualChannelForSwitchs;
+
+type
+
+{ TFixLibMode }
   PFixLibMode = ^TFixLibMode;
   TFixLibMode = record
     Name,
     ShortName: string;
-    ChannelsIDToUse: TStringArray;
+    ChannelsIDToUse: {array of }TStringArray;
     procedure InitDefault;
     function SaveToString: string;
     procedure LoadFromString(const s: string);
@@ -153,7 +189,7 @@ TLibraryFixture = record
   function LoadFrom(aLibraryLocation: TFixtureLibraryLocation): boolean;
   function SaveToFile(const aFileName: string): boolean;
 
-  function GetChannelsForMode(const aMode: string): TFixLibAvailableChannels;
+  function GetChannelNamesForMode(const aModeName: string): TStringArray;
   function GetChannelCountForMode(const aMode: string): integer;
 end;
 
@@ -162,9 +198,11 @@ procedure SaveAvailableChannelsTo(t: TStringList; p: PFixLibAvailableChannels);
 function LoadAvailableChannelsFrom(t: TStringList; p: PFixLibAvailableChannels): boolean;
 function IndexOfChannel(const aNameID: string; p: PFixLibAvailableChannels): integer;
 
-procedure SaveModesTo(t: TStringList; p: PFixLibModes);
-function LoadModesFrom(t: TStringList; p: PFixLibModes): boolean;
-function IndexOfMode(const aModeName: string; p: PFixLibModes): integer;
+// Split a formatted virtual name in its virtual name and sub-channel names
+// returns the parameters and True if sucess
+function TrySplitVirtual(const aFormattedVirtualName: string;
+                         out aVirtualName: string;
+                         out aSubChannels: TStringArray): boolean;
 
 
 {$endif}
@@ -216,49 +254,84 @@ begin
   Result := -1;
 end;
 
-procedure SaveModesTo(t: TStringList; p: PFixLibModes);
-var i: integer;
+function TrySplitVirtual(const aFormattedVirtualName: string; out
+  aVirtualName: string; out aSubChannels: TStringArray): boolean;
+var A: TStringArray;
 begin
-  t.Add('[MODES]');
-  for i:=0 to High(p^) do
-    t.Add(p^[i].SaveToString);
+  A := aFormattedVirtualName.Split([':']);
+  if Length(A) <> 2 then exit(False);
+  aVirtualName := A[0];
 
-  t.Add('[END_MODES]');
+  aSubChannels := A[1].Split([';']);
+  if Length(aSubChannels) = 0 then exit(False);
+  Result := True;
 end;
 
-function LoadModesFrom(t: TStringList; p: PFixLibModes): boolean;
-var i, k, kEnd: Integer;
-begin
-  p^ := Nil;
-  k := t.IndexOf('[MODES]');
-  kEnd := t.IndexOf('[END_MODES]');
+{ TSubChannel }
 
-  if (k = -1) or (kEnd = -1) or (kEnd <= k) or (kEnd-k < 2) then begin
-    Log.Error('Header block [MODES] [END_MODES] not found or empty', 1);
-    exit(False);
-  end;
-
-  try
-    SetLength(p^, kEnd-k-1);
-    for i:=0 to High(p^) do begin
-      inc(k);
-      p^[i].LoadFromString(t.Strings[k]);
-    end;
-    Result := True;
-  except
-    Result := False;
-  end;
-end;
-
-function IndexOfMode(const aModeName: string; p: PFixLibModes): integer;
+procedure TSubChannel.CopyFrom(p: PFixLibAvailableChannel);
 var i: integer;
 begin
-  for i:=0 to High(p^) do
-    if p^[i].Name = aModeName then begin
-      Result := i;
-      exit;
-    end;
-  Result := -1;
+  Name := p^.NameID;
+  ChannelType := p^.ChanType;
+  DefaultValue := p^.DefaultValue;
+  Ranges := NIL;
+  SetLength(Ranges, Length(p^.Ranges));
+  for i:=0 to High(Ranges) do
+    Ranges[i].CopyFrom(@p^.Ranges[i]);
+end;
+
+{ TSwitchDescriptor }
+
+procedure TSwitchDescriptor.CopyFrom(p: PFixLibSwitchDescriptor);
+begin
+  ChannelIndexToSwitch := p^.IndexOfVirtualChannel;
+  SubChannelIndex := p^.IndexOfSubChannel;
+end;
+
+{ TVirtualChannelForSwitch }
+
+procedure TVirtualChannelForSwitch.InitDefault;
+begin
+  VirtualName := '';
+  SubChannelIDs := NIL;
+end;
+
+procedure TVirtualChannelForSwitch.AddSubChannel(const aID: string);
+var i: integer;
+begin
+  for i:=0 to High(SubChannelIDs) do
+    if SubChannelIDs[i] = aID then exit;
+  i := Length(SubChannelIDs);
+  SetLength(SubChannelIDs, i+1);
+  SubChannelIDs[i] := aID;
+end;
+
+{ TFixLibSwitchDescriptor }
+
+function TFixLibSwitchDescriptor.SaveToString: string;
+begin
+  Result := SwitchVirtualChannel+':'+SwitchToSubChannel;
+end;
+
+procedure TFixLibSwitchDescriptor.LoadFromString(const s: string);
+var A: TStringArray;
+  i: integer;
+begin
+  A := s.Split([':']);
+  if Length(A) <> 2 then begin
+    SwitchVirtualChannel := '';
+    SwitchToSubChannel := '';
+  end else begin
+    SwitchVirtualChannel := A[0];
+    SwitchToSubChannel := A[1];
+
+    // add entries to the list of virtual channel for switch
+    i := FVirtualChannelInMode.AddVirtualName(SwitchVirtualChannel);
+    FVirtualChannelInMode[i].AddSubChannel(SwitchToSubChannel);
+  end;
+  IndexOfVirtualChannel := -1;
+  IndexOfSubChannel := -1;
 end;
 
 { TWebLink }
@@ -344,17 +417,20 @@ begin
   AvailableChannels := NIL;
   Modes := NIL;
   WebLinks := NIL;
+
+  FVirtualChannelInMode := NIL;
 end;
 
 function TLibraryFixture.LoadFromFile(const aFileName: string): boolean;
 var t: TStringList;
-    i, m, k: integer;
-    f: string;
+    i, j, m, k: integer;
+    f, rawName, virtualName: string;
+    subChannels: TStringArray;
 begin
   InitDefault;
   Result := False;
   t := TStringList.Create;
-  f := RepertoireParent(ExtractFilePath(aFileName));
+  f := IncludeTrailingPathDelimiter(ExtractFileName(ExcludeTrailingPathDelimiter(ExtractFilePath(aFileName))));
   Log.Info('Loading fixture "'+f+ExtractFileName(aFileName)+'"', 1);
   try
     try
@@ -372,15 +448,24 @@ begin
       Physical.LoadFrom(t);
       DipSwitchs.LoadFrom(t);
       if not LoadAvailableChannelsFrom(t, @AvailableChannels) then exit(False);
-      if not LoadModesFrom(t, @Modes) then exit(False);
+      if not Modes.LoadModesFrom(t) then exit(False);
 
       // Check if the channels ID used by the modes are defined
       for m:=0 to High(Modes) do
-        for i:=0 to High(Modes[m].ChannelsIDToUse) do
-          if IndexOfChannel(Modes[m].ChannelsIDToUse[i], @AvailableChannels) = -1 then begin
-            Log.Error('Channel "'+Modes[m].ChannelsIDToUse[i]+'" used by mode "'+Modes[m].Name+'" is not defined !',1);
+        for i:=0 to High(Modes[m].ChannelsIDToUse) do begin
+          rawName := Modes[m].ChannelsIDToUse[i];
+          if TrySplitVirtual(rawName, virtualName, subChannels) then begin
+            for j:=0 to High(subChannels) do
+              if IndexOfChannel(subChannels[j], @AvailableChannels) = -1 then begin
+                Log.Error('Sub-channel "'+virtualName+':'+subChannels[j]+'" used by mode "'+Modes[m].Name+'" is not defined !',1);
+                exit(False);
+              end;
+          end else if IndexOfChannel(rawName, @AvailableChannels) = -1 then begin
+            Log.Error('Channel "'+rawName+'" used by mode "'+Modes[m].Name+'" is not defined !',1);
             exit(False);
           end;
+        end;
+
       Result := True;
     except
       On E: Exception do begin
@@ -394,11 +479,33 @@ begin
 end;
 
 function TLibraryFixture.LoadFrom(aLibraryLocation: TFixtureLibraryLocation): boolean;
-var f: string;
+var f, virtualName: string;
+    subChannels: TStringArray;
+    i, k, m, n: integer;
 begin
   f := ConcatPaths([GetAppDMXLibraryFolder + aLibraryLocation.RelativePathInLibrary]);
   f := aLibraryLocation.AbsolutPath;
   Result := LoadFromFile(f);
+  if not Result then exit;
+
+  if aLibraryLocation.Mode = '' then exit;
+  // converts switching channel IDs to Index
+  m := Modes.IndexOf(aLibraryLocation.Mode);
+  if m = -1 then begin
+    Log.Error('Mode "'+aLibraryLocation.Mode+'" not found', 3);
+    exit(False);
+  end;
+  for i:=0 to High(Modes[m].ChannelsIDToUse) do begin  // i = index of TDMXChannel in this mode
+    if TrySplitVirtual(Modes[m].ChannelsIDToUse[i], virtualName, subChannels) then begin
+      // scan all ranges in all available channels
+      for k:=0 to High(AvailableChannels) do begin
+        for n:=0 to High(AvailableChannels[k].Ranges) do
+          if AvailableChannels[k].Ranges[n].HaveSwitch then begin
+            AvailableChannels[k].Ranges[n].SetSwitchIndexes(virtualName, i, subChannels);
+          end;
+      end;
+    end;
+  end;
 end;
 
 function TLibraryFixture.SaveToFile(const aFileName: string): boolean;
@@ -414,7 +521,7 @@ begin
     Physical.SaveTo(t);
     DipSwitchs.SaveTo(t);
     SaveAvailableChannelsTo(t, @AvailableChannels);
-    SaveModesTo(t, @Modes);
+    Modes.SaveModesTo(t);
     try
       t.SaveToFile(aFileName);
       Result := TRUE;
@@ -429,31 +536,17 @@ begin
   end;
 end;
 
-function TLibraryFixture.GetChannelsForMode(const aMode: string): TFixLibAvailableChannels;
-var i, j, k: integer;
+function TLibraryFixture.GetChannelNamesForMode(const aModeName: string): TStringArray;
 begin
   Result := NIL;
-  j := IndexOfMode(aMode, @Modes);
-  if j = -1 then exit;
-  SetLength(Result, Length(Modes[j].ChannelsIDToUse));
-
-  for i:=0 to High(Result) do begin
-    // retrieve the index of the channel name used in the mode
-    k := IndexOfChannel(Modes[j].ChannelsIDToUse[i], @AvailableChannels);
-    if k = -1 then begin
-      Result := NIL;
-      exit;
-    end;
-    // copy the content of AvailableChannels[k] into Result[i]
-    AvailableChannels[k].CopyTo(Result[i]);
-  end;
+  Result := Modes.GetChannelUsed(aModeName);
 end;
 
 function TLibraryFixture.GetChannelCountForMode(const aMode: string): integer;
 var j: integer;
 begin
   Result := 0;
-  j := IndexOfMode(aMode, @Modes);
+  j := Modes.IndexOf(aMode);
   if j <> -1 then Result := Length(Modes[j].ChannelsIDToUse);
 end;
 
@@ -512,28 +605,48 @@ end;
 
 { TFixLibSingleRange }
 
+procedure TFixLibSingleRange.AddChannelSwitch(const aVirtualName, aSubChannelName: string);
+var i: integer;
+begin
+  i := Length(SwitchDescriptors);
+  SetLength(SwitchDescriptors, i+1);
+  SwitchDescriptors[i].SwitchVirtualChannel := aVirtualName;
+  SwitchDescriptors[i].SwitchToSubChannel := aSubChannelName;
+
+  // add entries to the list of virtual channel for switch
+  i := FVirtualChannelInMode.AddVirtualName(aVirtualName);
+  FVirtualChannelInMode[i].AddSubChannel(aSubChannelName);
+end;
+
 procedure TFixLibSingleRange.InitDefault;
 begin
   BeginValue := 0;
   EndValue := 255;
   Text := SNotInitialized;
   Extra := '';
+  SwitchDescriptors := NIL;
 end;
 
 function TFixLibSingleRange.SaveToString: string;
 var prop: TProperties;
+  i: Integer;
 begin
   prop.Init('~');
   prop.Add('Begin', BeginValue);
   prop.Add('End', EndValue);
   prop.Add('Txt', Text);
   if Extra <> '' then prop.Add('Extra', Extra);
+
+  for i:=0 to High(SwitchDescriptors) do
+    prop.Add('Switch'+(i+1).ToString, SwitchDescriptors[i].SaveToString);
+
   Result := prop.PackedProperty;
 end;
 
 function TFixLibSingleRange.LoadFromString(const s: string): boolean;
 var prop: TProperties;
-  vi: Integer;
+  i, vi: Integer;
+  s1: string;
 begin
   Result := False;
   vi := 0;
@@ -546,33 +659,84 @@ begin
     EndValue := vi;
     prop.StringValueOf('Txt', Text, Text);
     prop.StringValueOf('Extra', Extra, Extra);
+
+    // read switchs data
+    i := 0;
+    repeat
+      inc(i);
+    until not prop.CheckProperties(['Switch'+i.ToString]);
+    dec(i);
+    if i > 0 then begin
+      s1 := '';
+      SetLength(SwitchDescriptors, i);
+      for i:=0 to High(SwitchDescriptors) do begin
+        prop.StringValueOf('Switch'+(i+1).ToString, s1, '');
+        SwitchDescriptors[i].LoadFromString(s1); // update also virtual channels list (FVirtualChannelInMode)
+      end;
+    end else SwitchDescriptors := NIL;
+
     Result := True;
   except
     On E :Exception do begin
-      Log.Error('exception occurs while reading range values "'+s+'"'+ E.Message, 3);
+      Log.Error('exception occurs while reading range values from "'+s+'"'+ E.Message, 3);
     end;
   end;
 end;
 
 procedure TFixLibSingleRange.CopyTo(var aTarget: TFixLibSingleRange);
+var i: integer;
 begin
   aTarget.BeginValue := BeginValue;
   aTarget.EndValue := EndValue;
   aTarget.Text := Text;
   aTarget.Extra := Extra;
+
+  aTarget.SwitchDescriptors := NIL;
+  SetLength(aTarget.SwitchDescriptors, Length(SwitchDescriptors));
+  for i:=0 to High(SwitchDescriptors) do begin
+    aTarget.SwitchDescriptors[i].SwitchVirtualChannel := SwitchDescriptors[i].SwitchVirtualChannel;
+    aTarget.SwitchDescriptors[i].SwitchToSubChannel := SwitchDescriptors[i].SwitchToSubChannel;
+    aTarget.SwitchDescriptors[i].IndexOfVirtualChannel := SwitchDescriptors[i].IndexOfVirtualChannel;
+    aTarget.SwitchDescriptors[i].IndexOfSubChannel := SwitchDescriptors[i].IndexOfSubChannel;
+  end;
 end;
 
-procedure TFixLibSingleRange.CopyTo(var aTarget: TChannelRange);
+{procedure TFixLibSingleRange.CopyTo(var aTarget: TChannelRange);
+var i: integer;
 begin
   aTarget.BeginValue := BeginValue;
   aTarget.EndValue := EndValue;
   aTarget.Text := Text;
   aTarget.Extra := Extra;
-end;
+  aTarget.SwitchDescriptors := NIL;
+  SetLength(aTarget.SwitchDescriptors, Length(SwitchDescriptors));
+  for i:=0 to High(SwitchDescriptors) do begin
+    aTarget.SwitchDescriptors[i].ChannelIndexToSwitch := SwitchDescriptors[i].IndexOfVirtualChannel;
+    aTarget.SwitchDescriptors[i].SubChannelIndex := SwitchDescriptors[i].IndexOfSubChannel;
+  end;
+end; }
 
 function TFixLibSingleRange.ToReadableString: string;
 begin
-  Result := EncodeDMXChannelRange(BeginValue, EndValue, Text+' '+Extra);
+  Result := BeginValue.ToString+'..'+EndValue.ToString+'  :  '+Text+' '+Extra;
+end;
+
+function TFixLibSingleRange.HaveSwitch: boolean;
+begin
+  Result := Length(SwitchDescriptors) > 0;
+end;
+
+procedure TFixLibSingleRange.SetSwitchIndexes(const aVirtualName: string;
+  aIndex: integer; const aSubChannels: TStringArray);
+  var i, j: integer;
+begin
+  for i:=0 to High(SwitchDescriptors) do
+    if SwitchDescriptors[i].SwitchVirtualChannel = aVirtualName then begin
+      SwitchDescriptors[i].IndexOfVirtualChannel := aIndex;
+      for j:=0 to High(aSubChannels) do
+        if SwitchDescriptors[i].SwitchToSubChannel = aSubChannels[j] then
+          SwitchDescriptors[i].IndexOfSubChannel := j;
+    end;
 end;
 
 
@@ -658,7 +822,7 @@ begin
     Ranges[i].CopyTo(aTarget.Ranges[i]);
 end;
 
-function TFixLibAvailableChannel.HaveError: boolean;
+function TFixLibAvailableChannel.HaveRangesError: boolean;
 var i: integer;
   current: integer;
 begin
