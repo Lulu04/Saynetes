@@ -763,7 +763,7 @@ procedure TBaseDMXChannel.SetPercentValue(AValue: single);
 var b: byte;
   p: PArrayOfChannelRange;
   pp: PChannelRange;
-  i: integer;
+  i, j, k: integer;
 begin
   FPercentValue := AValue;
 
@@ -773,10 +773,14 @@ begin
     if p = NIL then exit;
     b := Round(FPercentValue*255);
     pp := p^.GetRangeFromByteValue(b);
-    if (pp <> NIL) and (pp^.HaveSwitch) then begin
-      for i:=0 to High(pp^.SwitchDescriptors) do
-        Fixture.Channels[pp^.SwitchDescriptors[i].ChannelIndexToSwitch].SubChannelIndex := pp^.SwitchDescriptors[i].SubChannelIndex;
-    end;
+    if (pp <> NIL) and (pp^.HaveSwitch) then
+      for i:=0 to High(pp^.SwitchDescriptors) do begin
+        // change the sub-channel index only if it is defined
+        j := pp^.SwitchDescriptors[i].ChannelIndexToSwitch;
+        k := pp^.SwitchDescriptors[i].SubChannelIndex;
+        if (j <> -1) and (k <> -1) then
+          Fixture.Channels[j].SubChannelIndex := k;
+      end;
   except
   end;
 end;
