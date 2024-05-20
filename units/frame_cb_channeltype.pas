@@ -223,7 +223,8 @@ begin
   CB.Items.Add(Ord(ctBLADEROTATION).ToString+'|Blade rotation');
   CB.Items.Add(Ord(ctZOOM).ToString+'|Zoom');
   CB.Items.Add(Ord(ctFOCUS).ToString+'|Focus');
-  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound sensitivity');
+  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound sensitivity|Low..High');
+  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound sensitivity|High..Low');
 
   CB.Items.Add(Ord(ctROTATION).ToString+'|Rotation');
   CB.Items.Add(Ord(ctSPEED).ToString+'|Speed');

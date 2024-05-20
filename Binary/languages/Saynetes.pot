@@ -75,12 +75,20 @@ msgstr ""
 msgid "Default value"
 msgstr ""
 
-#: tformdefinenewchannel.label5.caption
-msgid "name used by another channel"
-msgstr ""
-
 #: tformdefinenewchannel.label6.caption
 msgid "Choose only icon"
+msgstr ""
+
+#: tformdefineswitcher.caption
+msgid "New switcher"
+msgstr ""
+
+#: tformdefineswitcher.label4.caption
+msgid "Virtual channel to switch"
+msgstr ""
+
+#: tformdefineswitcher.label5.caption
+msgid "Target sub-channel"
 msgstr ""
 
 #: tformdevicemanager.bartnet.caption
@@ -343,6 +351,22 @@ msgstr ""
 #: tformeditsingleaction.label5.caption
 msgctxt "tformeditsingleaction.label5.caption"
 msgid "Speed"
+msgstr ""
+
+#: tformeditswitchingchannel.caption
+msgid "Switching channel"
+msgstr ""
+
+#: tformeditswitchingchannel.label2.caption
+msgid "Select the sub-channels"
+msgstr ""
+
+#: tformeditswitchingchannel.label3.caption
+msgid "Virtual name:"
+msgstr ""
+
+#: tformeditswitchingchannel.label7.caption
+msgid "a switching channel must have at least 2 sub-channels"
 msgstr ""
 
 #: tformeditweblink.label18.caption
@@ -779,6 +803,7 @@ msgid ""
 msgstr ""
 
 #: tformselectexistingchannel.baddexisting.caption
+msgctxt "tformselectexistingchannel.baddexisting.caption"
 msgid "Add existing"
 msgstr ""
 
@@ -788,6 +813,15 @@ msgstr ""
 
 #: tformselectexistingchannel.label2.caption
 msgid "Select an existing channel"
+msgstr ""
+
+#: tformselectexistingswitchingchannel.baddexisting.caption
+msgctxt "tformselectexistingswitchingchannel.baddexisting.caption"
+msgid "Add existing"
+msgstr ""
+
+#: tformselectexistingswitchingchannel.label2.caption
+msgid "Select existing virtual channels"
 msgstr ""
 
 #: tformsequenceedition.bkeep0visible.caption
@@ -1132,7 +1166,7 @@ msgstr ""
 
 #: tframeeditmode.baddswitchingchannel.caption
 msgctxt "tframeeditmode.baddswitchingchannel.caption"
-msgid "Add switching channel"
+msgid "Add virtual channel"
 msgstr ""
 
 #: tframeeditmode.bdeletechannel.hint
@@ -1804,6 +1838,10 @@ msgstr ""
 msgid "Rename folder"
 msgstr ""
 
+#: tframeviewmodeitem.image2.hint
+msgid "This channel have switcher"
+msgstr ""
+
 #: tframeviewprojectfolder.buttonopenproject.caption
 msgctxt "tframeviewprojectfolder.buttonopenproject.caption"
 msgid "Open"
@@ -1988,9 +2026,17 @@ msgstr ""
 msgid "Add action"
 msgstr ""
 
+#: u_resource_string.saddnewswitcher
+msgid "Add new switcher"
+msgstr ""
+
 #: u_resource_string.saddthissequence
 msgctxt "u_resource_string.saddthissequence"
 msgid "Add this sequence"
+msgstr ""
+
+#: u_resource_string.saddvirtualchanneltomode
+msgid "Add virtual channel to mode"
 msgstr ""
 
 #: u_resource_string.sadiscontinuityappearsontherange
@@ -2320,9 +2366,8 @@ msgstr ""
 msgid "Crackling"
 msgstr ""
 
-#: u_resource_string.screatenewchannel
-msgctxt "u_resource_string.screatenewchannel"
-msgid "Create new channel"
+#: u_resource_string.screatenew
+msgid "Create new"
 msgstr ""
 
 #: u_resource_string.screatesequence
@@ -2353,6 +2398,10 @@ msgstr ""
 
 #: u_resource_string.sdefault
 msgid "Default"
+msgstr ""
+
+#: u_resource_string.sdefinedbutnotused
+msgid "defined but not used"
 msgstr ""
 
 #: u_resource_string.sdelete
@@ -2528,6 +2577,10 @@ msgctxt "u_resource_string.sdurationinsecond"
 msgid "Duration in second"
 msgstr ""
 
+#: u_resource_string.sedit
+msgid "Edit"
+msgstr ""
+
 #: u_resource_string.seditionallowed
 msgid "Edition of audio, dmx and sequences... is now allowed"
 msgstr ""
@@ -2538,6 +2591,10 @@ msgstr ""
 
 #: u_resource_string.seditmode
 msgid "EDIT MODE"
+msgstr ""
+
+#: u_resource_string.seditswitcher
+msgid "Edit switcher"
 msgstr ""
 
 #: u_resource_string.sellipse
@@ -2565,12 +2622,20 @@ msgstr ""
 msgid "Error while opening this playlist"
 msgstr ""
 
+#: u_resource_string.serroronname
+msgid "Error on name"
+msgstr ""
+
 #: u_resource_string.serrorwhileimportingdmx
 msgid "An error occurred while importing the DMX configuration from the project"
 msgstr ""
 
 #: u_resource_string.serrorwhileimportingdmxgroups
 msgid "An error occurred while importing the DMX groups from the project"
+msgstr ""
+
+#: u_resource_string.sextra
+msgid "Extra"
 msgstr ""
 
 #: u_resource_string.sfade
@@ -2752,6 +2817,10 @@ msgctxt "u_resource_string.shalogen"
 msgid "Halogen"
 msgstr ""
 
+#: u_resource_string.shaverangeerror
+msgid "have dmx range error"
+msgstr ""
+
 #: u_resource_string.sheight
 msgid "Height"
 msgstr ""
@@ -2766,7 +2835,7 @@ msgid "Hz"
 msgstr ""
 
 #: u_resource_string.siconappby
-msgid "Icon application by"
+msgid "Application icon by"
 msgstr ""
 
 #: u_resource_string.simage
@@ -2892,6 +2961,10 @@ msgstr ""
 
 #: u_resource_string.smini
 msgid "Mini"
+msgstr ""
+
+#: u_resource_string.smode
+msgid "Mode"
 msgstr ""
 
 #: u_resource_string.smode1
@@ -3438,8 +3511,17 @@ msgstr ""
 msgid "STRETCH TIME"
 msgstr ""
 
+#: u_resource_string.ssubchannel
+msgid "Sub-channel"
+msgstr ""
+
 #: u_resource_string.ssubstract
 msgid "Substract"
+msgstr ""
+
+#: u_resource_string.sswitchers
+msgctxt "u_resource_string.sswitchers"
+msgid "Switchers"
 msgstr ""
 
 #: u_resource_string.sthefile
@@ -3457,6 +3539,10 @@ msgstr ""
 #: u_resource_string.sthisfilenamalreadyexists
 msgctxt "u_resource_string.sthisfilenamalreadyexists"
 msgid "this filename already exists !"
+msgstr ""
+
+#: u_resource_string.sthismodeisempty
+msgid "This mode is empty or have only virtual channel"
 msgstr ""
 
 #: u_resource_string.sto
@@ -3538,6 +3624,10 @@ msgstr ""
 #: u_resource_string.sview
 msgctxt "u_resource_string.sview"
 msgid "View"
+msgstr ""
+
+#: u_resource_string.svirtualchannel
+msgid "Virtual channel"
 msgstr ""
 
 #: u_resource_string.svolume

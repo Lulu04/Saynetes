@@ -5,7 +5,8 @@ unit form_editweblink;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, StdCtrls,
+  ExtCtrls;
 
 type
 
@@ -18,6 +19,7 @@ type
     Edit1: TEdit;
     Label18: TLabel;
     Label19: TLabel;
+    Shape1: TShape;
     procedure BOKClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);

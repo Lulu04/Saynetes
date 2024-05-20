@@ -71,6 +71,7 @@ type
     Label32: TLabel;
     Label33: TLabel;
     Label34: TLabel;
+    Label35: TLabel;
     Label37: TLabel;
     Label38: TLabel;
     Label39: TLabel;
@@ -168,7 +169,7 @@ type
     function CheckIfModeNameIsUsed(aCaller: TFrameEditMode; const aModeName: string): boolean;
     function CheckIfModeShortNameIsUsed(aCaller: TFrameEditMode; const aModeShortName: string): boolean;
     procedure KillModeFrame(aCaller: TFrameEditMode);
-    procedure ReplaceChannelNameInAllFrames(const aOldNameNoPrefix, aNewNameNoPrefix: string);
+    procedure ReplaceChannelNameInAllFrames(const aOldName, aNewName: string);
   public
     procedure EditExistingFixture(aFixLocation: TFixtureLibraryLocation);
 
@@ -188,6 +189,10 @@ uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
 procedure TFormFixtureWizard.FormShow(Sender: TObject);
 begin
   UpdateFixtureImages;
+
+  // reset the virtual channels
+  FVirtualChannelInMode := NIL;
+
   if FEditingExistingFixture then begin
     LoadFixtureToEdit;
   end else begin
@@ -300,7 +305,6 @@ end;
 
 procedure TFormFixtureWizard.UpDown1Click(Sender: TObject; Button: TUDBtnType);
 var i: integer;
-  s: string;
   procedure ExchangeLinks(i1, i2: integer);
   begin
     LBWebLink.Items.Exchange(i1, i2);
@@ -477,18 +481,24 @@ begin
       Name := ModeFrames[i].ModeName;
       ShortName := ModeFrames[i].ShortModeName;
       ChannelsIDToUse := NIL;
-      A := ModeFrames[i].ChannelsUsed;
+      A := ModeFrames[i].ChannelAndVirtualChannelUsed;
       SetLength(ChannelsIDToUse, Length(A));
       for j:=0 to High(A) do ChannelsIDToUse[j] := A[j];
     end;
 
   // channels used by modes
-  // we keep only the channels used by modes
+  // we keep only the channels used by modes (in normal or virtual channels)
   A := NIL;
+   // add normal channels
   for i:=0 to High(ModeFrames) do begin
     chanUsed := ModeFrames[i].ChannelsUsed;
     for j:=0 to High(chanUsed) do
       AddExclusiveToA(chanUsed[j]);
+  end;
+    // add sub-channels used by switching channel
+  for i:=0 to High(FVirtualChannelInMode) do begin
+    for j:=0 to High(FVirtualChannelInMode[i].SubChannelIDs) do
+      AddExclusiveToA(FVirtualChannelInMode[i].SubChannelIDs[j]);
   end;
 
   libFix.AvailableChannels := NIL;
@@ -513,7 +523,7 @@ begin
 end;
 
 procedure TFormFixtureWizard.DoCreateFrame(aTargetFrameIndex: integer; p: PFixLibMode);
-var i, j, y: integer;
+var i, y: integer;
 begin
   i := aTargetFrameIndex;
   ModeFrames[i] := TFrameEditMode.Create(Self);
@@ -578,10 +588,9 @@ end;
 
 procedure TFormFixtureWizard.ProcessModeChangeHeightEvent(Sender: TObject);
 var o: TFrameEditMode;
-  i, y: integer;
+  i: integer;
 begin
   o := TFrameEditMode(Sender);
-  y := o.Top + o.Height;
   for i:=o.ModeIndex+2 to High(ModeFrames) do begin
     if Odd(i) and Odd(o.ModeIndex) then ModeFrames[i].Top := ModeFrames[i-2].Top + ModeFrames[i-2].Height + ScaleDesignToForm(5);
     if not Odd(i) and not Odd(o.ModeIndex) then ModeFrames[i].Top := ModeFrames[i-2].Top + ModeFrames[i-2].Height + ScaleDesignToForm(5);
@@ -636,8 +645,12 @@ begin
   if length(ModeFrames) = 0 then exit(False);
 
   for i:=0 to High(ModeFrames) do
-    if ModeFrames[i].HaveError then exit(False);
-
+    if ModeFrames[i].HaveError then begin
+      Label35.Visible := True;
+      Label35.Caption := ModeFrames[i].ErrorMessage;
+      exit(False);
+    end;
+  Label35.Visible := False;
   Result := True;
 end;
 
@@ -669,11 +682,11 @@ begin
   PostMessage(Handle, LM_MESSAGE_EditFixtureWizard, 0, MESS_DeleteModeFrame);
 end;
 
-procedure TFormFixtureWizard.ReplaceChannelNameInAllFrames(const aOldNameNoPrefix, aNewNameNoPrefix: string);
+procedure TFormFixtureWizard.ReplaceChannelNameInAllFrames(const aOldName, aNewName: string);
 var i: integer;
 begin
   for i:=0 to High(ModeFrames) do
-    ModeFrames[i].ReplaceChannelName(aOldNameNoPrefix, aNewNameNoPrefix);
+    ModeFrames[i].ReplaceChannelName(aOldName, aNewName);
 end;
 
 procedure TFormFixtureWizard.EditExistingFixture(aFixLocation: TFixtureLibraryLocation);

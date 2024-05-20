@@ -117,6 +117,7 @@ begin
   AddImageToImageList('Frost.svg', ILChannelType);
 
   AddImageToImageList('SwitchingChannel.svg', ILChannelType);
+  AddImageToImageList('Switch.svg', ILChannelType);
   ILChannelType.EndUpdate;
 end;
 

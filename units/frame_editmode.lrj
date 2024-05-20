@@ -9,7 +9,7 @@
 {"hash":97318780,"name":"tframeeditmode.bdeletechannel.hint","sourcebytes":[68,101,108,101,116,101,32,99,104,97,110,110,101,108],"value":"Delete channel"},
 {"hash":256970320,"name":"tframeeditmode.bup.hint","sourcebytes":[77,111,118,101,32,116,104,101,32,99,104,97,110,110,101,108,32,117,112],"value":"Move the channel up"},
 {"hash":17779086,"name":"tframeeditmode.bdown.hint","sourcebytes":[77,111,118,101,32,116,104,101,32,99,104,97,110,110,101,108,32,100,111,119,110],"value":"Move the channel down"},
-{"hash":173064628,"name":"tframeeditmode.label6.caption","sourcebytes":[115,110,97,109,101,32,97,108,114,101,97,100,121,32,117,115,101,100],"value":"sname already used"},
-{"hash":173064628,"name":"tframeeditmode.label7.caption","sourcebytes":[115,110,97,109,101,32,97,108,114,101,97,100,121,32,117,115,101,100],"value":"sname already used"},
-{"hash":108182236,"name":"tframeeditmode.baddswitchingchannel.caption","sourcebytes":[65,100,100,32,115,119,105,116,99,104,105,110,103,32,99,104,97,110,110,101,108],"value":"Add switching channel"}
+{"hash":70088068,"name":"tframeeditmode.label6.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
+{"hash":70088068,"name":"tframeeditmode.label7.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
+{"hash":133912476,"name":"tframeeditmode.baddswitchingchannel.caption","sourcebytes":[65,100,100,32,118,105,114,116,117,97,108,32,99,104,97,110,110,101,108],"value":"Add virtual channel"}
 ]}

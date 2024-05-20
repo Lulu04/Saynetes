@@ -250,7 +250,7 @@ object FrameEditMode: TFrameEditMode
       Top = 63
       Width = 104
       Anchors = [akTop, akRight]
-      Caption = 'sname already used'
+      Caption = 'SNameAlreadyUsed'
       Font.Color = 6974207
       ParentColor = False
       ParentFont = False
@@ -266,7 +266,7 @@ object FrameEditMode: TFrameEditMode
       Top = 103
       Width = 104
       Anchors = [akTop, akRight]
-      Caption = 'sname already used'
+      Caption = 'SNameAlreadyUsed'
       Font.Color = 6974207
       ParentColor = False
       ParentFont = False
@@ -281,11 +281,11 @@ object FrameEditMode: TFrameEditMode
       Left = 120
       Height = 20
       Top = 148
-      Width = 148
+      Width = 131
       Anchors = [akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 20
-      Caption = 'Add switching channel'
+      Caption = 'Add virtual channel'
       Color = 16433669
       Flat = True
       Font.Color = clWhite

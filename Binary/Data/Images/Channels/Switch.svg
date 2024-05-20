@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666666 8.4666666"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="Switch.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="33.941125"
+     inkscape:cy="101.11627"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       style="fill:#ecd19f;fill-opacity:1;fill-rule:evenodd;stroke:#ecd19f;stroke-width:0.120577;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0.32487185,4.2987845 V 4.98944 H 3.2738613 L 7.692981,4.4808413 c 0,0 0.2110356,-0.2798279 0.1827985,-0.4276111 C 7.8475424,3.9054471 7.5674703,3.7425496 7.5674703,3.7425496 l -4.600567,0.5671976 z"
+       id="path4"
+       sodipodi:nodetypes="cccczccc" /><circle
+       style="fill:#ecd19f;fill-rule:evenodd;stroke:#ecd19f;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="path1"
+       cx="2.8608069"
+       cy="4.6216969"
+       r="0.8764323" /><circle
+       style="fill:#ecd19f;fill-rule:evenodd;stroke:#ecd19f;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="circle1"
+       cx="6.1680989"
+       cy="2.3065927"
+       r="0.8764323" /><circle
+       style="fill:#ecd19f;fill-rule:evenodd;stroke:#ecd19f;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="circle2"
+       cx="6.1680989"
+       cy="6.936801"
+       r="0.8764323" /></g></svg>

@@ -1,25 +1,25 @@
 object FormDefineNewChannel: TFormDefineNewChannel
-  Left = 439
-  Height = 492
-  Top = 265
-  Width = 669
+  Left = 230
+  Height = 496
+  Top = 148
+  Width = 992
   BorderIcons = [biSystemMenu]
-  ClientHeight = 492
-  ClientWidth = 669
+  ClientHeight = 496
+  ClientWidth = 992
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poOwnerFormCenter
   LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 0
-    Height = 492
+    Height = 496
     Top = 0
-    Width = 669
+    Width = 992
     Align = alClient
     BevelColor = 4227327
     BevelWidth = 2
-    ClientHeight = 492
-    ClientWidth = 669
+    ClientHeight = 496
+    ClientWidth = 992
     Color = 4345683
     ParentColor = False
     TabOrder = 0
@@ -89,73 +89,15 @@ object FormDefineNewChannel: TFormDefineNewChannel
       MaxValue = 255
       TabOrder = 1
     end
-    object SG: TStringGrid
-      AnchorSideLeft.Control = Panel1
-      AnchorSideTop.Control = SE1
-      AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = Panel1
-      AnchorSideBottom.Side = asrBottom
-      Left = 8
-      Height = 329
-      Top = 155
-      Width = 537
-      AlternateColor = 4345425
-      Anchors = [akTop, akLeft, akBottom]
-      BorderSpacing.Left = 6
-      BorderSpacing.Top = 20
-      BorderSpacing.Bottom = 6
-      Color = 2896950
-      ColCount = 3
-      Columns = <      
-        item
-          MinSize = 50
-          MaxSize = 80
-          Title.Alignment = taCenter
-          Title.Caption = 'sMin'
-          Width = 60
-        end      
-        item
-          MinSize = 50
-          Title.Alignment = taCenter
-          Title.Caption = 'sMax'
-          Width = 60
-        end      
-        item
-          MinSize = 200
-          MaxSize = 0
-          Title.Alignment = taCenter
-          Title.Caption = 'sDescription'
-          Width = 399
-        end>
-      FixedColor = 5859436
-      FixedCols = 0
-      Flat = True
-      Font.Color = 15395562
-      GridLineColor = 6710886
-      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goThumbTracking, goSmoothScroll]
-      ParentFont = False
-      RowCount = 255
-      ScrollBars = ssVertical
-      TabOrder = 2
-      OnSelectEditor = SGSelectEditor
-      OnSelectCell = SGSelectCell
-      OnUTF8KeyPress = SGUTF8KeyPress
-      OnValidateEntry = SGValidateEntry
-      ColWidths = (
-        60
-        60
-        399
-      )
-    end
     object BOK: TSpeedButton
-      AnchorSideTop.Control = SG
+      AnchorSideTop.Control = SB
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 557
+      Left = 880
       Height = 26
-      Top = 175
+      Top = 201
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -184,9 +126,9 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 557
+      Left = 880
       Height = 26
-      Top = 241
+      Top = 267
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -210,12 +152,12 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Edit1
       AnchorSideRight.Side = asrBottom
-      Left = 116
+      Left = 175
       Height = 15
       Top = 79
-      Width = 163
+      Width = 104
       Anchors = [akTop, akRight]
-      Caption = 'name used by another channel'
+      Caption = 'SNameAlreadyUsed'
       Font.Color = 6974207
       ParentColor = False
       ParentFont = False
@@ -228,7 +170,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Width = 20
       Checked = True
       OnChange = RadioButton1Change
-      TabOrder = 5
+      TabOrder = 4
       TabStop = True
     end
     object RadioButton2: TRadioButton
@@ -240,7 +182,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Width = 20
       BorderSpacing.Left = 20
       OnChange = RadioButton1Change
-      TabOrder = 3
+      TabOrder = 2
     end
     object Label6: TLabel
       AnchorSideLeft.Control = RadioButton2
@@ -264,11 +206,265 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Top = 59
       Width = 248
       PageIndex = 0
-      TabOrder = 4
+      TabOrder = 3
       object PagePreset: TPage
       end
       object PageCustom: TPage
       end
+    end
+    object Panel2: TPanel
+      AnchorSideLeft.Control = SE1
+      AnchorSideTop.Control = SE1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = SB
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 26
+      Top = 155
+      Width = 842
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 20
+      BorderSpacing.Right = 20
+      BevelColor = 6710886
+      ClientHeight = 26
+      ClientWidth = 842
+      Color = 5859436
+      ParentColor = False
+      TabOrder = 5
+      object Panel3: TPanel
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = Panel2
+        Left = 1
+        Height = 24
+        Top = 1
+        Width = 60
+        BevelOuter = bvNone
+        ClientHeight = 24
+        ClientWidth = 60
+        Color = 5859436
+        ParentColor = False
+        TabOrder = 0
+        object Label7: TLabel
+          AnchorSideLeft.Control = Panel3
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel3
+          AnchorSideTop.Side = asrCenter
+          Left = 17
+          Height = 15
+          Top = 5
+          Width = 26
+          Caption = 'sMin'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object Panel4: TPanel
+        AnchorSideLeft.Control = Shape2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        Left = 62
+        Height = 24
+        Top = 1
+        Width = 60
+        BevelOuter = bvNone
+        BorderWidth = 1
+        ClientHeight = 24
+        ClientWidth = 60
+        Color = 5859436
+        ParentColor = False
+        TabOrder = 1
+        object Label8: TLabel
+          AnchorSideLeft.Control = Panel4
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel4
+          AnchorSideTop.Side = asrCenter
+          Left = 16
+          Height = 15
+          Top = 5
+          Width = 28
+          Caption = 'sMax'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object Panel5: TPanel
+        AnchorSideLeft.Control = Shape3
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Shape4
+        Left = 123
+        Height = 24
+        Top = 1
+        Width = 232
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvNone
+        ClientHeight = 24
+        ClientWidth = 232
+        Color = 5859436
+        ParentColor = False
+        TabOrder = 2
+        object Label9: TLabel
+          AnchorSideLeft.Control = Panel5
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel5
+          AnchorSideTop.Side = asrCenter
+          Left = 84
+          Height = 15
+          Top = 5
+          Width = 65
+          Caption = 'sDescription'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object Splitter1: TSplitter
+        AnchorSideTop.Control = Panel2
+        AnchorSideBottom.Control = Panel2
+        AnchorSideBottom.Side = asrBottom
+        Left = 436
+        Height = 24
+        Top = 1
+        Width = 5
+        Align = alNone
+        Anchors = [akTop, akLeft, akBottom]
+        Color = 5859436
+        OnMoved = Splitter1Moved
+        ParentColor = False
+        ResizeStyle = rsLine
+      end
+      object Panel6: TPanel
+        AnchorSideLeft.Control = Splitter1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Panel2
+        AnchorSideRight.Side = asrBottom
+        Left = 441
+        Height = 24
+        Top = 1
+        Width = 400
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvNone
+        ClientHeight = 24
+        ClientWidth = 400
+        Color = 5859436
+        ParentColor = False
+        TabOrder = 4
+        object Label10: TLabel
+          AnchorSideLeft.Control = Panel6
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel6
+          AnchorSideTop.Side = asrCenter
+          Left = 173
+          Height = 15
+          Top = 5
+          Width = 55
+          Caption = 'sSwitchers'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object Shape2: TShape
+        AnchorSideLeft.Control = Panel3
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideBottom.Control = Panel2
+        AnchorSideBottom.Side = asrBottom
+        Left = 61
+        Height = 24
+        Top = 1
+        Width = 1
+        Anchors = [akTop, akLeft, akBottom]
+        Brush.Style = bsClear
+        Pen.Color = 6710886
+      end
+      object Shape3: TShape
+        AnchorSideLeft.Control = Panel4
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideBottom.Control = Panel2
+        AnchorSideBottom.Side = asrBottom
+        Left = 122
+        Height = 24
+        Top = 1
+        Width = 1
+        Anchors = [akTop, akLeft, akBottom]
+        Brush.Style = bsClear
+        Pen.Color = 6710886
+      end
+      object Shape4: TShape
+        AnchorSideLeft.Control = Panel5
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Panel7
+        AnchorSideBottom.Control = Panel2
+        AnchorSideBottom.Side = asrBottom
+        Left = 355
+        Height = 24
+        Top = 1
+        Width = 1
+        Anchors = [akTop, akRight, akBottom]
+        Brush.Style = bsClear
+        Pen.Color = 6710886
+      end
+      object Panel7: TPanel
+        AnchorSideLeft.Control = Shape4
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Splitter1
+        Left = 356
+        Height = 24
+        Top = 1
+        Width = 80
+        Anchors = [akTop, akRight]
+        BevelOuter = bvNone
+        BorderWidth = 1
+        ClientHeight = 24
+        ClientWidth = 80
+        Color = 5859436
+        Constraints.MaxWidth = 80
+        Constraints.MinWidth = 80
+        ParentColor = False
+        TabOrder = 5
+        object Label11: TLabel
+          AnchorSideLeft.Control = Panel7
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel7
+          AnchorSideTop.Side = asrCenter
+          Left = 25
+          Height = 15
+          Top = 5
+          Width = 31
+          Caption = 'sExtra'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+    end
+    object SB: TScrollBox
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BOK
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 8
+      Height = 305
+      Top = 181
+      Width = 862
+      HorzScrollBar.Page = 1
+      VertScrollBar.Increment = 20
+      VertScrollBar.Page = 1
+      VertScrollBar.Tracking = True
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Right = 10
+      BorderSpacing.Bottom = 8
+      BorderStyle = bsNone
+      TabOrder = 6
     end
   end
 end

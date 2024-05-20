@@ -122,7 +122,9 @@ end;
     function ToReadableString: string;
     function HaveSwitch: boolean;
     procedure SetSwitchIndexes(const aVirtualName: string; aIndex: integer; const aSubChannels: TStringArray);
-  end;
+    // Returns a string with virtualName0:SwitchToSubChannel0 + LineEnding + virtualName1:SwitchToSubChannel1...
+    function GetSwitchsAsText: string;
+end;
   PFixLibSingleRange = ^TFixLibSingleRange;
 
   { TFixLibAvailableChannel }
@@ -138,6 +140,8 @@ end;
     function SaveToString: string;
     function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibAvailableChannel);
+    // return True if this channel have at least 1 switch descriptor
+    function HaveSwitchDescriptor: boolean;
     // checks the integrity of each channel ranges
     function HaveRangesError: boolean;
   end;
@@ -146,13 +150,17 @@ end;
 
 
 { TVirtualChannelForSwitch }
-
+PVirtualChannelForSwitch = ^TVirtualChannelForSwitch;
 TVirtualChannelForSwitch = record
   VirtualName: string;
   SubChannelIDs: TStringArray;      // list of used channel
   procedure InitDefault;
   // add single instance of channel ID
   procedure AddSubChannel(const aID: string);
+
+  // gives "VirtualName:SubChannel1;SubChannel2;..."
+  function PackToString: string;
+  procedure InitFromPackedString(const s: string);
 end;
 TVirtualChannelForSwitchs = array of TVirtualChannelForSwitch;
 
@@ -305,6 +313,33 @@ begin
   i := Length(SubChannelIDs);
   SetLength(SubChannelIDs, i+1);
   SubChannelIDs[i] := aID;
+end;
+
+function TVirtualChannelForSwitch.PackToString: string;
+var i :integer;
+  sep: char;
+begin
+  Result := VirtualName;
+  if Length(SubChannelIDs) = 0 then exit;
+
+  sep := ':';
+  for i:=0 to High(SubChannelIDs) do begin
+    Result := Result + sep + SubChannelIDs[i];
+    sep := ';';
+  end;
+end;
+
+procedure TVirtualChannelForSwitch.InitFromPackedString(const s: string);
+var A, B: TStringArray;
+begin
+  InitDefault;
+  if s = '' then exit;
+  A := s.Split([':']);
+  if Length(A) >= 1 then VirtualName := A[0];
+  if Length(A) = 2 then begin
+    B := A[1].Split([';']);
+    SubChannelIDs := Copy(B, 0, Length(B));
+  end;
 end;
 
 { TFixLibSwitchDescriptor }
@@ -739,6 +774,17 @@ begin
     end;
 end;
 
+function TFixLibSingleRange.GetSwitchsAsText: string;
+var i: integer;
+begin
+  Result := '';
+  if Length(SwitchDescriptors) = 0 then exit;
+  for i:=0 to High(SwitchDescriptors) do begin
+    Result := Result + SwitchDescriptors[i].SwitchVirtualChannel+':'+SwitchDescriptors[i].SwitchToSubChannel;
+    if i < High(SwitchDescriptors) then Result := Result + LineEnding;
+  end;
+end;
+
 
 { TFixLibAvailableChannel }
 
@@ -820,6 +866,14 @@ begin
   SetLength(aTarget.Ranges, Length(Ranges));
   for i:=0 to High(Ranges) do
     Ranges[i].CopyTo(aTarget.Ranges[i]);
+end;
+
+function TFixLibAvailableChannel.HaveSwitchDescriptor: boolean;
+var i: integer;
+begin
+  for i:=0 to High(Ranges) do
+    if Ranges[i].HaveSwitch then exit(True);
+  Result := False;
 end;
 
 function TFixLibAvailableChannel.HaveRangesError: boolean;
