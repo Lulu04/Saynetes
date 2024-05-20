@@ -1,0 +1,48 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/367135_c_367135_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/stairville_octagon_theater_20x6w_cw_ww_a.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=c_UDU4X6i6c
+[GENERAL]
+Manufacturer|Stairville|Name|Octagon Theater 20x6W CW/WW/A|Type|1|Authors|SK, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|295|Height|340|Depth|200|Weight|6.90|Power|120|Connector|3-pin|Bulb|20x 6W CW/WW/A LEDs|LensMinDegree|36.000|LensMaxDegree|36.000
+[CHAN_DEF]
+ID|IntensityColdWhite|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|IntensityWarmWhite|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|IntensityAmber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Programs|Type|0|DefaultValue|11|R1|Begin~0~End~10~Txt~No function~Switch1~Warm White:NoFunction1~Switch2~Cold White:NoFunction2~Switch3~Amber:NoFunction3~Switch4~Speed:NoFunction4~Switch5~Sound Control Mode 1 / Hue:NoFunction5|R2|Begin~11~End~50~Txt~0..100%~Switch1~Warm White:IntensityWarmWhite~Switch2~Cold White:IntensityColdWhite~Switch3~Amber:IntensityAmber~Switch4~Speed:Program Speed~Switch5~Sound Control Mode 1 / Hue:Sound Control Mode 1|R3|Begin~51~End~90~Txt~Sound control mode 1~Switch1~Warm White:NoFunction1~Switch2~Cold White:NoFunction2~Switch3~Amber:NoFunction3~Switch4~Speed:NoFunction4~Switch5~Sound Control Mode 1 / Hue:Sound Control Mode 1|R4|Begin~91~End~130~Txt~Sound control mode 2~Switch1~Warm White:SoundControl2WarmWhite~Switch2~Cold White:SoundControl2ColdWhite~Switch3~Amber:SoundControl2Amber~Switch4~Speed:NoFunction4~Switch5~Sound Control Mode 1 / Hue:NoFunction5|R5|Begin~131~End~170~Txt~ColorFade~Switch1~Warm White:NoFunction1~Switch2~Cold White:NoFunction2~Switch3~Amber:NoFunction3~Switch4~Speed:Program Speed~Switch5~Sound Control Mode 1 / Hue:Hue|R6|Begin~171~End~210~Txt~Program selection~Switch1~Warm White:ProgramSelWarmWhite~Switch2~Cold White:ProgramSelColdWhite~Switch3~Amber:ProgramSelAmber~Switch4~Speed:Program Speed~Switch5~Sound Control Mode 1 / Hue:Hue|R7|Begin~211~End~255~Txt~Strobe~Switch1~Warm White:StrobeWarmWhite~Switch2~Cold White:StrobeColdWhite~Switch3~Amber:StrobeAmber~Switch4~Speed:Strobe Speed~Switch5~Sound Control Mode 1 / Hue:NoFunction5
+ID|ProgramsColdWhite|Type|0|DefaultValue|31|R1|Begin~0~End~30~Txt~No function~Switch1~Cold White Intensity / Sound Control:NoFunction1~Switch2~Cold White Fade Speed / Strobe Intensity:NoFunction2|R2|Begin~31~End~70~Txt~Intensity~Switch1~Cold White Intensity / Sound Control:IntensityColdWhite~Switch2~Cold White Fade Speed / Strobe Intensity:NoFunction2|R3|Begin~71~End~110~Txt~Sound Control~Switch1~Cold White Intensity / Sound Control:SoundControlColdWhite~Switch2~Cold White Fade Speed / Strobe Intensity:NoFunction2|R4|Begin~111~End~150~Txt~RampDown~Switch1~Cold White Intensity / Sound Control:NoFunction1~Switch2~Cold White Fade Speed / Strobe Intensity:FadeSpeedColdWhite|R5|Begin~151~End~190~Txt~RampUp~Switch1~Cold White Intensity / Sound Control:NoFunction1~Switch2~Cold White Fade Speed / Strobe Intensity:FadeSpeedColdWhite|R6|Begin~191~End~230~Txt~RampUpDown~Switch1~Cold White Intensity / Sound Control:NoFunction1~Switch2~Cold White Fade Speed / Strobe Intensity:FadeSpeedColdWhite|R7|Begin~231~End~255~Txt~Strobe~Switch1~Cold White Intensity / Sound Control:IntensityColdWhite~Switch2~Cold White Fade Speed / Strobe Intensity:StrobeColdWhite
+ID|ProgramsWarmWhite|Type|0|DefaultValue|31|R1|Begin~0~End~30~Txt~No function~Switch1~Warm White Intensity / Sound Control:NoFunction3~Switch2~Warm White Fade Speed / Strobe Intensity:NoFunction4|R2|Begin~31~End~70~Txt~Intensity~Switch1~Warm White Intensity / Sound Control:IntensityWarmWhite~Switch2~Warm White Fade Speed / Strobe Intensity:NoFunction4|R3|Begin~71~End~110~Txt~Sound Control~Switch1~Warm White Intensity / Sound Control:SoundControlWarmWhite~Switch2~Warm White Fade Speed / Strobe Intensity:NoFunction4|R4|Begin~111~End~150~Txt~RampDown~Switch1~Warm White Intensity / Sound Control:NoFunction3~Switch2~Warm White Fade Speed / Strobe Intensity:FadeSpeedWarmWhite|R5|Begin~151~End~190~Txt~RampUp~Switch1~Warm White Intensity / Sound Control:NoFunction3~Switch2~Warm White Fade Speed / Strobe Intensity:FadeSpeedWarmWhite|R6|Begin~191~End~230~Txt~RampUpDown~Switch1~Warm White Intensity / Sound Control:NoFunction3~Switch2~Warm White Fade Speed / Strobe Intensity:FadeSpeedWarmWhite|R7|Begin~231~End~255~Txt~Strobe~Switch1~Warm White Intensity / Sound Control:IntensityWarmWhite~Switch2~Warm White Fade Speed / Strobe Intensity:StrobeWarmWhite
+ID|ProgramsAmber|Type|0|DefaultValue|31|R1|Begin~0~End~30~Txt~No function~Switch1~Amber Intensity / Sound Control:NoFunction5~Switch2~Amber Fade Speed / Strobe Intensity:NoFunction6|R2|Begin~31~End~70~Txt~Intensity~Switch1~Amber Intensity / Sound Control:IntensityAmber~Switch2~Amber Fade Speed / Strobe Intensity:NoFunction6|R3|Begin~71~End~110~Txt~Sound Control~Switch1~Amber Intensity / Sound Control:SoundControlAmber~Switch2~Amber Fade Speed / Strobe Intensity:NoFunction6|R4|Begin~111~End~150~Txt~RampDown~Switch1~Amber Intensity / Sound Control:NoFunction5~Switch2~Amber Fade Speed / Strobe Intensity:FadeSpeedAmber|R5|Begin~151~End~190~Txt~RampUp~Switch1~Amber Intensity / Sound Control:NoFunction5~Switch2~Amber Fade Speed / Strobe Intensity:FadeSpeedAmber|R6|Begin~191~End~230~Txt~RampUpDown~Switch1~Amber Intensity / Sound Control:NoFunction5~Switch2~Amber Fade Speed / Strobe Intensity:FadeSpeedAmber|R7|Begin~231~End~255~Txt~Strobe~Switch1~Amber Intensity / Sound Control:IntensityAmber~Switch2~Amber Fade Speed / Strobe Intensity:StrobeAmber
+ID|NoFunction1|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|SoundControlColdWhite|Type|0|R1|Begin~0~End~255~Txt~Sound Control
+ID|NoFunction2|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|FadeSpeedColdWhite|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|StrobeColdWhite|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|NoFunction3|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|SoundControlWarmWhite|Type|0|R1|Begin~0~End~255~Txt~Sound Control
+ID|NoFunction4|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|FadeSpeedWarmWhite|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|StrobeWarmWhite|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|NoFunction5|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|SoundControlAmber|Type|0|R1|Begin~0~End~255~Txt~Sound Control
+ID|NoFunction6|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|FadeSpeedAmber|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|StrobeAmber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|SoundControl2WarmWhite|Type|0|R1|Begin~0~End~255~Txt~Sound Control Mode 2
+ID|ProgramSelWarmWhite|Type|0|R1|Begin~0~End~255~Txt~Program Selection
+ID|SoundControl2ColdWhite|Type|0|R1|Begin~0~End~255~Txt~Sound Control Mode 2
+ID|ProgramSelColdWhite|Type|0|R1|Begin~0~End~255~Txt~Program Selection
+ID|SoundControl2Amber|Type|0|R1|Begin~0~End~255~Txt~Sound Control Mode 2
+ID|ProgramSelAmber|Type|0|R1|Begin~0~End~255~Txt~Program Selection
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast Program / Fade speed
+ID|Strobe Speed|Type|28|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Control Mode 1|Type|0|R1|Begin~0~End~255~Txt~Sound Control Mode 1
+ID|Hue|Type|0|R1|Begin~0~End~255~Txt~Fade / Program color hue
+[END_CHAN_DEF]
+[MODES]
+Name|4-Channel|ShortName|4ch|Content|IntensityColdWhite~IntensityWarmWhite~IntensityAmber~Dimmer
+Name|6-Channel|ShortName|6ch|Content|Cold White:NoFunction2;IntensityColdWhite;SoundControl2ColdWhite;ProgramSelColdWhite;StrobeColdWhite~Warm White:NoFunction1;IntensityWarmWhite;SoundControl2WarmWhite;ProgramSelWarmWhite;StrobeWarmWhite~Amber:NoFunction3;IntensityAmber;SoundControl2Amber;ProgramSelAmber;StrobeAmber~Speed:NoFunction4;Program Speed;Strobe Speed~Sound Control Mode 1 / Hue:NoFunction5;Sound Control Mode 1;Hue~Programs
+Name|9-Channel|ShortName|9ch|Content|Cold White Intensity / Sound Control:NoFunction1;IntensityColdWhite;SoundControlColdWhite~Cold White Fade Speed / Strobe Intensity:NoFunction2;FadeSpeedColdWhite;StrobeColdWhite~ProgramsColdWhite~Warm White Intensity / Sound Control:NoFunction3;IntensityWarmWhite;SoundControlWarmWhite~Warm White Fade Speed / Strobe Intensity:NoFunction4;FadeSpeedWarmWhite;StrobeWarmWhite~ProgramsWarmWhite~Amber Intensity / Sound Control:NoFunction5;IntensityAmber;SoundControlAmber~Amber Fade Speed / Strobe Intensity:NoFunction6;FadeSpeedAmber;StrobeAmber~ProgramsAmber
+[END_MODES]

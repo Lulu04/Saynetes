@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.uking-online.com/wp-content/uploads/2020/10/ZQ-B117.pdf|LinkType2|product page|Url2|https://www.uking-online.com/product/b117-par-can-4in1-rgbw-18-leds/
+[GENERAL]
+Manufacturer|U`King|Name|B117 Par Can 4in1 RGBW 18 LEDs|Type|16|Authors|Ken Harris, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|225|Height|225|Depth|115|Weight|3.20|Power|200|Connector|3-pin|Bulb|LED|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~slow..fast
+ID|Effect|Type|0|R1|Begin~0~End~50~Txt~No function~Switch1~Color Presets / Effect Speed:No Function|R2|Begin~51~End~100~Txt~Color Presets~Switch1~Color Presets / Effect Speed:Color Presets|R3|Begin~101~End~150~Txt~ColorJump~Switch1~Color Presets / Effect Speed:Effect Speed|R4|Begin~151~End~200~Txt~ColorFade~Switch1~Color Presets / Effect Speed:Effect Speed|R5|Begin~201~End~250~Txt~Colors Pulse Change~Switch1~Color Presets / Effect Speed:Effect Speed|R6|Begin~251~End~255~Txt~Sound-Active~Switch1~Color Presets / Effect Speed:Effect Speed
+ID|No Function|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Color Presets|Type|12|R1|Begin~0~End~32~Txt~Red~Extra~#ff0000|R2|Begin~33~End~63~Txt~Green~Extra~#00ff00|R3|Begin~64~End~95~Txt~Blue~Extra~#0000ff|R4|Begin~96~End~127~Txt~White~Extra~#ffffff|R5|Begin~128~End~159~Txt~Yellow~Extra~#ffff00|R6|Begin~160~End~191~Txt~Magenta~Extra~#ff00ff|R7|Begin~192~End~223~Txt~Cyan~Extra~#00ffff|R8|Begin~224~End~255~Txt~White~Extra~#ffffff
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~White~Strobe~Effect~Color Presets / Effect Speed:No Function;Color Presets;Effect Speed
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+[END_MODES]

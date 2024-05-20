@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.uking-online.com/wp-content/uploads/2020/10/ZQ-B262.pdf|LinkType2|product page|Url2|https://www.uking-online.com/product/par-can-b262-36w-36led-rgb-par-light-uking/|LinkType3|video|Url3|https://www.youtube.com/watch?v=P78wPS66ASM
+[GENERAL]
+Manufacturer|U`King|Name|Par Light B262|Type|18|Authors|Jason dinAlt|Creator|OFL
+[PHYSICAL]
+Width|180|Height|180|Depth|100|Weight|0.48|Power|36|Connector|3-pin|Bulb|LED|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~255~Txt~slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~10~Txt~No function Manual mode~Switch1~Hue Selection / Speed:Hue Selection|R2|Begin~11~End~60~Txt~Hue Select~Switch1~Hue Selection / Speed:Hue Selection|R3|Begin~61~End~110~Txt~Hue Shift~Switch1~Hue Selection / Speed:Hue Shift Speed|R4|Begin~111~End~160~Txt~Hue Pulse Transform Hue fades in and out, then shifts~Switch1~Hue Selection / Speed:Effect Speed|R5|Begin~161~End~210~Txt~Hue Transition Hue transitions to next in sequence~Switch1~Hue Selection / Speed:Effect Speed|R6|Begin~211~End~255~Txt~Sound Control~Switch1~Hue Selection / Speed:Effect Speed
+ID|Hue Selection|Type|2|R1|Begin~0~End~255~Txt~Hue selection
+ID|Hue Shift Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Master Dimmer~Red~Green~Blue~Strobe~Mode~Hue Selection / Speed:Hue Selection;Hue Shift Speed;Effect Speed
+[END_MODES]

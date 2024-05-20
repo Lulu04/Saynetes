@@ -1,0 +1,36 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://en.starway.eu/telechargements/?doc=474030|LinkType2|product page|Url2|https://en.starway.eu/servo-color-4k-conditionne-en-carton-wash-19x15w-rgbw-2
+[GENERAL]
+Manufacturer|Starway|Name|Servo Color 4K|Type|9|Authors|MullRR, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|314|Height|370|Depth|222|Weight|9.00|Power|300|Connector|3-pin and 5-pin|Bulb|19× 15W RGBW LEDs|LensMinDegree|10.000|LensMaxDegree|48.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~3~Txt~fast Smooth movement|R2|Begin~4~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Shutter / Strobe|Type|6|DefaultValue|8|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~90~Txt~slow..fast|R4|Begin~91~End~170~Txt~slow..fast Random timing|R5|Begin~171~End~255~Txt~slow..fast Random timing synchronized
+ID|Zoom|Type|31|DefaultValue|255|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine|Type|5
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine|Type|13
+ID|Virtual Color Wheel|Type|12|R1|Begin~0~End~0~Txt~No function~Switch1~Effect Speed:Color Fade Time|R2|Begin~1~End~1~Txt~Color temperature 10000K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R3|Begin~2~End~2~Txt~Color temperature 8000K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R4|Begin~3~End~3~Txt~Color temperature 6500K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R5|Begin~4~End~4~Txt~Color temperature 5600K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R6|Begin~5~End~5~Txt~Color temperature 5000K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R7|Begin~6~End~6~Txt~Color temperature 4500K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R8|Begin~7~End~7~Txt~Color temperature 4000K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R9|Begin~8~End~8~Txt~Color temperature 3200K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R10|Begin~9~End~9~Txt~Color temperature 3000K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R11|Begin~10~End~10~Txt~Color temperature 2700K White~Extra~#ffffff~Switch1~Effect Speed:Color Fade Time|R12|Begin~11~End~11~Txt~Red~Extra~#f1525b~Switch1~Effect Speed:Color Fade Time|R13|Begin~12~End~50~Txt~Preset Red … Yellow~Switch1~Effect Speed:Color Fade Time|R14|Begin~51~End~51~Txt~Yellow~Extra~#e5ed51~Switch1~Effect Speed:Color Fade Time|R15|Begin~52~End~90~Txt~Preset Yellow … Green~Switch1~Effect Speed:Color Fade Time|R16|Begin~91~End~91~Txt~Green~Extra~#7fce6d~Switch1~Effect Speed:Color Fade Time|R17|Begin~92~End~170~Txt~Preset Green … Blue~Switch1~Effect Speed:Color Fade Time|R18|Begin~171~End~171~Txt~Blue~Extra~#6377bd~Switch1~Effect Speed:Color Fade Time|R19|Begin~172~End~210~Txt~Preset Blue … Magenta~Switch1~Effect Speed:Color Fade Time|R20|Begin~211~End~211~Txt~Magenta~Extra~#bb65b7~Switch1~Effect Speed:Color Fade Time|R21|Begin~212~End~250~Txt~Preset Magenta … Red~Switch1~Effect Speed:Color Fade Time|R22|Begin~251~End~251~Txt~Red~Extra~#f1525b~Switch1~Effect Speed:Color Fade Time|R23|Begin~252~End~253~Txt~ColorFade virtual color wheel rotation (forwards)~Switch1~Effect Speed:Virtual Color Wheel Rotation Speed Forwards|R24|Begin~254~End~255~Txt~ColorFade virtual color wheel rotation (backwards)~Switch1~Effect Speed:Virtual Color Wheel Rotation Speed Backwards
+ID|Color Fade Time|Type|16|R1|Begin~0~End~255~Txt~10s..1s
+ID|Virtual Color Wheel Rotation Speed Forwards|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Virtual Color Wheel Rotation Speed Backwards|Type|16|R1|Begin~0~End~255~Txt~slow reverse..fast reverse
+ID|Control|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~LED calibration off|R3|Begin~20~End~29~Txt~LED calibration on|R4|Begin~30~End~39~Txt~No function|R5|Begin~40~End~49~Txt~Fan mode regulation|R6|Begin~50~End~59~Txt~Fan mode silent|R7|Begin~60~End~69~Txt~No function|R8|Begin~70~End~79~Txt~No function for future use|R9|Begin~80~End~89~Txt~No function for future use|R10|Begin~90~End~99~Txt~No function|R11|Begin~100~End~109~Txt~Pan reset|R12|Begin~110~End~119~Txt~Tilt reset|R13|Begin~120~End~129~Txt~Zoom reset|R14|Begin~130~End~139~Txt~System reset|R15|Begin~140~End~149~Txt~No function|R16|Begin~150~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|15-channel 8bit|ShortName|15ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter / Strobe~Zoom~Red~Green~Blue~White~Virtual Color Wheel~Effect Speed:Color Fade Time;Virtual Color Wheel Rotation Speed Forwards;Virtual Color Wheel Rotation Speed Backwards~Control
+Name|20-channel 16bit|ShortName|20ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter / Strobe~Zoom~Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Virtual Color Wheel~Effect Speed:Color Fade Time;Virtual Color Wheel Rotation Speed Forwards;Virtual Color Wheel Rotation Speed Backwards~Control
+[END_MODES]

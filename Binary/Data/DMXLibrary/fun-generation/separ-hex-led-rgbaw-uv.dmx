@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_440827_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/fun_generation_separ_hex_led_rgbaw_uv_ir.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i7285p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Fun Generation|Name|SePar Hex LED RGBAW UV|Type|26|Authors|Felix Edelmann, Christian Kuster|Creator|OFL
+[PHYSICAL]
+Width|180|Height|175|Depth|115|Weight|1.10|Power|21|Connector|3-pin|Bulb|5x 8W RGBAW UV LEDs|LensMinDegree|20.000|LensMaxDegree|20.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~slow..fast
+ID|Program|Type|0|R1|Begin~0~End~0~Txt~No function~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R2|Begin~1~End~14~Txt~Preset Automatic show 1~Switch1~Speed / Color Presets / Sound Sensitivity:Color Presets|R3|Begin~15~End~29~Txt~Preset Automatic show 2~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R4|Begin~30~End~44~Txt~Preset Automatic show 3~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R5|Begin~45~End~59~Txt~Preset Automatic show 4~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R6|Begin~60~End~74~Txt~Preset Automatic show 5~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R7|Begin~75~End~89~Txt~Preset Automatic show 6~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R8|Begin~90~End~104~Txt~Preset Automatic show 7~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R9|Begin~105~End~119~Txt~Preset Automatic show 8~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R10|Begin~120~End~134~Txt~Preset Automatic show 9~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R11|Begin~135~End~149~Txt~Preset Automatic show 10~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R12|Begin~150~End~164~Txt~Preset Automatic show 11~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R13|Begin~165~End~179~Txt~Preset Automatic show 12~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R14|Begin~180~End~194~Txt~Preset Automatic show 13~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R15|Begin~195~End~209~Txt~Preset Automatic show 14~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R16|Begin~210~End~224~Txt~Preset Automatic show 15~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R17|Begin~225~End~239~Txt~Preset Automatic show 16~Switch1~Speed / Color Presets / Sound Sensitivity:Program Speed|R18|Begin~240~End~255~Txt~Preset Music-controlled show~Switch1~Speed / Color Presets / Sound Sensitivity:Sound Sensitivity
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Color Presets|Type|12|R1|Begin~0~End~14~Txt~Blackout~Extra~#000000|R2|Begin~15~End~29~Txt~Red~Extra~#ff0000|R3|Begin~30~End~44~Txt~Green~Extra~#00ff00|R4|Begin~45~End~59~Txt~Blue~Extra~#0000ff|R5|Begin~60~End~74~Txt~White~Extra~#ffffff|R6|Begin~75~End~89~Txt~Amber~Extra~#ffbf00|R7|Begin~90~End~104~Txt~UV~Extra~#8800ff|R8|Begin~105~End~119~Txt~Red + Amber~Extra~#ff5f00|R9|Begin~120~End~134~Txt~Red + 82% Green~Extra~#ffd900|R10|Begin~135~End~149~Txt~Red + UV~Extra~_#8800ff|R11|Begin~150~End~164~Txt~Red + 27% Blue + 27% UV~Extra~_#321d3c|R12|Begin~165~End~179~Txt~Green + Blue~Extra~#00ffff|R13|Begin~180~End~194~Txt~Red + 66% White~Extra~#e08585|R14|Begin~195~End~209~Txt~Green + 66% White~Extra~#85e085|R15|Begin~210~End~224~Txt~Blue + 66% White~Extra~#8585e0|R16|Begin~225~End~239~Txt~Red + 70% Green + 50% White + Amber~Extra~#eec03a|R17|Begin~240~End~255~Txt~Red + Green + Blue + White + Amber + UV~Extra~_#8800ff
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|8-channel|ShortName|8ch|Content|Intensity~Red~Green~Blue~White~Amber~UV~Strobe
+Name|10-channel|ShortName|10ch|Content|Intensity~Red~Green~Blue~White~Amber~UV~Program~Speed / Color Presets / Sound Sensitivity:Program Speed;Color Presets;Sound Sensitivity~Strobe
+[END_MODES]

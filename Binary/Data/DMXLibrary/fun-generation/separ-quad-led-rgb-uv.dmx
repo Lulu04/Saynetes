@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/399604_c_399539_399604_r4_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/fun_generation_separ_quad_led_rgb_uv_ir.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=t4v9gRd8nZI
+[GENERAL]
+Manufacturer|Fun Generation|Name|SePar Quad LED RGB UV|Type|26|Authors|Anonymous, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|228|Height|227|Depth|112|Weight|1.10|Power|25|Connector|3-pin|Bulb|5x 4W RGBUV LEDs|LensMinDegree|20.000|LensMaxDegree|20.000
+[CHAN_DEF]
+ID|Colors / Programs|Type|0|R1|Begin~0~End~4~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~5~End~9~Txt~Red~Extra~#ff0000~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~10~End~14~Txt~Yellow~Extra~#ffff00~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~15~End~19~Txt~Fawn~Extra~#e5aa70~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~20~End~24~Txt~Green~Extra~#00ff00~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~25~End~29~Txt~Cyan~Extra~#00ffff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~30~End~34~Txt~Blue~Extra~#0000ff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R8|Begin~35~End~39~Txt~Purple~Extra~#ff00ff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R9|Begin~40~End~44~Txt~Pink~Extra~#ff99dd~Switch1~Program Speed / Sound Sensitivity:Program Speed|R10|Begin~45~End~49~Txt~Amber~Extra~#ffaa00~Switch1~Program Speed / Sound Sensitivity:Program Speed|R11|Begin~50~End~54~Txt~Light red~Extra~#ffaaaa~Switch1~Program Speed / Sound Sensitivity:Program Speed|R12|Begin~55~End~59~Txt~Light green~Extra~#aaffaa~Switch1~Program Speed / Sound Sensitivity:Program Speed|R13|Begin~60~End~64~Txt~Light blue~Extra~#aaaaff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R14|Begin~65~End~69~Txt~Cold white~Extra~#ddeeff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R15|Begin~70~End~74~Txt~Warm white~Extra~#ffeedd~Switch1~Program Speed / Sound Sensitivity:Program Speed|R16|Begin~75~End~79~Txt~UV~Extra~#8800ff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R17|Begin~80~End~89~Txt~Automatic show 2~Switch1~Program Speed / Sound Sensitivity:Program Speed|R18|Begin~90~End~99~Txt~Automatic show 3~Switch1~Program Speed / Sound Sensitivity:Program Speed|R19|Begin~100~End~109~Txt~Automatic show 4~Switch1~Program Speed / Sound Sensitivity:Program Speed|R20|Begin~110~End~119~Txt~Automatic show 5~Switch1~Program Speed / Sound Sensitivity:Program Speed|R21|Begin~120~End~129~Txt~Automatic show 6~Switch1~Program Speed / Sound Sensitivity:Program Speed|R22|Begin~130~End~139~Txt~Automatic show 7~Switch1~Program Speed / Sound Sensitivity:Program Speed|R23|Begin~140~End~149~Txt~Automatic show 8~Switch1~Program Speed / Sound Sensitivity:Program Speed|R24|Begin~150~End~159~Txt~Automatic show 9~Switch1~Program Speed / Sound Sensitivity:Program Speed|R25|Begin~160~End~169~Txt~Automatic show 10~Switch1~Program Speed / Sound Sensitivity:Program Speed|R26|Begin~170~End~179~Txt~Automatic show 11~Switch1~Program Speed / Sound Sensitivity:Program Speed|R27|Begin~180~End~189~Txt~Automatic show 12~Switch1~Program Speed / Sound Sensitivity:Program Speed|R28|Begin~190~End~255~Txt~Music-controlled show~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~slow..fast
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Colors / Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~UV
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~UV~Intensity~Strobe
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~UV~Intensity~Strobe~Colors / Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity
+[END_MODES]

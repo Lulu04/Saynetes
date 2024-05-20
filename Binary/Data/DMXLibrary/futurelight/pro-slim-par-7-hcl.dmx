@@ -1,0 +1,33 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51842547-MANUAL-1.10-de-en_00094623.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=Aql4Q-Rqs_g|LinkType3|video|Url3|https://www.youtube.com/watch?v=QisBVTgeS9o
+[GENERAL]
+Manufacturer|Futurelight|Name|PRO Slim PAR-7 HCL|Type|16|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|253|Height|260|Depth|98|Weight|3.30|Power|60|Connector|3-pin and 5-pin|Bulb|LED|LensMinDegree|23.000|LensMaxDegree|23.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Sound Control|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~slow..fast
+ID|Color Presets|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red 100% / Green increasing / Blue 0%|R3|Begin~31~End~50~Txt~Preset Red decreasing / Green 100% / Blue 0%|R4|Begin~51~End~70~Txt~Preset Red 0% / Green 100% / Blue increasing|R5|Begin~71~End~90~Txt~Preset Red 0% / Green decreasing / Blue 100%|R6|Begin~91~End~110~Txt~Preset Red increasing / Green 0% / Blue 100%|R7|Begin~111~End~130~Txt~Preset Red 100% / Green 0% / Blue decreasing|R8|Begin~131~End~150~Txt~Preset Red 100% / Green increasing / Blue increasing|R9|Begin~151~End~170~Txt~Preset Red decreasing / Green decreasing / Blue 100%|R10|Begin~171~End~200~Txt~Red 100% / Green 100% / Blue 100% / White 100%~Extra~#ffffff|R11|Begin~201~End~205~Txt~Color temperature 3200K White 1~Extra~#ffb87b|R12|Begin~206~End~210~Txt~Color temperature 3400K White 2~Extra~#ffbe87|R13|Begin~211~End~215~Txt~Color temperature 4200K White 3~Extra~#ffd3af|R14|Begin~216~End~220~Txt~Color temperature 4900K White 4~Extra~#ffe2ca|R15|Begin~221~End~225~Txt~Color temperature 5600K White 5~Extra~#ffefe1|R16|Begin~226~End~230~Txt~Color temperature 5900K White 6~Extra~#fff4ea|R17|Begin~231~End~235~Txt~Color temperature 6500K White 7~Extra~#fffefa|R18|Begin~236~End~240~Txt~Color temperature 7200K White 8~Extra~#edefff|R19|Begin~241~End~245~Txt~Color temperature 8000K White 9~Extra~#dde6ff|R20|Begin~246~End~250~Txt~Color temperature 8500K White 10~Extra~#d7e2ff|R21|Begin~251~End~255~Txt~Color temperature 10000K White 11~Extra~#cadaff
+ID|Internal Programs|Type|0|R1|Begin~0~End~10~Txt~No function~Switch1~Program Speed / Mic Sensitivity:Program Speed|R2|Begin~11~End~60~Txt~Internal Program 1~Switch1~Program Speed / Mic Sensitivity:Program Speed|R3|Begin~61~End~120~Txt~Internal Program 2~Switch1~Program Speed / Mic Sensitivity:Program Speed|R4|Begin~121~End~180~Txt~Internal Program 3~Switch1~Program Speed / Mic Sensitivity:Program Speed|R5|Begin~181~End~240~Txt~Internal Program 4~Switch1~Program Speed / Mic Sensitivity:Program Speed|R6|Begin~241~End~250~Txt~Internal Program 5~Switch1~Program Speed / Mic Sensitivity:Program Speed|R7|Begin~251~End~255~Txt~Music Control~Switch1~Program Speed / Mic Sensitivity:Mic Sensitivity
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Use Control Board setting dimmer speed|R2|Begin~52~End~101~Txt~instant Dimmer speed|R3|Begin~102~End~152~Txt~1 Dimmer speed|R4|Begin~153~End~203~Txt~2 Dimmer speed|R5|Begin~204~End~255~Txt~3 Dimmer speed
+ID|Hue|Type|2
+ID|Saturation|Type|2
+ID|Value / Brightness|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Mic Sensitivity|Type|0|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~White~UV
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~Amber~White~UV~Intensity~Strobe
+Name|12-channel|ShortName|12ch|Content|Intensity~Red~Green~Blue~Amber~White~UV~Strobe~Color Presets~Internal Programs~Program Speed / Mic Sensitivity:Program Speed;Mic Sensitivity~Dimmer Speed
+Name|HSV|ShortName|HSV|Content|Hue~Saturation~Value / Brightness
+Name|HSI|ShortName|HSI|Content|Hue~Saturation~Intensity
+[END_MODES]

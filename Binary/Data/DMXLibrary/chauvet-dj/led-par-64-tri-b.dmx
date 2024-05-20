@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2016/02/LED_PAR_64_Tri-B_-_UM_Rev4_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/led-par-64-tri-b/
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|LED PAR 64 TRI-B|Type|2|Authors|Ken Harris|Creator|OFL
+[PHYSICAL]
+Width|302|Height|251|Depth|383|Weight|2.90|Power|60|Connector|3-pin|Bulb|18× 3W RGB LED|LensMinDegree|22.000|LensMaxDegree|22.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100% 0%..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Preset
+ID|Operating Mode|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Strobe / Effect Speed:Strobe|R2|Begin~32~End~63~Txt~RampUp~Switch1~Strobe / Effect Speed:Effect Speed|R3|Begin~64~End~95~Txt~RampDown~Switch1~Strobe / Effect Speed:Effect Speed|R4|Begin~96~End~127~Txt~RampUpDown~Switch1~Strobe / Effect Speed:Effect Speed|R5|Begin~128~End~159~Txt~ColorFade~Switch1~Strobe / Effect Speed:Effect Speed|R6|Begin~160~End~191~Txt~ColorJump 3 colors~Switch1~Strobe / Effect Speed:Effect Speed|R7|Begin~192~End~223~Txt~ColorJump 7 colors~Switch1~Strobe / Effect Speed:Effect Speed|R8|Begin~224~End~255~Txt~Sound triggering mode~Switch1~Strobe / Effect Speed:Effect Speed
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0%..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~255~Txt~6Hz..18Hz
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Color Macros~Strobe / Effect Speed:Strobe;Effect Speed~Operating Mode~Dimmer
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+[END_MODES]

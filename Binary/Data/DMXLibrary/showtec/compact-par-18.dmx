@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://assets.highlite.com/attachments/MANUAL/42592_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/42592-compact-par-18-mkii.html|LinkType3|video|Url3|https://vimeo.com/202769399
+[GENERAL]
+Manufacturer|Showtec|Name|Compact Par 18|Type|16|Authors|aHa Friedberg|Creator|OFL
+[PHYSICAL]
+Width|250|Height|290|Depth|96|Weight|2.84|Power|60|Connector|3-pin|Bulb|18× 3W RGB LEDs|Lumens|9600|LensMinDegree|28.000|LensMaxDegree|28.000
+[CHAN_DEF]
+ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~22~Txt~Red~Extra~#ff0000|R3|Begin~23~End~45~Txt~Green~Extra~#00ff00|R4|Begin~46~End~68~Txt~Blue~Extra~#0000ff|R5|Begin~69~End~91~Txt~Cyan~Extra~#00ffff|R6|Begin~92~End~114~Txt~Yellow~Extra~#ffff00|R7|Begin~115~End~137~Txt~Amber~Extra~#ffaa00|R8|Begin~138~End~160~Txt~Pink~Extra~#ddaaff|R9|Begin~161~End~183~Txt~Purple~Extra~#ff00ff|R10|Begin~184~End~206~Txt~Dark blue~Extra~#0000aa|R11|Begin~207~End~229~Txt~Light green~Extra~#aaffaa|R12|Begin~230~End~252~Txt~White~Extra~#ffffff|R13|Begin~253~End~255~Txt~Warm white~Extra~#ffeebb
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0Hz..20Hz
+ID|Color Programs|Type|12|R1|Begin~0~End~0~Txt~No function~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Red|R2|Begin~1~End~24~Txt~29 static colors~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:RGB Macros|R3|Begin~25~End~49~Txt~ColorFade 7-color~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R4|Begin~50~End~74~Txt~ColorFade 3-color~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R5|Begin~75~End~99~Txt~ColorJump 7-color~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R6|Begin~100~End~124~Txt~ColorJump 3-color~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R7|Begin~125~End~149~Txt~Fantasy change 1~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R8|Begin~150~End~174~Txt~Fantasy change 2~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R9|Begin~175~End~199~Txt~Red gradual change~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R10|Begin~200~End~224~Txt~Green gradual change~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R11|Begin~225~End~249~Txt~Blue gradual change~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Program Speed|R12|Begin~250~End~255~Txt~Sound control~Switch1~Red / RGB Macros / Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|RGB Macros|Type|12|R1|Begin~0~End~8~Txt~RGB macro 1~Extra~#ff0000|R2|Begin~9~End~17~Txt~RGB macro 2~Extra~#ff3200|R3|Begin~18~End~26~Txt~RGB macro 3~Extra~#ff9600|R4|Begin~27~End~35~Txt~RGB macro 4~Extra~#ffff00|R5|Begin~36~End~44~Txt~RGB macro 5~Extra~#c8ff00|R6|Begin~45~End~53~Txt~RGB macro 6~Extra~#64ff00|R7|Begin~54~End~62~Txt~RGB macro 7~Extra~#28ff00|R8|Begin~63~End~71~Txt~RGB macro 8~Extra~#00ff00|R9|Begin~72~End~80~Txt~RGB macro 9~Extra~#00ff32|R10|Begin~81~End~89~Txt~RGB macro 10~Extra~#00ff96|R11|Begin~90~End~98~Txt~RGB macro 11~Extra~#00ffff|R12|Begin~99~End~107~Txt~RGB macro 12~Extra~#0096ff|R13|Begin~108~End~116~Txt~RGB macro 13~Extra~#0032ff|R14|Begin~117~End~125~Txt~RGB macro 14~Extra~#0000ff|R15|Begin~126~End~134~Txt~RGB macro 15~Extra~#3200ff|R16|Begin~135~End~143~Txt~RGB macro 16~Extra~#9600fa|R17|Begin~144~End~152~Txt~RGB macro 17~Extra~#ff00ff|R18|Begin~153~End~161~Txt~RGB macro 18~Extra~#dc0032|R19|Begin~162~End~170~Txt~RGB macro 19~Extra~#963264|R20|Begin~171~End~179~Txt~RGB macro 20~Extra~#32b4dc|R21|Begin~180~End~188~Txt~RGB macro 21~Extra~#32dc64|R22|Begin~189~End~197~Txt~RGB macro 22~Extra~#96dc00|R23|Begin~198~End~206~Txt~RGB macro 23~Extra~#9600dc|R24|Begin~207~End~215~Txt~RGB macro 24~Extra~#00b4dc|R25|Begin~216~End~224~Txt~RGB macro 25~Extra~#00dc32|R26|Begin~225~End~233~Txt~RGB macro 26~Extra~#dc6432|R27|Begin~234~End~242~Txt~RGB macro 27~Extra~#dcc864|R28|Begin~243~End~251~Txt~RGB macro 28~Extra~#ffc896|R29|Begin~252~End~255~Txt~RGB macro 29~Extra~#ffffff
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1Channel|ShortName|1ch|Content|Color Macros
+Name|3Channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4Channel|ShortName|4ch|Content|Dimmer~Red~Green~Blue
+Name|6Channel|ShortName|6ch|Content|Dimmer~Red / RGB Macros / Program Speed / Sound Sensitivity:Red;RGB Macros;Program Speed;Sound Sensitivity~Green~Blue~Strobe~Color Programs
+[END_MODES]

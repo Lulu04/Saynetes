@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.shehds.com/products/led-flat-par-7x12w-7x18w-rgbwauv-lighting|LinkType2|manual|Url2|https://www.shehds.com/u_file/2005/file/b01e72a1b3.pdf|LinkType3|manual|Url3|https://www.shehds.com/u_file/1907/file/45918ab3df.pdf
+[GENERAL]
+Manufacturer|Shehds|Name|LED Flat Par 7x18W RGBWA+UV Light|Type|16|Authors|jms27000, René Bütikofer, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|176|Height|178|Depth|11|Weight|0.90|Power|126|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Violet|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Function|Type|0|R1|Begin~0~End~50~Txt~No function~Switch1~Function Speed / Color Presets:Color Presets|R2|Begin~51~End~100~Txt~Static color~Switch1~Function Speed / Color Presets:Color Presets|R3|Begin~101~End~150~Txt~ColorJump Random colors~Switch1~Function Speed / Color Presets:Function Speed|R4|Begin~151~End~200~Txt~ColorFade Random colors~Switch1~Function Speed / Color Presets:Function Speed|R5|Begin~201~End~250~Txt~ColorFade Random colors, fade to black~Switch1~Function Speed / Color Presets:Function Speed|R6|Begin~251~End~255~Txt~Sound Mode Static color flashing on beat~Switch1~Function Speed / Color Presets:Color Presets
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~255~Txt~0Hz..20Hz
+ID|Color Presets|Type|12|R1|Begin~0~End~31~Txt~Red~Extra~#ff0000|R2|Begin~32~End~63~Txt~Green~Extra~#00ff00|R3|Begin~64~End~95~Txt~Blue~Extra~#0000ff|R4|Begin~96~End~127~Txt~White~Extra~#ffffff|R5|Begin~128~End~159~Txt~Amber~Extra~#ffbf00|R6|Begin~160~End~191~Txt~UV~Extra~#8800ff|R7|Begin~192~End~223~Txt~Cyan~Extra~#00ffff|R8|Begin~224~End~255~Txt~Warm White~Extra~#fff6da
+ID|Function Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~Violet
+Name|9-channel|ShortName|9ch|Content|Master dimmer~Red~Green~Blue~White~Amber~Violet~Function~Function Speed / Color Presets:Color Presets;Function Speed
+Name|10-channel|ShortName|10ch|Content|Master dimmer~Red~Green~Blue~White~Amber~Violet~Strobe~Function~Function Speed / Color Presets:Color Presets;Function Speed
+[END_MODES]

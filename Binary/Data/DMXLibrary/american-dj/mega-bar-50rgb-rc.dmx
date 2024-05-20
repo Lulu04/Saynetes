@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/7103/mega_bar_50rgb_rc.pdf|LinkType2|product page|Url2|https://www.adj.com/mega-bar-50rgb-rc|LinkType3|video|Url3|https://www.youtube.com/watch?v=8Px1FM_7BU8
+[GENERAL]
+Manufacturer|American DJ|Name|Mega Bar 50RGB RC|Type|5|Authors|Peter G., Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|560|Height|63|Depth|102|Weight|1.50|Power|18|Connector|3-pin|Bulb|125× 10mm LEDs (24× red, 54× green, 47× blue)|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~7~Txt~Preset Color 1|R3|Begin~8~End~15~Txt~Preset Color 2|R4|Begin~16~End~23~Txt~Preset Color 3|R5|Begin~24~End~31~Txt~Preset Color 4|R6|Begin~32~End~39~Txt~Preset Color 5|R7|Begin~40~End~47~Txt~Preset Color 6|R8|Begin~48~End~55~Txt~Preset Color 7|R9|Begin~56~End~63~Txt~Preset Color 8|R10|Begin~64~End~71~Txt~Preset Color 9|R11|Begin~72~End~79~Txt~Preset Color 10|R12|Begin~80~End~87~Txt~Preset Color 11|R13|Begin~88~End~95~Txt~Preset Color 12|R14|Begin~96~End~103~Txt~Preset Color 13|R15|Begin~104~End~111~Txt~Preset Color 14|R16|Begin~112~End~119~Txt~Preset Color 15|R17|Begin~120~End~127~Txt~Preset Color 16|R18|Begin~128~End~135~Txt~Preset Color 17|R19|Begin~136~End~143~Txt~Preset Color 18|R20|Begin~144~End~151~Txt~Preset Color 19|R21|Begin~152~End~159~Txt~Preset Color 20|R22|Begin~160~End~167~Txt~Preset Color 21|R23|Begin~168~End~175~Txt~Preset Color 22|R24|Begin~176~End~183~Txt~Preset Color 23|R25|Begin~184~End~191~Txt~Preset Color 24|R26|Begin~192~End~199~Txt~Preset Color 25|R27|Begin~200~End~207~Txt~Preset Color 26|R28|Begin~208~End~215~Txt~Preset Color 27|R29|Begin~216~End~223~Txt~Preset Color 28|R30|Begin~224~End~231~Txt~Preset Color 29|R31|Begin~232~End~239~Txt~Preset Color 30|R32|Begin~240~End~247~Txt~Preset Color 31|R33|Begin~248~End~255~Txt~Preset Color 32
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~slow..fast
+ID|Program|Type|0|R1|Begin~0~End~127~Txt~No function~Switch1~Strobe / Program Speed / Sound Sensitivity:Strobe|R2|Begin~128~End~159~Txt~ColorFade Color Mixing~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R3|Begin~160~End~191~Txt~ColorJump 3 Color Change~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R4|Begin~192~End~223~Txt~ColorJump 7 Color Change~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R5|Begin~224~End~255~Txt~Sound Active~Switch1~Strobe / Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Color Macros
+Name|2-channel|ShortName|2ch|Content|Color Macros~Intensity
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Intensity
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Intensity~Color Macros
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Color Macros~Strobe~Intensity
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Color Macros~Strobe / Program Speed / Sound Sensitivity:Strobe;Program Speed;Sound Sensitivity~Program~Intensity
+[END_MODES]

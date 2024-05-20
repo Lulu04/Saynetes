@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2017/10/SlimPAR_Pro_QZ12_USB_UM_Rev1_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-pro-qz12-usb/|LinkType3|video|Url3|https://www.youtube.com/watch?v=elPlzmj5CrI
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|SlimPAR Pro QZ12|Type|4|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|234|Height|269|Depth|318|Weight|4.60|Power|0|Connector|3-pin and 5-pin|Bulb|12x 10W RGBA LEDs|LensMinDegree|10.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Preset Color Macros
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~0Hz..29Hz
+ID|Auto Programs|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~32~End~63~Txt~Auto program 1~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~64~End~95~Txt~Auto program 2~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~96~End~127~Txt~Auto program 3~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~128~End~159~Txt~Auto program 4~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~160~End~191~Txt~Auto program 5~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~192~End~223~Txt~Auto program 6~Switch1~Program Speed / Sound Sensitivity:Program Speed|R8|Begin~224~End~255~Txt~Sound program~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Default dimmer speed|R2|Begin~52~End~101~Txt~off Dimmer speed|R3|Begin~102~End~152~Txt~fast Dimmer speed|R4|Begin~153~End~203~Txt~50% Dimmer speed|R5|Begin~204~End~255~Txt~slow Dimmer speed
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Dimmer~Red~Green~Blue~Amber~Color Macros~Strobe~Auto Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Dimmer Speed~Zoom
+Name|6-channel|ShortName|6ch|Content|Dimmer~Red~Green~Blue~Amber~Strobe
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Amber~Zoom
+[END_MODES]

@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLHB100RGBW/CLHB100RGBW_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=DqHGJd3NUJg|LinkType3|video|Url3|https://www.youtube.com/watch?v=5_bVB5iqG5s
+[GENERAL]
+Manufacturer|cameo|Name|Hydrabeam 100|Type|9|Authors|Felix Edelmann, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|160|Height|240|Depth|100|Weight|1.90|Power|20|Connector|3-pin|LensMinDegree|4.500|LensMaxDegree|4.500
+[CHAN_DEF]
+ID|Auto Modes|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R2|Begin~8~End~30~Txt~Show mode 1~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R3|Begin~31~End~53~Txt~Show mode 2~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R4|Begin~54~End~76~Txt~Show mode 3~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R5|Begin~77~End~99~Txt~Show mode 4~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R6|Begin~100~End~122~Txt~Sound control~Switch1~Sound Sensitivity / Auto Mode Speed:Sound Sensitivity|R7|Begin~123~End~199~Txt~No function~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R8|Begin~200~End~224~Txt~Reset~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed|R9|Begin~225~End~255~Txt~No function~Switch1~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+ID|Auto Mode Speed|Type|16|DefaultValue|127|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|Head Speed|Type|9|DefaultValue|127|R1|Begin~0~End~255~Txt~slow..fast
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~slow..fast
+ID|Color Macros|Type|12|R1|Begin~0~End~30~Txt~No function|R2|Begin~31~End~45~Txt~Red~Extra~#ff0000|R3|Begin~46~End~60~Txt~Green~Extra~#00ff00|R4|Begin~61~End~75~Txt~Blue~Extra~#0000ff|R5|Begin~76~End~90~Txt~White~Extra~#ffffff|R6|Begin~91~End~105~Txt~Red + Green~Extra~_#00ff00|R7|Begin~106~End~120~Txt~Red + Blue~Extra~_#0000ff|R8|Begin~121~End~135~Txt~Red + White~Extra~_#ffffff|R9|Begin~136~End~150~Txt~Green + Blue~Extra~_#0000ff|R10|Begin~151~End~165~Txt~Green + White~Extra~_#ffffff|R11|Begin~166~End~180~Txt~Blue + White~Extra~_#ffffff|R12|Begin~181~End~195~Txt~Red + Green + Blue~Extra~_#0000ff|R13|Begin~196~End~210~Txt~Red + Green + White~Extra~_#ffffff|R14|Begin~211~End~225~Txt~Red + Blue + White~Extra~_#ffffff|R15|Begin~226~End~240~Txt~Green + Blue + White~Extra~_#ffffff|R16|Begin~241~End~255~Txt~Red + Green + Blue + White~Extra~_#ffffff
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Auto Modes~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed;Sound Sensitivity~Dimmer
+Name|6-channel|ShortName|6ch|Content|Pan~Tilt~Head Speed~Dimmer~Strobe~Color Macros
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Head Speed~Dimmer~Strobe~Red~Green~Blue~White
+Name|12-channel|ShortName|12ch|Content|Pan~Pan fine~Tilt~Tilt fine~Head Speed~Dimmer~Strobe~Color Macros~Red~Green~Blue~White
+Name|14-channel|ShortName|14ch|Content|Pan~Pan fine~Tilt~Tilt fine~Head Speed~Dimmer~Strobe~Color Macros~Auto Modes~Sound Sensitivity / Auto Mode Speed:Auto Mode Speed;Sound Sensitivity~Red~Green~Blue~White
+[END_MODES]

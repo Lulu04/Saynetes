@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2016/01/SlimPAR_PRO_W_USB_UM_Rev5.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/slimpar-pro-w-usb/|LinkType3|video|Url3|https://www.youtube.com/watch?v=wV-9zR6L5sE
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|SlimPAR Pro W|Type|16|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|253|Height|290|Depth|98|Weight|3.20|Power|58|Connector|3-pin|Bulb|12x 6W LED|LensMinDegree|17.000|LensMaxDegree|17.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm White|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Cool White|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Preset Color macros
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~0Hz..31Hz
+ID|Programs|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~32~End~63~Txt~RampUp~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~64~End~95~Txt~RampDown~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~96~End~127~Txt~RampUpDown~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~128~End~159~Txt~Auto fade transition~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~160~End~191~Txt~Auto snap transition (3-color)~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~192~End~223~Txt~Auto snap transition (7-color)~Switch1~Program Speed / Sound Sensitivity:Program Speed|R8|Begin~224~End~249~Txt~Sound mode (3-color)~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity|R9|Begin~250~End~255~Txt~Sound mode (7-color)~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Default dimmer speed|R2|Begin~52~End~101~Txt~off Dimmer speed|R3|Begin~102~End~152~Txt~fast Dimmer speed|R4|Begin~153~End~203~Txt~50% Dimmer speed|R5|Begin~204~End~255~Txt~slow Dimmer speed
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Dimmer~Warm White~Cool White~Amber~Color Macros~Strobe~Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Dimmer Speed
+Name|4-channel|ShortName|4ch|Content|Dimmer~Warm White~Cool White~Amber
+Name|3-channel|ShortName|3ch|Content|Warm White~Cool White~Amber
+[END_MODES]

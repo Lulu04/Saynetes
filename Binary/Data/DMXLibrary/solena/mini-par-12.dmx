@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdn.shopify.com/s/files/1/0277/2631/5568/files/MINI-PAR-12.pdf|LinkType2|product page|Url2|https://www.pssl.com/products/solena-mini-par-12-12x1-watt-rgbw-led-wash-light|LinkType3|video|Url3|https://www.youtube.com/watch?v=qX840Po0jrE
+[GENERAL]
+Manufacturer|Solena|Name|Mini Par 12|Type|16|Authors|Ranaivo, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|137|Height|115|Depth|153|Weight|0.30|Power|12|Connector|3-pin|Bulb|12x 1W LEDs (3x red, 3x green, 3x blue, 3x white)|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~63~Txt~Open|R2|Begin~64~End~223~Txt~slow..fast|R3|Begin~224~End~255~Txt~Random timing
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Change|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Color Select / Program Speed:Program Speed|R2|Begin~32~End~95~Txt~Static color~Switch1~Color Select / Program Speed:Color Select|R3|Begin~96~End~143~Txt~ColorFade RGB~Switch1~Color Select / Program Speed:Program Speed|R4|Begin~144~End~191~Txt~ColorFade RGBW~Switch1~Color Select / Program Speed:Program Speed|R5|Begin~192~End~223~Txt~ColorJump RGBW~Switch1~Color Select / Program Speed:Program Speed|R6|Begin~224~End~255~Txt~ColorJump RGBW~Switch1~Color Select / Program Speed:Program Speed
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Color Select|Type|12|R1|Begin~0~End~255~Txt~Preset Colors 01…16
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~White~Strobe
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~White~Color Change~Color Select / Program Speed:Program Speed;Color Select~Strobe
+[END_MODES]

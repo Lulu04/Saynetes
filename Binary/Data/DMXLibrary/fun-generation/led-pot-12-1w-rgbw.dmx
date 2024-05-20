@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/377666_c_377666_r4_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/fun_generation_led_pot_12x1w_rgbw.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i4829p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Fun Generation|Name|LED Pot 12×1W RGBW|Type|4|Authors|Dennis Fischer|Creator|OFL
+[PHYSICAL]
+Width|172|Height|130|Depth|168|Weight|0.76|Power|15|Connector|3-pin|Bulb|12× 1W TrueColour LED (3× red, 3× green, 3× blue, 3× white)|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~255~Txt~0Hz..20Hz
+ID|Program|Type|0|R1|Begin~0~End~0~Txt~No function~Switch1~Color Presets / Program Speed:Color Presets|R2|Begin~1~End~16~Txt~Color Macro activation~Switch1~Color Presets / Program Speed:Color Presets|R3|Begin~17~End~33~Txt~Program 01~Switch1~Color Presets / Program Speed:Program Speed|R4|Begin~34~End~50~Txt~Program 02~Switch1~Color Presets / Program Speed:Program Speed|R5|Begin~51~End~67~Txt~Program 03~Switch1~Color Presets / Program Speed:Program Speed|R6|Begin~68~End~84~Txt~Program 04~Switch1~Color Presets / Program Speed:Program Speed|R7|Begin~85~End~101~Txt~Program 05~Switch1~Color Presets / Program Speed:Program Speed|R8|Begin~102~End~118~Txt~Program 06~Switch1~Color Presets / Program Speed:Program Speed|R9|Begin~119~End~135~Txt~Program 07~Switch1~Color Presets / Program Speed:Program Speed|R10|Begin~136~End~152~Txt~Program 08~Switch1~Color Presets / Program Speed:Program Speed|R11|Begin~153~End~169~Txt~Program 09~Switch1~Color Presets / Program Speed:Program Speed|R12|Begin~170~End~186~Txt~Program 10~Switch1~Color Presets / Program Speed:Program Speed|R13|Begin~187~End~203~Txt~Program 11~Switch1~Color Presets / Program Speed:Program Speed|R14|Begin~204~End~220~Txt~Program 12~Switch1~Color Presets / Program Speed:Program Speed|R15|Begin~221~End~237~Txt~Program 13~Switch1~Color Presets / Program Speed:Program Speed|R16|Begin~238~End~255~Txt~Sound control~Switch1~Color Presets / Program Speed:Program Speed
+ID|Color Presets|Type|12|R1|Begin~0~End~15~Txt~Off~Extra~#000000|R2|Begin~16~End~31~Txt~Red~Extra~#ff0000|R3|Begin~32~End~47~Txt~Green~Extra~#00ff00|R4|Begin~48~End~63~Txt~Blue~Extra~#0000ff|R5|Begin~64~End~79~Txt~White~Extra~#ffffff|R6|Begin~80~End~95~Txt~Orange~Extra~#ff9600|R7|Begin~96~End~111~Txt~Amber~Extra~#ffb400|R8|Begin~112~End~127~Txt~Yellow~Extra~#ffff00|R9|Begin~128~End~143~Txt~Magenta~Extra~#ff00ff|R10|Begin~144~End~159~Txt~Pink~Extra~#ff008c|R11|Begin~160~End~175~Txt~Cyan~Extra~#00ffff|R12|Begin~176~End~191~Txt~Light Red~Extra~#ff8080|R13|Begin~192~End~207~Txt~Light Green~Extra~#80ff80|R14|Begin~208~End~223~Txt~Light Blue~Extra~#8080ff|R15|Begin~224~End~239~Txt~Light Amber~Extra~#ffc828|R16|Begin~240~End~255~Txt~White~Extra~#ffffff
+ID|Program Speed|Type|16|R1|Begin~0~End~100~Txt~slow..fast|R2|Begin~101~End~255~Txt~Intensity Sound to Light
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|6-channel|ShortName|6ch|Content|Dimmer~Red~Green~Blue~White~Shutter / Strobe
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~White~Program~Color Presets / Program Speed:Color Presets;Program Speed~Shutter / Strobe
+[END_MODES]

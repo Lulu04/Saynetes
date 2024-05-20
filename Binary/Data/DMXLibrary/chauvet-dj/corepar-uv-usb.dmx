@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/COREpar_UV_USB_UM_Rev1_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/corepar-uv-usb/|LinkType3|video|Url3|https://www.youtube.com/watch?v=WsZ6dOvZ3R4|LinkType4|video|Url4|https://www.youtube.com/watch?v=P6M8rFnImjs
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|COREpar UV USB|Type|23|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|200|Height|253|Depth|139|Weight|2.10|Power|65|Connector|3-pin|Bulb|70W COB LED|Lens|Fresnel|LensMinDegree|50.000|LensMaxDegree|100.000
+[CHAN_DEF]
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Programs|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Strobe / Program Speed / Sound Sensitivity:Strobe|R2|Begin~32~End~95~Txt~RampUp~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R3|Begin~96~End~159~Txt~RampDown~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R4|Begin~160~End~223~Txt~Pulse~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R5|Begin~224~End~240~Txt~Sound mode 1~Switch1~Strobe / Program Speed / Sound Sensitivity:Sound Sensitivity|R6|Begin~241~End~255~Txt~Sound mode 2~Switch1~Strobe / Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Default dimmer speed|R2|Begin~52~End~101~Txt~off Dimmer speed|R3|Begin~102~End~152~Txt~fast Dimmer speed|R4|Begin~153~End~203~Txt~50% Dimmer speed|R5|Begin~204~End~255~Txt~slow Dimmer speed
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~slow..fast
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|UV~Strobe / Program Speed / Sound Sensitivity:Strobe;Program Speed;Sound Sensitivity~Programs~Dimmer~Dimmer Speed
+Name|1-channel|ShortName|1ch|Content|UV
+[END_MODES]

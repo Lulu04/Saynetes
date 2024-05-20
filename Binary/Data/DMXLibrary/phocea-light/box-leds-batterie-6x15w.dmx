@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.phocealight.fr/index.php?controller=attachment&id_attachment=6|LinkType2|product page|Url2|https://www.phocealight.fr/pars-leds-batterie/25-77-box-batterie-6x15w.html#/30-couleur-noir|LinkType3|video|Url3|https://www.youtube.com/watch?v=RMeX3Y-FwzA
+[GENERAL]
+Manufacturer|Phocea Light|Name|Box LEDs Batterie 6x15W|Type|26|Authors|STUDIO5, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|170|Height|230|Depth|170|Weight|2.40|Power|110|Connector|None|Bulb|6× 15W RGBWA+UV LEDs|LensMinDegree|30.000|LensMaxDegree|35.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~9~Txt~No function~Switch1~Color / Program Speed:Color|R2|Begin~10~End~49~Txt~Color selection~Switch1~Color / Program Speed:Color|R3|Begin~50~End~99~Txt~No function~Switch1~Color / Program Speed:Color|R4|Begin~100~End~169~Txt~No function~Switch1~Color / Program Speed:Program Speed|R5|Begin~170~End~209~Txt~ColorJump~Switch1~Color / Program Speed:Program Speed|R6|Begin~210~End~239~Txt~Sound pulse + strobe~Switch1~Color / Program Speed:Program Speed|R7|Begin~240~End~255~Txt~Sound strobe~Switch1~Color / Program Speed:Program Speed
+ID|Color|Type|12|R1|Begin~0~End~255~Txt~Preset
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|10-channel|ShortName|10ch|Content|Dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Mode~Color / Program Speed:Color;Program Speed
+[END_MODES]
