@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdn.shopify.com/s/files/1/0277/2631/5568/files/MAX-PAR-20-RGB-2.pdf|LinkType2|product page|Url2|https://www.pssl.com/products/solena-max-par-20-rgb-20-watt-dmx-led-wash-light|LinkType3|video|Url3|https://www.youtube.com/watch?v=acCYbTfasMQ
+[GENERAL]
+Manufacturer|Solena|Name|Max Par 20|Type|16|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|180|Height|180|Depth|100|Weight|0.60|Power|18|Connector|3-pin|Bulb|20W LEDs (54x Red, 54x Green, 54x Blue)
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~slow..fast
+ID|Effect|Type|0|R1|Begin~0~End~10~Txt~No function~Switch1~Color Selection / Effect Speed:Color Selection|R2|Begin~11~End~60~Txt~Color Select~Switch1~Color Selection / Effect Speed:Color Selection|R3|Begin~61~End~110~Txt~Color shade slow..fast~Switch1~Color Selection / Effect Speed:Color Selection|R4|Begin~111~End~160~Txt~Color pulse transform~Switch1~Color Selection / Effect Speed:Effect Speed|R5|Begin~161~End~210~Txt~Color transition~Switch1~Color Selection / Effect Speed:Effect Speed|R6|Begin~211~End~255~Txt~Sound control~Switch1~Color Selection / Effect Speed:Color Selection
+ID|Color Selection|Type|12|R1|Begin~0~End~255~Txt~Preset
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|7-Channel|ShortName|7ch|Content|Dimmer~Red~Green~Blue~Strobe~Effect~Color Selection / Effect Speed:Color Selection;Effect Speed
+[END_MODES]

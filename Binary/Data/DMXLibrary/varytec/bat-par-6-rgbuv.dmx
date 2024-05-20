@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/385475_c_385435_385475_r2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_bat.par_6_rgbuv.htm
+[GENERAL]
+Manufacturer|Varytec|Name|BAT.PAR 6 RGBUV|Type|16|Authors|Aurelien W|Creator|OFL
+[PHYSICAL]
+Width|254|Height|250|Depth|130|Weight|1.90|Power|48|Connector|3-pin|Bulb|6x 8W RGBUV LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Color Macros|Type|12|R1|Begin~0~End~255~Txt~Preset Color macro 1…51
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~0%..100%
+ID|Programs|Type|0|R1|Begin~0~End~15~Txt~No function~Switch1~Strobe / Program Speed / Sound Sensitivity:Strobe|R2|Begin~16~End~31~Txt~Program 1~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R3|Begin~32~End~47~Txt~Program 2~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R4|Begin~48~End~63~Txt~Program 3~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R5|Begin~64~End~79~Txt~Program 4~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R6|Begin~80~End~95~Txt~Program 5~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R7|Begin~96~End~111~Txt~Program 6~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R8|Begin~112~End~127~Txt~Program 7~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R9|Begin~128~End~143~Txt~Program 8~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R10|Begin~144~End~159~Txt~Program 9~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R11|Begin~160~End~175~Txt~Program 10~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R12|Begin~176~End~191~Txt~Program 11~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R13|Begin~192~End~207~Txt~Program 12~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R14|Begin~208~End~223~Txt~Program 13~Switch1~Strobe / Program Speed / Sound Sensitivity:Program Speed|R15|Begin~224~End~239~Txt~Sound mode 1~Switch1~Strobe / Program Speed / Sound Sensitivity:Sound Sensitivity|R16|Begin~240~End~255~Txt~Sound mode 2~Switch1~Strobe / Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Color Macros
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~UV
+Name|6-channel|ShortName|6ch|Content|Intensity~Red~Green~Blue~UV~Strobe
+Name|7-channel|ShortName|7ch|Content|Intensity~Red~Green~Blue~UV~Programs~Strobe / Program Speed / Sound Sensitivity:Strobe;Program Speed;Sound Sensitivity
+[END_MODES]

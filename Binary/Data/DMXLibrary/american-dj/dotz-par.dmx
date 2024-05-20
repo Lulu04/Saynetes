@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/8795/ADJ%20Dotz%20Par%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/dotz-par|LinkType3|video|Url3|https://www.youtube.com/watch?v=0KXL39CwBp8
+[GENERAL]
+Manufacturer|American DJ|Name|Dotz Par|Type|25|Authors|TAKU, Felix Edelmann, JonahKr|Creator|OFL
+[PHYSICAL]
+Width|114|Height|222|Depth|209|Weight|2.00|Power|36|Connector|3-pin|Bulb|36W COB Tri LED|LensMinDegree|25.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Curves|Type|0|R1|Begin~0~End~41~Txt~Standard|R2|Begin~42~End~84~Txt~Stage|R3|Begin~85~End~127~Txt~TV|R4|Begin~128~End~170~Txt~Architectural|R5|Begin~171~End~213~Txt~Theatre|R6|Begin~214~End~255~Txt~Default to unit curve setting
+ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~7~Txt~Bastard Amber~Extra~#fcded8|R3|Begin~8~End~15~Txt~Medium Amber~Extra~#ffbe55|R4|Begin~16~End~23~Txt~Pale Amber Gold~Extra~#fcd7b3|R5|Begin~24~End~31~Txt~Gallo Gold~Extra~#fea562|R6|Begin~32~End~39~Txt~Golden Amber~Extra~#faa873|R7|Begin~40~End~47~Txt~Light Red~Extra~#f50000|R8|Begin~48~End~55~Txt~Medium Red~Extra~#c8003c|R9|Begin~56~End~63~Txt~Medium Pink~Extra~#ffa0b9|R10|Begin~64~End~71~Txt~Broadway Pink~Extra~#e05061|R11|Begin~72~End~79~Txt~Follies Pink~Extra~#ff64c8|R12|Begin~80~End~87~Txt~Light Lavender~Extra~#e6aafa|R13|Begin~88~End~95~Txt~Special Lavender~Extra~#c8b4e6|R14|Begin~96~End~103~Txt~Lavender~Extra~#b46ef0|R15|Begin~104~End~111~Txt~Indigo~Extra~#002656|R16|Begin~112~End~119~Txt~Hemsley Blue~Extra~#008ed0|R17|Begin~120~End~127~Txt~Tipton Blue~Extra~#3494d1|R18|Begin~128~End~135~Txt~Light Steel Blue~Extra~#1086c9|R19|Begin~136~End~143~Txt~Light Sky Blue~Extra~#0091d4|R20|Begin~144~End~151~Txt~Sky Blue~Extra~#46b4f0|R21|Begin~152~End~159~Txt~Brilliant Blue~Extra~#0081b8|R22|Begin~160~End~167~Txt~Light Green Blue~Extra~#005373|R23|Begin~168~End~175~Txt~Bright Blue~Extra~#00d2e6|R24|Begin~176~End~183~Txt~Primary Blue~Extra~#1064a7|R25|Begin~184~End~191~Txt~Congo Blue~Extra~#5000aa|R26|Begin~192~End~199~Txt~Pale Yellow Green~Extra~#d1dbb6|R27|Begin~200~End~207~Txt~Moss Green~Extra~#5adc5a|R28|Begin~208~End~215~Txt~Primary Green~Extra~#4bc300|R29|Begin~216~End~223~Txt~Double CTB~Extra~#806bde|R30|Begin~224~End~231~Txt~Full Red~Extra~#ff0000|R31|Begin~232~End~239~Txt~Full Green~Extra~#00ff00|R32|Begin~240~End~247~Txt~Full Blue~Extra~#0000ff|R33|Begin~248~End~255~Txt~White~Extra~#ffffff
+ID|Programs|Type|0|R1|Begin~0~End~0~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~1~End~20~Txt~Color fade/change~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~21~End~40~Txt~ColorJump 7 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~41~End~60~Txt~ColorFade 7 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~61~End~80~Txt~ColorJump 3 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~81~End~100~Txt~ColorFade 3 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~101~End~120~Txt~ColorFade~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity|R8|Begin~121~End~140~Txt~ColorJump~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity|R9|Begin~141~End~255~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~slow..fast
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Master Dimmer
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Master Dimmer~Dimmer Curves
+Name|9-channel|ShortName|9ch|Content|Red~Green~Blue~Master Dimmer~Color Macros~Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Strobe~Dimmer Curves
+[END_MODES]

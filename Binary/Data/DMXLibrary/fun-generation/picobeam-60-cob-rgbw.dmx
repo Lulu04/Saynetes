@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|v3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/442853_c_442853_v2_r1_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/de/fun_generation_picobeam_60_cob_rgbw.htm|LinkType3|video|Url3|https://www.thomann.de/de/thomanntv_video_fun_generation_picobeam_60_cob_rgbw_7286.html
+[GENERAL]
+Manufacturer|Fun Generation|Name|PicoBeam 60 COB RGBW|Type|9|Authors|gloryfire|Creator|OFL
+[PHYSICAL]
+Width|147|Height|234|Depth|175|Weight|3.00|Power|65|Connector|3-pin|Bulb|60W RGBW COB LED|LensMinDegree|4.000|LensMaxDegree|4.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..200deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~1Hz..25Hz
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Program|Type|0|R1|Begin~0~End~49~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~50~End~59~Txt~Red~Extra~#ff0000~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~60~End~69~Txt~Green~Extra~#00ff00~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~70~End~79~Txt~Blue~Extra~#0000ff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~80~End~89~Txt~White~Extra~#ffffff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~90~End~99~Txt~Yellow~Extra~#ffff00~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~100~End~109~Txt~Cyan~Extra~#00ffff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R8|Begin~110~End~119~Txt~Purple~Extra~#ff00ff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R9|Begin~120~End~129~Txt~All white~Extra~#ffffff~Switch1~Program Speed / Sound Sensitivity:Program Speed|R10|Begin~130~End~139~Txt~Dark~Extra~#aaaaaa~Switch1~Program Speed / Sound Sensitivity:Program Speed|R11|Begin~140~End~149~Txt~Program 1~Switch1~Program Speed / Sound Sensitivity:Program Speed|R12|Begin~150~End~159~Txt~Program 2~Switch1~Program Speed / Sound Sensitivity:Program Speed|R13|Begin~160~End~169~Txt~Program 3~Switch1~Program Speed / Sound Sensitivity:Program Speed|R14|Begin~170~End~179~Txt~Program 4~Switch1~Program Speed / Sound Sensitivity:Program Speed|R15|Begin~180~End~189~Txt~Program 5~Switch1~Program Speed / Sound Sensitivity:Program Speed|R16|Begin~190~End~233~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R17|Begin~234~End~236~Txt~Reset~Switch1~Program Speed / Sound Sensitivity:Program Speed|R18|Begin~237~End~249~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R19|Begin~250~End~255~Txt~Sound control~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-Channel|ShortName|3ch|Content|Pan~Tilt~Dimmer
+Name|8-Channel|ShortName|8ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Program~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity
+Name|13-Channel|ShortName|13ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Strobe~Red~Green~Blue~White~Program~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity
+[END_MODES]

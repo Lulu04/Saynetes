@@ -1,0 +1,26 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://static.boomtonedj.com/pdf/manual/44/44625_xtremledmanual.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=gXyTYllokc4|LinkType3|other|Url3|https://www.qlcplus.org/forum/viewtopic.php?f=6&t=12319
+[GENERAL]
+Manufacturer|BoomToneDJ|Name|Xtrem LED|Type|24|Authors|Flo Edelmann, Tsunoo|Creator|OFL
+[PHYSICAL]
+Width|245|Height|240|Depth|245|Weight|3.40|Power|100|Connector|3-pin|Bulb|2x 9W RGB LEDs, 36x White LEDs, 64x R/G/B LEDs
+[CHAN_DEF]
+ID|Mode (fixed to 0)|Type|0|R1|Begin~0~End~0~Txt~Custom control|R2|Begin~1~End~33~Txt~Auto show 1|R3|Begin~34~End~67~Txt~Auto show 2|R4|Begin~68~End~101~Txt~Auto show 3|R5|Begin~102~End~135~Txt~Auto show 4|R6|Begin~136~End~169~Txt~Auto show 5|R7|Begin~170~End~203~Txt~Auto show 6|R8|Begin~204~End~237~Txt~Auto show 7|R9|Begin~238~End~255~Txt~Sound mode
+ID|Moon Flower Speed|Type|33|R1|Begin~0~End~0~Txt~Rotation stop|R2|Begin~1~End~255~Txt~Rotation slow CW..fast CW
+ID|Color|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~28~Txt~Red~Extra~#ff0000|R3|Begin~29~End~57~Txt~Green~Extra~#00ff00|R4|Begin~58~End~86~Txt~Blue~Extra~#0000ff|R5|Begin~87~End~115~Txt~Red + Green~Extra~_#00ff00|R6|Begin~116~End~144~Txt~Red + Blue~Extra~_#0000ff|R7|Begin~145~End~173~Txt~Green + Blue~Extra~_#0000ff|R8|Begin~174~End~202~Txt~Red + Green + Blue~Extra~_#0000ff|R9|Begin~203~End~231~Txt~ColorJump 135bpm cycle through the colors above|R10|Begin~232~End~255~Txt~ColorFade
+ID|Color Strobe/Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Motor Speed|Type|33|R1|Begin~0~End~0~Txt~Rotation stop|R2|Begin~1~End~255~Txt~Rotation slow CW..fast CW
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~Closed|R2|Begin~1~End~255~Txt~slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~0~Txt~Custom control~Switch1~Moon Flower Speed / Motor Speed:Moon Flower Speed~Switch2~Color / Show Speed:Color~Switch3~Color Strobe/Effect Speed / Unused:Color Strobe/Effect Speed~Switch4~Motor Speed / Unused:Motor Speed~Switch5~Strobe / Unused:Strobe|R2|Begin~1~End~33~Txt~Auto show 1~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R3|Begin~34~End~67~Txt~Auto show 2~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R4|Begin~68~End~101~Txt~Auto show 3~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R5|Begin~102~End~135~Txt~Auto show 4~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R6|Begin~136~End~169~Txt~Auto show 5~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R7|Begin~170~End~203~Txt~Auto show 6~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R8|Begin~204~End~237~Txt~Auto show 7~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3|R9|Begin~238~End~255~Txt~Sound mode~Switch1~Moon Flower Speed / Motor Speed:Motor Speed~Switch2~Color / Show Speed:Show Speed~Switch3~Color Strobe/Effect Speed / Unused:Unused 1~Switch4~Motor Speed / Unused:Unused 2~Switch5~Strobe / Unused:Unused 3
+ID|Show Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Unused 1|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Unused 2|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Unused 3|Type|17|R1|Begin~0~End~255~Txt~No function
+[END_CHAN_DEF]
+[MODES]
+Name|Custom control|ShortName|custom|Content|Mode (fixed to 0)~Moon Flower Speed~Color~Color Strobe/Effect Speed~Motor Speed~Strobe
+Name|Auto|ShortName|auto|Content|Mode~Motor Speed~Show Speed
+Name|Combined|ShortName|combined|Content|Mode~Moon Flower Speed / Motor Speed:Moon Flower Speed;Motor Speed~Color / Show Speed:Color;Show Speed~Color Strobe/Effect Speed / Unused:Color Strobe/Effect Speed;Unused 1~Motor Speed / Unused:Motor Speed;Unused 2~Strobe / Unused:Strobe;Unused 3
+[END_MODES]

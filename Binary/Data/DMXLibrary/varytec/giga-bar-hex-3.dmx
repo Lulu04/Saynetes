@@ -1,0 +1,30 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/472654_c_472654_472655_r2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/varytec_giga_bar_hex_3.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i8849p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Varytec|Name|Giga Bar HEX 3|Type|30|Authors|Erik Pade, Flo Edelmann, Chemin Rouge Evenements, Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|360|Height|150|Depth|64|Weight|1.20|Power|36|Connector|3-pin|Bulb|3× 12W RGBAWUV LED
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~slow..fast
+ID|Auto Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~100~Txt~ColorFade slow..fast|R3|Begin~101~End~200~Txt~ColorJump slow..fast|R4|Begin~201~End~255~Txt~Sound control low..high
+ID|Auto Program Selection|Type|0|R1|Begin~0~End~10~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~11~End~100~Txt~ColorFade~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~101~End~200~Txt~ColorJump~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~201~End~255~Txt~Sound control~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Color Macros|Type|12|R1|Begin~0~End~14~Txt~No function|R2|Begin~15~End~22~Txt~Red~Extra~#ff0000|R3|Begin~23~End~30~Txt~Green~Extra~#00ff00|R4|Begin~31~End~40~Txt~Blue~Extra~#0000ff|R5|Begin~41~End~47~Txt~Pure White~Extra~#fffffc|R6|Begin~48~End~55~Txt~Amber~Extra~#ffbf00|R7|Begin~56~End~62~Txt~UV~Extra~#8800ff|R8|Begin~63~End~70~Txt~Green~Extra~#00ff00|R9|Begin~71~End~78~Txt~Fuchsia~Extra~#b83dae|R10|Begin~79~End~86~Txt~Pink~Extra~#ffc0cb|R11|Begin~87~End~94~Txt~Orange~Extra~#ff8000|R12|Begin~95~End~102~Txt~Purple~Extra~#8e44c6|R13|Begin~103~End~110~Txt~Cyan~Extra~#00ffff|R14|Begin~111~End~118~Txt~Mint~Extra~#aefac6|R15|Begin~119~End~126~Txt~Lime~Extra~#bfff00|R16|Begin~127~End~134~Txt~Sky Blue~Extra~#73abeb|R17|Begin~135~End~142~Txt~Terra Cotta~Extra~#c9643b|R18|Begin~143~End~150~Txt~Turquoise~Extra~#33d79a|R19|Begin~151~End~158~Txt~Tan~Extra~#d2b48c|R20|Begin~159~End~166~Txt~Gold~Extra~#ffd700|R21|Begin~167~End~174~Txt~Magenta~Extra~#ff00ff|R22|Begin~175~End~182~Txt~Redviolet~Extra~#b62e46|R23|Begin~183~End~190~Txt~Coral~Extra~#ff7c7c|R24|Begin~191~End~198~Txt~Aqua~Extra~#13eac9|R25|Begin~199~End~206~Txt~Aquamarine~Extra~#7fffd4|R26|Begin~207~End~214~Txt~Emerald~Extra~#50c878|R27|Begin~215~End~222~Txt~Lavender~Extra~#cfb5e2|R28|Begin~223~End~230~Txt~Ice~Extra~#d6fffa|R29|Begin~231~End~238~Txt~Rosepink~Extra~#f97a8c|R30|Begin~239~End~246~Txt~Palegreen~Extra~#abeca2|R31|Begin~247~End~254~Txt~Palepink~Extra~#e8c3d4|R32|Begin~255~End~255~Txt~Babyblue~Extra~#9ed7fc
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|9-channel|ShortName|9ch|Content|Red~Green~Blue~White~Amber~UV~Intensity~Strobe~Auto Programs
+Name|11-channel|ShortName|11ch|Content|Red~Green~Blue~White~Amber~UV~Intensity~Strobe~Auto Program Selection~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Color Macros
+[END_MODES]

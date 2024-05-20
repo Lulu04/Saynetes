@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.rockvilleaudio.com/rockpar50/|LinkType2|video|Url2|https://www.youtube.com/watch?v=E4kI6QuNiMg
+[GENERAL]
+Manufacturer|Rockville|Name|RockPAR50|Type|16|Authors|Jeff Kowalik|Creator|OFL
+[PHYSICAL]
+Width|185|Height|178|Depth|110|Weight|0|Power|24|Connector|3-pin|Bulb|18x 1W LEDs (6x red, 6x green, 6x blue)
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Effects|Type|0|R1|Begin~0~End~50~Txt~No function~Switch1~Speed:Effect Speed|R2|Begin~51~End~101~Txt~ColorJump~Switch1~Speed:Effect Speed|R3|Begin~102~End~152~Txt~ColorFade~Switch1~Speed:Effect Speed|R4|Begin~153~End~203~Txt~Strobe~Switch1~Speed:Strobe Speed|R5|Begin~204~End~255~Txt~Sound-activated~Switch1~Speed:Effect Speed
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Strobe Speed|Type|28|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|6 Channel|ShortName|6ch|Content|Master Dimmer~Red~Green~Blue~Effects~Speed:Effect Speed;Strobe Speed
+Name|3 Channel|ShortName|3ch|Content|Red~Green~Blue
+[END_MODES]

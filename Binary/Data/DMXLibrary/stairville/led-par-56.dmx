@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/115012_c_115012_115025_215918_115048_215926_115050_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_led_par_56_10_mm_black_rgb.htm
+[GENERAL]
+Manufacturer|Stairville|Name|LED PAR 56|Type|17|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|225|Height|270|Depth|190|Weight|1.20|Power|15|Connector|3-pin|Bulb|151× 10mm LEDs (50× red, 50× green, 51× blue)
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro|Type|0|R1|Begin~0~End~15~Txt~Preset Off|R2|Begin~16~End~255~Txt~Preset
+ID|Mode|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Speed / Strobe:Strobe|R2|Begin~32~End~63~Txt~Fade out~Switch1~Speed / Strobe:Effect Speed|R3|Begin~64~End~95~Txt~Fade in~Switch1~Speed / Strobe:Effect Speed|R4|Begin~96~End~127~Txt~Fade in/out~Switch1~Speed / Strobe:Effect Speed|R5|Begin~128~End~159~Txt~Auto mix~Switch1~Speed / Strobe:Effect Speed|R6|Begin~160~End~191~Txt~3-color chases~Switch1~Speed / Strobe:Effect Speed|R7|Begin~192~End~223~Txt~7-color chases~Switch1~Speed / Strobe:Effect Speed|R8|Begin~224~End~255~Txt~Sound-to-light~Switch1~Speed / Strobe:Strobe
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~255~Txt~slow..fast
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Macro~Speed / Strobe:Strobe;Effect Speed~Mode~Dimmer
+[END_MODES]

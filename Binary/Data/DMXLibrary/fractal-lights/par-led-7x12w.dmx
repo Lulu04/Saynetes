@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://fractallights.com/produkty/PAR_LED_7_x_9W_7_x_10W_7_x_12W/|LinkType2|product page|Url2|https://fractallights.com/catalog/#p=6
+[GENERAL]
+Manufacturer|Fractal Lights|Name|PAR LED 7x12W|Type|16|Authors|Marek Jędrzejewski, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|180|Height|180|Depth|110|Weight|2.00|Power|100|Connector|3-pin|Bulb|7×12W RGBWA LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~255~Txt~slow..fast
+ID|Mode|Type|0|R1|Begin~0~End~50~Txt~No function Manual control~Switch1~Color Presets / Effect Speed / Sound Colors:Color Presets|R2|Begin~51~End~100~Txt~Color presets~Switch1~Color Presets / Effect Speed / Sound Colors:Color Presets|R3|Begin~101~End~150~Txt~ColorJump~Switch1~Color Presets / Effect Speed / Sound Colors:Effect Speed|R4|Begin~151~End~200~Txt~ColorFade~Switch1~Color Presets / Effect Speed / Sound Colors:Effect Speed|R5|Begin~201~End~250~Txt~ColorFade black between colors~Switch1~Color Presets / Effect Speed / Sound Colors:Effect Speed|R6|Begin~251~End~255~Txt~Sound control select color or color change~Switch1~Color Presets / Effect Speed / Sound Colors:Sound Colors
+ID|Color Presets|Type|12|R1|Begin~0~End~31~Txt~Red~Extra~#ff0000|R2|Begin~32~End~63~Txt~Green~Extra~#00ff00|R3|Begin~64~End~95~Txt~Blue~Extra~#0000ff|R4|Begin~96~End~127~Txt~White~Extra~#ffffff|R5|Begin~128~End~159~Txt~Yellow~Extra~#ffff00|R6|Begin~160~End~191~Txt~Magenta~Extra~#ff00ff|R7|Begin~192~End~223~Txt~Cyan~Extra~#00ffff|R8|Begin~224~End~255~Txt~RGBW~Extra~#ffffff
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Colors|Type|0|R1|Begin~0~End~30~Txt~Red~Extra~#ff0000|R2|Begin~31~End~61~Txt~Green~Extra~#00ff00|R3|Begin~62~End~92~Txt~Blue~Extra~#0000ff|R4|Begin~93~End~123~Txt~White~Extra~#ffffff|R5|Begin~124~End~154~Txt~Yellow~Extra~#ffff00|R6|Begin~155~End~185~Txt~Magenta~Extra~#ff00ff|R7|Begin~186~End~216~Txt~Cyan~Extra~#00ffff|R8|Begin~217~End~247~Txt~RGBW~Extra~#ffffff|R9|Begin~248~End~255~Txt~ColorJump
+[END_CHAN_DEF]
+[MODES]
+Name|9-channel|ShortName|9ch|Content|Dimmer~Red~Green~Blue~White~Amber~Strobe~Mode~Color Presets / Effect Speed / Sound Colors:Color Presets;Effect Speed;Sound Colors
+Name|RGBWA|ShortName|RGBWA|Content|Red~Green~Blue~White~Amber
+[END_MODES]

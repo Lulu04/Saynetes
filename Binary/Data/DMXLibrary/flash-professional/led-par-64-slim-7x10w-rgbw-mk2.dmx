@@ -1,0 +1,36 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://flash-butrym.pl/en_US/p/file/484d613b7950f9ced2164bfc3980d0b9/P7100408_P7100418-LED-PAR-64-Slim-7x10W-RGBW-Mk2.pdf|LinkType2|manual|Url2|https://flash-butrym.pl/en_US/p/file/b58ec423c37dffb30279fabaa5cb3d2b/LED-PAR-64-Slim-Wireless-DMX-7x10W-RGBW-Mk2.pdf|LinkType3|manual|Url3|https://flash-butrym.pl/en_US/p/file/abb5ae416ed1ebd6b51e298dbed3a7ea/WSZYSTKIE-z-IR-LED-PAR-64-Slim-7x10W-RGBW-IR-Mk2.pdf|LinkType4|product page|Url4|https://flash-butrym.pl/en_US/p/LED-PAR-64-SLIM-7x10W-RGBW-Mk2-15-25/471|LinkType5|product page|Url5|https://flash-butrym.pl/en_US/p/LED-PAR-64-SLIM-Wireless-DMX-7x10W-RGBW-Mk2-15-25/561|LinkType6|product page|Url6|https://flash-butrym.pl/en_US/p/LED-PAR-64-SLIM-IR-remote-7x10W-RGBW-Mk2-15-25/548|LinkType7|video|Url7|https://www.youtube.com/watch?v=---UxzqLBVM|LinkType8|video|Url8|https://www.youtube.com/watch?v=dwslAXSCMIc
+[GENERAL]
+Manufacturer|Flash Professional|Name|LED PAR 64 SLIM 7x10W RGBW Mk2|Type|16|Authors|Flash Professional, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|26|Height|27|Depth|11|Weight|1.30|Power|80|Connector|3-pin|Bulb|7× RGBW LED|Lumens|10000|Lens|PC|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~1Hz..20Hz
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color / Macro|Type|0|R1|Begin~0~End~5~Txt~No function Open~Switch1~Speed:Pulse Speed|R2|Begin~6~End~10~Txt~Red~Extra~#ff0004~Switch1~Speed:Pulse Speed|R3|Begin~11~End~15~Txt~Green~Extra~#00ff00~Switch1~Speed:Pulse Speed|R4|Begin~16~End~20~Txt~Blue~Extra~#0000ff~Switch1~Speed:Pulse Speed|R5|Begin~21~End~25~Txt~Cyan~Extra~#00ffff~Switch1~Speed:Pulse Speed|R6|Begin~26~End~30~Txt~Magenta~Extra~#ff00ff~Switch1~Speed:Pulse Speed|R7|Begin~31~End~35~Txt~Yellow~Extra~#ffff00~Switch1~Speed:Pulse Speed|R8|Begin~36~End~40~Txt~Light Red~Extra~#ff8082~Switch1~Speed:Pulse Speed|R9|Begin~41~End~45~Txt~Light Green~Extra~#80ff80~Switch1~Speed:Pulse Speed|R10|Begin~46~End~50~Txt~Light Blue~Extra~#8080ff~Switch1~Speed:Pulse Speed|R11|Begin~51~End~55~Txt~Orange~Extra~#ff6800~Switch1~Speed:Pulse Speed|R12|Begin~56~End~60~Txt~Mint~Extra~#6cffc2~Switch1~Speed:Pulse Speed|R13|Begin~61~End~65~Txt~Sky Blue~Extra~#b3e9ff~Switch1~Speed:Pulse Speed|R14|Begin~66~End~70~Txt~Light Cyan~Extra~#80ffff~Switch1~Speed:Pulse Speed|R15|Begin~71~End~75~Txt~Light Magenta~Extra~#ff80ff~Switch1~Speed:Pulse Speed|R16|Begin~76~End~80~Txt~Light Yellow~Extra~#ffff80~Switch1~Speed:Pulse Speed|R17|Begin~81~End~85~Txt~White~Extra~#ffffff~Switch1~Speed:Pulse Speed|R18|Begin~86~End~90~Txt~Color temperature 9000K White~Extra~#ffffff~Switch1~Speed:Pulse Speed|R19|Begin~91~End~95~Txt~Color temperature 6500K White~Extra~#ffffe0~Switch1~Speed:Pulse Speed|R20|Begin~96~End~100~Txt~Color temperature 5600K White~Extra~#feffbe~Switch1~Speed:Pulse Speed|R21|Begin~101~End~105~Txt~Color temperature 5000K White~Extra~#ffffb4~Switch1~Speed:Pulse Speed|R22|Begin~106~End~110~Txt~Color temperature 4500K White~Extra~#feff8f~Switch1~Speed:Pulse Speed|R23|Begin~111~End~115~Txt~Color temperature 3200K White~Extra~#ffdf8b~Switch1~Speed:Pulse Speed|R24|Begin~116~End~120~Txt~Color temperature 2500K White~Extra~#ffcb70~Switch1~Speed:Pulse Speed|R25|Begin~121~End~125~Txt~Color temperature 2200K White~Extra~#ff9f31~Switch1~Speed:Pulse Speed|R26|Begin~126~End~130~Txt~ColorJump Macro 1~Switch1~Speed:Macro Speed|R27|Begin~131~End~135~Txt~ColorJump Macro 2~Switch1~Speed:Macro Speed|R28|Begin~136~End~140~Txt~ColorJump Macro 3~Switch1~Speed:Macro Speed|R29|Begin~141~End~145~Txt~ColorJump Macro 4~Switch1~Speed:Macro Speed|R30|Begin~146~End~150~Txt~ColorFade Macro 5~Switch1~Speed:Macro Speed|R31|Begin~151~End~155~Txt~ColorFade Macro 6~Switch1~Speed:Macro Speed|R32|Begin~156~End~160~Txt~ColorFade Macro 7~Switch1~Speed:Macro Speed|R33|Begin~161~End~165~Txt~ColorFade Macro 8~Switch1~Speed:Macro Speed|R34|Begin~166~End~170~Txt~ColorFade Macro 9~Switch1~Speed:Macro Speed|R35|Begin~171~End~175~Txt~ColorFade Macro 10~Switch1~Speed:Macro Speed|R36|Begin~176~End~180~Txt~ColorFade Macro 11~Switch1~Speed:Macro Speed|R37|Begin~181~End~235~Txt~No function~Switch1~Speed:Macro Speed|R38|Begin~236~End~240~Txt~ColorJump Sound mode 1~Switch1~Speed:Macro Speed|R39|Begin~241~End~245~Txt~ColorJump Sound mode 2~Switch1~Speed:Macro Speed|R40|Begin~246~End~250~Txt~ColorJump Sound mode 3~Switch1~Speed:Macro Speed|R41|Begin~251~End~255~Txt~ColorJump Sound mode 4~Switch1~Speed:Macro Speed
+ID|Dimmer fine|Type|1
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Pulse Speed|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~255~Txt~fast..slow pulse
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow macro
+[END_CHAN_DEF]
+[MODES]
+Name|Classic 6|ShortName|Classic 6|Content|Dimmer~Strobe~Red~Green~Blue~White
+Name|Classic 8|ShortName|Classic 8|Content|Dimmer~Strobe~Red~Green~Blue~White~Color / Macro~Speed:Pulse Speed;Macro Speed
+Name|Pro 6|ShortName|Pro 6|Content|Red~Green~Blue~White~Dimmer~Strobe
+Name|Pro 7|ShortName|Pro 7|Content|Red~Green~Blue~White~Dimmer~Dimmer fine~Strobe
+Name|RGB|ShortName|RGB|Content|Red~Green~Blue
+Name|RGBW|ShortName|RGBW|Content|Red~Green~Blue~White
+Name|RGB 16bit|ShortName|RGB 16bit|Content|Red~Red fine~Green~Green fine~Blue~Blue fine
+Name|RGBW 16bit|ShortName|RGBW 16bit|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|Flash A-DMX|ShortName|Flash A-DMX|Content|Red~Green~Blue~White~Dimmer~NotUsed~Strobe~Color / Macro
+[END_MODES]

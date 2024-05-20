@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51915390-Manual-80943-1.300-eurolite-led-sls-5-bcl-5x5w-floor-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51915390-eurolite-led-sls-5-bcl-5x5w-floor.html
+[GENERAL]
+Manufacturer|Eurolite|Name|LED SLS-5 BCL|Type|26|Authors|Christian Hollbjär, darth62|Creator|OFL
+[PHYSICAL]
+Width|230|Height|270|Depth|110|Weight|3.00|Power|24|Connector|3-pin|Bulb|5× 5W BCL LED (White+Amber)|LensMinDegree|20.000|LensMaxDegree|20.000
+[CHAN_DEF]
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Sound / Strobe|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Sound control|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~slow..fast
+ID|Effect|Type|0|R1|Begin~0~End~28~Txt~No function~Switch1~Strobe / Speed / Sensitivity:Strobe|R2|Begin~29~End~57~Txt~White~Extra~#ffffff~Switch1~Strobe / Speed / Sensitivity:Strobe|R3|Begin~58~End~82~Txt~Amber~Extra~#ffbf00~Switch1~Strobe / Speed / Sensitivity:Strobe|R4|Begin~83~End~87~Txt~Color Dreaming 1~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R5|Begin~88~End~92~Txt~Color Dreaming 2~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R6|Begin~93~End~97~Txt~Color Dreaming 3~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R7|Begin~98~End~163~Txt~No function~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R8|Begin~164~End~168~Txt~ColorJump~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R9|Begin~169~End~245~Txt~No function~Switch1~Strobe / Speed / Sensitivity:Effect Speed|R10|Begin~246~End~255~Txt~Sound Active~Switch1~Strobe / Speed / Sensitivity:Sound Sensitivity
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~31~Txt~off|R2|Begin~32~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|White~Amber
+Name|3-channel|ShortName|3ch|Content|White~Amber~Dimmer
+Name|4-channel|ShortName|4ch|Content|White~Amber~Dimmer~Sound / Strobe
+Name|5-channel|ShortName|5ch|Content|White~Amber~Dimmer~Strobe / Speed / Sensitivity:Strobe;Effect Speed;Sound Sensitivity~Effect
+[END_MODES]

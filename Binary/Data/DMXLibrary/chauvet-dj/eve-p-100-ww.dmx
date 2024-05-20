@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2018/07/EVE_P-100_WW_UM_Rev2_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/eve-p-100-ww/
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|EVE P-100 WW|Type|1|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|245|Height|305|Depth|220|Weight|3.50|Power|122|Connector|3-pin and 5-pin|Bulb|100WCOB LED|Lumens|5048|LensMinDegree|25.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~0Hz..25Hz
+ID|Auto Programs|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~Strobe / Speed / Sensitivity:Strobe|R2|Begin~32~End~95~Txt~0–100%~Switch1~Strobe / Speed / Sensitivity:Program Speed|R3|Begin~96~End~159~Txt~100–0%~Switch1~Strobe / Speed / Sensitivity:Program Speed|R4|Begin~160~End~223~Txt~100–0–100%~Switch1~Strobe / Speed / Sensitivity:Program Speed|R5|Begin~224~End~240~Txt~Sound-active program 1~Switch1~Strobe / Speed / Sensitivity:Sound Sensitivity|R6|Begin~241~End~255~Txt~Sound-active program 2~Switch1~Strobe / Speed / Sensitivity:Sound Sensitivity
+ID|Dimmer Speed Mode|Type|0|R1|Begin~0~End~51~Txt~No function Dimmer speed set from display|R2|Begin~52~End~101~Txt~off Dimmer speed|R3|Begin~102~End~152~Txt~fast Dimmer speed|R4|Begin~153~End~203~Txt~50% Dimmer speed|R5|Begin~204~End~255~Txt~slow Dimmer speed
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Dimmer
+Name|2-channel|ShortName|2ch|Content|Dimmer~Strobe
+Name|4-channel|ShortName|4ch|Content|Dimmer~Strobe / Speed / Sensitivity:Strobe;Program Speed;Sound Sensitivity~Auto Programs~Dimmer Speed Mode
+[END_MODES]

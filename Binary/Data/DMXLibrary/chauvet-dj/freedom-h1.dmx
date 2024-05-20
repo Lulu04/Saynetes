@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2018/01/Freedom_H1_UM_Rev1_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/freedom-h1-x4/|LinkType3|video|Url3|https://www.youtube.com/watch?v=URIuq7kCcV0
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Freedom H1|Type|25|Authors|JD|Creator|OFL
+[PHYSICAL]
+Width|75|Height|139|Depth|97|Weight|0.70|Power|35|Connector|None|Bulb|1× 10W RGBAW+UV LED|LensMinDegree|21.000|LensMaxDegree|32.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~0Hz..25Hz
+ID|Color Macros|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red … Yellow|R3|Begin~31~End~50~Txt~Preset Yellow … Green|R4|Begin~51~End~70~Txt~Preset Green … Cyan|R5|Begin~71~End~90~Txt~Preset Cyan … Blue|R6|Begin~91~End~110~Txt~Preset Blue … Pink|R7|Begin~111~End~130~Txt~Preset Pink … Red|R8|Begin~131~End~150~Txt~Preset Red … White|R9|Begin~151~End~170~Txt~Preset White … Blue|R10|Begin~171~End~200~Txt~RGBA~Extra~#ffdf80|R11|Begin~201~End~205~Txt~Preset Color 1|R12|Begin~206~End~210~Txt~Preset Color 2|R13|Begin~211~End~215~Txt~Preset Color 3|R14|Begin~216~End~220~Txt~Preset Color 4|R15|Begin~221~End~225~Txt~Preset Color 5|R16|Begin~226~End~230~Txt~Preset Color 6|R17|Begin~231~End~235~Txt~Preset Color 7|R18|Begin~236~End~240~Txt~Preset Color 8|R19|Begin~241~End~245~Txt~Preset Color 9|R20|Begin~246~End~250~Txt~Preset Color 10|R21|Begin~251~End~255~Txt~Preset Color 11
+ID|Programs|Type|0|R1|Begin~0~End~10~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~11~End~60~Txt~Auto program 1~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~61~End~120~Txt~Auto program 2~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~121~End~180~Txt~Auto program 3~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~181~End~240~Txt~Auto program 4~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~241~End~255~Txt~Sound-active program~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~No function Preset dimmer speed from display menu|R2|Begin~52~End~101~Txt~Dimmer speed off|R3|Begin~102~End~152~Txt~Dimmer speed fast|R4|Begin~153~End~203~Txt~Dimmer speed medium|R5|Begin~204~End~255~Txt~Dimmer speed slow
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~10~Txt~off|R2|Begin~11~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|12-channel|ShortName|12ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe~Color Macros~Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Dimmer Speed
+Name|8-channel|ShortName|8ch|Content|Dimmer~Red~Green~Blue~Amber~White~UV~Strobe
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~White~UV
+[END_MODES]

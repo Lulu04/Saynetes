@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.gantom.com/wp-content/uploads/2018/07/Precision-DMX-User-Guide-1.1.pdf|LinkType2|manual|Url2|https://www.gantom.com/wp-content/uploads/2018/05/Precision_DMX_2018.pdf|LinkType3|video|Url3|https://www.youtube.com/watch?v=Oi_wBNiZeQk
+[GENERAL]
+Manufacturer|Gantom|Name|Precision DMX|Type|23|Authors|Brian McDade|Creator|OFL
+[PHYSICAL]
+Width|44|Height|52|Depth|52|Weight|0|Power|4|Connector|3.5mm stereo jack|Bulb|RGB LED|LensMinDegree|21.000|LensMaxDegree|21.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~255~Txt~Preset
+ID|Built-in Functions|Type|0|R1|Begin~0~End~0~Txt~No function~Switch1~Strobe / Effect Speed:Strobe|R2|Begin~1~End~31~Txt~No function~Switch1~Strobe / Effect Speed:Effect Speed|R3|Begin~32~End~71~Txt~RampUp~Switch1~Strobe / Effect Speed:Effect Speed|R4|Begin~72~End~111~Txt~RampDown~Switch1~Strobe / Effect Speed:Effect Speed|R5|Begin~112~End~151~Txt~Pulse~Switch1~Strobe / Effect Speed:Effect Speed|R6|Begin~152~End~191~Txt~ColorFade~Switch1~Strobe / Effect Speed:Effect Speed|R7|Begin~192~End~231~Txt~ColorJump red, green, blue~Switch1~Strobe / Effect Speed:Effect Speed|R8|Begin~232~End~250~Txt~ColorJump 6-color~Switch1~Strobe / Effect Speed:Effect Speed|R9|Begin~251~End~255~Txt~Candle Flicker~Switch1~Strobe / Effect Speed:Effect Speed
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Color Macros~Strobe / Effect Speed:Strobe;Effect Speed~Built-in Functions~Master Dimmer
+[END_MODES]

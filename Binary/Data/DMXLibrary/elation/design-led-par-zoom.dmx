@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/10094/elation_design_par_led_zoom_user_manual.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/design-led-par-zoom
+[GENERAL]
+Manufacturer|Elation|Name|Design LED Par Zoom|Type|18|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|79|Height|76|Depth|60|Weight|7.00|Power|120|Connector|3-pin|Bulb|36× 3W LEDs (10× red, 16× green, 10× blue)|LensMinDegree|7.000|LensMaxDegree|49.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~7~Txt~Preset R02 Bastard Amber|R3|Begin~8~End~15~Txt~Preset R04 Medium Amber|R4|Begin~16~End~23~Txt~Preset R09 Pale Amber Gold|R5|Begin~24~End~31~Txt~Preset R316 Gallo Gold|R6|Begin~32~End~39~Txt~Preset R21 Golden Amber|R7|Begin~40~End~47~Txt~Preset R26 Light Red|R8|Begin~48~End~55~Txt~Preset R27 Medium Red|R9|Begin~56~End~63~Txt~Preset R36 Medium Pink|R10|Begin~64~End~71~Txt~Preset R339 Broadway Pink|R11|Begin~72~End~79~Txt~Preset R344 Follies Pink|R12|Begin~80~End~87~Txt~Preset R52 Light Lavender|R13|Begin~88~End~95~Txt~Preset R54 Special Lavender|R14|Begin~96~End~103~Txt~Preset R57 Lavender|R15|Begin~104~End~111~Txt~Preset R59 Indigo|R16|Begin~112~End~119~Txt~Preset R361 Hemsley Blue|R17|Begin~120~End~127~Txt~Preset R362 Tipton Blue|R18|Begin~128~End~135~Txt~Preset R64 Light Steel Blue|R19|Begin~136~End~143~Txt~Preset R67 Light Sky Blue|R20|Begin~144~End~151~Txt~Preset R68 Sky Blue|R21|Begin~152~End~159~Txt~Preset R69 Brilliant Blue|R22|Begin~160~End~167~Txt~Preset R76 Light Green Blue|R23|Begin~168~End~175~Txt~Preset R79 Bright Blue|R24|Begin~176~End~183~Txt~Preset R80 Primary Blue|R25|Begin~184~End~191~Txt~Preset R382 Congo Blue|R26|Begin~192~End~199~Txt~Preset R87 Pale Yellow Green|R27|Begin~200~End~207~Txt~Preset R89 Moss Green|R28|Begin~208~End~215~Txt~Preset R91 Primary Green|R29|Begin~216~End~223~Txt~Preset L200 Double CTB|R30|Begin~224~End~231~Txt~Preset L201 Full CTB|R31|Begin~232~End~239~Txt~Preset L202 1/2 CTB|R32|Begin~240~End~247~Txt~Preset L119 Dark Blue|R33|Begin~248~End~255~Txt~White~Extra~#ffffff
+ID|Internal Programs|Type|0|R1|Begin~0~End~10~Txt~No function~Switch1~Dimmer / Program Speed:Dimmer|R2|Begin~11~End~40~Txt~Internal program 1~Switch1~Dimmer / Program Speed:Program Speed|R3|Begin~41~End~70~Txt~Internal program 2~Switch1~Dimmer / Program Speed:Program Speed|R4|Begin~71~End~100~Txt~Internal program 3~Switch1~Dimmer / Program Speed:Program Speed|R5|Begin~101~End~130~Txt~Internal program 4~Switch1~Dimmer / Program Speed:Program Speed|R6|Begin~131~End~160~Txt~Internal program 5~Switch1~Dimmer / Program Speed:Program Speed|R7|Begin~161~End~190~Txt~Internal program 6~Switch1~Dimmer / Program Speed:Program Speed|R8|Begin~191~End~220~Txt~Internal program 7~Switch1~Dimmer / Program Speed:Program Speed|R9|Begin~221~End~255~Txt~ColorFade~Switch1~Dimmer / Program Speed:Program Speed
+ID|Shutter / Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~0Hz..18Hz|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 49deg..7deg
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~Color Macros~Internal Programs~Shutter / Strobe~Dimmer / Program Speed:Dimmer;Program Speed~Zoom
+[END_MODES]

@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdn.shopify.com/s/files/1/0304/0549/files/PAR12_V2.1.pdf|LinkType2|product page|Url2|https://event-lighting.com.au/products/par5x12|LinkType3|video|Url3|https://www.youtube.com/watch?v=6dmSNkOVrCQ
+[GENERAL]
+Manufacturer|Event Lighting|Name|Par5x12|Type|16|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|207|Height|227|Depth|120|Weight|1.90|Power|50|Connector|3-pin|Bulb|5× 12W RGBWAUV LEDs|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Color Temperature|Type|27|R1|Begin~0~End~255~Txt~warm..cold
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Sound controlled|R3|Begin~20~End~255~Txt~1Hz..30Hz
+ID|Strobe simple|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~1Hz..30Hz
+ID|Color Macro / Temperature|Type|0|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~39~Txt~Red … Yellow~Extra~_#ffff00|R3|Begin~40~End~59~Txt~Yellow … Green~Extra~_#00ff00|R4|Begin~60~End~79~Txt~Green … Cyan~Extra~_#00ffff|R5|Begin~80~End~99~Txt~Cyan … Blue~Extra~_#0000ff|R6|Begin~100~End~119~Txt~Blue … Magenta~Extra~_#ff00ff|R7|Begin~120~End~139~Txt~Magenta … Red~Extra~_#ff0000|R8|Begin~140~End~159~Txt~Red … White~Extra~_#ffffff|R9|Begin~160~End~179~Txt~White … Blue~Extra~_#0000ff|R10|Begin~180~End~200~Txt~White~Extra~#ffffff|R11|Begin~201~End~255~Txt~warm..cold
+ID|Auto Programs|Type|0|R1|Begin~0~End~9~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~10~End~49~Txt~ColorJump RGBWAUV colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~50~End~90~Txt~ColorJump 36 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~91~End~131~Txt~ColorFade RGBWAUV colors, RGBW model~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~132~End~172~Txt~ColorFade 36 colors~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~173~End~213~Txt~ColorFade Macros~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~214~End~255~Txt~Sound-active mode~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~9~Txt~Use dimmer curve from control board setting|R2|Begin~10~End~57~Txt~16bit linear dimmer 1|R3|Begin~58~End~106~Txt~16bit non-linear dimmer 2|R4|Begin~107~End~155~Txt~16bit non-linear dimmer 3|R5|Begin~156~End~204~Txt~16bit non-linear dimmer 4|R6|Begin~205~End~255~Txt~8bit linear dimmer 5
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Color Temperature~Intensity
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~White~Amber~UV~Intensity~Strobe
+Name|12-channel|ShortName|12ch|Content|Red~Green~Blue~White~Amber~UV~Intensity~Strobe simple~Color Macro / Temperature~Auto Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Dimmer Curve
+[END_MODES]

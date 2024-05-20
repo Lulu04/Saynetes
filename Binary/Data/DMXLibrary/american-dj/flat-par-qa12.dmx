@@ -1,0 +1,34 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/7028/flat_par_qa12.pdf|LinkType2|product page|Url2|https://www.adj.com/flat-par-qa12
+[GENERAL]
+Manufacturer|American DJ|Name|Flat Par QA12|Type|26|Authors|TAKU, Flo Edelmann, Ken Harris|Creator|OFL
+[PHYSICAL]
+Width|280|Height|115|Depth|328|Weight|3.20|Power|80|Connector|3-pin|Bulb|12× 5W RGBA LED|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Color Macros|Type|12|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~Red~Extra~#ff0000|R3|Begin~32~End~47~Txt~Green~Extra~#00ff00|R4|Begin~48~End~63~Txt~Blue~Extra~#0000ff|R5|Begin~64~End~79~Txt~Amber~Extra~#ffbf00|R6|Begin~80~End~95~Txt~Yellow~Extra~#ffff00|R7|Begin~96~End~111~Txt~Pink~Extra~#ff00ff|R8|Begin~112~End~127~Txt~Orange~Extra~#ff6000|R9|Begin~128~End~143~Txt~Cyan~Extra~#00ffff|R10|Begin~144~End~159~Txt~Lime~Extra~#92ff00|R11|Begin~160~End~175~Txt~Lavender~Extra~#ffbfff|R12|Begin~176~End~191~Txt~White~Extra~#ffffff|R13|Begin~192~End~207~Txt~Warm Yellow~Extra~#ffdf00|R14|Begin~208~End~223~Txt~Light Red~Extra~#ff6080|R15|Begin~224~End~239~Txt~Light Green~Extra~#92ff92|R16|Begin~240~End~255~Txt~Light Amber~Extra~#ffdf80
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Mode Select|Type|0|R1|Begin~0~End~51~Txt~Dimmer mode~Switch1~Strobe / Speed / Sensitivity:Strobe~Switch2~Color Macros / Programs:Unused|R2|Begin~52~End~102~Txt~Color macro mode~Switch1~Strobe / Speed / Sensitivity:Strobe~Switch2~Color Macros / Programs:Color Macros|R3|Begin~103~End~153~Txt~Color change mode~Switch1~Strobe / Speed / Sensitivity:Program Speed~Switch2~Color Macros / Programs:Color Change Programs|R4|Begin~154~End~204~Txt~Color fade mode~Switch1~Strobe / Speed / Sensitivity:Program Speed~Switch2~Color Macros / Programs:Color Fade Programs|R5|Begin~205~End~255~Txt~Sound active mode~Switch1~Strobe / Speed / Sensitivity:Sound Sensitivity~Switch2~Color Macros / Programs:Sound Active Programs
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~31~Txt~off|R2|Begin~32~End~255~Txt~low..high
+ID|Unused|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Color Change Programs|Type|0|R1|Begin~0~End~15~Txt~ColorJump 1|R2|Begin~16~End~31~Txt~ColorJump 2|R3|Begin~32~End~47~Txt~ColorJump 3|R4|Begin~48~End~63~Txt~ColorJump 4|R5|Begin~64~End~79~Txt~ColorJump 5|R6|Begin~80~End~95~Txt~ColorJump 6|R7|Begin~96~End~111~Txt~ColorJump 7|R8|Begin~112~End~127~Txt~ColorJump 8|R9|Begin~128~End~143~Txt~ColorJump 9|R10|Begin~144~End~159~Txt~ColorJump 10|R11|Begin~160~End~175~Txt~ColorJump 11|R12|Begin~176~End~191~Txt~ColorJump 12|R13|Begin~192~End~207~Txt~ColorJump 13|R14|Begin~208~End~223~Txt~ColorJump 14|R15|Begin~224~End~239~Txt~ColorJump 15|R16|Begin~240~End~255~Txt~ColorJump 16
+ID|Color Fade Programs|Type|0|R1|Begin~0~End~15~Txt~ColorFade 1|R2|Begin~16~End~31~Txt~ColorFade 2|R3|Begin~32~End~47~Txt~ColorFade 3|R4|Begin~48~End~63~Txt~ColorFade 4|R5|Begin~64~End~79~Txt~ColorFade 5|R6|Begin~80~End~95~Txt~ColorFade 6|R7|Begin~96~End~111~Txt~ColorFade 7|R8|Begin~112~End~127~Txt~ColorFade 8|R9|Begin~128~End~143~Txt~ColorFade 9|R10|Begin~144~End~159~Txt~ColorFade 10|R11|Begin~160~End~175~Txt~ColorFade 11|R12|Begin~176~End~191~Txt~ColorFade 12|R13|Begin~192~End~207~Txt~ColorFade 13|R14|Begin~208~End~223~Txt~ColorFade 14|R15|Begin~224~End~239~Txt~ColorFade 15|R16|Begin~240~End~255~Txt~ColorFade 16
+ID|Sound Active Programs|Type|0|R1|Begin~0~End~15~Txt~Sound active program 1|R2|Begin~16~End~31~Txt~Sound active program 2|R3|Begin~32~End~47~Txt~Sound active program 3|R4|Begin~48~End~63~Txt~Sound active program 4|R5|Begin~64~End~79~Txt~Sound active program 5|R6|Begin~80~End~95~Txt~Sound active program 6|R7|Begin~96~End~111~Txt~Sound active program 7|R8|Begin~112~End~127~Txt~Sound active program 8|R9|Begin~128~End~143~Txt~Sound active program 9|R10|Begin~144~End~159~Txt~Sound active program 10|R11|Begin~160~End~175~Txt~Sound active program 11|R12|Begin~176~End~191~Txt~Sound active program 12|R13|Begin~192~End~207~Txt~Sound active program 13|R14|Begin~208~End~223~Txt~Sound active program 14|R15|Begin~224~End~239~Txt~Sound active program 15|R16|Begin~240~End~255~Txt~Sound active program 16
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Color Macros
+Name|2-channel|ShortName|2ch|Content|Color Macros~Dimmer
+Name|3-channel|ShortName|3ch|Content|Color Macros~Dimmer~Strobe
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Amber~Dimmer
+Name|6-channel|ShortName|6ch|Content|Red~Green~Blue~Amber~Dimmer~Color Macros
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Amber~Dimmer~Strobe~Color Macros
+Name|8-channel|ShortName|8ch|Content|Red~Green~Blue~Amber~Dimmer~Strobe / Speed / Sensitivity:Strobe;Program Speed;Sound Sensitivity~Mode Select~Color Macros / Programs:Unused;Color Macros;Color Change Programs;Color Fade Programs;Sound Active Programs
+[END_MODES]
