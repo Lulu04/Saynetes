@@ -41,19 +41,21 @@ type
   private
     FLabelIndexTargetedByPanelTools: integer;
     procedure DoEditChannelFrame(aIndex: integer);
-    procedure DoAddChannelFrame(const aName: string);
     procedure DoDeleteChannelFrame(aIndex: integer);
     procedure ChanLabelMouseEnter(Sender: TObject);
     procedure ChanLabelMouseLeave(Sender: TObject);
     procedure SetPanelToolPosition(aFrameIndex: integer); // can be -1 to hide panel
     procedure ExchangeChannel(i1, i2: integer);
   private
+    FErrorMessage: string;
     FExistingChannels: PFixLibAvailableChannels;
     FModeIndex: integer;
     FOnHeightChange: TNotifyEvent;
     FChanFrames: array of TFrameViewModeItem;
 
     function GetChannelsUsed: TStringArray;
+    function GetVirtualChannelUsed: TStringArray;
+    function GetChannelAndVirtualChannelUsed: TStringArray;
     function HaveErrorOnNameOrShortName: boolean;
     function GetHaveError: boolean;
     function GetModeName: string;
@@ -62,6 +64,7 @@ type
     procedure SetModeName(AValue: string);
     procedure SetModified(AValue: boolean);
   public
+    procedure DoAddChannelFrame(const aName: string);
     procedure ReplaceChannelName(const aOldName, aNewName: string);
   public
     constructor Create(TheOwner: TComponent); override;
@@ -69,22 +72,27 @@ type
     procedure InitFrom(const aMode: TFixLibMode);
 
     property ModeIndex: integer read FModeIndex write SetModeIndex;
-    property ExistingChannels: PFixLibAvailableChannels write FExistingChannels;
+    property ExistingChannels: PFixLibAvailableChannels read FExistingChannels write FExistingChannels;
 
     property OnHeightChange: TNotifyEvent read FOnHeightChange write FOnHeightChange;
 
     property HaveError: boolean read GetHaveError;
+    property ErrorMessage: string read FErrorMessage;
     property ModeName: string read GetModeName write SetModeName;
     property ShortModeName: string read GetShortModeName;
+
     property ChannelsUsed: TStringArray read GetChannelsUsed;
+    property VirtualChannelUsed: TStringArray read GetVirtualChannelUsed;
+    property ChannelAndVirtualChannelUsed: TStringArray read GetChannelAndVirtualChannelUsed;
 
     property Modified: boolean write SetModified;
   end;
 
 implementation
 uses Math, form_selectexistingchannel, form_definenewchannel, LCLIntf,
-  u_editfixturewizard, u_utils, u_resource_string, u_helper, u_common,
-  u_datamodule, form_defineswitchingchannel, Graphics;
+  u_editfixturewizard, u_resource_string, u_helper, u_common,
+  u_datamodule, form_defineswitchingchannel,
+  form_selectexistingswitchingchannel, Graphics;
 
 {$R *.lfm}
 
@@ -101,10 +109,60 @@ end;
 { TFrameEditMode }
 
 procedure TFrameEditMode.BAddSwitchingChannelClick(Sender: TObject);
-var F: TFormEditSwitchingChannel;
+var FormExisting: TFormSelectExistingSwitchingChannel;
+  FormNew: TFormEditSwitchingChannel;
+  chanName, A: TStringArray;
+  i: SizeInt;
 begin
   if HaveErrorOnNameOrShortName then exit;
 
+  chanName := NIL;
+
+  // first ask the user to choose existing virtual channel(s) (if any)
+  if (Length(FVirtualChannelInMode) <> 0) and (Length(FVirtualChannelInMode) > Length(VirtualChannelUsed)) then begin
+    FormExisting := TFormSelectExistingSwitchingChannel.Create(Self.Parent);
+    try
+      FormExisting.ModeName := Edit1.Text;
+      FormExisting.FillWith(VirtualChannelUsed);
+      case FormExisting.ShowModal of
+        mrOK: chanName := Copy(FormExisting.UseExistingNames, 0, Length(FormExisting.UseExistingNames));
+        mrIgnore:;
+        mrCancel: exit;
+      end;
+    finally
+      FormExisting.Free;
+    end;
+  end;
+
+  if chanName = NIL then begin
+    FormNew := TFormEditSwitchingChannel.Create(NIL);
+    FormNew.ModeName := Edit1.Text;
+    FormNew.FillWith(FExistingChannels);
+    FormNew.TargetModeFrame := Self;
+    try
+      if FormNew.ShowModal = mrOk then begin
+        // add the new created virtual channel
+        i := Length(FVirtualChannelInMode);
+        SetLength(FVirtualChannelInMode, i+1);
+        FVirtualChannelInMode[i].InitDefault;
+        FVirtualChannelInMode[i].VirtualName := FormNew.VirtualName;
+        A := FormNew.SubChannelNames;
+        FVirtualChannelInMode[i].SubChannelIDs := Copy(A, 0, Length(A));
+
+        SetLength(chanName, 1);
+        chanName[0] := FormNew.PackedVirtualNameAndSubChannelNames;
+      end;
+    finally
+      FormNew.Free;
+    end;
+  end;
+
+  if chanName = NIL then exit;
+  for i:=0 to High(chanName) do
+    DoAddChannelFrame(chanName[i]);
+  FOnHeightChange(Self);
+
+  Modified := True;
 end;
 
 procedure TFrameEditMode.BAddChannelClick(Sender: TObject);
@@ -172,27 +230,54 @@ end;
 
 procedure TFrameEditMode.DoEditChannelFrame(aIndex: integer);
 var FormNew: TFormDefineNewChannel;
+  FormEditSwitching: TFormEditSwitchingChannel;
   i: integer;
-  oldName: string;
+  oldName, packedName: string;
 begin
-  FormNew := TFormDefineNewChannel.Create(NIL);
-  FormNew.ExistingChannel := FExistingChannels;
-
   oldName := FChanFrames[aIndex].ChanName;
-  i := FExistingChannels^.NameToIndex(oldName);
-  if i = -1 then exit;
 
-  FormNew.EditExistingChannel(@FExistingChannels^[i]);
-  try
-    if FormNew.ShowModal = mrOk then begin
-      // replace data in the channel
-      FExistingChannels^[i].LoadFromString(FormNew.GetData);
-      // replace new name in all frame (Modes)
-      ParentForm(Self).ReplaceChannelNameInAllFrames(oldName, FExistingChannels^[i].NameID);
-      Modified := True;
+  if FChanFrames[aIndex].IsSwitchingChannel then begin
+    // edit switching channel
+    i := FVirtualChannelInMode.IndexOfVirtualName(oldName);
+    if i = -1 then exit;
+
+    FormEditSwitching := TFormEditSwitchingChannel.Create(NIL);
+    try
+      FormEditSwitching.FillWith(FExistingChannels);
+      FormEditSwitching.EditExistingChannel(@FVirtualChannelInMode[i]);
+
+      if FormEditSwitching.ShowModal = mrOk then begin
+        // replace data in the channel
+        packedName := FormEditSwitching.PackedVirtualNameAndSubChannelNames;
+        FVirtualChannelInMode[i].InitFromPackedString(packedName);
+        // replace new name in all frame (Modes)
+        ParentForm(Self).ReplaceChannelNameInAllFrames(oldName, packedName);
+        Modified := True;
+      end;
+    finally
+      FormEditSwitching.Free;
     end;
-  finally
-    FormNew.Free;
+
+  end else begin
+    // edit normal channel
+    i := FExistingChannels^.NameToIndex(oldName);
+    if i = -1 then exit;
+
+    FormNew := TFormDefineNewChannel.Create(NIL);
+    FormNew.ExistingChannel := FExistingChannels;
+
+    FormNew.EditExistingChannel(@FExistingChannels^[i]);
+    try
+      if FormNew.ShowModal = mrOk then begin
+        // replace data in the channel
+        FExistingChannels^[i].LoadFromString(FormNew.GetData);
+        // replace new name in all frame (Modes)
+        ParentForm(Self).ReplaceChannelNameInAllFrames(oldName, FExistingChannels^[i].NameID);
+        Modified := True;
+      end;
+    finally
+      FormNew.Free;
+    end;
   end;
 end;
 
@@ -336,14 +421,56 @@ begin
 end;
 
 function TFrameEditMode.GetChannelsUsed: TStringArray;
-var i, j: integer;
+var i, c: integer;
+begin
+  Result := NIL;
+  if Length(FChanFrames) = 0 then exit;
+
+  // retrieve the count
+  c := 0;
+  for i:=0 to High(FChanFrames) do
+    if not FChanFrames[i].IsSwitchingChannel then inc(c);
+  if c = 0 then exit;
+
+  SetLength(Result, c);
+  c := 0;
+  for i:=0 to High(FChanFrames) do
+    if not FChanFrames[i].IsSwitchingChannel then begin
+      Result[c] := FChanFrames[i].ChanName;
+      inc(c);
+    end;
+end;
+
+function TFrameEditMode.GetVirtualChannelUsed: TStringArray;
+var i, c: integer;
+begin
+  Result := NIL;
+  if Length(FChanFrames) = 0 then exit;
+
+  // retrieve the count
+  c := 0;
+  for i:=0 to High(FChanFrames) do
+    if FChanFrames[i].IsSwitchingChannel then inc(c);
+  if c = 0 then exit;
+
+  SetLength(Result, c);
+  c := 0;
+  for i:=0 to High(FChanFrames) do
+    if FChanFrames[i].IsSwitchingChannel then begin
+      Result[c] := FChanFrames[i].ChanName;
+      inc(c);
+    end;
+end;
+
+function TFrameEditMode.GetChannelAndVirtualChannelUsed: TStringArray;
+var i: integer;
 begin
   Result := NIL;
   if Length(FChanFrames) = 0 then exit;
 
   SetLength(Result, Length(FChanFrames));
-  for i:=0 to High(Result) do
-    Result[i] := FChanFrames[i].ChanName;
+  for i:=0 to High(FChanFrames) do
+    Result[i] := FChanFrames[i].PackedName;
 end;
 
 function TFrameEditMode.HaveErrorOnNameOrShortName: boolean;
@@ -367,19 +494,56 @@ begin
 end;
 
 function TFrameEditMode.GetHaveError: boolean;
-var A: TStringArray;
-  i, j: integer;
+var A, B: TStringArray;
+  i, j, k, m: integer;
+  virtualNameIsUsed: array of boolean;
+  p: PFixLibAvailableChannel;
 begin
-  if HaveErrorOnNameOrShortName then exit(True);
+  FErrorMessage := '';
+
+  if HaveErrorOnNameOrShortName then begin
+    FErrorMessage := SMode+' '+(Modeindex+1).ToString+': '+SErrorOnName;
+    exit(True);
+  end;
 
   // used channels list
   A := GetChannelsUsed;
-  if length(A) = 0 then exit(True);
+  if length(A) = 0 then begin
+    FErrorMessage := SMode+' "'+ModeName+'": '+SThisModeIsEmpty;
+    exit(True);
+  end;
+
   // check the integrity of each used channels
   for i:=0 to High(A) do begin
-    j := FExistingChannels^.NameToIndex(A[i]);
-    if j = -1 then exit(True);
-    if FExistingChannels^[j].HaveRangesError then exit(True);
+    p := FExistingChannels^.GetChannelsByName(A[i]);
+    if p = NIL then exit(True);
+    if p^.HaveRangesError then begin
+      FErrorMessage := SMode+' "'+ModeName+'": '+SChannel+' '+p^.NameID+' '+SHaveRangeError;
+      exit(True);
+    end;
+  end;
+
+  // checks if the virtual channels defined in this mode are used by at least one another channel
+  B := GetVirtualChannelUsed;
+  if Length(B) > 0 then begin
+    virtualNameIsUsed := NIL;
+    SetLength(virtualNameIsUsed, Length(B));
+    for i:=0 to High(A) do begin
+      p := FExistingChannels^.GetChannelsByName(A[i]);
+      if p = NIL then exit(True);
+      for j:=0 to High(p^.Ranges) do
+        for k:=0 to High(p^.Ranges[j].SwitchDescriptors) do
+          for m:=0 to High(B) do begin
+            if p^.Ranges[j].SwitchDescriptors[k].SwitchVirtualChannel = B[m] then
+              virtualNameIsUsed[m] := True;
+        end;
+    end;
+    for i:=0 to High(virtualNameIsUsed) do
+      if not virtualNameIsUsed[i] then begin
+        FErrorMessage := SMode+' "'+ModeName+'": '+
+                        SVirtualChannel+' "'+FVirtualChannelInMode[i].VirtualName+'" '+SDefinedButNotUsed;
+        exit(True);
+      end;
   end;
 
   Result := False;

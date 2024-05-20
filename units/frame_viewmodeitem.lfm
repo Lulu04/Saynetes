@@ -70,5 +70,34 @@ object FrameViewModeItem: TFrameViewModeItem
       OnMouseEnter = Panel1MouseEnter
       OnMouseLeave = Panel1MouseLeave
     end
+    object Image2: TImage
+      AnchorSideLeft.Control = Label5
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 102
+      Height = 20
+      Hint = 'This channel have switcher'
+      Top = 0
+      Width = 20
+      BorderSpacing.Left = 3
+      OnMouseEnter = Panel1MouseEnter
+      OnMouseLeave = Panel1MouseLeave
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object BEditSubChannel: TSpeedButton
+      Cursor = crHandPoint
+      Left = 200
+      Height = 24
+      Top = 0
+      Width = 24
+      Images = DataModule1.ImageList1
+      ImageIndex = 6
+      Visible = False
+      OnClick = BEditSubChannelClick
+      OnMouseLeave = BEditSubChannelMouseLeave
+      ShowHint = True
+      ParentShowHint = False
+    end
   end
 end

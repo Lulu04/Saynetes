@@ -49,6 +49,7 @@
 {"hash":5404860,"name":"tformfixturewizard.label13.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tformfixturewizard.label20.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tformfixturewizard.label27.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5404860,"name":"tformfixturewizard.label35.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":195208732,"name":"tformfixturewizard.bgeneral.caption","sourcebytes":[71,69,78,69,82,65,76],"value":"GENERAL"},
 {"hash":233296412,"name":"tformfixturewizard.bphysical.caption","sourcebytes":[80,72,89,83,73,67,65,76],"value":"PHYSICAL"},
 {"hash":256297011,"name":"tformfixturewizard.bmodes.caption","sourcebytes":[77,79,68,69,83,32,97,110,100,32,67,72,65,78,78,69,76,83],"value":"MODES and CHANNELS"},

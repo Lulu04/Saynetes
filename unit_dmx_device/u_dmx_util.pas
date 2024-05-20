@@ -33,7 +33,7 @@ uses
   function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
 
   // fill a TImage with an image according an TFixtureType passed as parameter
-  procedure ShowFixtureImage( aImage:TImage; aFT:TFixtureType );
+  procedure ShowFixtureImage(aImage: TImage; aFT: TFixtureType);
   procedure ShowFixtureImage(aImage: TImage; const aFixtureLocation: TFixtureLibraryLocation);
 
   function DMXCursorImageFileNameFor(aCT: TChanneltype): string;

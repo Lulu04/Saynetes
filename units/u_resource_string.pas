@@ -12,7 +12,7 @@ resourcestring
   SProgramVersion='Program version';
   SWrittenBy='Written by';
   SCredits='Credits';
-  SIconAppBy='Icon application by';
+  SIconAppBy='Application icon by';
 
   SEditMode='EDIT MODE';
   SShowMode='SHOW MODE';
@@ -55,6 +55,7 @@ resourcestring
   SAdd='Add';
   SDelete='Delete';
   SModify='Modify';
+  SEdit='Edit';
   SRename='Rename';
   SUpdate='Update';
   SDefault='Default';
@@ -65,6 +66,9 @@ resourcestring
   SContinue='Continue';
   SCreateSequence='Create sequence';
   SDescription='Description';
+  SExtra='Extra';
+  SSwitchers='Switchers';
+  sAddNewSwitcher='Add new switcher';
   SNewName='New name:';
   SNewDescription='New description:';
   SSequenceName='Sequence name';
@@ -85,6 +89,13 @@ resourcestring
 
   SAnErrorOccurredWhileRemovingTheFileFromDisk='An error occurred while removing the file from disk';
 
+  SHaveRangeError='have dmx range error';
+  SThisModeIsEmpty='This mode is empty or have only virtual channel';
+  SErrorOnName='Error on name';
+  SDefinedButNotUsed='defined but not used';
+  SMode='Mode';
+  SVirtualChannel='Virtual channel';
+  SSubChannel='Sub-channel';
   SChannel='Channel';
   SChannels='channels';
   SChannels_='Channels';
@@ -428,7 +439,7 @@ resourcestring
   SCanNotOpenTheFile='Can not open the file';
   STheFileIsCorrupted='The file is corrupted...';
 
-  SCreateNewChannel='Create new channel';
+  SCreateNew='Create new';
   SNameAlreadyUsed='name already used';
   SName='Name';
   SAskDeleteThisLink='Delete this link ?';
@@ -438,6 +449,8 @@ resourcestring
   SSaveTheChangeBeforeQuit='Save the change before quit?';
   SUnableToLoadFixtureData='Unable to load fixture data...';
   SOr='or';
+  SEditSwitcher='Edit switcher';
+  SAddVirtualChannelToMode='Add virtual channel to mode';
 
 // fixture name
   SOther='Other';

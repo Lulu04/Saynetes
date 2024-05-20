@@ -1,0 +1,125 @@
+object FrameViewSwitcherItems: TFrameViewSwitcherItems
+  Left = 0
+  Height = 21
+  Top = 0
+  Width = 339
+  ClientHeight = 21
+  ClientWidth = 339
+  TabOrder = 0
+  DesignLeft = 576
+  DesignTop = 402
+  object Panel1: TPanel
+    Left = 0
+    Height = 21
+    Top = 0
+    Width = 339
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 21
+    ClientWidth = 339
+    Color = 4345683
+    Font.Color = 15395562
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    OnMouseMove = Panel1MouseMove
+    object BAdd: TSpeedButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 0
+      Height = 22
+      Hint = 'sAddNewSwitcher'
+      Top = -1
+      Width = 22
+      Anchors = [akLeft, akBottom]
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      OnClick = BAddClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object PanelTools: TPanel
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 285
+      Height = 26
+      Top = -3
+      Width = 52
+      Anchors = [akRight]
+      BorderSpacing.Right = 2
+      BevelOuter = bvNone
+      ClientHeight = 26
+      ClientWidth = 52
+      TabOrder = 0
+      Visible = False
+      object BEditSwitcher: TSpeedButton
+        AnchorSideLeft.Control = PanelTools
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 0
+        Height = 24
+        Top = 0
+        Width = 24
+        Images = DataModule1.ImageList1
+        ImageIndex = 6
+        OnClick = BEditSwitcherClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object BDeleteSwitcher: TSpeedButton
+        AnchorSideLeft.Control = BEditSwitcher
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PanelTools
+        Cursor = crHandPoint
+        Left = 29
+        Height = 24
+        Top = 0
+        Width = 24
+        BorderSpacing.Left = 5
+        Images = DataModule1.ImageList1
+        ImageIndex = 2
+        OnClick = BEditSwitcherClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+    object Shape4: TShape
+      AnchorSideLeft.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 1
+      Top = 20
+      Width = 339
+      Anchors = [akLeft, akRight, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+    object Shape5: TShape
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 338
+      Height = 21
+      Top = 0
+      Width = 1
+      Anchors = [akTop, akRight, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 210
+    Top = 4
+  end
+end

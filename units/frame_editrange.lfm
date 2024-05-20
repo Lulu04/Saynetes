@@ -1,0 +1,154 @@
+object FrameEditRange: TFrameEditRange
+  Left = 0
+  Height = 22
+  Top = 0
+  Width = 817
+  ClientHeight = 22
+  ClientWidth = 817
+  TabOrder = 0
+  DesignLeft = 361
+  DesignTop = 306
+  object Panel1: TPanel
+    Left = 0
+    Height = 22
+    Top = 0
+    Width = 817
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 22
+    ClientWidth = 817
+    Color = 4345683
+    Font.Color = 15395562
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 1
+      Height = 15
+      Top = 1
+      Width = 60
+      BorderSpacing.Left = 1
+      BorderSpacing.Top = 1
+      BorderStyle = bsNone
+      Font.Color = clYellow
+      Font.Style = [fsBold]
+      NumbersOnly = True
+      OnEditingDone = Edit1EditingDone
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      AnchorSideLeft.Control = Shape1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 62
+      Height = 15
+      Top = 1
+      Width = 60
+      BorderSpacing.Top = 1
+      BorderStyle = bsNone
+      Font.Color = clYellow
+      Font.Style = [fsBold]
+      NumbersOnly = True
+      OnEditingDone = Edit1EditingDone
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 123
+      Height = 15
+      Top = 1
+      Width = 300
+      BorderSpacing.Top = 1
+      BorderStyle = bsNone
+      TabOrder = 2
+    end
+    object Shape1: TShape
+      AnchorSideLeft.Control = Edit1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 61
+      Height = 22
+      Top = 0
+      Width = 1
+      Anchors = [akTop, akLeft, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+    object Shape2: TShape
+      AnchorSideLeft.Control = Edit2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 122
+      Height = 22
+      Top = 0
+      Width = 1
+      Anchors = [akTop, akLeft, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+    object Shape3: TShape
+      AnchorSideLeft.Control = Edit3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 423
+      Height = 22
+      Top = 0
+      Width = 1
+      Anchors = [akTop, akLeft, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+    object Shape4: TShape
+      AnchorSideLeft.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 1
+      Top = 21
+      Width = 817
+      Anchors = [akLeft, akRight, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+    object Edit4: TEdit
+      AnchorSideLeft.Control = Shape3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 424
+      Height = 15
+      Top = 1
+      Width = 60
+      BorderSpacing.Top = 1
+      BorderStyle = bsNone
+      TabOrder = 3
+    end
+    object Shape5: TShape
+      AnchorSideLeft.Control = Edit4
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 484
+      Height = 22
+      Top = 0
+      Width = 1
+      Anchors = [akTop, akLeft, akBottom]
+      Brush.Style = bsClear
+      Pen.Color = 6710886
+    end
+  end
+end

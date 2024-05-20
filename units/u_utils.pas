@@ -8,6 +8,7 @@ interface
 
 uses
   Classes, SysUtils, ComCtrls, Graphics, LCLType, syncobjs, System.UITypes,
+  StdCtrls, Controls,
   BGRABitmap, BGRABitmapTypes,
   u_common,
   frame_bglvirtualscreen_sequencer,
@@ -168,6 +169,9 @@ function DurationToString(d: single): string;
 function GetLogoImage(aWidth, aHeight: integer): TBGRABitmap;
 function MsgDlgTypeToBGRABitmap(aMsgType: TMsgDlgType; aWidth, aHeight: integer): TBGRABitmap;
 
+procedure DoRedFlashOnEdit(aEdit: TEdit);
+procedure DoRedFlashOnWinControl(aControl: TWinControl);
+
 type
   { TTimedThread }
 
@@ -273,7 +277,7 @@ end;
 
 implementation
 uses VelocityCurve, u_resource_string, u_apputils, LCLIntf, dateutils, Math,
-  utilitaire_bgrabitmap;
+  utilitaire_bgrabitmap, Forms;
 
 
 procedure SequencerToTStrings(aSequencer: TFrameBGLSequencer; aTemp: TStrings);
@@ -507,6 +511,28 @@ begin
   except
     Result := TBGRABitmap.Create(aWidth, aHeight, BGRAPixelTransparent);
   end;
+end;
+
+procedure DoRedFlashOnEdit(aEdit: TEdit);
+var c: TColor;
+begin
+  c := aEdit.Color;
+  aEdit.Color := clRed;
+  Application.ProcessMessages;
+  Sleep(200);
+  aEdit.Color := c;
+  Application.ProcessMessages;
+end;
+
+procedure DoRedFlashOnWinControl(aControl: TWinControl);
+var c: TColor;
+begin
+  c := aControl.Color;
+  aControl.Color := clRed;
+  Application.ProcessMessages;
+  Sleep(200);
+  aControl.Color := c;
+  Application.ProcessMessages;
 end;
 
 function ConstructTSequencerInfoList(const aCmds: TCmdList;

@@ -12,6 +12,16 @@ object FormEditWebLink: TFormEditWebLink
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   LCLVersion = '2.2.6.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 118
+    Top = 0
+    Width = 508
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = 4227327
+    Pen.Width = 2
+  end
   object BCancel: TSpeedButton
     AnchorSideLeft.Side = asrCenter
     AnchorSideRight.Control = Owner

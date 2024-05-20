@@ -28,7 +28,9 @@ uses
 u_apputils, frame_viewfixtureimage, form_changefixtureimage,
 u_edit_singleaction, frame_viewfixtureoverview, frame_editmode,
 form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
-form_editweblink, frame_viewmodeitem, form_defineswitchingchannel;
+form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
+form_selectexistingswitchingchannel, form_defineswitcheritem,
+frame_view_switcheritem, frame_editrange;
 
 {$R *.res}
 

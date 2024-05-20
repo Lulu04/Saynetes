@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="98">
+      <ExcludedOriginals Count="103">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -40,87 +40,92 @@
         <Item15 Value="x"/>
         <Item16 Value="sAdd"/>
         <Item17 Value="ALS - fx"/>
-        <Item18 Value="sAmplitude"/>
-        <Item19 Value="sApply"/>
-        <Item20 Value="sAudioFollower"/>
-        <Item21 Value="sAuthors"/>
-        <Item22 Value="sBegin"/>
-        <Item23 Value="sBrightness max"/>
-        <Item24 Value="sBulb"/>
-        <Item25 Value="sCancel"/>
-        <Item26 Value="sChannels"/>
-        <Item27 Value="sChaser"/>
-        <Item28 Value="sClose"/>
-        <Item29 Value="sConnector"/>
-        <Item30 Value="sCopy"/>
-        <Item31 Value="sCut"/>
-        <Item32 Value="sDelete"/>
-        <Item33 Value="sDescription"/>
-        <Item34 Value="sDimensions"/>
-        <Item35 Value="sDimmer"/>
-        <Item36 Value="sDuration"/>
-        <Item37 Value="sDuration in second"/>
-        <Item38 Value="sEnd"/>
-        <Item39 Value="sFixed color"/>
-        <Item40 Value="sFixed duration"/>
-        <Item41 Value="sFixed intensity"/>
-        <Item42 Value="sFixed value"/>
-        <Item43 Value="sFixture"/>
-        <Item44 Value="sFollow"/>
-        <Item45 Value="sFlame"/>
-        <Item46 Value="sFlash"/>
-        <Item47 Value="sGain"/>
-        <Item48 Value="sLens"/>
-        <Item49 Value="sLevel max"/>
-        <Item50 Value="sLevel min"/>
-        <Item51 Value="sLoop"/>
-        <Item52 Value="sLumens"/>
-        <Item53 Value="sManufacturer"/>
-        <Item54 Value="sMax"/>
-        <Item55 Value="sMax degree"/>
-        <Item56 Value="sMin"/>
-        <Item57 Value="sMin degree"/>
-        <Item58 Value="sname already used"/>
-        <Item59 Value="sName"/>
-        <Item60 Value="sNext"/>
-        <Item61 Value="sNo"/>
-        <Item62 Value="sOk"/>
-        <Item63 Value="sOFF"/>
-        <Item64 Value="sON"/>
-        <Item65 Value="sPaste"/>
-        <Item66 Value="sPitch"/>
-        <Item67 Value="sPlaylist"/>
-        <Item68 Value="sPower"/>
-        <Item69 Value="sPrevious"/>
-        <Item70 Value="sRandom intensity between"/>
-        <Item71 Value="sRandom duration between"/>
-        <Item72 Value="sRandom value between"/>
-        <Item73 Value="sRename"/>
-        <Item74 Value="sReset"/>
-        <Item75 Value="sRGB"/>
-        <Item76 Value="sSave"/>
-        <Item77 Value="second(s)"/>
-        <Item78 Value="sSelection"/>
-        <Item79 Value="sSequence"/>
-        <Item80 Value="sSoften"/>
-        <Item81 Value="sSoften on"/>
-        <Item82 Value="sStop"/>
-        <Item83 Value="sto"/>
-        <Item84 Value="sUpdate"/>
-        <Item85 Value="sVelocity"/>
-        <Item86 Value="sView"/>
-        <Item87 Value="sVolume"/>
-        <Item88 Value="sWait time"/>
-        <Item89 Value="sWatt"/>
-        <Item90 Value="sWebLinks"/>
-        <Item91 Value="sWeight"/>
-        <Item92 Value="sYes"/>
-        <Item93 Value="_"/>
-        <Item94 Value="1/1"/>
-        <Item95 Value="1s"/>
-        <Item96 Value="5s"/>
-        <Item97 Value="10s"/>
-        <Item98 Value="15s"/>
+        <Item18 Value="sAddNewSwitcher"/>
+        <Item19 Value="SAddVirtualChannelToMode"/>
+        <Item20 Value="sAmplitude"/>
+        <Item21 Value="sApply"/>
+        <Item22 Value="sAudioFollower"/>
+        <Item23 Value="sAuthors"/>
+        <Item24 Value="sBegin"/>
+        <Item25 Value="sBrightness max"/>
+        <Item26 Value="sBulb"/>
+        <Item27 Value="sCancel"/>
+        <Item28 Value="sChannels"/>
+        <Item29 Value="sChaser"/>
+        <Item30 Value="sClose"/>
+        <Item31 Value="sConnector"/>
+        <Item32 Value="sCopy"/>
+        <Item33 Value="sCut"/>
+        <Item34 Value="sDelete"/>
+        <Item35 Value="sDescription"/>
+        <Item36 Value="sDimensions"/>
+        <Item37 Value="sDimmer"/>
+        <Item38 Value="sDuration"/>
+        <Item39 Value="sDuration in second"/>
+        <Item40 Value="sEnd"/>
+        <Item41 Value="sExtra"/>
+        <Item42 Value="sFixed color"/>
+        <Item43 Value="sFixed duration"/>
+        <Item44 Value="sFixed intensity"/>
+        <Item45 Value="sFixed value"/>
+        <Item46 Value="sFixture"/>
+        <Item47 Value="sFollow"/>
+        <Item48 Value="sFlame"/>
+        <Item49 Value="sFlash"/>
+        <Item50 Value="sGain"/>
+        <Item51 Value="sLens"/>
+        <Item52 Value="sLevel max"/>
+        <Item53 Value="sLevel min"/>
+        <Item54 Value="sLoop"/>
+        <Item55 Value="sLumens"/>
+        <Item56 Value="sManufacturer"/>
+        <Item57 Value="sMax"/>
+        <Item58 Value="sMax degree"/>
+        <Item59 Value="sMin"/>
+        <Item60 Value="sMin degree"/>
+        <Item61 Value="SModify"/>
+        <Item62 Value="SNameAlreadyUsed"/>
+        <Item63 Value="sName"/>
+        <Item64 Value="sNext"/>
+        <Item65 Value="sNo"/>
+        <Item66 Value="sOk"/>
+        <Item67 Value="sOFF"/>
+        <Item68 Value="sON"/>
+        <Item69 Value="sPaste"/>
+        <Item70 Value="sPitch"/>
+        <Item71 Value="sPlaylist"/>
+        <Item72 Value="sPower"/>
+        <Item73 Value="sPrevious"/>
+        <Item74 Value="sRandom intensity between"/>
+        <Item75 Value="sRandom duration between"/>
+        <Item76 Value="sRandom value between"/>
+        <Item77 Value="sRename"/>
+        <Item78 Value="sReset"/>
+        <Item79 Value="sRGB"/>
+        <Item80 Value="sSave"/>
+        <Item81 Value="second(s)"/>
+        <Item82 Value="sSelection"/>
+        <Item83 Value="sSequence"/>
+        <Item84 Value="sSoften"/>
+        <Item85 Value="sSoften on"/>
+        <Item86 Value="sStop"/>
+        <Item87 Value="sSwitchers"/>
+        <Item88 Value="sto"/>
+        <Item89 Value="sUpdate"/>
+        <Item90 Value="sVelocity"/>
+        <Item91 Value="sView"/>
+        <Item92 Value="sVolume"/>
+        <Item93 Value="sWait time"/>
+        <Item94 Value="sWatt"/>
+        <Item95 Value="sWebLinks"/>
+        <Item96 Value="sWeight"/>
+        <Item97 Value="sYes"/>
+        <Item98 Value="_"/>
+        <Item99 Value="1/1"/>
+        <Item100 Value="1s"/>
+        <Item101 Value="5s"/>
+        <Item102 Value="10s"/>
+        <Item103 Value="15s"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>
@@ -384,7 +389,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="91">
+    <Units Count="95">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -953,8 +958,37 @@
         <Filename Value="units\form_defineswitchingchannel.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormEditSwitchingChannel"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit90>
+      <Unit91>
+        <Filename Value="units\form_selectexistingswitchingchannel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSelectExistingSwitchingChannel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="units\form_defineswitcheritem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDefineSwitcher"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="units\frame_view_switcheritem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameViewSwitcherItems"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="units\frame_editrange.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameEditRange"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit94>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

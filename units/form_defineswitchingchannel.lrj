@@ -1,10 +1,11 @@
 {"version":1,"strings":[
 {"hash":5438844,"name":"tformeditswitchingchannel.caption","sourcebytes":[83,119,105,116,99,104,105,110,103,32,99,104,97,110,110,101,108],"value":"Switching channel"},
-{"hash":162397605,"name":"tformeditswitchingchannel.label1.caption","sourcebytes":[65,100,100,32,115,119,105,116,99,104,105,110,103,32,99,104,97,110,110,101,108,32,116,111,32,109,111,100,101],"value":"Add switching channel to mode"},
+{"hash":230715093,"name":"tformeditswitchingchannel.label1.caption","sourcebytes":[83,65,100,100,86,105,114,116,117,97,108,67,104,97,110,110,101,108,84,111,77,111,100,101],"value":"SAddVirtualChannelToMode"},
 {"hash":5404860,"name":"tformeditswitchingchannel.label5.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":18539123,"name":"tformeditswitchingchannel.label2.caption","sourcebytes":[83,101,108,101,99,116,32,116,104,101,32,117,115,101,100,32,99,104,97,110,110,101,108,115],"value":"Select the used channels"},
+{"hash":66221411,"name":"tformeditswitchingchannel.label2.caption","sourcebytes":[83,101,108,101,99,116,32,116,104,101,32,115,117,98,45,99,104,97,110,110,101,108,115],"value":"Select the sub-channels"},
 {"hash":30811,"name":"tformeditswitchingchannel.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
 {"hash":5404860,"name":"tformeditswitchingchannel.bnew.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":58579114,"name":"tformeditswitchingchannel.label3.caption","sourcebytes":[86,105,114,116,117,97,108,32,110,97,109,101,58],"value":"Virtual name:"},
-{"hash":246040060,"name":"tformeditswitchingchannel.label6.caption","sourcebytes":[110,97,109,101,32,117,115,101,100,32,98,121,32,97,110,111,116,104,101,114,32,99,104,97,110,110,101,108],"value":"name used by another channel"}
+{"hash":70088068,"name":"tformeditswitchingchannel.label6.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
+{"hash":39310131,"name":"tformeditswitchingchannel.label7.caption","sourcebytes":[97,32,115,119,105,116,99,104,105,110,103,32,99,104,97,110,110,101,108,32,109,117,115,116,32,104,97,118,101,32,97,116,32,108,101,97,115,116,32,50,32,115,117,98,45,99,104,97,110,110,101,108,115],"value":"a switching channel must have at least 2 sub-channels"}
 ]}

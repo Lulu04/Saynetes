@@ -8,6 +8,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
   ClientHeight = 343
   ClientWidth = 579
   OnCreate = FormCreate
+  Position = poOwnerFormCenter
   LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 0
@@ -15,7 +16,8 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
     Top = 0
     Width = 579
     Align = alClient
-    BevelColor = 5596778
+    BevelColor = 4227327
+    BevelWidth = 2
     ClientHeight = 343
     ClientWidth = 579
     Color = 4345683
@@ -25,8 +27,8 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       Left = 8
       Height = 20
       Top = 8
-      Width = 221
-      Caption = 'Add switching channel to mode'
+      Width = 197
+      Caption = 'SAddVirtualChannelToMode'
       Font.Color = 15395562
       Font.Height = 20
       Font.Style = [fsBold]
@@ -37,7 +39,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideLeft.Control = Label1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Label1
-      Left = 237
+      Left = 213
       Height = 20
       Top = 8
       Width = 37
@@ -51,12 +53,12 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
     end
     object Label2: TLabel
       AnchorSideLeft.Control = Panel1
-      Left = 11
+      Left = 12
       Height = 20
       Top = 104
-      Width = 161
+      Width = 155
       BorderSpacing.Left = 10
-      Caption = 'Select the used channels'
+      Caption = 'Select the sub-channels'
       Font.Color = 15395562
       Font.Height = 20
       ParentColor = False
@@ -71,7 +73,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       Cursor = crHandPoint
       Left = 249
       Height = 20
-      Top = 312
+      Top = 311
       Width = 80
       Anchors = [akLeft, akBottom]
       AutoSize = True
@@ -85,6 +87,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       Images = DataModule1.ImageList1
       ImageIndex = 3
       Transparent = False
+      OnClick = BOkClick
       ParentFont = False
     end
     object BNew: TSpeedButton
@@ -94,9 +97,9 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 418
+      Left = 417
       Height = 20
-      Top = 203
+      Top = 197
       Width = 150
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -110,11 +113,12 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       Images = DataModule1.ImageList1
       ImageIndex = 0
       Transparent = False
+      OnClick = BNewClick
       ParentFont = False
     end
     object Label3: TLabel
       AnchorSideLeft.Control = Panel1
-      Left = 11
+      Left = 12
       Height = 20
       Top = 61
       Width = 87
@@ -132,10 +136,10 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Label3
       AnchorSideBottom.Side = asrBottom
-      Left = 108
+      Left = 109
       Height = 23
       Top = 58
-      Width = 460
+      Width = 458
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 10
@@ -146,20 +150,20 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideTop.Control = Label2
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = BNew
-      AnchorSideBottom.Control = BOk
-      Left = 11
-      Height = 178
+      AnchorSideBottom.Control = Label7
+      Left = 12
+      Height = 167
       Top = 124
-      Width = 397
+      Width = 395
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 10
-      BorderSpacing.Bottom = 10
       Color = 2896950
       Font.Color = 15395562
       Font.Style = [fsBold]
       ItemHeight = 0
       MultiSelect = True
+      OnSelectionChange = LBSelectionChange
       ParentFont = False
       TabOrder = 1
     end
@@ -168,11 +172,28 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Side = asrBottom
-      Left = 108
+      Left = 109
       Height = 15
       Top = 81
-      Width = 163
-      Caption = 'name used by another channel'
+      Width = 104
+      Caption = 'SNameAlreadyUsed'
+      Font.Color = 6974207
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object Label7: TLabel
+      AnchorSideLeft.Control = LB
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BOk
+      Left = 12
+      Height = 15
+      Top = 291
+      Width = 286
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Bottom = 5
+      Caption = 'a switching channel must have at least 2 sub-channels'
       Font.Color = 6974207
       ParentColor = False
       ParentFont = False

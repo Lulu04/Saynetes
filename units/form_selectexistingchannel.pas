@@ -29,7 +29,7 @@ type
     procedure SetModeName(AValue: string);
 
   public
-    // contains the names of the channels to re-use, in case of user click 'Add selected' button
+    // contains the names of the channels to re-use, in case of user click 'Add existing'
     UseExistingNames: TStringArray;
 
     procedure FillWith(p: PFixLibAvailableChannels; const aChannelNamesAlreadyUsedByMode: TStringArray);
@@ -68,7 +68,7 @@ end;
 procedure TFormSelectExistingChannel.FormCreate(Sender: TObject);
 begin
   // manual translation
-  BCreateNew.Caption := SCreateNewChannel;
+  BCreateNew.Caption := SCreateNew;
 end;
 
 procedure TFormSelectExistingChannel.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);

@@ -7,7 +7,9 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
   Spin, Grids, Buttons, LCLTranslator, LCLType,
-  u_list_dmxuniverse, frame_cb_channeltype, u_common, u_notebook_util;
+  u_list_dmxuniverse, frame_cb_channeltype, u_common, u_notebook_util,
+  frame_editrange;
+
 
 type
 
@@ -18,32 +20,55 @@ type
     BCancel: TSpeedButton;
     Edit1: TEdit;
     Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     NB: TNotebook;
     PageCustom: TPage;
     PagePreset: TPage;
     Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Panel7: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
+    SB: TScrollBox;
     SE1: TSpinEdit;
-    SG: TStringGrid;
+    Shape2: TShape;
+    Shape3: TShape;
+    Shape4: TShape;
+    Splitter1: TSplitter;
     procedure BOKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
-    procedure SGSelectCell(Sender: TObject; aCol, aRow: Integer; var CanSelect: Boolean);
-    procedure SGSelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
-    procedure SGUTF8KeyPress(Sender: TObject; var UTF8Key: TUTF8Char);
-    procedure SGValidateEntry(Sender: TObject; aCol, aRow: Integer; const OldValue: string; var NewValue: String);
+    procedure Splitter1Moved(Sender: TObject);
   private
     CheckedLabelManager: TCheckedLabelManager;
     FrameCBChannelType1, FrameCBChannelType2: TFrameCBChannelType;
     FSelectedChannelType: TChannelType;
     procedure ProcessChannelTypeChangeEvent(Sender: TObject);
+  private
+    FLines: array of TFrameEditRange;
+    FCounterForLineNames: integer;
+    FLockOnBeginEndValueChange: boolean;
+    procedure AdjustCellsWidth;
+    procedure AdjustCellsHeight;
+    procedure ProcessLineHeightChangeEvent(Sender: TObject);
+    procedure ProcessLineBeginEndChangeEvent(Sender: TObject);
+    procedure DoAddLine;
+    procedure DoDeleteLine(aIndex: integer);
+    procedure DoDeleteAllLines;
   private
     FExistingChannels: PFixLibAvailableChannels;
     FChannelDef: TFixLibAvailableChannel;
@@ -71,11 +96,16 @@ begin
   // manual translation
   BOK.Caption := sOk;
   BCancel.Caption := sCancel;
-  Label1.Caption := SCreateNewChannel;
+  Label1.Caption := SCreateNew;
   Label2.Caption := SName;
-  SG.Columns.Items[0].Title.Caption := SMin;
-  SG.Columns.Items[1].Title.Caption := SMax;
-  SG.Columns.Items[2].Title.Caption := SDescription;
+  Label5.Caption := SNameAlreadyUsed;
+
+
+  Label7.Caption := SMin;
+  Label8.Caption := SMax;
+  Label9.Caption := SDescription;
+  Label11.Caption := SExtra;
+  Label10.Caption := SSwitchers;
 
   FrameCBChannelType1 := TFrameCBChannelType.Create(Self);
   FrameCBChannelType1.Name := 'FrameCBChannelType1';
@@ -94,9 +124,8 @@ begin
   FrameCBChannelType2.OnChange := @ProcessChannelTypeChangeEvent;
   FrameCBChannelType2.CB.DropDownCount := 20;
 
-  // force first plage
-  SG.Cells[0,1] := '0';
-  SG.Cells[1,1] := '255';
+  // add the first line
+  DoAddLine;
 
   CheckedLabelManager := TCheckedLabelManager.Create;
   CheckedLabelManager.CaptureLabelClick(Label3);
@@ -116,110 +145,137 @@ begin
     else NB.PageIndex := NB.IndexOf(PageCustom);
 end;
 
-procedure TFormDefineNewChannel.SGSelectCell(Sender: TObject; aCol,
-  aRow: Integer; var CanSelect: Boolean);
+procedure TFormDefineNewChannel.Splitter1Moved(Sender: TObject);
 begin
-  // avoid the first cell edition
-  CanSelect := not((aCol = 0) and (aRow = 1));
-end;
-
-procedure TFormDefineNewChannel.SGSelectEditor(Sender: TObject; aCol,
-  aRow: Integer; var Editor: TWinControl);
-begin
-  // set the background of the editor
-  Editor.Color := RGBToColor(20,20,20);
-end;
-
-procedure TFormDefineNewChannel.SGUTF8KeyPress(Sender: TObject; var UTF8Key: TUTF8Char);
-begin
-
-  if (SG.Col in [0..1]) then begin // min max -> only number
-    if Length(UTF8Key) <> 1 then UTF8Key := ''
-      else if not (UTF8Key[1] in ['0'..'9',chr(VK_BACK)]) then UTF8Key := '';
-  end;
-
-  if SG.Col = 2 then begin  // only letter and ,%^#-_+
-    if Length(UTF8Key) <> 1 then UTF8Key := ''
-      else if not (UTF8Key[1] in ['a'..'z', 'A'..'Z', '0'..'9', ' ', '.', ',', '%', '^', '#', '-', '_', '+',
-                                  '(', ')', '[', ']', '{', '}', chr(VK_BACK)]) then UTF8Key := '';
-  end;
-end;
-
-procedure TFormDefineNewChannel.SGValidateEntry(Sender: TObject; aCol,
-  aRow: Integer; const OldValue: string; var NewValue: String);
-var v, v1: integer;
-  procedure NeedRowAfter(aRowIndex: integer);
-  begin
-    if aRowIndex = SG.RowCount-1 then
-      SG.RowCount := SG.RowCount + 1;
-  end;
-  procedure SetAsLastRow(aRowIndex: integer);
-  begin
-    SG.RowCount := aRowIndex + 1;
-  end;
-
-begin
-  if not (aCol in [0..1]) or (aRow = 0) then exit;
-
-  // check if not a number
-  if not TryStrToInt(SG.Cells[aCol, aRow], v) then begin
-    NewValue := OldValue;
-    exit;
-  end;
-{  // check if the number is not in range [0..255]
-  if v < 1 then begin
-    NewValue := '1';
-    exit;
-  end; }
-  if v > 255 then begin
-    NewValue := '255';
-    SetAsLastRow(aRow);
-    exit;
-  end;
-
-  // Min must be equal to previous Max+1
-  if (aCol = 0) and (aRow > 2) then
-    if TryStrToInt(SG.Cells[1, aRow-1], v1) then begin
-      NewValue := (v1+1).ToString;
-      exit;
-    end;
-
-  if (aCol = 1) and (aRow > 0) then begin
-    // Max must be greater or equal to Min
-    if TryStrToInt(SG.Cells[0,aRow], v1) then
-      if v < v1 then begin
-        v := v1;
-        SG.Cells[1,aRow] := v.ToString;
-      end;
-
-    // next Min must be equal to Max+1
-    if v < 255 then begin
-      NeedRowAfter(aRow);
-      SG.Cells[0,aRow+1] := (v+1).ToString;
-      if SG.Cells[1,aRow+1] = '' then begin
-        SG.Cells[1,aRow+1] := '255';
-        SetAsLastRow(aRow+1);
-      end;
-    end else SetAsLastRow(aRow);  // max = 255 -> last row
-  end;
+  AdjustCellsWidth;
 end;
 
 procedure TFormDefineNewChannel.ProcessChannelTypeChangeEvent(Sender: TObject);
 var o: TFrameCBChannelType;
-  readable, extra: string;
+  readable, txt: string;
 begin
   o := Sender as TFrameCBChannelType;
   if o.ItemIndex = -1 then exit;
 
-  o.GetData(FSelectedChannelType, readable, extra);
+  o.GetData(FSelectedChannelType, readable, txt);
 
   if o = FrameCBChannelType1 then begin
     Edit1.Text := readable;
-    SG.RowCount := 2;
-    SG.Cells[0,1] := '0';
-    SG.Cells[1,1] := '255';
-    SG.Cells[2,1] := {readable +} extra;
+
+    if Length(FLines) > 1 then begin
+      DoDeleteAllLines;
+      DoAddLine;
+    end;
+    FLockOnBeginEndValueChange := True;
+    FLines[0].BeginValue := 0;
+    FLines[0].EndValue := 255;
+    FLockOnBeginEndValueChange := False;
+    FLines[0].Description := txt;
+    FLines[0].Extra := '';
   end;
+end;
+
+procedure TFormDefineNewChannel.AdjustCellsWidth;
+var i: integer;
+begin
+  for i:=0 to High(FLines) do begin
+    FLines[i].Edit3.Width := Panel5.Width;
+    FLines[i].FrameSwitcher.Width := Panel6.Width;
+  end;
+end;
+
+procedure TFormDefineNewChannel.AdjustCellsHeight;
+var i: integer;
+begin
+  for i:=1 to High(FLines) do
+    FLines[i].Top := FLines[i-1].Top + FLines[i-1].Height;
+end;
+
+procedure TFormDefineNewChannel.ProcessLineHeightChangeEvent(Sender: TObject);
+begin
+  AdjustCellsHeight;
+end;
+
+procedure TFormDefineNewChannel.ProcessLineBeginEndChangeEvent(Sender: TObject);
+var current, prev, nex: TFrameEditRange;
+  i, v: integer;
+  procedure SetAsLastLine(aIndex: integer);
+  var j: integer;
+  begin
+    for j:= High(FLines) downto aIndex+1 do
+      DoDeleteLine(j);
+  end;
+begin
+  if FLockOnBeginEndValueChange then exit;
+  FLockOnBeginEndValueChange := True;
+
+  current := TFrameEditRange(Sender);
+  i := current.Index;
+  if i = 0 then prev := NIL
+    else prev := FLines[i-1];
+  if i = High(FLines) then nex := NIL
+    else nex := FLines[i+1];
+
+  // Min must be equal to previous Max+1
+  if (prev <> NIL) {and (current.BeginValue <= prev.EndValue)} then
+    current.BeginValue := prev.EndValue + 1;
+
+  // next Min must be equal to Max+1
+  if current.EndValue < 255 then begin
+    if nex = NIL then begin
+      DoAddLine;
+      nex := FLines[i+1];
+    end;
+    nex.BeginValue := current.EndValue + 1;
+    nex.EndValue := 255;
+  end else SetAsLastLine(i);
+
+  FLockOnBeginEndValueChange := False;
+end;
+
+procedure TFormDefineNewChannel.DoAddLine;
+var i: integer;
+begin
+  i := Length(FLines);
+  SetLength(FLines, i+1);
+  FLines[i] := TFrameEditRange.Create(Self);
+  FLines[i].Name := 'Line'+FCounterForLineNames.ToString;
+  FLines[i].Parent := SB;
+  if i = 0 then FLines[i].Top := 0
+    else FLines[i].Top := FLines[i-1].Top + FLines[i-1].Height;
+
+  FLines[i].Width := Panel2.Width;
+  FLines[i].Edit3.Width := Panel5.Width;
+  FLines[i].Edit4.Width := Panel7.Width;
+  FLines[i].FrameSwitcher.Left := Panel6.Left;
+  FLines[i].FrameSwitcher.Width := Panel6.Width;
+
+  FLines[i].OnHeightChange := @ProcessLineHeightChangeEvent;
+  FLines[i].OnBeginEndChange := @ProcessLineBeginEndChangeEvent;
+  FLines[i].Index := i;
+
+  if i = 0 then begin
+    FLines[i].BeginValue := 0;
+    FLines[i].EndValue := 255;
+  end;
+
+  inc(FCounterForLineNames);
+end;
+
+procedure TFormDefineNewChannel.DoDeleteLine(aIndex: integer);
+var i: integer;
+begin
+  FLines[aIndex].Free;
+  Delete(FLines, aIndex, 1);
+  for i:=aIndex to High(FLines) do
+    FLines[i].Index := FLines[i].Index - 1;
+end;
+
+procedure TFormDefineNewChannel.DoDeleteAllLines;
+var i: integer;
+begin
+  for i:=High(FLines) downto 0 do
+    DoDeleteLine(i);
 end;
 
 function TFormDefineNewChannel.ThereIsError: boolean;
@@ -245,14 +301,11 @@ begin
       end;
   end;
 
-  // first begin value must be 0
-  if not TryStrToInt(SG.Cells[0,1], b) then exit(True);
-  if b <> 0 then exit(True);
   // check ranges
   current := 0;
-  for i:=1 to SG.RowCount-1 do begin
-    if not TryStrToInt(SG.Cells[0,i], b) then exit(True);
-    if not TryStrToInt(SG.Cells[1,i], e) then exit(True);
+  for i:=0 to High(FLines) do begin
+    b := FLines[i].BeginValue;
+    e := FLines[i].EndValue;
     if not InRange(b, 0, 255) then exit(True);
     if not InRange(e, 0, 255) then exit(True);
     if b > e then exit(True);
@@ -268,6 +321,7 @@ end;
 procedure TFormDefineNewChannel.EditExistingChannel(p: PFixLibAvailableChannel);
 var i: integer;
   s: string;
+  o: TFrameEditRange;
 begin
   FEditingChannel := True;
   Edit1.Text := p^.NameID;
@@ -275,14 +329,19 @@ begin
   RadioButton2.Checked := True;
   FrameCBChannelType2.SelectedType := p^.ChanType;
   FSelectedChannelType := p^.ChanType;
-  SG.RowCount := Length(p^.Ranges)+1;
+
+  DoDeleteLine(0);
+  FLockOnBeginEndValueChange := True;
   for i:=0 to High(p^.Ranges) do begin
-    SG.Cells[0,i+1] := p^.Ranges[i].BeginValue.ToString;
-    SG.Cells[1,i+1] := p^.Ranges[i].EndValue.ToString;
-    s := p^.Ranges[i].Text;
-    if p^.Ranges[i].Extra <> '' then s := s + ' ' + p^.Ranges[i].Extra;
-    SG.Cells[2,i+1] := s;
+    DoAddLine;
+    o := FLines[i];
+    o.BeginValue := p^.Ranges[i].BeginValue;
+    o.EndValue := p^.Ranges[i].EndValue;
+    o.Description := p^.Ranges[i].Text;
+    o.Extra := p^.Ranges[i].Extra;
+    o.FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
   end;
+  FLockOnBeginEndValueChange := False;
 end;
 
 function TFormDefineNewChannel.GetData: string;
@@ -294,13 +353,15 @@ begin
   FChannelDef.ChanType := FSelectedChannelType;
 
   FChannelDef.Ranges := NIL;
-  for i:=1 to SG.RowCount-1 do begin
-    SetLength(FChannelDef.Ranges, Length(FChannelDef.Ranges)+1);
-    FChannelDef.Ranges[i-1].InitDefault;
-    FChannelDef.Ranges[i-1].BeginValue := SG.Cells[0,i].ToInteger;
-    FChannelDef.Ranges[i-1].EndValue := SG.Cells[1,i].ToInteger;
-    FChannelDef.Ranges[i-1].Text := SG.Cells[2,i];
-    if FChannelDef.Ranges[i-1].EndValue = 255 then break;
+  SetLength(FChannelDef.Ranges, Length(FLines));
+  for i:=0 to High(FLines) do begin
+    FChannelDef.Ranges[i].InitDefault;
+    FChannelDef.Ranges[i].BeginValue := FLines[i].BeginValue;
+    FChannelDef.Ranges[i].EndValue := FLines[i].EndValue;
+    FChannelDef.Ranges[i].Text := FLines[i].Description;
+    FChannelDef.Ranges[i].Extra := FLines[i].Extra;
+    FLines[i].InitRange(@FChannelDef.Ranges[i]);
+    if FChannelDef.Ranges[i].EndValue = 255 then break;
   end;
 
   Result := FChannelDef.SaveToString;

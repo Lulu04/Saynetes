@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":155584866,"name":"tformdefineswitcher.caption","sourcebytes":[78,101,119,32,115,119,105,116,99,104,101,114],"value":"New switcher"},
+{"hash":7611128,"name":"tformdefineswitcher.label4.caption","sourcebytes":[86,105,114,116,117,97,108,32,99,104,97,110,110,101,108,32,116,111,32,115,119,105,116,99,104],"value":"Virtual channel to switch"},
+{"hash":171347532,"name":"tformdefineswitcher.label5.caption","sourcebytes":[84,97,114,103,101,116,32,115,117,98,45,99,104,97,110,110,101,108],"value":"Target sub-channel"},
+{"hash":30811,"name":"tformdefineswitcher.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":127420876,"name":"tformdefineswitcher.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"}
+]}
