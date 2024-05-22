@@ -137,6 +137,9 @@ end;
     Ranges: array of TFixLibSingleRange;
 
     procedure InitDefault;
+    procedure InitAsRed;
+    procedure InitAsGreen;
+    procedure InitAsBlue;
     function SaveToString: string;
     function LoadFromString(const s: string): boolean;
     procedure CopyTo(var aTarget: TFixLibAvailableChannel);
@@ -793,6 +796,48 @@ begin
   NameID := SNotInitialized;
   DefaultValue := 0;
   ChanType := ctConfig;
+end;
+
+procedure TFixLibAvailableChannel.InitAsRed;
+begin
+  InitDefault;
+  NameID := 'Red';
+  ChanType := ctRed;
+  Ranges := NIL;
+  SetLength(Ranges, 1);
+  Ranges[0].InitDefault;
+  Ranges[0].BeginValue := 0;
+  Ranges[0].EndValue := 255;
+  Ranges[0].Text := '0..100%';
+  Ranges[0].Extra := '';
+end;
+
+procedure TFixLibAvailableChannel.InitAsGreen;
+begin
+  InitDefault;
+  NameID := 'Green';
+  ChanType := ctGreen;
+  Ranges := NIL;
+  SetLength(Ranges, 1);
+  Ranges[0].InitDefault;
+  Ranges[0].BeginValue := 0;
+  Ranges[0].EndValue := 255;
+  Ranges[0].Text := '0..100%';
+  Ranges[0].Extra := '';
+end;
+
+procedure TFixLibAvailableChannel.InitAsBlue;
+begin
+  InitDefault;
+  NameID := 'Blue';
+  ChanType := ctBlue;
+  Ranges := NIL;
+  SetLength(Ranges, 1);
+  Ranges[0].InitDefault;
+  Ranges[0].BeginValue := 0;
+  Ranges[0].EndValue := 255;
+  Ranges[0].Text := '0..100%';
+  Ranges[0].Extra := '';
 end;
 
 function TFixLibAvailableChannel.SaveToString: string;

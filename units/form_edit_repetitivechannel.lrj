@@ -1,0 +1,14 @@
+{"version":1,"strings":[
+{"hash":30811,"name":"tformeditrepetitivechannel.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":123771571,"name":"tformeditrepetitivechannel.label1.caption","sourcebytes":[115,65,100,100,82,101,112,101,116,105,116,105,118,101,67,104,97,110,110,101,108,115],"value":"sAddRepetitiveChannels"},
+{"hash":125662840,"name":"tformeditrepetitivechannel.label2.caption","sourcebytes":[85,115,101,32,112,114,101,102,105,120],"value":"Use prefix"},
+{"hash":126668727,"name":"tformeditrepetitivechannel.label3.caption","sourcebytes":[112,114,101,118,105,101,119],"value":"preview"},
+{"hash":128845432,"name":"tformeditrepetitivechannel.label4.caption","sourcebytes":[85,115,101,32,115,117,102,102,105,120],"value":"Use suffix"},
+{"hash":104260184,"name":"tformeditrepetitivechannel.label5.caption","sourcebytes":[83,116,97,114,116,32,105,110,100,101,120],"value":"Start index"},
+{"hash":108005000,"name":"tformeditrepetitivechannel.label6.caption","sourcebytes":[69,110,100,32,105,110,100,101,120],"value":"End index"},
+{"hash":157838021,"name":"tformeditrepetitivechannel.label7.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,98,101,102,111,114,101,32,99,104,97,110,110,101,108,32,110,97,109,101],"value":"index is before channel name"},
+{"hash":30232357,"name":"tformeditrepetitivechannel.label8.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,97,102,116,101,114,32,99,104,97,110,110,101,108,32,110,97,109,101],"value":"index is after channel name"},
+{"hash":109817054,"name":"tformeditrepetitivechannel.label9.caption","sourcebytes":[80,97,116,116,101,114,110],"value":"Pattern"},
+{"hash":25198213,"name":"tformeditrepetitivechannel.label10.caption","sourcebytes":[82,101,100,47,71,114,101,101,110,47,66,108,117,101],"value":"Red/Green/Blue"},
+{"hash":130919973,"name":"tformeditrepetitivechannel.label11.caption","sourcebytes":[82,101,100,47,71,114,101,101,110,47,66,108,117,101,47,87,104,105,116,101],"value":"Red/Green/Blue/White"}
+]}

@@ -14,6 +14,7 @@ type
 
   TFrameEditMode = class(TFrame)
     BAddSwitchingChannel: TSpeedButton;
+    BAddRepetitiveChannel: TSpeedButton;
     BUp: TSpeedButton;
     BDown: TSpeedButton;
     Edit1: TEdit;
@@ -32,12 +33,15 @@ type
     BEditChannel: TSpeedButton;
     BDeleteChannel: TSpeedButton;
     Shape1: TShape;
+    procedure BAddRepetitiveChannelClick(Sender: TObject);
     procedure BAddSwitchingChannelClick(Sender: TObject);
     procedure BDeleteModeClick(Sender: TObject);
     procedure BAddChannelClick(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FrameMouseLeave(Sender: TObject);
     procedure Panel1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+  private
+    procedure ProcessAddRepetitiveChannelEvent(const aChan: TFixLibAvailableChannel);
   private
     FLabelIndexTargetedByPanelTools: integer;
     procedure DoEditChannelFrame(aIndex: integer);
@@ -92,7 +96,7 @@ implementation
 uses Math, form_selectexistingchannel, form_definenewchannel, LCLIntf,
   u_editfixturewizard, u_resource_string, u_helper, u_common,
   u_datamodule, form_defineswitchingchannel,
-  form_selectexistingswitchingchannel, Graphics;
+  form_selectexistingswitchingchannel, form_edit_repetitivechannel, Graphics;
 
 {$R *.lfm}
 
@@ -163,6 +167,23 @@ begin
   FOnHeightChange(Self);
 
   Modified := True;
+end;
+
+procedure TFrameEditMode.BAddRepetitiveChannelClick(Sender: TObject);
+var F: TFormEditRepetitiveChannel;
+begin
+  if HaveErrorOnNameOrShortName then exit;
+
+  F := TFormEditRepetitiveChannel.Create(Nil);
+  F.OnAddChannel := @ProcessAddRepetitiveChannelEvent;
+  try
+    if F.ShowModal = mrOk then begin
+      FOnHeightChange(Self);
+      Modified := True;
+    end;
+  finally
+    F.Free;
+  end;
 end;
 
 procedure TFrameEditMode.BAddChannelClick(Sender: TObject);
@@ -294,6 +315,15 @@ begin
   SetPanelToolPosition(index);
 end;
 
+procedure TFrameEditMode.ProcessAddRepetitiveChannelEvent(const aChan: TFixLibAvailableChannel);
+var i: integer;
+begin
+  i := Length(FExistingChannels^);
+  SetLength(FExistingChannels^, i+1);
+  aChan.CopyTo(FExistingChannels^[i]);
+  DoAddChannelFrame(FExistingChannels^[i].NameID);
+end;
+
 procedure TFrameEditMode.DoAddChannelFrame(const aName: string);
 var i, xx, yy, w: integer;
 begin
@@ -313,7 +343,6 @@ begin
   FChanFrames[i].Init(i, aName);
   FChanFrames[i].OnMouseEnter := @ChanLabelMouseEnter;
   FChanFrames[i].OnMouseLeave := @ChanLabelMouseLeave;
-  FChanFrames[i].Tag := i;
 
   ClientHeight := FChanFrames[i].Top + FChanFrames[i].Height +  // ClientHeight + FChanFrames[i].Height;
                   ScaleDesignToForm(10) + BAddChannel.Height + ScaleDesignToForm(10);
@@ -327,10 +356,9 @@ begin
   h := FChanFrames[aIndex].Height;
   FChanFrames[aIndex].Free;
   Delete(FChanFrames, aIndex, 1);
-  // shift the Top position, Tag and the prefix number of the next labels
+  // shift the Top position and the prefix number of the next labels
   for i:=High(FChanFrames) downto aIndex do begin
     FChanFrames[i].Top := FChanFrames[i].Top - h;
-    FChanFrames[i].Tag := FChanFrames[i].Tag - 1;
     FChanFrames[i].IndexInMode := FChanFrames[i].IndexInMode - 1;
   end;
 
@@ -345,11 +373,14 @@ end;
 
 procedure TFrameEditMode.ChanLabelMouseEnter(Sender: TObject);
 begin
-  SetPanelToolPosition(TFrameViewModeItem(Sender).Tag);
+  SetPanelToolPosition(TFrameViewModeItem(Sender).IndexInMode);
 end;
 
 procedure TFrameEditMode.ChanLabelMouseLeave(Sender: TObject);
+var p: TPoint;
 begin
+  p := PanelTools.ScreenToClient(Mouse.CursorPos);
+  if PanelTools.ClientRect.Contains(p) then exit;
   SetPanelToolPosition(-1);
 end;
 
@@ -387,10 +418,11 @@ procedure TFrameEditMode.ReplaceChannelName(const aOldName, aNewName: string);
 var i: integer;
 begin
   for i:=0 to High(FChanFrames) do
-    if FChanFrames[i].ChanName = aOldName then begin
+    FChanFrames[i].ReplaceChannelName(aOldName, aNewName);
+{    if FChanFrames[i].ChanName = aOldName then begin
       FChanFrames[i].ChanName := aNewName;
       exit;
-    end;
+    end; }
 end;
 
 constructor TFrameEditMode.Create(TheOwner: TComponent);
@@ -401,6 +433,7 @@ begin
   Label6.Caption := SNameAlreadyUsed;
   Label7.Caption := SNameAlreadyUsed;
   Label2.Caption := SName;
+  BAddRepetitiveChannel.Caption := sAddRepetitiveChannels;
 
   BAddSwitchingChannel.ImageIndex := Ord(High(TChannelType))+1;
   BAddSwitchingChannel.ImageWidth := DataModule1.ImageList1.Width;
@@ -606,11 +639,6 @@ begin
   i := FChanFrames[i1].IndexInMode;
   FChanFrames[i1].IndexInMode := FChanFrames[i2].IndexInMode;
   FChanFrames[i2].IndexInMode := i;
-
-  // exchange Tag
-  i := FChanFrames[i1].Tag;
-  FChanFrames[i1].Tag := FChanFrames[i2].Tag;
-  FChanFrames[i2].Tag := i;
 
   // exchange position in list
   o := FChanFrames[i1];
