@@ -1,0 +1,36 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://venuelightingeffects.com/wp-content/uploads/2016/03/Venue_by_Proline_TriStrip3Z_Manual.pdf
+[GENERAL]
+Manufacturer|Venue|Name|TriStrip3Z|Type|19|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1042|Height|60|Depth|138|Weight|2.8|Power|27|Connector|3-pin|Bulb|12x 3W RGB LED|Lumens|2062|LensMinDegree|27.000|LensMaxDegree|27.000
+[CHAN_DEF]
+ID|Red All Zones|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green All Zones|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue All Zones|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Slow..Fast
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~51~Txt~speed from display menu|R2|Begin~52~End~101~Txt~mode OFF|R3|Begin~102~End~152~Txt~mode 1 (fast speed)|R4|Begin~153~End~203~Txt~mode 2 (medium speed)|R5|Begin~204~End~255~Txt~mode 3 (slow speed)
+ID|Color macro|Type|12|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Color macro
+ID|RGB / Auto Mode|Type|0|R1|Begin~0~End~31~Txt~No function~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:Strobe|R2|Begin~32~End~63~Txt~Pulse effect 0-100%~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R3|Begin~64~End~95~Txt~Pulse effect 100-0%~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R4|Begin~96~End~114~Txt~Pulse effect 100-0-100%~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R5|Begin~115~End~122~Txt~Auto program 1~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R6|Begin~123~End~130~Txt~Auto program 2~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R7|Begin~131~End~138~Txt~Auto program 3~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R8|Begin~139~End~146~Txt~Auto program 4~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R9|Begin~147~End~154~Txt~Auto program 5~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R10|Begin~155~End~162~Txt~Auto program 6~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R11|Begin~163~End~170~Txt~Auto program 7~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R12|Begin~171~End~178~Txt~Auto program 8~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R13|Begin~179~End~186~Txt~Auto program 9~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R14|Begin~187~End~194~Txt~Auto program 10~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R15|Begin~195~End~202~Txt~Auto program 11~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R16|Begin~203~End~210~Txt~Auto program 12~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R17|Begin~211~End~218~Txt~Auto program 13~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R18|Begin~219~End~226~Txt~Auto program 14~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:RGB / Auto Speed|R19|Begin~227~End~255~Txt~Sound program~Switch1~RGB_AutoSpeed/SoundSensitivity/Strobe:Sound sensitivity
+ID|Red Zone 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Zone 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Zone 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Zone 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Zone 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Zone 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Zone 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Zone 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Zone 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB / Auto Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound sensitivity|Type|29|R1|Begin~0~End~10~Txt~OFF|R2|Begin~11~End~255~Txt~Sound sensitivity control
+[END_CHAN_DEF]
+[MODES]
+Name|3 channel|ShortName|3ch|Content|Red All Zones~Green All Zones~Blue All Zones
+Name|6 channel|ShortName|6ch|Content|Red All Zones~Green All Zones~Blue All Zones~Master dimmer~Strobe~Dimmer Speed
+Name|8 channel|ShortName|8ch|Content|Red All Zones~Green All Zones~Blue All Zones~Color macro~RGB_AutoSpeed/SoundSensitivity/Strobe:Strobe;RGB / Auto Speed;Sound sensitivity~RGB / Auto Mode~Master dimmer~Dimmer Speed
+Name|9 channel|ShortName|9ch|Content|Red Zone 1~Green Zone 1~Blue Zone 1~Red Zone 2~Green Zone 2~Blue Zone 2~Red Zone 3~Green Zone 3~Blue Zone 3
+Name|14 channel|ShortName|14ch|Content|Red Zone 1~Green Zone 1~Blue Zone 1~Red Zone 2~Green Zone 2~Blue Zone 2~Red Zone 3~Green Zone 3~Blue Zone 3~Color macro~RGB_AutoSpeed/SoundSensitivity/Strobe:Strobe;RGB / Auto Speed;Sound sensitivity~RGB / Auto Mode~Master dimmer~Dimmer Speed
+[END_MODES]

@@ -1,0 +1,198 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://pub.tmb.com/solaris/pdf/Solaris-Flare-Manual.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=qTn9OWkmF9Y|LinkType3|video|Url3|https://www.youtube.com/watch?v=dUtpecqEQRA
+[GENERAL]
+Manufacturer|TMB|Name|Solaris Flare|Type|28|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|210|Height|232|Depth|497|Weight|9.5|Power|1000|Connector|5-pin|Bulb|96 10W RGBW Cree LEDs|LensMinDegree|36.000|LensMaxDegree|36.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine|Type|13
+ID|Flash Intensity|Type|1|R1|Begin~0~End~5~Txt~OFF|R2|Begin~6~End~255~Txt~0..100%
+ID|Flash duration|Type|28|R1|Begin~0~End~254~Txt~0…650ms|R2|Begin~255~End~255~Txt~HYPER
+ID|Flash rate|Type|6|R1|Begin~0~End~5~Txt~OFF|R2|Begin~6~End~255~Txt~Strobe 0.5…25Hz
+ID|Flash Effects|Type|0|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~5~Txt~Wash Override (only in RGB/RGBW Strobe modes)|R3|Begin~6~End~42~Txt~Ramp up strobe|R4|Begin~43~End~85~Txt~Ramp down strobe|R5|Begin~86~End~128~Txt~Ramp up and down strobe|R6|Begin~129~End~171~Txt~Random strobe|R7|Begin~172~End~214~Txt~Lightning strobe effect|R8|Begin~215~End~240~Txt~Spikes strobe effect|R9|Begin~241~End~245~Txt~Burst strobe effect (use rate at full)|R10|Begin~246~End~250~Txt~Meltdown: Random Pixels with solid background|R11|Begin~251~End~255~Txt~Meltdown: Random pixels with burst background
+ID|Red strobe|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green strobe|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue strobe|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White strobe|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 5 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 5 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 5 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 6 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 6 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 6 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 5 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 5 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 5 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 6 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 6 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 6 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 5 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 5 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 5 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 6 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 6 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 6 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 7 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 7 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 7 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 8 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 8 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 8 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 9 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 9 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 9 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 10 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 10 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 10 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 11 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 11 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 11 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 12 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 12 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 12 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|1-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|2V-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|2H-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|3-Pixel 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|4-Pixel 4 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 4 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 5 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6V-Pixel 6 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 4 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 5 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|6H-Pixel 6 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 4 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 5 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 6 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 7 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 8 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 9 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 10 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 11 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|12-Pixel 12 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Basic RGB 8bit|ShortName|RGB8bit|Content|Red~Green~Blue
+Name|Basic RGB 16bit mode|ShortName|RGB16bit|Content|Red~Red fine~Green~Green fine~Blue~Blue fine
+Name|Basic RGBW 8bit|ShortName|RGBW8bit|Content|Red~Green~Blue~White
+Name|Basic RGBW 16bit|ShortName|RGBW16bit|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|Strobe Only|ShortName|strobe|Content|Flash Intensity~Flash duration~Flash rate~Flash Effects
+Name|RGB Strobe|ShortName|RGBstrobe|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects
+Name|RGBW Strobe|ShortName|RGBWstrobe|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects
+Name|Advanced RGB Strobe 1-Pixel|ShortName|RGBstrobe1pix|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~1-Pixel Red~1-Pixel Green~1-Pixel Blue
+Name|Advanced RGB Strobe 2V-Pixel|ShortName|RGBstrobe2pixV|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~2V-Pixel 1 Red~2V-Pixel 1 Green~2V-Pixel 1 Blue~2V-Pixel 2 Red~2V-Pixel 2 Green~2V-Pixel 2 Blue
+Name|Advanced RGB Strobe 2H-Pixel|ShortName|RGBstrobe2pixH|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~2H-Pixel 1 Red~2H-Pixel 1 Green~2H-Pixel 1 Blue~2H-Pixel 2 Red~2H-Pixel 2 Green~2H-Pixel 2 Blue
+Name|Advanced RGB Strobe 3-Pixel|ShortName|RGBstrobe3pix|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~3-Pixel 1 Red~3-Pixel 1 Green~3-Pixel 1 Blue~3-Pixel 2 Red~3-Pixel 2 Green~3-Pixel 2 Blue~3-Pixel 3 Red~3-Pixel 3 Green~3-Pixel 3 Blue
+Name|Advanced RGB Strobe 4-Pixel|ShortName|RGBstrobe4pix|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~4-Pixel 1 Red~4-Pixel 1 Green~4-Pixel 1 Blue~4-Pixel 2 Red~4-Pixel 2 Green~4-Pixel 2 Blue~4-Pixel 3 Red~4-Pixel 3 Green~4-Pixel 3 Blue~4-Pixel 4 Red~4-Pixel 4 Green~4-Pixel 4 Blue
+Name|Advanced RGB Strobe 6V-Pixel|ShortName|RGBstrobe6pixV|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~6V-Pixel 1 Red~6V-Pixel 1 Green~6V-Pixel 1 Blue~6V-Pixel 2 Red~6V-Pixel 2 Green~6V-Pixel 2 Blue~6V-Pixel 3 Red~6V-Pixel 3 Green~6V-Pixel 3 Blue~6V-Pixel 4 Red~6V-Pixel 4 Green~6V-Pixel 4 Blue~6V-Pixel 5 Red~6V-Pixel 5 Green~6V-Pixel 5 Blue~6V-Pixel 6 Red~6V-Pixel 6 Green~6V-Pixel 6 Blue
+Name|Advanced RGB Strobe 6H-Pixel|ShortName|RGBstrobe6pixH|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~6H-Pixel 1 Red~6H-Pixel 1 Green~6H-Pixel 1 Blue~6H-Pixel 2 Red~6H-Pixel 2 Green~6H-Pixel 2 Blue~6H-Pixel 3 Red~6H-Pixel 3 Green~6H-Pixel 3 Blue~6H-Pixel 4 Red~6H-Pixel 4 Green~6H-Pixel 4 Blue~6H-Pixel 5 Red~6H-Pixel 5 Green~6H-Pixel 5 Blue~6H-Pixel 6 Red~6H-Pixel 6 Green~6H-Pixel 6 Blue
+Name|Advanced RGB Strobe 12-Pixel|ShortName|RGBstrobe12pix|Content|Red strobe~Green strobe~Blue strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~12-Pixel 1 Red~12-Pixel 1 Green~12-Pixel 1 Blue~12-Pixel 2 Red~12-Pixel 2 Green~12-Pixel 2 Blue~12-Pixel 3 Red~12-Pixel 3 Green~12-Pixel 3 Blue~12-Pixel 4 Red~12-Pixel 4 Green~12-Pixel 4 Blue~12-Pixel 5 Red~12-Pixel 5 Green~12-Pixel 5 Blue~12-Pixel 6 Red~12-Pixel 6 Green~12-Pixel 6 Blue~12-Pixel 7 Red~12-Pixel 7 Green~12-Pixel 7 Blue~12-Pixel 8 Red~12-Pixel 8 Green~12-Pixel 8 Blue~12-Pixel 9 Red~12-Pixel 9 Green~12-Pixel 9 Blue~12-Pixel 10 Red~12-Pixel 10 Green~12-Pixel 10 Blue~12-Pixel 11 Red~12-Pixel 11 Green~12-Pixel 11 Blue~12-Pixel 12 Red~12-Pixel 12 Green~12-Pixel 12 Blue
+Name|Advanced RGBW Strobe 1-Pixel|ShortName|RGBWstrobe1pix|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~1-Pixel 1 Red~1-Pixel 1 Green~1-Pixel 1 Blue~1-Pixel 1 White
+Name|Advanced RGBW Strobe 2V-Pixel|ShortName|RGBWstrobe2pixV|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~2V-Pixel 1 Red~2V-Pixel 1 Green~2V-Pixel 1 Blue~2V-Pixel 1 White~2V-Pixel 2 Red~2V-Pixel 2 Green~2V-Pixel 2 Blue~2V-Pixel 2 White
+Name|Advanced RGBW Strobe 2H-Pixel|ShortName|RGBWstrobe2pixH|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~2H-Pixel 1 Red~2H-Pixel 1 Green~2H-Pixel 1 Blue~2H-Pixel 1 White~2H-Pixel 2 Red~2H-Pixel 2 Green~2H-Pixel 2 Blue~2H-Pixel 2 White
+Name|Advanced RGBW Strobe 3-Pixel|ShortName|RGBWstrobe3pix|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~3-Pixel 1 Red~3-Pixel 1 Green~3-Pixel 1 Blue~3-Pixel 1 White~3-Pixel 2 Red~3-Pixel 2 Green~3-Pixel 2 Blue~3-Pixel 2 White~3-Pixel 3 Red~3-Pixel 3 Green~3-Pixel 3 Blue~3-Pixel 3 White
+Name|Advanced RGBW Strobe 4-Pixel|ShortName|RGBWstrobe4pix|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~4-Pixel 1 Red~4-Pixel 1 Green~4-Pixel 1 Blue~4-Pixel 1 White~4-Pixel 2 Red~4-Pixel 2 Green~4-Pixel 2 Blue~4-Pixel 2 White~4-Pixel 3 Red~4-Pixel 3 Green~4-Pixel 3 Blue~4-Pixel 3 White~4-Pixel 4 Red~4-Pixel 4 Green~4-Pixel 4 Blue~4-Pixel 4 White
+Name|Advanced RGBW Strobe 6V-Pixel|ShortName|RGBWstrobe6pixV|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~6V-Pixel 1 Red~6V-Pixel 1 Green~6V-Pixel 1 Blue~6V-Pixel 1 White~6V-Pixel 2 Red~6V-Pixel 2 Green~6V-Pixel 2 Blue~6V-Pixel 2 White~6V-Pixel 3 Red~6V-Pixel 3 Green~6V-Pixel 3 Blue~6V-Pixel 3 White~6V-Pixel 4 Red~6V-Pixel 4 Green~6V-Pixel 4 Blue~6V-Pixel 4 White~6V-Pixel 5 Red~6V-Pixel 5 Green~6V-Pixel 5 Blue~6V-Pixel 5 White~6V-Pixel 6 Red~6V-Pixel 6 Green~6V-Pixel 6 Blue~6V-Pixel 6 White
+Name|Advanced RGBW Strobe 6H-Pixel|ShortName|RGBWstrobe6pixH|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~6H-Pixel 1 Red~6H-Pixel 1 Green~6H-Pixel 1 Blue~6H-Pixel 1 White~6H-Pixel 2 Red~6H-Pixel 2 Green~6H-Pixel 2 Blue~6H-Pixel 2 White~6H-Pixel 3 Red~6H-Pixel 3 Green~6H-Pixel 3 Blue~6H-Pixel 3 White~6H-Pixel 4 Red~6H-Pixel 4 Green~6H-Pixel 4 Blue~6H-Pixel 4 White~6H-Pixel 5 Red~6H-Pixel 5 Green~6H-Pixel 5 Blue~6H-Pixel 5 White~6H-Pixel 6 Red~6H-Pixel 6 Green~6H-Pixel 6 Blue~6H-Pixel 6 White
+Name|Advanced RGBW Strobe 12-Pixel|ShortName|RGBWstrobe12pix|Content|Red strobe~Green strobe~Blue strobe~White strobe~Flash Intensity~Flash duration~Flash rate~Flash Effects~12-Pixel 1 Red~12-Pixel 1 Green~12-Pixel 1 Blue~12-Pixel 1 White~12-Pixel 2 Red~12-Pixel 2 Green~12-Pixel 2 Blue~12-Pixel 2 White~12-Pixel 3 Red~12-Pixel 3 Green~12-Pixel 3 Blue~12-Pixel 3 White~12-Pixel 4 Red~12-Pixel 4 Green~12-Pixel 4 Blue~12-Pixel 4 White~12-Pixel 5 Red~12-Pixel 5 Green~12-Pixel 5 Blue~12-Pixel 5 White~12-Pixel 6 Red~12-Pixel 6 Green~12-Pixel 6 Blue~12-Pixel 6 White~12-Pixel 7 Red~12-Pixel 7 Green~12-Pixel 7 Blue~12-Pixel 7 White~12-Pixel 8 Red~12-Pixel 8 Green~12-Pixel 8 Blue~12-Pixel 8 White~12-Pixel 9 Red~12-Pixel 9 Green~12-Pixel 9 Blue~12-Pixel 9 White~12-Pixel 10 Red~12-Pixel 10 Green~12-Pixel 10 Blue~12-Pixel 10 White~12-Pixel 11 Red~12-Pixel 11 Green~12-Pixel 11 Blue~12-Pixel 11 White~12-Pixel 12 Red~12-Pixel 12 Green~12-Pixel 12 Blue~12-Pixel 12 White
+[END_MODES]
