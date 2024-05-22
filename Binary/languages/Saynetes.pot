@@ -332,6 +332,38 @@ msgid ""
 "The last color calculated by the effect is kept."
 msgstr ""
 
+#: tformeditrepetitivechannel.label2.caption
+msgid "Use prefix"
+msgstr ""
+
+#: tformeditrepetitivechannel.label3.caption
+msgid "preview"
+msgstr ""
+
+#: tformeditrepetitivechannel.label4.caption
+msgid "Use suffix"
+msgstr ""
+
+#: tformeditrepetitivechannel.label5.caption
+msgid "Start index"
+msgstr ""
+
+#: tformeditrepetitivechannel.label6.caption
+msgid "End index"
+msgstr ""
+
+#: tformeditrepetitivechannel.label7.caption
+msgid "index is before channel name"
+msgstr ""
+
+#: tformeditrepetitivechannel.label8.caption
+msgid "index is after channel name"
+msgstr ""
+
+#: tformeditrepetitivechannel.label9.caption
+msgid "Pattern"
+msgstr ""
+
 #: tformeditsingleaction.bok.caption
 msgid "Apply change"
 msgstr ""
@@ -1947,6 +1979,10 @@ msgctxt "tframeviewprojector.speedbutton5.hint"
 msgid "Shutdown all lights."
 msgstr ""
 
+#: tframeviewswitcheritems.bcopyprevious.hint
+msgid "Copy previous Switcher"
+msgstr ""
+
 #: tframeviewtoplist.miduplicate.caption
 msgid "Duplicate"
 msgstr ""
@@ -2028,6 +2064,11 @@ msgstr ""
 
 #: u_resource_string.saddnewswitcher
 msgid "Add new switcher"
+msgstr ""
+
+#: u_resource_string.saddrepetitivechannels
+msgctxt "u_resource_string.saddrepetitivechannels"
+msgid "Add repetitive channels"
 msgstr ""
 
 #: u_resource_string.saddthissequence

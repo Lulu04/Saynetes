@@ -375,6 +375,38 @@ msgstr ""
 "Stoppe un effet RVB sur les appareils sélectionnés.\n"
 "La dernière couleur calculée par l'effet est gardée."
 
+#: tformeditrepetitivechannel.label2.caption
+msgid "Use prefix"
+msgstr "Utiliser le préfixe"
+
+#: tformeditrepetitivechannel.label3.caption
+msgid "preview"
+msgstr "aperçu"
+
+#: tformeditrepetitivechannel.label4.caption
+msgid "Use suffix"
+msgstr "Utiliser le suffixe"
+
+#: tformeditrepetitivechannel.label5.caption
+msgid "Start index"
+msgstr "Index de départ"
+
+#: tformeditrepetitivechannel.label6.caption
+msgid "End index"
+msgstr "Index de fin"
+
+#: tformeditrepetitivechannel.label7.caption
+msgid "index is before channel name"
+msgstr "placer l'index avant le nom de canal"
+
+#: tformeditrepetitivechannel.label8.caption
+msgid "index is after channel name"
+msgstr "placer l'index après le nom du canal"
+
+#: tformeditrepetitivechannel.label9.caption
+msgid "Pattern"
+msgstr "Schéma"
+
 #: tformeditsingleaction.bok.caption
 msgid "Apply change"
 msgstr "Appliquer les changements"
@@ -2036,6 +2068,10 @@ msgctxt "tframeviewprojector.speedbutton5.hint"
 msgid "Shutdown all lights."
 msgstr "Éteint toutes les lumières."
 
+#: tframeviewswitcheritems.bcopyprevious.hint
+msgid "Copy previous Switcher"
+msgstr "Copier le commutateur précédent"
+
 #: tframeviewtoplist.miduplicate.caption
 msgid "Duplicate"
 msgstr "Dupliquer"
@@ -2118,6 +2154,11 @@ msgstr "Ajouter une action"
 #: u_resource_string.saddnewswitcher
 msgid "Add new switcher"
 msgstr "Ajouter un commutateur"
+
+#: u_resource_string.saddrepetitivechannels
+msgctxt "u_resource_string.saddrepetitivechannels"
+msgid "Add repetitive channels"
+msgstr "Ajouter des canaux répétitifs"
 
 #: u_resource_string.saddthissequence
 msgctxt "u_resource_string.saddthissequence"

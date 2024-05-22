@@ -65,6 +65,7 @@ type
     procedure AdjustCellsWidth;
     procedure AdjustCellsHeight;
     procedure ProcessLineHeightChangeEvent(Sender: TObject);
+    procedure ProcessCopyPreviousSwitcherEvent(Sender: TObject);
     procedure ProcessLineBeginEndChangeEvent(Sender: TObject);
     procedure DoAddLine;
     procedure DoDeleteLine(aIndex: integer);
@@ -196,6 +197,15 @@ begin
   AdjustCellsHeight;
 end;
 
+procedure TFormDefineNewChannel.ProcessCopyPreviousSwitcherEvent(Sender: TObject);
+var cur, prev: TFrameEditRange;
+begin
+  cur := TFrameEditRange(Sender);
+  if cur.Index = 0 then exit;
+  prev := FLines[cur.Index-1];
+  cur.FrameSwitcher.InitFromText(prev.FrameSwitcher.ToText);
+end;
+
 procedure TFormDefineNewChannel.ProcessLineBeginEndChangeEvent(Sender: TObject);
 var current, prev, nex: TFrameEditRange;
   i, v: integer;
@@ -251,6 +261,7 @@ begin
   FLines[i].FrameSwitcher.Width := Panel6.Width;
 
   FLines[i].OnHeightChange := @ProcessLineHeightChangeEvent;
+  FLines[i].OnCopyPreviousSwitcher := @ProcessCopyPreviousSwitcherEvent;
   FLines[i].OnBeginEndChange := @ProcessLineBeginEndChangeEvent;
   FLines[i].Index := i;
 
