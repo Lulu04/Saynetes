@@ -115,6 +115,26 @@ object FrameViewSwitcherItems: TFrameViewSwitcherItems
       Brush.Style = bsClear
       Pen.Color = 6710886
     end
+    object BCopyPrevious: TSpeedButton
+      AnchorSideLeft.Control = BAdd
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 27
+      Height = 22
+      Hint = 'Copy previous Switcher'
+      Top = -1
+      Width = 22
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Left = 5
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 20
+      OnClick = BCopyPreviousClick
+      ShowHint = True
+      ParentShowHint = False
+    end
   end
   object Timer1: TTimer
     Interval = 100

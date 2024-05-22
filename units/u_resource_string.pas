@@ -108,6 +108,7 @@ resourcestring
   SRed='Red';
   SGreen='Green';
   SBlue='Blue';
+  sAddRepetitiveChannels='Add repetitive channels';
 
   SManufacturer='Manufacturer';
   SAuthors='Authors';

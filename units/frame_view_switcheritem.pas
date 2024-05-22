@@ -13,6 +13,7 @@ type
   { TFrameViewSwitcherItems }
 
   TFrameViewSwitcherItems = class(TFrame)
+    BCopyPrevious: TSpeedButton;
     BDeleteSwitcher: TSpeedButton;
     BEditSwitcher: TSpeedButton;
     Panel1: TPanel;
@@ -22,10 +23,12 @@ type
     Shape5: TShape;
     Timer1: TTimer;
     procedure BAddClick(Sender: TObject);
+    procedure BCopyPreviousClick(Sender: TObject);
     procedure BEditSwitcherClick(Sender: TObject);
     procedure Panel1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure Timer1Timer(Sender: TObject);
   private
+    FOnCopyPrevious: TNotifyEvent;
     FOnHeightChange: TNotifyEvent;
     FVirtualNames: array of TLabel;
     FSeparator: array of TLabel;
@@ -39,11 +42,17 @@ type
     procedure ProcessLabelMouseLeaveEvent(Sender: TOBject);
   public
     constructor Create(TheOwner: TComponent); override;
+    // init from 'virtualName1:subchannelName1'+LineEnding+
+    //           'virtualName2:subchannelName2'+...
     procedure InitFromText(const s: string);
+    // Gives 'virtualName1:subchannelName1'+LineEnding+
+    //       'virtualName2:subchannelName2'+...
+    function ToText: string;
 
     procedure SetSwitcherForRange(p: PFixLibSingleRange);
 
     property OnHeightChange: TNotifyEvent read FOnHeightChange write FOnHeightChange;
+    property OnCopyPrevious: TNotifyEvent read FOnCopyPrevious write FOnCopyPrevious;
     property SwitcherCount: integer read GetSwitcherCount;
   end;
 
@@ -63,8 +72,15 @@ begin
     DoAddSwitcherItem(F.VirtualName, F.SubChannelName);
     ClientHeight := ClientHeight + FVirtualNames[0].Height;
     FOnHeightChange(Self);
+    BCopyPrevious.Visible := False;
   end;
   F.Free;
+end;
+
+procedure TFrameViewSwitcherItems.BCopyPreviousClick(Sender: TObject);
+begin
+  BCopyPrevious.Visible := False;
+  FOnCopyPrevious(Self);
 end;
 
 procedure TFrameViewSwitcherItems.BEditSwitcherClick(Sender: TObject);
@@ -162,12 +178,16 @@ begin
   if (aIndex < 0) or (aIndex >= Length(FVirtualNames)) then exit;
 
   // free TLabels and array entries
+  ClientHeight := ClientHeight - FVirtualNames[aIndex].Height;
   FVirtualNames[aIndex].Free;
   Delete(FVirtualNames, aIndex, 1);
   FSeparator[aIndex].Free;
   Delete(FSeparator, aIndex, 1);
   FSubNames[aIndex].Free;
   Delete(FSubNames, aIndex, 1);
+
+  FOnHeightChange(Self);
+  BCopyPrevious.Visible := Length(FVirtualNames) = 0;
 end;
 
 function TFrameViewSwitcherItems.GetSwitcherCount: integer;
@@ -214,6 +234,7 @@ var i: integer;
   A, B: TStringArray;
 begin
   if s = '' then exit;
+  BCopyPrevious.Visible := False;
 
   A := s.Split([LineEnding]);
   for i:=0 to High(A) do begin
@@ -225,6 +246,16 @@ begin
   end;
 
   FOnHeightChange(Self);
+end;
+
+function TFrameViewSwitcherItems.ToText: string;
+var i: integer;
+begin
+  Result := '';
+  for i:=0 to High(FVirtualNames) do begin
+    Result := Result + FVirtualNames[i].Caption+':'+FSubNames[i].Caption;
+    if i < High(FVirtualNames) then Result := Result + LineEnding;
+  end;
 end;
 
 procedure TFrameViewSwitcherItems.SetSwitcherForRange(p: PFixLibSingleRange);
