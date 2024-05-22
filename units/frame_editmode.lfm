@@ -72,7 +72,9 @@ object FrameEditMode: TFrameEditMode
       ImageIndex = 0
       Transparent = False
       OnClick = BAddChannelClick
+      ShowHint = True
       ParentFont = False
+      ParentShowHint = False
     end
     object Label2: TLabel
       Left = 8
@@ -164,7 +166,7 @@ object FrameEditMode: TFrameEditMode
       AnchorSideRight.Side = asrBottom
       Left = 381
       Height = 26
-      Top = 144
+      Top = 112
       Width = 111
       Anchors = [akRight]
       BorderSpacing.Right = 2
@@ -294,7 +296,35 @@ object FrameEditMode: TFrameEditMode
       ImageIndex = 0
       Transparent = False
       OnClick = BAddSwitchingChannelClick
+      ShowHint = True
       ParentFont = False
+      ParentShowHint = False
+    end
+    object BAddRepetitiveChannel: TSpeedButton
+      AnchorSideLeft.Control = BAddSwitchingChannel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = BAddChannel
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 271
+      Height = 20
+      Top = 148
+      Width = 159
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 20
+      Caption = 'sAddRepetitiveChannels'
+      Color = 16433669
+      Flat = True
+      Font.Color = clWhite
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 22
+      Transparent = False
+      OnClick = BAddRepetitiveChannelClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
     end
   end
 end
