@@ -26,6 +26,7 @@ type
     procedure Edit1EditingDone(Sender: TObject);
   private
     FIndex: integer;
+    FOnCopyPreviousSwitcher: TNotifyEvent;
     FOnHeightChange: TNotifyEvent;
     FOnValueChange: TNotifyEvent;
     FLockEditBeginEndDone: boolean;
@@ -34,6 +35,7 @@ type
     function GetEndValue: integer;
     function GetExtra: string;
     procedure ProcessFrameSwitcherHeightChangeEvent(Sender: TObject);
+    procedure ProcessFrameSwitcherCopyPreviousEvent(Sender: TObject);
     procedure SetBeginValue(AValue: integer);
     procedure SetDescription(AValue: string);
     procedure SetEndValue(AValue: integer);
@@ -52,6 +54,7 @@ type
     property Extra: string read GetExtra write SetExtra;
 
     property OnHeightChange: TNotifyEvent read FOnHeightChange write FOnHeightChange;
+    property OnCopyPreviousSwitcher: TNotifyEvent read FOnCopyPreviousSwitcher write FOnCopyPreviousSwitcher;
     property OnBeginEndChange: TNotifyEvent read FOnValueChange write FOnValueChange;
   end;
 
@@ -66,6 +69,12 @@ procedure TFrameEditRange.ProcessFrameSwitcherHeightChangeEvent(Sender: TObject)
 begin
   ClientHeight := Max(ScaleDesignToForm(27), FrameSwitcher.Height);
   FOnHeightChange(Self);
+end;
+
+procedure TFrameEditRange.ProcessFrameSwitcherCopyPreviousEvent(Sender: TObject);
+begin
+  if Index = 0 then exit;
+  FOnCopyPreviousSwitcher(Self);
 end;
 
 procedure TFrameEditRange.Edit1EditingDone(Sender: TObject);
@@ -169,6 +178,7 @@ begin
   FrameSwitcher.SetBounds(Shape5.Left+Shape5.Width, 0,
                           Panel1.ClientWidth-(Shape5.Left+Shape5.Width), FrameSwitcher.Height);
   FrameSwitcher.OnHeightChange := @ProcessFrameSwitcherHeightChangeEvent;
+  FrameSwitcher.OnCopyPrevious := @ProcessFrameSwitcherCopyPreviousEvent;
 
   FrameSwitcher.Anchors := [akTop, akLeft, akRight];
 

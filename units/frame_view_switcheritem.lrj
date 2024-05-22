@@ -1,3 +1,4 @@
 {"version":1,"strings":[
-{"hash":144581906,"name":"tframeviewswitcheritems.badd.hint","sourcebytes":[115,65,100,100,78,101,119,83,119,105,116,99,104,101,114],"value":"sAddNewSwitcher"}
+{"hash":144581906,"name":"tframeviewswitcheritems.badd.hint","sourcebytes":[115,65,100,100,78,101,119,83,119,105,116,99,104,101,114],"value":"sAddNewSwitcher"},
+{"hash":152429010,"name":"tframeviewswitcheritems.bcopyprevious.hint","sourcebytes":[67,111,112,121,32,112,114,101,118,105,111,117,115,32,83,119,105,116,99,104,101,114],"value":"Copy previous Switcher"}
 ]}
