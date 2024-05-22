@@ -1,0 +1,49 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_460683_460684_v2_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/varytec_giga_bar_frost_pix_8_rgb.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=PixpS09Mc-I
+[GENERAL]
+Manufacturer|Varytec|Name|Giga Bar Frost Pix 8 RGB|Type|19|Authors|Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|1020|Height|80|Depth|65|Weight|1.5|Power|25|Connector|3-pin|Bulb|LED|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Multifunction|Type|0|R1|Begin~0~End~7~Txt~Leds OFF~Switch1~NoFunction/Speed/Sensitivity:No function|R2|Begin~8~End~15~Txt~Constant unicoloured pattern in red~Switch1~NoFunction/Speed/Sensitivity:Speed|R3|Begin~16~End~23~Txt~Constant unicoloured pattern in red and green~Switch1~NoFunction/Speed/Sensitivity:Speed|R4|Begin~24~End~31~Txt~Constant unicoloured pattern in green~Switch1~NoFunction/Speed/Sensitivity:Speed|R5|Begin~32~End~39~Txt~Constant unicoloured pattern in blue and green~Switch1~NoFunction/Speed/Sensitivity:Speed|R6|Begin~40~End~47~Txt~Constant unicoloured pattern in blue~Switch1~NoFunction/Speed/Sensitivity:Speed|R7|Begin~48~End~55~Txt~Constant unicoloured pattern in blue and red~Switch1~NoFunction/Speed/Sensitivity:Speed|R8|Begin~56~End~63~Txt~Constant unicoloured pattern in red, green and blue~Switch1~NoFunction/Speed/Sensitivity:Speed|R9|Begin~64~End~231~Txt~Built-in automatic show programmes~Switch1~NoFunction/Speed/Sensitivity:Speed|R10|Begin~232~End~255~Txt~Sound-controlled show~Switch1~NoFunction/Speed/Sensitivity:Sound sensitivity
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|No function|Type|17
+ID|Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound sensitivity|Type|29|R1|Begin~0~End~255~Txt~Low..High
+[END_CHAN_DEF]
+[MODES]
+Name|2 channel|ShortName|2ch|Content|Multifunction~NoFunction/Speed/Sensitivity:No function;Speed;Sound sensitivity
+Name|3 channel|ShortName|3ch|Content|Red Master~Green Master~Blue Master
+Name|5 channel|ShortName|5ch|Content|Red Master~Green Master~Blue Master~Master dimmer~Strobe
+Name|24 channel|ShortName|24ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8
+[END_MODES]
