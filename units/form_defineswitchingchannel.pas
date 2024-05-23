@@ -94,7 +94,7 @@ begin
   end;
 
   // add new created channel name to the checklistbox
-  if chanName = NIL then exit;
+  if Length(chanName) = 0 then exit;
   for i:=0 to High(chanName) do
     LB.Items.Add(chanName[i]);
 
