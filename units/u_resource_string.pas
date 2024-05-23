@@ -491,6 +491,10 @@ resourcestring
   SStand01='Stand x2';
   SStand02='Stand x3';
   SStand03='Stand x4';
+  SBarShortx2TransparentLed='Short bar with multiple row and transparent LED';
+  SBarShortx2ColoredLed='Short bar with multiple row and colored LED';
+  SBarx2TransparentLed='Long bar with multiple row and transparent LED';
+  SBarx2ColoredLed='Long bar with multiple row and colored LED';
 
 implementation
 // exclusion i18n

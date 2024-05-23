@@ -172,6 +172,10 @@ begin
   ftStand01: Result+='34_Stand01.svg';
   ftStand02: Result+='35_Stand02.svg';
   ftStand03: Result+='36_Stand03.svg';
+  ftBarShortx2TransparentLed: Result+='37_BarShortx2TransparentLed.svg';
+  ftBarShortx2ColoredLed: Result+='38_BarShortx2ColoredLed.svg';
+  ftBarx2TransparentLed: Result+='39_Barx2TransparentLed.svg';
+  ftBarx2ColoredLed: Result+='40_Barx2ColoredLed.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -216,6 +220,10 @@ begin
    ftStand01: Result := SStand01;
    ftStand02: Result := SStand02;
    ftStand03: Result := SStand03;
+   ftBarShortx2TransparentLed: Result := SBarShortx2TransparentLed;
+   ftBarShortx2ColoredLed: Result := SBarShortx2ColoredLed;
+   ftBarx2TransparentLed: Result := SBarx2TransparentLed;
+   ftBarx2ColoredLed: Result := SBarx2ColoredLed;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
