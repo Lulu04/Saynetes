@@ -1,0 +1,49 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/294835_c_294835_v3_r3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/intl/stairville_led_bar_2408_rgb_dmx_30.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=n5rRgpYDY7M
+[GENERAL]
+Manufacturer|Stairville|Name|LED Bar 240/8|Type|19|Authors|kiki|Creator|OFL
+[PHYSICAL]
+Width|1064|Height|65|Depth|88|Weight|2.60|Power|36|Connector|3-pin|Bulb|240× 10mm LEDs (96× red, 72× green, 72× blue)|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Programs|Type|0|R1|Begin~0~End~7~Txt~Blackout~Extra~#000000~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R2|Begin~8~End~15~Txt~Pattern red~Extra~#ff0000~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R3|Begin~16~End~23~Txt~Pattern yellow~Extra~#ffff00~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R4|Begin~24~End~31~Txt~Pattern green~Extra~#00ff00~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R5|Begin~32~End~39~Txt~Pattern cyan~Extra~#00ffff~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R6|Begin~40~End~47~Txt~Pattern blue~Extra~#0000ff~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R7|Begin~48~End~55~Txt~Pattern magenta~Extra~#ff00ff~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R8|Begin~56~End~63~Txt~Pattern white~Extra~#ffffff~Switch1~NoFunction/ShowSpeed/SoundSensitivity:No function|R9|Begin~64~End~231~Txt~Preprogrammed shows~Switch1~NoFunction/ShowSpeed/SoundSensitivity:Show Speed|R10|Begin~232~End~255~Txt~Sound-controlled shows~Switch1~NoFunction/ShowSpeed/SoundSensitivity:Sound Sensitivity
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|No function|Type|17
+ID|Show Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Programs~NoFunction/ShowSpeed/SoundSensitivity:Show Speed;Sound Sensitivity;No function
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Master dimmer~Strobe
+Name|24-channel|ShortName|24ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8
+[END_MODES]
