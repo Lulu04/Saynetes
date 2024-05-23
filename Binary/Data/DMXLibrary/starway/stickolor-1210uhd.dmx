@@ -1,0 +1,100 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://web.archive.org/web/20201025052441/https://en.star-way.com/telechargements/?doc=450576|LinkType2|product page|Url2|https://web.archive.org/web/20210614082955/https://en.star-way.com/stickolor-1210uhd
+[GENERAL]
+Manufacturer|Starway|Name|SticKolor 1210UHD|Type|19|Authors|Robin|Creator|OFL
+[PHYSICAL]
+Width|900|Height|140|Depth|150|Weight|6.2|Power|145|Connector|3-pin and 5-pin|Bulb|10W RGBWAUV LEDs|LensMinDegree|50.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Color Macros|Type|12|R1|Begin~0~End~9~Txt~No function~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R2|Begin~10~End~17~Txt~Red~Extra~#ff0000~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R3|Begin~18~End~25~Txt~Green~Extra~#00ff00~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R4|Begin~26~End~33~Txt~Blue~Extra~#0000ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R5|Begin~34~End~41~Txt~White~Extra~#ffffff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R6|Begin~42~End~49~Txt~Amber~Extra~#ffbf00~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R7|Begin~50~End~57~Txt~UV~Extra~#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R8|Begin~58~End~65~Txt~RW + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R9|Begin~66~End~73~Txt~RA + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R10|Begin~74~End~81~Txt~BWA~Extra~#ffdfff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R11|Begin~82~End~89~Txt~BW + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R12|Begin~90~End~97~Txt~RBW + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R13|Begin~98~End~105~Txt~RBA + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R14|Begin~106~End~113~Txt~RWA + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R15|Begin~114~End~121~Txt~GBWA~Extra~#baffba~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R16|Begin~122~End~129~Txt~RGBW + UV~Extra~_#8800ff~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R17|Begin~130~End~137~Txt~Dream~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R18|Begin~138~End~145~Txt~Meteor~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R19|Begin~146~End~153~Txt~ColorFade~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R20|Begin~154~End~161~Txt~ColorJump~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R21|Begin~162~End~169~Txt~Flow 1~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R22|Begin~170~End~177~Txt~Flow 2~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R23|Begin~178~End~185~Txt~Flow 3~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R24|Begin~186~End~193~Txt~Flow 4~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R25|Begin~194~End~201~Txt~Flow 5~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R26|Begin~202~End~209~Txt~Flow 6~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R27|Begin~210~End~217~Txt~Flow 7~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R28|Begin~218~End~225~Txt~Flow 8~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R29|Begin~226~End~233~Txt~Flow 9~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R30|Begin~234~End~241~Txt~Flow 10~Switch1~Macro Speed / Sound Sensitivity:Macro Speed|R31|Begin~242~End~255~Txt~Sound-control~Switch1~Macro Speed / Sound Sensitivity:Sound Sensitivity
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 1|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 2|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 3|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 4|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 5|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 5|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 6|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 6|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 7|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 7|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 8|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 8|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 9|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 9|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 10|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 10|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 11|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 11|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 12|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|UV 12|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~Low..High
+[END_CHAN_DEF]
+[MODES]
+Name|6 channel|ShortName|6ch|Content|Red~Green~Blue~White~Amber~UV
+Name|8 channel|ShortName|8ch|Content|Master dimmer~Strobe~Red~Green~Blue~White~Amber~UV
+Name|10 channel|ShortName|10ch|Content|Master dimmer~Strobe~Red~Green~Blue~White~Amber~UV~Color Macros~Macro Speed / Sound Sensitivity:Macro Speed;Sound Sensitivity
+Name|72 channel|ShortName|72ch|Content|Red 1~Green 1~Blue 1~White 1~Amber 1~UV 1~Red 2~Green 2~Blue 2~White 2~Amber 2~UV 2~Red 3~Green 3~Blue 3~White 3~Amber 3~UV 3~Red 4~Green 4~Blue 4~White 4~Amber 4~UV 4~Red 5~Green 5~Blue 5~White 5~Amber 5~UV 5~Red 6~Green 6~Blue 6~White 6~Amber 6~UV 6~Red 7~Green 7~Blue 7~White 7~Amber 7~UV 7~Red 8~Green 8~Blue 8~White 8~Amber 8~UV 8~Red 9~Green 9~Blue 9~White 9~Amber 9~UV 9~Red 10~Green 10~Blue 10~White 10~Amber 10~UV 10~Red 11~Green 11~Blue 11~White 11~Amber 11~UV 11~Red 12~Green 12~Blue 12~White 12~Amber 12~UV 12
+Name|76 channel|ShortName|76ch|Content|Master dimmer~Strobe~Red 1~Green 1~Blue 1~White 1~Amber 1~UV 1~Red 2~Green 2~Blue 2~White 2~Amber 2~UV 2~Red 3~Green 3~Blue 3~White 3~Amber 3~UV 3~Red 4~Green 4~Blue 4~White 4~Amber 4~UV 4~Red 5~Green 5~Blue 5~White 5~Amber 5~UV 5~Red 6~Green 6~Blue 6~White 6~Amber 6~UV 6~Red 7~Green 7~Blue 7~White 7~Amber 7~UV 7~Red 8~Green 8~Blue 8~White 8~Amber 8~UV 8~Red 9~Green 9~Blue 9~White 9~Amber 9~UV 9~Red 10~Green 10~Blue 10~White 10~Amber 10~UV 10~Red 11~Green 11~Blue 11~White 11~Amber 11~UV 11~Red 12~Green 12~Blue 12~White 12~Amber 12~UV 12~Color Macros~Macro Speed / Sound Sensitivity:Macro Speed;Sound Sensitivity
+[END_MODES]
