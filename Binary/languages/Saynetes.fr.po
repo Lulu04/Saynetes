@@ -375,6 +375,10 @@ msgstr ""
 "Stoppe un effet RVB sur les appareils sélectionnés.\n"
 "La dernière couleur calculée par l'effet est gardée."
 
+#: tformeditrepetitivechannel.label13.caption
+msgid "do not use index"
+msgstr "ne pas utiliser d'index"
+
 #: tformeditrepetitivechannel.label2.caption
 msgid "Use prefix"
 msgstr "Utiliser le préfixe"
@@ -3631,6 +3635,18 @@ msgstr "PAR carré avec plusieurs LED transparentes"
 msgid "Square PAR with single transparent led"
 msgstr "PAR carré avec une seule led transparente"
 
+#: u_resource_string.sstand01
+msgid "Stand x2"
+msgstr "Stand x2"
+
+#: u_resource_string.sstand02
+msgid "Stand x3"
+msgstr "Stand x3"
+
+#: u_resource_string.sstand03
+msgid "Stand x4"
+msgstr "Stand x4"
+
 #: u_resource_string.sstartsequence
 msgid "START"
 msgstr "DÉMARRER"
@@ -3835,3 +3851,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

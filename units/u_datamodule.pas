@@ -115,6 +115,7 @@ begin
   AddImageToImageList('LaserStrobe.svg', ILChannelType);
   AddImageToImageList('GoboShake.svg', ILChannelType);
   AddImageToImageList('Frost.svg', ILChannelType);
+  AddImageToImageList('SoundControled.svg', ILChannelType);
 
   AddImageToImageList('SwitchingChannel.svg', ILChannelType);
   AddImageToImageList('Switch.svg', ILChannelType);

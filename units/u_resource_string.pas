@@ -488,6 +488,9 @@ resourcestring
   SBarShortColoredLed='Short bar colored led';
   SFlower02='Flower 2';
   SFlower03='Flower 3';
+  SStand01='Stand x2';
+  SStand02='Stand x3';
+  SStand03='Stand x4';
 
 implementation
 // exclusion i18n
