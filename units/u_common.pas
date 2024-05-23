@@ -284,7 +284,10 @@ type
                      ftBarShortTransparentLed,  // 30
                      ftBarShortColoredLed,
                      ftFlower02,
-                     ftFlower03
+                     ftFlower03,
+                     ftStand01,
+                     ftStand02,   // 35
+                     ftStand03
                      );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
@@ -308,6 +311,8 @@ const
                    ftScanner, ftMovingHead, ftLaser,
 
                    ftFlower01, ftFlower02, ftFlower03,
+
+                   ftStand01, ftStand02, ftStand03,
 
                    ftColorChanger,
                    ftSmokeMachine, ftBubbleMachine, ftFan,
@@ -348,7 +353,10 @@ const
                False,  // ftBarShortTransparentLed
                False,  // ftBarShortColoredLed
                True,   // ftFlower02
-               True    // ftFlower03
+               True,   // ftFlower03
+               True,   // ftStand01
+               True,   // ftStand02
+               True    // ftStand03
                );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
@@ -385,7 +393,10 @@ const
                False,  // ftBarShortTransparentLed
                False,  // ftBarShortColoredLed
                True,   // ftFlower02
-               True    // ftFlower03
+               True,   // ftFlower03
+               False,  // ftStand01
+               False,  // ftStand02
+               False   // ftStand03
                );
 type
 
@@ -438,7 +449,8 @@ type
                      ctLASERROTATION,
                      ctLASERSTROBE,     // 45
                      ctGOBOSHAKE,
-                     ctFROST
+                     ctFROST,
+                     ctSOUNDCONTROLED
                    );
 
     // stage shape rendered in the stage view

@@ -332,6 +332,10 @@ msgid ""
 "The last color calculated by the effect is kept."
 msgstr ""
 
+#: tformeditrepetitivechannel.label13.caption
+msgid "do not use index"
+msgstr ""
+
 #: tformeditrepetitivechannel.label2.caption
 msgid "Use prefix"
 msgstr ""
@@ -3524,6 +3528,18 @@ msgstr ""
 
 #: u_resource_string.ssquareparsingletransparentled
 msgid "Square PAR with single transparent led"
+msgstr ""
+
+#: u_resource_string.sstand01
+msgid "Stand x2"
+msgstr ""
+
+#: u_resource_string.sstand02
+msgid "Stand x3"
+msgstr ""
+
+#: u_resource_string.sstand03
+msgid "Stand x4"
 msgstr ""
 
 #: u_resource_string.sstartsequence

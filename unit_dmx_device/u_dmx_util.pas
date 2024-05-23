@@ -169,6 +169,9 @@ begin
   ftBarShortColoredLed: Result+='31_BarShortColoredLed.svg';
   ftFlower02: Result+='32_Flower02.svg';
   ftFlower03: Result+='33_Flower03.svg';
+  ftStand01: Result+='34_Stand01.svg';
+  ftStand02: Result+='35_Stand02.svg';
+  ftStand03: Result+='36_Stand03.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -210,6 +213,9 @@ begin
    ftBarShortColoredLed: Result := SBarShortColoredLed;
    ftFlower02: Result := SFlower02;
    ftFlower03: Result := SFlower03;
+   ftStand01: Result := SStand01;
+   ftStand02: Result := SStand02;
+   ftStand03: Result := SStand03;
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
@@ -309,6 +315,7 @@ begin
     ctLASERSTROBE: Result:=Result+'CursorLaserStrobe.svg';
     ctGOBOSHAKE: Result:=Result+'CursorGoboShake.svg';
     ctFROST: Result:=Result+'CursorFrost.svg';
+    ctSOUNDCONTROLED: Result:=Result+'CursorSoundControled.svg';
     else Result:='';
   end;//case
 end;
