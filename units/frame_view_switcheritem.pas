@@ -85,7 +85,7 @@ end;
 
 procedure TFrameViewSwitcherItems.BEditSwitcherClick(Sender: TObject);
 var F: TFormDefineSwitcher;
-  i: integer;
+  i, xx: integer;
 begin
   if Sender = BEditSwitcher then begin
     i := PanelTools.Tag;
@@ -93,8 +93,13 @@ begin
     F := TFormDefineSwitcher.Create(Self);
     F.EditSwitcher(FVirtualNames[i].Caption, FSubNames[i].Caption);
     if F.ShowModal = mrOk then begin
+      xx := 0;
       FVirtualNames[i].Caption := F.VirtualName;
+      xx := xx + Panel1.Canvas.GetTextWidth(F.VirtualName) + ScaleDesignToForm(2);
+      FSeparator[i].Left := xx;
       FSubNames[i].Caption := F.SubChannelName;
+      xx := xx + Panel1.Canvas.GetTextWidth(':') + ScaleDesignToForm(2);
+      FSubNames[i].Left := xx;
       SetPanelToolPosition(-1);
     end;
   end;

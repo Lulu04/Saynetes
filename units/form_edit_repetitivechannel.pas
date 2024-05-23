@@ -24,6 +24,8 @@ type
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -40,6 +42,8 @@ type
     RB1: TRadioButton;
     RB2: TRadioButton;
     RB4: TRadioButton;
+    RB5: TRadioButton;
+    RB6: TRadioButton;
     SE1: TSpinEdit;
     SE2: TSpinEdit;
     procedure BOKClick(Sender: TObject);
@@ -131,12 +135,16 @@ begin
     if RB2.Checked then s1 := s1 + ' ' + i.ToString;
     if CheckBox2.Checked then s1 := s1 + TrimRight(Edit2.Text);
 
-    if RB3.Checked or RB4.Checked then begin
+    if RB3.Checked or RB4.Checked or RB5.Checked then begin
       Memo1.Lines.Add(GetChannelName('Red', i));
       Memo1.Lines.Add(GetChannelName('Green', i));
       Memo1.Lines.Add(GetChannelName('Blue', i));
     end;
-    if RB4.Checked then Memo1.Lines.Add(GetChannelName('White', i));
+    if RB4.Checked or RB5.Checked then Memo1.Lines.Add(GetChannelName('White', i));
+    if RB5.Checked then begin
+      Memo1.Lines.Add(GetChannelName('Amber', i));
+      Memo1.Lines.Add(GetChannelName('UV', i));
+    end;
   end;
 
   FPreviewing := False;
@@ -159,9 +167,17 @@ begin
     SendChannel;
     chan.InitAsBlue;
     SendChannel;
-    if RB4.Checked then begin
+    if RB4.Checked or RB5.Checked then begin
       chan.ChanType := ctWhite;
       chan.NameID := 'White';
+      SendChannel;
+    end;
+    if RB5.Checked then begin
+      chan.ChanType := ctAmber;
+      chan.NameID := 'Amber';
+      SendChannel;
+      chan.ChanType := ctUV;
+      chan.NameID := 'UV';
       SendChannel;
     end;
   end;

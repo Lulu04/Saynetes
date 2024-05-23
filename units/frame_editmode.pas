@@ -265,6 +265,7 @@ begin
     FormEditSwitching := TFormEditSwitchingChannel.Create(NIL);
     try
       FormEditSwitching.FillWith(FExistingChannels);
+      FormEditSwitching.TargetModeFrame := Self;
       FormEditSwitching.EditExistingChannel(@FVirtualChannelInMode[i]);
 
       if FormEditSwitching.ShowModal = mrOk then begin
