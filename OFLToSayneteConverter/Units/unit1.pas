@@ -2166,6 +2166,7 @@ begin
              if not Result then
                LogMessage(SrcFilename+' - "physical" not found');
           end;
+          'templateChannels':;
           'matrix': begin
             if not Form1.CBConvertMatrix.Checked then exit(False);
 
@@ -2182,15 +2183,15 @@ begin
                   fix.Matrix.Y := arr.Count;
                 end;
                 'pixelGroups': begin
-                  LogMessage('  property "matrix/pixelGroups" found but not implemented!');
-                  Result := False;
+//                  LogMessage('  property "matrix/pixelGroups" found but not implemented!');
+//                  Result := False;
                 end;
               end;//case
             end;
 
-            LogMessage('  property "'+itemEnum.Key+'":"'{+item.AsJSON}+'" found but not implemented!');
-            Result := False;
-            inc(FMatrixErrorCount);
+//            LogMessage('  property "'+itemEnum.Key+'":"'{+item.AsJSON}+'" found but not implemented!');
+//            Result := False;
+//            inc(FMatrixErrorCount);
           end;
           'wheels': begin
             if not Form1.CBConvertWheels.Checked then exit(False);
@@ -2249,7 +2250,7 @@ begin
   except
     on E: Exception do begin
      LogMessage('an exception occurs: '+E.Message);
-     Result := False;
+     //Result := False;
     end;
   end;
 
