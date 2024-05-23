@@ -287,7 +287,11 @@ type
                      ftFlower03,
                      ftStand01,
                      ftStand02,   // 35
-                     ftStand03
+                     ftStand03,
+                     ftBarShortx2TransparentLed,
+                     ftBarShortx2ColoredLed,
+                     ftBarx2TransparentLed,
+                     ftBarx2ColoredLed
                      );
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
@@ -300,8 +304,10 @@ const
                    ftParRectangularMultipleTransparentLed,
                    ftParRectangularMultipleColoredLed,
 
-                   ftLedBarTransparentLed, ftBarColoredLed,
                    ftBarShortTransparentLed, ftBarShortColoredLed,
+                   ftBarShortx2TransparentLed, ftBarShortx2ColoredLed,
+                   ftLedBarTransparentLed, ftBarColoredLed,
+                   ftBarx2TransparentLed, ftBarx2ColoredLed,
 
                    ftMatrixTransparentLed, ftMatrixWithColoredLed,
                    ftParShortBulb, ftParLongBulb,
@@ -356,7 +362,11 @@ const
                True,   // ftFlower03
                True,   // ftStand01
                True,   // ftStand02
-               True    // ftStand03
+               True,   // ftStand03
+               False,  // ftBarShortx2TransparentLed,
+               False,  // ftBarShortx2ColoredLed,
+               False,  // ftBarx2TransparentLed,
+               False   // ftBarx2ColoredLed
                );
 
   FixtureCanFlipV: array[TFixtureType] of boolean =(
@@ -396,7 +406,11 @@ const
                True,   // ftFlower03
                False,  // ftStand01
                False,  // ftStand02
-               False   // ftStand03
+               False,  // ftStand03
+               False,  // ftBarShortx2TransparentLed,
+               False,  // ftBarShortx2ColoredLed,
+               False,  // ftBarx2TransparentLed,
+               False   // ftBarx2ColoredLed
                );
 type
 

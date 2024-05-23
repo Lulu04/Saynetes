@@ -2291,6 +2291,22 @@ msgstr ""
 msgid "Short bar transparent led"
 msgstr ""
 
+#: u_resource_string.sbarshortx2coloredled
+msgid "Short bar with multiple row and colored LED"
+msgstr ""
+
+#: u_resource_string.sbarshortx2transparentled
+msgid "Short bar with multiple row and transparent LED"
+msgstr ""
+
+#: u_resource_string.sbarx2coloredled
+msgid "Long bar with multiple row and colored LED"
+msgstr ""
+
+#: u_resource_string.sbarx2transparentled
+msgid "Long bar with multiple row and transparent LED"
+msgstr ""
+
 #: u_resource_string.sbegin
 msgctxt "u_resource_string.sbegin"
 msgid "Begin"
