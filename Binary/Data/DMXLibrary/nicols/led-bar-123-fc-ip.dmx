@@ -1,0 +1,58 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://sunlight-online.de/pdf/LEDBAR123FC.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=O7XbNMwKWI0
+[GENERAL]
+Manufacturer|Nicols|Name|LED BAR 123 FC IP|Type|19|Authors|Nils Van Zuijlen|Creator|OFL
+[PHYSICAL]
+Width|114|Height|120|Depth|120|Weight|3.80|Power|30|Connector|3-pin XLR IP65|Bulb|12×tri-3W LED|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro|Type|0|R1|Begin~0~End~6~Txt~No function|R2|Begin~7~End~13~Txt~Program 1|R3|Begin~14~End~20~Txt~Program 2|R4|Begin~21~End~27~Txt~Program 3|R5|Begin~28~End~34~Txt~Program 4|R6|Begin~35~End~41~Txt~Program 5|R7|Begin~42~End~48~Txt~Program 6|R8|Begin~49~End~55~Txt~Program 7|R9|Begin~56~End~62~Txt~Program 8|R10|Begin~63~End~69~Txt~Program 9|R11|Begin~70~End~76~Txt~Program 10|R12|Begin~77~End~83~Txt~Program 11|R13|Begin~84~End~90~Txt~Program 12|R14|Begin~91~End~97~Txt~Program 13|R15|Begin~98~End~104~Txt~Program 14|R16|Begin~105~End~111~Txt~Program 15|R17|Begin~112~End~118~Txt~Program 16|R18|Begin~119~End~125~Txt~Program 17|R19|Begin~126~End~132~Txt~Program 18|R20|Begin~133~End~139~Txt~Program 19|R21|Begin~140~End~146~Txt~Program 20|R22|Begin~147~End~153~Txt~Program 21|R23|Begin~154~End~160~Txt~Program 22|R24|Begin~161~End~167~Txt~Program 23|R25|Begin~168~End~174~Txt~Program 24|R26|Begin~175~End~181~Txt~Program 25|R27|Begin~182~End~188~Txt~Program 26|R28|Begin~189~End~195~Txt~Program 27|R29|Begin~196~End~202~Txt~Program 28|R30|Begin~203~End~209~Txt~Program 29|R31|Begin~210~End~216~Txt~Program 30|R32|Begin~217~End~223~Txt~Program 31|R33|Begin~224~End~230~Txt~Program 32|R34|Begin~231~End~237~Txt~Program 33|R35|Begin~238~End~244~Txt~Program 34|R36|Begin~245~End~255~Txt~Program 35
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Strobe
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Master dimmer~Macro~Macro Speed~Strobe
+Name|36-channel|ShortName|36ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12
+[END_MODES]

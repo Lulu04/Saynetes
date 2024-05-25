@@ -1,0 +1,136 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musicstore.de/INTERSHOP/web/WFS/MusicStore-MusicStoreShop-Site/de_DE/-/EUR/ViewProductAttachment-ResolveManualURL?File=DE_LIG0016266-000.pdf|LinkType2|product page|Url2|https://www.musicstore.com/en_US/USD/lightmaXX-Vector-Pixel-BAR-18x-15W-RGBWA/art-LIG0016266-000
+[GENERAL]
+Manufacturer|lightmaXX|Name|Vector Pixel BAR 18x 15W RGBWA|Type|19|Authors|Stephan Klein, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1130|Height|150|Depth|210|Weight|8.00|Power|180|Connector|3-pin|Bulb|18× 15W RGBWA LEDs|LensMinDegree|45.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+ID|Function|Type|0|R1|Begin~0~End~17~Txt~No function~Switch1~Running Effects / Color Running Effect Direction:Unused|R2|Begin~18~End~22~Txt~Color Change~Switch1~Running Effects / Color Running Effect Direction:Running Effects|R3|Begin~23~End~27~Txt~Colorful running jump change~Switch1~Running Effects / Color Running Effect Direction:Color Running Effect Direction|R4|Begin~28~End~32~Txt~Colorful running gradual change~Switch1~Running Effects / Color Running Effect Direction:Color Running Effect Direction|R5|Begin~33~End~37~Txt~Color~Switch1~Running Effects / Color Running Effect Direction:Unused|R6|Begin~38~End~42~Txt~ColorJump~Switch1~Running Effects / Color Running Effect Direction:Unused|R7|Begin~43~End~47~Txt~ColorFade~Switch1~Running Effects / Color Running Effect Direction:Unused|R8|Begin~48~End~251~Txt~Running effects 1…50~Switch1~Running Effects / Color Running Effect Direction:Unused|R9|Begin~252~End~255~Txt~Sound to light~Switch1~Running Effects / Color Running Effect Direction:Unused
+ID|Function Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Master Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 7|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 8|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 9|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 10|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 11|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 12|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 13|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 14|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 15|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 16|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 17|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGBWA Dimmer 18|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 5|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 6|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 7|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 8|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 9|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 10|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 11|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 12|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 13|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 13|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 14|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 14|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 15|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 15|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 16|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 16|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 17|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 17|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 18|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 18|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Unused|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Running Effects|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Running effect 1|R3|Begin~6~End~10~Txt~Running effect 2|R4|Begin~11~End~15~Txt~Running effect 3|R5|Begin~16~End~20~Txt~Running effect 4|R6|Begin~21~End~25~Txt~Running effect 5|R7|Begin~26~End~30~Txt~Running effect 6|R8|Begin~31~End~35~Txt~Running effect 7|R9|Begin~36~End~40~Txt~Running effect 8|R10|Begin~41~End~45~Txt~Running effect 9|R11|Begin~46~End~50~Txt~Running effect 10|R12|Begin~51~End~55~Txt~Running effect 11|R13|Begin~56~End~60~Txt~Running effect 12|R14|Begin~61~End~65~Txt~Running effect 13|R15|Begin~66~End~70~Txt~Running effect 14|R16|Begin~71~End~75~Txt~Running effect 15|R17|Begin~76~End~80~Txt~Running effect 16|R18|Begin~81~End~85~Txt~Running effect 17|R19|Begin~86~End~90~Txt~Running effect 18|R20|Begin~91~End~95~Txt~Running effect 19|R21|Begin~96~End~100~Txt~Running effect 20|R22|Begin~101~End~105~Txt~Running effect 21|R23|Begin~106~End~110~Txt~Running effect 22|R24|Begin~111~End~115~Txt~Running effect 23|R25|Begin~116~End~120~Txt~Running effect 24|R26|Begin~121~End~125~Txt~Running effect 25|R27|Begin~126~End~130~Txt~Running effect 26|R28|Begin~131~End~135~Txt~Running effect 27|R29|Begin~136~End~140~Txt~Running effect 28|R30|Begin~141~End~145~Txt~Running effect 29|R31|Begin~146~End~150~Txt~Running effect 30|R32|Begin~151~End~155~Txt~Running effect 31|R33|Begin~156~End~160~Txt~Running effect 32|R34|Begin~161~End~165~Txt~Running effect 33|R35|Begin~166~End~170~Txt~Running effect 34|R36|Begin~171~End~175~Txt~Running effect 35|R37|Begin~176~End~180~Txt~Running effect 36|R38|Begin~181~End~185~Txt~Running effect 37|R39|Begin~186~End~190~Txt~Running effect 38|R40|Begin~191~End~195~Txt~Running effect 39|R41|Begin~196~End~200~Txt~Running effect 40|R42|Begin~201~End~205~Txt~Running effect 41|R43|Begin~206~End~210~Txt~Running effect 42|R44|Begin~211~End~215~Txt~Running effect 43|R45|Begin~216~End~220~Txt~Running effect 44|R46|Begin~221~End~225~Txt~Running effect 45|R47|Begin~226~End~230~Txt~Running effect 46|R48|Begin~231~End~235~Txt~Running effect 47|R49|Begin~236~End~240~Txt~Running effect 48|R50|Begin~241~End~245~Txt~Running effect 49|R51|Begin~246~End~255~Txt~Running effect 50
+ID|Color Running Effect Direction|Type|0|R1|Begin~0~End~127~Txt~left running|R2|Begin~128~End~255~Txt~right running
+[END_CHAN_DEF]
+[MODES]
+Name|10-channel|ShortName|10ch|Content|Master dimmer~Strobe~Function~Running Effects / Color Running Effect Direction:Unused;Running Effects;Color Running Effect Direction~Function Speed~Master Red~Master Green~Master Blue~Master White~Master Amber
+Name|28-channel|ShortName|28ch|Content|Master dimmer~Strobe~Function~Running Effects / Color Running Effect Direction:Unused;Running Effects;Color Running Effect Direction~Function Speed~Master Red~Master Green~Master Blue~Master White~Master Amber~RGBWA Dimmer 1~RGBWA Dimmer 2~RGBWA Dimmer 3~RGBWA Dimmer 4~RGBWA Dimmer 5~RGBWA Dimmer 6~RGBWA Dimmer 7~RGBWA Dimmer 8~RGBWA Dimmer 9~RGBWA Dimmer 10~RGBWA Dimmer 11~RGBWA Dimmer 12~RGBWA Dimmer 13~RGBWA Dimmer 14~RGBWA Dimmer 15~RGBWA Dimmer 16~RGBWA Dimmer 17~RGBWA Dimmer 18
+Name|90-channel|ShortName|90ch|Content|Red 1~Green 1~Blue 1~White 1~Amber 1~Red 2~Green 2~Blue 2~White 2~Amber 2~Red 3~Green 3~Blue 3~White 3~Amber 3~Red 4~Green 4~Blue 4~White 4~Amber 4~Red 5~Green 5~Blue 5~White 5~Amber 5~Red 6~Green 6~Blue 6~White 6~Amber 6~Red 7~Green 7~Blue 7~White 7~Amber 7~Red 8~Green 8~Blue 8~White 8~Amber 8~Red 9~Green 9~Blue 9~White 9~Amber 9~Red 10~Green 10~Blue 10~White 10~Amber 10~Red 11~Green 11~Blue 11~White 11~Amber 11~Red 12~Green 12~Blue 12~White 12~Amber 12~Red 13~Green 13~Blue 13~White 13~Amber 13~Red 14~Green 14~Blue 14~White 14~Amber 14~Red 15~Green 15~Blue 15~White 15~Amber 15~Red 16~Green 16~Blue 16~White 16~Amber 16~Red 17~Green 17~Blue 17~White 17~Amber 17~Red 18~Green 18~Blue 18~White 18~Amber 18
+Name|100-channel|ShortName|100ch|Content|Master dimmer~Strobe~Function~Running Effects / Color Running Effect Direction:Unused;Running Effects;Color Running Effect Direction~Function Speed~Master Red~Master Green~Master Blue~Master White~Master Amber~Red 1~Green 1~Blue 1~White 1~Amber 1~Red 2~Green 2~Blue 2~White 2~Amber 2~Red 3~Green 3~Blue 3~White 3~Amber 3~Red 4~Green 4~Blue 4~White 4~Amber 4~Red 5~Green 5~Blue 5~White 5~Amber 5~Red 6~Green 6~Blue 6~White 6~Amber 6~Red 7~Green 7~Blue 7~White 7~Amber 7~Red 8~Green 8~Blue 8~White 8~Amber 8~Red 9~Green 9~Blue 9~White 9~Amber 9~Red 10~Green 10~Blue 10~White 10~Amber 10~Red 11~Green 11~Blue 11~White 11~Amber 11~Red 12~Green 12~Blue 12~White 12~Amber 12~Red 13~Green 13~Blue 13~White 13~Amber 13~Red 14~Green 14~Blue 14~White 14~Amber 14~Red 15~Green 15~Blue 15~White 15~Amber 15~Red 16~Green 16~Blue 16~White 16~Amber 16~Red 17~Green 17~Blue 17~White 17~Amber 17~Red 18~Green 18~Blue 18~White 18~Amber 18
+[END_MODES]

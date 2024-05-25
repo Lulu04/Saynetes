@@ -1,0 +1,59 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/43536_MANUAL_GB_V1.pdf
+[GENERAL]
+Manufacturer|Showtec|Name|Horizon 8|Type|37|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|622|Height|299|Depth|310|Weight|15.00|Power|298|Connector|3-pin and 5-pin|Bulb|LED|Lumens|7200
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Macro Colors|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red 100% / Green Up / Blue 0%|R3|Begin~31~End~50~Txt~Preset Red Down / Green 100% / Blue 0%|R4|Begin~51~End~70~Txt~Preset Red 0% / Green 100% / Blue Up|R5|Begin~71~End~90~Txt~Preset Red 0% / Green Down / Blue 100%|R6|Begin~91~End~110~Txt~Preset Red Up / Green 0% / Blue 100%|R7|Begin~111~End~130~Txt~Preset Red 100% / Green 0% / Blue Down|R8|Begin~131~End~150~Txt~Preset Red 100% / Green Up / Blue Up|R9|Begin~151~End~170~Txt~Preset Red Down / Green Down / Blue 100%|R10|Begin~171~End~200~Txt~Red 100% / Green 100% / Blue 100% / White 100% / Amber 100%~Extra~#ffeaaa|R11|Begin~201~End~205~Txt~Color temperature 3200K White 1~Extra~#ffb87b|R12|Begin~206~End~210~Txt~Color temperature 3400K White 2~Extra~#ffbe87|R13|Begin~211~End~215~Txt~Color temperature 4200K White 3~Extra~#ffd3af|R14|Begin~216~End~220~Txt~Color temperature 4900K White 4~Extra~#ffe2ca|R15|Begin~221~End~225~Txt~Color temperature 5600K White 5~Extra~#ffefe1|R16|Begin~226~End~230~Txt~Color temperature 5900K White 6~Extra~#fff4ea|R17|Begin~231~End~235~Txt~Color temperature 6500K White 7~Extra~#fffefa|R18|Begin~236~End~240~Txt~Color temperature 7200K White 8~Extra~#edefff|R19|Begin~241~End~245~Txt~Color temperature 8000K White 9~Extra~#dde6ff|R20|Begin~246~End~250~Txt~Color temperature 8500K White 10~Extra~#d7e2ff|R21|Begin~251~End~255~Txt~Color temperature 10000K White 11~Extra~#cadaff
+ID|Clas Strobe|Type|6|R1|Begin~0~End~9~Txt~Clas Strobe 0|R2|Begin~10~End~19~Txt~Clas Strobe 1|R3|Begin~20~End~29~Txt~Clas Strobe 2|R4|Begin~30~End~39~Txt~Clas Strobe 3|R5|Begin~40~End~49~Txt~Clas Strobe 4|R6|Begin~50~End~59~Txt~Clas Strobe 5|R7|Begin~60~End~69~Txt~Clas Strobe 6|R8|Begin~70~End~79~Txt~Clas Strobe 7|R9|Begin~80~End~89~Txt~Clas Strobe 8|R10|Begin~90~End~99~Txt~Clas Strobe 9|R11|Begin~100~End~109~Txt~Clas Strobe 10|R12|Begin~110~End~119~Txt~Clas Strobe 11|R13|Begin~120~End~129~Txt~Clas Strobe 12|R14|Begin~130~End~139~Txt~Clas Strobe 13|R15|Begin~140~End~149~Txt~Clas Strobe 14|R16|Begin~150~End~159~Txt~Clas Strobe 15|R17|Begin~160~End~169~Txt~Clas Strobe 16|R18|Begin~170~End~179~Txt~Clas Strobe 17|R19|Begin~180~End~189~Txt~Clas Strobe 18|R20|Begin~190~End~199~Txt~Clas Strobe 19|R21|Begin~200~End~255~Txt~Clas Strobe 20
+ID|Auto/Custom Programs|Type|0|R1|Begin~0~End~40~Txt~No function~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R2|Begin~41~End~50~Txt~Auto 1~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R3|Begin~51~End~60~Txt~Auto 2~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R4|Begin~61~End~70~Txt~Auto 3~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R5|Begin~71~End~80~Txt~Auto 4~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R6|Begin~81~End~90~Txt~Auto 5~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R7|Begin~91~End~100~Txt~Auto 6~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R8|Begin~101~End~110~Txt~Auto 7~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R9|Begin~111~End~120~Txt~Auto 8~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R10|Begin~121~End~130~Txt~Auto 9~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R11|Begin~131~End~140~Txt~Auto 10~Switch1~Red / Step Time:Red~Switch2~Green / Fade Time:Green~Switch3~Dimmer fine / Step Time:Dimmer fine~Switch4~Red / Fade Time:Red|R12|Begin~141~End~150~Txt~Custom 1~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R13|Begin~151~End~160~Txt~Custom 2~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R14|Begin~161~End~170~Txt~Custom 3~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R15|Begin~171~End~180~Txt~Custom 4~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R16|Begin~181~End~190~Txt~Custom 5~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R17|Begin~191~End~200~Txt~Custom 6~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R18|Begin~201~End~210~Txt~Custom 7~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R19|Begin~211~End~220~Txt~Custom 8~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R20|Begin~221~End~230~Txt~Custom 9~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time|R21|Begin~231~End~255~Txt~Custom 10~Switch1~Red / Step Time:Step Time~Switch2~Green / Fade Time:Fade Time~Switch3~Dimmer fine / Step Time:Step Time~Switch4~Red / Fade Time:Fade Time
+ID|Auto Speed Adjustment|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~9~Txt~Return settings|R2|Begin~10~End~29~Txt~Linear dimmer|R3|Begin~30~End~69~Txt~fast Non-linear dimmer speed|R4|Begin~70~End~129~Txt~66% Non-linear dimmer speed|R5|Begin~130~End~189~Txt~33% Non-linear dimmer speed|R6|Begin~190~End~255~Txt~slow Non-linear dimmer speed
+ID|Spec Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~99~Txt~0Hz..10Hz|R3|Begin~100~End~109~Txt~No function|R4|Begin~110~End~179~Txt~Lightning 0Hz..10Hz|R5|Begin~180~End~189~Txt~No function|R6|Begin~190~End~255~Txt~0Hz..10Hz Random timing
+ID|Red fine|Type|3
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|Amber fine|Type|14
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue|Type|2
+ID|Saturation|Type|2
+ID|Value|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|P1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|P1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|P1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|P2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|P2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|P2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|P1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|P1 Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|P2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|P2 Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Step Time|Type|16|R1|Begin~0~End~255~Txt~short..long
+ID|Fade Time|Type|16|R1|Begin~0~End~255~Txt~short..long
+ID|Dimmer fine|Type|1
+[END_CHAN_DEF]
+[MODES]
+Name|Tour (Clas Strobe)|ShortName|Tour-Clas|Content|Dimmer~Red / Step Time:Red;Step Time~Green / Fade Time:Green;Fade Time~Blue~White~Amber~Macro Colors~Clas Strobe~Auto/Custom Programs~Auto Speed Adjustment~Dimmer Speed
+Name|Tour (Spec Strobe)|ShortName|Tour-Spec|Content|Dimmer~Red / Step Time:Red;Step Time~Green / Fade Time:Green;Fade Time~Blue~White~Amber~Macro Colors~Spec Strobe~Auto/Custom Programs~Auto Speed Adjustment~Dimmer Speed
+Name|Tour 16-bit (Clas Strobe)|ShortName|TR16-Clas|Content|Dimmer~Dimmer fine / Step Time:Dimmer fine;Step Time~Red / Fade Time:Red;Fade Time~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Amber~Amber fine~Macro Colors~Clas Strobe~Auto/Custom Programs~Auto Speed Adjustment~Dimmer Speed
+Name|Tour 16-bit (Spec Strobe)|ShortName|TR16-Spec|Content|Dimmer~Dimmer fine / Step Time:Dimmer fine;Step Time~Red / Fade Time:Red;Fade Time~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Amber~Amber fine~Macro Colors~Spec Strobe~Auto/Custom Programs~Auto Speed Adjustment~Dimmer Speed
+Name|ARC1|ShortName|ARC1|Content|Red~Green~Blue
+Name|AR1.D|ShortName|AR1.D|Content|Dimmer~Red~Green~Blue
+Name|ARC2|ShortName|ARC2|Content|Red~Green~Blue~White
+Name|ARC3|ShortName|ARC3|Content|Red~Green~Blue~White~Amber
+Name|AR3.D|ShortName|AR3.D|Content|Dimmer~Red~Green~Blue~White~Amber
+Name|AR3.S (Clas Strobe)|ShortName|AR3.S-Clas|Content|Dimmer~Red~Green~Blue~White~Amber~Clas Strobe
+Name|AR3.S (Spec Strobe)|ShortName|AR3.S-Spec|Content|Dimmer~Red~Green~Blue~White~Amber~Spec Strobe
+Name|HSV|ShortName|HSV|Content|Hue~Saturation~Value
+Name|PIX1|ShortName|PIX1|Content|P1 Red~P1 Green~P1 Blue~P2 Red~P2 Green~P2 Blue
+Name|PIX3|ShortName|PIX3|Content|P1 Red~P1 Green~P1 Blue~P1 White~P1 Amber~P2 Red~P2 Green~P2 Blue~P2 White~P2 Amber
+[END_MODES]

@@ -1,0 +1,130 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musiclights.it/download.php?id=3932|LinkType2|product page|Url2|https://www.prolights.it/product/DIAMOND19BK|LinkType3|video|Url3|https://www.youtube.com/watch?v=F5nu7TYshPA|LinkType4|video|Url4|https://www.youtube.com/watch?v=WFtywtM_Kqg
+[GENERAL]
+Manufacturer|Prolights|Name|DIAMOND19|Type|41|Authors|fueller, ameisso, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|338|Height|449|Depth|235|Weight|11.00|Power|316|Connector|3-pin and 5-pin|Bulb|LED|Lens|Honey-Comb gapless plano convex optics|LensMinDegree|6.000|LensMaxDegree|66.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..265deg
+ID|Movement Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Shutter Function|Type|0|R1|Begin~0~End~15~Txt~Strobe|R2|Begin~16~End~31~Txt~Pulse Forward|R3|Begin~32~End~47~Txt~Pulse Reverse|R4|Begin~48~End~63~Txt~Random timing|R5|Begin~64~End~255~Txt~No function
+ID|Shutter Extended|Type|0|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~223~Txt~slow..fast|R3|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Virtual Color Function|Type|0|R1|Begin~0~End~15~Txt~On Function~Switch1~Virtual Color 1:Color Function|R2|Begin~16~End~31~Txt~CTC Function~Switch1~Virtual Color 1:CTC Function|R3|Begin~32~End~47~Txt~Forward Spin~Switch1~Virtual Color 1:Rainbow Effect Forward|R4|Begin~48~End~63~Txt~Reverse Spin~Switch1~Virtual Color 1:Rainbow Effect Reverse|R5|Begin~64~End~79~Txt~Continuous~Switch1~Virtual Color 1:Color Function|R6|Begin~80~End~111~Txt~Color Bounce~Switch1~Virtual Color 1:Color Function|R7|Begin~112~End~255~Txt~No function~Switch1~Virtual Color 1:Color Function
+ID|Virtual Color 2|Type|0|R1|Begin~0~End~0~Txt~Black~Extra~#000000|R2|Begin~1~End~1~Txt~Red~Extra~#ff0000|R3|Begin~2~End~2~Txt~Green~Extra~#00ff00|R4|Begin~3~End~3~Txt~Blue~Extra~#0000ff|R5|Begin~4~End~4~Txt~White~Extra~#ffffff|R6|Begin~5~End~46~Txt~Preset Green ASC, Blue|R7|Begin~47~End~88~Txt~Preset Green, Blue DESC|R8|Begin~89~End~130~Txt~Preset Red ASC, Green|R9|Begin~131~End~172~Txt~Preset Red, Green DESC|R10|Begin~173~End~214~Txt~Preset Red, Blue ASC|R11|Begin~215~End~255~Txt~Preset Red DESC, Blue
+ID|Red-All|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green-All|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue-All|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White-All|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
+ID|Foreground|Type|0|R1|Begin~0~End~15~Txt~No function No Color|R2|Begin~16~End~31~Txt~Red~Extra~#ff0000|R3|Begin~32~End~47~Txt~Green~Extra~#00ff00|R4|Begin~48~End~63~Txt~Blue~Extra~#0000ff|R5|Begin~64~End~79~Txt~White~Extra~#ffffff|R6|Begin~80~End~95~Txt~Yellow~Extra~#ffff00|R7|Begin~96~End~111~Txt~Magenta~Extra~#ff00ff|R8|Begin~112~End~127~Txt~Cyan~Extra~#00ffff|R9|Begin~128~End~255~Txt~Full Color
+ID|Background|Type|0|R1|Begin~0~End~15~Txt~No function No Color|R2|Begin~16~End~31~Txt~Red~Extra~#ff0000|R3|Begin~32~End~47~Txt~Green~Extra~#00ff00|R4|Begin~48~End~63~Txt~Blue~Extra~#0000ff|R5|Begin~64~End~79~Txt~White~Extra~#ffffff|R6|Begin~80~End~95~Txt~Yellow~Extra~#ffff00|R7|Begin~96~End~111~Txt~Magenta~Extra~#ff00ff|R8|Begin~112~End~127~Txt~Cyan~Extra~#00ffff|R9|Begin~128~End~255~Txt~Full Color
+ID|Patterns|Type|0|R1|Begin~0~End~31~Txt~Static Pattern~Switch1~Pattern Speed:Static Pattern Speed|R2|Begin~32~End~47~Txt~Dynamic Pattern 1~Switch1~Pattern Speed:Dynamic Pattern Speed|R3|Begin~48~End~63~Txt~Dynamic Pattern 2~Switch1~Pattern Speed:Dynamic Pattern Speed|R4|Begin~64~End~79~Txt~Dynamic Pattern 3~Switch1~Pattern Speed:Dynamic Pattern Speed|R5|Begin~80~End~95~Txt~Dynamic Pattern 4~Switch1~Pattern Speed:Dynamic Pattern Speed|R6|Begin~96~End~111~Txt~Dynamic Pattern 5~Switch1~Pattern Speed:Dynamic Pattern Speed|R7|Begin~112~End~127~Txt~Dynamic Pattern 6~Switch1~Pattern Speed:Dynamic Pattern Speed|R8|Begin~128~End~143~Txt~Dynamic Pattern 7~Switch1~Pattern Speed:Dynamic Pattern Speed|R9|Begin~144~End~159~Txt~Dynamic Pattern 8~Switch1~Pattern Speed:Dynamic Pattern Speed|R10|Begin~160~End~175~Txt~Dynamic Pattern 9~Switch1~Pattern Speed:Dynamic Pattern Speed|R11|Begin~176~End~191~Txt~Dynamic Pattern 10~Switch1~Pattern Speed:Dynamic Pattern Speed|R12|Begin~192~End~207~Txt~Dynamic Pattern 11~Switch1~Pattern Speed:Dynamic Pattern Speed|R13|Begin~208~End~223~Txt~Dynamic Pattern 12~Switch1~Pattern Speed:Dynamic Pattern Speed|R14|Begin~224~End~239~Txt~Dynamic Pattern 13~Switch1~Pattern Speed:Dynamic Pattern Speed|R15|Begin~240~End~255~Txt~Dynamic Pattern 14~Switch1~Pattern Speed:Dynamic Pattern Speed
+ID|Control|Type|0|R1|Begin~0~End~7~Txt~Normal|R2|Begin~8~End~15~Txt~Reset All|R3|Begin~16~End~23~Txt~Pan&Tilt Reset|R4|Begin~24~End~47~Txt~No function|R5|Begin~48~End~55~Txt~Other Reset|R6|Begin~56~End~63~Txt~Display Off|R7|Begin~64~End~71~Txt~Display On|R8|Begin~72~End~79~Txt~No function|R9|Begin~80~End~87~Txt~No function|R10|Begin~88~End~95~Txt~Hibernation|R11|Begin~96~End~255~Txt~No function
+ID|Shutter Basic|Type|0|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Movement Function|Type|0|R1|Begin~0~End~15~Txt~Normal Movement Functions|R2|Begin~16~End~31~Txt~Movement with Blackout|R3|Begin~32~End~255~Txt~No function
+ID|Pattern Byte 1|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED1 and LED2 RGBW flags
+ID|Pattern Byte 2|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED3 and LED4 RGBW flags
+ID|Pattern Byte 3|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED5 and LED6 RGBW flags
+ID|Pattern Byte 4|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED7 and LED8 RGBW flags
+ID|Pattern Byte 5|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED9 and LED10 RGBW flags
+ID|Pattern Byte 6|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED11 and LED12 RGBW flags
+ID|Pattern Byte 7|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED13 and LED14 RGBW flags
+ID|Pattern Byte 8|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED15 and LED16 RGBW flags
+ID|Pattern Byte 9|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED17 and LED18 RGBW flags
+ID|Pattern Byte 10|Type|0|R1|Begin~0~End~255~Txt~Bit access to LED19 RGBW flags
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 13|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 14|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 15|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 16|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 17|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 18|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 19|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 19|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 19|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 19|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Function|Type|0|R1|Begin~0~End~0~Txt~Black~Extra~#000000|R2|Begin~1~End~1~Txt~Red~Extra~#ff0000|R3|Begin~2~End~2~Txt~Green~Extra~#00ff00|R4|Begin~3~End~3~Txt~Blue~Extra~#0000ff|R5|Begin~4~End~4~Txt~White~Extra~#ffffff|R6|Begin~5~End~46~Txt~Preset Green ASC, Blue|R7|Begin~47~End~88~Txt~Preset Green, Blue DESC|R8|Begin~89~End~130~Txt~Preset Red ASC, Green|R9|Begin~131~End~172~Txt~Preset Red, Green DESC|R10|Begin~173~End~214~Txt~Preset Red, Blue ASC|R11|Begin~215~End~255~Txt~Preset Red DESC, Blue
+ID|CTC Function|Type|0|R1|Begin~0~End~223~Txt~2000K..2700K|R2|Begin~224~End~231~Txt~3200K|R3|Begin~232~End~239~Txt~4200K|R4|Begin~240~End~247~Txt~5600K|R5|Begin~248~End~255~Txt~8000K
+ID|Rainbow Effect Forward|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Rainbow Effect Reverse|Type|16|R1|Begin~0~End~255~Txt~slow reverse..fast reverse
+ID|Static Pattern Speed|Type|16|DefaultValue|127|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dynamic Pattern Speed|Type|0|R1|Begin~0~End~3~Txt~stop|R2|Begin~4~End~127~Txt~slow..fast|R3|Begin~128~End~131~Txt~stop|R4|Begin~132~End~255~Txt~slow reverse..fast reverse
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|std|Content|Pan~Tilt~Movement Speed~Shutter Function~Shutter Extended~Dimmer~Virtual Color Function~Virtual Color 1:Color Function;CTC Function;Rainbow Effect Forward;Rainbow Effect Reverse~Virtual Color 2~Red-All~Green-All~Blue-All~White-All~Zoom~Foreground~Background~Patterns~Pattern Speed:Static Pattern Speed;Dynamic Pattern Speed~Control
+Name|Basic 8-bit|ShortName|bas8|Content|Pan~Tilt~Movement Speed~Shutter Basic~Dimmer~Virtual Color Function~Virtual Color 1:Color Function;CTC Function;Rainbow Effect Forward;Rainbow Effect Reverse~Virtual Color 2~Red-All~Green-All~Blue-All~White-All~Zoom~Foreground~Background~Patterns~Pattern Speed:Static Pattern Speed;Dynamic Pattern Speed~Control
+Name|Basic 16-bit|ShortName|bas16|Content|Pan~Pan fine~Tilt~Tilt fine~Movement Speed~Shutter Basic~Dimmer~Virtual Color Function~Virtual Color 1:Color Function;CTC Function;Rainbow Effect Forward;Rainbow Effect Reverse~Virtual Color 2~Red-All~Green-All~Blue-All~White-All~Zoom~Foreground~Background~Patterns~Pattern Speed:Static Pattern Speed;Dynamic Pattern Speed~Control
+Name|Extended 1|ShortName|ext1|Content|Pan~Pan fine~Tilt~Tilt fine~Movement Speed~Movement Function~Shutter Function~Shutter Extended~Dimmer~Virtual Color Function~Virtual Color 1:Color Function;CTC Function;Rainbow Effect Forward;Rainbow Effect Reverse~Virtual Color 2~Red-All~Green-All~Blue-All~White-All~Zoom~Foreground~Background~Patterns~Pattern Speed:Static Pattern Speed;Dynamic Pattern Speed~Pattern Byte 1~Pattern Byte 2~Pattern Byte 3~Pattern Byte 4~Pattern Byte 5~Pattern Byte 6~Pattern Byte 7~Pattern Byte 8~Pattern Byte 9~Pattern Byte 10~Control
+Name|Extended 2|ShortName|ext2|Content|Pan~Pan fine~Tilt~Tilt fine~Movement Speed~Movement Function~Shutter Function~Shutter Extended~Dimmer~Virtual Color Function~Virtual Color 1:Color Function;CTC Function;Rainbow Effect Forward;Rainbow Effect Reverse~Virtual Color 2~Red-All~Green-All~Blue-All~White-All~Zoom~Foreground~Background~Patterns~Pattern Speed:Static Pattern Speed;Dynamic Pattern Speed~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Red 8~Green 8~Blue 8~White 8~Red 9~Green 9~Blue 9~White 9~Red 10~Green 10~Blue 10~White 10~Red 11~Green 11~Blue 11~White 11~Red 12~Green 12~Blue 12~White 12~Red 13~Green 13~Blue 13~White 13~Red 14~Green 14~Blue 14~White 14~Red 15~Green 15~Blue 15~White 15~Red 16~Green 16~Blue 16~White 16~Red 17~Green 17~Blue 17~White 17~Red 18~Green 18~Blue 18~White 18~Red 19~Green 19~Blue 19~White 19~Control
+[END_MODES]

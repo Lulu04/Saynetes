@@ -1,0 +1,31 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_259187_v4_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/stairville_xbrick_fullcolour_16x3w.htm|LinkType3|video|Url3|https://video2.thomann.de/vidiot/02591c1c/video_i1301p10_yd59vqpa.mp4
+[GENERAL]
+Manufacturer|Stairville|Name|xBrick Full-Colour|Type|37|Authors|fintch|Creator|OFL
+[PHYSICAL]
+Width|310|Height|175|Depth|72|Weight|3.00|Power|60|Connector|3-pin|Bulb|LED|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Speed|Type|28|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Master Dimmer~Strobe Speed
+Name|13-channel|ShortName|13ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Master Dimmer
+[END_MODES]
