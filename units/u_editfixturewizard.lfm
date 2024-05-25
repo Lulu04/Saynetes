@@ -38,7 +38,7 @@ object FormFixtureWizard: TFormFixtureWizard
     Height = 738
     Top = 37
     Width = 1004
-    PageIndex = 0
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 10
     BorderSpacing.Right = 10

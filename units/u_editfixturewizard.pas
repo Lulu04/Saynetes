@@ -541,6 +541,11 @@ begin
   ModeFrames[i].ExistingChannels := @FExistingChannels;
   ModeFrames[i].OnHeightChange := @ProcessModeChangeHeightEvent;
 
+  // move the view to see the top of the new frame
+  with ScrollBox2.VertScrollBar do
+    if not InRange(y, Position, Range-Page) then
+      Position := y;
+
   if p <> NIL then ModeFrames[i].InitFrom(p^);
 
   AdjustAddButtonPosition;
