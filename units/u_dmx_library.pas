@@ -91,6 +91,7 @@ begin
     if F.ShowModal = mrOk then begin
       FrameFixtureOverview.ShowFixture(fixLocation);
       FrameViewDMXFixtureChannels1.ShowFixture(fixLocation, True);
+      FrameViewDMXLibrary1.UpdateSelectedAfterEdition;
     end;
   finally
     F.Free;
