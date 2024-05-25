@@ -1,0 +1,109 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/41304_MANUAL_GB_V1.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=C52A9mJ3McY
+[GENERAL]
+Manufacturer|Showtec|Name|Pixel Bar 12 MKII|Type|19|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1070|Height|135|Depth|75|Weight|3.88|Power|50|Connector|3-pin|Bulb|12x RGB 3W LEDs|Lumens|1380|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Programs|Type|0|R1|Begin~0~End~6~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed|R2|Begin~7~End~13~Txt~Program 1~Switch1~Program Speed / Sound Sensitivity:Program Speed|R3|Begin~14~End~20~Txt~Program 2~Switch1~Program Speed / Sound Sensitivity:Program Speed|R4|Begin~21~End~27~Txt~Program 3~Switch1~Program Speed / Sound Sensitivity:Program Speed|R5|Begin~28~End~34~Txt~Program 4~Switch1~Program Speed / Sound Sensitivity:Program Speed|R6|Begin~35~End~41~Txt~Program 5~Switch1~Program Speed / Sound Sensitivity:Program Speed|R7|Begin~42~End~48~Txt~Program 6~Switch1~Program Speed / Sound Sensitivity:Program Speed|R8|Begin~49~End~55~Txt~Program 7~Switch1~Program Speed / Sound Sensitivity:Program Speed|R9|Begin~56~End~62~Txt~Program 8~Switch1~Program Speed / Sound Sensitivity:Program Speed|R10|Begin~63~End~69~Txt~Program 9~Switch1~Program Speed / Sound Sensitivity:Program Speed|R11|Begin~70~End~76~Txt~Program 10~Switch1~Program Speed / Sound Sensitivity:Program Speed|R12|Begin~77~End~83~Txt~Program 11~Switch1~Program Speed / Sound Sensitivity:Program Speed|R13|Begin~84~End~90~Txt~Program 12~Switch1~Program Speed / Sound Sensitivity:Program Speed|R14|Begin~91~End~97~Txt~Program 13~Switch1~Program Speed / Sound Sensitivity:Program Speed|R15|Begin~98~End~104~Txt~Program 14~Switch1~Program Speed / Sound Sensitivity:Program Speed|R16|Begin~105~End~111~Txt~Program 15~Switch1~Program Speed / Sound Sensitivity:Program Speed|R17|Begin~112~End~118~Txt~Program 16~Switch1~Program Speed / Sound Sensitivity:Program Speed|R18|Begin~119~End~125~Txt~Program 17~Switch1~Program Speed / Sound Sensitivity:Program Speed|R19|Begin~126~End~132~Txt~Program 18~Switch1~Program Speed / Sound Sensitivity:Program Speed|R20|Begin~133~End~139~Txt~Program 19~Switch1~Program Speed / Sound Sensitivity:Program Speed|R21|Begin~140~End~146~Txt~Program 20~Switch1~Program Speed / Sound Sensitivity:Program Speed|R22|Begin~147~End~153~Txt~Program 21~Switch1~Program Speed / Sound Sensitivity:Program Speed|R23|Begin~154~End~160~Txt~Program 22~Switch1~Program Speed / Sound Sensitivity:Program Speed|R24|Begin~161~End~167~Txt~Program 23~Switch1~Program Speed / Sound Sensitivity:Program Speed|R25|Begin~168~End~174~Txt~Program 24~Switch1~Program Speed / Sound Sensitivity:Program Speed|R26|Begin~175~End~181~Txt~Program 25~Switch1~Program Speed / Sound Sensitivity:Program Speed|R27|Begin~182~End~188~Txt~Program 26~Switch1~Program Speed / Sound Sensitivity:Program Speed|R28|Begin~189~End~195~Txt~Program 27~Switch1~Program Speed / Sound Sensitivity:Program Speed|R29|Begin~196~End~202~Txt~Program 28~Switch1~Program Speed / Sound Sensitivity:Program Speed|R30|Begin~203~End~209~Txt~Program 29~Switch1~Program Speed / Sound Sensitivity:Program Speed|R31|Begin~210~End~216~Txt~Program 30~Switch1~Program Speed / Sound Sensitivity:Program Speed|R32|Begin~217~End~223~Txt~Program 31~Switch1~Program Speed / Sound Sensitivity:Program Speed|R33|Begin~224~End~230~Txt~Program 32~Switch1~Program Speed / Sound Sensitivity:Program Speed|R34|Begin~231~End~237~Txt~Program 33~Switch1~Program Speed / Sound Sensitivity:Program Speed|R35|Begin~238~End~244~Txt~Program 34~Switch1~Program Speed / Sound Sensitivity:Program Speed|R36|Begin~245~End~251~Txt~Program 35~Switch1~Program Speed / Sound Sensitivity:Program Speed|R37|Begin~252~End~255~Txt~Sound control~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~0Hz..11Hz
+ID|Red 1/3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6/6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6/6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6/6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|RGB|ShortName|3ch|Content|Master Dimmer~Red Master~Green Master~Blue Master
+Name|RGBD|ShortName|4ch|Content|Red Master~Green Master~Blue Master~Master Dimmer
+Name|RGB Halves|ShortName|6ch|Content|Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|RGBD + Effects|ShortName|7ch|Content|Red Master~Green Master~Blue Master~Master Dimmer~Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Strobe
+Name|RGB Thirds|ShortName|9ch|Content|Red 1/3~Green 1/3~Blue 1/3~Red 2/3~Green 2/3~Blue 2/3~Red 3/3~Green 3/3~Blue 3/3
+Name|RGB Quarters|ShortName|12ch|Content|Red 1/4~Green 1/4~Blue 1/4~Red 2/4~Green 2/4~Blue 2/4~Red 3/4~Green 3/4~Blue 3/4~Red 4/4~Green 4/4~Blue 4/4
+Name|RGB Sixths|ShortName|18ch|Content|Red 1/6~Green 1/6~Blue 1/6~Red 2/6~Green 2/6~Blue 2/6~Red 3/6~Green 3/6~Blue 3/6~Red 4/6~Green 4/6~Blue 4/6~Red 5/6~Green 5/6~Blue 5/6~Red 6/6~Green 6/6~Blue 6/6
+Name|RGB Individual|ShortName|36ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12
+[END_MODES]

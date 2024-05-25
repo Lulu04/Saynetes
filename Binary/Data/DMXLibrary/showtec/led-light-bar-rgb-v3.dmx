@@ -1,0 +1,47 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/42202_MANUAL_GB_V3.pdf
+[GENERAL]
+Manufacturer|Showtec|Name|LED Light Bar RGB V3|Type|39|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1070|Height|65|Depth|88|Weight|1.68|Power|70|Connector|3-pin|Bulb|LED|Lens|Other|LensMinDegree|40.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe1|Type|6|R1|Begin~0~End~255~Txt~0..20Hz
+ID|Red 1/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Programs|Type|12|R1|Begin~0~End~9~Txt~No function~Switch1~Program Speed / Mic Sensitivity:Program Speed|R2|Begin~10~End~19~Txt~Red~Extra~#ff0000~Switch1~Program Speed / Mic Sensitivity:Program Speed|R3|Begin~20~End~29~Txt~Yellow~Extra~#ffff00~Switch1~Program Speed / Mic Sensitivity:Program Speed|R4|Begin~30~End~39~Txt~Green~Extra~#00ff00~Switch1~Program Speed / Mic Sensitivity:Program Speed|R5|Begin~40~End~49~Txt~Cyan~Extra~#00ffff~Switch1~Program Speed / Mic Sensitivity:Program Speed|R6|Begin~50~End~59~Txt~Blue~Extra~#0000ff~Switch1~Program Speed / Mic Sensitivity:Program Speed|R7|Begin~60~End~69~Txt~Purple~Extra~#ff00ff~Switch1~Program Speed / Mic Sensitivity:Program Speed|R8|Begin~70~End~79~Txt~White~Extra~#ffffff~Switch1~Program Speed / Mic Sensitivity:Program Speed|R9|Begin~80~End~89~Txt~Program 1~Switch1~Program Speed / Mic Sensitivity:Program Speed|R10|Begin~90~End~99~Txt~Program 2~Switch1~Program Speed / Mic Sensitivity:Program Speed|R11|Begin~100~End~109~Txt~Program 3~Switch1~Program Speed / Mic Sensitivity:Program Speed|R12|Begin~110~End~119~Txt~Program 4~Switch1~Program Speed / Mic Sensitivity:Program Speed|R13|Begin~120~End~129~Txt~Program 5~Switch1~Program Speed / Mic Sensitivity:Program Speed|R14|Begin~130~End~139~Txt~Program 6~Switch1~Program Speed / Mic Sensitivity:Program Speed|R15|Begin~140~End~149~Txt~Program 7~Switch1~Program Speed / Mic Sensitivity:Program Speed|R16|Begin~150~End~159~Txt~Program 8~Switch1~Program Speed / Mic Sensitivity:Program Speed|R17|Begin~160~End~169~Txt~Program 9~Switch1~Program Speed / Mic Sensitivity:Program Speed|R18|Begin~170~End~179~Txt~Program 10~Switch1~Program Speed / Mic Sensitivity:Program Speed|R19|Begin~180~End~189~Txt~Program 11~Switch1~Program Speed / Mic Sensitivity:Program Speed|R20|Begin~190~End~199~Txt~Program 12~Switch1~Program Speed / Mic Sensitivity:Program Speed|R21|Begin~200~End~209~Txt~Program 13~Switch1~Program Speed / Mic Sensitivity:Program Speed|R22|Begin~210~End~219~Txt~Program 14~Switch1~Program Speed / Mic Sensitivity:Program Speed|R23|Begin~220~End~229~Txt~Program 15~Switch1~Program Speed / Mic Sensitivity:Program Speed|R24|Begin~230~End~239~Txt~Program 16~Switch1~Program Speed / Mic Sensitivity:Program Speed|R25|Begin~240~End~255~Txt~Sound control~Switch1~Program Speed / Mic Sensitivity:Mic Sensitivity
+ID|Operation Mode|Type|0|R1|Begin~0~End~9~Txt~RGB Mode|R2|Begin~10~End~249~Txt~Auto Program|R3|Begin~250~End~255~Txt~Sound control
+ID|Strobe2|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~0..20Hz
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Mic Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|P1 (3 channels)|ShortName|P1|Content|Red~Green~Blue
+Name|P2 (4 channels)|ShortName|P2|Content|Red~Green~Blue~Dimmer
+Name|P3 (8 channels)|ShortName|P3|Content|Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2~Strobe1~Dimmer
+Name|P4 (14 channels)|ShortName|P4|Content|Red 1/4~Green 1/4~Blue 1/4~Red 2/4~Green 2/4~Blue 2/4~Red 3/4~Green 3/4~Blue 3/4~Red 4/4~Green 4/4~Blue 4/4~Strobe1~Dimmer
+Name|P5 (2 channels)|ShortName|P5|Content|Color Programs~Program Speed / Mic Sensitivity:Program Speed;Mic Sensitivity
+Name|P6 (15 channels)|ShortName|P6|Content|Operation Mode~Dimmer~Strobe2~Red 1/4~Green 1/4~Blue 1/4~Red 2/4~Green 2/4~Blue 2/4~Red 3/4~Green 3/4~Blue 3/4~Red 4/4~Green 4/4~Blue 4/4
+Name|P7 (7 channels)|ShortName|P7|Content|Red~Green~Blue~Color Programs~Program Speed / Mic Sensitivity:Program Speed;Mic Sensitivity~Strobe1~Dimmer
+[END_MODES]

@@ -1,0 +1,24 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://prolight.co.uk/ftp-in/LEDJ67B_Manual.pdf|LinkType2|product page|Url2|https://www.prolight.co.uk/Catalogue/Products/Lighting/Battens/LEDJ67XX?selected=LEDJ67B&ou=%2fproduct%2fslimline-12q5-rgba-batten-black-housing|LinkType3|product page|Url3|https://www.prolight.co.uk/Catalogue/Products/Lighting/Battens/LEDJ67XX?selected=LEDJ67C&ou=%2fproduct%2fslimline-12q5-rgba-batten-white-housing|LinkType4|video|Url4|https://www.youtube.com/watch?v=q9vZgmnNnco
+[GENERAL]
+Manufacturer|LEDJ|Name|Slimline 12Q5 RGBA|Type|19|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|87|Height|1018|Depth|63|Weight|2.20|Power|70|Connector|3-pin|Bulb|12x 5W RGBA LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Dimmer / Strobe|Type|2|R1|Begin~0~End~240~Txt~0..100%|R2|Begin~241~End~255~Txt~Strobe
+ID|Color Macros|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~80~Txt~Preset Color macro|R3|Begin~81~End~150~Txt~ColorJump|R4|Begin~151~End~255~Txt~ColorFade
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Dimmer / Strobe~Color Macros
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|7-channel|ShortName|7ch|Content|Master dimmer~Strobe~Red~Green~Blue~Amber~Color Macros
+[END_MODES]

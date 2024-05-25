@@ -1,0 +1,72 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musiclights.it/download.php?id=2249|LinkType2|product page|Url2|https://www.prolights.it/product/PIXPAN16|LinkType3|video|Url3|https://www.youtube.com/watch?v=0hAYNFjOEsQ
+[GENERAL]
+Manufacturer|Prolights|Name|PIXPAN16|Type|14|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|460|Height|460|Depth|120|Weight|8.00|Power|390|Connector|3-pin and 5-pin|Bulb|4x4 30W RGBW/FC COB-LEDs|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter Extended|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Random Auto Show|R3|Begin~6~End~10~Txt~Open|R4|Begin~11~End~255~Txt~slow..fast
+ID|Shutter Simple|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~slow..fast
+ID|Chase|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Chase 1|R3|Begin~31~End~50~Txt~Chase 2|R4|Begin~51~End~70~Txt~Chase 3|R5|Begin~71~End~90~Txt~Chase 4|R6|Begin~91~End~110~Txt~Chase 5|R7|Begin~111~End~130~Txt~Chase 6|R8|Begin~131~End~150~Txt~Chase 7|R9|Begin~151~End~170~Txt~Chase 8|R10|Begin~171~End~190~Txt~Chase 9|R11|Begin~191~End~210~Txt~Chase 10|R12|Begin~211~End~230~Txt~Chase 11|R13|Begin~231~End~250~Txt~Chase 12|R14|Begin~251~End~255~Txt~Random auto show (1-12)
+ID|Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Dimmer~Shutter Extended
+Name|7-channel|ShortName|7ch|Content|Red~Green~Blue~Shutter Simple~Chase~Speed~Dimmer
+Name|48-channel|ShortName|48ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16
+[END_MODES]

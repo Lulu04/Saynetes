@@ -1,0 +1,63 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.robe.cz/api/support-files/download/downloads/user_manuals/User_manual_Robin_600_LEDWash.pdf|LinkType2|product page|Url2|https://www.robe.cz/ledwash-600|LinkType3|video|Url3|https://www.youtube.com/watch?v=Q-vweXSfuUg
+[GENERAL]
+Manufacturer|Robe|Name|Robin LEDWash 600|Type|41|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|343|Height|444|Depth|203|Weight|10.60|Power|415|Connector|3-pin and 5-pin|Bulb|37x Cree RGBW LEDs|Lumens|4820|LensMinDegree|15.000|LensMaxDegree|63.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..450deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..300deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow or Time 0.1…25.5s
+ID|Special Functions|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~14~Txt~3s DMX input: Wired DMX|R3|Begin~15~End~19~Txt~3s DMX input: Wireless DMX|R4|Begin~20~End~49~Txt~No function|R5|Begin~50~End~59~Txt~3s Pan/Tilt speed mode|R6|Begin~60~End~69~Txt~3s Pan/Tilt time mode|R7|Begin~70~End~79~Txt~3s Blackout while pan/tilt moving|R8|Begin~80~End~89~Txt~3s Disabled blackout while pan/tilt moving|R9|Begin~90~End~99~Txt~3s Theatre mode On|R10|Begin~100~End~109~Txt~3s Theatre mode Off|R11|Begin~110~End~139~Txt~No function|R12|Begin~140~End~149~Txt~3s Pan/Tilt reset|R13|Begin~150~End~179~Txt~No function|R14|Begin~180~End~189~Txt~3s Zoom reset|R15|Begin~190~End~199~Txt~No function|R16|Begin~200~End~209~Txt~3s Total reset|R17|Begin~210~End~239~Txt~No function|R18|Begin~240~End~240~Txt~3s Disable "Silent mode"|R19|Begin~241~End~255~Txt~low..high 3s Silent mode: Fan noise
+ID|Red Inner|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Inner|Type|3
+ID|Green Inner|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Inner|Type|4
+ID|Blue Inner|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Inner|Type|5
+ID|White Inner|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Inner|Type|13
+ID|Red Middle|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Middle|Type|3
+ID|Green Middle|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Middle|Type|4
+ID|Blue Middle|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Middle|Type|5
+ID|White Middle|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Middle|Type|13
+ID|Red Outer|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Outer|Type|3
+ID|Green Outer|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Outer|Type|4
+ID|Blue Outer|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Outer|Type|5
+ID|White Outer|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Outer|Type|13
+ID|CTC|Type|27|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~15500K..2700K or 20000…2700K with color calibration off
+ID|Virtual Color Wheel|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~2~Txt~Color temperature 2700K White~Extra~#ffa757|R3|Begin~3~End~3~Txt~Color temperature 2700K Halogen White~Extra~#ffa757|R4|Begin~4~End~5~Txt~Color temperature 3200K White~Extra~#ffb87b|R5|Begin~6~End~6~Txt~Color temperature 3200K Halogen White~Extra~#ffb87b|R6|Begin~7~End~9~Txt~Color temperature 4200K White~Extra~#ffd3af|R7|Begin~10~End~12~Txt~Color temperature 5600K White~Extra~#ffefe1|R8|Begin~13~End~15~Txt~Color temperature 8000K White~Extra~#dde6ff|R9|Begin~16~End~16~Txt~Blue~Extra~#007cc3|R10|Begin~17~End~55~Txt~Preset Blue - Cyan|R11|Begin~56~End~56~Txt~Cyan~Extra~#61afca|R12|Begin~57~End~95~Txt~Preset Cyan - Green|R13|Begin~96~End~96~Txt~Green~Extra~#87c326|R14|Begin~97~End~134~Txt~Preset Green - Yellow|R15|Begin~135~End~135~Txt~Yellow~Extra~#ebd82a|R16|Begin~136~End~174~Txt~Preset Yellow - Red|R17|Begin~175~End~175~Txt~Red~Extra~#dc2c4e|R18|Begin~176~End~214~Txt~Preset Red - Magenta|R19|Begin~215~End~215~Txt~Magenta~Extra~#bb4e8b|R20|Begin~216~End~246~Txt~Preset Magenta - Blue|R21|Begin~247~End~247~Txt~Blue~Extra~#0093dc|R22|Begin~248~End~248~Txt~ColorFade|R23|Begin~249~End~249~Txt~ColorJump|R24|Begin~250~End~250~Txt~Zone effect 1|R25|Begin~251~End~251~Txt~Zone effect 2|R26|Begin~252~End~252~Txt~Zone effect 3|R27|Begin~253~End~253~Txt~Zone effect 4|R28|Begin~254~End~254~Txt~Zone effect 5|R29|Begin~255~End~255~Txt~Zone effect 6
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 15deg..63deg
+ID|Zoom fine|Type|31
+ID|Shutter / Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~0.3Hz..20Hz Outer zone|R3|Begin~64~End~95~Txt~0.3Hz..20Hz|R4|Begin~96~End~111~Txt~slow..fast Color effect speed|R5|Begin~112~End~127~Txt~fast reverse..slow reverse Color effect speed|R6|Begin~128~End~143~Txt~RampUp slow..fast|R7|Begin~144~End~159~Txt~RampDown fast..slow|R8|Begin~160~End~175~Txt~slow..fast Random zone|R9|Begin~176~End~191~Txt~slow..fast Random timing Random zone|R10|Begin~192~End~223~Txt~slow..fast Random timing|R11|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Red All Zones|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine All Zones|Type|3
+ID|Green All Zones|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine All Zones|Type|4
+ID|Blue All Zones|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine All Zones|Type|5
+ID|White All Zones|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine All Zones|Type|13
+[END_CHAN_DEF]
+[MODES]
+Name|1st|ShortName|1st|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Red Inner~Red fine Inner~Green Inner~Green fine Inner~Blue Inner~Blue fine Inner~White Inner~White fine Inner~Red Middle~Red fine Middle~Green Middle~Green fine Middle~Blue Middle~Blue fine Middle~White Middle~White fine Middle~Red Outer~Red fine Outer~Green Outer~Green fine Outer~Blue Outer~Blue fine Outer~White Outer~White fine Outer~CTC~Virtual Color Wheel~Zoom~Zoom fine~Shutter / Strobe~Dimmer~Dimmer fine
+Name|2nd|ShortName|2nd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Red All Zones~Red fine All Zones~Green All Zones~Green fine All Zones~Blue All Zones~Blue fine All Zones~White All Zones~White fine All Zones~CTC~Virtual Color Wheel~Zoom~Zoom fine~Shutter / Strobe~Dimmer~Dimmer fine
+Name|3rd|ShortName|3rd|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Red All Zones~Green All Zones~Blue All Zones~White All Zones~CTC~Virtual Color Wheel~Zoom~Shutter / Strobe~Dimmer
+Name|4th|ShortName|4th|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Virtual Color Wheel~Zoom~Shutter / Strobe~Dimmer
+Name|5th|ShortName|5th|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~Zoom fine~Shutter / Strobe~Dimmer~Dimmer fine~CTC~Virtual Color Wheel~Red Inner~Red fine Inner~Green Inner~Green fine Inner~Blue Inner~Blue fine Inner~White Inner~White fine Inner~Red Middle~Red fine Middle~Green Middle~Green fine Middle~Blue Middle~Blue fine Middle~White Middle~White fine Middle~Red Outer~Red fine Outer~Green Outer~Green fine Outer~Blue Outer~Blue fine Outer~White Outer~White fine Outer
+Name|6th|ShortName|6th|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Red Inner~Green Inner~Blue Inner~White Inner~Red Middle~Green Middle~Blue Middle~White Middle~Red Outer~Green Outer~Blue Outer~White Outer~CTC~Virtual Color Wheel~Zoom~Shutter / Strobe~Dimmer~Dimmer fine
+[END_MODES]

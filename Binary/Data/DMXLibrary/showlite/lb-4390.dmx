@@ -1,0 +1,54 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.kirstein.de/docs/manuals/sl-lb4390-en-0615.pdf|LinkType2|product page|Url2|https://www.kirstein.de/en/Live-Studio/Light/Lighting-systems/Showlite-LB-4390-LED-complete-system-RGB-light-system.html
+[GENERAL]
+Manufacturer|Showlite|Name|LB-4390|Type|36|Authors|Hannes Rüger|Creator|OFL
+[PHYSICAL]
+Width|1032|Height|235|Depth|71|Weight|10.20|Power|84|Connector|3-pin|Bulb|12× 9W RGB LEDs, 4× 1W white LEDs|Lumens|100|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Mode|Type|0|DefaultValue|10|R1|Begin~0~End~9~Txt~off Blackout~Switch1~Program:Auto PAR Show|R2|Begin~10~End~50~Txt~Auto PAR Show~Switch1~Program:Auto PAR Show|R3|Begin~51~End~90~Txt~Auto LED Flash Show~Switch1~Program:Auto LED Flash Show|R4|Begin~91~End~130~Txt~Mix Auto Show~Switch1~Program:Mix Auto Show|R5|Begin~131~End~170~Txt~Sound PAR Show~Switch1~Program:Sound PAR Show|R6|Begin~171~End~210~Txt~Sound LED Flash Show~Switch1~Program:Sound LED Flash Show|R7|Begin~211~End~255~Txt~Mix Sound Show~Switch1~Program:Mix Sound Show
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Red PAR Leds|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green PAR Leds|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue PAR Leds|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer / Strobe|Type|2|R1|Begin~0~End~191~Txt~0..100%|R2|Begin~192~End~200~Txt~Sound controlled PAR LEDs|R3|Begin~201~End~249~Txt~slow..fast PAR LEDs|R4|Begin~250~End~255~Txt~bright All on
+ID|Flash LEDs Sound Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Closed|R2|Begin~3~End~255~Txt~Strobe Sound Controled
+ID|Red PAR 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green PAR 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue PAR 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red PAR 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green PAR 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue PAR 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red PAR 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green PAR 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue PAR 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red PAR 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green PAR 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue PAR 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer PAR 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe PAR 1|Type|6|R1|Begin~0~End~2~Txt~Shutter Open|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Dimmer PAR 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe PAR 2|Type|6|R1|Begin~0~End~2~Txt~Shutter Open|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Dimmer PAR 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe PAR 3|Type|6|R1|Begin~0~End~2~Txt~Shutter Open|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Open|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Flash 1 Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Closed|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Flash 2 Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Closed|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Flash 3 Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Closed|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Flash 4 Strobe|Type|6|R1|Begin~0~End~2~Txt~Shutter Closed|R2|Begin~3~End~255~Txt~Slow..Fast
+ID|Auto PAR Show|Type|0|R1|Begin~0~End~14~Txt~Auto PAR Show 1|R2|Begin~15~End~29~Txt~Auto PAR Show 2|R3|Begin~30~End~44~Txt~Auto PAR Show 3|R4|Begin~45~End~59~Txt~Auto PAR Show 4|R5|Begin~60~End~74~Txt~Auto PAR Show 5|R6|Begin~75~End~89~Txt~Auto PAR Show 6|R7|Begin~90~End~104~Txt~Auto PAR Show 7|R8|Begin~105~End~119~Txt~Auto PAR Show 8|R9|Begin~120~End~134~Txt~Auto PAR Show 9|R10|Begin~135~End~149~Txt~Auto PAR Show 10|R11|Begin~150~End~164~Txt~Auto PAR Show 11|R12|Begin~165~End~179~Txt~Auto PAR Show 12|R13|Begin~180~End~194~Txt~Auto PAR Show 13|R14|Begin~195~End~209~Txt~Auto PAR Show 14|R15|Begin~210~End~224~Txt~Auto PAR Show 15|R16|Begin~225~End~239~Txt~Auto PAR Show 16|R17|Begin~240~End~255~Txt~Auto PAR Show 17
+ID|Auto LED Flash Show|Type|0|R1|Begin~0~End~24~Txt~Auto LED Flash Show 1|R2|Begin~25~End~49~Txt~Auto LED Flash Show 2|R3|Begin~50~End~74~Txt~Auto LED Flash Show 3|R4|Begin~75~End~99~Txt~Auto LED Flash Show 4|R5|Begin~100~End~124~Txt~Auto LED Flash Show 5|R6|Begin~125~End~149~Txt~Auto LED Flash Show 6|R7|Begin~150~End~174~Txt~Auto LED Flash Show 7|R8|Begin~175~End~199~Txt~Auto LED Flash Show 8|R9|Begin~200~End~224~Txt~Auto LED Flash Show 9|R10|Begin~225~End~255~Txt~Auto LED Flash Show 10
+ID|Mix Auto Show|Type|0|R1|Begin~0~End~99~Txt~Mix Auto Show 1|R2|Begin~100~End~199~Txt~Mix Auto Show 2|R3|Begin~200~End~255~Txt~Mix Auto Show 3
+ID|Sound PAR Show|Type|0|R1|Begin~0~End~19~Txt~Sound PAR Show 1|R2|Begin~20~End~39~Txt~Sound PAR Show 2|R3|Begin~40~End~59~Txt~Sound PAR Show 3|R4|Begin~60~End~79~Txt~Sound PAR Show 4|R5|Begin~80~End~99~Txt~Sound PAR Show 5|R6|Begin~100~End~119~Txt~Sound PAR Show 6|R7|Begin~120~End~139~Txt~Sound PAR Show 7|R8|Begin~140~End~159~Txt~Sound PAR Show 8|R9|Begin~160~End~179~Txt~Sound PAR Show 9|R10|Begin~180~End~199~Txt~Sound PAR Show 10|R11|Begin~200~End~219~Txt~Sound PAR Show 11|R12|Begin~220~End~255~Txt~Sound PAR Show 12
+ID|Sound LED Flash Show|Type|0|R1|Begin~0~End~24~Txt~Sound LED Flash Show 1|R2|Begin~25~End~49~Txt~Sound LED Flash Show 2|R3|Begin~50~End~74~Txt~Sound LED Flash Show 3|R4|Begin~75~End~99~Txt~Sound LED Flash Show 4|R5|Begin~100~End~124~Txt~Sound LED Flash Show 5|R6|Begin~125~End~149~Txt~Sound LED Flash Show 6|R7|Begin~150~End~174~Txt~Sound LED Flash Show 7|R8|Begin~175~End~199~Txt~Sound LED Flash Show 8|R9|Begin~200~End~224~Txt~Sound LED Flash Show 9|R10|Begin~225~End~255~Txt~Sound LED Flash Show 10
+ID|Mix Sound Show|Type|0|R1|Begin~0~End~99~Txt~Mix Sound Show 1|R2|Begin~100~End~199~Txt~Mix Sound Show 2|R3|Begin~200~End~255~Txt~Mix Sound Show 3
+[END_CHAN_DEF]
+[MODES]
+Name|3ch|ShortName|3ch|Content|Mode~Program:Auto PAR Show;Auto LED Flash Show;Mix Auto Show;Sound PAR Show;Sound LED Flash Show;Mix Sound Show~Program Speed
+Name|5ch|ShortName|5ch|Content|Red PAR Leds~Green PAR Leds~Blue PAR Leds~Dimmer / Strobe~Flash LEDs Sound Strobe
+Name|12ch|ShortName|12ch|Content|Red PAR 1~Green PAR 1~Blue PAR 1~Red PAR 2~Green PAR 2~Blue PAR 2~Red PAR 3~Green PAR 3~Blue PAR 3~Red PAR 4~Green PAR 4~Blue PAR 4
+Name|12ch (LED on)|ShortName|12ch (LED on)|Content|Red PAR 1~Green PAR 1~Blue PAR 1~Red PAR 2~Green PAR 2~Blue PAR 2~Red PAR 3~Green PAR 3~Blue PAR 3~Red PAR 4~Green PAR 4~Blue PAR 4
+Name|24ch|ShortName|24ch|Content|Red PAR 1~Green PAR 1~Blue PAR 1~Dimmer PAR 1~Strobe PAR 1~Red PAR 2~Green PAR 2~Blue PAR 2~Dimmer PAR 2~Strobe PAR 2~Red PAR 3~Green PAR 3~Blue PAR 3~Dimmer PAR 3~Strobe PAR 3~Red PAR 4~Green PAR 4~Blue PAR 4~Dimmer~Strobe~Flash 1 Strobe~Flash 2 Strobe~Flash 3 Strobe~Flash 4 Strobe
+[END_MODES]

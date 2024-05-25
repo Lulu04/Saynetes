@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.musiclights.it/download.php?id=2545|LinkType2|product page|Url2|https://www.musiclights.it/product/POLAR3000?lang=EN
+[GENERAL]
+Manufacturer|Prolights|Name|POLAR3000|Type|28|Authors|TAP|Creator|OFL
+[PHYSICAL]
+Width|455|Height|221|Depth|80|Weight|4.50|Power|462|Connector|3-pin and 5-pin|Bulb|882x0.5W SMD LEDs|LensMinDegree|120.000|LensMaxDegree|120.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~slow..fast
+ID|Dimmer Mode|Type|0|R1|Begin~0~End~51~Txt~No function Menu setting dimmer mode|R2|Begin~52~End~101~Txt~Dimmer mode off|R3|Begin~102~End~152~Txt~Dimmer mode 1|R4|Begin~153~End~203~Txt~Dimmer mode 2|R5|Begin~204~End~255~Txt~Dimmer mode 3
+ID|Auto Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~40~Txt~Auto 1|R3|Begin~41~End~70~Txt~Auto 2|R4|Begin~71~End~100~Txt~Auto 3|R5|Begin~101~End~130~Txt~Auto 4|R6|Begin~131~End~160~Txt~Auto 5|R7|Begin~161~End~190~Txt~Auto 6|R8|Begin~191~End~220~Txt~Auto 7|R9|Begin~221~End~255~Txt~Auto 0
+ID|Auto Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Master dimmer~Strobe~Dimmer Mode
+Name|5-channel|ShortName|5ch|Content|Master dimmer~Strobe~Auto Programs~Auto Speed~Dimmer Mode
+Name|6-channel|ShortName|6ch|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4~Dimmer 5~Dimmer 6
+Name|11-channel|ShortName|11ch|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4~Dimmer 5~Dimmer 6~Auto Programs~Auto Speed~Master dimmer~Strobe~Dimmer Mode
+[END_MODES]

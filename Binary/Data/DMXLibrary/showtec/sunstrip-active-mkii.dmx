@@ -1,0 +1,34 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/30714_MANUAL_GB_V2.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/30714-sunstrip-active-mkii.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=LuGJksbKqcg|LinkType4|video|Url4|https://www.youtube.com/watch?v=xvT7drytw00
+[GENERAL]
+Manufacturer|Showtec|Name|Sunstrip Active MKII|Type|19|Authors|Voyo|Creator|OFL
+[PHYSICAL]
+Width|1080|Height|130|Depth|130|Weight|6.20|Power|550|Connector|3-pin|Bulb|10 x 240V/50W GU10|LensMinDegree|35.000|LensMaxDegree|35.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1/5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2/5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3/5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4/5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 5/5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 7|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 8|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 9|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 10|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Master|ShortName|1x10|Content|Master dimmer
+Name|Halves|ShortName|2x5|Content|Dimmer 1/2~Dimmer 2/2
+Name|Fifths|ShortName|5x2|Content|Dimmer 1/5~Dimmer 2/5~Dimmer 3/5~Dimmer 4/5~Dimmer 5/5
+Name|Individual|ShortName|10x1|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4~Dimmer 5~Dimmer 6~Dimmer 7~Dimmer 8~Dimmer 9~Dimmer 10
+[END_MODES]

@@ -1,0 +1,134 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://assets.highlite.com/attachments/MANUAL/40062_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/40062-phantom-matrix-fx.html|LinkType3|video|Url3|https://vimeo.com/211297960
+[GENERAL]
+Manufacturer|Showtec|Name|Phantom Matrix FX|Type|42|Authors|Saeckel1|Creator|OFL
+[PHYSICAL]
+Width|445|Height|530|Depth|200|Weight|9.80|Power|140|Connector|3-pin|Bulb|25× 4W RGBW LEDs|LensMinDegree|45.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0..270deg
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~128~Txt~0Hz..10Hz FX|R3|Begin~129~End~255~Txt~0Hz..10Hz linear
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~13~Txt~Color 1 (R=255)~Extra~#ff0000|R3|Begin~14~End~20~Txt~Color 2 (R=255 W=100)~Extra~#ff4848|R4|Begin~21~End~27~Txt~Color 3 (R=255 W=200)~Extra~#ff7070|R5|Begin~28~End~34~Txt~Color 4 (R=255 G=50)~Extra~#ff3200|R6|Begin~35~End~41~Txt~Color 5 (R=255 G=150)~Extra~#ff9600|R7|Begin~42~End~48~Txt~Color 6 (R=255 G=255)~Extra~#ffff00|R8|Begin~49~End~55~Txt~Color 7 (R=255 G=255 W=75)~Extra~#ffff3a|R9|Begin~56~End~62~Txt~Color 8 (G=255 W=255)~Extra~#80ff80|R10|Begin~63~End~69~Txt~Color 9 (G=255 W=150)~Extra~#5eff5e|R11|Begin~70~End~76~Txt~Color 10 (G=255 W=50)~Extra~#2aff2a|R12|Begin~77~End~83~Txt~Color 11 (G=255)~Extra~#00ff00|R13|Begin~84~End~90~Txt~Color 12 (G=255 B=50)~Extra~#00ff32|R14|Begin~91~End~97~Txt~Color 13 (G=255 B=150)~Extra~#00ff96|R15|Begin~98~End~104~Txt~Color 14 (G=255 B=255)~Extra~#00ffff|R16|Begin~105~End~111~Txt~Color 15 (G=255 B=255 W=75)~Extra~#3affff|R17|Begin~112~End~118~Txt~Color 16 (G=255 B=255 W=150)~Extra~#5effff|R18|Begin~119~End~125~Txt~Color 17 (G=100 B=255 W=255)~Extra~#80b2ff|R19|Begin~126~End~132~Txt~Color 18 (B=255 W=100)~Extra~#4848ff|R20|Begin~133~End~139~Txt~Color 19 (B=255 W=50)~Extra~#2a2aff|R21|Begin~140~End~146~Txt~Color 20 (B=255)~Extra~#0000ff|R22|Begin~147~End~153~Txt~Color 21 (R=75 B=255)~Extra~#4b00ff|R23|Begin~154~End~160~Txt~Color 22 (R=160 B=255)~Extra~#a000ff|R24|Begin~161~End~167~Txt~Color 23 (R=255 B=255)~Extra~#ff00ff|R25|Begin~168~End~174~Txt~Color 24 (R=255 B=175)~Extra~#ff00af|R26|Begin~175~End~181~Txt~Color 25 (R=255 B=100)~Extra~#ff0064|R27|Begin~182~End~188~Txt~Color 26 (R=255 B=100 W=50)~Extra~#ff2a7d|R28|Begin~189~End~195~Txt~Color 27 (R=255 B=25 W=50)~Extra~#ff2a3f|R29|Begin~196~End~202~Txt~Color 28 (R=255 B=25 W=25)~Extra~#ff172e|R30|Begin~203~End~209~Txt~Color 29 (R=255 B=25)~Extra~#ff0019|R31|Begin~210~End~216~Txt~Color 30 (W=255)~Extra~#ffffff|R32|Begin~217~End~223~Txt~Color 31 (R=75 G=75 W=255)~Extra~#ffffc5|R33|Begin~224~End~230~Txt~Color 32 (B=100 W=255)~Extra~#b7b7ff|R34|Begin~231~End~255~Txt~Color 33 (R=255 G=255 B=255 W=255)~Extra~#ffffff
+ID|Effect Macros|Type|0|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~24~Txt~ColorJump 1|R3|Begin~25~End~36~Txt~ColorJump 2|R4|Begin~37~End~48~Txt~ColorJump 3|R5|Begin~49~End~60~Txt~ColorJump 4|R6|Begin~61~End~72~Txt~ColorJump 5|R7|Begin~73~End~84~Txt~ColorJump 6|R8|Begin~85~End~96~Txt~ColorJump 7|R9|Begin~97~End~108~Txt~ColorJump 8|R10|Begin~109~End~120~Txt~ColorFade 1|R11|Begin~121~End~132~Txt~ColorFade 2|R12|Begin~133~End~144~Txt~ColorFade 3|R13|Begin~145~End~156~Txt~ColorFade 4|R14|Begin~157~End~168~Txt~ColorFade 5|R15|Begin~169~End~180~Txt~ColorFade 6|R16|Begin~181~End~192~Txt~ColorFade 7|R17|Begin~193~End~204~Txt~ColorFade Rainbow 1|R18|Begin~205~End~216~Txt~ColorFade Rainbow 2|R19|Begin~217~End~228~Txt~ColorFade blue-red|R20|Begin~229~End~240~Txt~ColorFade blue-green|R21|Begin~241~End~255~Txt~ColorFade yellow-red
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pattern|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~10~Txt~0|R3|Begin~11~End~13~Txt~1|R4|Begin~14~End~16~Txt~2|R5|Begin~17~End~19~Txt~3|R6|Begin~20~End~22~Txt~4|R7|Begin~23~End~25~Txt~5|R8|Begin~26~End~28~Txt~6|R9|Begin~29~End~31~Txt~7|R10|Begin~32~End~34~Txt~8|R11|Begin~35~End~37~Txt~9|R12|Begin~38~End~40~Txt~A|R13|Begin~41~End~43~Txt~B|R14|Begin~44~End~46~Txt~C|R15|Begin~47~End~49~Txt~D|R16|Begin~50~End~52~Txt~E|R17|Begin~53~End~55~Txt~F|R18|Begin~56~End~58~Txt~G|R19|Begin~59~End~61~Txt~H|R20|Begin~62~End~64~Txt~I|R21|Begin~65~End~67~Txt~J|R22|Begin~68~End~70~Txt~K|R23|Begin~71~End~73~Txt~L|R24|Begin~74~End~76~Txt~M|R25|Begin~77~End~79~Txt~N|R26|Begin~80~End~82~Txt~O|R27|Begin~83~End~85~Txt~P|R28|Begin~86~End~88~Txt~Q|R29|Begin~89~End~91~Txt~R|R30|Begin~92~End~94~Txt~S|R31|Begin~95~End~97~Txt~T|R32|Begin~98~End~100~Txt~U|R33|Begin~101~End~103~Txt~V|R34|Begin~104~End~106~Txt~W|R35|Begin~107~End~109~Txt~X|R36|Begin~110~End~112~Txt~Y|R37|Begin~113~End~115~Txt~Z|R38|Begin~116~End~118~Txt~Pattern 1|R39|Begin~119~End~121~Txt~Pattern 2|R40|Begin~122~End~124~Txt~Pattern 3|R41|Begin~125~End~127~Txt~Pattern 4|R42|Begin~128~End~130~Txt~Pattern 5|R43|Begin~131~End~133~Txt~Pattern 6|R44|Begin~134~End~136~Txt~Pattern 7|R45|Begin~137~End~139~Txt~Pattern 8|R46|Begin~140~End~142~Txt~Pattern 9|R47|Begin~143~End~145~Txt~Pattern 10|R48|Begin~146~End~148~Txt~Pattern 11|R49|Begin~149~End~151~Txt~Pattern 12|R50|Begin~152~End~154~Txt~Pattern 13|R51|Begin~155~End~157~Txt~Pattern 14|R52|Begin~158~End~160~Txt~Pattern 15|R53|Begin~161~End~163~Txt~Pattern 16|R54|Begin~164~End~166~Txt~Pattern 17|R55|Begin~167~End~169~Txt~Pattern 18|R56|Begin~170~End~172~Txt~Pattern 19|R57|Begin~173~End~175~Txt~Pattern 20|R58|Begin~176~End~178~Txt~Pattern 21|R59|Begin~179~End~181~Txt~Pattern 22|R60|Begin~182~End~184~Txt~Pattern 23|R61|Begin~185~End~187~Txt~Pattern 24|R62|Begin~188~End~190~Txt~Pattern 25|R63|Begin~191~End~193~Txt~Pattern 26|R64|Begin~194~End~196~Txt~Pattern 27|R65|Begin~197~End~199~Txt~Pattern 28|R66|Begin~200~End~202~Txt~Pattern 29|R67|Begin~203~End~205~Txt~Pattern 30|R68|Begin~206~End~208~Txt~Pattern 31|R69|Begin~209~End~211~Txt~Pattern 32|R70|Begin~212~End~214~Txt~Pattern 33|R71|Begin~215~End~217~Txt~Pattern 34|R72|Begin~218~End~220~Txt~Pattern 35|R73|Begin~221~End~223~Txt~Pattern 36|R74|Begin~224~End~226~Txt~Pattern 37|R75|Begin~227~End~229~Txt~Pattern 38|R76|Begin~230~End~232~Txt~Pattern 39|R77|Begin~233~End~235~Txt~Pattern 40|R78|Begin~236~End~238~Txt~Pattern 41|R79|Begin~239~End~241~Txt~Pattern 42|R80|Begin~242~End~244~Txt~Pattern 43|R81|Begin~245~End~247~Txt~Pattern 44|R82|Begin~248~End~250~Txt~Pattern 45|R83|Begin~251~End~253~Txt~Pattern 46|R84|Begin~254~End~255~Txt~Pattern 47
+ID|Pattern Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Function|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~10~Txt~Show 1|R3|Begin~11~End~20~Txt~Show 2|R4|Begin~21~End~30~Txt~Show 3|R5|Begin~31~End~40~Txt~Show 4|R6|Begin~41~End~50~Txt~Show 5|R7|Begin~51~End~60~Txt~Show 6|R8|Begin~61~End~70~Txt~Show 7|R9|Begin~71~End~80~Txt~Show 8|R10|Begin~81~End~90~Txt~Slave 1|R11|Begin~91~End~96~Txt~Slave 2|R12|Begin~97~End~160~Txt~Sound control low..high|R13|Begin~161~End~170~Txt~5s Pan inversion|R14|Begin~171~End~180~Txt~5s Tilt inversion|R15|Begin~181~End~190~Txt~5s Pan normal|R16|Begin~191~End~200~Txt~5s Tilt normal|R17|Begin~201~End~220~Txt~Pan/Tilt blackout on|R18|Begin~221~End~240~Txt~5s Reset|R19|Begin~241~End~255~Txt~Pan/Tilt blackout off
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Linear Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~0Hz..10Hz
+ID|FX Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~0Hz..10Hz
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White Master|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 13|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 14|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 15|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 16|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 17|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 18|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 19|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 19|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 19|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 19|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 20|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 20|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 20|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 20|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 21|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 21|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 21|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 21|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 22|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 22|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 22|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 22|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 23|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 23|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 23|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 23|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 24|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 24|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 24|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 24|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 25|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 25|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 25|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 25|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|10-Channel|ShortName|10ch|Content|Pan~Tilt~Dimmer~Strobe~Color Macros~Effect Macros~Effect Speed~Pattern~Pattern Speed~Function
+Name|18-Channel|ShortName|18ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Linear Strobe~FX Strobe~Color Macros~Effect Macros~Effect Speed~Pattern~Pattern Speed~Function~Red Master~Green Master~Blue Master~White Master
+Name|118-Channel|ShortName|118ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Linear Strobe~FX Strobe~Color Macros~Effect Macros~Effect Speed~Pattern~Pattern Speed~Function~Red Master~Green Master~Blue Master~White Master~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Red 8~Green 8~Blue 8~White 8~Red 9~Green 9~Blue 9~White 9~Red 10~Green 10~Blue 10~White 10~Red 11~Green 11~Blue 11~White 11~Red 12~Green 12~Blue 12~White 12~Red 13~Green 13~Blue 13~White 13~Red 14~Green 14~Blue 14~White 14~Red 15~Green 15~Blue 15~White 15~Red 16~Green 16~Blue 16~White 16~Red 17~Green 17~Blue 17~White 17~Red 18~Green 18~Blue 18~White 18~Red 19~Green 19~Blue 19~White 19~Red 20~Green 20~Blue 20~White 20~Red 21~Green 21~Blue 21~White 21~Red 22~Green 22~Blue 22~White 22~Red 23~Green 23~Blue 23~White 23~Red 24~Green 24~Blue 24~White 24~Red 25~Green 25~Blue 25~White 25
+[END_MODES]

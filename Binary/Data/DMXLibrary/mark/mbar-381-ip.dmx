@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.eafg.es/productos/Docs/Manuales/MBAR381IP_MANUAL_V161001_20161028134808.pdf|LinkType2|product page|Url2|https://products.equipson.es/mbar-381-ip
+[GENERAL]
+Manufacturer|Mark|Name|MBAR 381 IP|Type|19|Authors|Gerard Fontanillas|Creator|OFL
+[PHYSICAL]
+Width|1001|Height|69|Depth|100|Weight|4.10|Power|60|Connector|3-pin|Bulb|3W RGB LEDs|LensMinDegree|45.000|LensMaxDegree|45.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~20~Txt~slow..fast not synchronous|R3|Begin~21~End~60~Txt~slow..fast synchronous|R4|Begin~61~End~100~Txt~Pulse slow..fast electronic sinewave|R5|Begin~101~End~140~Txt~slow..fast Random timing|R6|Begin~141~End~180~Txt~RampUp slow..fast|R7|Begin~181~End~220~Txt~RampDown slow..fast|R8|Begin~221~End~255~Txt~Pulse slow..fast electronic squarewave
+ID|Color Presets|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~11~Txt~Blue~Extra~#0000ff|R3|Begin~12~End~50~Txt~Preset Blue … Cyan|R4|Begin~51~End~51~Txt~Cyan~Extra~#00ffff|R5|Begin~52~End~90~Txt~Preset Cyan … Green|R6|Begin~91~End~91~Txt~Green~Extra~#00ff00|R7|Begin~92~End~130~Txt~Preset Green … Yellow|R8|Begin~131~End~131~Txt~Yellow~Extra~#ffff00|R9|Begin~132~End~170~Txt~Preset Yellow … Red|R10|Begin~171~End~171~Txt~Red~Extra~#ff0000|R11|Begin~172~End~210~Txt~Preset Red … Magenta|R12|Begin~211~End~211~Txt~Magenta~Extra~#ff00ff|R13|Begin~212~End~250~Txt~Preset Magenta … Blue|R14|Begin~251~End~255~Txt~Blue~Extra~#0000ff
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~10~Txt~Use menu setting|R2|Begin~11~End~20~Txt~Linear curve|R3|Begin~21~End~30~Txt~Square law curve|R4|Begin~31~End~40~Txt~Inverse square law curve|R5|Begin~41~End~50~Txt~S-curve|R6|Begin~51~End~60~Txt~Linear curve and smooth|R7|Begin~61~End~70~Txt~Square law curve and smooth|R8|Begin~71~End~80~Txt~Inverse square law curve and smooth|R9|Begin~81~End~90~Txt~S-curve and smooth|R10|Begin~91~End~255~Txt~Use menu setting
+ID|Color Macros|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~15~Txt~Preset CT01|R3|Begin~16~End~20~Txt~Preset CT02|R4|Begin~21~End~25~Txt~Preset CT03|R5|Begin~26~End~30~Txt~Preset CT04|R6|Begin~31~End~35~Txt~Preset CT05|R7|Begin~36~End~40~Txt~Preset CT06|R8|Begin~41~End~45~Txt~Preset CT07|R9|Begin~46~End~50~Txt~Preset CT08|R10|Begin~51~End~55~Txt~Preset CT09|R11|Begin~56~End~60~Txt~Preset CT10|R12|Begin~61~End~65~Txt~ColorJump Red-Green-Blue-Yellow-Magenta-Cyan-White|R13|Begin~66~End~70~Txt~ColorFade Red-Green-Blue|R14|Begin~71~End~75~Txt~ColorFade Red-Green, Red-Blue, Green-Blue|R15|Begin~76~End~80~Txt~ColorFade Red-Yellow-White-Cyan-Blue|R16|Begin~81~End~85~Txt~ColorFade Rainbow|R17|Begin~86~End~90~Txt~ColorJump Chase 1|R18|Begin~91~End~95~Txt~ColorJump Chase 2|R19|Begin~96~End~100~Txt~ColorJump Chase 3|R20|Begin~101~End~110~Txt~No function Reserved|R21|Begin~111~End~115~Txt~Red~Extra~#ff0000|R22|Begin~116~End~120~Txt~Green~Extra~#00ff00|R23|Begin~121~End~125~Txt~Blue~Extra~#0000ff|R24|Begin~126~End~130~Txt~Red~Extra~#ff0000|R25|Begin~131~End~135~Txt~Green~Extra~#00ff00|R26|Begin~136~End~140~Txt~Blue~Extra~#0000ff|R27|Begin~141~End~145~Txt~Yellow~Extra~#ffff00|R28|Begin~146~End~150~Txt~Pink~Extra~#ff00ff|R29|Begin~151~End~155~Txt~Cyan~Extra~#00ffff|R30|Begin~156~End~160~Txt~Orange~Extra~#ff8000|R31|Begin~161~End~165~Txt~Violet~Extra~#aa00ff|R32|Begin~166~End~170~Txt~Golden~Extra~#ffcc00|R33|Begin~171~End~175~Txt~Preset 2700K|R34|Begin~176~End~180~Txt~Preset 3200K|R35|Begin~181~End~185~Txt~Preset 4000K|R36|Begin~186~End~190~Txt~Preset 5500K|R37|Begin~191~End~195~Txt~Preset 6500K|R38|Begin~196~End~200~Txt~RGBW~Extra~#ffffff|R39|Begin~201~End~255~Txt~No function Reserved
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Master dimmer~Strobe~Color Presets
+Name|4-channel|ShortName|4ch|Content|Master dimmer~Red~Green~Blue
+Name|6-channel|ShortName|6ch|Content|Master dimmer~Red~Green~Blue~Strobe~Dimmer Curve
+Name|9-channel|ShortName|9ch|Content|Master dimmer~Red~Green~Blue~Strobe~Color Macros~Macro Speed~Color Presets~Dimmer Curve
+[END_MODES]

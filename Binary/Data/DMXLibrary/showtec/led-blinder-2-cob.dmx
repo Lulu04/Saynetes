@@ -1,0 +1,20 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.woodbrass.com/images/woodbrass/SHOWTEC+LED+BLINDER+2+50W.PDF
+[GENERAL]
+Manufacturer|Showtec|Name|LED Blinder 2 COB|Type|30|Authors|Eric Bessot, Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|138|Height|393|Depth|185|Weight|4.14|Power|110|Connector|3-pin|Bulb|LED|LensMinDegree|35.000|LensMaxDegree|35.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer L|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer R|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Master dimmer
+Name|2-channel|ShortName|2ch|Content|Dimmer L~Dimmer R
+Name|3-channel|ShortName|3ch|Content|Dimmer L~Dimmer R~Master dimmer
+Name|4-channel|ShortName|4ch|Content|Dimmer L~Dimmer R~Strobe~Master dimmer
+[END_MODES]
