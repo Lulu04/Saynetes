@@ -1,0 +1,9 @@
+RGB|Red~3~0..100%|Green~4~0..100%|Blue~5~0..100%
+RGBW|Red~3~0..100%|Green~4~0..100%|Blue~5~0..100%|White~13~0..100%
+RGBWA|Red~3~0..100%|Green~4~0..100%|Blue~5~0..100%|White~13~0..100%|Amber~14~0..100%
+RGBWAUV|Red~3~0..100%|Green~4~0..100%|Blue~5~0..100%|White~13~0..100%|Amber~14~0..100%|UV~15~0..100%
+RGB+fine|Red~3~0..100%|Red fine~3~|Green~4~0..100%|Green fine~4~|Blue~5~0..100%|Blue fine~5~
+RGBW+fine|Red~3~0..100%|Red fine~3~|Green~4~0..100%|Green fine~4~|Blue~5~0..100%|Blue fine~5~|White~13~0..100%|White fine~13~
+RGBWA+fine|Red~3~0..100%|Red fine~3~|Green~4~0..100%|Green fine~4~|Blue~5~0..100%|Blue fine~5~|White~13~0..100%|White fine~13~|Amber~14~0..100%|Amber fine~14~
+RGBWAUV+fine|Red~3~0..100%|Red fine~3~|Green~4~0..100%|Green fine~4~|Blue~5~0..100%|Blue fine~5~|White~13~0..100%|White fine~13~|Amber~14~0..100%|Amber fine~14~|UV~15~0..100%|UV fine~15~
+HSI|Hue~2~0..100%|Saturation~2~0..100%|Intensity~2~0..100%
