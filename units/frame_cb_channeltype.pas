@@ -60,7 +60,7 @@ begin
   DataModule1.ILChannelType.Draw(CB.Canvas, ARect.Left+ScaleDesignToForm(3), ARect.Top, Ord(chanType));
   CB.Canvas.Brush.Style := bsClear;
   CB.Canvas.TextOut(ARect.Left + DataModule1.ILChannelType.Width + ScaleDesignToForm(8),
-                    ARect.Top, readable+extra);
+                    ARect.Top, readable+' '+extra);
 end;
 
 procedure TFrameCBChannelType.CBChange(Sender: TObject);

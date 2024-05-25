@@ -10,6 +10,8 @@ uses
 
 type
 
+  TUserChangeChannelNameCallback = procedure(Sender: TObject; aChanIndex: integer; const aNewName: string) of object;
+
   { TFrameViewDMXFixtureChannels }
 
   TFrameViewDMXFixtureChannels = class(TFrame)
@@ -18,6 +20,7 @@ type
     procedure TVSelectionChanged(Sender: TObject);
   private
     FEditionEnabled, FTreeIsCollapsed: boolean;
+    FOnUserChangeChannelName: TUserChangeChannelNameCallback;
     FFixturetype: TFixturetype;
     FOnSelectionChange: TNotifyEvent;
     FReady: boolean;
@@ -31,6 +34,7 @@ type
 
     procedure Clear;
     procedure ShowFixture(const aFixtureLocation: TFixtureLibraryLocation; aShowCollapsed: boolean);
+    procedure AddChannel(p: PFixLibAvailableChannel);
 
     procedure MoveSelectedUp;
     procedure MoveSelectedDown;
@@ -38,12 +42,12 @@ type
     function SelectedIsChannelName: boolean;
     function SelectedIsRange: boolean;
 
-
     property Ready: boolean read FReady; // true after a successfull call to method ShowFixture
     property ChannelCount: integer read FChannelCount write FChannelCount;
     property FixtureType: TFixturetype read FFixturetype;
 
     property EditionEnabled: boolean read FEditionEnabled write SetEditionEnabled;
+    property OnUserChangeChannelName: TUserChangeChannelNameCallback read FOnUserChangeChannelName write FOnUserChangeChannelName;
     property SelectionEnabled: boolean read FSelectionEnabled write SetSelectionEnabled;
     property OnSelectionChange: TNotifyEvent read FOnSelectionChange write FOnSelectionChange;
     property Selected: TTreeNode read GetSelected;
@@ -59,11 +63,26 @@ uses u_resource_string, u_dmxlib_inputrange, u_userdialogs, u_utils, u_helper,
 { TFrameViewDMXFixtureChannels }
 
 procedure TFrameViewDMXFixtureChannels.TVSelectionChanged(Sender: TObject);
+var na: string;
+  n: TTreeNode;
 begin
+  // one click on channel name -> ask new name
+  if EditionEnabled and (TV.Selected <> NIL) then begin
+    n := TV.Selected;
+    if n.Level = 2 then n := n.Parent;
+    na := n.Text;
+    if UserInputNoSpecialChar(SNewName, SOk, SCancel, na, mtConfirmation, False) = mrOk then begin
+      n.Text := na;
+      if FOnUserChangeChannelName <> NIL then FOnUserChangeChannelName(Self, n.Index, na);
+    end;
+    exit;
+  end;
+
   if not FSelectionEnabled
     then TV.Selected:=NIL
     else if FOnSelectionChange<>NIL
            then FOnSelectionChange(Self);
+
 end;
 
 procedure TFrameViewDMXFixtureChannels.TVMouseUp(Sender: TObject;
@@ -142,7 +161,7 @@ begin
   for i:=0 to High(A) do begin
     if TrySplitVirtual(A[i], virtualName, subChannels) then begin
       n := TV.Items.Add(TV.Items.GetFirstNode, virtualName);
-      n.ImageIndex := Ord(High(TChannelType))+1; // replace by Switch image
+      n.ImageIndex := Ord(High(TChannelType))+1; // Switch image
       for j:=0 to High(subChannels) do begin
         p := lf.AvailableChannels.GetChannelsByName(subChannels[j]);
         if p = NIL then begin
@@ -182,6 +201,17 @@ begin
 
    FTreeIsCollapsed := aShowCollapsed;
 end;
+
+procedure TFrameViewDMXFixtureChannels.AddChannel(p: PFixLibAvailableChannel);
+var i: integer;
+  n: TTreeNode;
+begin
+  n := TV.Items.Add(TV.Items.GetFirstNode, p^.NameID);
+  n.ImageIndex := Ord(p^.ChanType); // image associated with channel type
+  for i:=0 to High(p^.Ranges) do
+    TV.Items.AddChild(n, p^.Ranges[i].ToReadableString);
+end;
+
 procedure TFrameViewDMXFixtureChannels.MoveSelectedUp;
 var n: TTreeNode;
 begin

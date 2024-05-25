@@ -327,7 +327,11 @@ end;
 
 procedure TFrameEditMode.DoAddChannelFrame(const aName: string);
 var i, xx, yy, w: integer;
+  par: TWinControl;
 begin
+  par := PanelTools.Parent;
+  PanelTools.Parent := NIL;
+
   i := Length(FChanFrames);
   SetLength(FChanFrames, i+1);
   FChanFrames[i] := TFrameViewModeItem.Create(Self);
@@ -347,6 +351,8 @@ begin
 
   ClientHeight := FChanFrames[i].Top + FChanFrames[i].Height +  // ClientHeight + FChanFrames[i].Height;
                   ScaleDesignToForm(10) + BAddChannel.Height + ScaleDesignToForm(10);
+
+  PanelTools.Parent := par;
 end;
 
 procedure TFrameEditMode.DoDeleteChannelFrame(aIndex: integer);
