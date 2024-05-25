@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MANUALS/999/UM_MACAura_EN_B.pdf|LinkType2|product page|Url2|https://www.martin.com/en/products/mac-aura|LinkType3|video|Url3|https://www.youtube.com/watch?v=PKBiIK7Yr1E|LinkType4|video|Url4|https://www.youtube.com/watch?v=8kL6YO1U70Q
 [GENERAL]
-Manufacturer|Martin|Name|MAC Aura|Type|9|Authors|novasfronteiras.co|Creator|OFL
+Manufacturer|Martin|Name|MAC Aura|Type|41|Authors|novasfronteiras.co|Creator|OFL
 [PHYSICAL]
 Width|302|Height|360|Depth|302|Weight|5.60|Power|260|Connector|5-pin|Bulb|LED|Lumens|3850|Lens|beam&aura|LensMinDegree|11.000|LensMaxDegree|58.000
 [CHAN_DEF]

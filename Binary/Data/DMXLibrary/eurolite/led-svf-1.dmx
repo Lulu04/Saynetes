@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51918662-MANUAL-1.10-de-en_00073902.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=fg8kl3vCfD4|LinkType3|video|Url3|https://www.youtube.com/watch?v=DyPYm84KdFQ
 [GENERAL]
-Manufacturer|Eurolite|Name|LED SVF-1|Type|0|Authors|Felix Edelmann|Creator|OFL
+Manufacturer|Eurolite|Name|LED SVF-1|Type|33|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|580|Height|325|Depth|625|Weight|6.00|Power|60|Connector|3-pin|Bulb|LED 5mm|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]

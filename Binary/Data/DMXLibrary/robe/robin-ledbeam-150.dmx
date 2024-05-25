@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.robe.cz/res/downloads/user_manuals/User_manual_Robin_LEDBeam_150_FW_Robin_LEDBeam_150_FWQ.pdf|LinkType2|product page|Url2|https://www.robe.cz/ledbeam-150|LinkType3|video|Url3|https://www.youtube.com/watch?v=ud5DeYkEJsk
 [GENERAL]
-Manufacturer|Robe|Name|Robin LEDBeam 150|Type|9|Authors|Felix Edelmann|Creator|OFL
+Manufacturer|Robe|Name|Robin LEDBeam 150|Type|41|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|244|Height|329|Depth|190|Weight|5.70|Power|220|Connector|5-pin|Bulb|7x RGBW LEDs|Lumens|1380|LensMinDegree|3.800|LensMaxDegree|60.000
 [CHAN_DEF]
@@ -22,12 +22,6 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue fine|Type|5
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
 ID|White fine|Type|13
-ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
-ID|Cyan fine|Type|18
-ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
-ID|Magenta fine|Type|19
-ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
-ID|Yellow fine|Type|20
 ID|CTC|Type|27|R1|Begin~0~End~255~Txt~8000K..2700K
 ID|Color Mix Control|Type|0|R1|Begin~0~End~9~Txt~Virtual Color Wheel has priority|R2|Begin~10~End~19~Txt~Highest values have priority|R3|Begin~20~End~29~Txt~Lowest values have priority|R4|Begin~30~End~39~Txt~Multiply wheel and color mix|R5|Begin~40~End~49~Txt~Add wheel and color mix|R6|Begin~50~End~59~Txt~Subtract color mix from wheel|R7|Begin~60~End~69~Txt~Substract wheel from color mix|R8|Begin~70~End~128~Txt~No function|R9|Begin~129~End~129~Txt~Virtual Color Wheel has priority|R10|Begin~130~End~254~Txt~Crossfade between wheel and color mix|R11|Begin~255~End~255~Txt~Color mix has priority
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 60deg..3.8deg
@@ -35,6 +29,12 @@ ID|Zoom fine|Type|31
 ID|Shutter / Strobe|Type|6|DefaultValue|32|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe 0.3Hz..20Hz|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~143~Txt~RampUp slow..fast|R6|Begin~144~End~159~Txt~RampDown slow..fast|R7|Begin~160~End~191~Txt~Open|R8|Begin~192~End~223~Txt~Strobe slow..fast Random timing|R9|Begin~224~End~255~Txt~Open
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Dimmer fine|Type|1
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan fine|Type|18
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta fine|Type|19
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow fine|Type|20
 ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
 [END_CHAN_DEF]
 [MODES]

@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://manual-hub.com/manuals/afx-lmh460z-01-pdf-manual/|LinkType2|video|Url2|https://www.youtube.com/watch?v=Y6BBSuRVWwQ|LinkType3|video|Url3|https://www.youtube.com/watch?v=vEnjSQS7QY0|LinkType4|video|Url4|https://www.youtube.com/watch?v=-POl9ZfaeQs
 [GENERAL]
-Manufacturer|AFX|Name|LMH460Z|Type|9|Authors|Folson_dev, Ryan Goodwin|Creator|OFL
+Manufacturer|AFX|Name|LMH460Z|Type|41|Authors|Folson_dev, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|350|Height|400|Depth|260|Weight|9.00|Power|400|Connector|3-pin|Bulb|36x 10W RGBW LED|Lumens|452|LensMinDegree|15.000|LensMaxDegree|60.000
 [CHAN_DEF]

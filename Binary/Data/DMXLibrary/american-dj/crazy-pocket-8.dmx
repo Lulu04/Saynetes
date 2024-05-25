@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/8887/crazy_pocket_8.pdf
 [GENERAL]
-Manufacturer|American DJ|Name|Crazy Pocket 8|Type|9|Authors|Felix Edelmann|Creator|OFL
+Manufacturer|American DJ|Name|Crazy Pocket 8|Type|42|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|297|Height|262|Depth|149|Weight|3.5|Power|59|Connector|3-pin|Bulb|8×3WLED 2×red 2×green 2×blue 2 amber|LensMinDegree|4.000|LensMaxDegree|4.000
 [CHAN_DEF]

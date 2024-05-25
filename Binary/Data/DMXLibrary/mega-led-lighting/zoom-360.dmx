@@ -1,9 +1,9 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.jackodance.it/wp-content/uploads/2019/01/MJ-1006B-zoom-led-moving-head-light.pdf|LinkType2|product page|Url2|https://www.mjledlighting.com/product/4in1-5in1-6in1-led-wash-zoom-moving-head-light/
 [GENERAL]
-Manufacturer|Mega LED Lighting|Name|ZOOM 360|Type|9|Authors|Felix Edelmann|Creator|OFL
+Manufacturer|Mega LED Lighting|Name|ZOOM 360|Type|41|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|350|Height|460|Depth|220|Weight|10.00|Power|420|Connector|3-pin|Bulb|36x RBWA LEDs|LensMinDegree|10.000|LensMaxDegree|60.000
 [CHAN_DEF]
@@ -14,16 +14,16 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
 ID|User Colors|Type|12|R1|Begin~0~End~255~Txt~Preset
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Pan fine|Type|7
 ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 10deg..60deg
 ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~1Hz..25Hz
 ID|Effects|Type|0|R1|Begin~0~End~0~Txt~No function~Switch1~Color Macros / Effect Speed:Color Macros|R2|Begin~1~End~25~Txt~Start controller handspike~Switch1~Color Macros / Effect Speed:Color Macros|R3|Begin~26~End~50~Txt~Turn off controller handspike~Switch1~Color Macros / Effect Speed:Color Macros|R4|Begin~51~End~90~Txt~Program color selection switch~Switch1~Color Macros / Effect Speed:Color Macros|R5|Begin~91~End~130~Txt~Color pulse~Switch1~Color Macros / Effect Speed:Effect Speed|R6|Begin~131~End~170~Txt~ColorJump~Switch1~Color Macros / Effect Speed:Effect Speed|R7|Begin~171~End~210~Txt~ColorFade~Switch1~Color Macros / Effect Speed:Effect Speed|R8|Begin~211~End~250~Txt~Inside mode 1~Switch1~Color Macros / Effect Speed:Color Macros|R9|Begin~251~End~255~Txt~Sound mode~Switch1~Color Macros / Effect Speed:Color Macros
+ID|ID Code|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~ID 1|R3|Begin~20~End~29~Txt~ID 2|R4|Begin~30~End~39~Txt~ID 3|R5|Begin~40~End~49~Txt~ID 4|R6|Begin~50~End~59~Txt~ID 5|R7|Begin~60~End~69~Txt~ID 6|R8|Begin~70~End~79~Txt~ID 7|R9|Begin~80~End~89~Txt~ID 8|R10|Begin~90~End~99~Txt~ID 9|R11|Begin~100~End~109~Txt~ID 10|R12|Begin~110~End~119~Txt~ID 11|R13|Begin~120~End~129~Txt~ID 12|R14|Begin~130~End~139~Txt~ID 13|R15|Begin~140~End~149~Txt~ID 14|R16|Begin~150~End~159~Txt~ID 15|R17|Begin~160~End~169~Txt~ID 16|R18|Begin~170~End~179~Txt~ID 17|R19|Begin~180~End~189~Txt~ID 18|R20|Begin~190~End~199~Txt~ID 19|R21|Begin~200~End~209~Txt~ID 20|R22|Begin~210~End~219~Txt~ID 21|R23|Begin~220~End~229~Txt~ID 22|R24|Begin~230~End~239~Txt~ID 23|R25|Begin~240~End~249~Txt~ID 24|R26|Begin~250~End~255~Txt~ID 25
 ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~20~Txt~Preset Red … Yellow|R3|Begin~21~End~40~Txt~Preset Yellow … Green|R4|Begin~41~End~60~Txt~Preset Green … Cyan|R5|Begin~61~End~80~Txt~Preset Cyan … Blue|R6|Begin~81~End~100~Txt~Preset Blue … Magenta|R7|Begin~101~End~120~Txt~Preset Magenta … Red|R8|Begin~121~End~140~Txt~Preset Red … White|R9|Begin~141~End~160~Txt~Preset White … Blue|R10|Begin~161~End~170~Txt~White~Extra~#ffffff|R11|Begin~171~End~200~Txt~Black~Extra~#000000|R12|Begin~201~End~205~Txt~Preset Color mix 1 (R242 G204 B5 W227)|R13|Begin~206~End~210~Txt~Preset Color mix 2 (R242 G215 B5 W227)|R14|Begin~211~End~215~Txt~Preset Color mix 3 (R255 G255 B50 W255)|R15|Begin~216~End~220~Txt~Preset Color mix 4 (R255 G255 B90 W255)|R16|Begin~221~End~225~Txt~Preset Color mix 5 (R255 G255 B118 W255)|R17|Begin~226~End~230~Txt~Preset Color mix 6 (R255 G255 B132 W255)|R18|Begin~231~End~235~Txt~Preset Color mix 7 (R2 55 G255 B151 W255)|R19|Begin~236~End~240~Txt~Preset Color mix 8 (R255 G255 B171 W255)|R20|Begin~241~End~245~Txt~Preset Color mix 9 (R255 G255 B185 W255)|R21|Begin~246~End~250~Txt~Preset Color mix 10 (R255 G255 B197 W255)|R22|Begin~251~End~255~Txt~Preset Color mix 11 (R255 G255 B234 W255)
 ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
-ID|ID Code|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~ID 1|R3|Begin~20~End~29~Txt~ID 2|R4|Begin~30~End~39~Txt~ID 3|R5|Begin~40~End~49~Txt~ID 4|R6|Begin~50~End~59~Txt~ID 5|R7|Begin~60~End~69~Txt~ID 6|R8|Begin~70~End~79~Txt~ID 7|R9|Begin~80~End~89~Txt~ID 8|R10|Begin~90~End~99~Txt~ID 9|R11|Begin~100~End~109~Txt~ID 10|R12|Begin~110~End~119~Txt~ID 11|R13|Begin~120~End~129~Txt~ID 12|R14|Begin~130~End~139~Txt~ID 13|R15|Begin~140~End~149~Txt~ID 14|R16|Begin~150~End~159~Txt~ID 15|R17|Begin~160~End~169~Txt~ID 16|R18|Begin~170~End~179~Txt~ID 17|R19|Begin~180~End~189~Txt~ID 18|R20|Begin~190~End~199~Txt~ID 19|R21|Begin~200~End~209~Txt~ID 20|R22|Begin~210~End~219~Txt~ID 21|R23|Begin~220~End~229~Txt~ID 22|R24|Begin~230~End~239~Txt~ID 23|R25|Begin~240~End~249~Txt~ID 24|R26|Begin~250~End~255~Txt~ID 25
 [END_CHAN_DEF]
 [MODES]
 Name|16-channel|ShortName|16ch|Content|Dimmer~Red~Green~Blue~White~User Colors~Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Zoom~Strobe~Effects~Color Macros / Effect Speed:Color Macros;Effect Speed~ID Code

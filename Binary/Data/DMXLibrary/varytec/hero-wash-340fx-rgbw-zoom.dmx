@@ -3,20 +3,20 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://images.static-thomann.de/pics/atg/atgdata/document/manual/c_449223_v3_en_online.pdf|LinkType2|product page|Url2|https://www.thomann.de/gb/varytec_hero_wash_340fx_rgbw_zoom.htm|LinkType3|video|Url3|https://www.youtube.com/watch?v=Jzb-RsAqWRc|LinkType4|other|Url4|https://images.static-thomann.de/pics/atg/atgdata/document/misc/449223_photometric_data.pdf
 [GENERAL]
-Manufacturer|Varytec|Name|Hero Wash 340FX RGBW Zoom|Type|9|Authors|Kai Otte, Ryan Goodwin|Creator|OFL
+Manufacturer|Varytec|Name|Hero Wash 340FX RGBW Zoom|Type|41|Authors|Kai Otte, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|255|Height|187|Depth|368|Weight|6.10|Power|134|Connector|3-pin|Bulb|3× 40W RGBW LED|LensMinDegree|4.000|LensMaxDegree|45.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..210deg
-ID|Tilt fine|Type|8
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~250~Txt~Strobe 0Hz..20Hz|R3|Begin~251~End~255~Txt~Open
 ID|Color Macros|Type|12|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Preset Red|R3|Begin~21~End~30~Txt~Preset Green|R4|Begin~31~End~40~Txt~Preset Blue|R5|Begin~41~End~50~Txt~Preset White|R6|Begin~51~End~60~Txt~Preset Red, White|R7|Begin~61~End~70~Txt~Preset Green, White|R8|Begin~71~End~80~Txt~Preset Blue, White|R9|Begin~81~End~90~Txt~Preset Red, Green|R10|Begin~91~End~100~Txt~Preset Green, Blue|R11|Begin~101~End~110~Txt~Preset Red, Blue|R12|Begin~111~End~120~Txt~Preset Red, Green, Blue|R13|Begin~121~End~130~Txt~Preset Green, Blue, White|R14|Begin~131~End~140~Txt~Preset Red, Blue, White|R15|Begin~141~End~150~Txt~Preset Red, Green, Blue, White|R16|Begin~151~End~200~Txt~ColorJump slow..fast|R17|Begin~201~End~255~Txt~ColorFade slow..fast
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
 ID|Beam Split Effect|Type|0|R1|Begin~0~End~100~Txt~Open..Open|R2|Begin~101~End~133~Txt~slow..fast Yo-Yo Effect|R3|Begin~134~End~194~Txt~fast CW..slow CW|R4|Begin~195~End~255~Txt~slow CCW..fast CCW
 ID|Auto Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~20~Txt~Preprogrammed automatic show 1|R3|Begin~21~End~30~Txt~Preprogrammed automatic show 2|R4|Begin~31~End~40~Txt~Preprogrammed automatic show 3|R5|Begin~41~End~50~Txt~Preprogrammed automatic show 4|R6|Begin~51~End~60~Txt~Preprogrammed automatic show 5|R7|Begin~61~End~70~Txt~Preprogrammed automatic show 6|R8|Begin~71~End~80~Txt~Preprogrammed automatic show 7|R9|Begin~81~End~90~Txt~Preprogrammed automatic show 8|R10|Begin~91~End~230~Txt~Sound control off..high|R11|Begin~231~End~240~Txt~3s Reset|R12|Begin~241~End~255~Txt~No function
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
