@@ -4,7 +4,6 @@ object FormSelectExistingChannel: TFormSelectExistingChannel
   Top = 261
   Width = 398
   BorderIcons = [biSystemMenu]
-  BorderStyle = bsSingle
   ClientHeight = 246
   ClientWidth = 398
   KeyPreview = True
@@ -65,10 +64,20 @@ object FormSelectExistingChannel: TFormSelectExistingChannel
       ParentFont = False
     end
     object LB: TListBox
-      Left = 8
-      Height = 152
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BCreateNew
+      Left = 9
+      Height = 151
       Top = 56
-      Width = 379
+      Width = 380
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 7
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
       Color = 2896950
       Font.Color = 15395562
       Font.Style = [fsBold]

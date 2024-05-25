@@ -175,7 +175,9 @@ end;
 
 procedure TPresetManager.FormCreate(Sender: TObject);
 begin
-  FList:=TStringList.Create;
+  FList := TStringList.Create;
+
+  UpdateStringAfterLanguageChange;
 end;
 
 procedure TPresetManager.FormDestroy(Sender: TObject);

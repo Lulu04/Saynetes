@@ -38,7 +38,8 @@ type
     procedure ProcessSubChannelMouseLeaveEvent(Sender: TObject);
     procedure SetImage(aTarget: TImage; aImageIndexInILChannelType: integer);
   public
-    // replace also the icon
+    // aOldName is the name (or virtual name) of the channel
+    // aNewName is the new name or the packed virtualName:SubChannel1;SubChannel2;...
     procedure ReplaceChannelName(const aOldName, aNewName: string);
   public
     constructor Create(TheOwner: TComponent); override;
@@ -122,39 +123,8 @@ begin
 end;
 
 procedure TFrameViewModeItem.ReplaceChannelName(const aOldName, aNewName: string);
-var i: integer;
-  o: TControl;
-  suffix: string;
-  p: PFixLibAvailableChannel;
 begin
-  p := FExistingChannels^.GetChannelsByName(aNewName);
   if ChanName = aOldName then SetChanName(aNewName);
-  exit;
-
-  p := FExistingChannels^.GetChannelsByName(aNewName);
-  if not IsSwitchingChannel then begin
-    if ChanName = aOldName then begin
-      SetChanName(aNewName);
-      if p <> NIL then SetImage(Image1, Ord(p^.ChanType));
-    end;
-  end else begin
-
-    SetChanName(aNewName);
-
- {   // search in the sub-channels
-    for i:=0 to Panel1.ControlCount-1 do begin
-      o := Panel1.Controls[i];
-      if o.Name.StartsWith('MyLabel') then
-        if TLabel(o).Caption = aOldName then begin
-          TLabel(o).Caption := aNewName;
-          suffix := Copy(o.Name, 8, Length(o.Name));
-          o := Panel1.FindChildControl('MyImage'+suffix);
-          if o <> NIL then begin
-            if p <> NIL then SetImage(TImage(o), Ord(p^.ChanType));
-          end;
-        end;
-    end; }
-  end;
 end;
 
 procedure TFrameViewModeItem.Panel1MouseEnter(Sender: TObject);

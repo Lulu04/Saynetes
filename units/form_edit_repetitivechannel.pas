@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
   StdCtrls, Spin,
-  u_notebook_util, u_common, u_list_dmxuniverse;
+  u_notebook_util, u_common, u_list_dmxuniverse, frame_cb_channeltype,
+  frame_viewfixturechannels, u_presetmanager;
 
 type
 
@@ -16,16 +17,17 @@ type
   { TFormEditRepetitiveChannel }
 
   TFormEditRepetitiveChannel = class(TForm)
+    BClear: TSpeedButton;
     BOK: TSpeedButton;
+    BPreset: TSpeedButton;
     CheckBox1: TCheckBox;
     CheckBox2: TCheckBox;
     Edit1: TEdit;
     Edit2: TEdit;
     Label1: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
     Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -38,24 +40,36 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
-    RB3: TRadioButton;
+    Panel4: TPanel;
+    Panel5: TPanel;
     RB1: TRadioButton;
     RB2: TRadioButton;
-    RB4: TRadioButton;
-    RB5: TRadioButton;
     RB6: TRadioButton;
+    RB7: TRadioButton;
+    RB8: TRadioButton;
     SE1: TSpinEdit;
     SE2: TSpinEdit;
+    BAdd: TSpeedButton;
+    procedure BAddClick(Sender: TObject);
+    procedure BClearClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     CheckedLabelManager: TCheckedLabelManager;
+    FrameCBChannelType: TFrameCBChannelType;
+    FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels;
+    FChannels: TFixLibAvailableChannels;
     FOnAddChannel: TOnAddRepetitiveChannel;
     FPreviewing: boolean;
+    procedure ProcessUserChangeChannelNameEvent(Sender: TObject; aChanIndex: integer; const aNewName: string);
     function GetEndIndex: integer;
     function GetStartIndex: integer;
+  private
+    FPresetManager: TPresetManager;
+    function PatternToPreset: string;
+    procedure PresetToPattern(const A: TStringArray);
   public
     function GetChannelName(const aChannelName: string; aIndex: integer): string;
 
@@ -66,7 +80,7 @@ type
 
 
 implementation
-uses LCLType, u_resource_string;
+uses LCLType, u_resource_string, u_project_manager;
 
 {$R *.lfm}
 
@@ -75,6 +89,13 @@ uses LCLType, u_resource_string;
 procedure TFormEditRepetitiveChannel.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   if Key = VK_ESCAPE then ModalResult := mrCancel;
+end;
+
+procedure TFormEditRepetitiveChannel.ProcessUserChangeChannelNameEvent(
+  Sender: TObject; aChanIndex: integer; const aNewName: string);
+begin
+  FChannels[aChanIndex].NameID := aNewName;
+  CheckBox1Change(NIL);
 end;
 
 function TFormEditRepetitiveChannel.GetEndIndex: integer;
@@ -87,37 +108,96 @@ begin
   Result := SE1.Value;
 end;
 
-function TFormEditRepetitiveChannel.GetChannelName(const aChannelName: string; aIndex: integer): string;
-var s, s1: string;
+function TFormEditRepetitiveChannel.PatternToPreset: string;
+var i: integer;
 begin
-  s := '';
+  Result := '';
+  for i:=0 To High(FChannels) do begin
+    if Result <> '' then Result := Result + '|';
+    Result := Result + FChannels[i].NameID + '~' +
+                       Ord(FChannels[i].ChanType).ToString + '~' +
+                       FChannels[i].Ranges[0].Text;
+  end;
+end;
 
-  if CheckBox1.Checked then s := s + TrimLeft(Edit1.Text);
-  if RB1.Checked then s := s + aIndex.ToString + ' ';
+procedure TFormEditRepetitiveChannel.PresetToPattern(const A: TStringArray);
+var i: integer;
+  B: TStringArray;
+begin
+  FChannels := NIL;
+  FrameViewDMXFixtureChannels.Clear;
 
-  s1 := '';
-  if RB2.Checked then s1 := s1 + ' ' + aIndex.ToString;
-  if CheckBox2.Checked then s1 := s1 + TrimRight(Edit2.Text);
+  try
+    SetLength(FChannels, Length(A));
+    for i:=0 to High(A) do begin
+      B := A[i].Split(['~']);
+      FChannels[i].InitDefault;
+      FChannels[i].NameID := B[0];
+      FChannels[i].ChanType := TChannelType(B[1].ToInteger);
+      FChannels[i].InitDefaultSingleRange;
+      FChannels[i].Ranges[0].Text := B[2];
 
-  Result := s + aChannelName + s1;
+      FrameViewDMXFixtureChannels.AddChannel(@FChannels[i]);
+      CheckBox1Change(NIL);
+  end;
+  except
+    FChannels := NIL;
+    FrameViewDMXFixtureChannels.Clear;
+  end;
+end;
+
+function TFormEditRepetitiveChannel.GetChannelName(const aChannelName: string; aIndex: integer): string;
+var prefix, suffix: string;
+begin
+  prefix := '';
+
+  if CheckBox1.Checked then prefix := prefix + Edit1.Text;
+  if RB1.Checked then prefix := prefix + aIndex.ToString + ' ';
+
+  suffix := '';
+  if RB2.Checked then suffix := suffix + ' ' + aIndex.ToString;
+  if CheckBox2.Checked then suffix := suffix + Edit2.Text;
+
+  if RB7.Checked then Result := prefix + aChannelName + suffix + aIndex.ToString
+    else if RB8.Checked then Result := aIndex.ToString + prefix + aChannelName + suffix
+      else Result := prefix + aChannelName + suffix;
 end;
 
 procedure TFormEditRepetitiveChannel.FormCreate(Sender: TObject);
 begin
   CheckedLabelManager := TCheckedLabelManager.Create;
-  CheckedLabelManager.CaptureLabelClick(Label2);
   CheckedLabelManager.CaptureLabelClick(Label4);
   CheckedLabelManager.CaptureLabelClick(Label7);
   CheckedLabelManager.CaptureLabelClick(Label8);
+  CheckedLabelManager.CaptureLabelClick(Label14);
+  CheckedLabelManager.CaptureLabelClick(Label15);
+  CheckedLabelManager.CaptureLabelClick(Label13);
+
+  FrameCBChannelType := TFrameCBChannelType.Create(Self);
+  FrameCBChannelType.Parent := Panel4;
+  FrameCBChannelType.Align := alClient;
+  FrameCBChannelType.FillForPresetChannel;
+
+  FrameViewDMXFixtureChannels := TFrameViewDMXFixtureChannels.Create(Self);
+  FrameViewDMXFixtureChannels.Parent := Panel5;
+  FrameViewDMXFixtureChannels.Align := alClient;
+  FrameViewDMXFixtureChannels.EditionEnabled := True;
+  FrameViewDMXFixtureChannels.OnUserChangeChannelName := @ProcessUserChangeChannelNameEvent;
+
+  FPresetManager := TPresetManager.Create(Self);
+  FPresetManager.Init1(SRepetitiveChannelPresets, BPreset,
+                  ConcatPaths([Project.AppPresetsFolder, 'RepetitiveChannel'+PRESET_FILE_EXTENSION]));
+  FPresetManager.Init2(@PresetToPattern, @PatternToPreset);
 
   // manual translation
   BOK.Caption := SOk;
   Label1.Caption := sAddRepetitiveChannels;
+  BPreset.Caption := SPreset_;
 end;
 
 procedure TFormEditRepetitiveChannel.CheckBox1Change(Sender: TObject);
-var i: integer;
-  s, s1: string;
+var i, j: integer;
+  //s, s1: string;
 begin
   if FPreviewing then exit;
   FPreviewing := True;
@@ -126,7 +206,10 @@ begin
 
   Memo1.Clear;
   for i:=SE1.Value to SE2.Value do begin
-    s := '';
+    for j:=0 to High(FChannels) do begin
+      Memo1.Lines.Add(GetChannelName(FChannels[j].NameID, i));
+    end;
+{    s := '';
 
     if CheckBox1.Checked then s := s + TrimLeft(Edit1.Text);
     if RB1.Checked then s := s + i.ToString + ' ';
@@ -144,45 +227,55 @@ begin
     if RB5.Checked then begin
       Memo1.Lines.Add(GetChannelName('Amber', i));
       Memo1.Lines.Add(GetChannelName('UV', i));
-    end;
+    end;  }
   end;
 
   FPreviewing := False;
 end;
 
 procedure TFormEditRepetitiveChannel.BOKClick(Sender: TObject);
-var i: integer;
+var i, j: integer;
   chan: TFixLibAvailableChannel;
-  procedure SendChannel;
-  begin
-    chan.NameID := GetChannelName(chan.NameID, i);
-    FOnAddChannel(chan);
-  end;
-
 begin
+  if Length(FChannels) = 0 then exit;
+
   for i:=SE1.Value to SE2.Value do begin
-    chan.InitAsRed;
-    SendChannel;
-    chan.InitAsGreen;
-    SendChannel;
-    chan.InitAsBlue;
-    SendChannel;
-    if RB4.Checked or RB5.Checked then begin
-      chan.ChanType := ctWhite;
-      chan.NameID := 'White';
-      SendChannel;
-    end;
-    if RB5.Checked then begin
-      chan.ChanType := ctAmber;
-      chan.NameID := 'Amber';
-      SendChannel;
-      chan.ChanType := ctUV;
-      chan.NameID := 'UV';
-      SendChannel;
+    for j:=0 to High(FChannels) do begin
+      chan := FChannels[j];
+      chan.NameID := GetChannelName(chan.NameID, i);
+      FOnAddChannel(chan);
     end;
   end;
 
   ModalResult := mrOk;
+end;
+
+procedure TFormEditRepetitiveChannel.BAddClick(Sender: TObject);
+var chanType: TChannelType;
+  readeable, tex: string;
+  i: integer;
+begin
+  if FrameCBChannelType.ItemIndex = -1 then exit;
+  FrameCBChannelType.GetData(chanType, readeable, tex);
+
+  i := Length(FChannels);
+  SetLength(FChannels, i+1);
+  FChannels[i].InitDefault;
+  FChannels[i].ChanType := chanType;
+  FChannels[i].NameID := readeable;
+  FChannels[i].InitDefaultSingleRange;
+  FChannels[i].Ranges[0].Text := tex;
+
+  FrameViewDMXFixtureChannels.AddChannel(@FChannels[i]);
+
+  CheckBox1Change(NIL);
+end;
+
+procedure TFormEditRepetitiveChannel.BClearClick(Sender: TObject);
+begin
+  FChannels := NIL;
+  FrameViewDMXFixtureChannels.Clear;
+  CheckBox1Change(NIL);
 end;
 
 end.
