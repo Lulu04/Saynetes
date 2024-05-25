@@ -1,0 +1,42 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51741087-Manual-122554-1.100-eurolite-led-b-40-laser-beam-effect-en_de.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51741087-eurolite-led-b-40-laser-beam-effect.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=_AniHjqqb_0
+[GENERAL]
+Manufacturer|Eurolite|Name|LED B-40|Type|33|Authors|Charlélie Desmet, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|310|Height|310|Depth|390|Weight|4.00|Power|65|Connector|3-pin|Bulb|5× 8W QCL RGBW LEDs, red laser (650nm, 95.88mW), green laser (532nm, 39.44mW)
+[CHAN_DEF]
+ID|Auto Programs|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~40~Txt~Program 1|R3|Begin~41~End~76~Txt~Program 2|R4|Begin~77~End~112~Txt~Program 3|R5|Begin~113~End~148~Txt~Program 4|R6|Begin~149~End~184~Txt~Program 5|R7|Begin~185~End~220~Txt~Program 6|R8|Begin~221~End~255~Txt~Program 7
+ID|Auto Programs Speed|Type|0|R1|Begin~0~End~250~Txt~slow..fast|R2|Begin~251~End~255~Txt~Sound control
+ID|Rotation|Type|33|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~127~Txt~Rotation slow CW..fast CW|R3|Begin~128~End~128~Txt~Rotation stop|R4|Begin~129~End~255~Txt~Rotation slow CCW..fast CCW
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets|Type|12|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~15~Txt~Red / Red / Red~Extra~_#ff0000|R3|Begin~16~End~26~Txt~Green / Green / Green~Extra~_#00ff00|R4|Begin~27~End~37~Txt~Blue / Blue / Blue~Extra~_#0000ff|R5|Begin~38~End~48~Txt~White / White / White~Extra~_#ffffff|R6|Begin~49~End~59~Txt~Red / Green / Blue~Extra~_#0000ff|R7|Begin~60~End~70~Txt~Red / Green / White~Extra~_#ffffff|R8|Begin~71~End~81~Txt~Red / Blue / White~Extra~_#ffffff|R9|Begin~82~End~92~Txt~Green / Blue / White~Extra~_#ffffff|R10|Begin~93~End~103~Txt~Yellow / Pink / Light Red~Extra~_#ff8080|R11|Begin~104~End~114~Txt~Yellow / Cyan / Light Green~Extra~_#80ff80|R12|Begin~115~End~125~Txt~Pink / Cyan / Light Blue~Extra~_#8080ff|R13|Begin~126~End~136~Txt~Light Red / Light Green / Light Blue~Extra~_#8080ff|R14|Begin~137~End~147~Txt~Yellow / Yellow / Yellow~Extra~_#ffff00|R15|Begin~148~End~158~Txt~Pink / Pink / Pink~Extra~_#ff00ff|R16|Begin~159~End~169~Txt~Light Red / Light Red / Light Red~Extra~_#ff8080|R17|Begin~170~End~180~Txt~Cyan / Cyan / Cyan~Extra~_#00ffff|R18|Begin~181~End~191~Txt~Light Green / Light Green / Light Green~Extra~_#80ff80|R19|Begin~192~End~202~Txt~Light Blue / Light Blue / Light Blue~Extra~_#8080ff|R20|Begin~203~End~213~Txt~White / White / White~Extra~_#ffffff|R21|Begin~214~End~224~Txt~Light Yellow / Light Yellow / Light Yellow~Extra~_#ffff80|R22|Begin~225~End~235~Txt~Light Cyan / Light Cyan / Light Cyan~Extra~_#80ffff|R23|Begin~236~End~246~Txt~White / Light Cyan / Light Yellow~Extra~_#ffff80|R24|Begin~247~End~255~Txt~Full White / Full White / Full White~Extra~_#ffffff
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~0..20Hz|R3|Begin~251~End~255~Txt~Sound controlled
+ID|Laser|Type|43|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~46~Txt~Laser Red~Extra~#ff0000|R3|Begin~47~End~87~Txt~Laser Green~Extra~#00ff00|R4|Begin~88~End~128~Txt~Laser Red + Green~Extra~_#00ff00|R5|Begin~129~End~169~Txt~Laser Red Strobe + Green~Extra~_#00ff00|R6|Begin~170~End~210~Txt~Laser Red + Green Strobe~Extra~_#008000|R7|Begin~211~End~255~Txt~Laser Red + Green Strobe alternating~Extra~_#008000
+ID|Laser Strobe|Type|45|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~0..20Hz|R3|Begin~251~End~255~Txt~Sound controlled
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 1|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~0..20Hz|R3|Begin~251~End~255~Txt~Sound controlled
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 2|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~0..20Hz|R3|Begin~251~End~255~Txt~Sound controlled
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 3|Type|6|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~250~Txt~0..20Hz|R3|Begin~251~End~255~Txt~Sound controlled
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Auto Programs~Auto Programs Speed~Rotation
+Name|10-channel|ShortName|10ch|Content|Red~Green~Blue~White~Color Presets~Master Dimmer~Strobe~Laser~Laser Strobe~Rotation
+Name|22 Channel|ShortName|22ch|Content|Red 1~Green 1~Blue 1~White 1~Strobe 1~Red 2~Green 2~Blue 2~White 2~Strobe 2~Red 3~Green 3~Blue 3~White 3~Strobe 3~Color Presets~Master Dimmer~Laser~Laser Strobe~Auto Programs~Auto Programs Speed~Rotation
+[END_MODES]

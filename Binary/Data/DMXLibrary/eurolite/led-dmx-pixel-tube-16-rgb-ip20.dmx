@@ -1,0 +1,61 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51928602-Manual-85739-1.100-eurolite-led-dmx-pixel-tube-16-rgb-ip20-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51928602-eurolite-led-dmx-pixel-tube-16-rgb-ip20.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=7QjVn5cwiVg
+[GENERAL]
+Manufacturer|Eurolite|Name|LED DMX Pixel Tube 16 RGB IP20|Type|19|Authors|LordVonAdel|Creator|OFL
+[PHYSICAL]
+Width|1005|Height|50|Depth|75|Weight|1.35|Power|38|Connector|3-pin|Bulb|LED|LensMinDegree|120.000|LensMaxDegree|120.000
+[CHAN_DEF]
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|48-channel|ShortName|48ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16
+[END_MODES]

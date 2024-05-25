@@ -1,0 +1,30 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|http://s141963554.online.de/anleitung/Steinigke/81012467.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=QjuPg9DT9Ok
+[GENERAL]
+Manufacturer|Eurolite|Name|LED KLS-801|Type|36|Authors|Flo Edelmann, Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1200|Height|315|Depth|65|Weight|9.00|Power|130|Connector|3-pin|Bulb|LED|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Preset programs|Type|0|R1|Begin~0~End~9~Txt~No function~Switch1~Red 1 / Running Speed:Red 1~Switch2~Green 1 / Fade Time:Green 1|R2|Begin~10~End~29~Txt~Program 1~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R3|Begin~30~End~49~Txt~Program 2~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R4|Begin~50~End~69~Txt~Program 3~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R5|Begin~70~End~89~Txt~Program 4~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R6|Begin~90~End~109~Txt~Program 5~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R7|Begin~110~End~129~Txt~Program 6~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R8|Begin~130~End~149~Txt~Program 7~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R9|Begin~150~End~169~Txt~Program 8~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R10|Begin~170~End~189~Txt~Program 9~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R11|Begin~190~End~209~Txt~Program 10~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R12|Begin~210~End~229~Txt~Program 11~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R13|Begin~230~End~249~Txt~Automatic mode~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time|R14|Begin~250~End~255~Txt~Sound Control~Switch1~Red 1 / Running Speed:Running Speed~Switch2~Green 1 / Fade Time:Fade Time
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~slow..fast
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Running Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Fade Time|Type|16|R1|Begin~0~End~255~Txt~short..long
+[END_CHAN_DEF]
+[MODES]
+Name|15-channel|ShortName|15ch|Content|Preset programs~Master Dimmer~Strobe~Red 1 / Running Speed:Red 1;Running Speed~Green 1 / Fade Time:Green 1;Fade Time~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+[END_MODES]
