@@ -1,0 +1,85 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.steinigke.de/download/51930439-Manual-111069-1.00-eurolite-led-pix-144-rgb-bar-de_en.pdf|LinkType2|product page|Url2|https://www.steinigke.de/en/mpn51930439-eurolite-led-pix-144-rgb-bar.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=O0GaXoeFQaQ|LinkType4|video|Url4|https://www.youtube.com/watch?v=uWRSK040pnI
+[GENERAL]
+Manufacturer|Eurolite|Name|LED PIX-144|Type|39|Authors|Paolo Zanchi|Creator|OFL
+[PHYSICAL]
+Width|1020|Height|65|Depth|80|Weight|1.00|Power|25|Connector|3-pin|Bulb|144x RGB-SMD LEDs
+[CHAN_DEF]
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Auto Program / Strobe|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~5~Txt~Sound-control 7-color|R3|Begin~6~End~10~Txt~No function|R4|Begin~11~End~255~Txt~0Hz..20Hz
+ID|Strobe Master|Type|6|R1|Begin~0~End~255~Txt~0..20Hz
+ID|Auto Programs Master|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 1/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 1/2|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Auto Program 1/2|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 2/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 2/2|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Auto Program 2/2|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 1|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 1|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 2|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 2|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 3|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 3|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 4|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 4|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 5|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 5|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 6|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 6|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 7|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 7|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 7|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+ID|Dimmer 8|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe 8|Type|6|R1|Begin~0~End~255~Txt~0…20Hz
+ID|Auto Program 8|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~255~Txt~RGB program slow…fast
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red Master~Green Master~Blue Master
+Name|5-channel|ShortName|5ch|Content|Red Master~Green Master~Blue Master~Master dimmer~Auto Program / Strobe
+Name|6-channel|ShortName|6ch|Content|Master dimmer~Strobe Master~Red Master~Green Master~Blue Master~Auto Programs Master
+Name|12-channel|ShortName|12ch|Content|Dimmer 1/2~Strobe 1/2~Red 1/2~Green 1/2~Blue 1/2~Auto Program 1/2~Dimmer 2/2~Strobe 2/2~Red 2/2~Green 2/2~Blue 2/2~Auto Program 2/2
+Name|24-channel|ShortName|24ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8
+Name|48-channel|ShortName|48ch|Content|Dimmer 1~Strobe 1~Red 1~Green 1~Blue 1~Auto Program 1~Dimmer 2~Strobe 2~Red 2~Green 2~Blue 2~Auto Program 2~Dimmer 3~Strobe 3~Red 3~Green 3~Blue 3~Auto Program 3~Dimmer 4~Strobe 4~Red 4~Green 4~Blue 4~Auto Program 4~Dimmer 5~Strobe 5~Red 5~Green 5~Blue 5~Auto Program 5~Dimmer 6~Strobe 6~Red 6~Green 6~Blue 6~Auto Program 6~Dimmer 7~Strobe 7~Red 7~Green 7~Blue 7~Auto Program 7~Dimmer 8~Strobe 8~Red 8~Green 8~Blue 8~Auto Program 8
+[END_MODES]
