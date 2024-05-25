@@ -1,0 +1,37 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.gemmiluci.it/download/Manuali%20test%20Mobili%20e%20Led/ParLed54%20Evolight.pdf
+[GENERAL]
+Manufacturer|Evolight|Name|Colours Archspot 54 RGB|Type|16|Authors|Michael Stiller|Creator|OFL
+[PHYSICAL]
+Width|260|Height|220|Depth|230|Weight|4.00|Power|58|Connector|3-pin|Bulb|18x3W RGB LEDs
+[CHAN_DEF]
+ID|Hue|Type|0
+ID|Saturation|Type|0
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Rainbow|Type|0|R1|Begin~0~End~255~Txt~ColorFade
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|CTO|Type|27|R1|Begin~0~End~31~Txt~No function|R2|Begin~32~End~63~Txt~2500K|R3|Begin~64~End~95~Txt~2900K|R4|Begin~96~End~127~Txt~3200K|R5|Begin~128~End~159~Txt~4500K|R6|Begin~160~End~191~Txt~5400K|R7|Begin~192~End~223~Txt~6500K|R8|Begin~224~End~255~Txt~7000K
+[END_CHAN_DEF]
+[MODES]
+Name|HSV 4-channel|ShortName|HSV-4ch|Content|Hue~Saturation~Master dimmer~Strobe
+Name|RGB 6-channel|ShortName|RGB-6ch|Content|Red~Green~Blue~Strobe~Rainbow~Master dimmer
+Name|RGB 12-channel|ShortName|RGB-12ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Strobe~Rainbow~Master dimmer
+Name|HSV-W 5-channel|ShortName|HSVW-5ch|Content|Hue~Saturation~Master dimmer~Strobe~White
+Name|RGB 3-channel|ShortName|RGB-3ch|Content|Red~Green~Blue
+Name|RGB-CTO 7-channel|ShortName|RGB-CTO-7ch|Content|Red~Green~Blue~Strobe~Rainbow~Master dimmer~CTO
+[END_MODES]

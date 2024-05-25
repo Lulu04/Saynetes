@@ -1,44 +1,57 @@
 [SAYNETE]
-Version|v3.1.0
+Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/41525_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/41525-iw-340-rdm.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=S7FJLurJ6GM
 [GENERAL]
-Manufacturer|Infinity|Name|iW-340 RDM|Type|0|Authors|Flo Edelmann|Creator|OFL
+Manufacturer|Infinity|Name|iW-340 RDM|Type|41|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|250|Height|350|Depth|190|Weight|7.20|Power|145|Connector|3-pin and 5-pin|Bulb|3x 40W RGBW Osram Ostar LED|LensMinDegree|4.500|LensMaxDegree|36.000
-[MATRIX]
-X|2|Y|1
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Pan fine|Type|7
 ID|Tilt fine|Type|8
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~9~Txt~Open|R3|Begin~10~End~50~Txt~20Hz..0Hz|R4|Begin~51~End~54~Txt~Open|R5|Begin~55~End~95~Txt~RampDown 20Hz..0Hz|R6|Begin~96~End~99~Txt~Open|R7|Begin~100~End~140~Txt~RampUp 20Hz..0Hz|R8|Begin~141~End~144~Txt~Open|R9|Begin~145~End~195~Txt~slow..fast Random timing|R10|Begin~196~End~199~Txt~Open|R11|Begin~200~End~239~Txt~Pulse 20Hz..0Hz|R12|Begin~240~End~255~Txt~Open
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
-ID|Red fine|Type|3
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
-ID|Green fine|Type|4
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
-ID|Blue fine|Type|5
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|White fine|Type|13
-ID|CTC|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~1900K..2700K
+ID|CTC|Type|27|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~1900K..2700K
 ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~2~Txt~Color temperature 2700K~Extra~#ffa757|R3|Begin~3~End~4~Txt~Color temperature 3200K~Extra~#ffb87b|R4|Begin~5~End~6~Txt~Color temperature 4200K~Extra~#ffd3af|R5|Begin~7~End~8~Txt~Color temperature 5600K~Extra~#ffefe1|R6|Begin~9~End~10~Txt~Color temperature 8000K~Extra~#dde6ff|R7|Begin~11~End~11~Txt~Blue~Extra~#0000ff|R8|Begin~12~End~48~Txt~Preset Blue … Cyan|R9|Begin~49~End~49~Txt~Cyan~Extra~#00ffff|R10|Begin~50~End~86~Txt~Preset Cyan … Green|R11|Begin~87~End~87~Txt~Green~Extra~#00ff00|R12|Begin~88~End~124~Txt~Preset Green … Yellow|R13|Begin~125~End~125~Txt~Yellow~Extra~#ffff00|R14|Begin~126~End~162~Txt~Preset Yellow … Red|R15|Begin~163~End~163~Txt~Red~Extra~#ff0000|R16|Begin~164~End~200~Txt~Preset Red … Purple|R17|Begin~201~End~201~Txt~Purple~Extra~#ff00ff|R18|Begin~202~End~238~Txt~Preset Purple … Blue|R19|Begin~239~End~239~Txt~Blue~Extra~#0000ff|R20|Begin~240~End~247~Txt~ColorFade fast..slow|R21|Begin~248~End~255~Txt~ColorJump fast..slow
 ID|Static Pixel Control|Type|0|R1|Begin~0~End~11~Txt~No function|R2|Begin~12~End~51~Txt~LED Pixel 1|R3|Begin~52~End~91~Txt~LED Pixel 2|R4|Begin~92~End~131~Txt~LED Pixel 3|R5|Begin~132~End~171~Txt~LED Pixel 1 & 2|R6|Begin~172~End~211~Txt~LED Pixel 2 & 3|R7|Begin~212~End~251~Txt~LED Pixel 1 & 3|R8|Begin~252~End~255~Txt~All LED Pixels
 ID|Dynamic LED Control|Type|0|R1|Begin~0~End~14~Txt~No function|R2|Begin~15~End~29~Txt~Program 1|R3|Begin~30~End~44~Txt~Program 2|R4|Begin~45~End~59~Txt~Program 3|R5|Begin~60~End~74~Txt~Program 4|R6|Begin~75~End~89~Txt~Program 5|R7|Begin~90~End~104~Txt~Program 6|R8|Begin~105~End~119~Txt~Program 7|R9|Begin~120~End~134~Txt~Program 8|R10|Begin~135~End~149~Txt~Program 9 with color flow|R11|Begin~150~End~164~Txt~Program 10 with color flow|R12|Begin~165~End~179~Txt~Program 11 with color flow|R13|Begin~180~End~194~Txt~Program 12 with color flow|R14|Begin~195~End~209~Txt~Program 13 with color flow|R15|Begin~210~End~224~Txt~Program 14 with color flow|R16|Begin~225~End~239~Txt~Program 15 with color flow|R17|Begin~240~End~255~Txt~Program 16 with color flow
 ID|Speed Dynamic LED Control|Type|16|R1|Begin~0~End~255~Txt~slow..fast
 ID|Fade Time Dynamic LED Control|Type|16|R1|Begin~0~End~255~Txt~long..short
 ID|Background Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Background Dimmer fine|Type|1
 ID|Background Color Macros|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~2~Txt~Color temperature 2700K~Extra~#ffa757|R3|Begin~3~End~4~Txt~Color temperature 3200K~Extra~#ffb87b|R4|Begin~5~End~6~Txt~Color temperature 4200K~Extra~#ffd3af|R5|Begin~7~End~8~Txt~Color temperature 5600K~Extra~#ffefe1|R6|Begin~9~End~10~Txt~Color temperature 8000K~Extra~#dde6ff|R7|Begin~11~End~11~Txt~Blue~Extra~#0000ff|R8|Begin~12~End~48~Txt~Preset Blue … Cyan|R9|Begin~49~End~49~Txt~Cyan~Extra~#00ffff|R10|Begin~50~End~86~Txt~Preset Cyan … Green|R11|Begin~87~End~87~Txt~Green~Extra~#00ff00|R12|Begin~88~End~124~Txt~Preset Green … Yellow|R13|Begin~125~End~125~Txt~Yellow~Extra~#ffff00|R14|Begin~126~End~162~Txt~Preset Yellow … Red|R15|Begin~163~End~163~Txt~Red~Extra~#ff0000|R16|Begin~164~End~200~Txt~Preset Red … Purple|R17|Begin~201~End~201~Txt~Purple~Extra~#ff00ff|R18|Begin~202~End~238~Txt~Preset Purple … Blue|R19|Begin~239~End~239~Txt~Blue~Extra~#0000ff|R20|Begin~240~End~247~Txt~ColorFade fast..slow|R21|Begin~248~End~255~Txt~ColorJump fast..slow
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 4.5deg..36deg
-ID|Zoom fine|Type|31
 ID|Channel Functions|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~5s Pan/Tilt Blackout activated|R3|Begin~20~End~29~Txt~5s Pan/Tilt Blackout deactivated|R4|Begin~30~End~39~Txt~fast 5s Pan/Tilt Speed|R5|Begin~40~End~49~Txt~slow 5s Pan/Tilt Speed|R6|Begin~50~End~59~Txt~5s Dimmer Curve Linear|R7|Begin~60~End~69~Txt~5s Dimmer Curve Square|R8|Begin~70~End~79~Txt~5s Dimmer Curve Inv-Square|R9|Begin~80~End~89~Txt~5s Dimmer Curve S-Curve|R10|Begin~90~End~99~Txt~fast 5s Dimmer|R11|Begin~100~End~109~Txt~slow 5s Dimmer|R12|Begin~110~End~119~Txt~5s CMY color mix|R13|Begin~120~End~129~Txt~5s RGBW color mix|R14|Begin~130~End~149~Txt~5s PWM 1200Hz|R15|Begin~150~End~159~Txt~5s PWM 2000Hz|R16|Begin~160~End~169~Txt~5s PWM 2400Hz|R17|Begin~170~End~179~Txt~5s PWM 6000K|R18|Begin~180~End~189~Txt~5s PWM 25000Hz|R19|Begin~190~End~199~Txt~slow 5s Fan|R20|Begin~200~End~209~Txt~fast 5s Fan|R21|Begin~210~End~219~Txt~5s Fan auto|R22|Begin~220~End~229~Txt~5s Auto test|R23|Begin~230~End~239~Txt~5s Pan/Tilt reset|R24|Begin~240~End~249~Txt~5s Zoom reset|R25|Begin~250~End~255~Txt~5s Total reset
+ID|Dimmer fine|Type|1
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|Background Dimmer fine|Type|1
+ID|Zoom fine|Type|31
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
 [END_CHAN_DEF]
 [MODES]
 Name|21-channel|ShortName|21ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter / Strobe~Red~Green~Blue~White~CTC~Color Macros~Static Pixel Control~Dynamic LED Control~Speed Dynamic LED Control~Fade Time Dynamic LED Control~Background Dimmer~Background Color Macros~Zoom~Channel Functions
 Name|28-channel|ShortName|28ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter / Strobe~Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTC~Color Macros~Static Pixel Control~Dynamic LED Control~Speed Dynamic LED Control~Fade Time Dynamic LED Control~Background Dimmer~Background Dimmer fine~Background Color Macros~Zoom~Zoom fine~Channel Functions
+Name|27-channel|ShortName|27ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter / Strobe~Red~Green~Blue~White~Zoom~Zoom fine~Channel Functions~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3
+Name|15-channel (DMX)|ShortName|15ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter / Strobe~Red~Green~Blue~White~Zoom~Zoom fine~Channel Functions
+Name|12-channel (Art-Net)|ShortName|12ch|Content|Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3
 [END_MODES]

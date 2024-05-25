@@ -1,0 +1,36 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=286|LinkType2|product page|Url2|https://www.glp.de/en/products/stage-effects/force-120|LinkType3|video|Url3|https://www.youtube.com/watch?v=b2354sK3VaQ
+[GENERAL]
+Manufacturer|GLP|Name|Force 120|Type|21|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|1400|Height|1400|Depth|400|Weight|94.00|Power|1000|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Fan Speed|Type|36|R1|Begin~0~End~3~Txt~Rotation stop|R2|Begin~4~End~128~Txt~Rotation 30rpm..750rpm|R3|Begin~129~End~132~Txt~Rotation stop|R4|Begin~133~End~255~Txt~Rotation -30rpm..-750rpm
+ID|LED Intensity Master|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|DefaultValue|255|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~47~Txt~slow..fast Random timing|R3|Begin~48~End~79~Txt~RampUp slow..fast Random timing|R4|Begin~80~End~111~Txt~RampDown slow..fast Random timing|R5|Begin~112~End~143~Txt~RampUpDown slow..fast Random timing|R6|Begin~144~End~199~Txt~Strobe with blackout pause|R7|Begin~200~End~239~Txt~slow..fast|R8|Begin~240~End~255~Txt~Open
+ID|Control|Type|0|R1|Begin~0~End~50~Txt~No function Idle|R2|Begin~51~End~64~Txt~No function|R3|Begin~65~End~99~Txt~No function|R4|Begin~100~End~194~Txt~582..618 3s PWM frequency Hz|R5|Begin~195~End~197~Txt~1200 3s PWM frequency Hz|R6|Begin~198~End~200~Txt~2400 3s PWM frequency Hz|R7|Begin~201~End~210~Txt~No function|R8|Begin~211~End~215~Txt~3s Braking Delay on|R9|Begin~216~End~220~Txt~3s Braking Delay off|R10|Begin~221~End~247~Txt~No function|R11|Begin~248~End~255~Txt~3s Reset all functions
+ID|Color Presets Top|Type|12|R1|Begin~0~End~7~Txt~No Function|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#ffcc00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffcc|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavander~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Mauve~Extra~#dd00ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ff88cc|R14|Begin~104~End~111~Txt~White (3200K)|R15|Begin~112~End~119~Txt~White (5600K)|R16|Begin~120~End~127~Txt~White (7200K)|R17|Begin~128~End~128~Txt~Color fade stop|R18|Begin~129~End~223~Txt~Color fade slow…fast|R19|Begin~224~End~255~Txt~Color jump slow…fast
+ID|Red Top|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Top|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Top|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets Center|Type|12|R1|Begin~0~End~7~Txt~No Function|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#ffcc00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffcc|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavander~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Mauve~Extra~#dd00ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ff88cc|R14|Begin~104~End~111~Txt~White (3200K)|R15|Begin~112~End~119~Txt~White (5600K)|R16|Begin~120~End~127~Txt~White (7200K)|R17|Begin~128~End~128~Txt~Color fade stop|R18|Begin~129~End~223~Txt~Color fade slow…fast|R19|Begin~224~End~255~Txt~Color jump slow…fast
+ID|Red Center|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Center|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Center|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets Bottom|Type|12|R1|Begin~0~End~7~Txt~No Function|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#ffcc00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffcc|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavander~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Mauve~Extra~#dd00ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ff88cc|R14|Begin~104~End~111~Txt~White (3200K)|R15|Begin~112~End~119~Txt~White (5600K)|R16|Begin~120~End~127~Txt~White (7200K)|R17|Begin~128~End~128~Txt~Color fade stop|R18|Begin~129~End~223~Txt~Color fade slow…fast|R19|Begin~224~End~255~Txt~Color jump slow…fast
+ID|Red Bottom|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Bottom|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Bottom|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Presets All|Type|12|R1|Begin~0~End~7~Txt~No Function|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#ffcc00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffcc|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavander~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Mauve~Extra~#dd00ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ff88cc|R14|Begin~104~End~111~Txt~White (3200K)|R15|Begin~112~End~119~Txt~White (5600K)|R16|Begin~120~End~127~Txt~White (7200K)|R17|Begin~128~End~128~Txt~Color fade stop|R18|Begin~129~End~223~Txt~Color fade slow…fast|R19|Begin~224~End~255~Txt~Color jump slow…fast
+ID|Red All|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green All|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue All|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Extended|ShortName|ext|Content|Fan Speed~LED Intensity Master~Shutter~Control~Color Presets Top~Red Top~Green Top~Blue Top~Color Presets Center~Red Center~Green Center~Blue Center~Color Presets Bottom~Red Bottom~Green Bottom~Blue Bottom
+Name|Normal|ShortName|norm|Content|Fan Speed~LED Intensity Master~Shutter~Control~Color Presets All~Red All~Green All~Blue All
+Name|Extended Legacy|ShortName|extleg|Content|Fan Speed~LED Intensity Master~Shutter~Color Presets Top~Red Top~Green Top~Blue Top~Color Presets Center~Red Center~Green Center~Blue Center~Color Presets Bottom~Red Bottom~Green Bottom~Blue Bottom~Control
+Name|Normal Legacy|ShortName|normleg|Content|Fan Speed~LED Intensity Master~Shutter~Color Presets All~Red All~Green All~Blue All~Control
+[END_MODES]
