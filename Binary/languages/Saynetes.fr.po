@@ -379,6 +379,14 @@ msgstr ""
 msgid "do not use index"
 msgstr "ne pas utiliser d'index"
 
+#: tformeditrepetitivechannel.label14.caption
+msgid "index is after suffix"
+msgstr "placer l'index après le suffixe"
+
+#: tformeditrepetitivechannel.label15.caption
+msgid "index is before prefix"
+msgstr "placer l'index avant le préfixe"
+
 #: tformeditrepetitivechannel.label2.caption
 msgid "Use prefix"
 msgstr "Utiliser le préfixe"
@@ -2119,7 +2127,7 @@ msgstr "Gestionnaire de prédéfini..."
 
 #: tpresetmanager.speedbutton1.hint
 msgid "Update the selected preset with the current settings"
-msgstr "Met à jour ce prédéfini avec les réglages courants"
+msgstr "Met à jour ce prédéfini avec les réglages actuels"
 
 #: tpresetmanager.speedbutton2.hint
 msgid "Delete the selected preset"
@@ -2373,31 +2381,53 @@ msgid "BACK TO THE BEGINNING"
 msgstr "REVENIR AU DÉBUT"
 
 #: u_resource_string.sbarcoloredled
-msgid "Bar colored led"
+#, fuzzy
+#| msgid "Bar colored led"
+msgid "Bar colored LED"
 msgstr "Barre de LED colorées"
 
+#: u_resource_string.sbarmediumcoloredled
+msgid "Medium bar colored LED"
+msgstr ""
+
+#: u_resource_string.sbarmediumtransparentled
+msgid "Medium bar transparent LED"
+msgstr ""
+
 #: u_resource_string.sbarshortcoloredled
-msgid "Short bar colored led"
+#, fuzzy
+#| msgid "Short bar colored led"
+msgid "Short bar colored LED"
 msgstr "Barre courte de LED colorées"
 
 #: u_resource_string.sbarshorttransparentled
-msgid "Short bar transparent led"
+#, fuzzy
+#| msgid "Short bar transparent led"
+msgid "Short bar transparent LED"
 msgstr "Barre courte de LED transparentes"
 
 #: u_resource_string.sbarshortx2coloredled
-msgid "Short bar with multiple row and colored LED"
+msgid "Short bar with multiple rows and colored LED"
 msgstr ""
 
 #: u_resource_string.sbarshortx2transparentled
-msgid "Short bar with multiple row and transparent LED"
+msgid "Short bar with multiple rows and transparent LED"
 msgstr ""
 
 #: u_resource_string.sbarx2coloredled
-msgid "Long bar with multiple row and colored LED"
+msgid "Long bar with multiple rows and colored LED"
+msgstr ""
+
+#: u_resource_string.sbarx2mediumcoloredled
+msgid "Medium bar with multiple rows and colored LED"
+msgstr ""
+
+#: u_resource_string.sbarx2mediumtransparentled
+msgid "Medium bar with multiple rows and transparent LED"
 msgstr ""
 
 #: u_resource_string.sbarx2transparentled
-msgid "Long bar with multiple row and transparent LED"
+msgid "Long bar with multiple rows and transparent LED"
 msgstr ""
 
 #: u_resource_string.sbegin
@@ -3032,15 +3062,21 @@ msgid " last range should end on 255"
 msgstr " la dernière plage devrait finir sur 255"
 
 #: u_resource_string.sledbartransparentled
-msgid "Bar transparent led"
+#, fuzzy
+#| msgid "Bar transparent led"
+msgid "Bar transparent LED"
 msgstr "Barre de LED transparentes"
 
 #: u_resource_string.sledparlongcoloredled
-msgid "Long PAR colored led"
+#, fuzzy
+#| msgid "Long PAR colored led"
+msgid "Long PAR colored LED"
 msgstr "PAR long avec LED colorées"
 
 #: u_resource_string.sledparshortcoloredled
-msgid "Short PAR colored led"
+#, fuzzy
+#| msgid "Short PAR colored led"
+msgid "Short PAR colored LED"
 msgstr "PAR court avec LED colorées"
 
 #: u_resource_string.sleft
@@ -3091,11 +3127,15 @@ msgid "Manufacturer name:"
 msgstr "Nom du constructeur:"
 
 #: u_resource_string.smatrixcoloredled
-msgid "Matrix colored led"
+#, fuzzy
+#| msgid "Matrix colored led"
+msgid "Matrix colored LED"
 msgstr "Matrice de LED colorées"
 
 #: u_resource_string.smatrixtransparentled
-msgid "Matrix transparent led"
+#, fuzzy
+#| msgid "Matrix transparent led"
+msgid "Matrix transparent LED"
 msgstr "Matrice de LED transparentes"
 
 #: u_resource_string.smax
@@ -3315,15 +3355,21 @@ msgid "Long PAR with bulb"
 msgstr "PAR long avec ampoule"
 
 #: u_resource_string.sparlongtransparentled
-msgid "Long PAR transparent led"
+#, fuzzy
+#| msgid "Long PAR transparent led"
+msgid "Long PAR transparent LED"
 msgstr "PAR long à LED transparentes"
 
 #: u_resource_string.sparrectangularmultiplecoloredled
-msgid "Rectangular PAR with multiple colored led"
+#, fuzzy
+#| msgid "Rectangular PAR with multiple colored led"
+msgid "Rectangular PAR with multiple colored LED"
 msgstr "PAR rectangulaire avec plusieurs LED colorées"
 
 #: u_resource_string.sparrectangularmultipletransparentled
-msgid "Rectangular PAR with multiple transparent led"
+#, fuzzy
+#| msgid "Rectangular PAR with multiple transparent led"
+msgid "Rectangular PAR with multiple transparent LED"
 msgstr "PAR rectangulaire avec plusieurs LED transparentes"
 
 #: u_resource_string.sparshortbulb
@@ -3331,7 +3377,9 @@ msgid "Short PAR with bulb"
 msgstr "PAR court avec ampoule"
 
 #: u_resource_string.sparshorttransparentled
-msgid "Short PAR transparent led"
+#, fuzzy
+#| msgid "Short PAR transparent led"
+msgid "Short PAR transparent LED"
 msgstr "PAR court à LED transparentes"
 
 #: u_resource_string.spaste
@@ -3436,7 +3484,9 @@ msgid "Square"
 msgstr "Carré"
 
 #: u_resource_string.squareparmultiplecoloredled
-msgid "Square PAR with multiple colored led"
+#, fuzzy
+#| msgid "Square PAR with multiple colored led"
+msgid "Square PAR with multiple colored LED"
 msgstr "PAR carré avec plusieurs LED colorées"
 
 #: u_resource_string.srandomduration
@@ -3488,6 +3538,10 @@ msgstr "Supprimer le(s) fichier(s) audio du projet ?"
 msgctxt "u_resource_string.srename"
 msgid "Rename"
 msgstr "Renommer"
+
+#: u_resource_string.srepetitivechannelpresets
+msgid "Repetitive channel presets"
+msgstr "Prédéfinis des canaux répétitifs"
 
 #: u_resource_string.sreplacepresetdata
 msgid "Replace the data of this preset ?"
@@ -3644,11 +3698,15 @@ msgid "Speed"
 msgstr "Vitesse"
 
 #: u_resource_string.ssquareparmultipletransparentled
-msgid "Square PAR with multiple transparent led"
+#, fuzzy
+#| msgid "Square PAR with multiple transparent led"
+msgid "Square PAR with multiple transparent LED"
 msgstr "PAR carré avec plusieurs LED transparentes"
 
 #: u_resource_string.ssquareparsingletransparentled
-msgid "Square PAR with single transparent led"
+#, fuzzy
+#| msgid "Square PAR with single transparent led"
+msgid "Square PAR with single transparent LED"
 msgstr "PAR carré avec une seule led transparente"
 
 #: u_resource_string.sstand01
