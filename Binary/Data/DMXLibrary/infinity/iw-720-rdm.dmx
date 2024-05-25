@@ -1,0 +1,48 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.highlite.com/media/attachments/MANUAL/41524_MANUAL_GB_V1.pdf|LinkType2|product page|Url2|https://www.highlite.com/en/41524-iw-720-rdm.html|LinkType3|video|Url3|https://www.youtube.com/watch?v=HlHJ84QR5p4
+[GENERAL]
+Manufacturer|Infinity|Name|iW-720 RDM|Type|41|Authors|zuvieltv|Creator|OFL
+[PHYSICAL]
+Width|285|Height|390|Depth|197|Weight|8.00|Power|170|Connector|3-pin|Bulb|7× 20W Osram RGBW LEDs|LensMinDegree|7.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Built-in Colors|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~9~Txt~Preset Color 1|R3|Begin~10~End~14~Txt~Preset Color 2|R4|Begin~15~End~19~Txt~Preset Color 3|R5|Begin~20~End~24~Txt~Preset Color 4|R6|Begin~25~End~29~Txt~Preset Color 5|R7|Begin~30~End~34~Txt~Preset Color 6|R8|Begin~35~End~39~Txt~Preset Color 7|R9|Begin~40~End~44~Txt~Preset Color 8|R10|Begin~45~End~49~Txt~Preset Color 9|R11|Begin~50~End~54~Txt~Preset Color 10|R12|Begin~55~End~59~Txt~Preset Color 11|R13|Begin~60~End~64~Txt~Preset Color 12|R14|Begin~65~End~69~Txt~Preset Color 13|R15|Begin~70~End~74~Txt~Preset Color 14|R16|Begin~75~End~79~Txt~Preset Color 15|R17|Begin~80~End~84~Txt~Preset Color 16|R18|Begin~85~End~89~Txt~Preset Color 17|R19|Begin~90~End~94~Txt~Preset Color 18|R20|Begin~95~End~99~Txt~Preset Color 19|R21|Begin~100~End~104~Txt~Preset Color 20|R22|Begin~105~End~109~Txt~Preset Color 21|R23|Begin~110~End~114~Txt~Preset Color 22|R24|Begin~115~End~119~Txt~Preset Color 23|R25|Begin~120~End~124~Txt~Preset Color 24|R26|Begin~125~End~129~Txt~Preset Color 25|R27|Begin~130~End~134~Txt~Preset Color 26|R28|Begin~135~End~139~Txt~Preset Color 27|R29|Begin~140~End~144~Txt~Preset Color 28|R30|Begin~145~End~149~Txt~Preset Color 29|R31|Begin~150~End~154~Txt~Preset Color 30|R32|Begin~155~End~159~Txt~Preset Color 31|R33|Begin~160~End~164~Txt~Preset Color 32|R34|Begin~165~End~169~Txt~Preset Color 33|R35|Begin~170~End~174~Txt~Preset Color 34|R36|Begin~175~End~179~Txt~No function|R37|Begin~180~End~201~Txt~ColorFade fast..slow|R38|Begin~202~End~207~Txt~ColorFade stop|R39|Begin~208~End~229~Txt~ColorFade slow reverse..fast reverse|R40|Begin~230~End~234~Txt~No function|R41|Begin~235~End~249~Txt~ColorJump fast..slow|R42|Begin~250~End~255~Txt~Sound-active color change
+ID|Mobile Macros|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~31~Txt~LED program 1 (no movement)|R3|Begin~32~End~47~Txt~LED program 2 (no movement)|R4|Begin~48~End~63~Txt~LED program 3 (no movement)|R5|Begin~64~End~79~Txt~LED program 4 (no movement)|R6|Begin~80~End~95~Txt~LED program 5 (no movement)|R7|Begin~96~End~111~Txt~LED program 6 (no movement)|R8|Begin~112~End~127~Txt~LED program 7 (no movement)|R9|Begin~128~End~143~Txt~LED program 8 (no movement)|R10|Begin~144~End~159~Txt~LED program 9 (no movement)|R11|Begin~160~End~175~Txt~LED program 10 (no movement)|R12|Begin~176~End~191~Txt~LED program 11 (no movement)|R13|Begin~192~End~207~Txt~LED program 12 (no movement)|R14|Begin~208~End~223~Txt~LED program 13 (no movement)|R15|Begin~224~End~239~Txt~LED program 14 (no movement)|R16|Begin~240~End~255~Txt~LED program 15 (no movement)
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~19~Txt~Closed|R2|Begin~20~End~24~Txt~Open|R3|Begin~25~End~64~Txt~fast..slow|R4|Begin~65~End~69~Txt~Open Shutter open|R5|Begin~70~End~84~Txt~RampDown fast..slow|R6|Begin~85~End~89~Txt~Open|R7|Begin~90~End~104~Txt~RampUp fast..slow|R8|Begin~105~End~109~Txt~Open|R9|Begin~110~End~124~Txt~fast..slow Random timing|R10|Begin~125~End~129~Txt~Open|R11|Begin~130~End~144~Txt~RampDown fast..slow Random timing|R12|Begin~145~End~149~Txt~Open|R13|Begin~150~End~164~Txt~RampUp fast..slow Random timing|R14|Begin~165~End~169~Txt~Open|R15|Begin~170~End~184~Txt~Pulse fast..slow|R16|Begin~185~End~189~Txt~Open|R17|Begin~190~End~204~Txt~Pulse fast..slow Random timing|R18|Begin~205~End~209~Txt~Open|R19|Begin~210~End~224~Txt~Lightning fast..slow|R20|Begin~225~End~229~Txt~Open|R21|Begin~230~End~244~Txt~Pulse fast..slow|R22|Begin~245~End~255~Txt~Open
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 50deg..7deg
+ID|Channel Functions|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~14~Txt~Blackout during Pan/Tilt movement|R3|Begin~15~End~19~Txt~No function Reserved|R4|Begin~20~End~24~Txt~No function Reserved|R5|Begin~25~End~29~Txt~No function Reserved|R6|Begin~30~End~34~Txt~No function Reserved|R7|Begin~35~End~39~Txt~No function Reserved|R8|Begin~40~End~44~Txt~No function Reserved|R9|Begin~45~End~49~Txt~No function Reserved|R10|Begin~50~End~54~Txt~3s Reset Pan after 3 seconds|R11|Begin~55~End~59~Txt~3s Reset Tilt after 3 seconds|R12|Begin~60~End~64~Txt~3s Reset Zoom after 3 seconds|R13|Begin~65~End~69~Txt~No function Reserved|R14|Begin~70~End~74~Txt~Reset all|R15|Begin~75~End~79~Txt~No function Reserved|R16|Begin~80~End~84~Txt~No function Reserved|R17|Begin~85~End~89~Txt~No function Reserved|R18|Begin~90~End~94~Txt~No function Reserved|R19|Begin~95~End~99~Txt~No function Reserved|R20|Begin~100~End~104~Txt~No function Reserved|R21|Begin~105~End~109~Txt~No function Reserved|R22|Begin~110~End~114~Txt~No function Reserved|R23|Begin~115~End~119~Txt~fast|R24|Begin~120~End~124~Txt~slow|R25|Begin~125~End~129~Txt~Fan Full Speed|R26|Begin~130~End~134~Txt~Fan Temperature controlled|R27|Begin~135~End~139~Txt~Dimming Fast|R28|Begin~140~End~144~Txt~Dimming Smooth|R29|Begin~145~End~239~Txt~No function|R30|Begin~240~End~247~Txt~XY Smoothing model open|R31|Begin~248~End~255~Txt~XY Smoothing model to shut down
+ID|Built-in Programs|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Built-in Macro 1|R3|Begin~24~End~39~Txt~Built-in Macro 2|R4|Begin~40~End~55~Txt~Built-in Macro 3|R5|Begin~56~End~71~Txt~Built-in Macro 4|R6|Begin~72~End~87~Txt~Built-in Macro 5|R7|Begin~88~End~103~Txt~Built-in Macro 6|R8|Begin~104~End~119~Txt~Built-in Macro 7|R9|Begin~120~End~135~Txt~Built-in Macro 8|R10|Begin~136~End~151~Txt~Sound-controlled Macro 1|R11|Begin~152~End~167~Txt~Sound-controlled Macro 2|R12|Begin~168~End~183~Txt~Sound-controlled Macro 3|R13|Begin~184~End~199~Txt~Sound-controlled Macro 4|R14|Begin~200~End~215~Txt~Sound-controlled Macro 5|R15|Begin~216~End~231~Txt~Sound-controlled Macro 6|R16|Begin~232~End~246~Txt~Sound-controlled Macro 7|R17|Begin~247~End~255~Txt~Sound-controlled Macro 8
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|29-channel|ShortName|29ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Built-in Colors~Mobile Macros~Macro Speed~Dimmer~Shutter / Strobe~Zoom~Channel Functions~Built-in Programs
+Name|16-channel|ShortName|16ch|Content|Pan~Tilt~Pan fine~Tilt fine~Pan/Tilt Speed~Red~Green~Blue~White~Mobile Macros~Macro Speed~Dimmer~Shutter / Strobe~Zoom~Channel Functions~Built-in Programs
+Name|14-channel|ShortName|14ch|Content|Pan~Tilt~Pan/Tilt Speed~Red~Green~Blue~White~Mobile Macros~Macro Speed~Dimmer~Shutter / Strobe~Zoom~Channel Functions~Built-in Programs
+[END_MODES]

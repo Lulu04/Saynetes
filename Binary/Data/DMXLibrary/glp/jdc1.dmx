@@ -1,0 +1,91 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=571|LinkType2|product page|Url2|https://www.glp.de/en/products/strobes-led/jdc1|LinkType3|video|Url3|https://www.youtube.com/watch?v=fUEht-I-nZ4
+[GENERAL]
+Manufacturer|GLP|Name|JDC1|Type|42|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|390|Height|284|Depth|154|Weight|12.00|Power|1200|Connector|5-pin|Bulb|1320x Osram LRTB GVTG RGB LEDs, 216x CREE XP L LEDs|LensMinDegree|86.000|LensMaxDegree|148.000
+[CHAN_DEF]
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..185deg
+ID|Tilt fine|Type|8
+ID|Beam Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Beam Duration|Type|28|R1|Begin~0~End~255~Txt~7ms..650ms
+ID|Beam Rate|Type|28|R1|Begin~0~End~255~Txt~0.289Hz..16.67Hz
+ID|Beam FX Shutter|Type|6|R1|Begin~0~End~36~Txt~No function|R2|Begin~37~End~40~Txt~RampUp|R3|Begin~41~End~44~Txt~RampUp Random timing|R4|Begin~45~End~48~Txt~RampDown|R5|Begin~49~End~52~Txt~RampDown Random timing|R6|Begin~53~End~56~Txt~RampUpDown|R7|Begin~57~End~60~Txt~RampUpDown Random timing|R8|Begin~61~End~64~Txt~Random timing Random white beam|R9|Begin~65~End~68~Txt~Random timing Random single pixel of the white beam|R10|Begin~69~End~72~Txt~Lightning|R11|Begin~73~End~76~Txt~Spikes flash over low light|R12|Begin~77~End~80~Txt~Strobe White beam, left to right|R13|Begin~81~End~84~Txt~Strobe White beam, left to right, random|R14|Begin~85~End~88~Txt~Strobe White beam, right to left|R15|Begin~89~End~92~Txt~Strobe White beam, right to left, random|R16|Begin~93~End~96~Txt~Strobe White beam, left to right, bounce|R17|Begin~97~End~100~Txt~Strobe White beam, left to right, bounce, random|R18|Begin~101~End~104~Txt~Strobe White beam, right to left, bounce|R19|Begin~105~End~108~Txt~Strobe White beam, right to left, bounce, random|R20|Begin~109~End~112~Txt~Strobe Zig, 6 steps|R21|Begin~113~End~116~Txt~Strobe Zig, 6 steps, random|R22|Begin~117~End~120~Txt~Strobe Zig, 6 steps, outer to center pixel|R23|Begin~121~End~124~Txt~Strobe Zig, 6 steps, outer to center pixel, random|R24|Begin~125~End~128~Txt~Strobe Zigzag, 10 steps|R25|Begin~129~End~132~Txt~Strobe Zigzag, 10 steps, random|R26|Begin~133~End~179~Txt~No function|R27|Begin~180~End~183~Txt~Strobe Double flash|R28|Begin~184~End~187~Txt~Strobe Double flash, random|R29|Begin~188~End~191~Txt~Strobe Double flash, beam-color|R30|Begin~192~End~195~Txt~Strobe Double flash, beam-color, random|R31|Begin~196~End~199~Txt~Strobe Double flash, color-beam|R32|Begin~200~End~203~Txt~Strobe Double flash, color-beam, random|R33|Begin~204~End~207~Txt~Strobe Triple flash|R34|Begin~208~End~211~Txt~Strobe Triple flash, random|R35|Begin~212~End~215~Txt~Strobe Triple flash, beam-color-beam|R36|Begin~216~End~219~Txt~Strobe Triple flash, beam-color-beam, random|R37|Begin~220~End~223~Txt~Strobe Triple flash, color-beam-color|R38|Begin~224~End~227~Txt~Strobe Triple flash, color-beam-color, random|R39|Begin~228~End~231~Txt~Strobe Quad flash|R40|Begin~232~End~235~Txt~Strobe Quad flash, random|R41|Begin~236~End~239~Txt~Strobe Quad flash, beam-color-beam-color|R42|Begin~240~End~243~Txt~Strobe Quad flash, beam-color-beam-color, random|R43|Begin~244~End~247~Txt~Strobe Quad flash, color-beam-color-beam|R44|Begin~248~End~251~Txt~Strobe Quad flash, color-beam-color-beam, random|R45|Begin~252~End~255~Txt~No function
+ID|Special / Control|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~1~Txt~Channel 4-6 Offset 10°|R3|Begin~2~End~2~Txt~Channel 4-6 Offset 20°|R4|Begin~3~End~3~Txt~Channel 4-6 Offset 30°|R5|Begin~4~End~4~Txt~Channel 4-6 Offset 40°|R6|Begin~5~End~5~Txt~Channel 4-6 Offset 50°|R7|Begin~6~End~6~Txt~Channel 4-6 Offset 60°|R8|Begin~7~End~7~Txt~Channel 4-6 Offset 70°|R9|Begin~8~End~8~Txt~Channel 4-6 Offset 80°|R10|Begin~9~End~9~Txt~Channel 4-6 Offset 90°|R11|Begin~10~End~10~Txt~Channel 4-6 Offset 100°|R12|Begin~11~End~11~Txt~Channel 4-6 Offset 110°|R13|Begin~12~End~12~Txt~Channel 4-6 Offset 120°|R14|Begin~13~End~13~Txt~Channel 4-6 Offset 130°|R15|Begin~14~End~14~Txt~Channel 4-6 Offset 140°|R16|Begin~15~End~15~Txt~Channel 4-6 Offset 150°|R17|Begin~16~End~16~Txt~Channel 4-6 Offset 160°|R18|Begin~17~End~17~Txt~Channel 4-6 Offset 170°|R19|Begin~18~End~18~Txt~Channel 4-6 Offset 180°|R20|Begin~19~End~19~Txt~Channel 4-6 Offset 190°|R21|Begin~20~End~20~Txt~Channel 4-6 Offset 200°|R22|Begin~21~End~21~Txt~Channel 4-6 Offset 210°|R23|Begin~22~End~22~Txt~Channel 4-6 Offset 220°|R24|Begin~23~End~23~Txt~Channel 4-6 Offset 230°|R25|Begin~24~End~24~Txt~Channel 4-6 Offset 240°|R26|Begin~25~End~25~Txt~Channel 4-6 Offset 250°|R27|Begin~26~End~26~Txt~Channel 4-6 Offset 260°|R28|Begin~27~End~27~Txt~Channel 4-6 Offset 270°|R29|Begin~28~End~28~Txt~Channel 4-6 Offset 280°|R30|Begin~29~End~29~Txt~Channel 4-6 Offset 290°|R31|Begin~30~End~30~Txt~Channel 4-6 Offset 300°|R32|Begin~31~End~31~Txt~Channel 4-6 Offset 310°|R33|Begin~32~End~32~Txt~Channel 4-6 Offset 320°|R34|Begin~33~End~33~Txt~Channel 4-6 Offset 330°|R35|Begin~34~End~34~Txt~Channel 4-6 Offset 340°|R36|Begin~35~End~35~Txt~Channel 4-6 Offset 350°|R37|Begin~36~End~36~Txt~Channel 4-6 Offset 360°|R38|Begin~37~End~39~Txt~No function|R39|Begin~40~End~44~Txt~Position Feedback On|R40|Begin~45~End~49~Txt~Position Feedback Off|R41|Begin~50~End~54~Txt~3s FX/Pattern Color Priority On|R42|Begin~55~End~59~Txt~3s FX/Pattern Control Priority Off|R43|Begin~60~End~64~Txt~Pixel H|R44|Begin~65~End~69~Txt~Pixel V|R45|Begin~70~End~74~Txt~Normal Tilt Control|R46|Begin~75~End~79~Txt~Inverse Tilt Control|R47|Begin~80~End~84~Txt~Normal Pixel Orientation|R48|Begin~85~End~89~Txt~Inverse Pixel Orientation|R49|Begin~90~End~94~Txt~Normal Orientation, 2nd Pixel Line|R50|Begin~95~End~99~Txt~Inverse Orientation, 2nd Pixel Line|R51|Begin~100~End~102~Txt~PWM Frequency 582Hz|R52|Begin~103~End~105~Txt~PWM Frequency 583Hz|R53|Begin~106~End~107~Txt~PWM Frequency 584Hz|R54|Begin~108~End~110~Txt~PWM Frequency 585Hz|R55|Begin~111~End~112~Txt~PWM Frequency 586Hz|R56|Begin~113~End~115~Txt~PWM Frequency 587Hz|R57|Begin~116~End~118~Txt~PWM Frequency 588Hz|R58|Begin~119~End~120~Txt~PWM Frequency 589Hz|R59|Begin~121~End~123~Txt~PWM Frequency 590Hz|R60|Begin~124~End~125~Txt~PWM Frequency 591Hz|R61|Begin~126~End~128~Txt~PWM Frequency 592Hz|R62|Begin~129~End~131~Txt~PWM Frequency 593Hz|R63|Begin~132~End~133~Txt~PWM Frequency 594Hz|R64|Begin~134~End~136~Txt~PWM Frequency 595Hz|R65|Begin~137~End~138~Txt~PWM Frequency 596Hz|R66|Begin~139~End~141~Txt~PWM Frequency 597Hz|R67|Begin~142~End~144~Txt~PWM Frequency 598Hz|R68|Begin~145~End~146~Txt~PWM Frequency 599Hz|R69|Begin~147~End~149~Txt~PWM Frequency 600Hz|R70|Begin~150~End~151~Txt~PWM Frequency 601Hz|R71|Begin~152~End~154~Txt~PWM Frequency 602Hz|R72|Begin~155~End~157~Txt~PWM Frequency 603Hz|R73|Begin~158~End~159~Txt~PWM Frequency 604Hz|R74|Begin~160~End~162~Txt~PWM Frequency 605Hz|R75|Begin~163~End~164~Txt~PWM Frequency 606Hz|R76|Begin~165~End~167~Txt~PWM Frequency 607Hz|R77|Begin~168~End~170~Txt~PWM Frequency 608Hz|R78|Begin~171~End~172~Txt~PWM Frequency 609Hz|R79|Begin~173~End~175~Txt~PWM Frequency 610Hz|R80|Begin~176~End~177~Txt~PWM Frequency 611Hz|R81|Begin~178~End~180~Txt~PWM Frequency 612Hz|R82|Begin~181~End~183~Txt~PWM Frequency 613Hz|R83|Begin~184~End~185~Txt~PWM Frequency 614Hz|R84|Begin~186~End~188~Txt~PWM Frequency 615Hz|R85|Begin~189~End~190~Txt~PWM Frequency 616Hz|R86|Begin~191~End~193~Txt~PWM Frequency 617Hz|R87|Begin~194~End~194~Txt~PWM Frequency 618Hz|R88|Begin~195~End~197~Txt~PWM Frequency 1200Hz|R89|Begin~198~End~200~Txt~PWM Frequency 2400Hz|R90|Begin~201~End~209~Txt~No function|R91|Begin~210~End~214~Txt~Duration Percentage Mode On|R92|Begin~215~End~219~Txt~Duration Percentage Mode Off|R93|Begin~220~End~224~Txt~Dimmer Flash On|R94|Begin~225~End~229~Txt~Dimmer Flash Off|R95|Begin~230~End~234~Txt~FX/Plate Color Priority On|R96|Begin~235~End~239~Txt~FX/Plate Color Priority Off|R97|Begin~240~End~247~Txt~No function|R98|Begin~248~End~255~Txt~5s Reset
+ID|Color Plate Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Flash Duration|Type|28|R1|Begin~0~End~255~Txt~7ms..650ms
+ID|Color Flash Rate|Type|28|R1|Begin~0~End~255~Txt~0.289Hz..16.67Hz
+ID|Color FX Shutter|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~1~Txt~Color Plate Offset 10°|R3|Begin~2~End~2~Txt~Color Plate Offset 20°|R4|Begin~3~End~3~Txt~Color Plate Offset 30°|R5|Begin~4~End~4~Txt~Color Plate Offset 40°|R6|Begin~5~End~5~Txt~Color Plate Offset 50°|R7|Begin~6~End~6~Txt~Color Plate Offset 60°|R8|Begin~7~End~7~Txt~Color Plate Offset 70°|R9|Begin~8~End~8~Txt~Color Plate Offset 80°|R10|Begin~9~End~9~Txt~Color Plate Offset 90°|R11|Begin~10~End~10~Txt~Color Plate Offset 100°|R12|Begin~11~End~11~Txt~Color Plate Offset 110°|R13|Begin~12~End~12~Txt~Color Plate Offset 120°|R14|Begin~13~End~13~Txt~Color Plate Offset 130°|R15|Begin~14~End~14~Txt~Color Plate Offset 140°|R16|Begin~15~End~15~Txt~Color Plate Offset 150°|R17|Begin~16~End~16~Txt~Color Plate Offset 160°|R18|Begin~17~End~17~Txt~Color Plate Offset 170°|R19|Begin~18~End~18~Txt~Color Plate Offset 180°|R20|Begin~19~End~19~Txt~Color Plate Offset 190°|R21|Begin~20~End~20~Txt~Color Plate Offset 200°|R22|Begin~21~End~21~Txt~Color Plate Offset 210°|R23|Begin~22~End~22~Txt~Color Plate Offset 220°|R24|Begin~23~End~23~Txt~Color Plate Offset 230°|R25|Begin~24~End~24~Txt~Color Plate Offset 240°|R26|Begin~25~End~25~Txt~Color Plate Offset 250°|R27|Begin~26~End~26~Txt~Color Plate Offset 260°|R28|Begin~27~End~27~Txt~Color Plate Offset 270°|R29|Begin~28~End~28~Txt~Color Plate Offset 280°|R30|Begin~29~End~29~Txt~Color Plate Offset 290°|R31|Begin~30~End~30~Txt~Color Plate Offset 300°|R32|Begin~31~End~31~Txt~Color Plate Offset 310°|R33|Begin~32~End~32~Txt~Color Plate Offset 320°|R34|Begin~33~End~33~Txt~Color Plate Offset 330°|R35|Begin~34~End~34~Txt~Color Plate Offset 340°|R36|Begin~35~End~35~Txt~Color Plate Offset 350°|R37|Begin~36~End~36~Txt~Color Plate Offset 360°|R38|Begin~37~End~40~Txt~RampUp|R39|Begin~41~End~44~Txt~RampUp Random timing|R40|Begin~45~End~48~Txt~RampDown|R41|Begin~49~End~52~Txt~RampDown Random timing|R42|Begin~53~End~56~Txt~RampUpDown|R43|Begin~57~End~60~Txt~RampUpDown Random timing|R44|Begin~61~End~64~Txt~Strobe Random white beam|R45|Begin~65~End~68~Txt~Strobe Random single pixel of the white beam|R46|Begin~69~End~72~Txt~Lightning|R47|Begin~73~End~76~Txt~Spikes flash over low light|R48|Begin~77~End~179~Txt~No function|R49|Begin~180~End~191~Txt~Strobe Double flash|R50|Begin~192~End~203~Txt~Strobe Double flash, random|R51|Begin~204~End~215~Txt~Strobe Trriple flash|R52|Begin~216~End~227~Txt~Strobe Trriple flash, random|R53|Begin~228~End~239~Txt~Strobe Quad flash|R54|Begin~240~End~251~Txt~Strobe Quad flash, random|R55|Begin~252~End~255~Txt~No function No effect
+ID|Plate Red Intensity|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Plate Green Intensity|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Plate Blue Intensity|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|FX Crossfade|Type|0
+ID|Pattern Color Movement|Type|0
+ID|Pattern Select Color|Type|0
+ID|Pattern Beam Movement|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Pattern Select Beam|Type|0
+ID|Color Set 2 Master Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Set 2 Red Intensity|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Set 2 Green Intensity|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Set 2 Blue Intensity|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Pix Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 5 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 5 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 5 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 6 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 6 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 6 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 7 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 7 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 7 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 8 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 8 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 8 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 9 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 9 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 9 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 10 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 10 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 10 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 11 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 11 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 11 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 12 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 12 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pixel 12 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Plate White Intensity|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Compressed Pro 14-channel|ShortName|M1|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Color Plate Intensity~Color Flash Duration~Color Flash Rate~Color FX Shutter~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity
+Name|Normal 23-channel|ShortName|M2|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Color Plate Intensity~Color Flash Duration~Color Flash Rate~Color FX Shutter~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity~FX Crossfade~Pattern Color Movement~Pattern Select Color~Pattern Beam Movement~Pattern Select Beam~Color Set 2 Master Intensity~Color Set 2 Red Intensity~Color Set 2 Green Intensity~Color Set 2 Blue Intensity
+Name|SPix 68-channel|ShortName|M3|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Color Plate Intensity~Color Flash Duration~Color Flash Rate~Color FX Shutter~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity~FX Crossfade~Pattern Color Movement~Pattern Select Color~Pattern Beam Movement~Pattern Select Beam~Master Pix Intensity~Pixel 1 Red~Pixel 1 Green~Pixel 1 Blue~Pixel 2 Red~Pixel 2 Green~Pixel 2 Blue~Pixel 3 Red~Pixel 3 Green~Pixel 3 Blue~Pixel 4 Red~Pixel 4 Green~Pixel 4 Blue~Pixel 5 Red~Pixel 5 Green~Pixel 5 Blue~Pixel 6 Red~Pixel 6 Green~Pixel 6 Blue~Pixel 7 Red~Pixel 7 Green~Pixel 7 Blue~Pixel 8 Red~Pixel 8 Green~Pixel 8 Blue~Pixel 9 Red~Pixel 9 Green~Pixel 9 Blue~Pixel 10 Red~Pixel 10 Green~Pixel 10 Blue~Pixel 11 Red~Pixel 11 Green~Pixel 11 Blue~Pixel 12 Red~Pixel 12 Green~Pixel 12 Blue~White 1~White 2~White 3~White 4~White 5~White 6~White 7~White 8~White 9~White 10~White 11~White 12
+Name|SPix Pro 62-channel|ShortName|M4|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Color Plate Intensity~Color Flash Duration~Color Flash Rate~Color FX Shutter~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity~Pixel 1 Red~Pixel 1 Green~Pixel 1 Blue~Pixel 2 Red~Pixel 2 Green~Pixel 2 Blue~Pixel 3 Red~Pixel 3 Green~Pixel 3 Blue~Pixel 4 Red~Pixel 4 Green~Pixel 4 Blue~Pixel 5 Red~Pixel 5 Green~Pixel 5 Blue~Pixel 6 Red~Pixel 6 Green~Pixel 6 Blue~Pixel 7 Red~Pixel 7 Green~Pixel 7 Blue~Pixel 8 Red~Pixel 8 Green~Pixel 8 Blue~Pixel 9 Red~Pixel 9 Green~Pixel 9 Blue~Pixel 10 Red~Pixel 10 Green~Pixel 10 Blue~Pixel 11 Red~Pixel 11 Green~Pixel 11 Blue~Pixel 12 Red~Pixel 12 Green~Pixel 12 Blue~White 1~White 2~White 3~White 4~White 5~White 6~White 7~White 8~White 9~White 10~White 11~White 12
+Name|1Pix Pro 17-channel|ShortName|M5|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Color Plate Intensity~Color Flash Duration~Color Flash Rate~Color FX Shutter~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity~Color Set 2 Red Intensity~Color Set 2 Green Intensity~Color Set 2 Blue Intensity
+Name|Easy 11-channel|ShortName|M6|Content|Tilt~Tilt fine~Beam Intensity~Beam Duration~Beam Rate~Beam FX Shutter~Special / Control~Plate Red Intensity~Plate Green Intensity~Plate Blue Intensity~Plate White Intensity
+[END_MODES]

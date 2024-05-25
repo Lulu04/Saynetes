@@ -1,0 +1,114 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=112|LinkType2|video|Url2|https://www.youtube.com/watch?v=cMRGfFBBzg0
+[GENERAL]
+Manufacturer|GLP|Name|Impression X4 Bar 10|Type|47|Authors|Rummels Bucht Berlin|Creator|OFL
+[PHYSICAL]
+Width|500|Height|240|Depth|100|Weight|8.00|Power|200|Connector|5-pin|Bulb|Osram Ostar RGBW multi-chip LED|LensMinDegree|7.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..210deg
+ID|Tilt fine|Type|8
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 50deg..7deg
+ID|CTO|Type|0|R1|Begin~0~End~7~Txt~No function No CTO|R2|Begin~8~End~255~Txt~default..CTO
+ID|Set 1 Color|Type|0|R1|Begin~0~End~7~Txt~No function Colors adjustable via RGB|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffbf00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#f6cd8b|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#40e0d0|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavender~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Malve~Extra~#b24662|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ffc0cb|R14|Begin~104~End~111~Txt~Color temperature 3200K White - CTO~Extra~#ffb87b|R15|Begin~112~End~119~Txt~Color temperature 5600K White~Extra~#ffefe1|R16|Begin~120~End~127~Txt~Color temperature 7200K White - CTB~Extra~#edefff|R17|Begin~128~End~128~Txt~ColorFade stop|R18|Begin~129~End~223~Txt~ColorFade slow..fast|R19|Begin~224~End~255~Txt~ColorJump slow..fast Random colors
+ID|Set 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 1 Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~47~Txt~Pulse slow..fast Random timing|R3|Begin~48~End~79~Txt~RampUp slow..fast Random timing|R4|Begin~80~End~111~Txt~RampDown slow..fast Random timing|R5|Begin~112~End~143~Txt~RampUpDown slow..fast Random timing|R6|Begin~144~End~199~Txt~5s..0.1s Random timing|R7|Begin~200~End~239~Txt~1Hz..10Hz|R8|Begin~240~End~255~Txt~Open
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Special|Type|0|R1|Begin~0~End~3~Txt~no mirror|R2|Begin~4~End~7~Txt~mirror color priority|R3|Begin~8~End~11~Txt~mirror color mixing|R4|Begin~12~End~119~Txt~No function|R5|Begin~120~End~123~Txt~3s Tilt slow mode off|R6|Begin~124~End~127~Txt~3s Tilt slow mode on|R7|Begin~128~End~131~Txt~3s Tilt current off|R8|Begin~132~End~135~Txt~3s Tilt current on|R9|Begin~136~End~139~Txt~3s Tilt reset off|R10|Begin~140~End~143~Txt~3s Tilt reset on|R11|Begin~144~End~147~Txt~3s Display Flip off|R12|Begin~148~End~151~Txt~3s Display Flip on|R13|Begin~152~End~155~Txt~3s DMX Mode DPixH (HiRes)|R14|Begin~156~End~159~Txt~3s DMX Mode SPixH (HiRes)|R15|Begin~160~End~163~Txt~3s DMX Mode High Resolution|R16|Begin~164~End~167~Txt~3s DMX Mode Normal|R17|Begin~168~End~171~Txt~3s DMX Mode Compressed|R18|Begin~172~End~175~Txt~3s DMX Mode DPix|R19|Begin~176~End~179~Txt~3s DMX Mode SPix|R20|Begin~180~End~183~Txt~3s Dimmer Curve ESoft|R21|Begin~184~End~187~Txt~3s Dimmer Curve Soft|R22|Begin~188~End~191~Txt~3s Dimmer Curve Lin|R23|Begin~192~End~195~Txt~3s X4 Compatibility off|R24|Begin~196~End~199~Txt~3s X4 Compatibility on|R25|Begin~200~End~203~Txt~3s Silent-Mode off|R26|Begin~204~End~207~Txt~3s Silent-Mode on|R27|Begin~208~End~211~Txt~3s Position Feedback off|R28|Begin~212~End~215~Txt~3s Position Feedback on|R29|Begin~216~End~219~Txt~3s DMX hold off|R30|Begin~220~End~223~Txt~3s DMX hold on|R31|Begin~224~End~227~Txt~3s Tilt inverse off|R32|Begin~228~End~231~Txt~3s Tilt inverse on|R33|Begin~232~End~235~Txt~3s Pixel inverse off|R34|Begin~236~End~239~Txt~3s Pixel inverse on|R35|Begin~240~End~243~Txt~3s Zoom inverse off|R36|Begin~244~End~247~Txt~3s Zoom inverse on|R37|Begin~248~End~251~Txt~3s Fixture default|R38|Begin~252~End~255~Txt~3s Fixture reset
+ID|Set 2 Color|Type|0|R1|Begin~0~End~7~Txt~No function Colors adjustable via RGB|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffbf00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#f6cd8b|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#40e0d0|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavender~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Malve~Extra~#b24662|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ffc0cb|R14|Begin~104~End~111~Txt~Color temperature 3200K White - CTO~Extra~#ffb87b|R15|Begin~112~End~119~Txt~Color temperature 5600K White~Extra~#ffefe1|R16|Begin~120~End~127~Txt~Color temperature 7200K White - CTB~Extra~#edefff|R17|Begin~128~End~128~Txt~ColorFade stop|R18|Begin~129~End~223~Txt~ColorFade slow..fast|R19|Begin~224~End~255~Txt~ColorJump slow..fast Random colors
+ID|Set 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 2 Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 3 Color|Type|0|R1|Begin~0~End~7~Txt~No function Colors adjustable via RGB|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ffbf00|R4|Begin~24~End~31~Txt~Warm Yellow~Extra~#f6cd8b|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#40e0d0|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavender~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Malve~Extra~#b24662|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00ff|R13|Begin~96~End~103~Txt~Pink~Extra~#ffc0cb|R14|Begin~104~End~111~Txt~Color temperature 3200K White - CTO~Extra~#ffb87b|R15|Begin~112~End~119~Txt~Color temperature 5600K White~Extra~#ffefe1|R16|Begin~120~End~127~Txt~Color temperature 7200K White - CTB~Extra~#edefff|R17|Begin~128~End~128~Txt~ColorFade stop|R18|Begin~129~End~223~Txt~ColorFade slow..fast|R19|Begin~224~End~255~Txt~ColorJump slow..fast Random colors
+ID|Set 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Set 3 Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Crossfade|Type|16|R1|Begin~0~End~255~Txt~0s..2s Transition time
+ID|Star Effect|Type|0|R1|Begin~0~End~255~Txt~Random internal shutter effect slow..fast
+ID|Set 1 Pattern Select|Type|0
+ID|Set 1 Pattern Movement|Type|0
+ID|Set 2 Pattern Select|Type|0
+ID|Set 2 Pattern Movement|Type|0
+ID|Pixel Select 1 - 8|Type|0
+ID|Pixel Select 9 - 10|Type|0
+ID|NotUsed|Type|17|R1|Begin~0~End~255~Txt~No function
+ID|Intensity fine|Type|2
+ID|Red 1+2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1+2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1+2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1+2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3+4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3+4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3+4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3+4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5+6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5+6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5+6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5+6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7+8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7+8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7+8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7+8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9+10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9+10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9+10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9+10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Normal|ShortName|NORM|Content|Tilt~Tilt fine~Zoom~CTO~Set 1 Color~Set 1 Red~Set 1 Green~Set 1 Blue~Set 1 White~Set 1 Intensity~Shutter~Intensity~Special~Set 2 Color~Set 2 Red~Set 2 Green~Set 2 Blue~Set 2 White~Set 2 Intensity~Set 3 Color~Set 3 Red~Set 3 Green~Set 3 Blue~Set 3 White~Set 3 Intensity~Crossfade~Star Effect~Set 1 Pattern Select~Set 1 Pattern Movement~Set 2 Pattern Select~Set 2 Pattern Movement~Pixel Select 1 - 8~Pixel Select 9 - 10
+Name|Compressed|ShortName|COMP|Content|NotUsed~NotUsed~Tilt~Tilt fine~Set 1 Color~Set 1 Red~Set 1 Green~Set 1 Blue~Set 1 White~Shutter~Intensity~CTO~Special~Crossfade~Set 1 Pattern Movement~Zoom~Set 1 Pattern Select~Pixel Select 1 - 8~Pixel Select 9 - 10
+Name|High Resolution|ShortName|HIRES|Content|Tilt~Tilt fine~Zoom~CTO~Set 1 Color~Set 1 Red~Set 1 Green~Set 1 Blue~Set 1 White~Set 1 Intensity~Shutter~Intensity~Intensity fine~Special~Set 2 Color~Set 2 Red~Set 2 Green~Set 2 Blue~Set 2 White~Set 2 Intensity~Set 3 Color~Set 3 Red~Set 3 Green~Set 3 Blue~Set 3 White~Set 3 Intensity~Crossfade~Star Effect~Set 1 Pattern Select~Set 1 Pattern Movement~Set 2 Pattern Select~Set 2 Pattern Movement~Pixel Select 1 - 8~Pixel Select 9 - 10
+Name|Dual Pixel|ShortName|DPIX|Content|Tilt~Tilt fine~Shutter~Intensity~CTO~Special~Crossfade~Zoom~Red 1+2~Green 1+2~Blue 1+2~White 1+2~Red 3+4~Green 3+4~Blue 3+4~White 3+4~Red 5+6~Green 5+6~Blue 5+6~White 5+6~Red 7+8~Green 7+8~Blue 7+8~White 7+8~Red 9+10~Green 9+10~Blue 9+10~White 9+10
+Name|Dual Pixel High Resolution|ShortName|DPIXH|Content|Tilt~Tilt fine~Shutter~Intensity~Intensity fine~CTO~Special~Crossfade~Zoom~Red 1+2~Green 1+2~Blue 1+2~White 1+2~Red 3+4~Green 3+4~Blue 3+4~White 3+4~Red 5+6~Green 5+6~Blue 5+6~White 5+6~Red 7+8~Green 7+8~Blue 7+8~White 7+8~Red 9+10~Green 9+10~Blue 9+10~White 9+10
+Name|Single Pixel|ShortName|SPIX|Content|Tilt~Tilt fine~Shutter~Intensity~CTO~Special~Crossfade~Zoom~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Red 8~Green 8~Blue 8~White 8~Red 9~Green 9~Blue 9~White 9~Red 10~Green 10~Blue 10~White 10
+Name|Single Pixel High Resolution|ShortName|SPIXH|Content|Tilt~Tilt fine~Shutter~Intensity~Intensity fine~CTO~Special~Crossfade~Zoom~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Red 8~Green 8~Blue 8~White 8~Red 9~Green 9~Blue 9~White 9~Red 10~Green 10~Blue 10~White 10
+[END_MODES]
