@@ -59,6 +59,9 @@ type
     function GetSelectedFixtureMode: string;
 
     procedure Fill;
+    // update the list of modes for the current selected item
+    procedure UpdateSelectedAfterEdition;
+
     function ItsAFolder(aNode: TTreeNode): boolean;
     function ItsAFile(aNode: TTreeNode): boolean;
     function ItsAMode(aNode: TTreeNode): boolean;
@@ -552,6 +555,31 @@ begin
                 GetAppDMXLibraryFolder+LineEnding+E.Message, SClose, mtError);
     end;
   end;
+end;
+
+procedure TFrameViewDMXLibrary.UpdateSelectedAfterEdition;
+var n, n1: TTreeNode;
+  modes: TStringArray;
+  i: Integer;
+  f: string;
+begin
+  n := TV.Selected;
+  if n = NIL then exit;
+  if ItsAMode(n) then n := n.Parent;
+  if not ItsAFile(n) then exit;
+
+  f := IncludeTrailingPathDelimiter(AbsolutePathForNode(n));
+  f := f + ChangeFileExt(n.Text, DMX_LIBRARY_FILE_EXTENSION);
+
+  // add each modes
+  modes := GetFixtureModeNames(f);
+  n.DeleteChildren;
+  for i:=0 to High(modes) do begin
+    n1 := TV.Items.AddChild( n, modes[i]);
+    n1.SelectedIndex := 3;
+    n1.ImageIndex := 3;
+  end;
+
 end;
 
 end.
