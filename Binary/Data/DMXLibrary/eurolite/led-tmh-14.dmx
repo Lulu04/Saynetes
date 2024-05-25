@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.manualslib.de/manual/286274/Eurolite-Led-Tmh-14.html|LinkType2|product page|Url2|https://www.musikhaus-korn.de/en/eurolite-led-tmh-14-moving-head-zoom-wash/pd/134357|LinkType3|video|Url3|https://www.youtube.com/watch?v=h45pZVr19tg
 [GENERAL]
-Manufacturer|Eurolite|Name|LED TMH-14|Type|9|Authors|Victor Hampel|Creator|OFL
+Manufacturer|Eurolite|Name|LED TMH-14|Type|41|Authors|Victor Hampel|Creator|OFL
 [PHYSICAL]
 Width|145|Height|200|Depth|280|Weight|3.25|Power|65|Connector|3-pin|Bulb|3× 12W COB RGBW LEDs|LensMinDegree|4.000|LensMaxDegree|32.000
 [CHAN_DEF]

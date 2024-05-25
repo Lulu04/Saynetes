@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R1_Wash_UM_Rev2_WO1.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/rogue-r1-wash/|LinkType3|video|Url3|https://www.youtube.com/watch?v=YWUMAocTR_w
 [GENERAL]
-Manufacturer|Chauvet Professional|Name|Rogue R1 Wash|Type|9|Authors|Ken Harris, Flo Edelmann|Creator|OFL
+Manufacturer|Chauvet Professional|Name|Rogue R1 Wash|Type|41|Authors|Ken Harris, Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|265|Height|354|Depth|187|Weight|5.90|Power|161|Connector|3-pin and 5-pin|Bulb|7× 15W RGBW LEDs|Lumens|2300|LensMinDegree|8.000|LensMaxDegree|30.000
 [CHAN_DEF]

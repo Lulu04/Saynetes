@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|other|Url1|https://github.com/OpenLightingProject/open-fixture-library/pull/461|LinkType2|other|Url2|https://github.com/OpenLightingProject/open-fixture-library/issues/792
 [GENERAL]
-Manufacturer|Power Lighting|Name|Wash 84W|Type|9|Authors|Millumin, CypGit|Creator|OFL
+Manufacturer|Power Lighting|Name|Wash 84W|Type|41|Authors|Millumin, CypGit|Creator|OFL
 [PHYSICAL]
 Width|177|Height|230|Depth|177|Weight|2.70|Power|90|Connector|3-pin|Bulb|LED
 [CHAN_DEF]

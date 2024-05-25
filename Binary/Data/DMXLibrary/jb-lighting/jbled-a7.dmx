@@ -3,7 +3,7 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://www.jb-lighting.de/download/Handbuch/JBLED_A7_Manual.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=OBVMcR1yKqw|LinkType3|video|Url3|https://www.youtube.com/watch?v=T8IXQbxDiQI
 [GENERAL]
-Manufacturer|JB-Lighting|Name|JBLED A7|Type|9|Authors|Swiftb0y|Creator|OFL
+Manufacturer|JB-Lighting|Name|JBLED A7|Type|41|Authors|Swiftb0y|Creator|OFL
 [PHYSICAL]
 Width|315|Height|388|Depth|200|Weight|8.90|Power|350|Connector|3-pin and 5-pin|Bulb|LED
 [CHAN_DEF]
@@ -16,16 +16,16 @@ ID|Shutter|Type|6|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~95~Txt~Open|R3|Be
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0%..100%
 ID|Zoom|Type|31|DefaultValue|25|R1|Begin~0~End~255~Txt~Zoom 12deg..36deg 1/10 peak measurement
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
-ID|Red fine|Type|3
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
-ID|Green fine|Type|4
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
-ID|Blue fine|Type|5
 ID|CTC|Type|27|R1|Begin~0~End~255~Txt~2900K..6000K
 ID|Virtual Color Wheel|Type|12|R1|Begin~0~End~1~Txt~No function|R2|Begin~2~End~3~Txt~White~Extra~#ffffff|R3|Begin~4~End~7~Txt~White / Red~Extra~_#ff0000|R4|Begin~8~End~11~Txt~Red~Extra~#ff0000|R5|Begin~12~End~15~Txt~Red / Yellow~Extra~_#ffff00|R6|Begin~16~End~19~Txt~Yellow~Extra~#ffff00|R7|Begin~20~End~23~Txt~Yellow / Magenta~Extra~_#ff00ff|R8|Begin~24~End~27~Txt~Magenta~Extra~#ff00ff|R9|Begin~28~End~31~Txt~Magenta / Green~Extra~_#00ff00|R10|Begin~32~End~35~Txt~Green~Extra~#00ff00|R11|Begin~36~End~39~Txt~Green / Amber~Extra~_#ffbf00|R12|Begin~40~End~43~Txt~Amber~Extra~#ffbf00|R13|Begin~44~End~47~Txt~Amber / Blue~Extra~_#0000ff|R14|Begin~48~End~51~Txt~Blue~Extra~#0000ff|R15|Begin~52~End~55~Txt~Blue / Cyan~Extra~_#00ffff|R16|Begin~56~End~59~Txt~Cyan~Extra~#00ffff|R17|Begin~60~End~63~Txt~Cyan / White~Extra~_#ffffff|R18|Begin~64~End~191~Txt~Preset White … Red … Yellow … Magenta … Green … Amber … Blue … Cyan … White|R19|Begin~192~End~222~Txt~ColorFade fast..slow|R20|Begin~223~End~224~Txt~ColorFade stop|R21|Begin~225~End~255~Txt~ColorFade slow reverse..fast reverse
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~3~Txt~instant|R2|Begin~4~End~255~Txt~fast..slow
 ID|Effects Delay|Type|0|R1|Begin~0~End~3~Txt~Time instant|R2|Begin~4~End~255~Txt~fast..slow
 ID|Blackout Move|Type|0|R1|Begin~0~End~95~Txt~No function|R2|Begin~96~End~127~Txt~black out at pan/tilt moves|R3|Begin~128~End~159~Txt~black out at color changing|R4|Begin~160~End~223~Txt~No function|R5|Begin~224~End~255~Txt~slow..fast black out at color changes and pan/tilt moves. Dimmer fade
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
 [END_CHAN_DEF]
 [MODES]
 Name|Standard 8bit|ShortName|S8|Content|Pan~Pan fine~Tilt~Tilt fine~Control~Shutter~Dimmer~Zoom~Red~Green~Blue~CTC~Virtual Color Wheel~Pan/Tilt Speed~Effects Delay~Blackout Move

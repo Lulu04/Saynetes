@@ -3,32 +3,32 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/9786/elation_ZW19_user_manual_ver%201-092015.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/zw19
 [GENERAL]
-Manufacturer|Elation|Name|ZW19|Type|9|Authors|Ken Harris|Creator|OFL
+Manufacturer|Elation|Name|ZW19|Type|41|Authors|Ken Harris|Creator|OFL
 [PHYSICAL]
 Width|206|Height|395|Depth|321|Weight|8.60|Power|245|Connector|3-pin and 5-pin|Bulb|19× 10W RGBW LEDs|LensMinDegree|10.000|LensMaxDegree|60.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..220deg
-ID|Tilt fine|Type|8
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
-ID|Red fine|Type|3
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
-ID|Green fine|Type|4
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
-ID|Blue fine|Type|5
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
-ID|White fine|Type|13
 ID|Color Temperature|Type|27|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~2700K..6000K
 ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~4~Txt~Preset Color Macro 1|R3|Begin~5~End~8~Txt~Preset Color Macro 2|R4|Begin~9~End~12~Txt~Preset Color Macro 3|R5|Begin~13~End~16~Txt~Preset Color Macro 4|R6|Begin~17~End~20~Txt~Preset Color Macro 5|R7|Begin~21~End~24~Txt~Preset Color Macro 6|R8|Begin~25~End~28~Txt~Preset Color Macro 7|R9|Begin~29~End~32~Txt~Preset Color Macro 8|R10|Begin~33~End~36~Txt~Preset Color Macro 9|R11|Begin~37~End~40~Txt~Preset Color Macro 10|R12|Begin~41~End~44~Txt~Preset Color Macro 11|R13|Begin~45~End~48~Txt~Preset Color Macro 12|R14|Begin~49~End~52~Txt~Preset Color Macro 13|R15|Begin~53~End~56~Txt~Preset Color Macro 14|R16|Begin~57~End~60~Txt~Preset Color Macro 15|R17|Begin~61~End~64~Txt~Preset Color Macro 16|R18|Begin~65~End~68~Txt~Preset Color Macro 17|R19|Begin~69~End~72~Txt~Preset Color Macro 18|R20|Begin~73~End~76~Txt~Preset Color Macro 19|R21|Begin~77~End~80~Txt~Preset Color Macro 20|R22|Begin~81~End~84~Txt~Preset Color Macro 21|R23|Begin~85~End~88~Txt~Preset Color Macro 22|R24|Begin~89~End~92~Txt~Preset Color Macro 23|R25|Begin~93~End~96~Txt~Preset Color Macro 24|R26|Begin~97~End~100~Txt~Preset Color Macro 25|R27|Begin~101~End~104~Txt~Preset Color Macro 26|R28|Begin~105~End~108~Txt~Preset Color Macro 27|R29|Begin~109~End~112~Txt~Preset Color Macro 28|R30|Begin~113~End~116~Txt~Preset Color Macro 29|R31|Begin~117~End~120~Txt~Preset Color Macro 30|R32|Begin~121~End~124~Txt~Preset Color Macro 31|R33|Begin~125~End~128~Txt~Preset Color Macro 32|R34|Begin~129~End~132~Txt~Preset Color Macro 33|R35|Begin~133~End~136~Txt~Preset Color Macro 34|R36|Begin~137~End~140~Txt~Preset Color Macro 35|R37|Begin~141~End~144~Txt~Preset Color Macro 36|R38|Begin~145~End~148~Txt~Preset Color Macro 37|R39|Begin~149~End~152~Txt~Preset Color Macro 38|R40|Begin~153~End~156~Txt~Preset Color Macro 39|R41|Begin~157~End~160~Txt~Preset Color Macro 40|R42|Begin~161~End~164~Txt~Preset Color Macro 41|R43|Begin~165~End~168~Txt~Preset Color Macro 42|R44|Begin~169~End~172~Txt~Preset Color Macro 43|R45|Begin~173~End~176~Txt~Preset Color Macro 44|R46|Begin~177~End~180~Txt~Preset Color Macro 45|R47|Begin~181~End~184~Txt~Preset Color Macro 46|R48|Begin~185~End~188~Txt~Preset Color Macro 47|R49|Begin~189~End~192~Txt~Preset Color Macro 48|R50|Begin~193~End~196~Txt~Preset Color Macro 49|R51|Begin~197~End~200~Txt~Preset Color Macro 50|R52|Begin~201~End~204~Txt~Preset Color Macro 51|R53|Begin~205~End~208~Txt~Preset Color Macro 52|R54|Begin~209~End~212~Txt~Preset Color Macro 53|R55|Begin~213~End~216~Txt~Preset Color Macro 54|R56|Begin~217~End~220~Txt~Preset Color Macro 55|R57|Begin~221~End~224~Txt~Preset Color Macro 56|R58|Begin~225~End~228~Txt~Preset Color Macro 57|R59|Begin~229~End~232~Txt~Preset Color Macro 58|R60|Begin~233~End~236~Txt~Preset Color Macro 59|R61|Begin~237~End~240~Txt~Preset Color Macro 60|R62|Begin~241~End~244~Txt~Preset Color Macro 61|R63|Begin~245~End~248~Txt~Preset Color Macro 62|R64|Begin~249~End~252~Txt~Preset Color Macro 63|R65|Begin~253~End~255~Txt~Preset Color Macro 64
 ID|Shutter / Strobe|Type|6|R1|Begin~0~End~19~Txt~Closed|R2|Begin~20~End~24~Txt~Open|R3|Begin~25~End~64~Txt~Strobe slow..fast|R4|Begin~65~End~69~Txt~Open|R5|Begin~70~End~84~Txt~RampUp|R6|Begin~85~End~89~Txt~Open|R7|Begin~90~End~104~Txt~RampDown|R8|Begin~105~End~109~Txt~Open|R9|Begin~110~End~124~Txt~Strobe Random timing|R10|Begin~125~End~129~Txt~Open|R11|Begin~130~End~144~Txt~RampUp Random timing|R12|Begin~145~End~149~Txt~Open|R13|Begin~150~End~164~Txt~RampDown Random timing|R14|Begin~165~End~169~Txt~Open|R15|Begin~170~End~184~Txt~Pulse|R16|Begin~185~End~189~Txt~Open|R17|Begin~190~End~204~Txt~Burst Random timing|R18|Begin~205~End~209~Txt~Open|R19|Begin~210~End~224~Txt~Pulse|R20|Begin~225~End~229~Txt~Open|R21|Begin~230~End~244~Txt~Burst|R22|Begin~245~End~255~Txt~Open
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
-ID|Dimmer fine|Type|1
 ID|Dimming Curve Modes|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default to unit setting
 ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 10deg..60deg
-ID|Zoom fine|Type|31
 ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Reset / Dimming Modes|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout While Pan/Tilt Movement|R3|Begin~80~End~89~Txt~No function|R4|Begin~90~End~99~Txt~Blackout When RGBW Values Change|R5|Begin~100~End~199~Txt~No function|R6|Begin~200~End~209~Txt~Reset All|R7|Begin~210~End~255~Txt~No function
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|Dimmer fine|Type|1
+ID|Zoom fine|Type|31
 [END_CHAN_DEF]
 [MODES]
 Name|14-channel|ShortName|14ch|Content|Pan~Tilt~Red~Green~Blue~White~Color Temperature~Color Macros~Shutter / Strobe~Dimmer~Dimming Curve Modes~Zoom~Pan/Tilt Speed~Reset / Dimming Modes

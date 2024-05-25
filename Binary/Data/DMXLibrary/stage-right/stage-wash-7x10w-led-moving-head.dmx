@@ -3,24 +3,24 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://downloads.monoprice.com/files/manuals/612870_Manual_170822.pdf|LinkType2|manual|Url2|https://images-na.ssl-images-amazon.com/images/I/817xvVgs88L.pdf|LinkType3|product page|Url3|https://www.monoprice.com/product?p_id=612870|LinkType4|product page|Url4|https://www.lixada.com/p-l0761us.html|LinkType5|video|Url5|https://www.youtube.com/watch?v=GOy2Memx1qQ
 [GENERAL]
-Manufacturer|Stage Right|Name|Stage Wash 7x10W LED Moving Head|Type|9|Authors|Felix Edelmann, martin3000, sirexeclp, Ryan Goodwin|Creator|OFL
+Manufacturer|Stage Right|Name|Stage Wash 7x10W LED Moving Head|Type|41|Authors|Felix Edelmann, martin3000, sirexeclp, Ryan Goodwin|Creator|OFL
 [PHYSICAL]
 Width|240|Height|300|Depth|240|Weight|3.80|Power|80|Connector|3-pin|Bulb|7× 10W RGBW LEDs
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
-ID|Tilt fine|Type|8
-ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Dimmer / Strobe|Type|2|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~134~Txt~0..100%|R3|Begin~135~End~239~Txt~Strobe slow..fast|R4|Begin~240~End~255~Txt~Open
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset|R3|Begin~201~End~255~Txt~No function
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 ID|Color Presets|Type|12|R1|Begin~0~End~231~Txt~Preset|R2|Begin~232~End~255~Txt~ColorJump Seven Colors
 ID|Color Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
 ID|Auto / Sound Mode|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~63~Txt~Auto Mode fast|R3|Begin~64~End~127~Txt~Auto Mode slow|R4|Begin~128~End~191~Txt~Sound Mode 1|R5|Begin~192~End~255~Txt~Sound Mode 2
-ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Reset|R3|Begin~201~End~255~Txt~No function
 [END_CHAN_DEF]
 [MODES]
 Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Dimmer / Strobe~Red~Green~Blue~White~Pan/Tilt Speed~Reset

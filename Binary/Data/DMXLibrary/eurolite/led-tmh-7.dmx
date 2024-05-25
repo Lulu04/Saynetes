@@ -3,14 +3,12 @@ Version|3.1.0
 [LINKS]
 LinkType1|manual|Url1|https://media.steinigke.de/documents_t/51785973-MANUAL-2.10-en-de_00093407.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=XvNNbRJAUKE
 [GENERAL]
-Manufacturer|Eurolite|Name|LED TMH-7|Type|9|Authors|Flo Edelmann|Creator|OFL
+Manufacturer|Eurolite|Name|LED TMH-7|Type|41|Authors|Flo Edelmann|Creator|OFL
 [PHYSICAL]
 Width|175|Height|245|Depth|175|Weight|3.00|Power|75|Connector|3-pin|Bulb|18x 3W tricolor LED|LensMinDegree|25.000|LensMaxDegree|25.000
 [CHAN_DEF]
 ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Pan fine|Type|7
 ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..180deg
-ID|Tilt fine|Type|8
 ID|Pan / Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
@@ -18,6 +16,8 @@ ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Color Macros|Type|12|R1|Begin~0~End~40~Txt~No function|R2|Begin~41~End~80~Txt~Preset Macro 1|R3|Begin~81~End~120~Txt~Preset Macro 2|R4|Begin~121~End~140~Txt~Preset Macro 3|R5|Begin~141~End~160~Txt~Preset Macro 4|R6|Begin~161~End~200~Txt~Preset Macro 5|R7|Begin~201~End~240~Txt~Preset Macro 6|R8|Begin~241~End~255~Txt~No function
 ID|Shutter|Type|6|DefaultValue|255|R1|Begin~0~End~10~Txt~Closed|R2|Begin~11~End~20~Txt~No function|R3|Begin~21~End~30~Txt~Reset|R4|Begin~31~End~200~Txt~Strobe slow..fast|R5|Begin~201~End~250~Txt~Strobe slow..fast Random timing|R6|Begin~251~End~255~Txt~No function
 ID|Dimmer Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
 [END_CHAN_DEF]
 [MODES]
 Name|11-channel|ShortName|11ch|Content|Pan~Tilt~Pan / Tilt Speed~Red~Green~Blue~Color Macros~Shutter~Dimmer Intensity~Pan fine~Tilt fine
