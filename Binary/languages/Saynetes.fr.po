@@ -83,6 +83,10 @@ msgstr "Supprime la sélection de la playlist"
 msgid "Move up/down the selected audio file"
 msgstr "Déplace la sélection"
 
+#: tformdefinenewchannel.bimportranges.caption
+msgid "Import ranges from another channel..."
+msgstr ""
+
 #: tformdefinenewchannel.label4.caption
 msgid "Default value"
 msgstr "Valeur par défaut"
@@ -903,6 +907,14 @@ msgid ""
 msgstr ""
 "Cet assistant va vous aider à créer un nouveau projet\n"
 "Cliquez sur 'Suivant' pour continuer…"
+
+#: tformselectchannel.bok.caption
+msgid "SOk"
+msgstr ""
+
+#: tformselectchannel.label2.caption
+msgid "Select the source channel"
+msgstr ""
 
 #: tformselectexistingchannel.baddexisting.caption
 msgctxt "tformselectexistingchannel.baddexisting.caption"

@@ -71,6 +71,10 @@ msgstr ""
 msgid "Move up/down the selected audio file"
 msgstr ""
 
+#: tformdefinenewchannel.bimportranges.caption
+msgid "Import ranges from another channel..."
+msgstr ""
+
 #: tformdefinenewchannel.label4.caption
 msgid "Default value"
 msgstr ""
@@ -844,6 +848,14 @@ msgstr ""
 msgid ""
 "This wizard will help you to create a new project\n"
 "Click 'Next' to continue..."
+msgstr ""
+
+#: tformselectchannel.bok.caption
+msgid "SOk"
+msgstr ""
+
+#: tformselectchannel.label2.caption
+msgid "Select the source channel"
 msgstr ""
 
 #: tformselectexistingchannel.baddexisting.caption
