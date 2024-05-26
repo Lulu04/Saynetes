@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/9870/Elation%20Cuepix%20Blinder%20WW4%20-%20User%20Manual%20.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/cuepix-blinder-ww4
+[GENERAL]
+Manufacturer|Elation|Name|CUEPIX Blinder WW4|Type|37|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|259|Height|181|Depth|478|Weight|5.10|Power|229|Connector|3-pin and 5-pin|Bulb|100W Warm White COB LEDs|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Warm white|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm white Top Left|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm white Top Right|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm white Bottom Left|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm white Bottom Right|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|DefaultValue|32|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimming Curve|Type|0|R1|Begin~0~End~41~Txt~Standard|R2|Begin~42~End~84~Txt~Stage|R3|Begin~85~End~127~Txt~TV|R4|Begin~128~End~170~Txt~Architectural|R5|Begin~171~End~213~Txt~Theatre|R6|Begin~214~End~255~Txt~Default to unit setting
+ID|Internal Macros|Type|0|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~42~Txt~Dream|R3|Begin~43~End~64~Txt~Meteor|R4|Begin~65~End~87~Txt~ColorFade|R5|Begin~88~End~110~Txt~ColorJump|R6|Begin~111~End~123~Txt~Flow 1|R7|Begin~124~End~146~Txt~Flow 2|R8|Begin~147~End~169~Txt~Flow 3|R9|Begin~170~End~192~Txt~Flow 4|R10|Begin~193~End~255~Txt~No function
+ID|Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Warm white
+Name|2-channel|ShortName|2ch|Content|Warm white~Master Dimmer
+Name|4-channel|ShortName|4ch|Content|Warm white Top Left~Warm white Top Right~Warm white Bottom Left~Warm white Bottom Right
+Name|5-channel|ShortName|5ch|Content|Warm white Top Left~Warm white Top Right~Warm white Bottom Left~Warm white Bottom Right~Master Dimmer
+Name|7-channel|ShortName|7ch|Content|Warm white Top Left~Warm white Top Right~Warm white Bottom Left~Warm white Bottom Right~Master Dimmer~Strobe~Dimming Curve
+Name|9-channel|ShortName|9ch|Content|Warm white Top Left~Warm white Top Right~Warm white Bottom Left~Warm white Bottom Right~Internal Macros~Macro Speed~Master Dimmer~Strobe~Dimming Curve
+[END_MODES]

@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://forum.dmxcontrol-projects.org/core/index.php?attachment/12216-empire-lighting-led-spider-effekt-pdf/
+[GENERAL]
+Manufacturer|EMPiRE Lighting|Name|8x 3W LED Spider Effect|Type|47|Authors|Tobias König|Creator|OFL
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|0|Power|0|Connector|3-pin
+[CHAN_DEF]
+ID|Tilt 1|Type|8|R1|Begin~0~End~255~Txt~0…100%
+ID|Tilt 2|Type|8|R1|Begin~0~End~255~Txt~0…100%
+ID|Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampDown|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampUp|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Red Left|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Middle Left|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Middle Right|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White Right|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Mode|Type|0|R1|Begin~0~End~7~Txt~No function DMX|R2|Begin~8~End~63~Txt~Auto mode|R3|Begin~64~End~127~Txt~Music mode|R4|Begin~128~End~255~Txt~Reset
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|10-channel|ShortName|10ch|Content|Tilt 1~Tilt 2~Tilt Speed~Master Dimmer~Strobe~Red Left~Green Middle Left~Blue Middle Right~White Right~Mode
+Name|14-channel|ShortName|14ch|Content|Tilt 1~Tilt 2~Tilt Speed~Master Dimmer~Strobe~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Mode
+[END_MODES]

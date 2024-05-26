@@ -1,0 +1,147 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://chroma-q.com/assets/uploads/product_downloads/56078f55536c193d0748200af69d480f.pdf|LinkType2|product page|Url2|https://chroma-q.com/products/color-force-ii-12|LinkType3|video|Url3|https://www.youtube.com/watch?v=z5E7URWnnmQ
+[GENERAL]
+Manufacturer|Chroma-Q|Name|Color Force II 12|Type|19|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|335|Height|191|Depth|165|Weight|5.00|Power|160|Connector|5-pin|Bulb|LED|LensMinDegree|22.000|LensMaxDegree|22.000
+[CHAN_DEF]
+ID|Look Select|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~8~Txt~Look 1 (default Red)~Extra~#ff0000|R3|Begin~9~End~16~Txt~Look 2 (default Pink)~Extra~#ff00ff|R4|Begin~17~End~25~Txt~Look 3 (default Orange)~Extra~#ff8800|R5|Begin~26~End~33~Txt~Look 4 (default Light Orange)~Extra~#ffbb00|R6|Begin~34~End~42~Txt~Look 5 (default Yellow)~Extra~#ffff00|R7|Begin~43~End~51~Txt~Look 6 (default Light Yellow)~Extra~#ffff88|R8|Begin~52~End~59~Txt~Look 7 (default Green)~Extra~#00ff00|R9|Begin~60~End~67~Txt~Look 8 (default Light Green)~Extra~#aaffaa|R10|Begin~68~End~75~Txt~Look 9 (default Cyan)~Extra~#00ffff|R11|Begin~76~End~84~Txt~Look 10 (default Light Cyan)~Extra~#aaffff|R12|Begin~85~End~92~Txt~Look 11 (default Blue)~Extra~#0000ff|R13|Begin~93~End~100~Txt~Look 12 (default Light Blue)~Extra~#88aaff|R14|Begin~101~End~109~Txt~Look 13 (default 2800K White)~Extra~#ffaa5f|R15|Begin~110~End~117~Txt~Look 14 (default 3200K White)~Extra~#ffb87b|R16|Begin~118~End~125~Txt~Look 15 (default 4000K White)~Extra~#ffcea6|R17|Begin~126~End~133~Txt~Look 16 (default 5600K White)~Extra~#ffefe1|R18|Begin~134~End~141~Txt~Preset Look 17 (default empty)|R19|Begin~142~End~149~Txt~Preset Look 18 (default empty)|R20|Begin~150~End~157~Txt~Preset Look 19 (default empty)|R21|Begin~158~End~165~Txt~Preset Look 20 (default empty)|R22|Begin~166~End~174~Txt~Preset Look 21 (default empty)|R23|Begin~175~End~182~Txt~Preset Look 22 (default empty)|R24|Begin~183~End~190~Txt~Preset Look 23 (default empty)|R25|Begin~191~End~199~Txt~Preset Look 24 (default empty)|R26|Begin~200~End~207~Txt~Preset Look 25 (default empty)|R27|Begin~208~End~215~Txt~Preset Look 26 (default empty)|R28|Begin~216~End~223~Txt~Preset Look 27 (default empty)|R29|Begin~224~End~231~Txt~Preset Look 28 (default empty)|R30|Begin~232~End~239~Txt~Preset Look 29 (default empty)|R31|Begin~240~End~247~Txt~Preset Look 30 (default empty)|R32|Begin~248~End~255~Txt~Preset Look 31 (default empty)
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Odd|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Odd|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Odd|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Even|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Even|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Even|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1/2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2/2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber Odd|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber Even|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 1/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 1/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 1/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 2/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 2/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 2/2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue Odd|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation Odd|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity Odd|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Hue Even|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Saturation Even|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Intensity Even|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Frequency|Type|6|R1|Begin~0~End~255~Txt~slow..fast
+ID|Strobe Duration|Type|28|R1|Begin~0~End~255~Txt~short..long
+ID|Strobe Density|Type|0|R1|Begin~0~End~255~Txt~1..4 Pixels
+ID|Strobe Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Hue|Type|0
+ID|Strobe Saturation|Type|0
+ID|Strobe Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Look|ShortName|Look|Content|Look Select
+Name|Master RGB|ShortName|x4RGB|Content|Red~Green~Blue
+Name|Halves RGB|ShortName|x2RGB|Content|Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|Individual RGB|ShortName|x1RGB|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|Odd/Even RGB|ShortName|Od/EvRGB|Content|Red Odd~Green Odd~Blue Odd~Red Even~Green Even~Blue Even
+Name|Master RGBA|ShortName|x4RGBA|Content|Red~Green~Blue~Amber
+Name|Halves RGBA|ShortName|x2RGBA|Content|Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2
+Name|Individual RGBA|ShortName|x1RGBA|Content|Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4
+Name|Odd/Even RGBA|ShortName|Od/EvRGBA|Content|Red Odd~Green Odd~Blue Odd~Amber Odd~Red Even~Green Even~Blue Even~Amber Even
+Name|Master HSI|ShortName|x4HSI|Content|Hue~Saturation~Intensity
+Name|Halves HSI|ShortName|x2HSI|Content|Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|Individual HSI|ShortName|x1HSI|Content|Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4
+Name|Odd/Even HSI|ShortName|Od/EvHSI|Content|Hue Odd~Saturation Odd~Intensity Odd~Hue Even~Saturation Even~Intensity Even
+Name|Master RGB Strobe|ShortName|x4RGBStrb|Content|Strobe Frequency~Strobe Duration~Red~Green~Blue
+Name|Halves RGB Strobe|ShortName|x2RGBStrb|Content|Strobe Frequency~Strobe Duration~Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|Individual RGB Strobe|ShortName|x1RGBStrb|Content|Strobe Frequency~Strobe Duration~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|Odd/Even RGB Strobe|ShortName|Od/EvRGBStrb|Content|Strobe Frequency~Strobe Duration~Red Odd~Green Odd~Blue Odd~Red Even~Green Even~Blue Even
+Name|Master RGBA Strobe|ShortName|x4RGBAStrb|Content|Strobe Frequency~Strobe Duration~Red~Green~Blue~Amber
+Name|Halves RGBA Strobe|ShortName|x2RGBAStrb|Content|Strobe Frequency~Strobe Duration~Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2
+Name|Individual RGBA Strobe|ShortName|x1RGBAStrb|Content|Strobe Frequency~Strobe Duration~Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4
+Name|Odd/Even RGBA Strobe|ShortName|Od/EvRGBAStrb|Content|Strobe Frequency~Strobe Duration~Red Odd~Green Odd~Blue Odd~Amber Odd~Red Even~Green Even~Blue Even~Amber Even
+Name|Master HSI Strobe|ShortName|x4HSIStrb|Content|Strobe Frequency~Strobe Duration~Hue~Saturation~Intensity
+Name|Halves HSI Strobe|ShortName|x2HSIStrb|Content|Strobe Frequency~Strobe Duration~Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|Individual HSI Strobe|ShortName|x1HSIStrb|Content|Strobe Frequency~Strobe Duration~Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4
+Name|Odd/Even HSI Strobe|ShortName|Od/EvHSIStrb|Content|Strobe Frequency~Strobe Duration~Hue Odd~Saturation Odd~Intensity Odd~Hue Even~Saturation Even~Intensity Even
+Name|Master RGB Random|ShortName|x4RGBRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red~Green~Blue
+Name|Halves RGB Random|ShortName|x2RGBRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|Individual RGB Random|ShortName|x1RGBRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|Odd/Even RGB Random|ShortName|Od/EvRGBRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red Odd~Green Odd~Blue Odd~Red Even~Green Even~Blue Even
+Name|Master RGBA Random|ShortName|x4RGBARandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red~Green~Blue~Amber
+Name|Halves RGBA Random|ShortName|x2RGBARandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2
+Name|Individual RGBA Random|ShortName|x1RGBARandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4
+Name|Odd/Even RGBA Random|ShortName|Od/EvRGBARandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red Odd~Green Odd~Blue Odd~Amber Odd~Red Even~Green Even~Blue Even~Amber Even
+Name|Master HSI Random|ShortName|x4HSIRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Hue~Saturation~Intensity
+Name|Halves HSI Random|ShortName|x2HSIRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|Individual HSI Random|ShortName|x1HSIRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4
+Name|Odd/Even HSI Random|ShortName|Od/EvHSIRandom|Content|Strobe Frequency~Strobe Duration~Strobe Density~Hue Odd~Saturation Odd~Intensity Odd~Hue Even~Saturation Even~Intensity Even
+Name|Master RGB Random+OnTop|ShortName|x4RGBRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Red~Green~Blue
+Name|Halves RGB Random+OnTop|ShortName|x2RGBRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|Individual RGB Random+OnTop|ShortName|x1RGBRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|Odd/Even RGB Random+OnTop|ShortName|Od/EvRGBRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Red Odd~Green Odd~Blue Odd~Red Even~Green Even~Blue Even
+Name|Master RGBA Random+OnTop|ShortName|x4RGBARandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Red~Green~Blue~Amber
+Name|Halves RGBA Random+OnTop|ShortName|x2RGBARandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2
+Name|Individual RGBA Random+OnTop|ShortName|x1RGBARandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4
+Name|Odd/Even RGBA Random+OnTop|ShortName|Od/EvRGBARandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red Odd~Green Odd~Blue Odd~Amber Odd~Red Even~Green Even~Blue Even~Amber Even
+Name|Master HSI Random+OnTop|ShortName|x4HSIRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue~Saturation~Intensity
+Name|Halves HSI Random+OnTop|ShortName|x2HSIRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|Individual HSI Random+OnTop|ShortName|x1HSIRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4
+Name|Odd/Even HSI Random+OnTop|ShortName|Od/EvHSIRandomOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Density~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue Odd~Saturation Odd~Intensity Odd~Hue Even~Saturation Even~Intensity Even
+Name|Master RGB OnTop|ShortName|x4RGBOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Red~Green~Blue
+Name|Halves RGB OnTop|ShortName|x2RGBOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|Individual RGB OnTop|ShortName|x1RGBOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|Odd/Even RGB OnTop|ShortName|Od/EvRGBOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Red Odd~Green Odd~Blue Odd~Red Even~Green Even~Blue Even
+Name|Master RGBA OnTop|ShortName|x4RGBAOnTop|Content|Strobe Frequency~Strobe Duration~Red~Green~Blue~Amber
+Name|Halves RGBA OnTop|ShortName|x2RGBAOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2
+Name|Individual RGBA OnTop|ShortName|x1RGBAOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4
+Name|Odd/Even RGBA OnTop|ShortName|Od/EvRGBAOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Red~Strobe Green~Strobe Blue~Strobe Amber~Red Odd~Green Odd~Blue Odd~Amber Odd~Red Even~Green Even~Blue Even~Amber Even
+Name|Master HSI OnTop|ShortName|x4HSIOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue~Saturation~Intensity
+Name|Halves HSI OnTop|ShortName|x2HSIOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|Individual HSI OnTop|ShortName|x1HSIOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4
+Name|Odd/Even HSI OnTop|ShortName|Od/EvHSIOnTop|Content|Strobe Frequency~Strobe Duration~Strobe Hue~Strobe Saturation~Strobe Intensity~Hue Odd~Saturation Odd~Intensity Odd~Hue Even~Saturation Even~Intensity Even
+[END_MODES]

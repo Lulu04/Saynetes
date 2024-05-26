@@ -1,0 +1,62 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.prolight.co.uk/ftp-in/EQLED032A_Manual.pdf|LinkType2|product page|Url2|https://web.archive.org/web/20220118184538/https://prolight.co.uk/product/rgb-power-batten
+[GENERAL]
+Manufacturer|Equinox|Name|RGB Power Batten|Type|40|Authors|Phill|Creator|OFL
+[PHYSICAL]
+Width|1075|Height|85|Depth|65|Weight|1.80|Power|30|Connector|3-pin|Bulb|240x 10mm LEDs (96x red, 72x green, 72x blue)|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Function|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R3|Begin~16~End~23~Txt~Yellow~Extra~#ffff00~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R4|Begin~24~End~31~Txt~Green~Extra~#00ff00~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R5|Begin~32~End~39~Txt~Cyan~Extra~#00ffff~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R6|Begin~40~End~47~Txt~Blue~Extra~#0000ff~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R7|Begin~48~End~55~Txt~Purple~Extra~#ff00ff~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R8|Begin~56~End~63~Txt~White~Extra~#ffffff~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R9|Begin~64~End~71~Txt~Program 1~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R10|Begin~72~End~79~Txt~Program 2~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R11|Begin~80~End~87~Txt~Program 3~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R12|Begin~88~End~95~Txt~Program 4~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R13|Begin~96~End~103~Txt~Program 5~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R14|Begin~104~End~111~Txt~Program 6~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R15|Begin~112~End~119~Txt~Program 7~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R16|Begin~120~End~127~Txt~Program 8~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R17|Begin~128~End~135~Txt~Program 9~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R18|Begin~136~End~143~Txt~Program 10~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R19|Begin~144~End~151~Txt~Program 11~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R20|Begin~152~End~159~Txt~Program 12~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R21|Begin~160~End~167~Txt~Program 13~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R22|Begin~168~End~175~Txt~Program 14~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R23|Begin~176~End~183~Txt~Program 15~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R24|Begin~184~End~191~Txt~Program 16~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R25|Begin~192~End~199~Txt~Program 17~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R26|Begin~200~End~207~Txt~Program 18~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R27|Begin~208~End~215~Txt~Program 19~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R28|Begin~216~End~223~Txt~Program 20~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R29|Begin~224~End~231~Txt~Program 21~Switch1~Effect Speed / Sound Sensitivity:Effect Speed|R30|Begin~232~End~255~Txt~Sound Effect~Switch1~Effect Speed / Sound Sensitivity:Sound Sensitivity
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Flash|Type|6|R1|Begin~0~End~255~Txt~0Hz..50Hz
+ID|Red Segments 1+2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segments 1+2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segments 1+2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segments 3+4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segments 3+4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segments 3+4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segments 5+6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segments 5+6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segments 5+6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segments 7+8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segments 7+8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segments 7+8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|2-Channel|ShortName|2ch|Content|Function~Effect Speed / Sound Sensitivity:Effect Speed;Sound Sensitivity
+Name|3-Channel|ShortName|3ch|Content|Red Master~Green Master~Blue Master
+Name|4-Channel|ShortName|4ch|Content|Red Master~Green Master~Blue Master~Dimmer
+Name|7-Channel|ShortName|7ch|Content|Red Master~Green Master~Blue Master~Function~Effect Speed / Sound Sensitivity:Effect Speed;Sound Sensitivity~Flash~Dimmer
+Name|14-Channel|ShortName|14ch|Content|Red Segments 1+2~Green Segments 1+2~Blue Segments 1+2~Red Segments 3+4~Green Segments 3+4~Blue Segments 3+4~Red Segments 5+6~Green Segments 5+6~Blue Segments 5+6~Red Segments 7+8~Green Segments 7+8~Blue Segments 7+8~Flash~Dimmer
+Name|26-Channel|ShortName|26ch|Content|Red Segment 1~Green Segment 1~Blue Segment 1~Red Segment 2~Green Segment 2~Blue Segment 2~Red Segment 3~Green Segment 3~Blue Segment 3~Red Segment 4~Green Segment 4~Blue Segment 4~Red Segment 5~Green Segment 5~Blue Segment 5~Red Segment 6~Green Segment 6~Blue Segment 6~Red Segment 7~Green Segment 7~Blue Segment 7~Red Segment 8~Green Segment 8~Blue Segment 8~Flash~Dimmer
+[END_MODES]

@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/DMX-4_UM_Rev3_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/dmx-4/
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|DMX-4|Type|13|Authors|JEM, Ken Harris|Creator|OFL
+[PHYSICAL]
+Width|210|Height|194|Depth|70|Weight|2.20|Power|0|Connector|3-pin
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1+2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3+4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Master dimmer
+Name|2-channel|ShortName|2ch|Content|Dimmer 1+2~Dimmer 3+4
+Name|4-channel|ShortName|4ch|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4
+[END_MODES]
