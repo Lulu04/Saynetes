@@ -1,0 +1,48 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLMFXBAR/CLMFXBAR_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|product page|Url2|https://musicmax.eu/cameo-clmfxbar-multi-fx-bar~p20391en/|LinkType3|video|Url3|https://www.youtube.com/watch?v=rSG3BmGRIjo|LinkType4|video|Url4|https://www.youtube.com/watch?v=ISVSaI2liNA
+[GENERAL]
+Manufacturer|cameo|Name|Multi FX Bar|Type|36|Authors|Ricardo Marques|Creator|OFL
+[PHYSICAL]
+Width|1149|Height|414|Depth|80|Weight|6.60|Power|130|Connector|3-pin|Bulb|12× 12W RGBUV LEDs (PARs), 2× 3W RGB LEDs (derby), 4× 3W white LEDs (strobe), red laser (150mW / 650nm), green laser (50mW / 532nm)
+[CHAN_DEF]
+ID|Auto Programs|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~10~Txt~Auto Mix 1|R3|Begin~11~End~15~Txt~Auto Mix 2|R4|Begin~16~End~20~Txt~Auto Mix 3|R5|Begin~21~End~25~Txt~Auto Mix 4|R6|Begin~26~End~30~Txt~Auto Mix 5|R7|Begin~31~End~35~Txt~Auto Mix 6|R8|Begin~36~End~40~Txt~Auto Mix 7|R9|Begin~41~End~45~Txt~Auto Mix 8|R10|Begin~46~End~50~Txt~Auto Mix 9|R11|Begin~51~End~55~Txt~Auto Mix 10|R12|Begin~56~End~60~Txt~Auto Par 1|R13|Begin~61~End~65~Txt~Auto Par 2|R14|Begin~66~End~70~Txt~Auto Par 3|R15|Begin~71~End~75~Txt~Auto Par 4|R16|Begin~76~End~80~Txt~Auto Par 5|R17|Begin~81~End~85~Txt~Auto Derby 1|R18|Begin~86~End~90~Txt~Auto Derby 2|R19|Begin~91~End~95~Txt~Auto Derby 3|R20|Begin~96~End~100~Txt~Auto Derby 4|R21|Begin~101~End~105~Txt~Auto Derby 5|R22|Begin~106~End~110~Txt~Auto Par & Derby 1|R23|Begin~111~End~115~Txt~Auto Par & Derby 2|R24|Begin~116~End~120~Txt~Auto Par & Derby 3|R25|Begin~121~End~125~Txt~Auto Par & Derby 4|R26|Begin~126~End~130~Txt~Auto Par & Derby 5|R27|Begin~131~End~135~Txt~Auto Par & Derby 6|R28|Begin~136~End~140~Txt~Auto Par & Derby 7|R29|Begin~141~End~145~Txt~Auto Par & Derby 8|R30|Begin~146~End~150~Txt~Auto Par & Derby 9|R31|Begin~151~End~155~Txt~Auto Par & Derby 10|R32|Begin~156~End~160~Txt~Auto Flash Lights 1|R33|Begin~161~End~165~Txt~Auto Flash Lights 2|R34|Begin~166~End~170~Txt~Auto Flash Lights 3|R35|Begin~171~End~175~Txt~Auto Flash Lights 4|R36|Begin~176~End~180~Txt~Auto Flash Lights 5|R37|Begin~181~End~185~Txt~Auto Flash Lights 6|R38|Begin~186~End~190~Txt~Auto Flash Lights 7|R39|Begin~191~End~195~Txt~Auto Flash Lights 8|R40|Begin~196~End~200~Txt~Auto Flash Lights 9|R41|Begin~201~End~205~Txt~Auto Flash Lights 10|R42|Begin~206~End~210~Txt~Auto Laser 1|R43|Begin~211~End~215~Txt~Auto Laser 2|R44|Begin~216~End~220~Txt~Auto Laser 3|R45|Begin~221~End~225~Txt~Auto Laser 4|R46|Begin~226~End~230~Txt~Auto Laser 5|R47|Begin~231~End~255~Txt~Auto Laser 6
+ID|Program Speed / Sound Control|Type|0|R1|Begin~0~End~127~Txt~slow..fast|R2|Begin~128~End~255~Txt~Sound Control
+ID|Auto Programs Pars|Type|0|R1|Begin~0~End~5~Txt~No function Blackout|R2|Begin~6~End~6~Txt~Auto Par stop|R3|Begin~7~End~56~Txt~Auto Par 1|R4|Begin~57~End~107~Txt~Auto Par 2|R5|Begin~108~End~158~Txt~Auto Par 3|R6|Begin~159~End~208~Txt~Auto Par 4|R7|Begin~209~End~255~Txt~Auto Par 5
+ID|Auto Programs Derbys|Type|0|R1|Begin~0~End~5~Txt~No function Blackout|R2|Begin~6~End~6~Txt~ColorJump stop|R3|Begin~7~End~56~Txt~Auto Derby 1|R4|Begin~57~End~107~Txt~Auto Derby 2|R5|Begin~108~End~158~Txt~Auto Derby 3|R6|Begin~159~End~208~Txt~Auto Derby 4|R7|Begin~209~End~255~Txt~Auto Derby 5
+ID|Auto Programs Flash Lights|Type|0|R1|Begin~0~End~5~Txt~No function Blackout|R2|Begin~6~End~6~Txt~Auto Flash Lights stop|R3|Begin~7~End~25~Txt~Auto Flash Lights 1|R4|Begin~26~End~50~Txt~Auto Flash Lights 2|R5|Begin~51~End~75~Txt~Auto Flash Lights 3|R6|Begin~76~End~100~Txt~Auto Flash Lights 4|R7|Begin~101~End~125~Txt~Auto Flash Lights 5|R8|Begin~126~End~150~Txt~Auto Flash Lights 6|R9|Begin~151~End~175~Txt~Auto Flash Lights 7|R10|Begin~176~End~200~Txt~Auto Flash Lights 8|R11|Begin~201~End~225~Txt~Auto Flash Lights 9|R12|Begin~226~End~255~Txt~Auto Flash Lights 10
+ID|Auto Programs Laser|Type|0|R1|Begin~0~End~5~Txt~No function Blackout|R2|Begin~6~End~6~Txt~Continuous Rotating Direction|R3|Begin~7~End~46~Txt~Auto Laser 1|R4|Begin~47~End~80~Txt~Auto Laser 2|R5|Begin~81~End~120~Txt~Auto Laser 3|R6|Begin~121~End~140~Txt~Auto Laser 4|R7|Begin~141~End~180~Txt~Auto Laser 5|R8|Begin~181~End~255~Txt~Auto Laser 6
+ID|Derby 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 1 Strobe|Type|6|R1|Begin~0~End~5~Txt~Shutter open|R2|Begin~6~End~255~Txt~1…20Hz
+ID|Derby 1 Rotate|Type|33|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~132~Txt~Stop|R4|Begin~133~End~255~Txt~CCW slow…fast
+ID|Derby 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Derby 2 Strobe|Type|6|R1|Begin~0~End~5~Txt~Shutter open|R2|Begin~6~End~255~Txt~1…20Hz
+ID|Derby 2 Rotate|Type|33|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~132~Txt~Stop|R4|Begin~133~End~255~Txt~CCW slow…fast
+ID|PAR 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Strobe|Type|6|R1|Begin~0~End~5~Txt~Shutter open|R2|Begin~6~End~255~Txt~1…20Hz
+ID|PAR 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Strobe|Type|6|R1|Begin~0~End~5~Txt~Shutter open|R2|Begin~6~End~255~Txt~1…20Hz
+ID|Laser Red Shutter|Type|45|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+ID|Laser Green Shutter|Type|45|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+ID|Laser rotate|Type|44|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~132~Txt~Stop|R4|Begin~133~End~255~Txt~CCW slow…fast
+ID|Flash Light 1 Shutter|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+ID|Flash Light 2 Shutter|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+ID|Flash Light 3 Shutter|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+ID|Flash Light 4 Shutter|Type|6|R1|Begin~0~End~5~Txt~Closed|R2|Begin~6~End~10~Txt~Open|R3|Begin~11~End~255~Txt~Strobe 1…20Hz
+[END_CHAN_DEF]
+[MODES]
+Name|2-Channel|ShortName|2ch|Content|Auto Programs~Program Speed / Sound Control
+Name|5-Channel|ShortName|5ch|Content|Auto Programs Pars~Auto Programs Derbys~Auto Programs Flash Lights~Auto Programs Laser~Program Speed / Sound Control
+Name|29-Channel|ShortName|29ch|Content|Derby 1 Red~Derby 1 Green~Derby 1 Blue~Derby 1 Strobe~Derby 1 Rotate~Derby 2 Red~Derby 2 Green~Derby 2 Blue~Derby 2 Strobe~Derby 2 Rotate~PAR 1 Red~PAR 1 Green~PAR 1 Blue~PAR 1 UV~PAR 1 Strobe~PAR 2 Red~PAR 2 Green~PAR 2 Blue~PAR 2 UV~PAR 2 Strobe~Laser Red Shutter~Laser Green Shutter~Laser rotate~Flash Light 1 Shutter~Flash Light 2 Shutter~Flash Light 3 Shutter~Flash Light 4 Shutter~Auto Programs~Program Speed / Sound Control
+[END_MODES]

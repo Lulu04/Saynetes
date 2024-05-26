@@ -1,0 +1,68 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.cameolight.com/en/downloads/file/id/-406287878|LinkType2|product page|Url2|https://www.gak.co.uk/en/cameo-auro-beam-150/913984|LinkType3|video|Url3|https://www.youtube.com/watch?v=Zsb151QKp7M
+[GENERAL]
+Manufacturer|cameo|Name|Auro Beam 150|Type|41|Authors|Ray Tone, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|375|Height|260|Depth|180|Weight|5.50|Power|130|Connector|3-pin and 5-pin|Bulb|LED|Lumens|1700|LensMinDegree|12.000|LensMaxDegree|12.000
+[CHAN_DEF]
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~8~Txt~No function~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R2|Begin~9~End~20~Txt~red~Extra~#ff0000~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R3|Begin~21~End~32~Txt~green~Extra~#00ff00~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R4|Begin~33~End~44~Txt~blue~Extra~#0000ff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R5|Begin~45~End~56~Txt~bright blue~Extra~#00aaff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R6|Begin~57~End~68~Txt~cyan~Extra~#00ffff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R7|Begin~69~End~80~Txt~turquoise~Extra~#00ffbb~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R8|Begin~81~End~92~Txt~cold green~Extra~#53ff7b~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R9|Begin~93~End~104~Txt~warm green~Extra~#c2ff34~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R10|Begin~105~End~116~Txt~pink~Extra~#ffaacc~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R11|Begin~117~End~128~Txt~magenta~Extra~#ff00ff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R12|Begin~129~End~140~Txt~purple~Extra~#aa00ff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R13|Begin~141~End~152~Txt~orange~Extra~#ffbb00~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R14|Begin~153~End~164~Txt~yellow~Extra~#ffff00~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R15|Begin~165~End~176~Txt~warm white~Extra~#ffddaa~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R16|Begin~177~End~188~Txt~cold white~Extra~#aaddff~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R17|Begin~189~End~210~Txt~ColorJump~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R18|Begin~211~End~232~Txt~ColorFade~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Speed|R19|Begin~233~End~255~Txt~ColorJump~Switch1~Color Macro Speed / Sound Sensitivity:Color Macro Sound Sensitivity
+ID|Auto Mode|Type|0|R1|Begin~0~End~8~Txt~No function~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed|R2|Begin~9~End~23~Txt~Closed Blackout~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed|R3|Begin~24~End~81~Txt~Movement Pattern (eight)~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed|R4|Begin~82~End~139~Txt~Movement Pattern (ellipse)~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed|R5|Begin~140~End~197~Txt~Movement Pattern (random)~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed|R6|Begin~198~End~255~Txt~Sound Mode~Switch1~Auto Mode Speed / Sound Sensitivity:Auto Mode Sound Sensitivity
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Pan Continuous|Type|39|R1|Begin~0~End~8~Txt~No function|R2|Begin~9~End~124~Txt~Continuous fast CW..slow CW|R3|Begin~125~End~139~Txt~Continuous stop|R4|Begin~140~End~255~Txt~Continuous slow CCW..fast CCW
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..360deg
+ID|Tilt Continuous|Type|40|R1|Begin~0~End~8~Txt~No function|R2|Begin~9~End~124~Txt~Continuous fast CW..slow CW|R3|Begin~125~End~139~Txt~Continuous stop|R4|Begin~140~End~255~Txt~Continuous slow CCW..fast CCW
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe Simple|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~249~Txt~0Hz..30Hz|R4|Begin~250~End~255~Txt~Open
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~slow..fast Random timing|R7|Begin~103~End~127~Txt~Spikes 5s..1s|R8|Begin~128~End~249~Txt~0Hz..30Hz|R9|Begin~250~End~255~Txt~Open
+ID|Auto Program|Type|0|R1|Begin~0~End~8~Txt~No function~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R2|Begin~9~End~24~Txt~Auto Program 1~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R3|Begin~25~End~40~Txt~Auto Program 2~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R4|Begin~41~End~56~Txt~Auto Program 3~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R5|Begin~57~End~72~Txt~Auto Program 4~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R6|Begin~73~End~88~Txt~Auto Program 5~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R7|Begin~89~End~104~Txt~Auto Program 6~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R8|Begin~105~End~120~Txt~Auto Program 7~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R9|Begin~121~End~136~Txt~Auto Program 8~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R10|Begin~137~End~152~Txt~Auto Program 9~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R11|Begin~153~End~168~Txt~Auto Program 10~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R12|Begin~169~End~184~Txt~Auto Program 11~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R13|Begin~185~End~200~Txt~Auto Program 12~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R14|Begin~201~End~216~Txt~ColorJump~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R15|Begin~217~End~232~Txt~ColorFade~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Speed|R16|Begin~233~End~255~Txt~Sound mode (lightning pattern)~Switch1~Auto Program Speed / Sound Sensitivity:Auto Program Sound Sensitivity
+ID|Reset|Type|0|R1|Begin~0~End~149~Txt~No function|R2|Begin~150~End~200~Txt~Motor Reset (and blackout)|R3|Begin~201~End~255~Txt~No function
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Color Macro Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Auto Program Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+ID|Auto Mode Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Auto Mode Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Dimmer~Color Macros~Color Macro Speed / Sound Sensitivity:Color Macro Speed;Color Macro Sound Sensitivity~Auto Mode~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed;Auto Mode Sound Sensitivity
+Name|11-channel|ShortName|11ch|Content|Pan~Pan Continuous~Tilt~Tilt Continuous~Pan/Tilt Speed~Dimmer~Red~Green~Blue~White~Strobe Simple
+Name|19-channel|ShortName|19ch|Content|Pan~Pan Continuous~Tilt~Tilt Continuous~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Red~Green~Blue~White~Strobe~Color Macros~Auto Program~Auto Program Speed / Sound Sensitivity:Auto Program Speed;Auto Program Sound Sensitivity~Auto Mode~Auto Mode Speed / Sound Sensitivity:Auto Mode Speed;Auto Mode Sound Sensitivity~Reset
+Name|41-channel|ShortName|41ch|Content|Pan~Pan Continuous~Tilt~Tilt Continuous~Pan fine~Tilt fine~Pan/Tilt Speed~Dimmer~Strobe~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Color Macros~Auto Program~Auto Program Speed / Sound Sensitivity:Auto Program Speed;Auto Program Sound Sensitivity~Reset
+[END_MODES]

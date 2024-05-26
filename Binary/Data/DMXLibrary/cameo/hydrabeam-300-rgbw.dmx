@@ -1,0 +1,82 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLHB300W/CLHB300_CAMEO_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.PDF|LinkType2|video|Url2|https://www.youtube.com/watch?v=_tO2vB15ieE|LinkType3|video|Url3|https://www.youtube.com/watch?v=OY2TEMiPsCY
+[GENERAL]
+Manufacturer|cameo|Name|Hydrabeam 300 RGBW|Type|9|Authors|Flo Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|380|Height|240|Depth|380|Weight|5.50|Power|60|Connector|3-pin|Bulb|LED|LensMinDegree|4.500|LensMaxDegree|4.500
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~slow..fast
+ID|Show mode|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R2|Begin~8~End~22~Txt~Show mode 1~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R3|Begin~23~End~37~Txt~Show mode 2~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R4|Begin~38~End~52~Txt~Show mode 3~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R5|Begin~53~End~67~Txt~Show mode 4~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R6|Begin~68~End~82~Txt~Show mode 5~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R7|Begin~83~End~97~Txt~Show mode 6~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R8|Begin~98~End~112~Txt~Show mode 7~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R9|Begin~113~End~127~Txt~Show mode 8~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R10|Begin~128~End~142~Txt~Show mode 9~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R11|Begin~143~End~157~Txt~Show mode 10~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R12|Begin~158~End~172~Txt~Show mode 11~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R13|Begin~173~End~187~Txt~Show mode 12~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R14|Begin~188~End~202~Txt~Show mode 13~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R15|Begin~203~End~217~Txt~Show mode 14~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R16|Begin~218~End~232~Txt~Show mode 15~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R17|Begin~233~End~247~Txt~Show mode 16~Switch1~Show mode speed / Sound sensitivity:Show mode speed|R18|Begin~248~End~255~Txt~Sound Control~Switch1~Show mode speed / Sound sensitivity:Sound sensitivity
+ID|Light control|Type|0|R1|Begin~0~End~30~Txt~Auto color change|R2|Begin~31~End~45~Txt~Red~Extra~#ff0000|R3|Begin~46~End~60~Txt~Green~Extra~#00ff00|R4|Begin~61~End~75~Txt~Blue~Extra~#0000ff|R5|Begin~76~End~90~Txt~White~Extra~#ffffff|R6|Begin~91~End~105~Txt~Red + Green~Extra~#ffff00|R7|Begin~106~End~120~Txt~Red + Blue~Extra~#ff00ff|R8|Begin~121~End~135~Txt~Red + White~Extra~#ff8080|R9|Begin~136~End~150~Txt~Green + Blue~Extra~#00ffff|R10|Begin~151~End~165~Txt~Green + White~Extra~#80ff80|R11|Begin~166~End~180~Txt~Blue + White~Extra~#8080ff|R12|Begin~181~End~195~Txt~Red + Green + Blue~Extra~#ffffff|R13|Begin~196~End~210~Txt~Red + Green + White~Extra~#ffff80|R14|Begin~211~End~225~Txt~Red + Blue + White~Extra~#ff80ff|R15|Begin~226~End~240~Txt~Green + Blue + White~Extra~#80ffff|R16|Begin~241~End~255~Txt~Red + Green + Blue + White~Extra~#ffffff
+ID|Auto color change speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Master Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Master Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Master Pan fine|Type|7
+ID|Master Tilt fine|Type|8
+ID|Master Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan 1|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt 1|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan 2|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt 2|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan 3|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt 3|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Head speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Pan 1 fine|Type|7
+ID|Tilt 1 fine|Type|8
+ID|Head Speed 1|Type|16|R1|Begin~0~End~10~Txt~slow|R2|Begin~11~End~255~Txt~slow..fast
+ID|Color 1|Type|12|R1|Begin~0~End~30~Txt~Use master color dimmers|R2|Begin~31~End~45~Txt~Red~Extra~#ff0000|R3|Begin~46~End~60~Txt~Green~Extra~#00ff00|R4|Begin~61~End~75~Txt~Blue~Extra~#0000ff|R5|Begin~76~End~90~Txt~White~Extra~#ffffff|R6|Begin~91~End~105~Txt~Red + Green~Extra~#ffff00|R7|Begin~106~End~120~Txt~Red + Blue~Extra~#ff00ff|R8|Begin~121~End~135~Txt~Red + White~Extra~#ff8080|R9|Begin~136~End~150~Txt~Green + Blue~Extra~#00ffff|R10|Begin~151~End~165~Txt~Green + White~Extra~#80ff80|R11|Begin~166~End~180~Txt~Blue + White~Extra~#8080ff|R12|Begin~181~End~195~Txt~Red + Green + Blue~Extra~#ffffff|R13|Begin~196~End~210~Txt~Red + Green + White~Extra~#ffff80|R14|Begin~211~End~225~Txt~Red + Blue + White~Extra~#ff80ff|R15|Begin~226~End~240~Txt~Green + Blue + White~Extra~#80ffff|R16|Begin~241~End~255~Txt~Red + Green + Blue + White~Extra~#ffffff
+ID|Pan 2 fine|Type|7
+ID|Tilt 2 fine|Type|8
+ID|Head Speed 2|Type|16|R1|Begin~0~End~10~Txt~slow|R2|Begin~11~End~255~Txt~slow..fast
+ID|Color 2|Type|12|R1|Begin~0~End~30~Txt~Use master color dimmers|R2|Begin~31~End~45~Txt~Red~Extra~#ff0000|R3|Begin~46~End~60~Txt~Green~Extra~#00ff00|R4|Begin~61~End~75~Txt~Blue~Extra~#0000ff|R5|Begin~76~End~90~Txt~White~Extra~#ffffff|R6|Begin~91~End~105~Txt~Red + Green~Extra~#ffff00|R7|Begin~106~End~120~Txt~Red + Blue~Extra~#ff00ff|R8|Begin~121~End~135~Txt~Red + White~Extra~#ff8080|R9|Begin~136~End~150~Txt~Green + Blue~Extra~#00ffff|R10|Begin~151~End~165~Txt~Green + White~Extra~#80ff80|R11|Begin~166~End~180~Txt~Blue + White~Extra~#8080ff|R12|Begin~181~End~195~Txt~Red + Green + Blue~Extra~#ffffff|R13|Begin~196~End~210~Txt~Red + Green + White~Extra~#ffff80|R14|Begin~211~End~225~Txt~Red + Blue + White~Extra~#ff80ff|R15|Begin~226~End~240~Txt~Green + Blue + White~Extra~#80ffff|R16|Begin~241~End~255~Txt~Red + Green + Blue + White~Extra~#ffffff
+ID|Pan 3 fine|Type|7
+ID|Tilt 3 fine|Type|8
+ID|Head Speed 3|Type|16|R1|Begin~0~End~10~Txt~slow|R2|Begin~11~End~255~Txt~slow..fast
+ID|Color 3|Type|12|R1|Begin~0~End~30~Txt~Use master color dimmers|R2|Begin~31~End~45~Txt~Red~Extra~#ff0000|R3|Begin~46~End~60~Txt~Green~Extra~#00ff00|R4|Begin~61~End~75~Txt~Blue~Extra~#0000ff|R5|Begin~76~End~90~Txt~White~Extra~#ffffff|R6|Begin~91~End~105~Txt~Red + Green~Extra~#ffff00|R7|Begin~106~End~120~Txt~Red + Blue~Extra~#ff00ff|R8|Begin~121~End~135~Txt~Red + White~Extra~#ff8080|R9|Begin~136~End~150~Txt~Green + Blue~Extra~#00ffff|R10|Begin~151~End~165~Txt~Green + White~Extra~#80ff80|R11|Begin~166~End~180~Txt~Blue + White~Extra~#8080ff|R12|Begin~181~End~195~Txt~Red + Green + Blue~Extra~#ffffff|R13|Begin~196~End~210~Txt~Red + Green + White~Extra~#ffff80|R14|Begin~211~End~225~Txt~Red + Blue + White~Extra~#ff80ff|R15|Begin~226~End~240~Txt~Green + Blue + White~Extra~#80ffff|R16|Begin~241~End~255~Txt~Red + Green + Blue + White~Extra~#ffffff
+ID|Sound mode / Reset|Type|0|R1|Begin~0~End~199~Txt~No function|R2|Begin~200~End~209~Txt~Reset|R3|Begin~210~End~240~Txt~No function|R4|Begin~241~End~255~Txt~Sound Control
+ID|Sound sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+ID|Head Speed 1 Simple|Type|16|R1|Begin~0~End~255~Txt~Fast..Slow
+ID|Strobe 1|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Slow..Fast
+ID|Mode 1|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R2|Begin~8~End~30~Txt~Show mode 1~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R3|Begin~31~End~53~Txt~Show mode 2~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R4|Begin~54~End~76~Txt~Show mode 3~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R5|Begin~77~End~99~Txt~Show mode 4~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R6|Begin~100~End~122~Txt~Sound control~Switch1~Show mode speed / Sound sensitivity 1:Sound sensitivity 1|R7|Begin~123~End~199~Txt~No function~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R8|Begin~200~End~224~Txt~reset~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1|R9|Begin~225~End~255~Txt~No function~Switch1~Show mode speed / Sound sensitivity 1:Show mode speed 1
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Head Speed 2 Simple|Type|16|R1|Begin~0~End~255~Txt~Fast..Slow
+ID|Strobe 2|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Slow..Fast
+ID|Mode 2|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R2|Begin~8~End~30~Txt~Show mode 1~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R3|Begin~31~End~53~Txt~Show mode 2~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R4|Begin~54~End~76~Txt~Show mode 3~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R5|Begin~77~End~99~Txt~Show mode 4~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R6|Begin~100~End~122~Txt~Sound control~Switch1~Show mode speed / Sound sensitivity 2:Sound sensitivity 2|R7|Begin~123~End~199~Txt~No function~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R8|Begin~200~End~224~Txt~reset~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2|R9|Begin~225~End~255~Txt~No function~Switch1~Show mode speed / Sound sensitivity 2:Show mode speed 2
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Head Speed 3 Simple|Type|16|R1|Begin~0~End~255~Txt~Fast..Slow
+ID|Strobe 3|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Slow..Fast
+ID|Mode 3|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R2|Begin~8~End~30~Txt~Show mode 1~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R3|Begin~31~End~53~Txt~Show mode 2~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R4|Begin~54~End~76~Txt~Show mode 3~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R5|Begin~77~End~99~Txt~Show mode 4~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R6|Begin~100~End~122~Txt~Sound control~Switch1~Show mode speed / Sound sensitivity 3:Sound sensitivity 3|R7|Begin~123~End~199~Txt~No function~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R8|Begin~200~End~224~Txt~reset~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3|R9|Begin~225~End~255~Txt~No function~Switch1~Show mode speed / Sound sensitivity 3:Show mode speed 3
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Show mode speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Show mode speed 1|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound sensitivity 1|Type|29|R1|Begin~0~End~255~Txt~Low..High
+ID|Show mode speed 2|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound sensitivity 2|Type|29|R1|Begin~0~End~255~Txt~Low..High
+ID|Show mode speed 3|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound sensitivity 3|Type|29|R1|Begin~0~End~255~Txt~Low..High
+[END_CHAN_DEF]
+[MODES]
+Name|6-channel|ShortName|6ch|Content|Master Dimmer~Strobe~Show mode~Show mode speed / Sound sensitivity:Show mode speed;Sound sensitivity~Light control~Auto color change speed
+Name|10-channel|ShortName|10ch|Content|Master Pan~Master Tilt~Master Dimmer~Strobe~Show mode~Show mode speed / Sound sensitivity:Show mode speed;Sound sensitivity~Light control~Auto color change speed~Master Pan fine~Master Tilt fine
+Name|16-channel|ShortName|16ch|Content|Master Dimmer~Strobe~Master Red~Master Green~Master Blue~Master White~Pan 1~Tilt 1~Dimmer 1~Pan 2~Tilt 2~Dimmer 2~Pan 3~Tilt 3~Dimmer 3~Head speed
+Name|26-channel|ShortName|26ch|Content|Master Dimmer~Strobe~Pan 1~Pan 1 fine~Tilt 1~Tilt 1 fine~Head Speed 1~Color 1~Pan 2~Pan 2 fine~Tilt 2~Tilt 2 fine~Head Speed 2~Color 2~Pan 3~Pan 3 fine~Tilt 3~Tilt 3 fine~Head Speed 3~Color 3~Sound mode / Reset~Sound sensitivity~Master Red~Master Green~Master Blue~Master White
+Name|42-channel|ShortName|42ch|Content|Pan 1~Pan 1 fine~Tilt 1~Tilt 1 fine~Head Speed 1 Simple~Dimmer 1~Strobe 1~Color 1~Mode 1~Show mode speed / Sound sensitivity 1:Show mode speed 1;Sound sensitivity 1~Red 1~Green 1~Blue 1~White 1~Pan 2~Pan 2 fine~Tilt 2~Tilt 2 fine~Head Speed 2 Simple~Dimmer 2~Strobe 2~Color 2~Mode 2~Show mode speed / Sound sensitivity 2:Show mode speed 2;Sound sensitivity 2~Red 2~Green 2~Blue 2~White 2~Pan 3~Pan 3 fine~Tilt 3~Tilt 3 fine~Head Speed 3 Simple~Dimmer 3~Strobe 3~Color 3~Mode 3~Show mode speed / Sound sensitivity 3:Show mode speed 3;Sound sensitivity 3~Red 3~Green 3~Blue 3~White 3
+[END_MODES]
