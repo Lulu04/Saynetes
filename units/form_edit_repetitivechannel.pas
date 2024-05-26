@@ -55,6 +55,7 @@ type
     procedure BOKClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     CheckedLabelManager: TCheckedLabelManager;
@@ -193,6 +194,11 @@ begin
   BOK.Caption := SOk;
   Label1.Caption := sAddRepetitiveChannels;
   BPreset.Caption := SPreset_;
+end;
+
+procedure TFormEditRepetitiveChannel.FormDestroy(Sender: TObject);
+begin
+  CheckedLabelManager.Free;
 end;
 
 procedure TFormEditRepetitiveChannel.CheckBox1Change(Sender: TObject);
