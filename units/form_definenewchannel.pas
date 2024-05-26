@@ -47,11 +47,13 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
+    BImportRanges: TSpeedButton;
     Splitter1: TSplitter;
     procedure BOKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
+    procedure BImportRangesClick(Sender: TObject);
     procedure Splitter1Moved(Sender: TObject);
   private
     CheckedLabelManager: TCheckedLabelManager;
@@ -86,7 +88,7 @@ type
 
 implementation
 
-uses u_resource_string, Math;
+uses u_resource_string, form_selectsourcechannel, Math;
 
 {$R *.lfm}
 
@@ -144,6 +146,34 @@ procedure TFormDefineNewChannel.RadioButton1Change(Sender: TObject);
 begin
   if RadioButton1.Checked then NB.PageIndex := NB.IndexOf(PagePreset)
     else NB.PageIndex := NB.IndexOf(PageCustom);
+end;
+
+procedure TFormDefineNewChannel.BImportRangesClick(Sender: TObject);
+var F: TFormSelectChannel;
+  p: PFixLibAvailableChannel;
+  i, j: integer;
+begin
+  F := TFormSelectChannel.Create(NIL);
+  try
+    F.FillWith(FExistingChannels);
+    if F.ShowModal = mrOk then begin
+      p := F.Selected;
+      if p <> NIL then begin
+        DoDeleteAllLines;
+        for i:=0 to High(p^.Ranges) do begin
+          DoAddLine;
+          j := High(FLines);
+          FLines[j].BeginValue := p^.Ranges[i].BeginValue;
+          FLines[j].EndValue := p^.Ranges[i].EndValue;
+          FLines[j].Description := p^.Ranges[i].Text;
+          FLines[j].Extra := p^.Ranges[i].Extra;
+          FLines[j].FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
+        end;
+      end;
+    end;
+  finally
+    F.Free;
+  end;
 end;
 
 procedure TFormDefineNewChannel.Splitter1Moved(Sender: TObject);

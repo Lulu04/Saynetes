@@ -97,7 +97,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 201
+      Top = 203
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -128,7 +128,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 267
+      Top = 269
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -214,16 +214,16 @@ object FormDefineNewChannel: TFormDefineNewChannel
     end
     object Panel2: TPanel
       AnchorSideLeft.Control = SE1
-      AnchorSideTop.Control = SE1
+      AnchorSideTop.Control = BImportRanges
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = SB
       AnchorSideRight.Side = asrBottom
       Left = 8
       Height = 26
-      Top = 155
+      Top = 157
       Width = 842
       Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Top = 20
+      BorderSpacing.Top = 2
       BorderSpacing.Right = 20
       BevelColor = 6710886
       ClientHeight = 26
@@ -453,8 +453,8 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 305
-      Top = 181
+      Height = 303
+      Top = 183
       Width = 862
       HorzScrollBar.Page = 1
       VertScrollBar.Increment = 20
@@ -465,6 +465,29 @@ object FormDefineNewChannel: TFormDefineNewChannel
       BorderSpacing.Bottom = 8
       BorderStyle = bsNone
       TabOrder = 6
+    end
+    object BImportRanges: TSpeedButton
+      AnchorSideTop.Control = SE1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel2
+      Cursor = crHandPoint
+      Left = 625
+      Height = 20
+      Top = 135
+      Width = 225
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Caption = 'Import ranges from another channel...'
+      Color = 16433669
+      Flat = True
+      Font.Color = 15395562
+      Images = DataModule1.ImageList1
+      ImageIndex = 8
+      Transparent = False
+      OnClick = BImportRangesClick
+      ParentFont = False
     end
   end
 end

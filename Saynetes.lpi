@@ -393,7 +393,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="96">
+    <Units Count="97">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1000,6 +1000,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit95>
+      <Unit96>
+        <Filename Value="units\form_selectsourcechannel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSelectChannel"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit96>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
