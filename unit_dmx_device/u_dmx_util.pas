@@ -330,6 +330,8 @@ begin
     ctFAN: Result:=Result+'CursorFan.svg';
     ctSMOKE: Result:=Result+'CursorSmoke.svg';
     ctPANTILT: Result:=Result+'CursorPanTilt.svg';
+    ctPANCONTINUOUS: Result:=Result+'CursorPanContinuous.svg';
+    ctTILTCONTINUOUS: Result:=Result+'CursorTiltContinuous.svg';
     ctPRISM: Result:=Result+'CursorPrism.svg';
     ctPRISMROTATION: Result:=Result+'CursorPrismRotation.svg';
     ctLASER: Result:=Result+'CursorLaser.svg';
@@ -338,7 +340,7 @@ begin
     ctGOBOSHAKE: Result:=Result+'CursorGoboShake.svg';
     ctFROST: Result:=Result+'CursorFrost.svg';
     ctSOUNDCONTROLED: Result:=Result+'CursorSoundControled.svg';
-    else Result:='';
+    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
 
