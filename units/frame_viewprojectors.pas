@@ -1855,8 +1855,8 @@ begin
 
   fix.Adress := adress;
   fix.ScreenPos := ClientToWord(Point(X,Y))-TextureHalfSize(fix.FixtureType);
-  fix.FlipH := fix.ScreenPos.x<0;
-  fix.FlipV := fix.ScreenPos.y>0;
+  fix.FlipH := (fix.ScreenPos.x < 0) and FixtureCanFlipH[fix.FixtureType];
+  fix.FlipV := (fix.ScreenPos.y > 0) and FixtureCanFlipV[fix.FixtureType];
   fix.Selected := TRUE;
   targetUni.DoOptimizeUsedChannels;
   InternalAddToSelected(fix);
