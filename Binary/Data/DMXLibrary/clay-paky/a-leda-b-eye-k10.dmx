@@ -1,0 +1,139 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://e-assist.tech/servlet/checkDocumentsFile?Id=729|LinkType2|product page|Url2|https://www.claypaky.it/products/a-leda-b-eye-k10/|LinkType3|video|Url3|https://www.youtube.com/watch?v=8pmvT2FVHec
+[GENERAL]
+Manufacturer|Clay Paky|Name|A.leda B-EYE K10|Type|41|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|358|Height|494|Depth|253|Weight|15.00|Power|450|Connector|3-pin and 5-pin|Bulb|Osram Ostar 15W RGBW LED|Lumens|9800|LensMinDegree|4.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine|Type|5
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine|Type|13
+ID|Linear CTO|Type|27|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~8000K..2500K
+ID|Color Presets|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~10~Txt~Red~Extra~#ff0000|R3|Begin~11~End~11~Txt~Green~Extra~#00ff00|R4|Begin~12~End~12~Txt~Blue~Extra~#0000ff|R5|Begin~13~End~13~Txt~Cyan~Extra~#00ffff|R6|Begin~14~End~14~Txt~Yellow~Extra~#ffff00|R7|Begin~15~End~15~Txt~Magenta~Extra~#ff00ff|R8|Begin~16~End~16~Txt~Color temperature 7000K White~Extra~#f4ffa4|R9|Begin~17~End~17~Txt~Color temperature 3700K White~Extra~#ffe48c|R10|Begin~18~End~18~Txt~Color temperature 5000K White~Extra~#ffbc6e|R11|Begin~19~End~19~Txt~Black~Extra~#000000|R12|Begin~20~End~22~Txt~LEE 10 Medium Yellow~Extra~#9c7e00|R13|Begin~23~End~26~Txt~LEE 13 Straw Tint~Extra~#987309|R14|Begin~27~End~28~Txt~LEE 17 Surprise Peach~Extra~#c67209|R15|Begin~29~End~29~Txt~LEE 19 Fire~Extra~#ff3800|R16|Begin~30~End~30~Txt~LEE 20 Medium Amber~Extra~#ff8700|R17|Begin~31~End~31~Txt~LEE 21 Gold Amber~Extra~#ff6400|R18|Begin~32~End~34~Txt~LEE 22 Dark Amber~Extra~#ff4100|R19|Begin~35~End~44~Txt~LEE 25 Sunrise Red~Extra~#ff5302|R20|Begin~45~End~45~Txt~LEE 35 Light Pink~Extra~#ffa35b|R21|Begin~46~End~48~Txt~LEE 36 Medium Pink~Extra~#ff894b|R22|Begin~49~End~61~Txt~LEE 39 Pink Carnation~Extra~#ff9d56|R23|Begin~62~End~67~Txt~LEE 52 Light Lavender~Extra~#ffb689|R24|Begin~68~End~77~Txt~LEE 58 Lavender~Extra~#ffb6c0|R25|Begin~78~End~88~Txt~LEE 68 Sky Blue~Extra~#00ff87|R26|Begin~89~End~99~Txt~LEE 79 Just Blue~Extra~#00c282|R27|Begin~100~End~109~Txt~LEE 90 Dark Yellow Green~Extra~#29db00|R28|Begin~110~End~111~Txt~LEE 100 Spring Yellow~Extra~#f5ca00|R29|Begin~112~End~112~Txt~LEE 102 Light Amber~Extra~#eda300|R30|Begin~113~End~113~Txt~LEE 103 Straw~Extra~#ffc33b|R31|Begin~114~End~114~Txt~LEE 104 Deep Amber~Extra~#ffa600|R32|Begin~115~End~116~Txt~LEE 105 Orange~Extra~#ff7a00|R33|Begin~117~End~117~Txt~LEE 107 Light Rose~Extra~#ff8d1f|R34|Begin~118~End~118~Txt~LEE 108 English Rose~Extra~#ff9417|R35|Begin~119~End~119~Txt~LEE 109 Light Salmon~Extra~#ff8a1f|R36|Begin~120~End~120~Txt~LEE 110 Middle Rose~Extra~#d9821c|R37|Begin~121~End~122~Txt~LEE 111 Dark Pink~Extra~#ff6d21|R38|Begin~123~End~124~Txt~LEE 113 Magenta~Extra~#ff140f|R39|Begin~125~End~125~Txt~LEE 115 Peacock Blue~Extra~#33ff33|R40|Begin~126~End~126~Txt~LEE 116 Med Blue Green~Extra~#ceff38|R41|Begin~127~End~127~Txt~LEE 117 Steel Blue~Extra~#ceff38|R42|Begin~128~End~128~Txt~LEE 118 Light Blue~Extra~#4aff52|R43|Begin~129~End~130~Txt~LEE 119 Dark Blue~Extra~#00baff|R44|Begin~131~End~133~Txt~LEE 121 Leaf Green~Extra~#ceff00|R45|Begin~134~End~135~Txt~LEE 124 Dark Green~Extra~#54ff0d|R46|Begin~136~End~137~Txt~LEE 126 Mauve~Extra~#e32938|R47|Begin~138~End~141~Txt~Bright Pink~Extra~#ff3524|R48|Begin~142~End~144~Txt~LEE 132 Medium Blue~Extra~#00ff8f|R49|Begin~145~End~145~Txt~LEE 135 Deep Golden Amber~Extra~#ff3a00|R50|Begin~146~End~146~Txt~LEE 136 Pale Lavender~Extra~#ffc53d|R51|Begin~147~End~148~Txt~LEE 137 Special Lavender~Extra~#dbc54f|R52|Begin~149~End~150~Txt~LEE 139 Primary Green~Extra~#4dff00|R53|Begin~151~End~156~Txt~LEE 141 Bright Blue~Extra~#00ff57|R54|Begin~157~End~161~Txt~LEE 147 Apricot~Extra~#ff8f0d|R55|Begin~162~End~167~Txt~LEE 152 Pale Gold~Extra~#fdab1a|R56|Begin~168~End~171~Txt~LEE 158 Deep Orange~Extra~#de5400|R57|Begin~172~End~173~Txt~LEE 162 Bastard Amber~Extra~#ffb51c|R58|Begin~174~End~174~Txt~LEE 164 Flame Red~Extra~#ff2e02|R59|Begin~175~End~178~Txt~LEE 165 Daylight Blue~Extra~#52d65a|R60|Begin~179~End~179~Txt~LEE 169 Lilac Tint~Extra~#ffc731|R61|Begin~180~End~183~Txt~LEE 170 Deep Lavender~Extra~#ffa840|R62|Begin~184~End~190~Txt~LEE 174 Dark Steel Blue~Extra~#ffe756|R63|Begin~191~End~206~Txt~LEE 181 Congo Blue~Extra~#4d00ff|R64|Begin~207~End~207~Txt~LEE 197 Alice Blue~Extra~#80ff8f|R65|Begin~208~End~208~Txt~Dirty White~Extra~#ffffbd|R66|Begin~209~End~255~Txt~White~Extra~#fff5a1
+ID|Strobe|Type|6|R1|Begin~0~End~3~Txt~Shutter closed|R2|Begin~4~End~103~Txt~Strobe 1…25Hz|R3|Begin~104~End~107~Txt~Shutter open|R4|Begin~108~End~207~Txt~Pulse strobe 0.5…25Hz|R5|Begin~208~End~212~Txt~Shutter open|R6|Begin~213~End~251~Txt~Random strobe slow…fast|R7|Begin~252~End~255~Txt~Shutter open
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer fine|Type|1
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..210deg
+ID|Tilt fine|Type|8
+ID|Maintenance|Type|0|R1|Begin~0~End~11~Txt~No function|R2|Begin~12~End~24~Txt~5s Pan Tilt Fast (Default)|R3|Begin~25~End~37~Txt~5s Pan Tilt Normal|R4|Begin~38~End~42~Txt~5s Dimmer Curve 1|R5|Begin~43~End~47~Txt~5s Dimmer Curve 2|R6|Begin~48~End~52~Txt~5s Dimmer Curve 3 (Default)|R7|Begin~53~End~57~Txt~5s Dimmer Curve 4|R8|Begin~58~End~62~Txt~5s RGBW Gamma curve 1 – gamma = 1.0|R9|Begin~63~End~67~Txt~5s RGBW Gamma curve 2 – gamma = 1.5 (Default)|R10|Begin~68~End~72~Txt~5s RGBW Gamma curve 3 – gamma = 2.0|R11|Begin~73~End~77~Txt~5s Halogen Lamp Simulation OFF (Default)|R12|Begin~78~End~82~Txt~5s Halogen Lamp Simulation - Linear CTO @ 0 bit - 750 W|R13|Begin~83~End~87~Txt~5s Halogen Lamp Simulation - Linear CTO @ 0 bit - 1000 W|R14|Begin~88~End~92~Txt~5s Halogen Lamp Simulation - Linear CTO @ 0 bit - 1200 W|R15|Begin~93~End~97~Txt~5s Halogen Lamp Simulation - Linear CTO @ 0 bit - 2000 W|R16|Begin~98~End~102~Txt~5s Halogen Lamp Simulation - Linear CTO @ 0 bit - 2500 W|R17|Begin~103~End~105~Txt~Pixel map enabled|R18|Begin~106~End~255~Txt~No function Reserved
+ID|Reset|Type|0|R1|Begin~0~End~25~Txt~No function|R2|Begin~26~End~76~Txt~5s Zoom reset|R3|Begin~77~End~127~Txt~5s Pan/tilt reset|R4|Begin~128~End~255~Txt~5s Complete reset
+ID|Zoom|Type|31|R1|Begin~0~End~254~Txt~Zoom 4deg..59.8deg~Switch1~Lens Rotation / Rotation Offset:Lens Rotation|R2|Begin~255~End~255~Txt~Zoom 60deg~Switch1~Lens Rotation / Rotation Offset:Lens Rotation Offset
+ID|Shape Selection|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R2|Begin~8~End~8~Txt~Pixel 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R3|Begin~9~End~9~Txt~Ring 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R4|Begin~10~End~10~Txt~Ring 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R5|Begin~11~End~11~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R6|Begin~12~End~12~Txt~Pixel 1 + Ring 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R7|Begin~13~End~13~Txt~Pixel 1 + Ring 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R8|Begin~14~End~14~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R9|Begin~15~End~15~Txt~Single ring (ramp –/+)~Switch1~Shape Speed:Shape Size Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Flash Distribution|R10|Begin~16~End~16~Txt~Filled rings (ramp –/+)~Switch1~Shape Speed:Shape Size Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Flash Distribution|R11|Begin~17~End~17~Txt~Open/Close 1~Switch1~Shape Speed:Shape Size Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Flash Distribution|R12|Begin~18~End~18~Txt~Open/Close 2~Switch1~Shape Speed:Shape Size Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Flash Distribution|R13|Begin~19~End~19~Txt~Random pixels 1~Switch1~Shape Speed:Shape Speed With Fade~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Random Distribution|R14|Begin~20~End~20~Txt~Random pixels 2~Switch1~Shape Speed:Shape Speed With Fade~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Pixel Density|R15|Begin~21~End~21~Txt~Rainbow 1 (variable speed)~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R16|Begin~22~End~22~Txt~Rainbow 2 (variable color offset)~Switch1~Shape Speed:Shape Color Offset~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R17|Begin~23~End~23~Txt~Fan~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R18|Begin~24~End~24~Txt~Bar 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R19|Begin~25~End~25~Txt~Half moon~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R20|Begin~26~End~26~Txt~Triangle~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R21|Begin~27~End~27~Txt~Segment 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R22|Begin~28~End~28~Txt~Arc 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R23|Begin~29~End~29~Txt~Arc 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R24|Begin~30~End~30~Txt~Bar 2 (variable size)~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Width|R25|Begin~31~End~31~Txt~Random explosion~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Random Distribution|R26|Begin~32~End~32~Txt~Segment 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R27|Begin~33~End~33~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R28|Begin~34~End~34~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R29|Begin~35~End~35~Txt~Bumping section~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R30|Begin~36~End~36~Txt~Ramp by 6~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R31|Begin~37~End~37~Txt~Ramp by 4~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R32|Begin~38~End~38~Txt~Left/right scrolling bar~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R33|Begin~39~End~39~Txt~Up/down scrolling bar~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R34|Begin~40~End~40~Txt~Bar 3~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R35|Begin~41~End~41~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R36|Begin~42~End~42~Txt~Vertical arc 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R37|Begin~43~End~43~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R38|Begin~44~End~44~Txt~Horizontal arc 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R39|Begin~45~End~45~Txt~Mirrored pixel~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R40|Begin~46~End~46~Txt~Pixel animation 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R41|Begin~47~End~47~Txt~Pixel animation 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R42|Begin~48~End~48~Txt~Pixel animation 3~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R43|Begin~49~End~49~Txt~Pixel animation 4~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R44|Begin~50~End~50~Txt~Pixel animation 5~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R45|Begin~51~End~51~Txt~Semi arc (ramp –/+)~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R46|Begin~52~End~52~Txt~Bumping arc section~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R47|Begin~53~End~53~Txt~Pixel animation 6~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R48|Begin~54~End~54~Txt~Vertical ramp by 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R49|Begin~55~End~55~Txt~Following pixel by 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R50|Begin~56~End~56~Txt~Syncopation~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R51|Begin~57~End~57~Txt~Bumping 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R52|Begin~58~End~58~Txt~Bumping 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R53|Begin~59~End~59~Txt~Bumping 3~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Macro Offset|R54|Begin~60~End~60~Txt~Vertical pixel scrolling~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R55|Begin~61~End~61~Txt~Random vertical section~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Random Distribution|R56|Begin~62~End~62~Txt~Random central section~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Random Distribution|R57|Begin~63~End~63~Txt~Random ring 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Random Distribution|R58|Begin~64~End~64~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R59|Begin~65~End~65~Txt~Random ring 1+3~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Random Distribution|R60|Begin~66~End~66~Txt~Random ring 2+3~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade~Switch3~Shape Offset:Shape Random Distribution|R61|Begin~67~End~67~Txt~Single pixel ring 1~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Number of Rotating|R62|Begin~68~End~68~Txt~Single pixel ring 2~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Number of Rotating|R63|Begin~69~End~69~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset|R64|Begin~70~End~70~Txt~Spiral~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Linear Fade and Wake Length~Switch3~Shape Offset:Shape Width|R65|Begin~71~End~255~Txt~No function~Switch1~Shape Speed:Shape Rotation Speed~Switch2~Shape Fade:Shape Fade Gamma~Switch3~Shape Offset:Shape Angle Offset
+ID|Shape Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Background Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Transition|Type|0|R1|Begin~0~End~4~Txt~Time instant|R2|Begin~5~End~255~Txt~Time 100ms..4000ms
+ID|Foreground Strobe|Type|6|R1|Begin~0~End~3~Txt~Shutter closed|R2|Begin~4~End~103~Txt~Strobe 1…25Hz|R3|Begin~104~End~107~Txt~Shutter open|R4|Begin~108~End~207~Txt~Pulse strobe 0.5…25Hz|R5|Begin~208~End~212~Txt~Shutter open|R6|Begin~213~End~251~Txt~Random strobe slow…fast|R7|Begin~252~End~255~Txt~Shutter open
+ID|Background Strobe|Type|6|R1|Begin~0~End~3~Txt~Shutter closed|R2|Begin~4~End~103~Txt~Strobe 1…25Hz|R3|Begin~104~End~107~Txt~Shutter open|R4|Begin~108~End~207~Txt~Pulse strobe 0.5…25Hz|R5|Begin~208~End~212~Txt~Shutter open|R6|Begin~213~End~251~Txt~Random strobe slow…fast|R7|Begin~252~End~255~Txt~Shutter open
+ID|Background Select|Type|0|R1|Begin~0~End~8~Txt~No function No selection (wash)|R2|Begin~9~End~9~Txt~Pixel 1|R3|Begin~10~End~10~Txt~Ring 2|R4|Begin~11~End~11~Txt~Ring 3|R5|Begin~12~End~12~Txt~Pixel 1 + Ring 3|R6|Begin~13~End~13~Txt~Pixel 1 + Ring 2|R7|Begin~14~End~14~Txt~Pixel 1 + Ring 2 + Ring 3|R8|Begin~15~End~15~Txt~Ring 2 + Ring 3|R9|Begin~16~End~254~Txt~No function No selection (wash)|R10|Begin~255~End~255~Txt~Mirror effect
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 19|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 19|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 19|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 13|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 14|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 15|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 16|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 17|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 18|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White 19|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Lens Rotation|Type|33|R1|Begin~0~End~127~Txt~Rotation 0deg..60deg|R2|Begin~128~End~190~Txt~Rotation 10rpm..3rpm|R3|Begin~191~End~192~Txt~Rotation stop|R4|Begin~193~End~255~Txt~Rotation -3rpm..-10rpm
+ID|Lens Rotation Offset|Type|0|R1|Begin~0~End~127~Txt~Rotation 0deg..4deg Offset|R2|Begin~128~End~255~Txt~Rotation 0deg Offset
+ID|Shape Rotation Speed|Type|0|R1|Begin~0~End~63~Txt~Rotation 0deg..360deg|R2|Begin~64~End~158~Txt~Rotation fast CCW..slow CCW|R3|Begin~159~End~160~Txt~Rotation stop|R4|Begin~161~End~255~Txt~Rotation slow CW..fast CW
+ID|Shape Size Speed|Type|0|R1|Begin~0~End~63~Txt~small..big Radius size|R2|Begin~64~End~158~Txt~fast reverse..slow reverse Closing|R3|Begin~159~End~160~Txt~stop|R4|Begin~161~End~255~Txt~slow..fast Opening
+ID|Shape Speed With Fade|Type|0|R1|Begin~0~End~63~Txt~stop|R2|Begin~64~End~158~Txt~fast..slow fade out|R3|Begin~159~End~160~Txt~stop|R4|Begin~161~End~255~Txt~slow..fast fade in/out
+ID|Shape Color Offset|Type|0|R1|Begin~0~End~63~Txt~Rotation stop|R2|Begin~64~End~158~Txt~Rotation fast CCW..slow CCW|R3|Begin~159~End~160~Txt~Rotation stop|R4|Begin~161~End~255~Txt~Rotation slow CW..fast CW
+ID|Shape Fade Gamma|Type|0|R1|Begin~0~End~15~Txt~Snap|R2|Begin~16~End~245~Txt~Smooth, fading curve gamma 5.0000000000000000E-001..2|R3|Begin~246~End~255~Txt~Smooth, fading curve with automatic gamma
+ID|Shape Linear Fade|Type|16|R1|Begin~0~End~255~Txt~Time instant..long
+ID|Shape Linear Fade and Wake Length|Type|16|R1|Begin~0~End~255~Txt~Time instant..long
+ID|Shape Angle Offset|Type|33|R1|Begin~0~End~255~Txt~Rotation 0deg..360deg
+ID|Shape Flash Distribution|Type|0|R1|Begin~0~End~9~Txt~0%..100% Continuous flash distribution|R2|Begin~10~End~255~Txt~Random flash distribution
+ID|Shape Random Distribution|Type|0|R1|Begin~0~End~255~Txt~2..20 Pixels
+ID|Shape Pixel Density|Type|0|R1|Begin~0~End~255~Txt~low..high
+ID|Shape Width|Type|0|R1|Begin~0~End~255~Txt~0%..100%
+ID|Shape Macro Offset|Type|0|R1|Begin~0~End~255~Txt~0%..100%
+ID|Shape Number of Rotating|Type|0|R1|Begin~0~End~255~Txt~0%..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|Standard|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Linear CTO~Color Presets~Strobe~Master dimmer~Master dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Maintenance~Reset~Zoom~Lens Rotation / Rotation Offset:Lens Rotation;Lens Rotation Offset
+Name|Shapes|ShortName|Shapes|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Linear CTO~Color Presets~Strobe~Master dimmer~Master dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Maintenance~Reset~Zoom~Lens Rotation / Rotation Offset:Lens Rotation;Lens Rotation Offset~Shape Selection~Shape Speed:Shape Rotation Speed;Shape Size Speed;Shape Speed With Fade;Shape Color Offset~Shape Fade:Shape Fade Gamma;Shape Linear Fade;Shape Linear Fade and Wake Length~Shape Red~Shape Green~Shape Blue~Shape White~Shape Dimmer~Background Dimmer~Shape Transition~Shape Offset:Shape Angle Offset;Shape Flash Distribution;Shape Random Distribution;Shape Pixel Density;Shape Width;Shape Macro Offset;Shape Number of Rotating~Foreground Strobe~Background Strobe~Background Select
+Name|Pixel RGB|ShortName|Pixel RGB|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16~Red 17~Green 17~Blue 17~Red 18~Green 18~Blue 18~Red 19~Green 19~Blue 19
+Name|Pixel RGBW|ShortName|Pixel RGBW|Content|Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7~Red 8~Green 8~Blue 8~White 8~Red 9~Green 9~Blue 9~White 9~Red 10~Green 10~Blue 10~White 10~Red 11~Green 11~Blue 11~White 11~Red 12~Green 12~Blue 12~White 12~Red 13~Green 13~Blue 13~White 13~Red 14~Green 14~Blue 14~White 14~Red 15~Green 15~Blue 15~White 15~Red 16~Green 16~Blue 16~White 16~Red 17~Green 17~Blue 17~White 17~Red 18~Green 18~Blue 18~White 18~Red 19~Green 19~Blue 19~White 19
+[END_MODES]

@@ -1,0 +1,40 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2015/12/Wash_FX_UM_Rev1_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/wash-fx/|LinkType3|video|Url3|https://www.youtube.com/watch?v=VCuOFK6Vr9k|LinkType4|video|Url4|https://www.youtube.com/watch?v=YYqyuCCxH7w
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|WashFX|Type|44|Authors|Justin Hornsby, Felix Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|215|Height|255|Depth|180|Weight|2.20|Power|75|Connector|3-pin|Bulb|LED|LensMinDegree|90.000|LensMaxDegree|90.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~0Hz..20Hz
+ID|Auto Program|Type|0|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~20~Txt~Pattern 1|R3|Begin~21~End~35~Txt~Pattern 2|R4|Begin~36~End~50~Txt~Pattern 3|R5|Begin~51~End~65~Txt~Pattern 4|R6|Begin~66~End~80~Txt~Pattern 5|R7|Begin~81~End~95~Txt~Pattern 6|R8|Begin~96~End~110~Txt~Pattern 7|R9|Begin~111~End~125~Txt~Pattern 8|R10|Begin~126~End~140~Txt~Pattern 9|R11|Begin~141~End~155~Txt~Pattern 10|R12|Begin~156~End~170~Txt~Pattern 11|R13|Begin~171~End~185~Txt~Pattern 12|R14|Begin~186~End~200~Txt~Pattern 13|R15|Begin~201~End~215~Txt~Pattern 14|R16|Begin~216~End~230~Txt~Pattern 15|R17|Begin~231~End~245~Txt~Pattern 16|R18|Begin~246~End~255~Txt~Sound Active
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Auto or Sound Program|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~127~Txt~Auto Program|R3|Begin~128~End~255~Txt~Sound Program
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|7ch|ShortName|7ch|Content|Red~Green~Blue~Strobe~Auto Program~Auto Program Speed~Auto or Sound Program
+Name|23ch|ShortName|23ch|Content|Master Dimmer~Auto Program~Auto Program Speed~Strobe~Auto or Sound Program~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6
+[END_MODES]

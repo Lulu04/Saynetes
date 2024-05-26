@@ -1,0 +1,32 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2016/02/MegaStrobe-_FX12_UM_Rev2_WO-1.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/megastrobe-fx12/|LinkType3|video|Url3|https://www.youtube.com/watch?v=gEhNeplETGI|LinkType4|other|Url4|https://www.chauvetdj.com/wp-content/uploads/2016/02/MegaStrobe_FX12_QRG_Rev3_ML_WO.pdf
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|Megastrobe FX12|Type|44|Authors|Tryll, Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|350|Height|171|Depth|98|Weight|1.90|Power|66|Connector|3-pin|Bulb|LED
+[CHAN_DEF]
+ID|Shutter Basic|Type|0|R1|Begin~0~End~3~Txt~No function|R2|Begin~4~End~255~Txt~0Hz..26Hz
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter Advanced|Type|0|R1|Begin~0~End~15~Txt~Open~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R2|Begin~16~End~32~Txt~Sound controlled~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed Sound Sensitivity|R3|Begin~33~End~49~Txt~Pulse Asynchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R4|Begin~50~End~66~Txt~RampUp Asynchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R5|Begin~67~End~83~Txt~RampDown Asynchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R6|Begin~84~End~100~Txt~RampUpDown Asynchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R7|Begin~101~End~117~Txt~Strobe Asynchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R8|Begin~118~End~134~Txt~Closed~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R9|Begin~135~End~151~Txt~Pulse Synchronous - Pulse 1~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R10|Begin~152~End~168~Txt~Pulse Synchronous - Pulse 2~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R11|Begin~169~End~185~Txt~RampUp Synchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R12|Begin~186~End~202~Txt~RampDown Synchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R13|Begin~203~End~219~Txt~RampUpDown Synchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R14|Begin~220~End~236~Txt~Strobe Synchronous~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed|R15|Begin~237~End~255~Txt~Closed~Switch1~Shutter Speed / Sound Sensitivity:Shutter Speed
+ID|Auto Programs|Type|0|R1|Begin~0~End~48~Txt~No function~Switch1~Pixels / Program Speed / Sound Sensitivity:Pixels|R2|Begin~49~End~64~Txt~Auto Program 1~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R3|Begin~65~End~80~Txt~Auto Program 2~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R4|Begin~81~End~96~Txt~Auto Program 3~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R5|Begin~97~End~112~Txt~Auto Program 4~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R6|Begin~113~End~128~Txt~Auto Program 5~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R7|Begin~129~End~144~Txt~Auto Program 6~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R8|Begin~145~End~160~Txt~Auto Program 7~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R9|Begin~161~End~176~Txt~Auto Program 8~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R10|Begin~177~End~192~Txt~Auto Program 9~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R11|Begin~193~End~208~Txt~Auto Program 10~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R12|Begin~209~End~224~Txt~Auto Program 11~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R13|Begin~225~End~240~Txt~Auto Program 12~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed|R14|Begin~241~End~255~Txt~Sound Active~Switch1~Pixels / Program Speed / Sound Sensitivity:Program Speed Sound Sensitivity
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter Effects|Type|0
+ID|Shutter Effect Speed|Type|28|R1|Begin~0~End~255~Txt~slow..fast
+ID|Shutter Speed|Type|28|R1|Begin~0~End~255~Txt~0Hz..26Hz
+ID|Shutter Speed Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~0%..100%
+ID|Pixels|Type|0|R1|Begin~0~End~255~Txt~Pixel control
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Program Speed Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~0%..100%
+[END_CHAN_DEF]
+[MODES]
+Name|2-channel|ShortName|2ch|Content|Shutter Basic~Dimmer
+Name|5-channel|ShortName|5ch|Content|Dimmer~Shutter Advanced~Shutter Speed / Sound Sensitivity:Shutter Speed;Shutter Speed Sound Sensitivity~Pixels / Program Speed / Sound Sensitivity:Pixels;Program Speed;Program Speed Sound Sensitivity~Auto Programs
+Name|8-channel|ShortName|8ch|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4~Dimmer 5~Dimmer 6~Shutter Effects~Shutter Effect Speed
+[END_MODES]

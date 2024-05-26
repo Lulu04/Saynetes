@@ -1,0 +1,84 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R2_Wash_UM_Rev4_WO2.pdf|LinkType2|product page|Url2|https://www.chauvetprofessional.com/products/rogue-r2-wash/|LinkType3|video|Url3|https://www.youtube.com/watch?v=YWUMAocTR_w
+[GENERAL]
+Manufacturer|Chauvet Professional|Name|Rogue R2 Wash|Type|41|Authors|Flo Edelmann, Ken Harris|Creator|OFL
+[PHYSICAL]
+Width|306|Height|398|Depth|218|Weight|9.25|Power|339|Connector|3-pin and 5-pin|Bulb|19× 15W LED|Lumens|8500|LensMinDegree|8.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Shutter|Type|6|R1|Begin~0~End~19~Txt~Closed|R2|Begin~20~End~24~Txt~Open|R3|Begin~25~End~64~Txt~20Hz..0Hz|R4|Begin~65~End~69~Txt~Open|R5|Begin~70~End~84~Txt~RampDown|R6|Begin~85~End~89~Txt~Open|R7|Begin~90~End~104~Txt~RampUp|R8|Begin~105~End~109~Txt~Open|R9|Begin~110~End~124~Txt~Random timing|R10|Begin~125~End~129~Txt~Open|R11|Begin~130~End~144~Txt~RampDown Random timing|R12|Begin~145~End~149~Txt~Open|R13|Begin~150~End~164~Txt~RampUp Random timing|R14|Begin~165~End~169~Txt~Open|R15|Begin~170~End~184~Txt~Pulse|R16|Begin~185~End~189~Txt~Open|R17|Begin~190~End~204~Txt~Pulse Random timing|R18|Begin~205~End~209~Txt~Open|R19|Begin~210~End~224~Txt~RampUpDown|R20|Begin~225~End~229~Txt~Open|R21|Begin~230~End~244~Txt~Pulse|R22|Begin~245~End~255~Txt~Open
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine 1|Type|3
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine 1|Type|4
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine 1|Type|5
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine 1|Type|13
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine 2|Type|3
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine 2|Type|4
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine 2|Type|5
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine 2|Type|13
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine 3|Type|3
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine 3|Type|4
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine 3|Type|5
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine 3|Type|13
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine 4|Type|3
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine 4|Type|4
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine 4|Type|5
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine 4|Type|13
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine 5|Type|3
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine 5|Type|4
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine 5|Type|5
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine 5|Type|13
+ID|Color|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~9~Txt~Color 1 = White~Extra~#ffffff|R3|Begin~10~End~14~Txt~Color 2~Extra~#ffeb34|R4|Begin~15~End~19~Txt~Color 3~Extra~#d68630|R5|Begin~20~End~24~Txt~Color 4~Extra~#ff002c|R6|Begin~25~End~29~Txt~Color 5~Extra~#ff3b71|R7|Begin~30~End~34~Txt~Color 6~Extra~#ff8adb|R8|Begin~35~End~39~Txt~Color 7~Extra~#e2afe2|R9|Begin~40~End~44~Txt~Color 8~Extra~#2801ff|R10|Begin~45~End~49~Txt~Color 9~Extra~#0000ff|R11|Begin~50~End~54~Txt~Color 10~Extra~#004eff|R12|Begin~55~End~59~Txt~Color 11~Extra~#00c7ff|R13|Begin~60~End~64~Txt~Color 12~Extra~#00ffea|R14|Begin~65~End~69~Txt~Color 13~Extra~#95f6ff|R15|Begin~70~End~74~Txt~Color 14~Extra~#89ffe3|R16|Begin~75~End~79~Txt~Color 15~Extra~#d5dcde|R17|Begin~80~End~84~Txt~Color 16~Extra~#dbe8af|R18|Begin~85~End~89~Txt~Color 17~Extra~#cdffc7|R19|Begin~90~End~94~Txt~Color 18~Extra~#73ffa5|R20|Begin~95~End~99~Txt~Color 19~Extra~#06ff8f|R21|Begin~100~End~104~Txt~Color 20~Extra~#00ff5e|R22|Begin~105~End~109~Txt~Color 21~Extra~#1dff00|R23|Begin~110~End~114~Txt~Color 22~Extra~#20df00|R24|Begin~115~End~119~Txt~Color 23~Extra~#4bff00|R25|Begin~120~End~124~Txt~Color 24~Extra~#50e800|R26|Begin~125~End~129~Txt~Color 25~Extra~#6ce200|R27|Begin~130~End~134~Txt~Color 26~Extra~#91c200|R28|Begin~135~End~139~Txt~Color 27~Extra~#d2ff00|R29|Begin~140~End~144~Txt~Color 28~Extra~#e1e800|R30|Begin~145~End~149~Txt~Color 29~Extra~#17d700|R31|Begin~150~End~154~Txt~Color 30~Extra~#f7d600|R32|Begin~155~End~159~Txt~Color 31~Extra~#ffa300|R33|Begin~160~End~164~Txt~Color 32~Extra~#ff9800|R34|Begin~165~End~169~Txt~Color 33~Extra~#ff6c00|R35|Begin~170~End~174~Txt~Color 34 = Full White~Extra~#ffffff|R36|Begin~175~End~179~Txt~Closed~Extra~#000000|R37|Begin~180~End~201~Txt~ColorFade fast..slow|R38|Begin~202~End~207~Txt~ColorFade stop|R39|Begin~208~End~229~Txt~ColorFade slow reverse..fast reverse|R40|Begin~230~End~234~Txt~Closed~Extra~#000000|R41|Begin~235~End~249~Txt~ColorFade|R42|Begin~250~End~255~Txt~Closed~Extra~#000000
+ID|Zone Selection|Type|0|R1|Begin~0~End~7~Txt~Zone 1, 2, 3, 4, 5|R2|Begin~8~End~15~Txt~Zone 2, 3, 4, 5|R3|Begin~16~End~23~Txt~Zone 3, 4, 5|R4|Begin~24~End~31~Txt~Zone 4, 5|R5|Begin~32~End~39~Txt~Zone 5|R6|Begin~40~End~47~Txt~No function|R7|Begin~48~End~55~Txt~Zone 1|R8|Begin~56~End~63~Txt~Zone 1, 2|R9|Begin~64~End~71~Txt~Zone 1, 2, 3|R10|Begin~72~End~79~Txt~Zone 1, 2, 3, 4|R11|Begin~80~End~87~Txt~Zone 1, 2, 3, 4, 5|R12|Begin~88~End~95~Txt~Zone 1|R13|Begin~96~End~103~Txt~Zone 2|R14|Begin~104~End~111~Txt~Zone 3|R15|Begin~112~End~119~Txt~Zone 4|R16|Begin~120~End~127~Txt~Zone 5|R17|Begin~128~End~135~Txt~Zone 1, 2|R18|Begin~136~End~143~Txt~Zone 2, 3|R19|Begin~144~End~151~Txt~Zone 3, 4|R20|Begin~152~End~159~Txt~Zone 4, 5|R21|Begin~160~End~167~Txt~Zone 1, 5|R22|Begin~168~End~175~Txt~Zone 1, 2, 3|R23|Begin~176~End~183~Txt~Zone 2, 3, 4|R24|Begin~184~End~191~Txt~Zone 3, 4, 5|R25|Begin~192~End~199~Txt~Zone 1, 4, 5|R26|Begin~200~End~207~Txt~Zone 1, 2, 5|R27|Begin~208~End~215~Txt~Zone 1, 2, 3, 4|R28|Begin~216~End~223~Txt~Zone 2, 3, 4, 5|R29|Begin~224~End~231~Txt~Zone 1, 3, 4, 5|R30|Begin~232~End~239~Txt~Zone 1, 2, 4, 5|R31|Begin~240~End~247~Txt~Zone 1, 2, 3, 5|R32|Begin~248~End~255~Txt~Zone 1, 2, 3, 4, 5
+ID|Programs|Type|0|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~20~Txt~Ring macro 1|R3|Begin~21~End~25~Txt~Ring macro 2|R4|Begin~26~End~30~Txt~Ring macro 3|R5|Begin~31~End~35~Txt~Ring macro 4|R6|Begin~36~End~40~Txt~Ring macro 5|R7|Begin~41~End~45~Txt~Ring macro 6|R8|Begin~46~End~50~Txt~Ring macro 7|R9|Begin~51~End~55~Txt~Ring macro 8|R10|Begin~56~End~60~Txt~Ring macro 9|R11|Begin~61~End~65~Txt~Ring macro 10|R12|Begin~66~End~70~Txt~Ring macro 11|R13|Begin~71~End~75~Txt~Ring macro 12|R14|Begin~76~End~80~Txt~Ring macro 13|R15|Begin~81~End~85~Txt~Ring macro 14|R16|Begin~86~End~90~Txt~Ring macro 15|R17|Begin~91~End~95~Txt~Ring macro 16|R18|Begin~96~End~100~Txt~Ring macro 17|R19|Begin~101~End~105~Txt~Ring macro 18|R20|Begin~106~End~110~Txt~Ring macro 19|R21|Begin~111~End~115~Txt~Ring macro 20|R22|Begin~116~End~120~Txt~Ring macro 21|R23|Begin~121~End~125~Txt~Ring macro 22|R24|Begin~126~End~130~Txt~Ring macro 23|R25|Begin~131~End~135~Txt~Ring macro 24|R26|Begin~136~End~140~Txt~Color ring macro 1|R27|Begin~141~End~145~Txt~Color ring macro 2|R28|Begin~146~End~150~Txt~Color ring macro 3|R29|Begin~151~End~155~Txt~Color ring macro 4|R30|Begin~156~End~160~Txt~Color ring macro 5|R31|Begin~161~End~165~Txt~Color ring macro 6|R32|Begin~166~End~170~Txt~Color ring macro 7|R33|Begin~171~End~175~Txt~Color ring macro 8|R34|Begin~176~End~180~Txt~Color ring macro 9|R35|Begin~181~End~185~Txt~Color ring macro 10|R36|Begin~186~End~190~Txt~Color ring macro 11|R37|Begin~191~End~195~Txt~Color ring macro 12|R38|Begin~196~End~200~Txt~Color ring macro 13|R39|Begin~201~End~205~Txt~Color ring macro 14|R40|Begin~206~End~210~Txt~Color ring macro 15|R41|Begin~211~End~215~Txt~Color ring macro 16|R42|Begin~216~End~220~Txt~Color ring macro 17|R43|Begin~221~End~225~Txt~Color ring macro 18|R44|Begin~226~End~230~Txt~Color ring macro 19|R45|Begin~231~End~235~Txt~Color ring macro 20|R46|Begin~236~End~240~Txt~Color ring macro 21|R47|Begin~241~End~245~Txt~Color ring macro 22|R48|Begin~246~End~250~Txt~Color ring macro 23|R49|Begin~251~End~255~Txt~Color ring macro 24
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Movement Macros|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~23~Txt~Effect 1|R3|Begin~24~End~39~Txt~Effect 2|R4|Begin~40~End~55~Txt~Effect 3|R5|Begin~56~End~71~Txt~Effect 4|R6|Begin~72~End~87~Txt~Effect 5|R7|Begin~88~End~103~Txt~Effect 6|R8|Begin~104~End~119~Txt~Effect 7|R9|Begin~120~End~135~Txt~Effect 8|R10|Begin~136~End~151~Txt~Effect 9|R11|Begin~152~End~167~Txt~Effect 10|R12|Begin~168~End~183~Txt~Effect 11|R13|Begin~184~End~199~Txt~Effect 12|R14|Begin~200~End~215~Txt~Effect 13|R15|Begin~216~End~231~Txt~Effect 14|R16|Begin~232~End~247~Txt~Effect 15|R17|Begin~248~End~255~Txt~Effect 16
+ID|Movement Macro Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 12deg..49deg
+ID|Control|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~14~Txt~Blackout during pan/tilt|R3|Begin~15~End~19~Txt~No function|R4|Begin~20~End~24~Txt~No function|R5|Begin~25~End~29~Txt~No function|R6|Begin~30~End~34~Txt~No function|R7|Begin~35~End~39~Txt~No function|R8|Begin~40~End~44~Txt~No function|R9|Begin~45~End~49~Txt~No function|R10|Begin~50~End~54~Txt~5s Pan reset|R11|Begin~55~End~59~Txt~5s Tilt reset|R12|Begin~60~End~64~Txt~5s Zoom reset|R13|Begin~65~End~69~Txt~No function|R14|Begin~70~End~74~Txt~5s All reset|R15|Begin~75~End~79~Txt~No function|R16|Begin~80~End~84~Txt~5s Pan/Tilt movement reverse|R17|Begin~85~End~89~Txt~5s Pan movement reverse|R18|Begin~90~End~94~Txt~5s Tilt movement reverse|R19|Begin~95~End~99~Txt~5s Disable Pan movement reverse|R20|Begin~100~End~104~Txt~5s Disable Tilt movement reverse|R21|Begin~105~End~109~Txt~5s Disable Pan/Tilt movement reverse|R22|Begin~110~End~114~Txt~No function|R23|Begin~115~End~119~Txt~No function|R24|Begin~120~End~124~Txt~5s Eco fan|R25|Begin~125~End~129~Txt~5s Full fan|R26|Begin~130~End~134~Txt~5s Auto fan|R27|Begin~135~End~139~Txt~5s Fast dimmer curve|R28|Begin~140~End~144~Txt~5s Smooth dimmer curve|R29|Begin~145~End~255~Txt~No function
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Master|Type|3
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Master|Type|4
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Master|Type|5
+ID|White Master|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Master|Type|13
+[END_CHAN_DEF]
+[MODES]
+Name|56-channel|ShortName|56ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter~Red 1~Red fine 1~Green 1~Green fine 1~Blue 1~Blue fine 1~White 1~White fine 1~Red 2~Red fine 2~Green 2~Green fine 2~Blue 2~Blue fine 2~White 2~White fine 2~Red 3~Red fine 3~Green 3~Green fine 3~Blue 3~Blue fine 3~White 3~White fine 3~Red 4~Red fine 4~Green 4~Green fine 4~Blue 4~Blue fine 4~White 4~White fine 4~Red 5~Red fine 5~Green 5~Green fine 5~Blue 5~Blue fine 5~White 5~White fine 5~Color~Zone Selection~Programs~Program Speed~Movement Macros~Movement Macro Speed~Zoom~Control
+Name|54-channel|ShortName|54ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter~Red 1~Red fine 1~Green 1~Green fine 1~Blue 1~Blue fine 1~White 1~White fine 1~Red 2~Red fine 2~Green 2~Green fine 2~Blue 2~Blue fine 2~White 2~White fine 2~Red 3~Red fine 3~Green 3~Green fine 3~Blue 3~Blue fine 3~White 3~White fine 3~Red 4~Red fine 4~Green 4~Green fine 4~Blue 4~Blue fine 4~White 4~White fine 4~Red 5~Red fine 5~Green 5~Green fine 5~Blue 5~Blue fine 5~White 5~White fine 5~Color~Zone Selection~Programs~Program Speed~Zoom~Control
+Name|54-channel MS|ShortName|54ch-MS|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter~Color~Zone Selection~Programs~Program Speed~Zoom~Control~Red 1~Red fine 1~Green 1~Green fine 1~Blue 1~Blue fine 1~White 1~White fine 1~Red 2~Red fine 2~Green 2~Green fine 2~Blue 2~Blue fine 2~White 2~White fine 2~Red 3~Red fine 3~Green 3~Green fine 3~Blue 3~Blue fine 3~White 3~White fine 3~Red 4~Red fine 4~Green 4~Green fine 4~Blue 4~Blue fine 4~White 4~White fine 4~Red 5~Red fine 5~Green 5~Green fine 5~Blue 5~Blue fine 5~White 5~White fine 5
+Name|33-channel|ShortName|33ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Color~Zone Selection~Programs~Program Speed~Zoom~Control
+Name|33-channel MS|ShortName|33ch-MS|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter~Color~Zone Selection~Programs~Program Speed~Zoom~Control~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5
+Name|22-channel|ShortName|22ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter~Red Master~Red fine Master~Green Master~Green fine Master~Blue Master~Blue fine Master~White Master~White fine Master~Color~Zone Selection~Programs~Program Speed~Zoom~Control
+Name|17-channel|ShortName|17ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Shutter~Red Master~Green Master~Blue Master~White Master~Color~Zone Selection~Programs~Program Speed~Zoom~Control
+Name|15-channel|ShortName|15ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Dimmer~Dimmer fine~Shutter~Red Master~Green Master~Blue Master~White Master~Color~Zoom~Control
+[END_MODES]

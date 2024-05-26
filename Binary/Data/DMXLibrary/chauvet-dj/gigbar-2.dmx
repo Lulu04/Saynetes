@@ -1,0 +1,51 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.chauvetdj.com/wp-content/uploads/2016/09/GigBAR_2_UM_Rev6_ML5_WO.pdf|LinkType2|product page|Url2|https://www.chauvetdj.com/products/gigbar-2/|LinkType3|video|Url3|https://www.youtube.com/watch?v=Nh8hEiiYxkQ|LinkType4|video|Url4|https://www.youtube.com/watch?v=mzO46xfRiBs|LinkType5|video|Url5|https://www.youtube.com/watch?v=WwCh6UE78hw
+[GENERAL]
+Manufacturer|Chauvet DJ|Name|GigBAR 2|Type|36|Authors|Flo Edelmann, Felix Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|1185|Height|387|Depth|110|Weight|6.60|Power|64|Connector|3-pin
+[CHAN_DEF]
+ID|PAR 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 1 Shutter|Type|6|R1|Begin~0~End~127~Txt~Intensity off…bright|R2|Begin~128~End~239~Txt~Strobe slow…fast|R3|Begin~240~End~249~Txt~Strobe sound-controlled|R4|Begin~250~End~255~Txt~Shutter open
+ID|PAR 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|PAR 2 Shutter|Type|6|R1|Begin~0~End~127~Txt~Intensity off…bright|R2|Begin~128~End~239~Txt~Strobe slow…fast|R3|Begin~240~End~249~Txt~Strobe sound-controlled|R4|Begin~250~End~255~Txt~Shutter open
+ID|Derby 1 Color|Type|12|R1|Begin~0~End~24~Txt~Blackout|R2|Begin~25~End~49~Txt~Red~Extra~#ff0000|R3|Begin~50~End~74~Txt~Green~Extra~#00ff00|R4|Begin~75~End~99~Txt~Blue~Extra~#0000ff|R5|Begin~100~End~124~Txt~Red + Green~Extra~#ffff00|R6|Begin~125~End~149~Txt~Red + Blue~Extra~#ff00ff|R7|Begin~150~End~174~Txt~Green + Blue~Extra~#00ffff|R8|Begin~175~End~199~Txt~Red + Green + Blue~Extra~#ffffff|R9|Begin~200~End~224~Txt~Color jump (Single colors only)|R10|Begin~225~End~255~Txt~Color jump (Two colors at a time)
+ID|Derby 1 Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~239~Txt~0…30Hz|R3|Begin~240~End~255~Txt~Sound-controlled
+ID|Derby 1 Rotation|Type|33|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~133~Txt~Stop|R4|Begin~134~End~255~Txt~CCW slow…fast
+ID|Derby 2 Color|Type|12|R1|Begin~0~End~24~Txt~Blackout|R2|Begin~25~End~49~Txt~Red~Extra~#ff0000|R3|Begin~50~End~74~Txt~Green~Extra~#00ff00|R4|Begin~75~End~99~Txt~Blue~Extra~#0000ff|R5|Begin~100~End~124~Txt~Red + Green~Extra~#ffff00|R6|Begin~125~End~149~Txt~Red + Blue~Extra~#ff00ff|R7|Begin~150~End~174~Txt~Green + Blue~Extra~#00ffff|R8|Begin~175~End~199~Txt~Red + Green + Blue~Extra~#ffffff|R9|Begin~200~End~224~Txt~Color jump (Single colors only)|R10|Begin~225~End~255~Txt~Color jump (Two colors at a time)
+ID|Derby 2 Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~239~Txt~0…30Hz|R3|Begin~240~End~255~Txt~Sound-controlled
+ID|Derby 2 Rotation|Type|33|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~133~Txt~Stop|R4|Begin~134~End~255~Txt~CCW slow…fast
+ID|Laser Color|Type|43|R1|Begin~0~End~39~Txt~Blackout~Extra~#000000|R2|Begin~40~End~79~Txt~Red on~Extra~#ff0000|R3|Begin~80~End~119~Txt~Green on~Extra~#00ff00|R4|Begin~120~End~159~Txt~Red + Green on~Extra~_#00ff00|R5|Begin~160~End~199~Txt~Red on, Green strobe~Extra~_#00aa00|R6|Begin~200~End~239~Txt~Red strobe, Green on~Extra~_#00ff00|R7|Begin~240~End~255~Txt~Red + Green alternate strobe~Extra~_#00aa00
+ID|Laser Strobe|Type|45|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~239~Txt~slow..fast|R3|Begin~240~End~255~Txt~Sound controlled
+ID|Laser Movement Speed|Type|9|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~133~Txt~Stop|R4|Begin~134~End~255~Txt~CCW slow…fast
+ID|Strobe Pattern|Type|6|R1|Begin~0~End~9~Txt~Program 1|R2|Begin~10~End~29~Txt~Program 2|R3|Begin~30~End~49~Txt~Program 3|R4|Begin~50~End~69~Txt~Program 4|R5|Begin~70~End~89~Txt~Program 5|R6|Begin~90~End~109~Txt~Program 6|R7|Begin~110~End~129~Txt~Program 7|R8|Begin~130~End~149~Txt~Program 8|R9|Begin~150~End~169~Txt~Program 9|R10|Begin~170~End~189~Txt~Program 10|R11|Begin~190~End~209~Txt~slow…fast|R12|Begin~210~End~255~Txt~sound-controlled
+ID|White Strobe Dimmer|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|UV Strobe Dimmer|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|White/UV Strobe speed|Type|28|R1|Begin~0~End~255~Txt~slow…fast
+ID|Pars/Derby Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Pars/Derby Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Pars/Derby Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Pars/Derby UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Pars/Derby Shutter|Type|6|R1|Begin~0~End~127~Txt~Intensity off…bright|R2|Begin~128~End~239~Txt~Strobe slow…fast|R3|Begin~240~End~249~Txt~Strobe sound-controlled|R4|Begin~250~End~255~Txt~Shutter open
+ID|Derby Rotation|Type|33|R1|Begin~0~End~4~Txt~Stop|R2|Begin~5~End~127~Txt~CW slow…fast|R3|Begin~128~End~133~Txt~Stop|R4|Begin~134~End~255~Txt~CCW slow…fast
+ID|Red Laser|Type|43|R1|Begin~0~End~4~Txt~Red off|R2|Begin~5~End~54~Txt~Red bright|R3|Begin~55~End~255~Txt~Strobe slow…fast
+ID|Laser|Type|43|R1|Begin~0~End~4~Txt~Red off|R2|Begin~5~End~54~Txt~Red bright|R3|Begin~55~End~255~Txt~Strobe slow…fast
+ID|White Strobe|Type|6|R1|Begin~0~End~54~Txt~White off…bright|R2|Begin~55~End~255~Txt~Strobe slow…fast
+ID|UV Strobe|Type|6|R1|Begin~0~End~54~Txt~White off…bright|R2|Begin~55~End~255~Txt~Strobe slow…fast
+ID|LED Operation|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~119~Txt~Auto mixed mode 1 fast..slow|R3|Begin~120~End~229~Txt~Auto mixed mode 2 fast..slow|R4|Begin~230~End~234~Txt~Sound mixed mode 1|R5|Begin~235~End~239~Txt~Sound mixed mode 2|R6|Begin~240~End~255~Txt~Show setting
+ID|Show setting|Type|0|R1|Begin~0~End~9~Txt~No function Blackout|R2|Begin~10~End~19~Txt~Pars on ONLY, doing all single Par show|R3|Begin~20~End~29~Txt~Derby Lights on ONLY|R4|Begin~30~End~39~Txt~Laser on ONLY|R5|Begin~40~End~49~Txt~Strobes on ONLY|R6|Begin~50~End~59~Txt~Auto Pars amd Derby Lights ONLY|R7|Begin~60~End~69~Txt~Auto Pars and Laser ONLY|R8|Begin~70~End~79~Txt~Auto Pars and Strobes ONLY|R9|Begin~80~End~89~Txt~Auto Derby Lights and Laser ONLY|R10|Begin~90~End~99~Txt~Auto Strobes and Derby Lights ONLY|R11|Begin~100~End~109~Txt~Pars, Derby Lights and Laser|R12|Begin~110~End~119~Txt~Pars, Derby Lights and Strobes|R13|Begin~120~End~129~Txt~Pars, Laser and Strobes|R14|Begin~130~End~139~Txt~Derby Lights, Laser and Strobes|R15|Begin~140~End~149~Txt~Sound Par effect|R16|Begin~150~End~159~Txt~Sound Derby effect|R17|Begin~160~End~169~Txt~Sound Laser effect|R18|Begin~170~End~179~Txt~Sound Strobe effect|R19|Begin~180~End~189~Txt~Sound Par + Derby|R20|Begin~190~End~199~Txt~Sound Par + Laser|R21|Begin~200~End~209~Txt~Sound Par + Strobe|R22|Begin~210~End~219~Txt~Sound Derby + Laser|R23|Begin~220~End~229~Txt~Sound Derby + Laser|R24|Begin~230~End~239~Txt~Sound Pars, Derby Lights and Laser|R25|Begin~240~End~244~Txt~Sound Pars, Derby and Strobes|R26|Begin~245~End~249~Txt~Sound Pars, Laser and Strobes|R27|Begin~250~End~255~Txt~Sound Derby Lights, Laser and Strobes
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|23-channel|ShortName|23ch|Content|PAR 1 Red~PAR 1 Green~PAR 1 Blue~PAR 1 UV~PAR 1 Shutter~PAR 2 Red~PAR 2 Green~PAR 2 Blue~PAR 2 UV~PAR 2 Shutter~Derby 1 Color~Derby 1 Strobe~Derby 1 Rotation~Derby 2 Color~Derby 2 Strobe~Derby 2 Rotation~Laser Color~Laser Strobe~Laser Movement Speed~Strobe Pattern~White Strobe Dimmer~UV Strobe Dimmer~White/UV Strobe speed
+Name|11-channel|ShortName|11ch|Content|Pars/Derby Red~Pars/Derby Green~Pars/Derby Blue~Pars/Derby UV~Pars/Derby Shutter~Derby Rotation~Red Laser~Laser~Laser Movement Speed~White Strobe~UV Strobe
+Name|3-channel|ShortName|3ch|Content|LED Operation~Show setting~Auto Program Speed
+[END_MODES]

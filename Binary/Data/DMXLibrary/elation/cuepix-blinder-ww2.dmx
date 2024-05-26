@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/9941/Elation%20Cuepix%20Blinder%20WW2%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.elationlighting.com/cuepix-blinder-ww2
+[GENERAL]
+Manufacturer|Elation|Name|CUEPIX Blinder WW2|Type|30|Authors|Dávid Czirók, István Király|Creator|OFL
+[PHYSICAL]
+Width|259|Height|181|Depth|478|Weight|5.10|Power|229|Connector|3-pin and 5-pin|Bulb|100W Warm White COB LEDs|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Warm white|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimming Curve|Type|0|R1|Begin~0~End~41~Txt~Standard|R2|Begin~42~End~84~Txt~Stage|R3|Begin~85~End~127~Txt~TV|R4|Begin~128~End~170~Txt~Architectural|R5|Begin~171~End~213~Txt~Theatre|R6|Begin~214~End~255~Txt~Default to unit setting
+ID|Strobe|Type|6|DefaultValue|32|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Warm white Left|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm white Right|Type|23|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Warm white
+Name|2-channel|ShortName|2ch|Content|Warm white~Dimming Curve
+Name|3-channel|ShortName|3ch|Content|Warm white~Strobe~Dimming Curve
+Name|4-channel|ShortName|4ch|Content|Warm white Left~Warm white Right~Strobe~Dimming Curve
+[END_MODES]
