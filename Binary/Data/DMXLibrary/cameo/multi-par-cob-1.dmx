@@ -1,0 +1,53 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLMPARCOB1/CLMPARCOB1_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|product page|Url2|https://www.musikhaus-korn.de/en/cameo-multi-par-cob-1-set/pd/60366|LinkType3|video|Url3|https://www.youtube.com/watch?v=LeBgnYJFcGA
+[GENERAL]
+Manufacturer|cameo|Name|Multi PAR COB 1|Type|36|Authors|Pascal Frank|Creator|OFL
+[PHYSICAL]
+Width|1005|Height|258|Depth|80|Weight|9.00|Power|120|Connector|3-pin|Bulb|RGB COB LED|Lens|Fesnel Lens|LensMinDegree|25.000|LensMaxDegree|50.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Color macro 1|Type|12|R1|Begin~0~End~4~Txt~Blackout|R2|Begin~5~End~36~Txt~Red~Extra~#ff0000|R3|Begin~37~End~73~Txt~Green~Extra~#00ff00|R4|Begin~74~End~110~Txt~Blue~Extra~#0000ff|R5|Begin~111~End~147~Txt~Yellow~Extra~#ffff00|R6|Begin~148~End~184~Txt~Magenta~Extra~#ff00ff|R7|Begin~185~End~221~Txt~Cyan~Extra~#00ffff|R8|Begin~222~End~255~Txt~White~Extra~#ffffff
+ID|Color macro 2|Type|12|R1|Begin~0~End~4~Txt~Blackout|R2|Begin~5~End~36~Txt~Red~Extra~#ff0000|R3|Begin~37~End~73~Txt~Green~Extra~#00ff00|R4|Begin~74~End~110~Txt~Blue~Extra~#0000ff|R5|Begin~111~End~147~Txt~Yellow~Extra~#ffff00|R6|Begin~148~End~184~Txt~Magenta~Extra~#ff00ff|R7|Begin~185~End~221~Txt~Cyan~Extra~#00ffff|R8|Begin~222~End~255~Txt~White~Extra~#ffffff
+ID|Color macro 3|Type|12|R1|Begin~0~End~4~Txt~Blackout|R2|Begin~5~End~36~Txt~Red~Extra~#ff0000|R3|Begin~37~End~73~Txt~Green~Extra~#00ff00|R4|Begin~74~End~110~Txt~Blue~Extra~#0000ff|R5|Begin~111~End~147~Txt~Yellow~Extra~#ffff00|R6|Begin~148~End~184~Txt~Magenta~Extra~#ff00ff|R7|Begin~185~End~221~Txt~Cyan~Extra~#00ffff|R8|Begin~222~End~255~Txt~White~Extra~#ffffff
+ID|Color macro 4|Type|12|R1|Begin~0~End~4~Txt~Blackout|R2|Begin~5~End~36~Txt~Red~Extra~#ff0000|R3|Begin~37~End~73~Txt~Green~Extra~#00ff00|R4|Begin~74~End~110~Txt~Blue~Extra~#0000ff|R5|Begin~111~End~147~Txt~Yellow~Extra~#ffff00|R6|Begin~148~End~184~Txt~Magenta~Extra~#ff00ff|R7|Begin~185~End~221~Txt~Cyan~Extra~#00ffff|R8|Begin~222~End~255~Txt~White~Extra~#ffffff
+ID|Power Out 1|Type|0|R1|Begin~0~End~127~Txt~Off|R2|Begin~128~End~255~Txt~On
+ID|Power Out 2|Type|0|R1|Begin~0~End~127~Txt~Off|R2|Begin~128~End~255~Txt~On
+ID|Red 1+2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1+2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1+2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3+4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3+4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3+4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Sound / Strobe|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~128~Txt~low..high|R3|Begin~129~End~255~Txt~slow..fast
+ID|Macros|Type|0|R1|Begin~0~End~15~Txt~No function~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R2|Begin~16~End~23~Txt~Red~Extra~#ff0000~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R3|Begin~24~End~31~Txt~Green~Extra~#00ff00~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R4|Begin~32~End~39~Txt~Blue~Extra~#0000ff~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R5|Begin~40~End~47~Txt~Red+Green~Extra~#ffff00~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R6|Begin~48~End~55~Txt~Green+Blue~Extra~#00ffff~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R7|Begin~56~End~63~Txt~Red+Blue~Extra~#ff00ff~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R8|Begin~64~End~71~Txt~Red+Green+Blue~Extra~#ffffff~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R9|Begin~72~End~79~Txt~Preset Color 1~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R10|Begin~80~End~87~Txt~Preset Color 2~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R11|Begin~88~End~95~Txt~Preset Color 3~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R12|Begin~96~End~103~Txt~Preset Color 4~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R13|Begin~104~End~111~Txt~Preset Color 5~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R14|Begin~112~End~119~Txt~Preset Color 6~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R15|Begin~120~End~127~Txt~Preset Color 7~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R16|Begin~128~End~135~Txt~Preset Color 8~Switch1~Dimmer / Speed / Sensitivity:Master Dimmer|R17|Begin~136~End~143~Txt~Dream~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R18|Begin~144~End~151~Txt~Meteor~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R19|Begin~152~End~159~Txt~Fade~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R20|Begin~160~End~167~Txt~Change~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R21|Begin~168~End~175~Txt~Flow 1~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R22|Begin~176~End~183~Txt~Flow 2~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R23|Begin~184~End~191~Txt~Flow 3~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R24|Begin~192~End~199~Txt~Flow 4~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R25|Begin~200~End~207~Txt~Flow 5~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R26|Begin~208~End~215~Txt~Flow 6~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R27|Begin~216~End~223~Txt~Flow 7~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R28|Begin~224~End~231~Txt~Flow 8~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R29|Begin~232~End~239~Txt~Flow 9~Switch1~Dimmer / Speed / Sensitivity:Effect Speed|R30|Begin~240~End~255~Txt~Music control~Switch1~Dimmer / Speed / Sensitivity:Sound Sensitivity
+ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~slow..fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|3-Channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-Channel|ShortName|4ch|Content|Color macro 1~Color macro 2~Color macro 3~Color macro 4
+Name|5-Channel|ShortName|5ch|Content|Red~Green~Blue~Power Out 1~Power Out 2
+Name|6-Channel|ShortName|6ch|Content|Red 1+2~Green 1+2~Blue 1+2~Red 3+4~Green 3+4~Blue 3+4
+Name|7-Channel|ShortName|7ch|Content|Red~Green~Blue~Master Dimmer~Sound / Strobe~Power Out 1~Power Out 2
+Name|8-Channel|ShortName|8ch|Content|Macros~Dimmer / Speed / Sensitivity:Master Dimmer;Effect Speed;Sound Sensitivity~Strobe~Red~Green~Blue~Power Out 1~Power Out 2
+Name|12-Channel|ShortName|12ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4
+Name|17-Channel|ShortName|17ch|Content|Macros~Dimmer / Speed / Sensitivity:Master Dimmer;Effect Speed;Sound Sensitivity~Strobe~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Power Out 1~Power Out 2
+[END_MODES]
