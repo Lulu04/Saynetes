@@ -245,12 +245,17 @@ var i, j: integer;
 begin
   if Length(FChannels) = 0 then exit;
 
-  for i:=SE1.Value to SE2.Value do begin
-    for j:=0 to High(FChannels) do begin
-      chan := FChannels[j];
-      chan.NameID := GetChannelName(chan.NameID, i);
-      FOnAddChannel(chan);
+  try
+    Screen.BeginWaitCursor;
+    for i:=SE1.Value to SE2.Value do begin
+      for j:=0 to High(FChannels) do begin
+        chan := FChannels[j];
+        chan.NameID := GetChannelName(chan.NameID, i);
+        FOnAddChannel(chan);
+      end;
     end;
+  finally
+    Screen.EndWaitCursor;
   end;
 
   ModalResult := mrOk;

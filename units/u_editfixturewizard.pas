@@ -188,7 +188,12 @@ uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
 
 procedure TFormFixtureWizard.FormShow(Sender: TObject);
 begin
-  UpdateFixtureImages;
+  Screen.BeginWaitCursor;
+  try
+    UpdateFixtureImages;
+  finally
+    Screen.EndWaitCursor;
+  end;
 
   // reset the virtual channels
   FVirtualChannelInMode := NIL;

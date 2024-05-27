@@ -57,7 +57,12 @@ end;
 
 procedure TFormDMXLibrary.FormShow(Sender: TObject);
 begin
-  FrameViewDMXLibrary1.Fill;
+  Screen.BeginWaitCursor;
+  try
+    FrameViewDMXLibrary1.Fill;
+  finally
+    Screen.EndWaitCursor;
+  end;
 
   Label1.Caption := SChannels_;
 end;
