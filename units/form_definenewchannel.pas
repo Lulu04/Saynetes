@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Spin, Grids, Buttons, LCLTranslator, LCLType,
+  Spin, Buttons, LCLTranslator, LCLType,
   u_list_dmxuniverse, frame_cb_channeltype, u_common, u_notebook_util,
   frame_editrange;
 
@@ -16,6 +16,7 @@ type
   { TFormDefineNewChannel }
 
   TFormDefineNewChannel = class(TForm)
+    BRangesGenerator: TSpeedButton;
     BOK: TSpeedButton;
     BCancel: TSpeedButton;
     Edit1: TEdit;
@@ -49,6 +50,7 @@ type
     Shape4: TShape;
     BImportRanges: TSpeedButton;
     Splitter1: TSplitter;
+    procedure BRangesGeneratorClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -88,7 +90,7 @@ type
 
 implementation
 
-uses u_resource_string, form_selectsourcechannel, Math;
+uses u_resource_string, form_selectsourcechannel, form_rangesgenerator, Math;
 
 {$R *.lfm}
 
@@ -102,6 +104,7 @@ begin
   Label1.Caption := SCreateNew;
   Label2.Caption := SName;
   Label5.Caption := SNameAlreadyUsed;
+  BRangesGenerator.Caption := sRangesGenerator;
 
 
   Label7.Caption := SMin;
@@ -238,7 +241,7 @@ end;
 
 procedure TFormDefineNewChannel.ProcessLineBeginEndChangeEvent(Sender: TObject);
 var current, prev, nex: TFrameEditRange;
-  i, v: integer;
+  i: integer;
   procedure SetAsLastLine(aIndex: integer);
   var j: integer;
   begin
@@ -267,7 +270,8 @@ begin
       nex := FLines[i+1];
     end;
     nex.BeginValue := current.EndValue + 1;
-    nex.EndValue := 255;
+    if nex = FLines[High(FLines)] then
+      nex.EndValue := 255;
   end else SetAsLastLine(i);
 
   FLockOnBeginEndValueChange := False;
@@ -361,7 +365,6 @@ end;
 
 procedure TFormDefineNewChannel.EditExistingChannel(p: PFixLibAvailableChannel);
 var i: integer;
-  s: string;
   o: TFrameEditRange;
 begin
   FEditingChannel := True;
@@ -417,6 +420,44 @@ begin
 
   if Sender = BCancel then begin
     ModalResult := mrCancel;
+  end;
+end;
+
+procedure TFormDefineNewChannel.BRangesGeneratorClick(Sender: TObject);
+var F: TFormRangesGenerator;
+  i, j, current: integer;
+begin
+  F := TFormRangesGenerator.Create(NIL);
+  try
+    if F.ShowModal = mrOk then begin
+      if F.BeginValue = 0 then DoDeleteAllLines;
+      if Length(FLines) > 0 then begin
+        // search the first line to delete
+        for i:=0 to High(FLines) do
+          if FLines[i].BeginValue >= F.BeginValue then break;
+        for j:=High(FLines) downto i do
+          DoDeleteLine(j);
+      end;
+      // Add ranges
+      current := F.BeginValue;
+      for i:=1 to F.Count do begin
+        DoAddLine;
+        j := High(FLines);
+        FLines[j].BeginValue := current;
+        FLines[j].EndValue := current + F.RangeWidth-1;
+        FLines[j].Description := F.GetFunctionality(i);
+        current := current + F.RangeWidth;
+      end;
+      // add the last range if needed
+      if FLines[j].EndValue < 255 then begin
+        DoAddLine;
+        i := High(FLines);
+        FLines[i].BeginValue := FLines[j].EndValue + 1;
+        FLines[i].EndValue := 255;
+      end;
+    end;
+  finally
+    F.Free;
   end;
 end;
 

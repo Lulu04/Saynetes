@@ -31,7 +31,7 @@ form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
 form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
 form_selectexistingswitchingchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
-form_selectsourcechannel;
+form_selectsourcechannel, form_rangesgenerator;
 
 {$R *.res}
 

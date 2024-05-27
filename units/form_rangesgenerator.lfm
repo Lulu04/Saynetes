@@ -1,0 +1,226 @@
+object FormRangesGenerator: TFormRangesGenerator
+  Left = 597
+  Height = 593
+  Top = 199
+  Width = 335
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 593
+  ClientWidth = 335
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 593
+    Top = 0
+    Width = 335
+    Align = alClient
+    BevelColor = 4227327
+    BevelWidth = 2
+    ClientHeight = 593
+    ClientWidth = 335
+    Color = 4345683
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 20
+      Top = 8
+      Width = 129
+      Caption = 'sRangesGenerator'
+      Font.Color = 15395562
+      Font.Height = 20
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 12
+      Height = 20
+      Top = 45
+      Width = 78
+      Caption = 'Begin Value'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object BOK: TSpeedButton
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 213
+      Height = 26
+      Top = 555
+      Width = 100
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Right = 20
+      BorderSpacing.Bottom = 10
+      Constraints.MinHeight = 26
+      Constraints.MinWidth = 100
+      Caption = 'sOk'
+      Color = 16433669
+      Flat = True
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 3
+      Transparent = False
+      OnClick = BOKClick
+      ParentFont = False
+    end
+    object SpinEdit1: TSpinEdit
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 12
+      Height = 23
+      Top = 65
+      Width = 71
+      MaxValue = 255
+      OnChange = SpinEdit1Change
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 168
+      Height = 20
+      Top = 45
+      Width = 83
+      Caption = 'Range width'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpinEdit2: TSpinEdit
+      AnchorSideLeft.Control = Label3
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 168
+      Height = 23
+      Top = 65
+      Width = 71
+      MaxValue = 255
+      MinValue = 1
+      OnChange = SpinEdit1Change
+      TabOrder = 1
+      Value = 1
+    end
+    object SpinEdit3: TSpinEdit
+      AnchorSideLeft.Control = Label4
+      AnchorSideTop.Control = Label4
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 12
+      Height = 23
+      Top = 124
+      Width = 71
+      MaxValue = 255
+      OnChange = SpinEdit1Change
+      TabOrder = 2
+      Value = 1
+    end
+    object Label4: TLabel
+      Left = 12
+      Height = 20
+      Top = 104
+      Width = 45
+      Caption = 'sCount'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object LB: TListBox
+      AnchorSideLeft.Control = Label5
+      AnchorSideTop.Control = Label5
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BOK
+      Left = 12
+      Height = 301
+      Top = 244
+      Width = 311
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Right = 10
+      BorderSpacing.Bottom = 10
+      Color = 4345683
+      Font.Color = 15395562
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 3
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = Panel1
+      Left = 12
+      Height = 20
+      Top = 224
+      Width = 57
+      BorderSpacing.Left = 10
+      Caption = 'sPreview'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      AnchorSideLeft.Control = Panel1
+      Left = 12
+      Height = 20
+      Top = 168
+      Width = 46
+      BorderSpacing.Left = 10
+      Caption = 'sName'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Label6
+      AnchorSideTop.Control = Label6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LB
+      AnchorSideRight.Side = asrBottom
+      Left = 12
+      Height = 23
+      Top = 188
+      Width = 311
+      Anchors = [akTop, akLeft, akRight]
+      OnChange = SpinEdit1Change
+      TabOrder = 4
+    end
+    object Label7: TLabel
+      Left = 168
+      Height = 20
+      Top = 104
+      Width = 91
+      Caption = 'Display offset'
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpinEdit4: TSpinEdit
+      AnchorSideLeft.Control = Label7
+      AnchorSideTop.Control = Label7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 168
+      Height = 23
+      Top = 124
+      Width = 71
+      MaxValue = 255
+      OnChange = SpinEdit1Change
+      TabOrder = 5
+    end
+  end
+end

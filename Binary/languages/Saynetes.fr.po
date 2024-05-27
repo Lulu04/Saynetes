@@ -85,7 +85,7 @@ msgstr "Déplace la sélection"
 
 #: tformdefinenewchannel.bimportranges.caption
 msgid "Import ranges from another channel..."
-msgstr ""
+msgstr "Importer les plages d'un autre canal..."
 
 #: tformdefinenewchannel.label4.caption
 msgid "Default value"
@@ -908,13 +908,29 @@ msgstr ""
 "Cet assistant va vous aider à créer un nouveau projet\n"
 "Cliquez sur 'Suivant' pour continuer…"
 
+#: tformrangesgenerator.label2.caption
+msgid "Begin Value"
+msgstr "Valeur de début"
+
+#: tformrangesgenerator.label3.caption
+msgid "Range width"
+msgstr "Largeur de plage"
+
+#: tformrangesgenerator.label5.caption
+msgid "sPreview"
+msgstr ""
+
+#: tformrangesgenerator.label7.caption
+msgid "Display offset"
+msgstr "Offset d'affichage"
+
 #: tformselectchannel.bok.caption
 msgid "SOk"
 msgstr ""
 
 #: tformselectchannel.label2.caption
 msgid "Select the source channel"
-msgstr ""
+msgstr "Sélectionnez le canal source"
 
 #: tformselectexistingchannel.baddexisting.caption
 msgctxt "tformselectexistingchannel.baddexisting.caption"
@@ -2393,54 +2409,48 @@ msgid "BACK TO THE BEGINNING"
 msgstr "REVENIR AU DÉBUT"
 
 #: u_resource_string.sbarcoloredled
-#, fuzzy
-#| msgid "Bar colored led"
 msgid "Bar colored LED"
 msgstr "Barre de LED colorées"
 
 #: u_resource_string.sbarmediumcoloredled
 msgid "Medium bar colored LED"
-msgstr ""
+msgstr "Barre moyenne à LED colorées"
 
 #: u_resource_string.sbarmediumtransparentled
 msgid "Medium bar transparent LED"
-msgstr ""
+msgstr "Barre moyenne à LED transparentes"
 
 #: u_resource_string.sbarshortcoloredled
-#, fuzzy
-#| msgid "Short bar colored led"
 msgid "Short bar colored LED"
 msgstr "Barre courte de LED colorées"
 
 #: u_resource_string.sbarshorttransparentled
-#, fuzzy
-#| msgid "Short bar transparent led"
 msgid "Short bar transparent LED"
 msgstr "Barre courte de LED transparentes"
 
 #: u_resource_string.sbarshortx2coloredled
 msgid "Short bar with multiple rows and colored LED"
-msgstr ""
+msgstr "Barre courte avec plusieurs rangées et LED colorées"
 
 #: u_resource_string.sbarshortx2transparentled
 msgid "Short bar with multiple rows and transparent LED"
-msgstr ""
+msgstr "Barre courte avec plusieurs rangées et LED transparentes"
 
 #: u_resource_string.sbarx2coloredled
 msgid "Long bar with multiple rows and colored LED"
-msgstr ""
+msgstr "Barre longue avec plusieurs rangées et LED colorées"
 
 #: u_resource_string.sbarx2mediumcoloredled
 msgid "Medium bar with multiple rows and colored LED"
-msgstr ""
+msgstr "Barre moyenne avec plusieurs rangées et LED colorées"
 
 #: u_resource_string.sbarx2mediumtransparentled
 msgid "Medium bar with multiple rows and transparent LED"
-msgstr ""
+msgstr "Barre moyenne avec plusieurs rangées et LED transparentes"
 
 #: u_resource_string.sbarx2transparentled
 msgid "Long bar with multiple rows and transparent LED"
-msgstr ""
+msgstr "Barre longue avec plusieurs rangées et LED transparents"
 
 #: u_resource_string.sbegin
 msgctxt "u_resource_string.sbegin"
@@ -2559,6 +2569,10 @@ msgstr "Copie RVB"
 #: u_resource_string.scopy_
 msgid "copy"
 msgstr "copie"
+
+#: u_resource_string.scount
+msgid "Count"
+msgstr "Nombre"
 
 #: u_resource_string.scrackling
 msgctxt "u_resource_string.scrackling"
@@ -2991,6 +3005,10 @@ msgstr "Trouvé"
 msgid "from"
 msgstr "de"
 
+#: u_resource_string.sfunctionality
+msgid "Functionality"
+msgstr "Fonctionalité"
+
 #: u_resource_string.sgain
 msgctxt "u_resource_string.sgain"
 msgid "Gain"
@@ -3074,20 +3092,14 @@ msgid " last range should end on 255"
 msgstr " la dernière plage devrait finir sur 255"
 
 #: u_resource_string.sledbartransparentled
-#, fuzzy
-#| msgid "Bar transparent led"
 msgid "Bar transparent LED"
 msgstr "Barre de LED transparentes"
 
 #: u_resource_string.sledparlongcoloredled
-#, fuzzy
-#| msgid "Long PAR colored led"
 msgid "Long PAR colored LED"
 msgstr "PAR long avec LED colorées"
 
 #: u_resource_string.sledparshortcoloredled
-#, fuzzy
-#| msgid "Short PAR colored led"
 msgid "Short PAR colored LED"
 msgstr "PAR court avec LED colorées"
 
@@ -3139,14 +3151,10 @@ msgid "Manufacturer name:"
 msgstr "Nom du constructeur:"
 
 #: u_resource_string.smatrixcoloredled
-#, fuzzy
-#| msgid "Matrix colored led"
 msgid "Matrix colored LED"
 msgstr "Matrice de LED colorées"
 
 #: u_resource_string.smatrixtransparentled
-#, fuzzy
-#| msgid "Matrix transparent led"
 msgid "Matrix transparent LED"
 msgstr "Matrice de LED transparentes"
 
@@ -3367,20 +3375,14 @@ msgid "Long PAR with bulb"
 msgstr "PAR long avec ampoule"
 
 #: u_resource_string.sparlongtransparentled
-#, fuzzy
-#| msgid "Long PAR transparent led"
 msgid "Long PAR transparent LED"
 msgstr "PAR long à LED transparentes"
 
 #: u_resource_string.sparrectangularmultiplecoloredled
-#, fuzzy
-#| msgid "Rectangular PAR with multiple colored led"
 msgid "Rectangular PAR with multiple colored LED"
 msgstr "PAR rectangulaire avec plusieurs LED colorées"
 
 #: u_resource_string.sparrectangularmultipletransparentled
-#, fuzzy
-#| msgid "Rectangular PAR with multiple transparent led"
 msgid "Rectangular PAR with multiple transparent LED"
 msgstr "PAR rectangulaire avec plusieurs LED transparentes"
 
@@ -3389,8 +3391,6 @@ msgid "Short PAR with bulb"
 msgstr "PAR court avec ampoule"
 
 #: u_resource_string.sparshorttransparentled
-#, fuzzy
-#| msgid "Short PAR transparent led"
 msgid "Short PAR transparent LED"
 msgstr "PAR court à LED transparentes"
 
@@ -3469,6 +3469,11 @@ msgstr ""
 "Vous permet de sauvegarder vos réglages\n"
 "afin de les réutiliser plus tard"
 
+#: u_resource_string.spreview
+msgctxt "u_resource_string.spreview"
+msgid "Preview"
+msgstr "Aperçu"
+
 #: u_resource_string.sprevious
 msgid "Previous"
 msgstr "Précédent"
@@ -3496,8 +3501,6 @@ msgid "Square"
 msgstr "Carré"
 
 #: u_resource_string.squareparmultiplecoloredled
-#, fuzzy
-#| msgid "Square PAR with multiple colored led"
 msgid "Square PAR with multiple colored LED"
 msgstr "PAR carré avec plusieurs LED colorées"
 
@@ -3527,6 +3530,14 @@ msgstr "Valeur aléatoire"
 msgctxt "u_resource_string.srandomvaluebetween"
 msgid "Random value between"
 msgstr "Valeur aléatoire entre"
+
+#: u_resource_string.srange
+msgid "Range"
+msgstr "Plage"
+
+#: u_resource_string.srangesgenerator
+msgid "Ranges generator"
+msgstr "Générateur de plages"
 
 #: u_resource_string.sready
 msgid "Ready"
@@ -3710,14 +3721,10 @@ msgid "Speed"
 msgstr "Vitesse"
 
 #: u_resource_string.ssquareparmultipletransparentled
-#, fuzzy
-#| msgid "Square PAR with multiple transparent led"
 msgid "Square PAR with multiple transparent LED"
 msgstr "PAR carré avec plusieurs LED transparentes"
 
 #: u_resource_string.ssquareparsingletransparentled
-#, fuzzy
-#| msgid "Square PAR with single transparent led"
 msgid "Square PAR with single transparent LED"
 msgstr "PAR carré avec une seule led transparente"
 
@@ -3937,4 +3944,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-
