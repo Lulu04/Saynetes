@@ -1,7 +1,7 @@
 object FormDefineNewChannel: TFormDefineNewChannel
-  Left = 230
+  Left = 286
   Height = 496
-  Top = 148
+  Top = 145
   Width = 992
   BorderIcons = [biSystemMenu]
   ClientHeight = 496
@@ -97,7 +97,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 203
+      Top = 213
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -128,7 +128,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 269
+      Top = 279
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -214,13 +214,13 @@ object FormDefineNewChannel: TFormDefineNewChannel
     end
     object Panel2: TPanel
       AnchorSideLeft.Control = SE1
-      AnchorSideTop.Control = BImportRanges
+      AnchorSideTop.Control = BRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = SB
       AnchorSideRight.Side = asrBottom
       Left = 8
       Height = 26
-      Top = 157
+      Top = 167
       Width = 842
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 2
@@ -453,8 +453,8 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 303
-      Top = 183
+      Height = 293
+      Top = 193
       Width = 862
       HorzScrollBar.Page = 1
       VertScrollBar.Increment = 20
@@ -487,6 +487,29 @@ object FormDefineNewChannel: TFormDefineNewChannel
       ImageIndex = 8
       Transparent = False
       OnClick = BImportRangesClick
+      ParentFont = False
+    end
+    object BRangesGenerator: TSpeedButton
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = SE1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 8
+      Height = 20
+      Top = 145
+      Width = 119
+      AutoSize = True
+      BorderSpacing.Top = 10
+      Caption = 'sRangesGenerator'
+      Color = 16433669
+      Flat = True
+      Font.Color = 15395562
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      Transparent = False
+      OnClick = BRangesGeneratorClick
       ParentFont = False
     end
   end

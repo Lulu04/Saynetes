@@ -850,6 +850,22 @@ msgid ""
 "Click 'Next' to continue..."
 msgstr ""
 
+#: tformrangesgenerator.label2.caption
+msgid "Begin Value"
+msgstr ""
+
+#: tformrangesgenerator.label3.caption
+msgid "Range width"
+msgstr ""
+
+#: tformrangesgenerator.label5.caption
+msgid "sPreview"
+msgstr ""
+
+#: tformrangesgenerator.label7.caption
+msgid "Display offset"
+msgstr ""
+
 #: tformselectchannel.bok.caption
 msgid "SOk"
 msgstr ""
@@ -2459,6 +2475,10 @@ msgstr ""
 msgid "copy"
 msgstr ""
 
+#: u_resource_string.scount
+msgid "Count"
+msgstr ""
+
 #: u_resource_string.scrackling
 msgid "Crackling"
 msgstr ""
@@ -2884,6 +2904,10 @@ msgstr ""
 
 #: u_resource_string.sfrom
 msgid "from"
+msgstr ""
+
+#: u_resource_string.sfunctionality
+msgid "Functionality"
 msgstr ""
 
 #: u_resource_string.sgain
@@ -3341,6 +3365,11 @@ msgid ""
 "to use them later"
 msgstr ""
 
+#: u_resource_string.spreview
+msgctxt "u_resource_string.spreview"
+msgid "Preview"
+msgstr ""
+
 #: u_resource_string.sprevious
 msgid "Previous"
 msgstr ""
@@ -3396,6 +3425,14 @@ msgstr ""
 #: u_resource_string.srandomvaluebetween
 msgctxt "u_resource_string.srandomvaluebetween"
 msgid "Random value between"
+msgstr ""
+
+#: u_resource_string.srange
+msgid "Range"
+msgstr ""
+
+#: u_resource_string.srangesgenerator
+msgid "Ranges generator"
 msgstr ""
 
 #: u_resource_string.sready

@@ -12,5 +12,6 @@
 {"hash":8218606,"name":"tformdefinenewchannel.label9.caption","sourcebytes":[115,68,101,115,99,114,105,112,116,105,111,110],"value":"sDescription"},
 {"hash":11429491,"name":"tformdefinenewchannel.label10.caption","sourcebytes":[115,83,119,105,116,99,104,101,114,115],"value":"sSwitchers"},
 {"hash":125631361,"name":"tformdefinenewchannel.label11.caption","sourcebytes":[115,69,120,116,114,97],"value":"sExtra"},
-{"hash":233092782,"name":"tformdefinenewchannel.bimportranges.caption","sourcebytes":[73,109,112,111,114,116,32,114,97,110,103,101,115,32,102,114,111,109,32,97,110,111,116,104,101,114,32,99,104,97,110,110,101,108,46,46,46],"value":"Import ranges from another channel..."}
+{"hash":233092782,"name":"tformdefinenewchannel.bimportranges.caption","sourcebytes":[73,109,112,111,114,116,32,114,97,110,103,101,115,32,102,114,111,109,32,97,110,111,116,104,101,114,32,99,104,97,110,110,101,108,46,46,46],"value":"Import ranges from another channel..."},
+{"hash":1277986,"name":"tformdefinenewchannel.brangesgenerator.caption","sourcebytes":[115,82,97,110,103,101,115,71,101,110,101,114,97,116,111,114],"value":"sRangesGenerator"}
 ]}

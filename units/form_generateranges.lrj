@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":1277986,"name":"tformgenrerateranges.label1.caption","sourcebytes":[115,82,97,110,103,101,115,71,101,110,101,114,97,116,111,114],"value":"sRangesGenerator"},
+{"hash":1367477,"name":"tformgenrerateranges.label2.caption","sourcebytes":[66,101,103,105,110,32,86,97,108,117,101],"value":"Begin Value"},
+{"hash":127420876,"name":"tformgenrerateranges.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
+{"hash":30811,"name":"tformgenrerateranges.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
+{"hash":119897976,"name":"tformgenrerateranges.label3.caption","sourcebytes":[82,97,110,103,101,32,119,105,100,116,104],"value":"Range width"},
+{"hash":125463636,"name":"tformgenrerateranges.label4.caption","sourcebytes":[115,67,111,117,110,116],"value":"sCount"},
+{"hash":126666823,"name":"tformgenrerateranges.label5.caption","sourcebytes":[115,80,114,101,118,105,101,119],"value":"sPreview"},
+{"hash":7882805,"name":"tformgenrerateranges.label6.caption","sourcebytes":[115,78,97,109,101],"value":"sName"}
+]}

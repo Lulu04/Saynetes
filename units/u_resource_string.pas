@@ -208,11 +208,15 @@ resourcestring
   SSeats1='Seats1';
   SSeats2='Seats2';
 
-
+  sRangesGenerator='Ranges generator';
   SSelection='Selection';
   SView='View';
   SBegin='Begin';
   SEnd='End';
+  SRange='Range';
+  SCount='Count';
+  SFunctionality='Functionality';
+  SPreview='Preview';
   SDuration='Duration';
   SModifyDuration='Modify duration';
   SSecond='second';
