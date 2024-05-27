@@ -183,6 +183,7 @@ begin
   ftBarMediumColoredLed: Result+='46_BarMediumColoredLed.svg';
   ftBarx2MediumColoredLed: Result+='47_Barx2MediumColoredLed.svg';
   ftMovingHead04: Result+='48_MovingHead04.svg';
+  ftMovingHead05: Result+='49_MovingHead05.svg';
   else Raise exception.Create('forgot to implement!');
  end;//case
 end;
@@ -238,6 +239,7 @@ begin
    ftBarMediumColoredLed: Result := SBarMediumColoredLed;
    ftBarx2MediumColoredLed: Result := SBarx2MediumColoredLed;
    ftMovingHead04: Result := SMovingHead+' 4';
+   ftMovingHead05: Result := SMovingHead+' 5';
    else Raise exception.Create('forgot to implement!');
   end;//case
 end;
