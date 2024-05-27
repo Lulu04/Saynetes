@@ -1,0 +1,56 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1537956760.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/bt-ledrotor|LinkType3|video|Url3|https://www.youtube.com/watch?v=eP5CmRNi8KA|LinkType4|video|Url4|https://www.youtube.com/watch?v=tehBZU4Vp1A
+[GENERAL]
+Manufacturer|Briteq|Name|BT-LEDROTOR|Type|21|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|700|Height|700|Depth|94|Weight|18.00|Power|240|Connector|3-pin and 5-pin|Bulb|32× 3W UV LEDs, 720× 0.2W RGB LEDs
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Segment Effects|Type|0|R1|Begin~0~End~11~Txt~UV~Extra~#8800ff~Switch1~Segment Effect Control:Strobe|R2|Begin~12~End~22~Txt~Red~Extra~#ff0000~Switch1~Segment Effect Control:Strobe|R3|Begin~23~End~33~Txt~Green~Extra~#00ff00~Switch1~Segment Effect Control:Strobe|R4|Begin~34~End~44~Txt~Blue~Extra~#0000ff~Switch1~Segment Effect Control:Strobe|R5|Begin~45~End~55~Txt~Yellow~Extra~#ffff00~Switch1~Segment Effect Control:Strobe|R6|Begin~56~End~66~Txt~Cyan~Extra~#00ffff~Switch1~Segment Effect Control:Strobe|R7|Begin~67~End~77~Txt~Magenta~Extra~#ff00ff~Switch1~Segment Effect Control:Strobe|R8|Begin~78~End~88~Txt~White~Extra~#ffffff~Switch1~Segment Effect Control:Strobe|R9|Begin~89~End~99~Txt~CFADE~Switch1~Segment Effect Control:Effect Speed|R10|Begin~100~End~110~Txt~Meteor~Switch1~Segment Effect Control:Effect Speed|R11|Begin~111~End~121~Txt~ColorFade~Switch1~Segment Effect Control:Effect Speed|R12|Begin~122~End~132~Txt~ColorJump~Switch1~Segment Effect Control:Effect Speed|R13|Begin~133~End~143~Txt~Flow 1~Switch1~Segment Effect Control:Effect Speed|R14|Begin~144~End~154~Txt~Flow 2~Switch1~Segment Effect Control:Effect Speed|R15|Begin~155~End~165~Txt~Flow 3~Switch1~Segment Effect Control:Effect Speed|R16|Begin~166~End~176~Txt~Flow 4~Switch1~Segment Effect Control:Effect Speed|R17|Begin~177~End~187~Txt~Flow 5~Switch1~Segment Effect Control:Effect Speed|R18|Begin~188~End~198~Txt~Flow 6~Switch1~Segment Effect Control:Effect Speed|R19|Begin~199~End~209~Txt~Flow 7~Switch1~Segment Effect Control:Effect Speed|R20|Begin~210~End~220~Txt~Flow 8~Switch1~Segment Effect Control:Effect Speed|R21|Begin~221~End~231~Txt~Flow 9~Switch1~Segment Effect Control:Effect Speed|R22|Begin~232~End~255~Txt~Random Flow 1…9~Switch1~Segment Effect Control:Effect Speed
+ID|Blades|Type|0|R1|Begin~0~End~7~Txt~All blades switched on|R2|Begin~8~End~15~Txt~Blade A switched on|R3|Begin~16~End~23~Txt~Blade B switched on|R4|Begin~24~End~31~Txt~Blade C switched on|R5|Begin~32~End~47~Txt~Blade D switched on|R6|Begin~48~End~55~Txt~Blade E switched on|R7|Begin~56~End~63~Txt~Blade F switched on|R8|Begin~64~End~71~Txt~Blades A+B switched on|R9|Begin~72~End~79~Txt~Blades A+C switched on|R10|Begin~80~End~87~Txt~Blades A+D switched on|R11|Begin~88~End~95~Txt~Blades A+C+E switched on|R12|Begin~96~End~249~Txt~Random blades switched on/off 10s..0.1s|R13|Begin~250~End~255~Txt~All blades switched on
+ID|Fan Rotation|Type|36|R1|Begin~0~End~127~Txt~Rotation 0deg..360deg|R2|Begin~128~End~189~Txt~Rotation fast CW..slow CW|R3|Begin~190~End~193~Txt~Rotation stop|R4|Begin~194~End~255~Txt~Rotation slow CCW..fast CCW
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB Segment Effects|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~24~Txt~CFADE|R3|Begin~25~End~42~Txt~Meteor|R4|Begin~43~End~60~Txt~ColorFade|R5|Begin~61~End~78~Txt~ColorJump|R6|Begin~79~End~93~Txt~Flow 1|R7|Begin~94~End~110~Txt~Flow 2|R8|Begin~111~End~127~Txt~Flow 3|R9|Begin~128~End~144~Txt~Flow 4|R10|Begin~145~End~161~Txt~Flow 5|R11|Begin~162~End~178~Txt~Flow 6|R12|Begin~179~End~195~Txt~Flow 7|R13|Begin~196~End~212~Txt~Flow 8|R14|Begin~213~End~229~Txt~Flow 9|R15|Begin~230~End~255~Txt~Random Flow 1…9
+ID|RGB Segment Effect Speed|Type|0|R1|Begin~0~End~7~Txt~stop|R2|Begin~8~End~255~Txt~slow..fast
+ID|UV Dimmer|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|UV Strobe|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~slow..fast
+ID|Control|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~13~Txt~Linear dimmer curve|R3|Begin~14~End~19~Txt~Square dimmer curve|R4|Begin~20~End~25~Txt~Inverse square dimmer curve|R5|Begin~26~End~31~Txt~S-curve dimmer curve|R6|Begin~32~End~255~Txt~No function
+ID|Red Segment 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Segment 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Segment 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Segment 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade A Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade A Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Blade B Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade B Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Blade C Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade C Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Blade D Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade D Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Blade E Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade E Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Blade F Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Blade F Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~Slow..Fast
+ID|Effect Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+[END_CHAN_DEF]
+[MODES]
+Name|Easy|ShortName|5ch|Content|Master Dimmer~Segment Effects~Segment Effect Control:Strobe;Effect Speed~Blades~Fan Rotation
+Name|12-channel|ShortName|12ch|Content|Master Dimmer~Strobe~Red~Green~Blue~RGB Segment Effects~RGB Segment Effect Speed~Blades~UV Dimmer~UV Strobe~Fan Rotation~Control
+Name|33-channel|ShortName|33ch|Content|Master Dimmer~Strobe~Red Segment 1~Green Segment 1~Blue Segment 1~Red Segment 2~Green Segment 2~Blue Segment 2~Red Segment 3~Green Segment 3~Blue Segment 3~Red Segment 4~Green Segment 4~Blue Segment 4~Red Segment 5~Green Segment 5~Blue Segment 5~Blade A Dimmer~Blade A Strobe~Blade B Dimmer~Blade B Strobe~Blade C Dimmer~Blade C Strobe~Blade D Dimmer~Blade D Strobe~Blade E Dimmer~Blade E Strobe~Blade F Dimmer~Blade F Strobe~UV Dimmer~UV Strobe~Fan Rotation~Control
+[END_MODES]

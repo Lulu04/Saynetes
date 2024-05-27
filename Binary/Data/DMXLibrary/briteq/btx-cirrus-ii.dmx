@@ -1,0 +1,142 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fr/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1581693398.pdf|LinkType2|product page|Url2|https://briteq-lighting.com/fr/btx-cirrus-ii|LinkType3|video|Url3|https://www.youtube.com/watch?v=RfdWRn76I-Q
+[GENERAL]
+Manufacturer|Briteq|Name|BTX-Cirrus II|Type|41|Authors|rem5, Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|391|Height|495|Depth|286|Weight|16.00|Power|650|Connector|3-pin and 5-pin|Bulb|LED|Lumens|20600|LensMinDegree|4.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine|Type|5
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine|Type|13
+ID|CTO|Type|27|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~10~Txt~8000K|R3|Begin~11~End~54~Txt~8000K..7000K|R4|Begin~55~End~99~Txt~7000K..6000K|R5|Begin~100~End~117~Txt~6000K..5600K|R6|Begin~118~End~144~Txt~5600K..5000K|R7|Begin~145~End~188~Txt~5000K..4000K|R8|Begin~189~End~224~Txt~4000K..3200K|R9|Begin~225~End~255~Txt~3200K..2500K
+ID|Color Macros|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~14~Txt~LEE 790 - Moroccan pink~Extra~#ffb4a5|R3|Begin~15~End~19~Txt~LEE 157 - Pink~Extra~#ff92a3|R4|Begin~20~End~24~Txt~LEE 332 - Special Rose Pink~Extra~#ff3a89|R5|Begin~25~End~29~Txt~LEE 328 - Follies Pink~Extra~#ff66c9|R6|Begin~30~End~34~Txt~LEE 345 - Fuchsia Pink~Extra~#ce70d8|R7|Begin~35~End~39~Txt~LEE 194 - Surprise Pink~Extra~#bf8ef0|R8|Begin~40~End~44~Txt~LEE 181 - Congo Blue~Extra~#5304ab|R9|Begin~45~End~49~Txt~LEE 071 - Tokyo Blue~Extra~#0000b4|R10|Begin~50~End~54~Txt~LEE 120 - Deep Blue~Extra~#005fbe|R11|Begin~55~End~59~Txt~LEE 079 - Just Blue~Extra~#3d8cd2|R12|Begin~60~End~64~Txt~LEE 132 - Medium Blue~Extra~#01a0dc|R13|Begin~65~End~69~Txt~LEE 200 - Double CT Blue~Extra~#91bef5|R14|Begin~70~End~74~Txt~LEE 161 - Slate Blue~Extra~#7fd3f5|R15|Begin~75~End~79~Txt~LEE 201 - Full CT Blue~Extra~#c3e1fa|R16|Begin~80~End~84~Txt~LEE 202 - Half CT Blue~Extra~#d7f0ff|R17|Begin~85~End~89~Txt~LEE 117 - Steel Blue~Extra~#b5faf5|R18|Begin~90~End~94~Txt~LEE 353 - Lighter Blue~Extra~#63e8e3|R19|Begin~95~End~99~Txt~LEE 118 - Light Blue~Extra~#02e1eb|R20|Begin~100~End~104~Txt~LEE 116 - Medium Blue Green~Extra~#00c8b9|R21|Begin~105~End~109~Txt~LEE 124 - Dark Green~Extra~#00dc78|R22|Begin~110~End~114~Txt~LEE 139 - Primary Green~Extra~#4cc302|R23|Begin~115~End~119~Txt~LEE 089 - Moss Green~Extra~#5bdc5b|R24|Begin~120~End~124~Txt~LEE 122 - Fem Green~Extra~#79fa6f|R25|Begin~125~End~129~Txt~LEE 738 - JAS Green~Extra~#aaff00|R26|Begin~130~End~134~Txt~LEE 088 - Lime Green~Extra~#dcff64|R27|Begin~135~End~139~Txt~LEE 100 - Spring Yellow~Extra~#f5ff00|R28|Begin~140~End~144~Txt~LEE 104 - Deep Amber~Extra~#ffdc00|R29|Begin~145~End~149~Txt~LEE 179 - Chrome Orange~Extra~#ffbe00|R30|Begin~150~End~154~Txt~LEE 105 - Orange~Extra~#ffa000|R31|Begin~155~End~159~Txt~LEE 021 - Gold Amber~Extra~#ff8c32|R32|Begin~160~End~164~Txt~LEE 778 - Millenium Gold~Extra~#ff7600|R33|Begin~165~End~169~Txt~LEE 135 - Deep Golden Amber~Extra~#ff5f00|R34|Begin~170~End~174~Txt~LEE 164 - Flame Red~Extra~#ff3200|R35|Begin~175~End~179~Txt~Preset Open|R36|Begin~180~End~201~Txt~ColorFade fast..slow|R37|Begin~202~End~207~Txt~ColorFade stop|R38|Begin~208~End~229~Txt~ColorFade slow reverse..fast reverse|R39|Begin~230~End~234~Txt~Preset Open|R40|Begin~235~End~249~Txt~ColorJump fast..slow random color macros|R41|Begin~250~End~255~Txt~Preset Open
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Pulse 1Hz..25Hz|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~143~Txt~RampUp slow..fast|R6|Begin~144~End~159~Txt~RampDown fast..slow|R7|Begin~160~End~191~Txt~Open|R8|Begin~192~End~223~Txt~1Hz..25Hz Random timing|R9|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..210deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Special Functions|Type|0|R1|Begin~0~End~9~Txt~Function off - rearmed|R2|Begin~10~End~19~Txt~Blackout when pan/tilt moving|R3|Begin~20~End~29~Txt~Disabled blackout when pan/tilt moving|R4|Begin~30~End~39~Txt~Linear Dimmer Curve|R5|Begin~40~End~49~Txt~Inv. Square Dimmer Curve|R6|Begin~50~End~59~Txt~Square Dimmer Curve|R7|Begin~60~End~69~Txt~S-Dimmer Curve|R8|Begin~70~End~79~Txt~Fast Dimmer Speed (halogen lamp simulation off)|R9|Begin~80~End~89~Txt~Smooth Dimmer Speed (halogen lamp simulation off)|R10|Begin~90~End~99~Txt~Enable silence mode|R11|Begin~100~End~109~Txt~Disable silence mode|R12|Begin~110~End~219~Txt~No function Reserved|R13|Begin~220~End~229~Txt~Zoom reset|R14|Begin~230~End~239~Txt~Pan/Tilt reset|R15|Begin~240~End~255~Txt~Complete reset
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom narrow..wide
+ID|Shape selection|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~8~Txt~Dot (static)|R3|Begin~9~End~9~Txt~Ring 1 (static)|R4|Begin~10~End~10~Txt~Ring 2 (static)|R5|Begin~11~End~11~Txt~Dot + ring 1 (static)|R6|Begin~12~End~12~Txt~Dot + ring 2 (static)|R7|Begin~13~End~13~Txt~Ring 1 + ring 2 (static)|R8|Begin~14~End~14~Txt~Dot + ring 1 + ring 2 (static)|R9|Begin~15~End~15~Txt~Shape 6|R10|Begin~16~End~16~Txt~Shape 7|R11|Begin~17~End~17~Txt~Shape 8|R12|Begin~18~End~18~Txt~Shape 9|R13|Begin~19~End~19~Txt~Shape 10|R14|Begin~20~End~20~Txt~Shape 11|R15|Begin~21~End~21~Txt~Shape 12|R16|Begin~22~End~22~Txt~Shape 13|R17|Begin~23~End~23~Txt~Shape 14|R18|Begin~24~End~24~Txt~Shape 15|R19|Begin~25~End~25~Txt~Shape 16|R20|Begin~26~End~26~Txt~Shape 17|R21|Begin~27~End~27~Txt~Shape 18|R22|Begin~28~End~28~Txt~Shape 19|R23|Begin~29~End~29~Txt~Shape 20|R24|Begin~30~End~30~Txt~Shape 21|R25|Begin~31~End~31~Txt~Shape 22|R26|Begin~32~End~32~Txt~Shape 23|R27|Begin~33~End~33~Txt~No function|R28|Begin~34~End~34~Txt~No function|R29|Begin~35~End~35~Txt~Shape 24|R30|Begin~36~End~36~Txt~Shape 25|R31|Begin~37~End~37~Txt~Shape 26|R32|Begin~38~End~38~Txt~Shape 27|R33|Begin~39~End~39~Txt~Shape 28|R34|Begin~40~End~40~Txt~Shape 29|R35|Begin~41~End~41~Txt~No function|R36|Begin~42~End~42~Txt~Shape 30|R37|Begin~43~End~43~Txt~No function|R38|Begin~44~End~44~Txt~Shape 31|R39|Begin~45~End~45~Txt~Shape 32|R40|Begin~46~End~46~Txt~Shape 33|R41|Begin~47~End~47~Txt~Shape 34|R42|Begin~48~End~48~Txt~Shape 35|R43|Begin~49~End~49~Txt~Shape 36|R44|Begin~50~End~50~Txt~Shape 37|R45|Begin~51~End~51~Txt~Shape 38|R46|Begin~52~End~52~Txt~Shape 39|R47|Begin~53~End~53~Txt~Shape 40|R48|Begin~54~End~54~Txt~Shape 41|R49|Begin~55~End~55~Txt~Shape 42|R50|Begin~56~End~56~Txt~Shape 43|R51|Begin~57~End~57~Txt~Shape 44|R52|Begin~58~End~58~Txt~Shape 45|R53|Begin~59~End~59~Txt~Shape 46|R54|Begin~60~End~60~Txt~Shape 47|R55|Begin~61~End~61~Txt~Shape 48|R56|Begin~62~End~62~Txt~Shape 49|R57|Begin~63~End~63~Txt~Shape 50|R58|Begin~64~End~64~Txt~No function|R59|Begin~65~End~65~Txt~Shape 51|R60|Begin~66~End~66~Txt~Shape 52|R61|Begin~67~End~67~Txt~Shape 53|R62|Begin~68~End~68~Txt~Shape 54|R63|Begin~69~End~69~Txt~No function|R64|Begin~70~End~70~Txt~Shape 55|R65|Begin~71~End~255~Txt~No function
+ID|Shape speed|Type|0|R1|Begin~0~End~63~Txt~Radius size, Static|R2|Begin~64~End~158~Txt~Speed fast..slow|R3|Begin~159~End~160~Txt~Speed stop|R4|Begin~161~End~255~Txt~Speed slow reverse..fast reverse
+ID|Shape Fade|Type|16|R1|Begin~0~End~255~Txt~instant..long
+ID|Shape Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Shape Offset|Type|0|R1|Begin~0~End~255~Txt~Shape Offset
+ID|LED 1 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 1 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 1 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 5 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 5 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 5 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 6 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 6 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 6 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 7 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 7 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 7 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 8 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 8 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 8 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 9 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 9 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 9 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 10 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 10 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 10 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 11 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 11 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 11 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 12 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 12 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 12 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 13 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 13 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 13 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 14 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 14 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 14 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 15 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 15 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 15 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 16 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 16 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 16 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 17 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 17 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 17 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 18 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 18 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 18 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 19 Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 19 Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 19 Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 1 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 5 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 6 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 7 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 8 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 9 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 10 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 11 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 12 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 13 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 14 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 15 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 16 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 17 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 18 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 19 White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 1 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 5 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 6 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 7 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 8 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 9 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 10 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 11 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 12 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 13 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 14 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 15 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 16 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 17 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 18 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 19 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard (20 channels)|ShortName|Standard|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom
+Name|Shapes (29 channels)|ShortName|Shapes|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~Shape selection~Shape speed~Shape Fade~Shape Red~Shape Green~Shape Blue~Shape White~Shape Dimmer~Shape Offset
+Name|Extended (77 channels)|ShortName|Extended|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~LED 1 Red~LED 1 Green~LED 1 Blue~LED 2 Red~LED 2 Green~LED 2 Blue~LED 3 Red~LED 3 Green~LED 3 Blue~LED 4 Red~LED 4 Green~LED 4 Blue~LED 5 Red~LED 5 Green~LED 5 Blue~LED 6 Red~LED 6 Green~LED 6 Blue~LED 7 Red~LED 7 Green~LED 7 Blue~LED 8 Red~LED 8 Green~LED 8 Blue~LED 9 Red~LED 9 Green~LED 9 Blue~LED 10 Red~LED 10 Green~LED 10 Blue~LED 11 Red~LED 11 Green~LED 11 Blue~LED 12 Red~LED 12 Green~LED 12 Blue~LED 13 Red~LED 13 Green~LED 13 Blue~LED 14 Red~LED 14 Green~LED 14 Blue~LED 15 Red~LED 15 Green~LED 15 Blue~LED 16 Red~LED 16 Green~LED 16 Blue~LED 17 Red~LED 17 Green~LED 17 Blue~LED 18 Red~LED 18 Green~LED 18 Blue~LED 19 Red~LED 19 Green~LED 19 Blue
+Name|Extended RGBW (96 channels)|ShortName|Extended RGBW|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~LED 1 Red~LED 1 Green~LED 1 Blue~LED 1 White~LED 2 Red~LED 2 Green~LED 2 Blue~LED 2 White~LED 3 Red~LED 3 Green~LED 3 Blue~LED 3 White~LED 4 Red~LED 4 Green~LED 4 Blue~LED 4 White~LED 5 Red~LED 5 Green~LED 5 Blue~LED 5 White~LED 6 Red~LED 6 Green~LED 6 Blue~LED 6 White~LED 7 Red~LED 7 Green~LED 7 Blue~LED 7 White~LED 8 Red~LED 8 Green~LED 8 Blue~LED 8 White~LED 9 Red~LED 9 Green~LED 9 Blue~LED 9 White~LED 10 Red~LED 10 Green~LED 10 Blue~LED 10 White~LED 11 Red~LED 11 Green~LED 11 Blue~LED 11 White~LED 12 Red~LED 12 Green~LED 12 Blue~LED 12 White~LED 13 Red~LED 13 Green~LED 13 Blue~LED 13 White~LED 14 Red~LED 14 Green~LED 14 Blue~LED 14 White~LED 15 Red~LED 15 Green~LED 15 Blue~LED 15 White~LED 16 Red~LED 16 Green~LED 16 Blue~LED 16 White~LED 17 Red~LED 17 Green~LED 17 Blue~LED 17 White~LED 18 Red~LED 18 Green~LED 18 Blue~LED 18 White~LED 19 Red~LED 19 Green~LED 19 Blue~LED 19 White
+Name|Full (86 channels)|ShortName|Full|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~Shape selection~Shape speed~Shape Fade~Shape Red~Shape Green~Shape Blue~Shape White~Shape Dimmer~Shape Offset~LED 1 Red~LED 1 Green~LED 1 Blue~LED 2 Red~LED 2 Green~LED 2 Blue~LED 3 Red~LED 3 Green~LED 3 Blue~LED 4 Red~LED 4 Green~LED 4 Blue~LED 5 Red~LED 5 Green~LED 5 Blue~LED 6 Red~LED 6 Green~LED 6 Blue~LED 7 Red~LED 7 Green~LED 7 Blue~LED 8 Red~LED 8 Green~LED 8 Blue~LED 9 Red~LED 9 Green~LED 9 Blue~LED 10 Red~LED 10 Green~LED 10 Blue~LED 11 Red~LED 11 Green~LED 11 Blue~LED 12 Red~LED 12 Green~LED 12 Blue~LED 13 Red~LED 13 Green~LED 13 Blue~LED 14 Red~LED 14 Green~LED 14 Blue~LED 15 Red~LED 15 Green~LED 15 Blue~LED 16 Red~LED 16 Green~LED 16 Blue~LED 17 Red~LED 17 Green~LED 17 Blue~LED 18 Red~LED 18 Green~LED 18 Blue~LED 19 Red~LED 19 Green~LED 19 Blue
+Name|Extended Dimmer (48 channels)|ShortName|Extended Dimmer|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~CTO~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Special Functions~Zoom~Shape selection~Shape speed~Shape Fade~Shape Red~Shape Green~Shape Blue~Shape White~Shape Dimmer~Shape Offset~LED 1 Dimmer~LED 2 Dimmer~LED 3 Dimmer~LED 4 Dimmer~LED 5 Dimmer~LED 6 Dimmer~LED 7 Dimmer~LED 8 Dimmer~LED 9 Dimmer~LED 10 Dimmer~LED 11 Dimmer~LED 12 Dimmer~LED 13 Dimmer~LED 14 Dimmer~LED 15 Dimmer~LED 16 Dimmer~LED 17 Dimmer~LED 18 Dimmer~LED 19 Dimmer
+[END_MODES]

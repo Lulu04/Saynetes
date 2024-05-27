@@ -1,0 +1,65 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.ayrton.eu/wp-content/uploads/2015/10/MAGICBLADE-FX-Preliminary-Manual.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=2L0d_DaIdSY|LinkType3|video|Url3|https://www.youtube.com/watch?v=O0_XDlSOvMQ
+[GENERAL]
+Manufacturer|Ayrton|Name|MagicBlade FX|Type|47|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|612|Height|312|Depth|191|Weight|13.00|Power|400|Connector|5-pin|Bulb|RGBW LEDs|Lumens|3800|LensMinDegree|3.600|LensMaxDegree|53.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..265deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~Blackout by movement|R3|Begin~236~End~255~Txt~No function
+ID|Pan Continuous|Type|39|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~189~Txt~Continuous fast CW..slow CW|R3|Begin~190~End~193~Txt~Continuous stop|R4|Begin~194~End~255~Txt~Continuous slow CCW..fast CCW
+ID|Tilt Continuous|Type|40|R1|Begin~0~End~127~Txt~No function|R2|Begin~128~End~189~Txt~Continuous fast CW..slow CW|R3|Begin~190~End~193~Txt~Continuous stop|R4|Begin~194~End~255~Txt~Continuous slow CCW..fast CCW
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|DefaultValue|32|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse in sequences|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macro|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~39~Txt~Preset Red -> Yellow|R3|Begin~40~End~71~Txt~Preset Yellow -> Green|R4|Begin~72~End~103~Txt~Preset Green -> Cyan|R5|Begin~104~End~135~Txt~Preset Cyan -> Blue|R6|Begin~136~End~167~Txt~Preset Blue -> Magenta|R7|Begin~168~End~199~Txt~Preset Magenta -> Red|R8|Begin~200~End~231~Txt~Preset Red -> White|R9|Begin~232~End~255~Txt~ColorFade slow..fast
+ID|Color Presets|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~9~Txt~Color temperature 2700K White~Extra~#ffffff|R3|Begin~10~End~14~Txt~Color temperature 3200K White~Extra~#ffffff|R4|Begin~15~End~19~Txt~Color temperature 4200K White~Extra~#ffffff|R5|Begin~20~End~24~Txt~Color temperature 5600K White~Extra~#ffffff|R6|Begin~25~End~29~Txt~Color temperature 6500K White~Extra~#ffffff|R7|Begin~30~End~34~Txt~Color temperature 8000K White~Extra~#ffffff|R8|Begin~35~End~39~Txt~Yellow~Extra~#ffff00|R9|Begin~40~End~44~Txt~Magenta~Extra~#ff00ff|R10|Begin~45~End~49~Txt~Cyan~Extra~#00ffff|R11|Begin~50~End~54~Txt~Salmon~Extra~#ffaaaa|R12|Begin~55~End~59~Txt~Turquoise~Extra~#40e0d0|R13|Begin~60~End~64~Txt~Light Green~Extra~#aaffaa|R14|Begin~65~End~69~Txt~Steel Blue~Extra~#d6e5fc|R15|Begin~70~End~74~Txt~Orange~Extra~#ff7f00|R16|Begin~75~End~79~Txt~Straw~Extra~#e4d96f|R17|Begin~80~End~84~Txt~Pale Lavender~Extra~#ccbfff|R18|Begin~85~End~89~Txt~Pink~Extra~#ff8adc|R19|Begin~90~End~94~Txt~Red~Extra~#ff0000|R20|Begin~95~End~99~Txt~Green~Extra~#00ff00|R21|Begin~100~End~104~Txt~Blue~Extra~#0000ff|R22|Begin~105~End~109~Txt~Preset Rainbow 1|R23|Begin~110~End~114~Txt~Preset Rainbow 2|R24|Begin~115~End~119~Txt~Preset Rainbow 3|R25|Begin~120~End~124~Txt~Preset Rainbow 4|R26|Begin~125~End~129~Txt~Preset Rainbow 5|R27|Begin~130~End~134~Txt~Preset Rainbow 6|R28|Begin~135~End~139~Txt~Preset Rainbow 7|R29|Begin~140~End~144~Txt~Preset Rainbow 8|R30|Begin~145~End~149~Txt~Preset Rainbow 9|R31|Begin~150~End~154~Txt~Preset Rainbow 10|R32|Begin~155~End~159~Txt~Preset Rainbow 11|R33|Begin~160~End~164~Txt~Preset Rainbow 12|R34|Begin~165~End~169~Txt~Preset Rainbow 13|R35|Begin~170~End~174~Txt~Preset Rainbow 14|R36|Begin~175~End~179~Txt~Preset Rainbow 15|R37|Begin~180~End~184~Txt~Preset Rainbow 16|R38|Begin~185~End~189~Txt~Preset Rainbow 17|R39|Begin~190~End~194~Txt~Preset Rainbow 18|R40|Begin~195~End~199~Txt~Preset Rainbow 19|R41|Begin~200~End~255~Txt~No function Reserved
+ID|Color Presets Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Chase Patterns|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~14~Txt~Closed LED turn off|R3|Begin~15~End~30~Txt~Chase 1|R4|Begin~31~End~46~Txt~Chase 2|R5|Begin~47~End~62~Txt~Chase 3|R6|Begin~63~End~78~Txt~Chase 4|R7|Begin~79~End~94~Txt~Chase 5|R8|Begin~95~End~110~Txt~Chase 6|R9|Begin~111~End~126~Txt~Chase 7|R10|Begin~127~End~142~Txt~Chase 8|R11|Begin~143~End~158~Txt~Chase 9|R12|Begin~159~End~174~Txt~Chase 10|R13|Begin~175~End~190~Txt~Chase 11|R14|Begin~191~End~206~Txt~Chase 12|R15|Begin~207~End~222~Txt~Chase 13|R16|Begin~223~End~238~Txt~Chase 14|R17|Begin~239~End~255~Txt~Chase 15
+ID|Chase Speed|Type|16|R1|Begin~0~End~125~Txt~fast reverse..slow reverse|R2|Begin~126~End~130~Txt~stop|R3|Begin~131~End~255~Txt~slow..fast
+ID|Chase Fade|Type|0|R1|Begin~0~End~255~Txt~0%..100% Chase Fade
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 3.6deg..53deg
+ID|Zoom fine|Type|31
+ID|Reset / Internal Programs|Type|0|R1|Begin~0~End~79~Txt~No function|R2|Begin~80~End~84~Txt~All motor reset|R3|Begin~85~End~87~Txt~Scan motor reset|R4|Begin~88~End~96~Txt~No function|R5|Begin~97~End~99~Txt~Other motors reset|R6|Begin~100~End~119~Txt~Internal program 1 (scene 1-8 of EEPROM)|R7|Begin~120~End~139~Txt~Internal program 2 (scene 9-16 of EEPROM)|R8|Begin~140~End~159~Txt~Internal program 3 (scene 17-24 of EEPROM)|R9|Begin~160~End~179~Txt~Internal program 4 (scene 25-32 of EEPROM)|R10|Begin~180~End~199~Txt~Internal program 5 (scene 33-40 of EEPROM)|R11|Begin~200~End~219~Txt~Internal program 6 (scene 41-48 of EEPROM)|R12|Begin~220~End~239~Txt~Internal program 7 (scene 49-56 of EEPROM)|R13|Begin~240~End~255~Txt~No function Reserved
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard|ShortName|std|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Pan Continuous~Tilt Continuous~Red~Green~Blue~White~Shutter / Strobe~Dimmer~Color Macro~Color Presets~Color Presets Dimmer~Chase Patterns~Chase Speed~Chase Fade~Zoom~Zoom fine~Reset / Internal Programs
+Name|Basic|ShortName|bas|Content|Pan~Tilt~Pan/Tilt Speed~Pan Continuous~Tilt Continuous~Red~Green~Blue~White~Shutter / Strobe~Dimmer~Color Macro~Color Presets~Color Presets Dimmer~Chase Patterns~Chase Speed~Chase Fade~Zoom~Reset / Internal Programs
+Name|Extended|ShortName|ext|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Pan Continuous~Tilt Continuous~Shutter / Strobe~Dimmer~Color Macro~Color Presets~Color Presets Dimmer~Chase Patterns~Chase Speed~Chase Fade~Zoom~Zoom fine~Reset / Internal Programs~Red 1~Green 1~Blue 1~White 1~Red 2~Green 2~Blue 2~White 2~Red 3~Green 3~Blue 3~White 3~Red 4~Green 4~Blue 4~White 4~Red 5~Green 5~Blue 5~White 5~Red 6~Green 6~Blue 6~White 6~Red 7~Green 7~Blue 7~White 7
+[END_MODES]

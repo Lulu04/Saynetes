@@ -1,0 +1,60 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1435914288.pdf|LinkType2|manual|Url2|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1462951425.pdf|LinkType3|manual|Url3|https://briteq-lighting.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2FFile-1497009663.pdf|LinkType4|product page|Url4|https://briteq-lighting.com/pro-beamer-zoom-indoor|LinkType5|product page|Url5|https://briteq-lighting.com/pro-beamer-zoom-mk2-indoor|LinkType6|product page|Url6|https://briteq-lighting.com/pro-beamer-zoom-mk3-indoor
+[GENERAL]
+Manufacturer|Briteq|Name|PRO BEAMER ZOOM INDOOR|Type|4|Authors|Artilom|Creator|OFL
+[PHYSICAL]
+Width|236|Height|191|Depth|290|Weight|6.60|Power|128|Connector|3-pin and 5-pin|Bulb|7x 12W RGBW LEDs|LensMinDegree|8.000|LensMaxDegree|40.000
+[CHAN_DEF]
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Master|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White Master|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macro|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~30~Txt~Preset Red … Yellow|R3|Begin~31~End~50~Txt~Preset Yellow … Green|R4|Begin~51~End~70~Txt~Preset Green … Cyan|R5|Begin~71~End~90~Txt~Preset Cyan … Blue|R6|Begin~91~End~110~Txt~Preset Blue … Magenta|R7|Begin~111~End~130~Txt~Preset Magenta … Red|R8|Begin~131~End~150~Txt~Preset Red … White|R9|Begin~151~End~170~Txt~Preset White … Blue|R10|Begin~171~End~200~Txt~White~Extra~#ffffff|R11|Begin~201~End~205~Txt~Color temperature 3200K White~Extra~#ffffff|R12|Begin~206~End~210~Txt~Color temperature 3400K White~Extra~#ffffff|R13|Begin~211~End~215~Txt~Color temperature 4200K White~Extra~#ffffff|R14|Begin~216~End~220~Txt~Color temperature 4900K White~Extra~#ffffff|R15|Begin~221~End~225~Txt~Color temperature 5600K White~Extra~#ffffff|R16|Begin~226~End~230~Txt~Color temperature 5900K White~Extra~#ffffff|R17|Begin~231~End~235~Txt~Color temperature 6500K White~Extra~#ffffff|R18|Begin~236~End~240~Txt~Color temperature 7200K White~Extra~#ffffff|R19|Begin~241~End~245~Txt~Color temperature 8000K White~Extra~#ffffff|R20|Begin~246~End~250~Txt~Color temperature 8500K White~Extra~#ffffff|R21|Begin~251~End~255~Txt~Color temperature 10000K White~Extra~#ffffff
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~1Hz..20Hz
+ID|Auto Programs|Type|0|R1|Begin~0~End~40~Txt~No function~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R2|Begin~41~End~50~Txt~Auto 1~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R3|Begin~51~End~60~Txt~Auto 2~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R4|Begin~61~End~70~Txt~Auto 3~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R5|Begin~71~End~80~Txt~Auto 4~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R6|Begin~81~End~90~Txt~Auto 5~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R7|Begin~91~End~100~Txt~Auto 6~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R8|Begin~101~End~110~Txt~Auto 7~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R9|Begin~111~End~120~Txt~Auto 8~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R10|Begin~121~End~130~Txt~Auto 9~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R11|Begin~131~End~140~Txt~Auto 10~Switch1~Red Master / Step Time:Red Master~Switch2~Green Master / Fade Time:Green Master|R12|Begin~141~End~150~Txt~PR.01~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R13|Begin~151~End~160~Txt~PR.02~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R14|Begin~161~End~170~Txt~PR.03~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R15|Begin~171~End~180~Txt~PR.04~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R16|Begin~181~End~190~Txt~PR.05~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R17|Begin~191~End~200~Txt~PR.06~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R18|Begin~201~End~210~Txt~PR.07~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R19|Begin~211~End~220~Txt~PR.08~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R20|Begin~221~End~230~Txt~PR.09~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time|R21|Begin~231~End~255~Txt~PR.10~Switch1~Red Master / Step Time:Step Time~Switch2~Green Master / Fade Time:Fade Time
+ID|Auto Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~9~Txt~Use preset from menu|R2|Begin~10~End~29~Txt~Linear dimmer|R3|Begin~30~End~69~Txt~fast Non-linear dimmer speed|R4|Begin~70~End~129~Txt~66% Non-linear dimmer speed|R5|Begin~130~End~189~Txt~33% Non-linear dimmer speed|R6|Begin~190~End~255~Txt~slow Non-linear dimmer speed
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~8deg..40deg
+ID|Reset|Type|0|R1|Begin~0~End~200~Txt~No function|R2|Begin~201~End~220~Txt~Reset zoom|R3|Begin~221~End~255~Txt~No function
+ID|Master Dimmer fine|Type|1
+ID|Red Master|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Master|Type|3
+ID|Green Master|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Master|Type|4
+ID|Blue fine Master|Type|5
+ID|White fine Master|Type|13
+ID|Hue|Type|2
+ID|Saturation|Type|2
+ID|Value|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Center|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Center|Type|3
+ID|Green Center|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Center|Type|4
+ID|Blue Center|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Center|Type|5
+ID|White Center|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Center|Type|13
+ID|Red Outer|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine Outer|Type|3
+ID|Green Outer|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine Outer|Type|4
+ID|Blue Outer|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine Outer|Type|5
+ID|White Outer|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine Outer|Type|13
+ID|Step Time|Type|16|R1|Begin~0~End~255~Txt~Time short..long Is short…long correct?
+ID|Fade Time|Type|16|R1|Begin~0~End~255~Txt~Time short..long Is short…long correct?
+[END_CHAN_DEF]
+[MODES]
+Name|Tour 8bit|ShortName|TOUR|Content|Master Dimmer~Red Master / Step Time:Red Master;Step Time~Green Master / Fade Time:Green Master;Fade Time~Blue Master~White Master~Color Macro~Strobe~Auto Programs~Auto Program Speed~Dimmer Speed~Zoom~Reset
+Name|Tour 16bit|ShortName|TR16|Content|Master Dimmer~Master Dimmer fine~Red Master~Red fine Master~Green Master~Green fine Master~Blue Master~Blue fine Master~White Master~White fine Master~Color Macro~Strobe~Auto Programs~Auto Program Speed~Dimmer Speed~Zoom~Reset
+Name|RGB|ShortName|ARC.1|Content|Red Master~Green Master~Blue Master
+Name|DRGB|ShortName|AR1.D|Content|Master Dimmer~Red Master~Green Master~Blue Master
+Name|RGBW|ShortName|ARC.2|Content|Red Master~Green Master~Blue Master~White Master
+Name|DRGBW|ShortName|AR2.D|Content|Master Dimmer~Red Master~Green Master~Blue Master~White Master
+Name|HSV|ShortName|HSV|Content|Hue~Saturation~Value
+Name|DRGBW + Zoom|ShortName|AR2.Z|Content|Master Dimmer~Red Master~Green Master~Blue Master~White Master~Zoom~Reset
+Name|Full|ShortName|FULL|Content|Master Dimmer~Master Dimmer fine~Red Center~Red fine Center~Green Center~Green fine Center~Blue Center~Blue fine Center~White Center~White fine Center~Red Outer~Red fine Outer~Green Outer~Green fine Outer~Blue Outer~Blue fine Outer~White Outer~White fine Outer~Color Macro~Strobe~Auto Programs~Auto Program Speed~Dimmer Speed~Zoom~Reset
+Name|DRGBW + Strobe|ShortName|AR2.S|Content|Master Dimmer~Red Master~Green Master~Blue Master~White Master~Strobe
+[END_MODES]

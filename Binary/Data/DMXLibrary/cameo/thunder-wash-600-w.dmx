@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLTW600W/CLTW600W_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=bAnmeHVZfe0
+[GENERAL]
+Manufacturer|cameo|Name|Thunder Wash 600 W|Type|28|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|335|Height|182|Depth|93|Weight|3.25|Power|130|Connector|3-pin|Bulb|LED|LensMinDegree|75.000|LensMaxDegree|75.000
+[CHAN_DEF]
+ID|strobe1|Type|0|R1|Begin~0~End~10~Txt~Closed|R2|Begin~11~End~255~Txt~0Hz..30Hz
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|strobe2|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~250~Txt~0Hz..30Hz|R4|Begin~251~End~255~Txt~Open
+ID|Flash Duration|Type|28|R1|Begin~0~End~255~Txt~0ms..512ms
+ID|strobe3|Type|0|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~10~Txt~Closed|R3|Begin~11~End~33~Txt~Pulse slow..fast Random timing|R4|Begin~34~End~56~Txt~RampUp slow..fast Random timing|R5|Begin~57~End~79~Txt~RampDown slow..fast Random timing|R6|Begin~80~End~102~Txt~slow..fast Random timing|R7|Begin~103~End~127~Txt~5s..1s Break Effect|R8|Begin~128~End~250~Txt~0..30Hz|R9|Begin~251~End~255~Txt~Open
+ID|Programs|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~255~Txt~Strobe Programs (alternating segments)
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Control|Type|29|R1|Begin~0~End~5~Txt~off|R2|Begin~6~End~255~Txt~low..high
+ID|LED 1 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 2 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 3 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|LED 4 Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|strobe1
+Name|2-channel|ShortName|2ch|Content|Master dimmer~strobe2
+Name|3-channel|ShortName|3ch|Content|Master dimmer~strobe2~Flash Duration
+Name|5-channel|ShortName|5ch|Content|Master dimmer~strobe3~Programs~Program Speed~Sound Control
+Name|7-channel|ShortName|7ch|Content|Master dimmer~strobe2~Flash Duration~LED 1 Dimmer~LED 2 Dimmer~LED 3 Dimmer~LED 4 Dimmer
+[END_MODES]

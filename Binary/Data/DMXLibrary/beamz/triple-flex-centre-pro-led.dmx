@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.tronios.com/fileuploader/download/download/?d=0&file=custom%2Fupload%2F153.406+BeamZ+LED+Triple+Flex+centre+Pro_UK-NL-D-ESrev2.pdf|LinkType2|product page|Url2|https://www.beamzlighting.com/product/triple-flex-centre-pro-led/|LinkType3|video|Url3|https://www.youtube.com/watch?v=3pROoLUR4Tw
+[GENERAL]
+Manufacturer|BeamZ|Name|Triple Flex Centre Pro LED|Type|8|Authors|Serge Michiels|Creator|OFL
+[PHYSICAL]
+Width|320|Height|320|Depth|160|Weight|1.00|Power|40|Connector|3-pin|Bulb|72 LEDs (24× red, 24× green, 24× blue)|LensMinDegree|20.000|LensMaxDegree|20.000
+[CHAN_DEF]
+ID|Mode|Type|0|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~200~Txt~Auto mode slow..fast|R3|Begin~201~End~255~Txt~Sound mode slow..fast
+ID|Color Program 1|Type|0|R1|Begin~0~End~11~Txt~Program 1|R2|Begin~12~End~23~Txt~Program 2|R3|Begin~24~End~35~Txt~Program 3|R4|Begin~36~End~47~Txt~Program 4|R5|Begin~48~End~59~Txt~Program 5|R6|Begin~60~End~71~Txt~Program 6|R7|Begin~72~End~83~Txt~Program 7|R8|Begin~84~End~95~Txt~Program 8|R9|Begin~96~End~107~Txt~Program 9|R10|Begin~108~End~119~Txt~Program 10|R11|Begin~120~End~131~Txt~Program 11|R12|Begin~132~End~143~Txt~Program 12|R13|Begin~144~End~155~Txt~Program 13|R14|Begin~156~End~167~Txt~Program 14|R15|Begin~168~End~179~Txt~Program 15|R16|Begin~180~End~191~Txt~Program 16|R17|Begin~192~End~203~Txt~Program 17|R18|Begin~204~End~215~Txt~Program 18|R19|Begin~216~End~227~Txt~Program 19|R20|Begin~228~End~239~Txt~Program 20|R21|Begin~240~End~251~Txt~Program 21|R22|Begin~252~End~255~Txt~Program 22
+ID|Color Program 2|Type|0|R1|Begin~0~End~11~Txt~Program 1|R2|Begin~12~End~23~Txt~Program 2|R3|Begin~24~End~35~Txt~Program 3|R4|Begin~36~End~47~Txt~Program 4|R5|Begin~48~End~59~Txt~Program 5|R6|Begin~60~End~71~Txt~Program 6|R7|Begin~72~End~83~Txt~Program 7|R8|Begin~84~End~95~Txt~Program 8|R9|Begin~96~End~107~Txt~Program 9|R10|Begin~108~End~119~Txt~Program 10|R11|Begin~120~End~131~Txt~Program 11|R12|Begin~132~End~143~Txt~Program 12|R13|Begin~144~End~155~Txt~Program 13|R14|Begin~156~End~167~Txt~Program 14|R15|Begin~168~End~179~Txt~Program 15|R16|Begin~180~End~191~Txt~Program 16|R17|Begin~192~End~203~Txt~Program 17|R18|Begin~204~End~215~Txt~Program 18|R19|Begin~216~End~227~Txt~Program 19|R20|Begin~228~End~239~Txt~Program 20|R21|Begin~240~End~251~Txt~Program 21|R22|Begin~252~End~255~Txt~Program 22
+ID|Color Program 3|Type|0|R1|Begin~0~End~11~Txt~Program 1|R2|Begin~12~End~23~Txt~Program 2|R3|Begin~24~End~35~Txt~Program 3|R4|Begin~36~End~47~Txt~Program 4|R5|Begin~48~End~59~Txt~Program 5|R6|Begin~60~End~71~Txt~Program 6|R7|Begin~72~End~83~Txt~Program 7|R8|Begin~84~End~95~Txt~Program 8|R9|Begin~96~End~107~Txt~Program 9|R10|Begin~108~End~119~Txt~Program 10|R11|Begin~120~End~131~Txt~Program 11|R12|Begin~132~End~143~Txt~Program 12|R13|Begin~144~End~155~Txt~Program 13|R14|Begin~156~End~167~Txt~Program 14|R15|Begin~168~End~179~Txt~Program 15|R16|Begin~180~End~191~Txt~Program 16|R17|Begin~192~End~203~Txt~Program 17|R18|Begin~204~End~215~Txt~Program 18|R19|Begin~216~End~227~Txt~Program 19|R20|Begin~228~End~239~Txt~Program 20|R21|Begin~240~End~251~Txt~Program 21|R22|Begin~252~End~255~Txt~Program 22
+ID|Tilt 1|Type|8|R1|Begin~0~End~255~Txt~angle 0…100%
+ID|Tilt 2|Type|8|R1|Begin~0~End~255~Txt~angle 0…100%
+ID|Tilt 3|Type|8|R1|Begin~0~End~255~Txt~angle 0…100%
+ID|Motor Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~fast..slow
+[END_CHAN_DEF]
+[MODES]
+Name|7-channel|ShortName|7ch|Content|Mode~Color Program 1~Color Program 2~Color Program 3~Tilt 1~Tilt 2~Tilt 3
+Name|8-channel|ShortName|8ch|Content|Tilt 1~Tilt 2~Tilt 3~Motor Speed~Color Program 1~Color Program 2~Color Program 3~Program Speed
+[END_MODES]
