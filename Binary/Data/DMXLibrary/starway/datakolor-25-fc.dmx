@@ -1,0 +1,209 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.fr/manual/141404/Starway-Datakolor-25-Fc.html
+[GENERAL]
+Manufacturer|Starway|Name|DataKolor 25 FC|Type|14|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|550|Height|550|Depth|143|Weight|15|Power|710|Connector|3-pin|Bulb|25 X 30W LEDs COB|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe All|Type|6|R1|Begin~0~End~5~Txt~ON|R2|Begin~6~End~10~Txt~Sound control (7 colors)|R3|Begin~11~End~85~Txt~ON|R4|Begin~86~End~170~Txt~Strobe Slow..Fast|R5|Begin~171~End~255~Txt~Random strobe
+ID|Mode|Type|0|R1|Begin~0~End~12~Txt~RGB Mix~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:No function1~Switch2~Red/NoFunction2/Character/:Red~Switch3~Green/NoFunction/CharColor:Green~Switch4~Blue/NoFunction/BGColor:Blue|R2|Begin~13~End~19~Txt~Red~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R3|Begin~20~End~26~Txt~Green~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R4|Begin~27~End~33~Txt~Blue~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R5|Begin~34~End~40~Txt~Red + Green~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R6|Begin~41~End~47~Txt~Green + Blue~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R7|Begin~48~End~54~Txt~Red + Blue~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R8|Begin~55~End~61~Txt~Red + green + Blue~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R9|Begin~62~End~68~Txt~Color 1~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R10|Begin~69~End~75~Txt~Color 2~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R11|Begin~76~End~82~Txt~Color 3~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R12|Begin~83~End~89~Txt~Color 4~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R13|Begin~90~End~96~Txt~Color 5~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R14|Begin~97~End~103~Txt~Color 6~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R15|Begin~104~End~110~Txt~Color 7~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R16|Begin~111~End~117~Txt~Color 8~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R17|Begin~118~End~124~Txt~Character 0°~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:Character Number Pattern~Switch3~Green/NoFunction/CharColor:Character Color~Switch4~Blue/NoFunction/BGColor:Background Color|R18|Begin~125~End~131~Txt~Character 90°~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:Character Number Pattern~Switch3~Green/NoFunction/CharColor:Character Color~Switch4~Blue/NoFunction/BGColor:Background Color|R19|Begin~132~End~138~Txt~Character 180°~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:Character Number Pattern~Switch3~Green/NoFunction/CharColor:Character Color~Switch4~Blue/NoFunction/BGColor:Background Color|R20|Begin~139~End~145~Txt~Character 270°~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time~Switch2~Red/NoFunction2/Character/:Character Number Pattern~Switch3~Green/NoFunction/CharColor:Character Color~Switch4~Blue/NoFunction/BGColor:Background Color|R21|Begin~146~End~152~Txt~Program DREAM~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R22|Begin~153~End~159~Txt~Program METEOR~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R23|Begin~160~End~166~Txt~Program FADE~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R24|Begin~167~End~173~Txt~Program CHANGE~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R25|Begin~174~End~180~Txt~Flow 1~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R26|Begin~181~End~187~Txt~Flow 2~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R27|Begin~188~End~194~Txt~Flow 3~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R28|Begin~195~End~201~Txt~Flow 4~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R29|Begin~202~End~208~Txt~Flow 5~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R30|Begin~209~End~215~Txt~Flow 6~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R31|Begin~216~End~222~Txt~Flow 7~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R32|Begin~223~End~229~Txt~Flow 8~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R33|Begin~230~End~236~Txt~Flow 9~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Program Speed~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4|R34|Begin~237~End~255~Txt~Sound controled~Switch1~FadeTime / ProgramSpeed / SoundSensitivity:Sound sensitivity~Switch2~Red/NoFunction2/Character/:No function2~Switch3~Green/NoFunction/CharColor:No function3~Switch4~Blue/NoFunction/BGColor:No function4
+ID|Strobe|Type|6|R1|Begin~0~End~85~Txt~Standard|R2|Begin~86~End~170~Txt~Random pixel|R3|Begin~171~End~255~Txt~Random panel
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|Master dimmer fine|Type|1
+ID|Led 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 5|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 6|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 7|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Led 8|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 19|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 19|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 19|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 20|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 20|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 20|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 21|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 21|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 21|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 22|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 22|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 22|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 23|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 23|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 23|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 24|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 24|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 24|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 25|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 25|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 25|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Mode(2)|Type|0|R1|Begin~0~End~15~Txt~RGB Mix|R2|Begin~16~End~23~Txt~R|R3|Begin~24~End~31~Txt~G|R4|Begin~32~End~39~Txt~B|R5|Begin~40~End~47~Txt~RG|R6|Begin~48~End~55~Txt~GB|R7|Begin~56~End~63~Txt~RB|R8|Begin~64~End~71~Txt~RGB|R9|Begin~72~End~79~Txt~Color 1|R10|Begin~80~End~87~Txt~Color 2|R11|Begin~88~End~95~Txt~Color 3|R12|Begin~96~End~103~Txt~Color 4|R13|Begin~104~End~111~Txt~Color 5|R14|Begin~112~End~119~Txt~Color 6|R15|Begin~120~End~127~Txt~Color 7|R16|Begin~128~End~135~Txt~Color 8|R17|Begin~136~End~143~Txt~DREAM|R18|Begin~144~End~151~Txt~METEOR|R19|Begin~152~End~159~Txt~FADE|R20|Begin~160~End~167~Txt~CHANGE|R21|Begin~168~End~175~Txt~FLOW 1|R22|Begin~176~End~183~Txt~FLOW 2|R23|Begin~184~End~191~Txt~FLOW 3|R24|Begin~192~End~199~Txt~FLOW 4|R25|Begin~200~End~207~Txt~FLOW 5|R26|Begin~208~End~215~Txt~FLOW 6|R27|Begin~216~End~223~Txt~FLOW 7|R28|Begin~224~End~231~Txt~FLOW 8|R29|Begin~232~End~239~Txt~FLOW 9|R30|Begin~240~End~255~Txt~Sound Controled
+ID|Dimmer / Speed / Sensibility|Type|0|R1|Begin~0~End~15~Txt~Master Dimmer|R2|Begin~16~End~135~Txt~Dimmer|R3|Begin~136~End~239~Txt~Speed Slow..Fast|R4|Begin~240~End~255~Txt~Sound Sensitivity
+ID|Mode(3)|Type|0|R1|Begin~0~End~12~Txt~RGB Mix|R2|Begin~13~End~19~Txt~Red|R3|Begin~20~End~26~Txt~Green|R4|Begin~27~End~33~Txt~Blue|R5|Begin~34~End~40~Txt~Red + Green|R6|Begin~41~End~47~Txt~Green + Blue|R7|Begin~48~End~54~Txt~Red + Blue|R8|Begin~55~End~61~Txt~Red + green + Blue|R9|Begin~62~End~68~Txt~Color 1|R10|Begin~69~End~75~Txt~Color 2|R11|Begin~76~End~82~Txt~Color 3|R12|Begin~83~End~89~Txt~Color 4|R13|Begin~90~End~96~Txt~Color 5|R14|Begin~97~End~103~Txt~Color 6|R15|Begin~104~End~110~Txt~Color 7|R16|Begin~111~End~117~Txt~Color 8|R17|Begin~118~End~124~Txt~Character 0°|R18|Begin~125~End~131~Txt~Character 90°|R19|Begin~132~End~138~Txt~Character 180°|R20|Begin~139~End~145~Txt~Character 270°|R21|Begin~146~End~152~Txt~Program DREAM|R22|Begin~153~End~159~Txt~Program METEOR|R23|Begin~160~End~166~Txt~Program FADE|R24|Begin~167~End~173~Txt~Program CHANGE|R25|Begin~174~End~180~Txt~Flow 1|R26|Begin~181~End~187~Txt~Flow 2|R27|Begin~188~End~194~Txt~Flow 3|R28|Begin~195~End~201~Txt~Flow 4|R29|Begin~202~End~208~Txt~Flow 5|R30|Begin~209~End~215~Txt~Flow 6|R31|Begin~216~End~222~Txt~Flow 7|R32|Begin~223~End~229~Txt~Flow 8|R33|Begin~230~End~236~Txt~Flow 9|R34|Begin~237~End~255~Txt~Sound controled
+ID|Fade Time / Program Speed / Sensibility|Type|0|R1|Begin~0~End~12~Txt~No function|R2|Begin~13~End~145~Txt~Fade Time Slow..Fast|R3|Begin~146~End~236~Txt~Program Speed Slow..Fast|R4|Begin~237~End~255~Txt~Sound Sensibility
+ID|Character Number Pattern 2|Type|0|R1|Begin~0~End~255~Txt~Only if Mode is between 118 and 145
+ID|Character Color 2|Type|12|R1|Begin~0~End~255~Txt~Only if Mode is between 118 and 145
+ID|Character Background 2|Type|12|R1|Begin~0~End~255~Txt~Only if Mode is between 118 and 145
+ID|Red fine 1|Type|3
+ID|Green fine 1|Type|4
+ID|Blue fine 1|Type|5
+ID|Red fine 2|Type|3
+ID|Green fine 2|Type|4
+ID|Blue fine 2|Type|5
+ID|Red fine 3|Type|3
+ID|Green fine 3|Type|4
+ID|Blue fine 3|Type|5
+ID|Red fine 4|Type|3
+ID|Green fine 4|Type|4
+ID|Blue fine 4|Type|5
+ID|Red fine 5|Type|3
+ID|Green fine 5|Type|4
+ID|Blue fine 5|Type|5
+ID|Red fine 6|Type|3
+ID|Green fine 6|Type|4
+ID|Blue fine 6|Type|5
+ID|Red fine 7|Type|3
+ID|Green fine 7|Type|4
+ID|Blue fine 7|Type|5
+ID|Red fine 8|Type|3
+ID|Green fine 8|Type|4
+ID|Blue fine 8|Type|5
+ID|Red fine 9|Type|3
+ID|Green fine 9|Type|4
+ID|Blue fine 9|Type|5
+ID|Red fine 10|Type|3
+ID|Green fine 10|Type|4
+ID|Blue fine 10|Type|5
+ID|Red fine 11|Type|3
+ID|Green fine 11|Type|4
+ID|Blue fine 11|Type|5
+ID|Red fine 12|Type|3
+ID|Green fine 12|Type|4
+ID|Blue fine 12|Type|5
+ID|Red fine 13|Type|3
+ID|Green fine 13|Type|4
+ID|Blue fine 13|Type|5
+ID|Red fine 14|Type|3
+ID|Green fine 14|Type|4
+ID|Blue fine 14|Type|5
+ID|Red fine 15|Type|3
+ID|Green fine 15|Type|4
+ID|Blue fine 15|Type|5
+ID|Red fine 16|Type|3
+ID|Green fine 16|Type|4
+ID|Blue fine 16|Type|5
+ID|Red fine 17|Type|3
+ID|Green fine 17|Type|4
+ID|Blue fine 17|Type|5
+ID|Red fine 18|Type|3
+ID|Green fine 18|Type|4
+ID|Blue fine 18|Type|5
+ID|Red fine 19|Type|3
+ID|Green fine 19|Type|4
+ID|Blue fine 19|Type|5
+ID|Red fine 20|Type|3
+ID|Green fine 20|Type|4
+ID|Blue fine 20|Type|5
+ID|Red fine 21|Type|3
+ID|Green fine 21|Type|4
+ID|Blue fine 21|Type|5
+ID|Red fine 22|Type|3
+ID|Green fine 22|Type|4
+ID|Blue fine 22|Type|5
+ID|Red fine 23|Type|3
+ID|Green fine 23|Type|4
+ID|Blue fine 23|Type|5
+ID|Red fine 24|Type|3
+ID|Green fine 24|Type|4
+ID|Blue fine 24|Type|5
+ID|Red fine 25|Type|3
+ID|Green fine 25|Type|4
+ID|Blue fine 25|Type|5
+ID|No function1|Type|17
+ID|Fade Time|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound sensitivity|Type|29|R1|Begin~0~End~255~Txt~Low..High
+ID|No function2|Type|17
+ID|Character Number Pattern|Type|0
+ID|No function3|Type|17
+ID|Character Color|Type|12
+ID|No function4|Type|17
+ID|Background Color|Type|12
+[END_CHAN_DEF]
+[MODES]
+Name|3-channel|ShortName|3ch|Content|Red~Green~Blue
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~Master dimmer
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~Master dimmer~Strobe All
+Name|7-channel|ShortName|7ch|Content|Mode~FadeTime / ProgramSpeed / SoundSensitivity:Fade Time;Program Speed;Sound sensitivity;No function1~Master dimmer~Strobe~Red/NoFunction2/Character/:Red;No function2;Character Number Pattern~Green/NoFunction/CharColor:Green;No function3;Character Color~Blue/NoFunction/BGColor:Blue;No function4;Background Color
+Name|8-channel|ShortName|8ch|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~Master dimmer~Master dimmer fine
+Name|Cold-White|ShortName|25C|Content|Led 1~Led 2~Led 3~Led 4~Led 5~Led 6~Led 7~Led 8
+Name|Warm-White|ShortName|25W|Content|Led 1~Led 2~Led 3~Led 4~Led 5~Led 6~Led 7~Led 8
+Name|75-channel|ShortName|75ch|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16~Red 17~Green 17~Blue 17~Red 18~Green 18~Blue 18~Red 19~Green 19~Blue 19~Red 20~Green 20~Blue 20~Red 21~Green 21~Blue 21~Red 22~Green 22~Blue 22~Red 23~Green 23~Blue 23~Red 24~Green 24~Blue 24~Red 25~Green 25~Blue 25
+Name|78-channel|ShortName|78ch|Content|Mode(2)~Dimmer / Speed / Sensibility~Strobe~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16~Red 17~Green 17~Blue 17~Red 18~Green 18~Blue 18~Red 19~Green 19~Blue 19~Red 20~Green 20~Blue 20~Red 21~Green 21~Blue 21~Red 22~Green 22~Blue 22~Red 23~Green 23~Blue 23~Red 24~Green 24~Blue 24~Red 25~Green 25~Blue 25
+Name|82-channel|ShortName|82ch|Content|Mode(3)~Fade Time / Program Speed / Sensibility~Master dimmer~Strobe~Character Number Pattern 2~Character Color 2~Character Background 2~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16~Red 17~Green 17~Blue 17~Red 18~Green 18~Blue 18~Red 19~Green 19~Blue 19~Red 20~Green 20~Blue 20~Red 21~Green 21~Blue 21~Red 22~Green 22~Blue 22~Red 23~Green 23~Blue 23~Red 24~Green 24~Blue 24~Red 25~Green 25~Blue 25
+Name|150-channel|ShortName|150ch|Content|Red 1~Red fine 1~Green 1~Green fine 1~Blue 1~Blue fine 1~Red 2~Red fine 2~Green 2~Green fine 2~Blue 2~Blue fine 2~Red 3~Red fine 3~Green 3~Green fine 3~Blue 3~Blue fine 3~Red 4~Red fine 4~Green 4~Green fine 4~Blue 4~Blue fine 4~Red 5~Red fine 5~Green 5~Green fine 5~Blue 5~Blue fine 5~Red 6~Red fine 6~Green 6~Green fine 6~Blue 6~Blue fine 6~Red 7~Red fine 7~Green 7~Green fine 7~Blue 7~Blue fine 7~Red 8~Red fine 8~Green 8~Green fine 8~Blue 8~Blue fine 8~Red 9~Red fine 9~Green 9~Green fine 9~Blue 9~Blue fine 9~Red 10~Red fine 10~Green 10~Green fine 10~Blue 10~Blue fine 10~Red 11~Red fine 11~Green 11~Green fine 11~Blue 11~Blue fine 11~Red 12~Red fine 12~Green 12~Green fine 12~Blue 12~Blue fine 12~Red 13~Red fine 13~Green 13~Green fine 13~Blue 13~Blue fine 13~Red 14~Red fine 14~Green 14~Green fine 14~Blue 14~Blue fine 14~Red 15~Red fine 15~Green 15~Green fine 15~Blue 15~Blue fine 15~Red 16~Red fine 16~Green 16~Green fine 16~Blue 16~Blue fine 16~Red 17~Red fine 17~Green 17~Green fine 17~Blue 17~Blue fine 17~Red 18~Red fine 18~Green 18~Green fine 18~Blue 18~Blue fine 18~Red 19~Red fine 19~Green 19~Green fine 19~Blue 19~Blue fine 19~Red 20~Red fine 20~Green 20~Green fine 20~Blue 20~Blue fine 20~Red 21~Red fine 21~Green 21~Green fine 21~Blue 21~Blue fine 21~Red 22~Red fine 22~Green 22~Green fine 22~Blue 22~Blue fine 22~Red 23~Red fine 23~Green 23~Green fine 23~Blue 23~Blue fine 23~Red 24~Red fine 24~Green 24~Green fine 24~Blue 24~Blue fine 24~Red 25~Red fine 25~Green 25~Green fine 25~Blue 25~Blue fine 25
+[END_MODES]

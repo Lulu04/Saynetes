@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[GENERAL]
+Manufacturer|Abstract|Name|VR8|Type|8|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|209|Height|415|Depth|2115|Weight|5.62|Power|300|Connector|3-pin
+[CHAN_DEF]
+ID|Mirror Pan|Type|7|DefaultValue|128
+ID|Mirror Tilt|Type|8|DefaultValue|128
+ID|Color (VR mode)|Type|12|R1|Begin~0~End~15~Txt~White|R2|Begin~16~End~31~Txt~Red|R3|Begin~32~End~47~Txt~Blue|R4|Begin~48~End~63~Txt~Green|R5|Begin~64~End~79~Txt~Yellow|R6|Begin~80~End~95~Txt~Cyan|R7|Begin~96~End~111~Txt~Orange|R8|Begin~112~End~127~Txt~Magenta|R9|Begin~128~End~143~Txt~Neon Green|R10|Begin~144~End~159~Txt~Pink|R11|Begin~160~End~175~Txt~UV Blue|R12|Begin~176~End~241~Txt~Aqua|R13|Begin~242~End~255~Txt~Slow color scroll
+ID|Gobo (VR mode)|Type|10|R1|Begin~0~End~15~Txt~Blackout|R2|Begin~16~End~31~Txt~Open|R3|Begin~32~End~47~Txt~Laser|R4|Begin~48~End~63~Txt~Star|R5|Begin~64~End~79~Txt~Slice|R6|Begin~80~End~95~Txt~Tunnel|R7|Begin~96~End~104~Txt~Heart|R8|Begin~105~End~126~Txt~Eurostars|R9|Begin~127~End~143~Txt~Sunburst|R10|Begin~144~End~159~Txt~Triangle|R11|Begin~160~End~175~Txt~Slash|R12|Begin~176~End~191~Txt~Bubbles|R13|Begin~192~End~241~Txt~Segment|R14|Begin~242~End~255~Txt~Strobe Slow..Fast
+ID|Gobo (CE mode)|Type|10|R1|Begin~0~End~23~Txt~Blackout|R2|Begin~24~End~39~Txt~Open|R3|Begin~40~End~55~Txt~Laser|R4|Begin~56~End~71~Txt~Star|R5|Begin~72~End~87~Txt~Slice|R6|Begin~88~End~103~Txt~Tunnel|R7|Begin~104~End~119~Txt~Heart|R8|Begin~120~End~135~Txt~Eurostars|R9|Begin~136~End~151~Txt~Sunburst|R10|Begin~152~End~167~Txt~Triangle|R11|Begin~168~End~183~Txt~Slash|R12|Begin~184~End~199~Txt~Bubbles|R13|Begin~200~End~225~Txt~Segment|R14|Begin~226~End~255~Txt~Strobe Slow..Fast
+ID|Gobo (CE mode off)|Type|10|R1|Begin~0~End~31~Txt~Open|R2|Begin~32~End~63~Txt~Dot line|R3|Begin~64~End~127~Txt~Tunnel|R4|Begin~128~End~159~Txt~Star circle|R5|Begin~160~End~191~Txt~Triangle|R6|Begin~192~End~223~Txt~Slash|R7|Begin~224~End~255~Txt~Bubbles
+[END_CHAN_DEF]
+[MODES]
+Name|VR|ShortName|VR|Content|Mirror Pan~Mirror Tilt~Color (VR mode)~Gobo (VR mode)
+Name|CE on|ShortName|CE on|Content|Mirror Pan~Mirror Tilt~Color (VR mode)~Gobo (CE mode)
+Name|CE  off|ShortName|CE  off|Content|Mirror Pan~Mirror Tilt~Color (VR mode)~Gobo (CE mode off)
+[END_MODES]
