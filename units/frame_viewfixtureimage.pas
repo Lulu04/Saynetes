@@ -81,10 +81,7 @@ end;
 procedure TFrameFixtureImage.InitWith(aFT: TFixtureType);
 begin
   if FImage <> NIL then FImage.Free;
- { if PB.ClientWidth < PB.ClientHeight then
-    FImage := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), -1, PB.ClientHeight)
-  else
-    FImage := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), PB.ClientWidth, -1); }
+
   FImage := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), PB.ClientWidth, PB.ClientHeight);
   ST.Caption := FixtureNameFor(aFT);
   FFixtureType := aFT;
