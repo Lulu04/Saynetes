@@ -579,7 +579,9 @@ begin
     n1.SelectedIndex := 3;
     n1.ImageIndex := 3;
   end;
-
+  n.Expand(False);
+  TV.Selected := n;
+  TV.MakeSelectionVisible;
 end;
 
 end.

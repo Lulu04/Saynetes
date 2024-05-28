@@ -1014,6 +1014,7 @@
         <Filename Value="units\form_rangesgenerator.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormRangesGenerator"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit97>
     </Units>
