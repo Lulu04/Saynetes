@@ -1,0 +1,41 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adn.harmanpro.com/site_elements/executables/5949_1526695117/UM_MAC700Wash_EN_D_original.pdf|LinkType2|video|Url2|https://www.youtube.com/watch?v=FvGsX6qC348
+[GENERAL]
+Manufacturer|Martin|Name|MAC 700 Wash|Type|9|Authors|Karl Humbug|Creator|OFL
+[PHYSICAL]
+Width|365|Height|656|Depth|450|Weight|32.00|Power|950|Connector|3-pin and 5-pin|Bulb|OSRAMHTI700/D4/75|Lumens|18700|Lens|Fresnel|LensMinDegree|12.500|LensMaxDegree|66.000
+[CHAN_DEF]
+ID|Shutter / Strobe|Type|6|R1|Begin~0~End~19~Txt~Closed|R2|Begin~20~End~49~Txt~Open|R3|Begin~50~End~72~Txt~fast..slow|R4|Begin~73~End~79~Txt~Open|R5|Begin~80~End~99~Txt~RampUp fast..slow|R6|Begin~100~End~119~Txt~RampDown fast..slow|R7|Begin~120~End~127~Txt~Open|R8|Begin~128~End~147~Txt~fast Random timing|R9|Begin~148~End~167~Txt~50% Random timing|R10|Begin~168~End~187~Txt~slow Random timing|R11|Begin~188~End~190~Txt~Open|R12|Begin~191~End~193~Txt~RampUp fast Random timing|R13|Begin~194~End~196~Txt~RampUp slow Random timing|R14|Begin~197~End~199~Txt~RampDown fast Random timing|R15|Begin~200~End~202~Txt~RampDown slow Random timing|R16|Begin~203~End~207~Txt~Open|R17|Begin~208~End~217~Txt~Reset fixture|R18|Begin~218~End~227~Txt~Open|R19|Begin~228~End~237~Txt~Lamp on|R20|Begin~238~End~242~Txt~400W mode|R21|Begin~243~End~247~Txt~700W mode|R22|Begin~248~End~255~Txt~Lamp off
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|CTO|Type|27|R1|Begin~0~End~255~Txt~default..warm
+ID|Color Wheel|Type|0|R1|Begin~0~End~0~Txt~Open|R2|Begin~1~End~16~Txt~Open..Blue 110|R3|Begin~17~End~17~Txt~Blue 110|R4|Begin~18~End~33~Txt~Blue 110..Green 206 IAD|R5|Begin~34~End~34~Txt~Green 206 IAD|R6|Begin~35~End~50~Txt~Green 206 IAD..Pink 312|R7|Begin~51~End~51~Txt~Pink 312|R8|Begin~52~End~67~Txt~Pink 312..Orange 306M|R9|Begin~68~End~68~Txt~Orange 306M|R10|Begin~69~End~84~Txt~Orange 306M..Half minus green|R11|Begin~85~End~85~Txt~Half minus green|R12|Begin~86~End~101~Txt~Half minus green..CTO 3200-4100K|R13|Begin~102~End~102~Txt~CTO 3200-4100K|R14|Begin~103~End~118~Txt~CTO 3200-4100K..UV|R15|Begin~119~End~119~Txt~UV|R16|Begin~120~End~135~Txt~UV..Red 308|R17|Begin~136~End~136~Txt~Red 308|R18|Begin~137~End~152~Txt~Red 308|R19|Begin~153~End~153~Txt~Open|R20|Begin~154~End~158~Txt~Red 308|R21|Begin~159~End~163~Txt~UV|R22|Begin~164~End~168~Txt~CTO 3200-4100K|R23|Begin~169~End~173~Txt~Half minus green|R24|Begin~174~End~178~Txt~Orange 306M|R25|Begin~179~End~183~Txt~Pink 312|R26|Begin~184~End~188~Txt~Green 206 IAD|R27|Begin~189~End~193~Txt~Blue 110|R28|Begin~194~End~198~Txt~Open|R29|Begin~199~End~219~Txt~fast CW..slow CW|R30|Begin~220~End~240~Txt~slow CCW..fast CCW|R31|Begin~241~End~245~Txt~ColorJump fast|R32|Begin~246~End~250~Txt~ColorJump 50%|R33|Begin~251~End~255~Txt~ColorJump slow
+ID|Macros|Type|0|R1|Begin~0~End~15~Txt~No function~Switch1~Cyan:Cyan Intensity~Switch2~Magenta:Magenta Intensity~Switch3~Yellow:Yellow Intensity~Switch4~Beamshaper:Beamshaper Angle|R2|Begin~16~End~55~Txt~Color wheel shake slow..fast~Switch1~Cyan:Cyan Intensity~Switch2~Magenta:Magenta Intensity~Switch3~Yellow:Yellow Intensity~Switch4~Beamshaper:Beamshaper Angle|R3|Begin~56~End~95~Txt~Beam shaper continuous rotation~Switch1~Cyan:Cyan Intensity~Switch2~Magenta:Magenta Intensity~Switch3~Yellow:Yellow Intensity~Switch4~Beamshaper:Beamshaper Rotation|R4|Begin~96~End~135~Txt~Color wheel shake slow..fast plus beam shaper continuous rotation~Switch1~Cyan:Cyan Intensity~Switch2~Magenta:Magenta Intensity~Switch3~Yellow:Yellow Intensity~Switch4~Beamshaper:Beamshaper Rotation|R5|Begin~136~End~175~Txt~Random CMY fast~Switch1~Cyan:Random CMY Cyan Range~Switch2~Magenta:Random CMY Magenta Range~Switch3~Yellow:Random CMY Yellow Range~Switch4~Beamshaper:Beamshaper Angle|R6|Begin~176~End~215~Txt~Random CMY 50%~Switch1~Cyan:Random CMY Cyan Range~Switch2~Magenta:Random CMY Magenta Range~Switch3~Yellow:Random CMY Yellow Range~Switch4~Beamshaper:Beamshaper Angle|R7|Begin~216~End~255~Txt~Random CMY slow~Switch1~Cyan:Random CMY Cyan Range~Switch2~Magenta:Random CMY Magenta Range~Switch3~Yellow:Random CMY Yellow Range~Switch4~Beamshaper:Beamshaper Angle
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom wide..narrow
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..246deg
+ID|Tilt fine|Type|8
+ID|Pan/Tilt Speed|Type|9|R1|Begin~0~End~2~Txt~No function Tracking mode (default speed)|R2|Begin~3~End~242~Txt~fast..slow vector mode|R3|Begin~243~End~245~Txt~slow tracking mode|R4|Begin~246~End~248~Txt~50% tracking mode|R5|Begin~249~End~251~Txt~fast tracking mode|R6|Begin~252~End~255~Txt~Blackout while moving
+ID|Effects Speed|Type|0|R1|Begin~0~End~2~Txt~No function Tracking mode|R2|Begin~3~End~245~Txt~fast..slow vector mode|R3|Begin~246~End~248~Txt~Tracking mode (color wheel does not turn shortest distance)|R4|Begin~249~End~251~Txt~Tracking mode (color wheel turns shortest distance)|R5|Begin~252~End~255~Txt~Blackout while moving
+ID|Dimmer fine|Type|1
+ID|Cyan Intensity fine|Type|18
+ID|Magenta Intensity fine|Type|19
+ID|Yellow Intensity fine|Type|20
+ID|CTO fine|Type|27
+ID|Color Wheel fine|Type|0
+ID|Zoom fine|Type|31
+ID|Cyan Intensity|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Random CMY Cyan Range|Type|0|R1|Begin~0~End~0~Txt~Normal (full range)|R2|Begin~1~End~127~Txt~Minimum cyan setting 0…100%|R3|Begin~128~End~254~Txt~Maximum cyan setting 0…100%|R4|Begin~255~End~255~Txt~Normal (full range)
+ID|Magenta Intensity|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Random CMY Magenta Range|Type|0|R1|Begin~0~End~0~Txt~Normal (full range)|R2|Begin~1~End~127~Txt~Minimum magenta setting 0…100%|R3|Begin~128~End~254~Txt~Maximum magenta setting 0…100%|R4|Begin~255~End~255~Txt~Normal (full range)
+ID|Yellow Intensity|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|Random CMY Yellow Range|Type|0|R1|Begin~0~End~0~Txt~Normal (full range)|R2|Begin~1~End~127~Txt~Minimum yellow setting 0…100%|R3|Begin~128~End~254~Txt~Maximum yellow setting 0…100%|R4|Begin~255~End~255~Txt~Normal (full range)
+ID|Beamshaper Angle|Type|0|R1|Begin~0~End~0~Txt~No function No beam shaper|R2|Begin~1~End~255~Txt~Rotation 0deg..360deg
+ID|Beamshaper Rotation|Type|33|R1|Begin~0~End~0~Txt~No function No beam shaper|R2|Begin~1~End~127~Txt~Rotation fast CCW..slow CCW|R3|Begin~128~End~128~Txt~Rotation stop|R4|Begin~129~End~255~Txt~Rotation slow CW..fast CW
+[END_CHAN_DEF]
+[MODES]
+Name|Basic 16-channel|ShortName|basic16ch|Content|Shutter / Strobe~Dimmer~Cyan:Cyan Intensity;Random CMY Cyan Range~Magenta:Magenta Intensity;Random CMY Magenta Range~Yellow:Yellow Intensity;Random CMY Yellow Range~CTO~Color Wheel~Beamshaper:Beamshaper Angle;Beamshaper Rotation~Macros~Zoom~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Effects Speed
+Name|Extended 23-channel|ShortName|ext23ch|Content|Shutter / Strobe~Dimmer~Dimmer fine~Cyan:Cyan Intensity;Random CMY Cyan Range~Cyan Intensity fine~Magenta:Magenta Intensity;Random CMY Magenta Range~Magenta Intensity fine~Yellow:Yellow Intensity;Random CMY Yellow Range~Yellow Intensity fine~CTO~CTO fine~Color Wheel~Color Wheel fine~Beamshaper:Beamshaper Angle;Beamshaper Rotation~Macros~Zoom~Zoom fine~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt Speed~Effects Speed
+[END_MODES]

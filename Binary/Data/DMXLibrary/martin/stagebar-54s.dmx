@@ -5,7 +5,7 @@ LinkType1|manual|Url1|https://www.martin.com/files/files/productdocuments/11_MAN
 [GENERAL]
 Manufacturer|Martin|Name|Stagebar 54L|Type|43|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
-Width|420|Height|105|Depth|190|Weight|5.5|Power|230|Connector|RJ45|Bulb|Luxeon K2 LEDs|Lumens|650|LensMinDegree|29.000|LensMaxDegree|29.000
+Width|630|Height|105|Depth|190|Weight|7.30|Power|230|Connector|RJ45|Bulb|Luxeon K2 LEDs|Lumens|650|LensMinDegree|29.000|LensMaxDegree|29.000
 [CHAN_DEF]
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
@@ -118,19 +118,19 @@ ID|Color temperature 6|Type|27|R1|Begin~0~End~255~Txt~2000…10000K
 [END_CHAN_DEF]
 [MODES]
 Name|RGB All|ShortName|RGB All|Content|Red~Green~Blue
-Name|RGBAW All|ShortName|RGBAW All|Content|Red~Green~Blue~Amber~White
-Name|HSI All|ShortName|HSI All|Content|Hue~Saturation~Intensity
-Name|HSIC All|ShortName|HSIC All|Content|Hue~Saturation~Intensity~Color temperature
-Name|RGB Halves|ShortName|RGB Halves|Content|Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
-Name|RGBAW Halves|ShortName|RGBAW Halves|Content|Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~White 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2~White 2/2
-Name|HSI Halves|ShortName|HSI Halves|Content|Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
-Name|HSIC Halves|ShortName|HSIC Halves|Content|Hue 1/2~Saturation 1/2~Intensity 1/2~Color temperature 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2~Color temperature 2/2
-Name|RGB Thirds|ShortName|RGB Thirds|Content|Red 1/3~Green 1/3~Blue 1/3~Red 2/3~Green 2/3~Blue 2/3~Red 3/3~Green 3/3~Blue 3/3
-Name|RGBAW Thirds|ShortName|RGBAW Thirds|Content|Red 1/3~Green 1/3~Blue 1/3~Amber 1/3~White 1/3~Red 2/3~Green 2/3~Blue 2/3~Amber 2/3~White 2/3~Red 3/3~Green 3/3~Blue 3/3~Amber 3/3~White 3/3
-Name|HSI Thirds|ShortName|HSI Thirds|Content|Hue 1/3~Saturation 1/3~Intensity 1/3~Hue 2/3~Saturation 2/3~Intensity 2/3~Hue 3/3~Saturation 3/3~Intensity 3/3
-Name|HSIC Thirds|ShortName|HSIC Thirds|Content|Hue 1/3~Saturation 1/3~Intensity 1/3~Color temperature 1/3~Hue 2/3~Saturation 2/3~Intensity 2/3~Color temperature 2/3~Hue 3/3~Saturation 3/3~Intensity 3/3~Color temperature 3/3
-Name|RGB Individual|ShortName|RGB Individual|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6
-Name|RGBAW Individual|ShortName|RGBAW Individual|Content|Red 1~Green 1~Blue 1~Amber 1~White 1~Red 2~Green 2~Blue 2~Amber 2~White 2~Red 3~Green 3~Blue 3~Amber 3~White 3~Red 4~Green 4~Blue 4~Amber 4~White 4~Red 5~Green 5~Blue 5~Amber 5~White 5~Red 6~Green 6~Blue 6~Amber 6~White 6
-Name|HSI Individual|ShortName|HSI Individual|Content|Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4~Hue 5~Saturation 5~Intensity 5~Hue 6~Saturation 6~Intensity 6
-Name|HSIC Individual|ShortName|HSIC Individual|Content|Hue 1~Saturation 1~Intensity 1~Color temperature 1~Hue 2~Saturation 2~Intensity 2~Color temperature 2~Hue 3~Saturation 3~Intensity 3~Color temperature 3~Hue 4~Saturation 4~Intensity 4~Color temperature 4~Hue 5~Saturation 5~Intensity 5~Color temperature 5~Hue 6~Saturation 6~Intensity 6~Color temperature 6
+Name|RGBAW All|Content|Red~Green~Blue~Amber~White
+Name|HSI All|Content|Hue~Saturation~Intensity
+Name|HSIC All|Content|Hue~Saturation~Intensity~Color temperature
+Name|RGB Halves|Content|Red 1/2~Green 1/2~Blue 1/2~Red 2/2~Green 2/2~Blue 2/2
+Name|RGBAW Halves|Content|Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~White 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2~White 2/2
+Name|HSI Halves|Content|Hue 1/2~Saturation 1/2~Intensity 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2
+Name|HSIC Halves|Content|Hue 1/2~Saturation 1/2~Intensity 1/2~Color temperature 1/2~Hue 2/2~Saturation 2/2~Intensity 2/2~Color temperature 2/2
+Name|RGB Thirds|Content|Red 1/3~Green 1/3~Blue 1/3~Red 2/3~Green 2/3~Blue 2/3~Red 3/3~Green 3/3~Blue 3/3
+Name|RGBAW Thirds|Content|Red 1/3~Green 1/3~Blue 1/3~Amber 1/3~White 1/3~Red 2/3~Green 2/3~Blue 2/3~Amber 2/3~White 2/3~Red 3/3~Green 3/3~Blue 3/3~Amber 3/3~White 3/3
+Name|HSI Thirds|Content|Hue 1/3~Saturation 1/3~Intensity 1/3~Hue 2/3~Saturation 2/3~Intensity 2/3~Hue 3/3~Saturation 3/3~Intensity 3/3
+Name|HSIC Thirds|Content|Hue 1/3~Saturation 1/3~Intensity 1/3~Color temperature 1/3~Hue 2/3~Saturation 2/3~Intensity 2/3~Color temperature 2/3~Hue 3/3~Saturation 3/3~Intensity 3/3~Color temperature 3/3
+Name|RGB Individual|Content|Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6
+Name|RGBAW Individual|Content|Red 1~Green 1~Blue 1~Amber 1~White 1~Red 2~Green 2~Blue 2~Amber 2~White 2~Red 3~Green 3~Blue 3~Amber 3~White 3~Red 4~Green 4~Blue 4~Amber 4~White 4~Red 5~Green 5~Blue 5~Amber 5~White 5~Red 6~Green 6~Blue 6~Amber 6~White 6
+Name|HSI Individual|Content|Hue 1~Saturation 1~Intensity 1~Hue 2~Saturation 2~Intensity 2~Hue 3~Saturation 3~Intensity 3~Hue 4~Saturation 4~Intensity 4~Hue 5~Saturation 5~Intensity 5~Hue 6~Saturation 6~Intensity 6
+Name|HSIC Individual|Content|Hue 1~Saturation 1~Intensity 1~Color temperature 1~Hue 2~Saturation 2~Intensity 2~Color temperature 2~Hue 3~Saturation 3~Intensity 3~Color temperature 3~Hue 4~Saturation 4~Intensity 4~Color temperature 4~Hue 5~Saturation 5~Intensity 5~Color temperature 5~Hue 6~Saturation 6~Intensity 6~Color temperature 6
 [END_MODES]
