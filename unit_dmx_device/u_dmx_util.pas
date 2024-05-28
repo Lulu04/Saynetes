@@ -28,9 +28,11 @@ uses
   function SeatSvgFileFor(aSeatType: TSeatType): string;
 
   // gives an svg filename according the TFixtureType passed as parameter
-  function FixtureSVGFileFor(aFT:TFixtureType): string;
-  function FixtureNameFor(aFT:TFixtureType): string;
+  function FixtureSVGFileFor(aFT: TFixtureType): string;
+  function FixtureNameFor(aFT: TFixtureType): string;
   function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
+  procedure LoadFixtureImages;
+  procedure FreeFixtureImages;
 
   // fill a TImage with an image according an TFixtureType passed as parameter
   procedure ShowFixtureImage(aImage: TImage; aFT: TFixtureType);
@@ -247,6 +249,22 @@ end;
 function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
 begin
   Result := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), -1, -1);
+end;
+
+procedure LoadFixtureImages;
+var i: TFixtureType;
+begin
+  for i in TFixturetype do
+    FixtureImages[i] := FixtureTypeToBGRA(i);
+end;
+
+procedure FreeFixtureImages;
+var i: TFixtureType;
+begin
+  for i in TFixturetype do begin
+    FixtureImages[i].Free;
+    FixtureImages[i] := NIL;
+  end;
 end;
 
 procedure ShowFixtureImage(aImage: TImage; aFT:TFixtureType);
