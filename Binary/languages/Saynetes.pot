@@ -858,16 +858,8 @@ msgstr ""
 msgid "Range width"
 msgstr ""
 
-#: tformrangesgenerator.label5.caption
-msgid "sPreview"
-msgstr ""
-
 #: tformrangesgenerator.label7.caption
 msgid "Display offset"
-msgstr ""
-
-#: tformselectchannel.bok.caption
-msgid "SOk"
 msgstr ""
 
 #: tformselectchannel.label2.caption
@@ -939,6 +931,10 @@ msgstr ""
 #: tformsequenceedition.speedbutton2.caption
 msgctxt "tformsequenceedition.speedbutton2.caption"
 msgid "Add this sequence"
+msgstr ""
+
+#: tformsplash.label3.caption
+msgid "Loading program, please wait"
 msgstr ""
 
 #: tformstartupwizard.caption

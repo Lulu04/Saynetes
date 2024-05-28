@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="110">
+      <ExcludedOriginals Count="112">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -38,101 +38,103 @@
         <Item13 Value="Red/Green/Blue/White"/>
         <Item14 Value="Red/Green/Blue/White/Amber/UV"/>
         <Item15 Value="SAYNÈTES"/>
-        <Item16 Value="Undo"/>
-        <Item17 Value="WET"/>
-        <Item18 Value="x"/>
-        <Item19 Value="sAdd"/>
-        <Item20 Value="ALS - fx"/>
-        <Item21 Value="sAddNewSwitcher"/>
-        <Item22 Value="sAddRepetitiveChannels"/>
-        <Item23 Value="SAddVirtualChannelToMode"/>
-        <Item24 Value="sAmplitude"/>
-        <Item25 Value="sApply"/>
-        <Item26 Value="sAudioFollower"/>
-        <Item27 Value="sAuthors"/>
-        <Item28 Value="sBegin"/>
-        <Item29 Value="sBrightness max"/>
-        <Item30 Value="sBulb"/>
-        <Item31 Value="sCancel"/>
-        <Item32 Value="sChannels"/>
-        <Item33 Value="sChaser"/>
-        <Item34 Value="sClose"/>
-        <Item35 Value="sConnector"/>
-        <Item36 Value="sCopy"/>
-        <Item37 Value="sCount"/>
-        <Item38 Value="sCut"/>
-        <Item39 Value="sDelete"/>
-        <Item40 Value="sDescription"/>
-        <Item41 Value="sDimensions"/>
-        <Item42 Value="sDimmer"/>
-        <Item43 Value="sDuration"/>
-        <Item44 Value="sDuration in second"/>
-        <Item45 Value="sEnd"/>
-        <Item46 Value="sExtra"/>
-        <Item47 Value="sFixed color"/>
-        <Item48 Value="sFixed duration"/>
-        <Item49 Value="sFixed intensity"/>
-        <Item50 Value="sFixed value"/>
-        <Item51 Value="sFixture"/>
-        <Item52 Value="sFollow"/>
-        <Item53 Value="sFlame"/>
-        <Item54 Value="sFlash"/>
-        <Item55 Value="sGain"/>
-        <Item56 Value="sLens"/>
-        <Item57 Value="sLevel max"/>
-        <Item58 Value="sLevel min"/>
-        <Item59 Value="sLoop"/>
-        <Item60 Value="sLumens"/>
-        <Item61 Value="sManufacturer"/>
-        <Item62 Value="sMax"/>
-        <Item63 Value="sMax degree"/>
-        <Item64 Value="sMin"/>
-        <Item65 Value="sMin degree"/>
-        <Item66 Value="SModify"/>
-        <Item67 Value="SNameAlreadyUsed"/>
-        <Item68 Value="sName"/>
-        <Item69 Value="sNext"/>
-        <Item70 Value="sNo"/>
-        <Item71 Value="sOk"/>
-        <Item72 Value="sOFF"/>
-        <Item73 Value="sON"/>
-        <Item74 Value="sPaste"/>
-        <Item75 Value="sPitch"/>
-        <Item76 Value="sPlaylist"/>
-        <Item77 Value="sPower"/>
-        <Item78 Value="sPrevious"/>
-        <Item79 Value="sRandom intensity between"/>
-        <Item80 Value="sRandom duration between"/>
-        <Item81 Value="sRandom value between"/>
-        <Item82 Value="sRange"/>
-        <Item83 Value="sRangesGenerator"/>
-        <Item84 Value="sRename"/>
-        <Item85 Value="sReset"/>
-        <Item86 Value="sRGB"/>
-        <Item87 Value="sSave"/>
-        <Item88 Value="second(s)"/>
-        <Item89 Value="sSelection"/>
-        <Item90 Value="sSequence"/>
-        <Item91 Value="sSoften"/>
-        <Item92 Value="sSoften on"/>
-        <Item93 Value="sStop"/>
-        <Item94 Value="sSwitchers"/>
-        <Item95 Value="sto"/>
-        <Item96 Value="sUpdate"/>
-        <Item97 Value="sVelocity"/>
-        <Item98 Value="sView"/>
-        <Item99 Value="sVolume"/>
-        <Item100 Value="sWait time"/>
-        <Item101 Value="sWatt"/>
-        <Item102 Value="sWebLinks"/>
-        <Item103 Value="sWeight"/>
-        <Item104 Value="sYes"/>
-        <Item105 Value="_"/>
-        <Item106 Value="1/1"/>
-        <Item107 Value="1s"/>
-        <Item108 Value="5s"/>
-        <Item109 Value="10s"/>
-        <Item110 Value="15s"/>
+        <Item16 Value="Saynètes"/>
+        <Item17 Value="Undo"/>
+        <Item18 Value="WET"/>
+        <Item19 Value="x"/>
+        <Item20 Value="sAdd"/>
+        <Item21 Value="ALS - fx"/>
+        <Item22 Value="sAddNewSwitcher"/>
+        <Item23 Value="sAddRepetitiveChannels"/>
+        <Item24 Value="SAddVirtualChannelToMode"/>
+        <Item25 Value="sAmplitude"/>
+        <Item26 Value="sApply"/>
+        <Item27 Value="sAudioFollower"/>
+        <Item28 Value="sAuthors"/>
+        <Item29 Value="sBegin"/>
+        <Item30 Value="sBrightness max"/>
+        <Item31 Value="sBulb"/>
+        <Item32 Value="sCancel"/>
+        <Item33 Value="sChannels"/>
+        <Item34 Value="sChaser"/>
+        <Item35 Value="sClose"/>
+        <Item36 Value="sConnector"/>
+        <Item37 Value="sCopy"/>
+        <Item38 Value="sCount"/>
+        <Item39 Value="sCut"/>
+        <Item40 Value="sDelete"/>
+        <Item41 Value="sDescription"/>
+        <Item42 Value="sDimensions"/>
+        <Item43 Value="sDimmer"/>
+        <Item44 Value="sDuration"/>
+        <Item45 Value="sDuration in second"/>
+        <Item46 Value="sEnd"/>
+        <Item47 Value="sExtra"/>
+        <Item48 Value="sFixed color"/>
+        <Item49 Value="sFixed duration"/>
+        <Item50 Value="sFixed intensity"/>
+        <Item51 Value="sFixed value"/>
+        <Item52 Value="sFixture"/>
+        <Item53 Value="sFollow"/>
+        <Item54 Value="sFlame"/>
+        <Item55 Value="sFlash"/>
+        <Item56 Value="sGain"/>
+        <Item57 Value="sLens"/>
+        <Item58 Value="sLevel max"/>
+        <Item59 Value="sLevel min"/>
+        <Item60 Value="sLoop"/>
+        <Item61 Value="sLumens"/>
+        <Item62 Value="sManufacturer"/>
+        <Item63 Value="sMax"/>
+        <Item64 Value="sMax degree"/>
+        <Item65 Value="sMin"/>
+        <Item66 Value="sMin degree"/>
+        <Item67 Value="SModify"/>
+        <Item68 Value="SNameAlreadyUsed"/>
+        <Item69 Value="sName"/>
+        <Item70 Value="sNext"/>
+        <Item71 Value="sNo"/>
+        <Item72 Value="sOk"/>
+        <Item73 Value="sOFF"/>
+        <Item74 Value="sON"/>
+        <Item75 Value="sPaste"/>
+        <Item76 Value="sPitch"/>
+        <Item77 Value="sPlaylist"/>
+        <Item78 Value="sPower"/>
+        <Item79 Value="sPreview"/>
+        <Item80 Value="sPrevious"/>
+        <Item81 Value="sRandom intensity between"/>
+        <Item82 Value="sRandom duration between"/>
+        <Item83 Value="sRandom value between"/>
+        <Item84 Value="sRange"/>
+        <Item85 Value="sRangesGenerator"/>
+        <Item86 Value="sRename"/>
+        <Item87 Value="sReset"/>
+        <Item88 Value="sRGB"/>
+        <Item89 Value="sSave"/>
+        <Item90 Value="second(s)"/>
+        <Item91 Value="sSelection"/>
+        <Item92 Value="sSequence"/>
+        <Item93 Value="sSoften"/>
+        <Item94 Value="sSoften on"/>
+        <Item95 Value="sStop"/>
+        <Item96 Value="sSwitchers"/>
+        <Item97 Value="sto"/>
+        <Item98 Value="sUpdate"/>
+        <Item99 Value="sVelocity"/>
+        <Item100 Value="sView"/>
+        <Item101 Value="sVolume"/>
+        <Item102 Value="sWait time"/>
+        <Item103 Value="sWatt"/>
+        <Item104 Value="sWebLinks"/>
+        <Item105 Value="sWeight"/>
+        <Item106 Value="sYes"/>
+        <Item107 Value="_"/>
+        <Item108 Value="1/1"/>
+        <Item109 Value="1s"/>
+        <Item110 Value="5s"/>
+        <Item111 Value="10s"/>
+        <Item112 Value="15s"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>
@@ -158,7 +160,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -195,7 +197,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -254,7 +256,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -290,7 +292,7 @@
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
             <Libraries Value="\usr\lib\gcc\x86_64-linux-gnu\7;\usr\lib\gcc\x86_64-linux-gnu\11"/>
-            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -347,7 +349,7 @@
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
             <Libraries Value="\usr\lib\gcc\x86_64-linux-gnu\7;\usr\lib\gcc\x86_64-linux-gnu\11"/>
-            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+            <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -396,7 +398,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="98">
+    <Units Count="99">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1017,6 +1019,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit97>
+      <Unit98>
+        <Filename Value="units\form_splash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSplash"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit98>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -1027,7 +1035,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine"/>
+      <OtherUnitFiles Value="units;unit_dmx_device;..\UnitsCommon;..\ALSound\source;..\UnitsCommon\BGLVirtualScreenTimeLine;..\OGLCScene\source"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

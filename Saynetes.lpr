@@ -31,7 +31,7 @@ form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
 form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
 form_selectexistingswitchingchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
-form_selectsourcechannel, form_rangesgenerator;
+form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash;
 
 {$R *.res}
 
@@ -48,7 +48,14 @@ begin
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
 
+  // create splash window
+  FormSplash := TFormSplash.Create(Application);
+  FormSplash.Show;
+  FormSplash.Update;
+  application.ProcessMessages;
+
   Log.AddEmptyLine;
+  LoadFixtureImages;
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormUserConfirmation, FormUserConfirmation);
   Application.CreateForm(TFormDMXRGBTools, FormDMXRGBTools);
@@ -60,6 +67,12 @@ begin
   Application.CreateForm(TDataModule1, DataModule1);
 
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;
+
+  FormSplash.close;
+  FormSplash.Release;
+
   Application.Run;
+
+  FreeFixtureImages;
 end.
 

@@ -916,17 +916,9 @@ msgstr "Valeur de début"
 msgid "Range width"
 msgstr "Largeur de plage"
 
-#: tformrangesgenerator.label5.caption
-msgid "sPreview"
-msgstr ""
-
 #: tformrangesgenerator.label7.caption
 msgid "Display offset"
 msgstr "Offset d'affichage"
-
-#: tformselectchannel.bok.caption
-msgid "SOk"
-msgstr ""
 
 #: tformselectchannel.label2.caption
 msgid "Select the source channel"
@@ -999,6 +991,10 @@ msgstr "Édition de séquence"
 msgctxt "tformsequenceedition.speedbutton2.caption"
 msgid "Add this sequence"
 msgstr "Ajouter cette séquence"
+
+#: tformsplash.label3.caption
+msgid "Loading program, please wait"
+msgstr "Chargement du programme, veuillez patienter"
 
 #: tformstartupwizard.caption
 msgid "StartUp Wizard"
@@ -3944,3 +3940,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

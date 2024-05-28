@@ -1,0 +1,57 @@
+object FormSplash: TFormSplash
+  Left = 417
+  Height = 540
+  Top = 345
+  Width = 603
+  BorderStyle = bsNone
+  ClientHeight = 540
+  ClientWidth = 603
+  Color = 1447446
+  FormStyle = fsSplash
+  OnShow = FormShow
+  Position = poWorkAreaCenter
+  LCLVersion = '2.2.6.0'
+  object Image1: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 46
+    Height = 423
+    Top = 8
+    Width = 510
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrCenter
+    AnchorSideBottom.Control = Label3
+    Left = 194
+    Height = 70
+    Top = 430
+    Width = 215
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 5
+    Caption = 'Saynètes'
+    Font.Color = 15395562
+    Font.Height = 70
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 202
+    Height = 20
+    Top = 505
+    Width = 198
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 15
+    Caption = 'Loading program, please wait'
+    Font.Color = 15395562
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+  end
+end
