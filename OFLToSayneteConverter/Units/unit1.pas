@@ -1889,7 +1889,7 @@ begin
   ConvertManufacturers;
 
   // save the non converted channel types
-  FChannelNotTyped.SaveToFile(Application.Location+'not_recognized_channel_type.txt');
+//  FChannelNotTyped.SaveToFile(Application.Location+'not_recognized_channel_type.txt');
   FChannelNotTyped.Free;
 end;
 
