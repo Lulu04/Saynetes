@@ -4,3 +4,5 @@ dmg-lumiere\*.json
 fiilex\*.json
 generic\*.json
 lupo\*.json
+martin\mac-viper-airfx.json
+martin\mac-viper-performance.json
