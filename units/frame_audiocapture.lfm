@@ -297,8 +297,8 @@ object FrameAudioCapture: TFrameAudioCapture
       AnchorSideRight.Control = Shape4
       AnchorSideBottom.Control = Label4
       Left = 97
-      Height = 15
-      Top = 95
+      Height = 13
+      Top = 98
       Width = 135
       Alignment = taCenter
       Anchors = [akLeft, akRight, akBottom]
@@ -307,6 +307,7 @@ object FrameAudioCapture: TFrameAudioCapture
       BorderSpacing.Bottom = 5
       Caption = 'Label'
       Font.Color = 15395562
+      Font.Height = 13
       ParentColor = False
       ParentFont = False
       WordWrap = True
@@ -319,8 +320,8 @@ object FrameAudioCapture: TFrameAudioCapture
       AnchorSideRight.Control = Shape4
       AnchorSideBottom.Control = Label5
       Left = 97
-      Height = 15
-      Top = 115
+      Height = 13
+      Top = 116
       Width = 135
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
@@ -328,6 +329,7 @@ object FrameAudioCapture: TFrameAudioCapture
       BorderSpacing.Right = 5
       Caption = 'Label'
       Font.Color = 15395562
+      Font.Height = 13
       ParentColor = False
       ParentFont = False
       WordWrap = True
@@ -339,8 +341,8 @@ object FrameAudioCapture: TFrameAudioCapture
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Shape4
       Left = 97
-      Height = 15
-      Top = 135
+      Height = 13
+      Top = 134
       Width = 135
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
@@ -349,6 +351,7 @@ object FrameAudioCapture: TFrameAudioCapture
       BorderSpacing.Right = 5
       Caption = 'Label'
       Font.Color = 15395562
+      Font.Height = 13
       ParentColor = False
       ParentFont = False
       WordWrap = True
@@ -374,7 +377,7 @@ object FrameAudioCapture: TFrameAudioCapture
       Left = 190
       Height = 20
       Hint = 'Remove all audio effects'
-      Top = 75
+      Top = 78
       Width = 37
       Anchors = [akRight, akBottom]
       AutoSize = True
@@ -393,7 +396,7 @@ object FrameAudioCapture: TFrameAudioCapture
       Left = 102
       Height = 20
       Hint = 'Apply audio effects'
-      Top = 75
+      Top = 78
       Width = 37
       AutoSize = True
       BorderSpacing.Left = 5
