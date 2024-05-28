@@ -544,7 +544,7 @@ msgstr ""
 
 #: tformmain.baudio.caption
 msgctxt "tformmain.baudio.caption"
-msgid "F1 - AUDIO"
+msgid "AUDIO"
 msgstr ""
 
 #: tformmain.baudio.hint
@@ -554,7 +554,7 @@ msgstr ""
 
 #: tformmain.blight.caption
 msgctxt "tformmain.blight.caption"
-msgid "F2 - LIGHT"
+msgid "LIGHT"
 msgstr ""
 
 #: tformmain.blight.hint

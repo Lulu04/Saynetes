@@ -587,8 +587,8 @@ msgstr "Fin"
 
 #: tformmain.baudio.caption
 msgctxt "tformmain.baudio.caption"
-msgid "F1 - AUDIO"
-msgstr "F1 - AUDIO"
+msgid "AUDIO"
+msgstr "AUDIO"
 
 #: tformmain.baudio.hint
 msgctxt "tformmain.baudio.hint"
@@ -597,8 +597,8 @@ msgstr "Affiche la fenêtre audio (touche de raccourci F1)."
 
 #: tformmain.blight.caption
 msgctxt "tformmain.blight.caption"
-msgid "F2 - LIGHT"
-msgstr "F2 - LUMIÈRE"
+msgid "LIGHT"
+msgstr "LUMIÈRE"
 
 #: tformmain.blight.hint
 msgctxt "tformmain.blight.hint"
@@ -3940,4 +3940,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-
