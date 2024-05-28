@@ -201,8 +201,7 @@ begin
   if snd <> NIL then
     snd.RemoveAllEffects;
 
-  while Effects.Count > 0 do
-  begin
+  while Effects.Count > 0 do begin
     Parent.FPlaybackContext.DeleteEffect(PALSEffect(Effects.Items[0])^);
     Dispose(PALSEffect(Effects[0]));
     Effects.Delete(0);
@@ -250,7 +249,7 @@ begin
   p^.EffectNames := '';
   p^.EffectNamesArray := NIL;
   FSoundItems.Add(p);
-  Log.Debug('ID'+aSnd.Tag.ToString+' '+aSnd.Filename, 3);
+  //Log.Debug('ID'+aSnd.Tag.ToString+' '+aSnd.Filename, 3);
 end;
 
 procedure TSoundManager.DeleteSoundFromItemList(aID: TSoundID);
@@ -306,11 +305,9 @@ var item: PSoundItem;
   i: integer;
   snd: TALSSound;
 begin
-  for i:=0 to FSoundItems.Count-1 do
-  begin
+  for i:=0 to FSoundItems.Count-1 do begin
     item := PSoundItem(FSoundItems[i]);
-    if item^.SoundID = aID then
-    begin
+    if item^.SoundID = aID then begin
       snd := GetSoundByID(item^.SoundID);
       if snd <> NIL then
         snd.RemoveAllEffects;
@@ -324,18 +321,17 @@ end;
 function TSoundManager.GetSoundByID(aID: TSoundID): TALSSound;
 var i: integer;
 begin
-  if aID = CAPTURE_IDAUDIO then
+{  if aID = CAPTURE_IDAUDIO then
     Result := FCapturedSound
   else
-  begin
-    Result := NIL;
+  begin  }
     for i:=0 to FPlaybackContext.SoundCount-1 do
-      if FPlaybackContext.Sounds[i].Tag = aID then
-      begin
+      if FPlaybackContext.Sounds[i].Tag = aID then begin
         Result := FPlaybackContext.Sounds[i];
         exit;
       end;
-  end;
+    Result := NIL;
+//  end;
 end;
 
 function TSoundManager.GetSoundFileNameByIndex(aIndex: TSoundID): string;
@@ -469,12 +465,12 @@ begin
    exit;
  end;
 
- Log.Info('Loading audio', 2);
+ Log.Info('TSoundManager.Load - Loading audio', 2);
  inc(k);
  nb := aStringList.Strings[k].ToInteger;
  if nb=0 then
  begin
-   Log.Warning('TSoundManager.Load - There is 0 audio file to load', 3);
+   Log.Warning('There is 0 audio file to load', 3);
    exit;
  end;
 
@@ -484,10 +480,10 @@ begin
   prop.Split(aStringList.Strings[k], AUDIO_PARAM_SEPARATOR);
 
   if not prop.StringValueOf('TYPE', audioType, 'streamed') then
-    Log.Error('TSoundManager.Load - TYPE property NOT FOUND for sound N°'+i.ToString, 3);
+    Log.Error('TYPE property NOT FOUND for sound N°'+i.ToString, 3);
 
   if not prop.StringValueOf('FILENAME', fname, '') then
-    Log.Error('TSoundManager.Load - FILENAME property NOT FOUND for sound N°'+i.ToString, 3);
+    Log.Error('FILENAME property NOT FOUND for sound N°'+i.ToString, 3);
   if aAbsolutPathToAdd <> ''
     then fname := ConcatPaths([aAbsolutPathToAdd, fname]);
 
@@ -498,12 +494,12 @@ begin
   end;
 
   if not prop.IntegerValueOf('ID', v, 0) then
-    Log.Error('TSoundManager.Load - ID property NOT FOUND for '+fname, 3);
+    Log.Error('ID property NOT FOUND for '+fname, 3);
   snd.Tag := v;
   if FIDValue < snd.Tag then FIDValue := snd.Tag; // adjust the current ID
 
   if not prop.BooleanValueOf('LOOP', vbool, False) then
-    Log.Error('TSoundManager.Load - LOOP property NOT FOUND for '+fname, 3);
+    Log.Error('LOOP property NOT FOUND for '+fname, 3);
   snd.Loop := vbool;
 
   dec(nb);
@@ -698,12 +694,11 @@ begin
     if snd <> NIL then
       txt := ' for '+snd.Filename
     else
-      txt := ' for a file that does not exist';
+      txt := ' for a sound that does not exist in the list';
     Log.Warning('Failed to create audio effect '+AudioFXToString(aEffectType, aPresetIndex)+txt);
   end;
 
-  AddEffectToSoundItem(aID, Result,
-    AudioFXName(aEffectType), AudioFXPresetName(aEffectType, aPresetIndex));
+  AddEffectToSoundItem(aID, Result, AudioFXName(aEffectType), AudioFXPresetName(aEffectType, aPresetIndex));
 end;
 
 procedure TSoundManager.ConstructChainOn(aID: TSoundID);
@@ -772,8 +767,7 @@ begin
 end;
 
 function TSoundManager.GetEffectsNamesArrayOn(aID: TSoundID): TStringArray;
-var
-  item: PSoundItem;
+var item: PSoundItem;
   i: integer;
 begin
   for i:=0 to FSoundItems.Count-1 do
@@ -808,14 +802,12 @@ begin
   AddEffectOn(FEffectChain_SoundID, aEffectType, aPresetIndex);
 
 //Log.Debug('    FEffectChain_EffectCount '+FEffectChain_EffectCount.ToString);
-  if FEffectChain_EffectCount > 0 then
-  begin
-   dec(FEffectChain_EffectCount);
-   if FEffectChain_EffectCount = 0 then
-   begin
-    ConstructChainOn(FEffectChain_SoundID);
-    SetDryWetOn(FEffectChain_SoundID, FEffectChain_DryWet);
-   end;
+  if FEffectChain_EffectCount > 0 then begin
+    dec(FEffectChain_EffectCount);
+    if FEffectChain_EffectCount = 0 then begin
+      ConstructChainOn(FEffectChain_SoundID);
+      SetDryWetOn(FEffectChain_SoundID, FEffectChain_DryWet);
+    end;
   end;
 end;
 
@@ -839,17 +831,15 @@ begin
   FCaptureContext.StartCapture;
   FCaptureContext.MonitoringEnabled := True;
 
-  if FCaptureContext.Error then
-  begin
-    Log.Error('Sound manager error while opening the default capture device');
+  if FCaptureContext.Error then begin
+    Log.Error('Error while opening the default capture device');
     Log.Error(FCaptureContext.StrError, 1);
     if Length(ALSManager.ListOfCaptureDeviceName) = 0 then
       Log.Error('No audio capture device found', 1)
     else
       Log.Info('Default capture device: '+ALSManager.DefaultCaptureDeviceName, 1);
   end
-  else
-  begin
+  else begin
     Log.Info('Audio capture to playback started');
     if FCapturedSound.Error then
       Log.Error('Capture to playback error: '+FCapturedSound.StrError, 1);
@@ -921,12 +911,8 @@ end;
 
 procedure TSoundManager.StopCaptureToPlayback;
 begin
-  if FCaptureContext = NIL then
-    exit;
-//  if FCaptureContext.State <> ALS_RECORDING then
-//    exit;
+  if FCaptureContext = NIL then exit;
 
-  Log.Info('Stopping Audio capture to playback');
   // delete effect from sound before stopping capture
   // because StopCapture destroy the playback sound's object.
   DeleteAllEffectOnSoundItem( FCapturedSound.Tag );
@@ -936,9 +922,10 @@ begin
 
   FCaptureContext.StopCapture;
 
-  Log.Info('Audio capture to playback stopped', 1);
-  if FCaptureContext.CaptureError then
-    Log.Error('with error: '+FCaptureContext.StrCaptureError, 1);
+  if FCaptureContext.CaptureError then begin
+    Log.Info('Error while stopping audio capture to playback', 1);
+    Log.Error(FCaptureContext.StrCaptureError, 1);
+  end;
 
   FCapturedSound := NIL;
   FCaptureContext.Free;
@@ -947,31 +934,22 @@ end;
 
 procedure TSoundManager.CaptureSetVolume(aValue: single);
 begin
-  if (FCaptureContext = NIL) or
-     (FCapturedSound = NIL) then
-    exit;
-  if FCaptureContext.State <> ALS_RECORDING then
-    exit;
+  if (FCaptureContext = NIL) or (FCapturedSound = NIL) then exit;
+  if FCaptureContext.State <> ALS_RECORDING then exit;
   FCapturedSound.Volume.Value := aValue;
 end;
 
 function TSoundManager.CaptureGetVolume: single;
 begin
-  if (FCaptureContext = NIL) or
-     (FCapturedSound = NIL) then
-    Result := 0
-  else
-    Result := FCapturedSound.Volume.Value;
+  if (FCaptureContext = NIL) or (FCapturedSound = NIL) then Result := 0
+    else Result := FCapturedSound.Volume.Value;
 end;
 
 procedure TSoundManager.CaptureSetPan(aValue: single);
 begin
-  if (FCaptureContext = NIL) or
-     (FCapturedSound = NIL) then
-    exit;
-  if FCaptureContext.State <> ALS_RECORDING then
-    exit;
-  FCapturedSound.Pan.Value:=aValue;
+  if (FCaptureContext = NIL) or (FCapturedSound = NIL) then exit;
+  if FCaptureContext.State <> ALS_RECORDING then exit;
+  FCapturedSound.Pan.Value := aValue;
 end;
 
 procedure TSoundManager.ResetState;
@@ -1002,7 +980,7 @@ end;
 
 function TSoundManager.GetSoundByIndex(aIndex: integer): TALSSound;
 begin
-  if (aIndex>=0) and (aIndex<Count) then
+  if (aIndex >= 0) and (aIndex < Count) then
     Result := FPlaybackContext.Sounds[aIndex]
   else
     Result := NIL;
@@ -1011,10 +989,10 @@ end;
 function TSoundManager.GetSoundFileNameByID(aID: TSoundID): string;
 var snd: TALSSound;
 begin
-  snd:=GetSoundByID(aID);
-  if snd=NIL
-    then Result:=SUnknownAudio
-    else Result:=ExtractFileName(snd.Filename);
+  snd := GetSoundByID(aID);
+  if snd = NIL
+    then Result := SUnknownAudio
+    else Result := ExtractFileName(snd.Filename);
 end;
 
 function TSoundManager.GetLevel(aID: TSoundID): single;
@@ -1022,28 +1000,25 @@ var snd: TALSSound;
   i: integer;
   s: single;
 begin
-  if aID = CAPTURE_IDAUDIO then
-  begin
+  if aID = CAPTURE_IDAUDIO then begin
     if not CaptureToPlaybackIsReady then
       Result := 0
-    else
-    begin
+    else begin
       Result := FCaptureContext.ChannelsLevel[0];
       if Result < FCaptureContext.ChannelsLevel[1] then
         Result := FCaptureContext.ChannelsLevel[1];
     end;
   end
-  else
-  begin
-    snd:=GetSoundByID(aID);
-    if (snd=NIL) or snd.Error then
+  else begin
+    snd := GetSoundByID(aID);
+    if (snd = NIL) or snd.Error then
       Result:=0.0
     else begin
       // compute the average of channel's levels
       s := 0;
       for i:=0 to snd.ChannelCount-1 do
         s := s+snd.ChannelsLevel[i];
-      Result:=s/snd.ChannelCount;
+      Result := s / snd.ChannelCount;
     end;
   end;
 end;
