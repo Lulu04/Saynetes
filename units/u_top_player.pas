@@ -168,7 +168,7 @@ begin
        SoundManager.PrepareEffectChain( A[1].ToInteger, StringToSingle(A[2]), A[3].ToInteger );
      end;
 
-     CMD_AUDIO_FXPRESET: begin // CMD_AUDIO_FXPRESET  effectType  presetIndex
+     CMD_AUDIO_FXPRESET, CMD_AUDIO_CAPTURE_FXPRESET: begin // CMD_AUDIO_FXPRESET  effectType  presetIndex
        SoundManager.AddToEffectChain(TALSEffectType(A[1].ToInteger), A[2].ToInteger);
      end;
 
@@ -199,7 +199,7 @@ begin
          snd.Pan.ChangeTo( StringToSingle(A[1]), StringToSingle(A[2]), TALSCurveID(A[3].ToInteger) );
      end;
 
-     TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX  IDaudio  dry/wet  EffectCount
+     TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX  dry/wet  EffectCount
        SoundManager.PrepareEffectChain( CAPTURE_IDAUDIO, StringToSingle(A[1]), A[2].ToInteger );
      end;
 
@@ -302,7 +302,9 @@ begin
 
     end;//case
   except
-    LogError('ExecuteCmd: An exception occurs while decoding an action');
+    On E :Exception do begin
+      LogError('ExecuteCmd: An exception occurs while decoding an action "'+E.Message+'"');
+    end;
   end;
 end;
 
