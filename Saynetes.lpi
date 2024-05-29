@@ -1023,6 +1023,7 @@
         <Filename Value="units\form_splash.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormSplash"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit98>
     </Units>

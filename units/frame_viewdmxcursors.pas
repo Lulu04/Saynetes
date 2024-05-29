@@ -146,7 +146,6 @@ type
     procedure BGroupClick(Sender: TObject);
     procedure BSelectNoneClick(Sender: TObject);
   private
-    ImageCursors: array of TBGRABitmap;
     ImageLock,
     FCursorBackGround: TBGRABitmap;
     FTextStyleForTextRect: TTextStyle;
@@ -233,7 +232,7 @@ type
     procedure RedrawFixture(aFix: TDMXFixture);
     procedure RedrawRGBChannelsOnFixture(aFix: TDMXFixture);
     // used in Universe manager to update the position of the cursor and text.
-    procedure RedrawCursor(aChan: TDMXChannel);
+    procedure RedrawCursor(aChan: TDMXChannel; aDrawAll: boolean);
 
     procedure UpdateView;
     procedure UpdateStringAfterLanguageChange;
@@ -314,7 +313,7 @@ end;
 procedure TViewCursor.SetCursorPos(AValue: integer);
 var h: integer;
 begin
-  h := Renderer.ImageCursors[0].Height shr 1;
+  h := ImageCursorSize.cy shr 1;
   AValue := EnsureRange(AValue, CursorPathArea.Top-h, CursorPathArea.Bottom-h);
   SetPercentValue(YCursorToPercent(AValue));
 end;
@@ -323,19 +322,19 @@ procedure TViewCursor.SetPercentValue(AValue: single);
 begin
   AValue := EnsureRange(AValue, 0.0, 1.0);
   CursorArea.Top := PercentToYCursor(AValue);
-  CursorArea.Bottom := CursorArea.Top+Renderer.ImageCursors[0].Height;
+  CursorArea.Bottom := CursorArea.Top+ImageCursorSize.cy;
   Channel.PercentValue := AValue;
 end;
 
 function TViewCursor.PercentToYCursor(aPercent: single): integer;
 begin
   Result := Round(CursorPathArea.Height*(1-aPercent)+CursorPathArea.Top -
-                  Renderer.ImageCursors[0].Height*0.5);
+                  ImageCursorSize.cy*0.5);
 end;
 
 function TViewCursor.YCursorToPercent(aY: integer): single;
 begin
-  Result := aY+Renderer.ImageCursors[0].Height*0.5;
+  Result := aY+ImageCursorSize.cy*0.5;
   Result := 1-(Result-CursorPathArea.Top)/CursorPathArea.Height;
 end;
 
@@ -345,7 +344,7 @@ begin
     CursorArea.Top := PercentToYCursor(Channel.FFlashValue)
   else
     CursorArea.Top := PercentToYCursor(Channel.PercentValue);
-  CursorArea.Bottom := CursorArea.Top+Renderer.ImageCursors[0].Height;
+  CursorArea.Bottom := CursorArea.Top+ImageCursorSize.cy;
 end;
 
 procedure TViewCursor.UpdateIsVisibleOnView;
@@ -374,63 +373,60 @@ begin
    Renderer.FTextStyleForTextRect.Wordbreak := False; // can't go to the next line
 
    // Effect text
-   if (Channel.EffectPainted <> Ord(Channel.CurrentEffect)) or
-      aDrawAll then
-   begin
-    Channel.EffectPainted := Ord(Channel.CurrentEffect);
-    // erase
-    r := Renderer.AdjustRect(EffectArea);
-    Brush.Color := FColorFixtureBackground;
-    Brush.Style := bsSolid;
-    Pen.Style := psClear;
-    Rectangle(r);
-    // draw
-    Brush.Style := bsClear;
-    txt := EffectToText(Channel.CurrentEffect);
-    UseFont(Renderer.FFixtureFont);
-    if Length(txt) > 0 then
-    begin
-      Font.Color := FColorEffect;
-      TextRect(r, 0, 0, txt, Renderer.FTextStyleForTextRect);
-    end;
+   if (Channel.EffectPainted <> Ord(Channel.CurrentEffect)) or aDrawAll then begin
+     Channel.EffectPainted := Ord(Channel.CurrentEffect);
+     // erase
+     r := Renderer.AdjustRect(EffectArea);
+     Brush.Color := FColorFixtureBackground;
+     Brush.Style := bsSolid;
+     Pen.Style := psClear;
+     Rectangle(r);
+     // draw effect
+     Brush.Style := bsClear;
+     txt := EffectToText(Channel.CurrentEffect);
+     UseFont(Renderer.FFixtureFont);
+     if Length(txt) > 0 then begin
+       Font.Color := FColorEffect;
+       TextRect(r, 0, 0, txt, Renderer.FTextStyleForTextRect);
+     end;
    end;
 
-   if Channel.FFlashIsActive then
-     b := PercentToDMXByte(Channel.FFlashValue)
-   else
-     b := PercentToDMXByte(Channel.PercentValue);
+   if Channel.FFlashIsActive then b := PercentToDMXByte(Channel.FFlashValue)
+     else b := PercentToDMXByte(Channel.PercentValue);
    if (Channel.ByteValuePainted <> b) or
       (Channel.LockedPainted = Channel.Locked) or
-      aDrawAll then
-   begin
-    Channel.ByteValuePainted := b;
-    // erase previous value
-    r := Renderer.AdjustRect(ValueArea);
-    Brush.Color := FColorFixtureBackground;
-    Brush.Style := bsSolid;
-    Pen.Style := psClear;
-    Rectangle(r);
-    // draw cursor value
-    txt := b.ToString;
-    w := Font.GetTextWidth( txt );
-    Font.Color := FColorValue;
-    TextOut(r.Left+(r.Width-w) shr 1, r.Top, txt);
-    // erase previous cursor
-    r.Left := 0;
-    r.Top := CursorArea.Top - (CursorPathArea.Top-(Renderer.ImageCursors[0].Height shr 1));
-    r.Width := CursorArea.width;
-    r.Height := CursorArea.Height;
-    r1 := Renderer.AdjustRect(CursorAreaLastDrawn);
-    if (r.Top >= 0)  and (r.Top < Renderer.FCursorBackGround.Height) then
-      Renderer.FCursorBackGround.DrawPart(r, aCanvas, r1.Left, r1.Top, True);
-    // draw cursor
-    UpdateCursorArea;
-    CursorAreaLastDrawn := CursorArea;
-    r := Renderer.AdjustRect(CursorArea);
-    Renderer.ImageCursors[Ord(Channel.ChannelType)].Draw(aCanvas, r.Left, r.Top, False);
-    if Channel.Locked then
-      Renderer.ImageLock.Draw(aCanvas, r.Left, r.Top, False);
-    Channel.LockedPainted := Channel.Locked;
+      aDrawAll then begin
+     Channel.ByteValuePainted := b;
+     // erase previous value
+     r := Renderer.AdjustRect(ValueArea);
+     Brush.Color := FColorFixtureBackground;
+     Brush.Style := bsSolid;
+     Pen.Style := psClear;
+     Rectangle(r);
+     // draw cursor value
+     txt := b.ToString;
+     w := Font.GetTextWidth( txt );
+     Font.Color := FColorValue;
+     TextOut(r.Left+(r.Width-w) shr 1, r.Top, txt);
+     // erase previous cursor
+{     r.Left := 0;
+     r.Top := CursorArea.Top - (CursorPathArea.Top-(ImageCursors[0].Height shr 1));
+     r.Width := CursorArea.width;
+     r.Height := CursorArea.Height;
+     r1 := Renderer.AdjustRect(CursorAreaLastDrawn);
+     if (r.Top >= 0)  and (r.Top < Renderer.FCursorBackGround.Height) then
+       Renderer.FCursorBackGround.DrawPart(r, aCanvas, r1.Left, r1.Top, True); }
+     r := Renderer.AdjustRect(CursorPathArea);
+
+     Renderer.FCursorBackGround.Draw(aCanvas, r.Left, r.Top - ImageCursorSize.cy shr 1);
+     // draw cursor
+     UpdateCursorArea;
+     CursorAreaLastDrawn := CursorArea;
+     r := Renderer.AdjustRect(CursorArea);
+     ImageCursors[Channel.ChannelType].Draw(aCanvas, r.Left, r.Top, False);
+     if Channel.Locked then
+       Renderer.ImageLock.Draw(aCanvas, r.Left, r.Top, False);
+     Channel.LockedPainted := Channel.Locked;
    end;
 
    // channel under mouse in other windows
@@ -465,6 +461,7 @@ begin
     Channel.RangeIndexPainted := w;
     Channel.SelectedPainted := Channel.Selected;
 
+    // channel name and range text
     UseFont(Renderer.FChannelNameFont);
     //Brush.Style := bsClear;
     Font.Color := FColorChannelText;
@@ -522,13 +519,13 @@ begin
                                       r.Bottom-Renderer.FChannelNameFont.Height*7,
                                       r.Right,
                                       r.Bottom);
-    xx := r.Left+(r.Width-Renderer.ImageCursors[0].Width) div 2; //cursor path is centered on channel area
-    Cursors[i].CursorPathArea := Rect(xx, Cursors[i].ValueArea.Bottom+Renderer.ImageCursors[0].Height shr 1,
-                                xx+Renderer.ImageCursors[0].Width,
-                                Cursors[i].ChannelNameArea.Top-Renderer.ImageCursors[0].Height shr 1);//Cursors[i].ValueArea.Bottom+15+Renderer.TextureCursorPath.Height);
+    xx := r.Left+(r.Width-ImageCursorSize.cx) div 2; //cursor path is centered on channel area
+    Cursors[i].CursorPathArea := Rect(xx, Cursors[i].ValueArea.Bottom+ImageCursorSize.cy shr 1,
+                                xx+ImageCursorSize.cx,
+                                Cursors[i].ChannelNameArea.Top-ImageCursorSize.cy shr 1-1);
 
     // adjust cursor image background
-   if Renderer.FCursorBackGround.Height <> Cursors[i].CursorPathArea.Height +Renderer.ImageCursors[0].Height then
+   if Renderer.FCursorBackGround.Height <> Cursors[i].CursorPathArea.Height +ImageCursorSize.cy then
       Renderer.AdjustCursorBackGroundImage( Cursors[i].CursorPathArea.Height );
 
     Cursors[i].CursorArea.Left := Cursors[i].CursorPathArea.Left;
@@ -653,7 +650,7 @@ begin
      begin
       // Cursor path
       r := Renderer.AdjustRect(Cursors[i].CursorPathArea);
-      Renderer.FCursorBackGround.Draw(aCanvas, r.Left, r.Top-(Renderer.ImageCursors[0].Height shr 1));
+      Renderer.FCursorBackGround.Draw(aCanvas, r.Left, r.Top-(ImageCursorSize.cy shr 1));
 
       // Channel rect
       r := Renderer.AdjustRect(Cursors[i].ChannelNameArea);
@@ -1628,22 +1625,7 @@ begin
 end;
 
 procedure TFrameViewDMXCursors.CreateGraphicObjects;
-var i: TChannelType;
-  f: string;
 begin
-  ImageCursors := NIL;
-  SetLength(ImageCursors, Ord(High(TChannelType))+1);
-
-  for i in TChannelType do
-  begin
-   try
-     f := DMXCursorImageFileNameFor(i);
-    ImageCursors[Ord(i)] := SVGFileToBGRABitmap(f, ScaleDesignToForm(25), -1);
-   except
-    ImageCursors[Ord(i)] := TBGRABitmap.Create(ScaleDesignToForm(25),ScaleDesignToForm(35), BGRAWhite);
-   end;
-  end;
-
   // locked cursor
   try
     ImageLock := SVGFileToBGRABitmap(GetAppFixtureImagesFolder+'Lock.svg', ScaleDesignToForm(25), -1);
@@ -1675,12 +1657,7 @@ begin
 end;
 
 procedure TFrameViewDMXCursors.DeleteGraphicObjects;
-var i: integer;
 begin
-  for i:=0 to High(ImageCursors) do
-    ImageCursors[i].Free;
-  ImageCursors := NIL;
-
   ImageLock.Free;
   FCursorBackGround.Free;
 
@@ -1704,9 +1681,9 @@ begin
   FChannelNameFont.Height := ApplyZoomOnFontHeight(8);
   FChannelRangeFont.Height := ApplyZoomOnFontHeight(8);
 
-  FChannelWidth := Trunc(ImageCursors[0].Width+Zoom*4);//50+trunc((Zoom-MAX_ZOOM_VALUE div 2)*5);
-  if FChannelWidth < ImageCursors[0].Width then
-    FChannelWidth := ImageCursors[0].Width;
+  FChannelWidth := Trunc(ImageCursorSize.cx+Zoom*4);//50+trunc((Zoom-MAX_ZOOM_VALUE div 2)*5);
+  if FChannelWidth < ImageCursorSize.cx then
+    FChannelWidth := ImageCursorSize.cx;
 end;
 
 procedure TFrameViewDMXCursors.AdjustCursorBackGroundImage(aCursorPathHeight: integer);
@@ -1718,13 +1695,13 @@ const GRADUATION_COUNT = 10;
 begin
   if aCursorPathHeight < 0 then aCursorPathHeight := 0;
   // resize
-  FCursorBackGround.SetSize(ImageCursors[0].Width, aCursorPathHeight+ImageCursors[0].Height);
+  FCursorBackGround.SetSize(ImageCursorSize.cx, aCursorPathHeight+ImageCursorSize.cy);
   // background
   FCursorBackGround.Fill(FColorFixtureBackground);
 
   // Cursor path
   x := FCursorBackGround.Width shr 1;
-  y := ImageCursors[0].Height shr 1;
+  y := ImageCursorSize.cy shr 1;
 
   c := BGRA(0,0,0,150);
   FCursorBackGround.DrawVertLine(x, y, y+aCursorPathHeight, c);     // vertical axis
@@ -1739,18 +1716,14 @@ begin
   until (deltay > ScaleDesignToForm(30)) or (gradCount = 0);
   if gradCount > 0 then begin
     for i:=0 to GRADUATION_COUNT-1 do begin
-     FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width, Round(yy), c, true);
+     FCursorBackGround.DrawLine(0, Round(yy), ImageCursorSize.cx, Round(yy), c, true);
 
      yy := yy+deltay*0.5;
-     FCursorBackGround.DrawLine(0, Round(yy), ImageCursors[0].Width shr 2, Round(yy), c, True);
-     FCursorBackGround.DrawLine(ImageCursors[0].Width-ImageCursors[0].Width shr 2, Round(yy),
-                                 ImageCursors[0].Width, Round(yy), c, True);
+     FCursorBackGround.DrawLine(0, Round(yy), ImageCursorSize.cx shr 2, Round(yy), c, True);
+     FCursorBackGround.DrawLine(ImageCursorSize.cx shr 2, Round(yy), ImageCursorSize.cx, Round(yy), c, True);
      yy := yy+deltay*0.5;
     end;
   end;
-
-//  y := aCursorPathHeight+ImageCursors[0].Height shr 1;
-//  FCursorBackGround.DrawLine(0, y, ImageCursors[0].Width, y, c, true)
 end;
 
 constructor TFrameViewDMXCursors.Create(aOwner: TComponent);
@@ -1944,7 +1917,7 @@ begin
     end;
 end;
 
-procedure TFrameViewDMXCursors.RedrawCursor(aChan: TDMXChannel);
+procedure TFrameViewDMXCursors.RedrawCursor(aChan: TDMXChannel; aDrawAll: boolean);
 var i, j: Integer;
 begin
   if (Length(FView) = 0) or
@@ -1956,7 +1929,7 @@ begin
       for j:=0 to High(FView[i].Cursors) do
         if FView[i].Cursors[j].Channel = aChan then
         begin
-          FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+          FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, aDrawAll);
           exit;
         end;
 end;

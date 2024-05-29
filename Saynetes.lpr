@@ -55,7 +55,7 @@ begin
   application.ProcessMessages;
 
   Log.AddEmptyLine;
-  LoadFixtureImages;
+
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormUserConfirmation, FormUserConfirmation);
   Application.CreateForm(TFormDMXRGBTools, FormDMXRGBTools);
@@ -73,6 +73,5 @@ begin
 
   Application.Run;
 
-  FreeFixtureImages;
 end.
 

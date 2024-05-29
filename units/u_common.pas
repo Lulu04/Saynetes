@@ -5,7 +5,7 @@ unit u_common;
 interface
 
 uses
-  Classes, SysUtils, LMessages, Graphics, BGRABitmap;
+  Classes, SysUtils, LMessages, Graphics, BGRABitmap, Types;
 
 const
   APP_NAME: string = 'Saynète';
@@ -301,8 +301,7 @@ type
                      ftMovingHead04,
                      ftMovingHead05
                      );
-var
-  FixtureImages: array[TFixtureType] of TBGRABitmap;
+
 const
   FixtureDisplayOrder: array[Low(TFixtureType)..High(TFixtureType)] of TFixtureType=(
                    ftOther, ftParSmallTransparentLed,
@@ -495,6 +494,12 @@ type
                      ctFROST,
                      ctSOUNDCONTROLED
                    );
+var
+  FixtureImages: array[TFixtureType] of TBGRABitmap;
+  ImageCursors: array[TChannelType] of TBGRABitmap;
+  ImageCursorSize: TSize;
+
+type
 
     // stage shape rendered in the stage view
     TStageType=( stNone=0,
