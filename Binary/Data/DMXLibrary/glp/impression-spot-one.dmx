@@ -1,0 +1,48 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=4|LinkType2|product page|Url2|https://www.glp.de/en/products/moving-lights-led/impression-spot-one|LinkType3|video|Url3|https://www.youtube.com/watch?v=5b4GN_JgW2c|LinkType4|video|Url4|https://www.youtube.com/watch?v=PXzqRswF7js
+[GENERAL]
+Manufacturer|GLP|Name|impression Spot One|Type|9|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|472|Height|618|Depth|230|Weight|23.00|Power|700|Connector|3-pin and 5-pin|Bulb|400W RGB LED Chipset
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..660deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..280deg
+ID|Tilt fine|Type|8
+ID|Color Macros|Type|12|R1|Begin~0~End~7~Txt~No function No macro (use RGB channels)|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Amber~Extra~#ff9900|R4|Begin~24~End~31~Txt~Yellow warm~Extra~#ffcc00|R5|Begin~32~End~39~Txt~Yellow~Extra~#ffff00|R6|Begin~40~End~47~Txt~Green~Extra~#00ff00|R7|Begin~48~End~55~Txt~Turquoise~Extra~#00ffcc|R8|Begin~56~End~63~Txt~Cyan~Extra~#00ffff|R9|Begin~64~End~71~Txt~Blue~Extra~#0000ff|R10|Begin~72~End~79~Txt~Lavender~Extra~#e6e6fa|R11|Begin~80~End~87~Txt~Malve~Extra~#dd00ff|R12|Begin~88~End~95~Txt~Magenta~Extra~#ff00aa|R13|Begin~96~End~103~Txt~Pink~Extra~#ff88cc|R14|Begin~104~End~111~Txt~Color temperature 3200K White CTO~Extra~#ffffff|R15|Begin~112~End~119~Txt~Color temperature 5600K White~Extra~#ffffff|R16|Begin~120~End~127~Txt~Color temperature 7200K White CTB~Extra~#ffffff|R17|Begin~128~End~128~Txt~ColorFade stop|R18|Begin~129~End~255~Txt~ColorFade slow..fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter|Type|6|R1|Begin~0~End~15~Txt~Closed|R2|Begin~16~End~47~Txt~Pulse slow..fast Random timing|R3|Begin~48~End~79~Txt~RampUp slow..fast|R4|Begin~80~End~111~Txt~RampDown slow..fast|R5|Begin~112~End~143~Txt~RampUpDown slow..fast|R6|Begin~144~End~159~Txt~slow..fast Random timing|R7|Begin~160~End~199~Txt~5s..0.1s Strobe effect pause|R8|Begin~200~End~241~Txt~1Hz..25Hz|R9|Begin~242~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Temperature|Type|27|R1|Begin~0~End~7~Txt~No function No correction|R2|Begin~8~End~255~Txt~7200K..3200K
+ID|Gobo Shake + Reset|Type|46|R1|Begin~0~End~15~Txt~No function Gobo Shake off|R2|Begin~16~End~23~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 12.5%|R3|Begin~24~End~31~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 25%|R4|Begin~32~End~39~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 37.5%|R5|Begin~40~End~47~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 50%|R6|Begin~48~End~55~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 62.5%|R7|Begin~56~End~63~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 75%|R8|Begin~64~End~71~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 75%|R9|Begin~72~End~79~Txt~Gobo Wheel 1 shake angle 12.5…100% speed 100%|R10|Begin~80~End~87~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 12.5%|R11|Begin~88~End~95~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 25%|R12|Begin~96~End~103~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 37.5%|R13|Begin~104~End~111~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 50%|R14|Begin~112~End~119~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 62.5%|R15|Begin~120~End~127~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 75%|R16|Begin~128~End~135~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 87.5%|R17|Begin~136~End~143~Txt~Gobo Wheel 2 shake angle 12.5…100% speed 100%|R18|Begin~144~End~151~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 12.5%|R19|Begin~152~End~159~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 25%|R20|Begin~160~End~167~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 37.5%|R21|Begin~168~End~175~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 50%|R22|Begin~176~End~183~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 62.5%|R23|Begin~184~End~191~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 75%|R24|Begin~192~End~199~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 87.5%|R25|Begin~200~End~207~Txt~Gobo Wheel 1+2 shake angle 12.5…100% speed 100%|R26|Begin~208~End~249~Txt~No function|R27|Begin~250~End~253~Txt~Reset head|R28|Begin~254~End~255~Txt~Reset all functions
+ID|Movement|Type|38|R1|Begin~0~End~0~Txt~No movement|R2|Begin~1~End~7~Txt~Pan size 1 phase 0…270°|R3|Begin~8~End~15~Txt~Pan size 2 phase 0…270°|R4|Begin~16~End~23~Txt~Pan size 3 phase 0…270°|R5|Begin~24~End~31~Txt~Pan size 4 phase 0…270°|R6|Begin~32~End~39~Txt~Tilt size 1 phase 0…270°|R7|Begin~40~End~47~Txt~Tilt size 2 phase 0…270°|R8|Begin~48~End~55~Txt~Tilt size 3 phase 0…270°|R9|Begin~56~End~63~Txt~Tilt size 4 phase 0…270°|R10|Begin~64~End~71~Txt~Pan/Tilt size 1 phase 0…270°|R11|Begin~72~End~79~Txt~Pan/Tilt size 2 phase 0…270°|R12|Begin~80~End~87~Txt~Pan/Tilt size 3 phase 0…270°|R13|Begin~88~End~95~Txt~Pan/Tilt size 4 phase 0…270°|R14|Begin~96~End~103~Txt~Pan/Tilt inverse size 1 phase 0…270°|R15|Begin~104~End~111~Txt~Pan/Tilt inverse size 2 phase 0…270°|R16|Begin~112~End~119~Txt~Pan/Tilt inverse size 3 phase 0…270°|R17|Begin~120~End~127~Txt~Pan/Tilt inverse size 4 phase 0…270°|R18|Begin~128~End~135~Txt~Circle size 1 phase 0…270°|R19|Begin~136~End~143~Txt~Circle size 2 phase 0…270°|R20|Begin~144~End~151~Txt~Circle size 3 phase 0…270°|R21|Begin~152~End~159~Txt~Circle size 4 phase 0…270°|R22|Begin~160~End~167~Txt~Circle inverse size 1 phase 0…270°|R23|Begin~168~End~175~Txt~Circle inverse size 2 phase 0…270°|R24|Begin~176~End~183~Txt~Circle inverse size 3 phase 0…270°|R25|Begin~184~End~191~Txt~Circle inverse size 4 phase 0…270°|R26|Begin~192~End~199~Txt~Eight size 1 phase 0…270°|R27|Begin~200~End~207~Txt~Eight size 2 phase 0…270°|R28|Begin~208~End~215~Txt~Eight size 3 phase 0…270°|R29|Begin~216~End~223~Txt~Eight size 4 phase 0…270°|R30|Begin~224~End~231~Txt~Random size 1 phase 0…270°|R31|Begin~232~End~239~Txt~Random size 2 phase 0…270°|R32|Begin~240~End~247~Txt~Random size 3 phase 0…270°|R33|Begin~248~End~255~Txt~Random size 4 phase 0…270°
+ID|Pan/Tilt speed|Type|9|R1|Begin~0~End~1~Txt~Relative movement|R2|Begin~2~End~255~Txt~Slow..Fast
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~10…32°
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~far…near
+ID|Gobo Wheel 1|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~4 Circles|R3|Begin~32~End~47~Txt~Vertical Bars|R4|Begin~48~End~63~Txt~Two Light Tunnels|R5|Begin~64~End~79~Txt~Triangles Random|R6|Begin~80~End~95~Txt~Dash Mini|R7|Begin~96~End~111~Txt~Dots Medium|R8|Begin~112~End~126~Txt~Starry Night Dense|R9|Begin~127~End~127~Txt~rotation stop|R10|Begin~128~End~192~Txt~rotation CW slow…fast|R11|Begin~193~End~255~Txt~rotation CCW slow…fast
+ID|Gobo 1 Position|Type|11|R1|Begin~0~End~127~Txt~stencil rotation 0…540°|R2|Begin~128~End~129~Txt~rotation stop|R3|Begin~130~End~192~Txt~rotation CW slow…fast|R4|Begin~193~End~253~Txt~rotation CCW slow…fast|R5|Begin~254~End~255~Txt~rotation stop
+ID|Gobo Wheel 2|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~31~Txt~Cone|R3|Begin~32~End~47~Txt~Leaves Foliage|R4|Begin~48~End~63~Txt~Teeth|R5|Begin~64~End~79~Txt~Shreds|R6|Begin~80~End~95~Txt~Angry Hurricane|R7|Begin~96~End~111~Txt~Shredded Earth|R8|Begin~112~End~126~Txt~Diamond Pattern|R9|Begin~127~End~127~Txt~rotation stop|R10|Begin~128~End~192~Txt~rotation CW slow…fast|R11|Begin~193~End~255~Txt~rotation CCW slow…fast
+ID|Gobo 2 Position|Type|11|R1|Begin~0~End~127~Txt~stencil rotation 0…540°|R2|Begin~128~End~129~Txt~rotation stop|R3|Begin~130~End~192~Txt~rotation CW slow…fast|R4|Begin~193~End~253~Txt~rotation CCW slow…fast|R5|Begin~254~End~255~Txt~rotation stop
+ID|Effect Wheel Swing|Type|0|R1|Begin~0~End~255~Txt~Motion 0…100%
+ID|Effect Wheel Position|Type|33|R1|Begin~0~End~0~Txt~Rotation stop|R2|Begin~1~End~128~Txt~Rotation CCW slow…fast|R3|Begin~129~End~254~Txt~Rotation CCW fast…slow|R4|Begin~255~End~255~Txt~Rotation stop
+ID|Prism|Type|41|R1|Begin~0~End~5~Txt~Swing out|R2|Begin~6~End~127~Txt~0…540°|R3|Begin~128~End~192~Txt~CCW slow…fast|R4|Begin~193~End~255~Txt~CCW fast…slow
+ID|Iris|Type|25|R1|Begin~0~End~131~Txt~100…4% open|R2|Begin~132~End~255~Txt~4% open
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|Dimmer fine|Type|1
+ID|Zoom fine|Type|31
+ID|Focus fine|Type|32
+ID|Gobo 1 Position fine|Type|11
+ID|Gobo 2 Position fine|Type|11
+ID|Iris fine|Type|25
+[END_CHAN_DEF]
+[MODES]
+Name|Normal 24-channel|ShortName|normal-24ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Macros~Red~Green~Blue~Shutter~Dimmer~Color Temperature~Gobo Shake + Reset~Movement~Pan/Tilt speed~Zoom~Focus~Gobo Wheel 1~Gobo 1 Position~Gobo Wheel 2~Gobo 2 Position~Effect Wheel Swing~Effect Wheel Position~Prism~Iris
+Name|Compress 20-channel|ShortName|compress-20ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Macros~Red~Green~Blue~Shutter~Dimmer~Zoom~Focus~Gobo Wheel 1~Gobo 1 Position~Gobo Wheel 2~Gobo 2 Position~Effect Wheel Swing~Effect Wheel Position~Prism~Iris
+Name|Extended 31-channel|ShortName|extended-31ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Macros~Red~Red fine~Green~Green fine~Blue~Blue fine~Shutter~Dimmer~Dimmer fine~Color Temperature~Gobo Shake + Reset~Zoom~Zoom fine~Focus~Focus fine~Gobo Wheel 1~Gobo 1 Position~Gobo 1 Position fine~Gobo Wheel 2~Gobo 2 Position~Gobo 2 Position fine~Effect Wheel Swing~Effect Wheel Position~Prism~Iris~Iris fine
+[END_MODES]

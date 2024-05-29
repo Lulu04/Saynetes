@@ -1,0 +1,251 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.glp.de/en/products?format=raw&task=download&fid=514|LinkType2|product page|Url2|https://www.glp.de/en/products/creative-led-system/knv-arc|LinkType3|video|Url3|https://www.youtube.com/watch?v=JavZqUiT_ik|LinkType4|video|Url4|https://www.youtube.com/watch?v=ZlpA7hrJNSw
+[GENERAL]
+Manufacturer|GLP|Name|KNV Arc|Type|14|Authors|Flo Edelmann, Ryan Goodwin|Creator|OFL
+[PHYSICAL]
+Width|250|Height|250|Depth|180|Weight|9.70|Power|800|Connector|RJ45|Bulb|25× 30W White LEDs, 400× 0.25W RGB LEDs|Lumens|55030|LensMinDegree|120.000|LensMaxDegree|120.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Green fine|Type|4
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue fine|Type|5
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White fine|Type|13
+ID|Shutter / Strobe|Type|6|DefaultValue|255|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~39~Txt~RampUp slow..fast|R3|Begin~40~End~74~Txt~RampDown slow..fast|R4|Begin~75~End~109~Txt~RampUpDown slow..fast|R5|Begin~110~End~144~Txt~slow..fast Double flash|R6|Begin~145~End~179~Txt~slow..fast Random pixel|R7|Begin~180~End~214~Txt~slow..fast Random timing|R8|Begin~215~End~249~Txt~0.289Hz..16.67Hz|R9|Begin~250~End~252~Txt~Strobe Hyperspeed|R10|Begin~253~End~255~Txt~Open
+ID|Control / Settings|Type|0|R1|Begin~0~End~11~Txt~Idle|R2|Begin~12~End~38~Txt~No function|R3|Begin~39~End~41~Txt~3s Dimmer Flash Off|R4|Begin~42~End~44~Txt~3s Dimmer Flash On|R5|Begin~45~End~47~Txt~No function|R6|Begin~48~End~50~Txt~3s Dimming curve Soft|R7|Begin~51~End~53~Txt~3s Dimming curve Linear|R8|Begin~54~End~56~Txt~No function|R9|Begin~57~End~59~Txt~3s Extra Shutter RGBW|R10|Begin~60~End~62~Txt~3s Extra Shutter RGB only|R11|Begin~63~End~65~Txt~3s Extra Shutter White only|R12|Begin~66~End~68~Txt~No function|R13|Begin~69~End~71~Txt~3s Fan mode regulated|R14|Begin~72~End~74~Txt~3s Fan mode high|R15|Begin~75~End~77~Txt~3s Fan mode medium|R16|Begin~78~End~80~Txt~3s Fan mode low|R17|Begin~81~End~83~Txt~No function|R18|Begin~84~End~86~Txt~3s Display On|R19|Begin~87~End~89~Txt~3s Display Off|R20|Begin~90~End~92~Txt~3s Display Auto|R21|Begin~93~End~95~Txt~3s Display invert Off|R22|Begin~96~End~98~Txt~3s Display invert On|R23|Begin~99~End~101~Txt~3s No DMX = Capture scene|R24|Begin~102~End~104~Txt~3s No DMX = Stand-alone|R25|Begin~105~End~107~Txt~3s No DMX = Blackout|R26|Begin~108~End~110~Txt~3s No DMX = Hold|R27|Begin~111~End~113~Txt~3s Test pattern On|R28|Begin~114~End~116~Txt~3s Test pattern Off|R29|Begin~117~End~119~Txt~3s Rotation Off|R30|Begin~120~End~122~Txt~3s Rotation 90°|R31|Begin~123~End~125~Txt~3s Rotation 180°|R32|Begin~126~End~128~Txt~3s Rotation 270°|R33|Begin~129~End~131~Txt~3s Pixel mirror Off|R34|Begin~132~End~134~Txt~3s Pixel mirror On|R35|Begin~135~End~137~Txt~3s White output limitation Off|R36|Begin~138~End~140~Txt~3s White output limitation 80%|R37|Begin~141~End~143~Txt~3s White output limitation 60%|R38|Begin~144~End~146~Txt~3s White output limitation 40%|R39|Begin~147~End~149~Txt~3s White output limitation 20%|R40|Begin~150~End~152~Txt~3s White output limitation 10%|R41|Begin~153~End~158~Txt~No function|R42|Begin~159~End~161~Txt~3s RGB output limitation Off|R43|Begin~162~End~164~Txt~3s RGB output limitation 80%|R44|Begin~165~End~167~Txt~3s RGB output limitation 60%|R45|Begin~168~End~170~Txt~3s RGB output limitation 40%|R46|Begin~171~End~173~Txt~3s RGB output limitation 20%|R47|Begin~174~End~176~Txt~3s RGB output limitation 10%|R48|Begin~177~End~251~Txt~No function|R49|Begin~252~End~255~Txt~3s Reboot fixture
+ID|White LEDs flash duration|Type|28|R1|Begin~0~End~255~Txt~7..650 ms
+ID|White LEDs Flare Effect|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~49~Txt~Slow..Fast|R3|Begin~50~End~59~Txt~No function|R4|Begin~60~End~109~Txt~Slow…Fast (random)|R5|Begin~110~End~119~Txt~No function|R6|Begin~120~End~169~Txt~Slow..Fast (random pixel)|R7|Begin~170~End~255~Txt~No function
+ID|White LEDs FX Selection|Type|0|R1|Begin~0~End~2~Txt~FX Off~Switch1~White LEDs flash/FX speed:White LEDs Flash Rate|R2|Begin~3~End~5~Txt~Sync strobe - circle mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R3|Begin~6~End~8~Txt~Sync strobe - 4 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R4|Begin~9~End~11~Txt~Sync strobe - 1 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R5|Begin~12~End~14~Txt~Random strobe - all~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R6|Begin~15~End~17~Txt~Random strobe - circle mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R7|Begin~18~End~20~Txt~Random strobe - 4 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R8|Begin~21~End~23~Txt~Random strobe - 1 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R9|Begin~24~End~26~Txt~Lite in/out - all~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R10|Begin~27~End~29~Txt~Lite in/out - circle mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R11|Begin~30~End~32~Txt~Lite in/out - 4 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R12|Begin~33~End~35~Txt~Lite in/out - 1 dot mask~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R13|Begin~36~End~38~Txt~Snake~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R14|Begin~39~End~41~Txt~Raindrops~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R15|Begin~42~End~44~Txt~Random pixel~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R16|Begin~45~End~47~Txt~Random fake x 2~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R17|Begin~48~End~50~Txt~Random fake x 4~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R18|Begin~51~End~53~Txt~Line~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R19|Begin~54~End~56~Txt~Double line~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R20|Begin~57~End~59~Txt~Corner to corner line~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R21|Begin~60~End~62~Txt~Tilted double lines~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R22|Begin~63~End~65~Txt~Tilted double lines in to out~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R23|Begin~66~End~68~Txt~Center line running dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R24|Begin~69~End~71~Txt~Middle line running dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R25|Begin~72~End~74~Txt~Outer line running dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R26|Begin~75~End~77~Txt~Corner to corner~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R27|Begin~78~End~80~Txt~Arrow~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R28|Begin~81~End~83~Txt~Wave~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R29|Begin~84~End~86~Txt~Wheel~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R30|Begin~87~End~89~Txt~Half wheel~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R31|Begin~90~End~92~Txt~Circling dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R32|Begin~93~End~95~Txt~Outer circle~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R33|Begin~96~End~98~Txt~Inner circle~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R34|Begin~99~End~101~Txt~Outer 4 dots~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R35|Begin~102~End~104~Txt~Outer single dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R36|Begin~105~End~107~Txt~Middle single dot~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R37|Begin~108~End~110~Txt~Spinning 2x1 dots~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R38|Begin~111~End~113~Txt~Asymmetrical 4 dots~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R39|Begin~114~End~116~Txt~Symmetrical 4 dots~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R40|Begin~117~End~119~Txt~Square~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R41|Begin~120~End~122~Txt~Inside out~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R42|Begin~123~End~125~Txt~Inside out 2~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R43|Begin~126~End~128~Txt~Abstract 1~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R44|Begin~129~End~131~Txt~Abstract 2~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R45|Begin~132~End~134~Txt~Abstract 3~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R46|Begin~135~End~137~Txt~Hash tag~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R47|Begin~138~End~140~Txt~Flip flop~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R48|Begin~141~End~143~Txt~Jumping slash~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R49|Begin~144~End~146~Txt~Jumping 'L'~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R50|Begin~147~End~149~Txt~Jumping pins~Switch1~White LEDs flash/FX speed:White LEDs FX Speed|R51|Begin~150~End~255~Txt~Off - No Strobe or FX~Switch1~White LEDs flash/FX speed:White LEDs FX Speed
+ID|White LEDs FX Crossfade Time|Type|16|R1|Begin~0~End~1~Txt~Effect duration instant|R2|Begin~2~End~127~Txt~Short..Long (Crossfade)|R3|Begin~128~End~255~Txt~Long..Short (Crossfade and tail)
+ID|White LEDs Orientation|Type|33|R1|Begin~0~End~4~Txt~OFF|R2|Begin~5~End~9~Txt~Rotate 90°|R3|Begin~10~End~14~Txt~Rotate 180°|R4|Begin~15~End~19~Txt~Rotate 270°|R5|Begin~20~End~24~Txt~Horizontal flip|R6|Begin~25~End~29~Txt~Rotate 90° + vertical flip|R7|Begin~30~End~34~Txt~Rotate 180° + horizontal flip|R8|Begin~35~End~39~Txt~Rotate 270° + vertical flip|R9|Begin~40~End~44~Txt~OFF|R10|Begin~45~End~49~Txt~Random rotate + flip|R11|Begin~50~End~54~Txt~Random position|R12|Begin~55~End~59~Txt~Fix 90° rotation + random position|R13|Begin~60~End~64~Txt~Fix 180° rotation + random position|R14|Begin~65~End~69~Txt~Fix 270° rotation + random position|R15|Begin~70~End~74~Txt~OFF|R16|Begin~75~End~79~Txt~Bounce|R17|Begin~80~End~84~Txt~Bounce + rotate 90°|R18|Begin~85~End~89~Txt~Bounce + rotate 180°|R19|Begin~90~End~94~Txt~Bounce + rotate 270°|R20|Begin~95~End~99~Txt~OFF|R21|Begin~100~End~104~Txt~Rotate CCW at end|R22|Begin~105~End~109~Txt~Rotate CW at end|R23|Begin~110~End~114~Txt~Random rotate at end|R24|Begin~115~End~134~Txt~OFF|R25|Begin~135~End~139~Txt~Rotate 90° (reversed direction)|R26|Begin~140~End~144~Txt~Rotate 180° (reversed direction)|R27|Begin~145~End~149~Txt~Rotate 270° (reversed direction)|R28|Begin~150~End~154~Txt~Horizontal flip (reversed direction)|R29|Begin~155~End~159~Txt~Rotate 90° + vertical flip (reversed direction)|R30|Begin~160~End~164~Txt~Rotate 180° + horizontal flip (reversed direction)|R31|Begin~165~End~169~Txt~Rotate 270° + vertical flip (reversed direction)|R32|Begin~170~End~174~Txt~OFF|R33|Begin~175~End~179~Txt~Random Rotate + flip (reversed direction)|R34|Begin~180~End~184~Txt~Random position (reversed direction)|R35|Begin~185~End~189~Txt~Fix 90° rotation + random position (reversed direction)|R36|Begin~190~End~194~Txt~Fix 180° rotation + random position (reversed direction)|R37|Begin~195~End~199~Txt~Fix 270° rotation + random position (reversed direction)|R38|Begin~200~End~204~Txt~OFF|R39|Begin~205~End~209~Txt~Bounce (reversed direction)|R40|Begin~210~End~214~Txt~Bounce + rotate 90° (reversed direction)|R41|Begin~215~End~219~Txt~Bounce + rotate 180° (reversed direction)|R42|Begin~220~End~224~Txt~Bounce + rotate 270° (reversed direction)|R43|Begin~225~End~229~Txt~OFF|R44|Begin~230~End~234~Txt~Rotate CCW at end (reversed direction)|R45|Begin~235~End~239~Txt~Rotate CW at end (reversed direction)|R46|Begin~240~End~244~Txt~Random rotate at end (reversed direction)|R47|Begin~245~End~255~Txt~OFF
+ID|White LEDs FX Offset|Type|0|R1|Begin~0~End~255~Txt~0…100%
+ID|White LEDs FX Length|Type|0|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB LEDs Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB LEDs Flash Duration|Type|16|R1|Begin~0~End~255~Txt~7…650ms
+ID|RGB LEDs Flare Effect|Type|0|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~49~Txt~Slow..Fast|R3|Begin~50~End~59~Txt~No function|R4|Begin~60~End~109~Txt~Slow…Fast (random)|R5|Begin~110~End~119~Txt~No function|R6|Begin~120~End~169~Txt~Slow..Fast (random pixel)|R7|Begin~170~End~255~Txt~No function
+ID|RGB LEDs FX Selection|Type|0|R1|Begin~0~End~2~Txt~FX Off~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs Flash Rate|R2|Begin~3~End~5~Txt~Sync strobe - circle mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R3|Begin~6~End~8~Txt~Sync strobe - 4 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R4|Begin~9~End~11~Txt~Sync strobe - 1 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R5|Begin~12~End~14~Txt~Random strobe - all~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R6|Begin~15~End~17~Txt~Random strobe - circle mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R7|Begin~18~End~20~Txt~Random strobe - 4 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R8|Begin~21~End~23~Txt~Random strobe - 1 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R9|Begin~24~End~26~Txt~Lite in/out - all~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R10|Begin~27~End~29~Txt~Lite in/out - circle mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R11|Begin~30~End~32~Txt~Lite in/out - 4 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R12|Begin~33~End~35~Txt~Lite in/out - 1 dot mask~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R13|Begin~36~End~38~Txt~Snake~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R14|Begin~39~End~41~Txt~Raindrops~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R15|Begin~42~End~44~Txt~Random pixel~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R16|Begin~45~End~47~Txt~Random fake x 2~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R17|Begin~48~End~50~Txt~Random fake x 4~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R18|Begin~51~End~53~Txt~Line~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R19|Begin~54~End~56~Txt~Double line~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R20|Begin~57~End~59~Txt~Corner to corner line~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R21|Begin~60~End~62~Txt~Tilted double lines~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R22|Begin~63~End~65~Txt~Tilted double lines in to out~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R23|Begin~66~End~68~Txt~Center line running dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R24|Begin~69~End~71~Txt~Middle line running dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R25|Begin~72~End~74~Txt~Outer line running dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R26|Begin~75~End~77~Txt~Corner to corner~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R27|Begin~78~End~80~Txt~Arrow~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R28|Begin~81~End~83~Txt~Wave~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R29|Begin~84~End~86~Txt~Wheel~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R30|Begin~87~End~89~Txt~Half wheel~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R31|Begin~90~End~92~Txt~Circling dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R32|Begin~93~End~95~Txt~Outer circle~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R33|Begin~96~End~98~Txt~Inner circle~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R34|Begin~99~End~101~Txt~Outer 4 dots~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R35|Begin~102~End~104~Txt~Outer single dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R36|Begin~105~End~107~Txt~Middle single dot~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R37|Begin~108~End~110~Txt~Spinning 2x1 dots~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R38|Begin~111~End~113~Txt~Asymmetrical 4 dots~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R39|Begin~114~End~116~Txt~Symmetrical 4 dots~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R40|Begin~117~End~119~Txt~Square~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R41|Begin~120~End~122~Txt~Inside out~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R42|Begin~123~End~125~Txt~Inside out 2~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R43|Begin~126~End~128~Txt~Abstract 1~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R44|Begin~129~End~131~Txt~Abstract 2~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R45|Begin~132~End~134~Txt~Abstract 3~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R46|Begin~135~End~137~Txt~Hash tag~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R47|Begin~138~End~140~Txt~Flip flop~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R48|Begin~141~End~143~Txt~Jumping slash~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R49|Begin~144~End~146~Txt~Jumping 'L'~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R50|Begin~147~End~149~Txt~Jumping pins~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed|R51|Begin~150~End~255~Txt~Off - No Strobe or FX~Switch1~RGB LEDs Flash Rate / FX Speed:RGB LEDs FX Speed
+ID|RGB LEDs FX Crossfade Time|Type|16|R1|Begin~0~End~1~Txt~Effect duration instant|R2|Begin~2~End~127~Txt~Short..Long (Crossfade)|R3|Begin~128~End~255~Txt~Long..Short (Crossfade and tail)
+ID|RGB LEDs Orientation|Type|33|R1|Begin~0~End~4~Txt~OFF|R2|Begin~5~End~9~Txt~Rotate 90°|R3|Begin~10~End~14~Txt~Rotate 180°|R4|Begin~15~End~19~Txt~Rotate 270°|R5|Begin~20~End~24~Txt~Horizontal flip|R6|Begin~25~End~29~Txt~Rotate 90° + vertical flip|R7|Begin~30~End~34~Txt~Rotate 180° + horizontal flip|R8|Begin~35~End~39~Txt~Rotate 270° + vertical flip|R9|Begin~40~End~44~Txt~OFF|R10|Begin~45~End~49~Txt~Random rotate + flip|R11|Begin~50~End~54~Txt~Random position|R12|Begin~55~End~59~Txt~Fix 90° rotation + random position|R13|Begin~60~End~64~Txt~Fix 180° rotation + random position|R14|Begin~65~End~69~Txt~Fix 270° rotation + random position|R15|Begin~70~End~74~Txt~OFF|R16|Begin~75~End~79~Txt~Bounce|R17|Begin~80~End~84~Txt~Bounce + rotate 90°|R18|Begin~85~End~89~Txt~Bounce + rotate 180°|R19|Begin~90~End~94~Txt~Bounce + rotate 270°|R20|Begin~95~End~99~Txt~OFF|R21|Begin~100~End~104~Txt~Rotate CCW at end|R22|Begin~105~End~109~Txt~Rotate CW at end|R23|Begin~110~End~114~Txt~Random rotate at end|R24|Begin~115~End~134~Txt~OFF|R25|Begin~135~End~139~Txt~Rotate 90° (reversed direction)|R26|Begin~140~End~144~Txt~Rotate 180° (reversed direction)|R27|Begin~145~End~149~Txt~Rotate 270° (reversed direction)|R28|Begin~150~End~154~Txt~Horizontal flip (reversed direction)|R29|Begin~155~End~159~Txt~Rotate 90° + vertical flip (reversed direction)|R30|Begin~160~End~164~Txt~Rotate 180° + horizontal flip (reversed direction)|R31|Begin~165~End~169~Txt~Rotate 270° + vertical flip (reversed direction)|R32|Begin~170~End~174~Txt~OFF|R33|Begin~175~End~179~Txt~Random Rotate + flip (reversed direction)|R34|Begin~180~End~184~Txt~Random position (reversed direction)|R35|Begin~185~End~189~Txt~Fix 90° rotation + random position (reversed direction)|R36|Begin~190~End~194~Txt~Fix 180° rotation + random position (reversed direction)|R37|Begin~195~End~199~Txt~Fix 270° rotation + random position (reversed direction)|R38|Begin~200~End~204~Txt~OFF|R39|Begin~205~End~209~Txt~Bounce (reversed direction)|R40|Begin~210~End~214~Txt~Bounce + rotate 90° (reversed direction)|R41|Begin~215~End~219~Txt~Bounce + rotate 180° (reversed direction)|R42|Begin~220~End~224~Txt~Bounce + rotate 270° (reversed direction)|R43|Begin~225~End~229~Txt~OFF|R44|Begin~230~End~234~Txt~Rotate CCW at end (reversed direction)|R45|Begin~235~End~239~Txt~Rotate CW at end (reversed direction)|R46|Begin~240~End~244~Txt~Random rotate at end (reversed direction)|R47|Begin~245~End~255~Txt~OFF
+ID|RGB LEDs FX Offset|Type|0|R1|Begin~0~End~255~Txt~0…100%
+ID|RGB LEDs FX Length|Type|0|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB LEDs FX Color Generator|Type|12|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~19~Txt~Random all pixels RGBCMY|R3|Begin~20~End~29~Txt~Random single pixel RGBCMY|R4|Begin~30~End~39~Txt~Random all pixels bright colors|R5|Begin~40~End~49~Txt~Random single pixel bright colors|R6|Begin~50~End~59~Txt~Red / Blue|R7|Begin~60~End~69~Txt~Red / Green|R8|Begin~70~End~79~Txt~Blue / Green|R9|Begin~80~End~89~Txt~Yellow / Magenta|R10|Begin~90~End~99~Txt~Yellow / Cyan|R11|Begin~100~End~109~Txt~Cyan / Magenta|R12|Begin~110~End~119~Txt~Yellow / Blue|R13|Begin~120~End~129~Txt~Green / Magenta|R14|Begin~130~End~139~Txt~Red / Green / Blue|R15|Begin~140~End~149~Txt~Red / Yellow / Blue|R16|Begin~150~End~159~Txt~Red / Green / Blue / Yellow / Magenta / Cyan|R17|Begin~160~End~169~Txt~Red / Green / Blue - Horizontal line|R18|Begin~170~End~179~Txt~Red / Green / Blue - Vertical line|R19|Begin~180~End~219~Txt~Color fade stop|R20|Begin~220~End~229~Txt~Color fade slow…fast|R21|Begin~230~End~239~Txt~Lite in|R22|Begin~240~End~249~Txt~Lite out|R23|Begin~250~End~255~Txt~No function
+ID|White Pixel 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 4|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 5|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 6|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 7|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 8|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 9|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 10|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 11|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 12|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 13|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 14|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 15|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 16|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 17|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 18|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 19|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 20|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 21|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 22|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 23|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 24|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White Pixel 25|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|White LEDs Shutter / Strobe|Type|6|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~39~Txt~RampUp slow..fast|R3|Begin~40~End~74~Txt~RampDown slow..fast|R4|Begin~75~End~109~Txt~RampUpDown slow..fast|R5|Begin~110~End~144~Txt~slow..fast Double flash|R6|Begin~145~End~179~Txt~slow..fast Random pixel|R7|Begin~180~End~214~Txt~slow..fast Random timing|R8|Begin~215~End~249~Txt~0.289Hz..16.67Hz|R9|Begin~250~End~252~Txt~Strobe Hyperspeed|R10|Begin~253~End~255~Txt~Open
+ID|White LEDs Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 17|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 17|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 17|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 18|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 18|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 18|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 19|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 19|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 19|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 20|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 20|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 20|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 21|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 21|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 21|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 22|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 22|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 22|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 23|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 23|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 23|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 24|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 24|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 24|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Pixel 25|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Pixel 25|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Pixel 25|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|RGB LEDs Shutter / Strobe|Type|6|R1|Begin~0~End~4~Txt~Closed|R2|Begin~5~End~39~Txt~RampUp slow..fast|R3|Begin~40~End~74~Txt~RampDown slow..fast|R4|Begin~75~End~109~Txt~RampUpDown slow..fast|R5|Begin~110~End~144~Txt~slow..fast Double flash|R6|Begin~145~End~179~Txt~slow..fast Random pixel|R7|Begin~180~End~214~Txt~slow..fast Random timing|R8|Begin~215~End~249~Txt~0.289Hz..16.67Hz|R9|Begin~250~End~252~Txt~Strobe Hyperspeed|R10|Begin~253~End~255~Txt~Open
+ID|Red fine Pixel 1|Type|3
+ID|Green fine Pixel 1|Type|4
+ID|Blue fine Pixel 1|Type|5
+ID|White fine Pixel 1|Type|13
+ID|Red fine Pixel 2|Type|3
+ID|Green fine Pixel 2|Type|4
+ID|Blue fine Pixel 2|Type|5
+ID|White fine Pixel 2|Type|13
+ID|Red fine Pixel 3|Type|3
+ID|Green fine Pixel 3|Type|4
+ID|Blue fine Pixel 3|Type|5
+ID|White fine Pixel 3|Type|13
+ID|Red fine Pixel 4|Type|3
+ID|Green fine Pixel 4|Type|4
+ID|Blue fine Pixel 4|Type|5
+ID|White fine Pixel 4|Type|13
+ID|Red fine Pixel 5|Type|3
+ID|Green fine Pixel 5|Type|4
+ID|Blue fine Pixel 5|Type|5
+ID|White fine Pixel 5|Type|13
+ID|Red fine Pixel 6|Type|3
+ID|Green fine Pixel 6|Type|4
+ID|Blue fine Pixel 6|Type|5
+ID|White fine Pixel 6|Type|13
+ID|Red fine Pixel 7|Type|3
+ID|Green fine Pixel 7|Type|4
+ID|Blue fine Pixel 7|Type|5
+ID|White fine Pixel 7|Type|13
+ID|Red fine Pixel 8|Type|3
+ID|Green fine Pixel 8|Type|4
+ID|Blue fine Pixel 8|Type|5
+ID|White fine Pixel 8|Type|13
+ID|Red fine Pixel 9|Type|3
+ID|Green fine Pixel 9|Type|4
+ID|Blue fine Pixel 9|Type|5
+ID|White fine Pixel 9|Type|13
+ID|Red fine Pixel 10|Type|3
+ID|Green fine Pixel 10|Type|4
+ID|Blue fine Pixel 10|Type|5
+ID|White fine Pixel 10|Type|13
+ID|Red fine Pixel 11|Type|3
+ID|Green fine Pixel 11|Type|4
+ID|Blue fine Pixel 11|Type|5
+ID|White fine Pixel 11|Type|13
+ID|Red fine Pixel 12|Type|3
+ID|Green fine Pixel 12|Type|4
+ID|Blue fine Pixel 12|Type|5
+ID|White fine Pixel 12|Type|13
+ID|Red fine Pixel 13|Type|3
+ID|Green fine Pixel 13|Type|4
+ID|Blue fine Pixel 13|Type|5
+ID|White fine Pixel 13|Type|13
+ID|Red fine Pixel 14|Type|3
+ID|Green fine Pixel 14|Type|4
+ID|Blue fine Pixel 14|Type|5
+ID|White fine Pixel 14|Type|13
+ID|Red fine Pixel 15|Type|3
+ID|Green fine Pixel 15|Type|4
+ID|Blue fine Pixel 15|Type|5
+ID|White fine Pixel 15|Type|13
+ID|Red fine Pixel 16|Type|3
+ID|Green fine Pixel 16|Type|4
+ID|Blue fine Pixel 16|Type|5
+ID|White fine Pixel 16|Type|13
+ID|Red fine Pixel 17|Type|3
+ID|Green fine Pixel 17|Type|4
+ID|Blue fine Pixel 17|Type|5
+ID|White fine Pixel 17|Type|13
+ID|Red fine Pixel 18|Type|3
+ID|Green fine Pixel 18|Type|4
+ID|Blue fine Pixel 18|Type|5
+ID|White fine Pixel 18|Type|13
+ID|Red fine Pixel 19|Type|3
+ID|Green fine Pixel 19|Type|4
+ID|Blue fine Pixel 19|Type|5
+ID|White fine Pixel 19|Type|13
+ID|Red fine Pixel 20|Type|3
+ID|Green fine Pixel 20|Type|4
+ID|Blue fine Pixel 20|Type|5
+ID|White fine Pixel 20|Type|13
+ID|Red fine Pixel 21|Type|3
+ID|Green fine Pixel 21|Type|4
+ID|Blue fine Pixel 21|Type|5
+ID|White fine Pixel 21|Type|13
+ID|Red fine Pixel 22|Type|3
+ID|Green fine Pixel 22|Type|4
+ID|Blue fine Pixel 22|Type|5
+ID|White fine Pixel 22|Type|13
+ID|Red fine Pixel 23|Type|3
+ID|Green fine Pixel 23|Type|4
+ID|Blue fine Pixel 23|Type|5
+ID|White fine Pixel 23|Type|13
+ID|Red fine Pixel 24|Type|3
+ID|Green fine Pixel 24|Type|4
+ID|Blue fine Pixel 24|Type|5
+ID|White fine Pixel 24|Type|13
+ID|Red fine Pixel 25|Type|3
+ID|Green fine Pixel 25|Type|4
+ID|Blue fine Pixel 25|Type|5
+ID|White fine Pixel 25|Type|13
+ID|White LEDs FX Speed|Type|16|R1|Begin~0~End~1~Txt~Stop|R2|Begin~2~End~253~Txt~Slow..Fast|R3|Begin~254~End~255~Txt~Stop
+ID|White LEDs Flash Rate|Type|6|R1|Begin~0~End~1~Txt~Shutter closed|R2|Begin~2~End~250~Txt~Strobe 0.289..16.67Hz|R3|Begin~251~End~252~Txt~Hyperspeed|R4|Begin~253~End~255~Txt~Shutter open
+ID|RGB LEDs Flash Rate|Type|6|R1|Begin~0~End~1~Txt~Shutter closed|R2|Begin~2~End~250~Txt~Strobe 0.289…16.67Hz|R3|Begin~251~End~252~Txt~Strobe Hyperspeed|R4|Begin~253~End~255~Txt~Shutter open
+ID|RGB LEDs FX Speed|Type|16|R1|Begin~0~End~1~Txt~Stop|R2|Begin~2~End~253~Txt~Slow..Fast|R3|Begin~254~End~255~Txt~Stop
+[END_CHAN_DEF]
+[MODES]
+Name|RGBW 16-bit|ShortName|10ch|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Shutter / Strobe~Control / Settings
+Name|White strobe with FX, RGB with FX|ShortName|23ch|Content|White~White LEDs flash duration~White LEDs flash/FX speed:White LEDs FX Speed;White LEDs Flash Rate~White LEDs Flare Effect~White LEDs FX Selection~White LEDs FX Crossfade Time~White LEDs Orientation~White LEDs FX Offset~White LEDs FX Length~RGB LEDs Dimmer~RGB LEDs Flash Duration~RGB LEDs Flash Rate / FX Speed:RGB LEDs Flash Rate;RGB LEDs FX Speed~Red~Green~Blue~RGB LEDs Flare Effect~RGB LEDs FX Selection~RGB LEDs FX Crossfade Time~RGB LEDs Orientation~RGB LEDs FX Offset~RGB LEDs FX Length~RGB LEDs FX Color Generator~Control / Settings
+Name|RGB strobe with FX, White 25-pixel|ShortName|40ch|Content|RGB LEDs Dimmer~RGB LEDs Flash Duration~RGB LEDs Flash Rate / FX Speed:RGB LEDs Flash Rate;RGB LEDs FX Speed~Red~Green~Blue~RGB LEDs Flare Effect~RGB LEDs FX Selection~RGB LEDs FX Crossfade Time~RGB LEDs Orientation~RGB LEDs FX Offset~RGB LEDs FX Length~RGB LEDs FX Color Generator~White Pixel 1~White Pixel 2~White Pixel 3~White Pixel 4~White Pixel 5~White Pixel 6~White Pixel 7~White Pixel 8~White Pixel 9~White Pixel 10~White Pixel 11~White Pixel 12~White Pixel 13~White Pixel 14~White Pixel 15~White Pixel 16~White Pixel 17~White Pixel 18~White Pixel 19~White Pixel 20~White Pixel 21~White Pixel 22~White Pixel 23~White Pixel 24~White Pixel 25~White LEDs Shutter / Strobe~Control / Settings
+Name|White strobe with FX, RGB 25-pixel|ShortName|86ch|Content|White LEDs Dimmer~White LEDs flash duration~White LEDs flash/FX speed:White LEDs FX Speed;White LEDs Flash Rate~White LEDs Flare Effect~White LEDs FX Selection~White LEDs FX Crossfade Time~White LEDs Orientation~White LEDs FX Offset~White LEDs FX Length~Red Pixel 1~Green Pixel 1~Blue Pixel 1~Red Pixel 2~Green Pixel 2~Blue Pixel 2~Red Pixel 3~Green Pixel 3~Blue Pixel 3~Red Pixel 4~Green Pixel 4~Blue Pixel 4~Red Pixel 5~Green Pixel 5~Blue Pixel 5~Red Pixel 6~Green Pixel 6~Blue Pixel 6~Red Pixel 7~Green Pixel 7~Blue Pixel 7~Red Pixel 8~Green Pixel 8~Blue Pixel 8~Red Pixel 9~Green Pixel 9~Blue Pixel 9~Red Pixel 10~Green Pixel 10~Blue Pixel 10~Red Pixel 11~Green Pixel 11~Blue Pixel 11~Red Pixel 12~Green Pixel 12~Blue Pixel 12~Red Pixel 13~Green Pixel 13~Blue Pixel 13~Red Pixel 14~Green Pixel 14~Blue Pixel 14~Red Pixel 15~Green Pixel 15~Blue Pixel 15~Red Pixel 16~Green Pixel 16~Blue Pixel 16~Red Pixel 17~Green Pixel 17~Blue Pixel 17~Red Pixel 18~Green Pixel 18~Blue Pixel 18~Red Pixel 19~Green Pixel 19~Blue Pixel 19~Red Pixel 20~Green Pixel 20~Blue Pixel 20~Red Pixel 21~Green Pixel 21~Blue Pixel 21~Red Pixel 22~Green Pixel 22~Blue Pixel 22~Red Pixel 23~Green Pixel 23~Blue Pixel 23~Red Pixel 24~Green Pixel 24~Blue Pixel 24~Red Pixel 25~Green Pixel 25~Blue Pixel 25~RGB LEDs Shutter / Strobe~Control / Settings
+Name|RGBW 25-pixel 16-bit|ShortName|202|Content|Red Pixel 1~Red fine Pixel 1~Green Pixel 1~Green fine Pixel 1~Blue Pixel 1~Blue fine Pixel 1~White Pixel 1~White fine Pixel 1~Red Pixel 2~Red fine Pixel 2~Green Pixel 2~Green fine Pixel 2~Blue Pixel 2~Blue fine Pixel 2~White Pixel 2~White fine Pixel 2~Red Pixel 3~Red fine Pixel 3~Green Pixel 3~Green fine Pixel 3~Blue Pixel 3~Blue fine Pixel 3~White Pixel 3~White fine Pixel 3~Red Pixel 4~Red fine Pixel 4~Green Pixel 4~Green fine Pixel 4~Blue Pixel 4~Blue fine Pixel 4~White Pixel 4~White fine Pixel 4~Red Pixel 5~Red fine Pixel 5~Green Pixel 5~Green fine Pixel 5~Blue Pixel 5~Blue fine Pixel 5~White Pixel 5~White fine Pixel 5~Red Pixel 6~Red fine Pixel 6~Green Pixel 6~Green fine Pixel 6~Blue Pixel 6~Blue fine Pixel 6~White Pixel 6~White fine Pixel 6~Red Pixel 7~Red fine Pixel 7~Green Pixel 7~Green fine Pixel 7~Blue Pixel 7~Blue fine Pixel 7~White Pixel 7~White fine Pixel 7~Red Pixel 8~Red fine Pixel 8~Green Pixel 8~Green fine Pixel 8~Blue Pixel 8~Blue fine Pixel 8~White Pixel 8~White fine Pixel 8~Red Pixel 9~Red fine Pixel 9~Green Pixel 9~Green fine Pixel 9~Blue Pixel 9~Blue fine Pixel 9~White Pixel 9~White fine Pixel 9~Red Pixel 10~Red fine Pixel 10~Green Pixel 10~Green fine Pixel 10~Blue Pixel 10~Blue fine Pixel 10~White Pixel 10~White fine Pixel 10~Red Pixel 11~Red fine Pixel 11~Green Pixel 11~Green fine Pixel 11~Blue Pixel 11~Blue fine Pixel 11~White Pixel 11~White fine Pixel 11~Red Pixel 12~Red fine Pixel 12~Green Pixel 12~Green fine Pixel 12~Blue Pixel 12~Blue fine Pixel 12~White Pixel 12~White fine Pixel 12~Red Pixel 13~Red fine Pixel 13~Green Pixel 13~Green fine Pixel 13~Blue Pixel 13~Blue fine Pixel 13~White Pixel 13~White fine Pixel 13~Red Pixel 14~Red fine Pixel 14~Green Pixel 14~Green fine Pixel 14~Blue Pixel 14~Blue fine Pixel 14~White Pixel 14~White fine Pixel 14~Red Pixel 15~Red fine Pixel 15~Green Pixel 15~Green fine Pixel 15~Blue Pixel 15~Blue fine Pixel 15~White Pixel 15~White fine Pixel 15~Red Pixel 16~Red fine Pixel 16~Green Pixel 16~Green fine Pixel 16~Blue Pixel 16~Blue fine Pixel 16~White Pixel 16~White fine Pixel 16~Red Pixel 17~Red fine Pixel 17~Green Pixel 17~Green fine Pixel 17~Blue Pixel 17~Blue fine Pixel 17~White Pixel 17~White fine Pixel 17~Red Pixel 18~Red fine Pixel 18~Green Pixel 18~Green fine Pixel 18~Blue Pixel 18~Blue fine Pixel 18~White Pixel 18~White fine Pixel 18~Red Pixel 19~Red fine Pixel 19~Green Pixel 19~Green fine Pixel 19~Blue Pixel 19~Blue fine Pixel 19~White Pixel 19~White fine Pixel 19~Red Pixel 20~Red fine Pixel 20~Green Pixel 20~Green fine Pixel 20~Blue Pixel 20~Blue fine Pixel 20~White Pixel 20~White fine Pixel 20~Red Pixel 21~Red fine Pixel 21~Green Pixel 21~Green fine Pixel 21~Blue Pixel 21~Blue fine Pixel 21~White Pixel 21~White fine Pixel 21~Red Pixel 22~Red fine Pixel 22~Green Pixel 22~Green fine Pixel 22~Blue Pixel 22~Blue fine Pixel 22~White Pixel 22~White fine Pixel 22~Red Pixel 23~Red fine Pixel 23~Green Pixel 23~Green fine Pixel 23~Blue Pixel 23~Blue fine Pixel 23~White Pixel 23~White fine Pixel 23~Red Pixel 24~Red fine Pixel 24~Green Pixel 24~Green fine Pixel 24~Blue Pixel 24~Blue fine Pixel 24~White Pixel 24~White fine Pixel 24~Red Pixel 25~Red fine Pixel 25~Green Pixel 25~Green fine Pixel 25~Blue Pixel 25~Blue fine Pixel 25~White Pixel 25~White fine Pixel 25~Shutter / Strobe~Control / Settings
+Name|RGBW 25-pixel 8-bit|ShortName|102ch|Content|Red Pixel 1~Green Pixel 1~Blue Pixel 1~White Pixel 1~Red Pixel 2~Green Pixel 2~Blue Pixel 2~White Pixel 2~Red Pixel 3~Green Pixel 3~Blue Pixel 3~White Pixel 3~Red Pixel 4~Green Pixel 4~Blue Pixel 4~White Pixel 4~Red Pixel 5~Green Pixel 5~Blue Pixel 5~White Pixel 5~Red Pixel 6~Green Pixel 6~Blue Pixel 6~White Pixel 6~Red Pixel 7~Green Pixel 7~Blue Pixel 7~White Pixel 7~Red Pixel 8~Green Pixel 8~Blue Pixel 8~White Pixel 8~Red Pixel 9~Green Pixel 9~Blue Pixel 9~White Pixel 9~Red Pixel 10~Green Pixel 10~Blue Pixel 10~White Pixel 10~Red Pixel 11~Green Pixel 11~Blue Pixel 11~White Pixel 11~Red Pixel 12~Green Pixel 12~Blue Pixel 12~White Pixel 12~Red Pixel 13~Green Pixel 13~Blue Pixel 13~White Pixel 13~Red Pixel 14~Green Pixel 14~Blue Pixel 14~White Pixel 14~Red Pixel 15~Green Pixel 15~Blue Pixel 15~White Pixel 15~Red Pixel 16~Green Pixel 16~Blue Pixel 16~White Pixel 16~Red Pixel 17~Green Pixel 17~Blue Pixel 17~White Pixel 17~Red Pixel 18~Green Pixel 18~Blue Pixel 18~White Pixel 18~Red Pixel 19~Green Pixel 19~Blue Pixel 19~White Pixel 19~Red Pixel 20~Green Pixel 20~Blue Pixel 20~White Pixel 20~Red Pixel 21~Green Pixel 21~Blue Pixel 21~White Pixel 21~Red Pixel 22~Green Pixel 22~Blue Pixel 22~White Pixel 22~Red Pixel 23~Green Pixel 23~Blue Pixel 23~White Pixel 23~Red Pixel 24~Green Pixel 24~Blue Pixel 24~White Pixel 24~Red Pixel 25~Green Pixel 25~Blue Pixel 25~White Pixel 25~Shutter / Strobe~Control / Settings
+[END_MODES]
