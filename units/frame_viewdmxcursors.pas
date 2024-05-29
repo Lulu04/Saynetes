@@ -1016,7 +1016,7 @@ begin
      if FView[i].Cursors[j].Channel.Selected then
      begin
        FView[i].Cursors[j].Channel.Locked := TRUE;
-       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, True);
      end;
  // RedrawVisibleCursors;
   TFrameViewprojector(ParentViewProjector).Redraw;
@@ -1031,7 +1031,7 @@ begin
      if FView[i].Cursors[j].Channel.Selected then
      begin
        FView[i].Cursors[j].Channel.Locked := FALSE;
-       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, True);
      end;
  // RedrawVisibleCursors;
   TFrameViewprojector(ParentViewProjector).Redraw;
