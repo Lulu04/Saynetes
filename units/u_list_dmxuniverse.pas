@@ -82,9 +82,6 @@ type
   end;
   TSubChannels = array of TSubChannel;
 
-{{$define SectionInterface}
-{$I fixture_fromlibrary.inc}
-{$undef SectionInterface}        }
 
 
 type
@@ -517,8 +514,7 @@ var b: byte;
  vf: single;
  flagUpdateCursorView: boolean;
 begin
-  flagUpdateCursorView := FNeedToRepaintWholeChannel;
-  FNeedToRepaintWholeChannel := False;
+  flagUpdateCursorView := False;
 
   if HandledByUser then
   begin
@@ -631,8 +627,9 @@ begin
   // redraw on projector view
   Universe.NeedToBeRedraw := Universe.NeedToBeRedraw or flagUpdateCursorView;
   // redraw on cursor view
-  if flagUpdateCursorView and FIsVisibleOnViewCursor then
-    FProjectorViewToRefreshForThreadUniverse.FrameViewDMXCursors1.RedrawCursor(self);
+  if (flagUpdateCursorView or FNeedToRepaintWholeChannel) and FIsVisibleOnViewCursor then
+    FProjectorViewToRefreshForThreadUniverse.FrameViewDMXCursors1.RedrawCursor(self, FNeedToRepaintWholeChannel);
+  FNeedToRepaintWholeChannel := False;
 
   // Send value to DMX device
   if LastByteSendedValue <> b then
@@ -778,8 +775,10 @@ begin
         // change the sub-channel index only if it is defined
         j := pp^.SwitchDescriptors[i].ChannelIndexToSwitch;
         k := pp^.SwitchDescriptors[i].SubChannelIndex;
-        if (j <> -1) and (k <> -1) then
+        if (j <> -1) and (k <> -1) then begin
           Fixture.Channels[j].SubChannelIndex := k;
+          Fixture.Channels[j].FNeedToRepaintWholeChannel := True;
+        end;
       end;
   except
   end;

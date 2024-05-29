@@ -33,6 +33,8 @@ uses
   function FixtureTypeToBGRA(aFT: TFixtureType): TBGRABitmap;
   procedure LoadFixtureImages;
   procedure FreeFixtureImages;
+  procedure LoadCursorImages(aWidth, aHeight: integer);
+  procedure FreeCursorImages;
 
   // fill a TImage with an image according an TFixtureType passed as parameter
   procedure ShowFixtureImage(aImage: TImage; aFT: TFixtureType);
@@ -78,8 +80,8 @@ type
   end;
 
 implementation
-uses LazFileUtils, u_helper, u_apputils, u_logfile, u_dmxdevice_manager,
-  utilitaire_bgrabitmap;
+uses LazFileUtils, u_helper, u_apputils, u_logfile,
+  u_dmxdevice_manager, utilitaire_bgrabitmap;
 
 
 function PathRelativeToDMXLibrary(const aFullFileName: string): string;
@@ -264,6 +266,31 @@ begin
   for i in TFixturetype do begin
     FixtureImages[i].Free;
     FixtureImages[i] := NIL;
+  end;
+end;
+
+procedure LoadCursorImages(aWidth, aHeight: integer);
+var i: TChannelType;
+  f: String;
+begin
+  for i in TChannelType do begin
+    try
+      f := DMXCursorImageFileNameFor(i);
+      ImageCursors[i] := SVGFileToBGRABitmap(f, aWidth, aHeight);
+    except
+      ImageCursors[i] := TBGRABitmap.Create(aWidth, aHeight, BGRAWhite);
+    end;
+  end;
+  ImageCursorSize.cx := ImageCursors[ctConfig].Width;
+  ImageCursorSize.cy := ImageCursors[ctConfig].Height;
+end;
+
+procedure FreeCursorImages;
+var i: TChannelType;
+begin
+  for i in TChannelType do begin
+    ImageCursors[i].Free;
+    ImageCursors[i] := NIL;
   end;
 end;
 
