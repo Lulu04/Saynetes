@@ -947,7 +947,10 @@ begin
   prop.Add('FlipV', FlipV);
   i := 1;
   for chan in FChannels do begin
-    prop.Add('Locked'+i.ToString, chan.Locked);
+    if chan.Locked then begin
+      prop.Add('Locked'+i.ToString, chan.Locked);
+      prop.Add('LockValue'+i.ToString, chan.ByteValue);
+    end;
     inc(i);
   end;
 
@@ -1071,9 +1074,11 @@ begin
         end;
       end;
 
-      if not prop.BooleanValueOf('Locked'+(i+1).ToString, vb, False) then
-        Log.Warning('Property '+'Locked'+(i+1).ToString+' not found for fixture "'+libfix.General.ManufacturerName+':'+libfix.General.FixtureName, 3);
-      chan.Locked := vb;
+      if prop.BooleanValueOf('Locked'+(i+1).ToString, vb, False) then
+        chan.Locked := vb;
+
+      if prop.IntegerValueOf('LockValue'+(i+1).ToString, vi, 0) then
+        chan.FPercentValue := vi/255;
 
       chan.Universe := Universe;
     end;
