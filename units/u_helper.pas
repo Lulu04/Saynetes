@@ -114,6 +114,7 @@ end;
 TFixLibAvailableChannelsHelper = type helper for TFixLibAvailableChannels
   function GetChannelsByName(const aName: string): PFixLibAvailableChannel;
   function NameToIndex(const aName: string): integer;
+  procedure ReplaceNameInSwitchDescriptors(const aOldName, aNewName: string);
 end;
 
 
@@ -141,6 +142,8 @@ TVirtualChannelForSwitchsHelper = type helper for TVirtualChannelForSwitchs
   function TrySplitVirtual(const aFormattedVirtualName: string;
                            out aVirtualName: string;
                            out aSubChannels: TStringArray): boolean;
+  // search aOldName in virtual name and sub-channelsID, if found, replace it by the new one
+  procedure ReplaceChannelName(const aOldName, aNewName: string);
 end;
 
 { TFixLibModesHelper }
@@ -274,6 +277,12 @@ begin
   Result := True;
 end;
 
+procedure TVirtualChannelForSwitchsHelper.ReplaceChannelName(const aOldName, aNewName: string);
+var n: TVirtualChannelForSwitch;
+begin
+  for n in Self do n.ReplaceChannelName(aOldName, aNewName);
+end;
+
 { TArrayOfChannelRangeHelper }
 
 function TArrayOfChannelRangeHelper.GetRangeFromByteValue(aValue: byte): PChannelRange;
@@ -358,6 +367,21 @@ begin
   for i:=0 to High(Self) do
     if Self[i].NameID = aName then exit(i);
   Result := -1;
+end;
+
+procedure TFixLibAvailableChannelsHelper.ReplaceNameInSwitchDescriptors(const aOldName, aNewName: string);
+var chan: TFixLibAvailableChannel;
+  rang: TFixLibSingleRange;
+  i: integer;
+  swi: PFixLibSwitchDescriptor;
+begin
+  for chan in Self do
+    for rang in chan.Ranges do
+      for i:=0 to High(rang.SwitchDescriptors) do begin
+        swi := @rang.SwitchDescriptors[i];
+        if swi^.SwitchVirtualChannel = aOldName then swi^.SwitchVirtualChannel := aNewName
+          else if swi^.SwitchToSubChannel = aOldName then swi^.SwitchToSubChannel := aNewName;
+      end;
 end;
 
 { TManufacturersHelper }

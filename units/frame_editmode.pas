@@ -252,7 +252,7 @@ end;
 procedure TFrameEditMode.DoEditChannelFrame(aIndex: integer);
 var FormNew: TFormDefineNewChannel;
   FormEditSwitching: TFormEditSwitchingChannel;
-  i: integer;
+  i, j: integer;
   oldName, packedName: string;
 begin
   oldName := FChanFrames[aIndex].ChanName;
@@ -272,6 +272,8 @@ begin
         // replace data in the channel
         packedName := FormEditSwitching.PackedVirtualNameAndSubChannelNames;
         FVirtualChannelInMode[i].InitFromPackedString(packedName);
+        // replace new virtual name in all switchers
+        FExistingChannels^.ReplaceNameInSwitchDescriptors(oldName, FormEditSwitching.VirtualName);
         // replace new name in all frame (Modes)
         ParentForm(Self).ReplaceChannelNameInAllFrames(oldName, packedName);
         Modified := True;
@@ -426,10 +428,6 @@ var i: integer;
 begin
   for i:=0 to High(FChanFrames) do
     FChanFrames[i].ReplaceChannelName(aOldName, aNewName);
-{    if FChanFrames[i].ChanName = aOldName then begin
-      FChanFrames[i].ChanName := aNewName;
-      exit;
-    end; }
 end;
 
 constructor TFrameEditMode.Create(TheOwner: TComponent);

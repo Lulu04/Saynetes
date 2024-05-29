@@ -123,8 +123,55 @@ begin
 end;
 
 procedure TFrameViewModeItem.ReplaceChannelName(const aOldName, aNewName: string);
+var i, j: integer;
+  s: string;
+  p: PFixLibAvailableChannel;
+  sep: string;
+  flagReplaced: boolean;
 begin
-  if ChanName = aOldName then SetChanName(aNewName);
+  flagReplaced := False;
+
+  if ChanName = aOldName then begin
+    SetChanName(aNewName);
+    flagReplaced := True;
+  end else begin
+      // search in all sub-channels
+      for i:=0 to Panel1.ControlCount-1 do begin
+        if Panel1.Controls[i].Name.StartsWith('MyLabel', False) and
+           (TLabel(Panel1.Controls[i]).Caption = aOldName) then begin
+          p := ExistingChannels^.GetChannelsByName(aNewName);
+          if p <> NIL then begin
+            // change caption
+            TLabel(Panel1.Controls[i]).Caption := aNewName;
+            // change channel type image
+            s := Panel1.Controls[i].Name;
+            s := 'MyImage' + System.Copy(s, 8, Length(s)-7);
+            for j:=0 to Panel1.ControlCount-1 do
+              if Panel1.Controls[j].Name = s then begin
+                SetImage(TImage(Panel1.Controls[j]), Ord(p^.ChanType));
+                break;
+              end;
+          end;
+          flagReplaced := True;
+          break;
+        end;
+        if flagReplaced then break;
+      end;
+    end;
+
+  // re-construct FPackedName
+  if not flagReplaced then exit;
+
+  FPackedName := ChanName;
+  sep := ':';
+  j := 0;
+  for i:=0 to Panel1.ControlCount-1 do
+    if Panel1.Controls[i].Name = 'MyLabel'+j.ToString then begin
+      FPackedName := FPackedName + sep + TLabel(Panel1.Controls[i]).Caption;
+      inc(j);
+      sep := ';';
+    end;
+
 end;
 
 procedure TFrameViewModeItem.Panel1MouseEnter(Sender: TObject);
@@ -143,7 +190,7 @@ var F: TFormDefineNewChannel;
   con: TControl;
   oldName: string;
 begin
-  // retrieve the label with the channel name to edit
+  // retrieve the label with the sub-channel name to edit
   con := Panel1.ControlAtPos(Point(BEditSubChannel.Left-1, BEditSubChannel.Top), True);
   if (con = NIL) or not (con is TLabel) then exit;
 
@@ -157,10 +204,12 @@ begin
   F.EditExistingChannel(@FExistingChannels^[i]);
   try
     if F.ShowModal = mrOk then begin
-      // replace data in the channel
+      // replace data in the created channels
       FExistingChannels^[i].LoadFromString(F.GetData);
-      // replace new name in all frame (Modes)
+      // replace data in all frames (Modes)
       ParentForm(Self).ReplaceChannelNameInAllFrames(oldName, FExistingChannels^[i].NameID);
+      // replace data in FVirtualChannelInMode
+      FVirtualChannelInMode.ReplaceChannelName(oldName, FExistingChannels^[i].NameID);
       ParentEditMode(Self).Modified := True;
     end;
   finally

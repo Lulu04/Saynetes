@@ -162,6 +162,8 @@ TVirtualChannelForSwitch = record
   // add single instance of channel ID
   procedure AddSubChannel(const aID: string);
 
+  procedure ReplaceChannelName(const aOldName, aNewName: string);
+
   // gives "VirtualName:SubChannel1;SubChannel2;..."
   function PackToString: string;
   procedure InitFromPackedString(const s: string);
@@ -317,6 +319,20 @@ begin
   i := Length(SubChannelIDs);
   SetLength(SubChannelIDs, i+1);
   SubChannelIDs[i] := aID;
+end;
+
+procedure TVirtualChannelForSwitch.ReplaceChannelName(const aOldName, aNewName: string);
+var i: integer;
+begin
+  if VirtualName = aOldName then VirtualName := aNewName
+    else begin
+      // search in sub-channels
+      for i:=0 to High(SubChannelIDs) do
+        if SubChannelIDs[i] = aOldName then begin
+          SubChannelIDs[i] := aNewName;
+          exit;
+        end;
+    end;
 end;
 
 function TVirtualChannelForSwitch.PackToString: string;
