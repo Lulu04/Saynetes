@@ -657,20 +657,25 @@ end;
 
 procedure TFrameViewProjector.BAddDMXClick(Sender: TObject);
 begin
-  BAddDMX.Enabled := False;
-  Sequences.StopAll;
-  TopPLayer.StopPreview;
- // SoundManager.ResetState;
-  UniverseManager.BlackOut;
-  UniverseManager.Sel_None;
-  Sel_None;
+  Screen.BeginWaitCursor;
+  try
+    BAddDMX.Enabled := False;
+    Sequences.StopAll;
+    TopPLayer.StopPreview;
 
-  GUIMode := guiPrepaDMX;
-  // disable window button on main form
-  FormMain.UpdateWidgetState;
-  FormMain.FrameMainAddFixture1.OnShow;
+    UniverseManager.BlackOut;
+    UniverseManager.Sel_None;
+    Sel_None;
 
-  Redraw;
+    GUIMode := guiPrepaDMX;
+    // disable window button on main form
+    FormMain.UpdateWidgetState;
+    FormMain.FrameMainAddFixture1.OnShow;
+
+    Redraw;
+  Finally
+    Screen.EndWaitCursor;
+  end;
 end;
 
 procedure TFrameViewProjector.BGLVirtualScreen1LoadTextures(Sender: TObject;
