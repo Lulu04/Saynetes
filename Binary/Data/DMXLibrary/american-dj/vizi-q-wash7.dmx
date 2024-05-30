@@ -1,0 +1,42 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/10532/ADJ%20VIZI%20Q%20WASH7%20-%20USER%20MANUAL%20.pdf|LinkType2|product page|Url2|https://www.adj.com/vizi-q-wash7|LinkType3|video|Url3|https://www.youtube.com/watch?v=EHeTZ_G_8zM
+[GENERAL]
+Manufacturer|American DJ|Name|Vizi Q Wash7|Type|41|Authors|Rey Victor, Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|284|Height|412|Depth|202|Weight|8.50|Power|280|Connector|3-pin and 5-pin|Bulb|LED|LensMinDegree|7.000|LensMaxDegree|58.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..630deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~-160deg..160deg
+ID|Red All|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green All|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue All|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White All|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~4~Txt~Turquoise~Extra~#7affef|R3|Begin~5~End~8~Txt~Aquamarine~Extra~#7affba|R4|Begin~9~End~12~Txt~Malachite Green~Extra~#76ff91|R5|Begin~13~End~16~Txt~Mint Green~Extra~#97ff7d|R6|Begin~17~End~20~Txt~Reef~Extra~#b6ff76|R7|Begin~21~End~24~Txt~Honeysuckle~Extra~#e7ff7d|R8|Begin~25~End~28~Txt~Sunny~Extra~#fff676|R9|Begin~29~End~32~Txt~Dandelion~Extra~#ffd473|R10|Begin~33~End~36~Txt~Apricot~Extra~#ffbb76|R11|Begin~37~End~40~Txt~Light Salmon~Extra~#ff9a73|R12|Begin~41~End~44~Txt~Salmon~Extra~#ff8575|R13|Begin~45~End~48~Txt~Begonia~Extra~#ff6f74|R14|Begin~49~End~52~Txt~Tickle Me Pink~Extra~#ff7da4|R15|Begin~53~End~56~Txt~Princess Perfume~Extra~#ff88ca|R16|Begin~57~End~60~Txt~Light Fuchsia Pink~Extra~#ff8bf1|R17|Begin~61~End~64~Txt~Fuchsia Pink~Extra~#f388ff|R18|Begin~65~End~68~Txt~Heliotrope~Extra~#d382ff|R19|Begin~69~End~72~Txt~Pale Violet~Extra~#b185ff|R20|Begin~73~End~76~Txt~Violet Blue~Extra~#8876ff|R21|Begin~77~End~80~Txt~Cornflower Blue~Extra~#7688ff|R22|Begin~81~End~84~Txt~Sky Blue~Extra~#6aaaff|R23|Begin~85~End~88~Txt~Maya Blue~Extra~#76d1ff|R24|Begin~89~End~92~Txt~Star Explosion Blue~Extra~#76efff|R25|Begin~93~End~96~Txt~Tea Green~Extra~#c1ffb8|R26|Begin~97~End~100~Txt~Very Pale Yellow~Extra~#fffdbf|R27|Begin~101~End~104~Txt~Apricot~Extra~#ffccba|R28|Begin~105~End~108~Txt~Lavender Pink~Extra~#ffb3d2|R29|Begin~109~End~112~Txt~Brilliant Lavender~Extra~#ffbafc|R30|Begin~113~End~116~Txt~Vodka~Extra~#bcb3ff|R31|Begin~117~End~120~Txt~Lavender Indigo~Extra~#8f48ff|R32|Begin~121~End~124~Txt~Pale Cornflower Blue~Extra~#b3c7ff|R33|Begin~125~End~128~Txt~White~Extra~#ffffff|R34|Begin~129~End~132~Txt~Peach Orange~Extra~#ffce8f|R35|Begin~133~End~136~Txt~Mona Lisa~Extra~#feb199|R36|Begin~137~End~140~Txt~Chardonnayapprox~Extra~#fec08a|R37|Begin~141~End~144~Txt~Atomic Tangerine~Extra~#fea562|R38|Begin~145~End~148~Txt~Orange~Extra~#fe7900|R39|Begin~149~End~152~Txt~Bright Red~Extra~#b01100|R40|Begin~153~End~156~Txt~Rosewood~Extra~#60000b|R41|Begin~157~End~160~Txt~Carissma~Extra~#ea8bab|R42|Begin~161~End~164~Txt~Razzmatazz~Extra~#e00561|R43|Begin~165~End~168~Txt~Fuchsia Pink~Extra~#af4dad|R44|Begin~169~End~172~Txt~Blue Marguerite~Extra~#7782c7|R45|Begin~173~End~176~Txt~Polo Blue~Extra~#93a4d4|R46|Begin~177~End~180~Txt~Purple~Extra~#5802a3|R47|Begin~181~End~184~Txt~Prussian Blue~Extra~#002656|R48|Begin~185~End~188~Txt~Lochmara~Extra~#008ed0|R49|Begin~189~End~192~Txt~Curious Blue~Extra~#3494d1|R50|Begin~193~End~196~Txt~Blue~Extra~#0186c9|R51|Begin~197~End~200~Txt~Cerulean~Extra~#0091d4|R52|Begin~201~End~204~Txt~Ocean Boat Blue~Extra~#0079c0|R53|Begin~205~End~208~Txt~Star Command Blue~Extra~#0081b8|R54|Begin~209~End~212~Txt~Dark Cerulean~Extra~#005373|R55|Begin~213~End~216~Txt~Endeavour~Extra~#0061a6|R56|Begin~217~End~220~Txt~Medium Persian Blue~Extra~#0164a7|R57|Begin~221~End~224~Txt~Prussian Blue~Extra~#002856|R58|Begin~225~End~228~Txt~Green Mist~Extra~#d1dbb6|R59|Begin~229~End~232~Txt~Eucalyptus~Extra~#2aa555|R60|Begin~233~End~236~Txt~Burnham~Extra~#002e23|R61|Begin~237~End~240~Txt~Science Blue~Extra~#086bde|R62|Begin~241~End~244~Txt~Cornflower Blue~Extra~#6b9ce7|R63|Begin~245~End~248~Txt~Perano~Extra~#a5c6f7|R64|Begin~249~End~252~Txt~Dark Blue~Extra~#0000bd|R65|Begin~253~End~255~Txt~White~Extra~#ffffff
+ID|Shutter / Strobe|Type|6|DefaultValue|48|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse slow..fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer fine|Type|1
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Zoom 7deg..58deg
+ID|Auto Programs|Type|0|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~20~Txt~Program 1|R3|Begin~21~End~40~Txt~Program 2|R4|Begin~41~End~60~Txt~Program 3|R5|Begin~61~End~80~Txt~Program 4|R6|Begin~81~End~100~Txt~Program 5|R7|Begin~101~End~120~Txt~Program 6|R8|Begin~121~End~140~Txt~Program 7|R9|Begin~141~End~160~Txt~Program 8|R10|Begin~161~End~180~Txt~Program 9|R11|Begin~181~End~200~Txt~Program 10|R12|Begin~201~End~220~Txt~Program 11|R13|Begin~221~End~240~Txt~Program 12|R14|Begin~241~End~250~Txt~Program 13|R15|Begin~251~End~255~Txt~Program 14
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Program Fade|Type|0|R1|Begin~0~End~0~Txt~instant|R2|Begin~1~End~255~Txt~short..long
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default Dimmer Setting
+ID|Pan/Tilt Speed|Type|9|DefaultValue|255|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~Blackout by movement|R3|Begin~236~End~255~Txt~No function
+ID|Maintenance Functions|Type|0|R1|Begin~0~End~79~Txt~No function|R2|Begin~80~End~84~Txt~All motor reset|R3|Begin~85~End~99~Txt~No function|R4|Begin~100~End~119~Txt~Internal Program 1|R5|Begin~120~End~139~Txt~Internal Program 2|R6|Begin~140~End~159~Txt~Internal Program 3|R7|Begin~160~End~179~Txt~Internal Program 4|R8|Begin~180~End~199~Txt~Internal Program 5|R9|Begin~200~End~219~Txt~Internal Program 6|R10|Begin~220~End~239~Txt~Internal Program 7|R11|Begin~240~End~255~Txt~No function
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Red Center|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Center|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Center|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White Center|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Red Outer|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green Outer|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue Outer|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White Outer|Type|13|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|17-channel Basic|ShortName|17ch|Content|Pan~Tilt~Red All~Green All~Blue All~White All~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Zoom~Auto Programs~Program Speed~Program Fade~Dimmer Curve~Pan/Tilt Speed~Maintenance Functions
+Name|19-channel Standard|ShortName|19ch|Content|Pan~Pan fine~Tilt~Tilt fine~Red All~Green All~Blue All~White All~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Zoom~Auto Programs~Program Speed~Program Fade~Dimmer Curve~Pan/Tilt Speed~Maintenance Functions
+Name|23-channel Extended|ShortName|23ch|Content|Pan~Pan fine~Tilt~Tilt fine~Red Center~Green Center~Blue Center~White Center~Red Outer~Green Outer~Blue Outer~White Outer~Color Macros~Shutter / Strobe~Dimmer~Dimmer fine~Zoom~Auto Programs~Program Speed~Program Fade~Dimmer Curve~Pan/Tilt Speed~Maintenance Functions
+[END_MODES]

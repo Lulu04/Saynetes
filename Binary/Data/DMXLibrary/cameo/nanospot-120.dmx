@@ -1,0 +1,27 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://adamhall.s3.amazonaws.com/media/MARKEN/CAMEO/CLNS120/CLNS120_Cameo_Bedienungsanleitung_EN_DE_FR_ES_PL_IT.PDF|LinkType2|video|Url2|https://www.youtube.com/watch?v=zwyYO-s_3PI|LinkType3|video|Url3|https://www.youtube.com/watch?v=_FvgGrI6pe4&t=1m16s
+[GENERAL]
+Manufacturer|cameo|Name|NanoSpot 120|Type|9|Authors|Felix Edelmann|Creator|OFL
+[PHYSICAL]
+Width|159|Height|265|Depth|147|Weight|2.60|Power|40|Connector|3-pin|Bulb|12 W CREE LED|Lumens|428|LensMinDegree|13.000|LensMaxDegree|13.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
+ID|Motor Running Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
+ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~21~Txt~Red~Extra~#ff0000|R3|Begin~22~End~32~Txt~Orange~Extra~#ffaa00|R4|Begin~33~End~43~Txt~Yellow~Extra~#ffff00|R5|Begin~44~End~54~Txt~Green~Extra~#00ff00|R6|Begin~55~End~65~Txt~Blue~Extra~#0000ff|R7|Begin~66~End~76~Txt~Cyan~Extra~#00ffff|R8|Begin~77~End~87~Txt~Purple~Extra~#ff00ff|R9|Begin~88~End~175~Txt~0deg..360deg|R10|Begin~176~End~255~Txt~slow CW..fast CW
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pan fine|Type|7
+ID|Tilt fine|Type|8
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~124~Txt~Gobo 1..Gobo 6|R3|Begin~125~End~234~Txt~Gobo 1..Gobo 6|R4|Begin~235~End~249~Txt~Open|R5|Begin~250~End~255~Txt~fast CW
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~No function|R2|Begin~10~End~255~Txt~slow..fast
+ID|Program|Type|0|R1|Begin~0~End~29~Txt~No function~Switch1~Program Speed / Mic Sensitivity:Program Speed|R2|Begin~30~End~55~Txt~Auto Mode show 1~Switch1~Program Speed / Mic Sensitivity:Program Speed|R3|Begin~56~End~81~Txt~Auto Mode show 2~Switch1~Program Speed / Mic Sensitivity:Program Speed|R4|Begin~82~End~107~Txt~Auto Mode show 3~Switch1~Program Speed / Mic Sensitivity:Program Speed|R5|Begin~108~End~133~Txt~Auto Mode show 4~Switch1~Program Speed / Mic Sensitivity:Program Speed|R6|Begin~134~End~159~Txt~Auto Mode show 5~Switch1~Program Speed / Mic Sensitivity:Program Speed|R7|Begin~160~End~185~Txt~Auto Mode show 6~Switch1~Program Speed / Mic Sensitivity:Program Speed|R8|Begin~186~End~211~Txt~Auto Mode show 7~Switch1~Program Speed / Mic Sensitivity:Program Speed|R9|Begin~212~End~237~Txt~Sound Control~Switch1~Program Speed / Mic Sensitivity:Mic Sensitivity|R10|Begin~238~End~250~Txt~Reset~Switch1~Program Speed / Mic Sensitivity:Program Speed|R11|Begin~251~End~255~Txt~Sync (Head goes to mid position and blackout)~Switch1~Program Speed / Mic Sensitivity:Program Speed
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Mic Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Motor Running Speed~Color Wheel~Dimmer
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Pan fine~Tilt fine~Motor Running Speed~Color Wheel~Gobo Wheel~Dimmer~Strobe
+Name|11-channel|ShortName|11ch|Content|Pan~Tilt~Pan fine~Tilt fine~Motor Running Speed~Color Wheel~Gobo Wheel~Dimmer~Strobe~Program~Program Speed / Mic Sensitivity:Program Speed;Mic Sensitivity
+[END_MODES]

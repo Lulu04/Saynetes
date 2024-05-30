@@ -1,0 +1,86 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/6989/ADJ%20Mega%20Bar%20RGBA%20-%20User%20Manual%202023-04-11.pdf|LinkType2|product page|Url2|https://www.adj.com/mega-bar-rgba|LinkType3|video|Url3|https://www.youtube.com/watch?v=WXp4BXd6yC8
+[GENERAL]
+Manufacturer|American DJ|Name|Mega Bar RGBA|Type|40|Authors|Anonymous|Creator|OFL
+[PHYSICAL]
+Width|1060|Height|145|Depth|73|Weight|2.70|Power|32|Connector|3-pin|Bulb|320x 10mm LEDs (64 red, 96 green, 96 blue, 64 amber)|LensMinDegree|30.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~255~Txt~stop..fast
+ID|Intensity|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macros|Type|12|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~25~Txt~Red~Extra~#ff0000|R3|Begin~26~End~30~Txt~Green~Extra~#00ff00|R4|Begin~31~End~35~Txt~Blue~Extra~#0000ff|R5|Begin~36~End~40~Txt~Amber~Extra~#ffbf00|R6|Begin~41~End~45~Txt~Yellow~Extra~#ffff00|R7|Begin~46~End~50~Txt~Magenta~Extra~#ff00ff|R8|Begin~51~End~55~Txt~Orange~Extra~#ff6000|R9|Begin~56~End~60~Txt~Cyan~Extra~#00ffff|R10|Begin~61~End~65~Txt~Lime~Extra~#92ff00|R11|Begin~66~End~70~Txt~Pink~Extra~#ffbfff|R12|Begin~71~End~75~Txt~White~Extra~#ffffff|R13|Begin~76~End~80~Txt~Warm Yellow~Extra~#ffdf00|R14|Begin~81~End~85~Txt~Color 14~Extra~#92ff92|R15|Begin~86~End~90~Txt~Color 15~Extra~#ff6080|R16|Begin~91~End~95~Txt~Color 16~Extra~#ffdf80|R17|Begin~96~End~100~Txt~Color 17~Extra~#ffce8f|R18|Begin~101~End~105~Txt~Color 18~Extra~#feb199|R19|Begin~106~End~110~Txt~Color 19~Extra~#fec08a|R20|Begin~111~End~115~Txt~Color 20~Extra~#fea562|R21|Begin~116~End~120~Txt~Color 21~Extra~#fe7900|R22|Begin~121~End~125~Txt~Color 22~Extra~#b01100|R23|Begin~126~End~130~Txt~Color 23~Extra~#60000b|R24|Begin~131~End~135~Txt~Color 24~Extra~#ea8bab|R25|Begin~136~End~140~Txt~Color 25~Extra~#fe0561|R26|Begin~141~End~145~Txt~Color 26~Extra~#af4dad|R27|Begin~146~End~150~Txt~Color 27~Extra~#7782c7|R28|Begin~151~End~155~Txt~Color 28~Extra~#93a4d4|R29|Begin~156~End~160~Txt~Color 29~Extra~#5802a3|R30|Begin~161~End~165~Txt~Color 30~Extra~#002656|R31|Begin~166~End~170~Txt~Color 31~Extra~#008ed0|R32|Begin~171~End~175~Txt~Color 32~Extra~#3494d1|R33|Begin~176~End~180~Txt~Color 33~Extra~#0186c9|R34|Begin~181~End~185~Txt~Color 34~Extra~#0091d4|R35|Begin~186~End~190~Txt~Color 35~Extra~#0079c0|R36|Begin~191~End~195~Txt~Color 36~Extra~#0081b8|R37|Begin~196~End~200~Txt~Color 37~Extra~#005373|R38|Begin~201~End~205~Txt~Color 38~Extra~#0061a6|R39|Begin~206~End~210~Txt~Color 39~Extra~#0164a7|R40|Begin~211~End~215~Txt~Color 40~Extra~#002856|R41|Begin~216~End~220~Txt~Color 41~Extra~#d1dbb6|R42|Begin~221~End~225~Txt~Color 42~Extra~#2aa555|R43|Begin~226~End~230~Txt~Color 43~Extra~#002e23|R44|Begin~231~End~235~Txt~Color 44~Extra~#086bde|R45|Begin~236~End~240~Txt~Color 45~Extra~#6b9ce7|R46|Begin~241~End~245~Txt~Color 46~Extra~#a5c6f7|R47|Begin~246~End~250~Txt~Color 47~Extra~#0000bd|R48|Begin~251~End~255~Txt~Color 48~Extra~#a52301
+ID|Programs|Type|0|R1|Begin~0~End~15~Txt~No function~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R2|Begin~16~End~25~Txt~Program 1~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R3|Begin~26~End~35~Txt~Program 2~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R4|Begin~36~End~45~Txt~Program 3~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R5|Begin~46~End~55~Txt~Program 4~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R6|Begin~56~End~65~Txt~Program 5~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R7|Begin~66~End~75~Txt~Program 6~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R8|Begin~76~End~85~Txt~Program 7~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R9|Begin~86~End~95~Txt~Program 8~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R10|Begin~96~End~105~Txt~Program 9~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R11|Begin~106~End~115~Txt~Program 10~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R12|Begin~116~End~125~Txt~Program 11~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R13|Begin~126~End~135~Txt~Program 12~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R14|Begin~136~End~145~Txt~Program 13~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R15|Begin~146~End~155~Txt~Program 14~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R16|Begin~156~End~165~Txt~Program 15~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R17|Begin~166~End~175~Txt~Program 16~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R18|Begin~176~End~185~Txt~Program 17~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R19|Begin~186~End~195~Txt~Program 18~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R20|Begin~196~End~205~Txt~Program 19~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R21|Begin~206~End~215~Txt~Program 20~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R22|Begin~216~End~225~Txt~Program 21~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Flow Color Macro|R23|Begin~226~End~235~Txt~Program 22~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Flow Color Macro|R24|Begin~236~End~245~Txt~Auto run~Switch1~Program Speed / Sound Sensitivity:Program Speed~Switch2~Amber Master / Flow Color Macro:Amber Master|R25|Begin~246~End~255~Txt~Sound active~Switch1~Program Speed / Sound Sensitivity:Sound Sensitivity~Switch2~Amber Master / Flow Color Macro:Amber Master
+ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1/2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2/2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1/4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2/4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3/4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 4/4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 4|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 5|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 6|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 7|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 8|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+ID|Flow Color Macro|Type|12|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~25~Txt~Red~Extra~#ff0000|R3|Begin~26~End~30~Txt~Green~Extra~#00ff00|R4|Begin~31~End~35~Txt~Blue~Extra~#0000ff|R5|Begin~36~End~40~Txt~Amber~Extra~#ffbf00|R6|Begin~41~End~45~Txt~Yellow~Extra~#ffff00|R7|Begin~46~End~50~Txt~Magenta~Extra~#ff00ff|R8|Begin~51~End~55~Txt~Orange~Extra~#ff6000|R9|Begin~56~End~60~Txt~Cyan~Extra~#00ffff|R10|Begin~61~End~65~Txt~Lime~Extra~#92ff00|R11|Begin~66~End~70~Txt~Pink~Extra~#ffbfff|R12|Begin~71~End~75~Txt~White~Extra~#ffffff|R13|Begin~76~End~80~Txt~Warm Yellow~Extra~#ffdf00|R14|Begin~81~End~85~Txt~Color 14~Extra~#92ff92|R15|Begin~86~End~90~Txt~Color 15~Extra~#ff6080|R16|Begin~91~End~95~Txt~Color 16~Extra~#ffdf80|R17|Begin~96~End~100~Txt~Color 17~Extra~#ffce8f|R18|Begin~101~End~105~Txt~Color 18~Extra~#feb199|R19|Begin~106~End~110~Txt~Color 19~Extra~#fec08a|R20|Begin~111~End~115~Txt~Color 20~Extra~#fea562|R21|Begin~116~End~120~Txt~Color 21~Extra~#fe7900|R22|Begin~121~End~125~Txt~Color 22~Extra~#b01100|R23|Begin~126~End~130~Txt~Color 23~Extra~#60000b|R24|Begin~131~End~135~Txt~Color 24~Extra~#ea8bab|R25|Begin~136~End~140~Txt~Color 25~Extra~#fe0561|R26|Begin~141~End~145~Txt~Color 26~Extra~#af4dad|R27|Begin~146~End~150~Txt~Color 27~Extra~#7782c7|R28|Begin~151~End~155~Txt~Color 28~Extra~#93a4d4|R29|Begin~156~End~160~Txt~Color 29~Extra~#5802a3|R30|Begin~161~End~165~Txt~Color 30~Extra~#002656|R31|Begin~166~End~170~Txt~Color 31~Extra~#008ed0|R32|Begin~171~End~175~Txt~Color 32~Extra~#3494d1|R33|Begin~176~End~180~Txt~Color 33~Extra~#0186c9|R34|Begin~181~End~185~Txt~Color 34~Extra~#0091d4|R35|Begin~186~End~190~Txt~Color 35~Extra~#0079c0|R36|Begin~191~End~195~Txt~Color 36~Extra~#0081b8|R37|Begin~196~End~200~Txt~Color 37~Extra~#005373|R38|Begin~201~End~205~Txt~Color 38~Extra~#0061a6|R39|Begin~206~End~210~Txt~Color 39~Extra~#0164a7|R40|Begin~211~End~215~Txt~Color 40~Extra~#002856|R41|Begin~216~End~220~Txt~Color 41~Extra~#d1dbb6|R42|Begin~221~End~225~Txt~Color 42~Extra~#2aa555|R43|Begin~226~End~230~Txt~Color 43~Extra~#002e23|R44|Begin~231~End~235~Txt~Color 44~Extra~#086bde|R45|Begin~236~End~240~Txt~Color 45~Extra~#6b9ce7|R46|Begin~241~End~245~Txt~Color 46~Extra~#a5c6f7|R47|Begin~246~End~250~Txt~Color 47~Extra~#0000bd|R48|Begin~251~End~255~Txt~Color 48~Extra~#a52301
+[END_CHAN_DEF]
+[MODES]
+Name|RGBA|ShortName|4ch|Content|Red~Green~Blue~Amber
+Name|RGBA + Strobe/Dimmer|ShortName|6ch|Content|Red~Green~Blue~Amber~Strobe~Intensity
+Name|Color macro|ShortName|7ch|Content|Red~Green~Blue~Amber~Color Macros~Strobe~Intensity
+Name|Program|ShortName|9ch|Content|Red~Green~Blue~Amber Master / Flow Color Macro:Flow Color Macro;Amber~Color Macros~Programs~Program Speed / Sound Sensitivity:Program Speed;Sound Sensitivity~Strobe~Intensity
+Name|Halves|ShortName|10ch|Content|Red 1/2~Green 1/2~Blue 1/2~Amber 1/2~Red 2/2~Green 2/2~Blue 2/2~Amber 2/2~Strobe~Intensity
+Name|Fourths|ShortName|18ch|Content|Red 1/4~Green 1/4~Blue 1/4~Amber 1/4~Red 2/4~Green 2/4~Blue 2/4~Amber 2/4~Red 3/4~Green 3/4~Blue 3/4~Amber 3/4~Red 4/4~Green 4/4~Blue 4/4~Amber 4/4~Strobe~Intensity
+Name|Eighths|ShortName|34ch|Content|Red 1~Green 1~Blue 1~Amber 1~Red 2~Green 2~Blue 2~Amber 2~Red 3~Green 3~Blue 3~Amber 3~Red 4~Green 4~Blue 4~Amber 4~Red 5~Green 5~Blue 5~Amber 5~Red 6~Green 6~Blue 6~Amber 6~Red 7~Green 7~Blue 7~Amber 7~Red 8~Green 8~Blue 8~Amber 8~Strobe~Intensity
+[END_MODES]

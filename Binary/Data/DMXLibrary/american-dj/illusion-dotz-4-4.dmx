@@ -1,0 +1,77 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3.amazonaws.com/ItemRelatedFiles/8697/Illusion%20Dotz%204.4%20-%20User%20Manual.pdf|LinkType2|product page|Url2|https://www.adj.com/illusion-dotz-4-4|LinkType3|video|Url3|https://www.youtube.com/watch?v=NbQMI2cSr00|LinkType4|video|Url4|https://www.youtube.com/watch?v=9Q4ybDqgpP4|LinkType5|video|Url5|https://www.youtube.com/watch?v=m9pnTYFYrGs|LinkType6|video|Url6|https://www.youtube.com/watch?v=vyVgKv-uXws
+[GENERAL]
+Manufacturer|American DJ|Name|Illusion Dotz 4.4|Type|42|Authors|Dávid Czirók, István Király|Creator|OFL
+[PHYSICAL]
+Width|492|Height|467|Depth|393|Weight|16.50|Power|468|Connector|3-pin and 5-pin|Bulb|16× 30W RGB COB LEDs|LensMinDegree|15.000|LensMaxDegree|15.000
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..270deg
+ID|Tilt fine|Type|8
+ID|All Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|All Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|All Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Shutter / Strobe|Type|6|DefaultValue|32|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~slow..fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~slow..fast Random timing|R8|Begin~224~End~255~Txt~Open
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer Curves|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theatre|R6|Begin~101~End~255~Txt~Default to unit settings
+ID|Auto Programs|Type|0|R1|Begin~0~End~10~Txt~Program 1|R2|Begin~11~End~20~Txt~Program 2|R3|Begin~21~End~30~Txt~Program 3|R4|Begin~31~End~40~Txt~Program 4|R5|Begin~41~End~50~Txt~Program 5|R6|Begin~51~End~60~Txt~Program 6|R7|Begin~61~End~70~Txt~Program 7|R8|Begin~71~End~80~Txt~Program 8|R9|Begin~81~End~90~Txt~Program 9|R10|Begin~91~End~100~Txt~Program 10|R11|Begin~101~End~110~Txt~Program 11|R12|Begin~111~End~120~Txt~Program 12|R13|Begin~121~End~130~Txt~Program 13|R14|Begin~131~End~140~Txt~Program 14|R15|Begin~141~End~150~Txt~Program 15|R16|Begin~151~End~160~Txt~Program 16|R17|Begin~161~End~170~Txt~Program 17|R18|Begin~171~End~180~Txt~Program 18|R19|Begin~181~End~190~Txt~Program 19|R20|Begin~191~End~200~Txt~Program 20|R21|Begin~201~End~210~Txt~Program 21|R22|Begin~211~End~220~Txt~Program 22|R23|Begin~221~End~230~Txt~Program 23|R24|Begin~231~End~240~Txt~Program 24|R25|Begin~241~End~250~Txt~Program 25|R26|Begin~251~End~255~Txt~Gradient effect
+ID|Program Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Pan/Tilt Movement Speed|Type|9|R1|Begin~0~End~225~Txt~fast..slow|R2|Begin~226~End~235~Txt~blackout by movement|R3|Begin~236~End~255~Txt~No function
+ID|Maintenance / Internal Programs|Type|0|R1|Begin~0~End~79~Txt~No function|R2|Begin~80~End~84~Txt~All motor reset|R3|Begin~85~End~96~Txt~No function|R4|Begin~97~End~99~Txt~Other motor reset|R5|Begin~100~End~119~Txt~Internal program 1|R6|Begin~120~End~139~Txt~Internal program 2|R7|Begin~140~End~159~Txt~Internal program 3|R8|Begin~160~End~179~Txt~Internal program 4|R9|Begin~180~End~199~Txt~Internal program 5|R10|Begin~200~End~219~Txt~Internal program 6|R11|Begin~220~End~239~Txt~Internal program 7|R12|Begin~240~End~255~Txt~Sound active program
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 9|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 9|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 9|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 10|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 10|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 10|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 11|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 11|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 11|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 12|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 12|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 12|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 13|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 13|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 13|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 14|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 14|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 14|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 15|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 15|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 15|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 16|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 16|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 16|Type|5|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|Standard 14-channel|ShortName|14ch|Content|Pan~Pan fine~Tilt~Tilt fine~All Red~All Green~All Blue~Shutter / Strobe~Dimmer~Dimmer Curves~Auto Programs~Program Speed~Pan/Tilt Movement Speed~Maintenance / Internal Programs
+Name|Basic 12-channel|ShortName|12ch|Content|Pan~Tilt~All Red~All Green~All Blue~Shutter / Strobe~Dimmer~Dimmer Curves~Auto Programs~Program Speed~Pan/Tilt Movement Speed~Maintenance / Internal Programs
+Name|Extended 59-channel|ShortName|59ch|Content|Pan~Pan fine~Tilt~Tilt fine~Red 1~Green 1~Blue 1~Red 2~Green 2~Blue 2~Red 3~Green 3~Blue 3~Red 4~Green 4~Blue 4~Red 5~Green 5~Blue 5~Red 6~Green 6~Blue 6~Red 7~Green 7~Blue 7~Red 8~Green 8~Blue 8~Red 9~Green 9~Blue 9~Red 10~Green 10~Blue 10~Red 11~Green 11~Blue 11~Red 12~Green 12~Blue 12~Red 13~Green 13~Blue 13~Red 14~Green 14~Blue 14~Red 15~Green 15~Blue 15~Red 16~Green 16~Blue 16~Shutter / Strobe~Dimmer~Dimmer Curves~Auto Programs~Program Speed~Pan/Tilt Movement Speed~Maintenance / Internal Programs
+[END_MODES]
