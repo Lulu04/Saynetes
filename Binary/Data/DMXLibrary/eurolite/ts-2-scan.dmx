@@ -1,0 +1,18 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|product page|Url1|https://www.steinigke.fr/en/mpn51785765-eurolite-ts-2-scan.html|LinkType2|manual|Url2|https://www.steinigke.fr/download/51785765-Manual-9543-1.400-eurolite-ts-2-scan-de_en_es_fr.pdf|LinkType3|video|Url3|https://www.youtube.com/watch?v=w5T1t7J5q_o
+[GENERAL]
+Manufacturer|Eurolite|Name|TS-2 Scan|Type|8|Authors|oxim, Luke Nelson|Creator|OFL
+[PHYSICAL]
+Width|195|Height|290|Depth|295|Weight|4.00|Power|115|Connector|3-pin
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..130deg
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..90deg
+ID|Color Wheel|Type|12|R1|Begin~0~End~17~Txt~Open|R2|Begin~18~End~35~Txt~Red~Extra~#ff0000|R3|Begin~36~End~53~Txt~Yellow~Extra~#ffff00|R4|Begin~54~End~71~Txt~Magenta~Extra~#ff00ff|R5|Begin~72~End~89~Txt~Green~Extra~#00ff00|R6|Begin~90~End~107~Txt~Orange~Extra~#ff8000|R7|Begin~108~End~125~Txt~Blue~Extra~#0000ff|R8|Begin~126~End~143~Txt~Pink~Extra~#ff0080|R9|Begin~144~End~161~Txt~Light Green~Extra~#00ff80|R10|Begin~162~End~179~Txt~Cyan~Extra~#00ffff|R11|Begin~180~End~197~Txt~Orange~Extra~#ff8000|R12|Begin~198~End~215~Txt~Light Yellow~Extra~#ffff80|R13|Begin~216~End~233~Txt~Magenta~Extra~#ff00ff|R14|Begin~234~End~251~Txt~Red and Blue~Extra~#0000ff|R15|Begin~252~End~255~Txt~Yellow and Green~Extra~#00ff00
+ID|Gobo Wheel|Type|10|R1|Begin~0~End~6~Txt~Open|R2|Begin~7~End~13~Txt~Gobo 1|R3|Begin~14~End~20~Txt~Gobo 2|R4|Begin~21~End~27~Txt~Gobo 3|R5|Begin~28~End~34~Txt~Gobo 4|R6|Begin~35~End~41~Txt~Gobo 5|R7|Begin~42~End~48~Txt~Gobo 6|R8|Begin~49~End~55~Txt~Gobo 7|R9|Begin~56~End~62~Txt~Gobo 8|R10|Begin~63~End~69~Txt~Gobo 9|R11|Begin~70~End~76~Txt~Gobo 10|R12|Begin~77~End~83~Txt~Gobo 11|R13|Begin~84~End~90~Txt~Gobo 12|R14|Begin~91~End~112~Txt~Closed|R15|Begin~113~End~127~Txt~Open|R16|Begin~128~End~238~Txt~Strobe Slow..Fast|R17|Begin~239~End~255~Txt~Open
+ID|Lamp|Type|2|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~254~Txt~No function|R3|Begin~255~End~255~Txt~ON
+[END_CHAN_DEF]
+[MODES]
+Name|5-channel|ShortName|5ch|Content|Pan~Tilt~Color Wheel~Gobo Wheel~Lamp
+[END_MODES]

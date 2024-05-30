@@ -1,0 +1,29 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://cdb.s3-us-west-1.amazonaws.com/ItemRelatedFiles/8780/inno_pocket_fusion.pdf|LinkType2|product page|Url2|https://www.adj.com/inno-pocket-fusion|LinkType3|video|Url3|https://www.youtube.com/watch?v=hLYHfn-D5aY|LinkType4|video|Url4|https://www.youtube.com/watch?v=Zdd0t-rlqck|LinkType5|video|Url5|https://www.youtube.com/watch?v=uy0yZrFI4zg|LinkType6|other|Url6|https://www.qlcplus.org/forum/viewtopic.php?f=6&t=12415
+[GENERAL]
+Manufacturer|American DJ|Name|Inno Pocket Fusion|Type|8|Authors|Flo Edelmann, EXELBONSAI|Creator|OFL
+[PHYSICAL]
+Width|340|Height|177|Depth|132|Weight|3.40|Power|32|Connector|3-pin|Bulb|12W White LED + 4.9mW Green Laser Diode|Lumens|50|LensMinDegree|2.000|LensMaxDegree|5.000
+[CHAN_DEF]
+ID|Pan|Type|7|DefaultValue|128|R1|Begin~0~End~255~Txt~0deg..180deg
+ID|Tilt|Type|8|R1|Begin~0~End~9~Txt~Continuous stop|R2|Begin~10~End~120~Txt~Continuous slow CCW..fast CCW|R3|Begin~121~End~134~Txt~Continuous stop|R4|Begin~135~End~245~Txt~Continuous fast CW..slow CW|R5|Begin~246~End~255~Txt~Continuous stop
+ID|Color Wheel|Type|12|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~23~Txt~Orange~Extra~#ffaa00|R4|Begin~24~End~31~Txt~Yellow~Extra~#ffff00|R5|Begin~32~End~39~Txt~Green~Extra~#00ff00|R6|Begin~40~End~47~Txt~Blue~Extra~#0000ff|R7|Begin~48~End~55~Txt~Light Blue~Extra~#77ccff|R8|Begin~56~End~63~Txt~Pink~Extra~#ff00ff|R9|Begin~64~End~71~Txt~Split Open / Red|R10|Begin~72~End~79~Txt~Split Red / Orange~Extra~#ff0000|R11|Begin~80~End~87~Txt~Split Orange / Yellow~Extra~#ffaa00|R12|Begin~88~End~95~Txt~Split Yellow / Green~Extra~#ffff00|R13|Begin~96~End~103~Txt~Split Green / Blue~Extra~#00ff00|R14|Begin~104~End~111~Txt~Split Blue / Light Blue~Extra~#0000ff|R15|Begin~112~End~127~Txt~Split Light Blue / Pink~Extra~#77ccff|R16|Begin~128~End~255~Txt~slow CW..fast CW
+ID|LED Strobe|Type|6|R1|Begin~0~End~7~Txt~Closed|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~slow..fast|R4|Begin~132~End~139~Txt~Open|R5|Begin~140~End~181~Txt~RampUp|R6|Begin~182~End~189~Txt~Open|R7|Begin~190~End~231~Txt~RampDown|R8|Begin~232~End~239~Txt~Open|R9|Begin~240~End~247~Txt~Random timing|R10|Begin~248~End~255~Txt~Open
+ID|Master Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Laser Movement|Type|44|R1|Begin~0~End~9~Txt~Rotation stop|R2|Begin~10~End~120~Txt~Rotation slow CW..fast CW|R3|Begin~121~End~135~Txt~Rotation stop|R4|Begin~136~End~245~Txt~Rotation slow CCW..fast CCW|R5|Begin~246~End~255~Txt~Rotation stop
+ID|Laser Strobe|Type|45|R1|Begin~0~End~7~Txt~Open|R2|Begin~8~End~15~Txt~Open|R3|Begin~16~End~131~Txt~slow..fast|R4|Begin~132~End~239~Txt~Open|R5|Begin~240~End~247~Txt~Random timing|R6|Begin~248~End~255~Txt~Open
+ID|Show|Type|0|R1|Begin~0~End~7~Txt~No function~Switch1~Show Speed / Sound Sensitivity:Show Speed|R2|Begin~8~End~33~Txt~Show 1~Switch1~Show Speed / Sound Sensitivity:Show Speed|R3|Begin~34~End~59~Txt~Show 2~Switch1~Show Speed / Sound Sensitivity:Show Speed|R4|Begin~60~End~85~Txt~Show 3~Switch1~Show Speed / Sound Sensitivity:Show Speed|R5|Begin~86~End~111~Txt~Show 4~Switch1~Show Speed / Sound Sensitivity:Show Speed|R6|Begin~112~End~137~Txt~Show 5~Switch1~Show Speed / Sound Sensitivity:Show Speed|R7|Begin~138~End~163~Txt~Show 6~Switch1~Show Speed / Sound Sensitivity:Show Speed|R8|Begin~164~End~189~Txt~Show 7~Switch1~Show Speed / Sound Sensitivity:Show Speed|R9|Begin~190~End~215~Txt~Show 8~Switch1~Show Speed / Sound Sensitivity:Show Speed|R10|Begin~216~End~255~Txt~Sound Active Show~Switch1~Show Speed / Sound Sensitivity:Sound Sensitivity
+ID|Dimmer Mode|Type|0|R1|Begin~0~End~20~Txt~Standard|R2|Begin~21~End~40~Txt~Stage|R3|Begin~41~End~60~Txt~TV|R4|Begin~61~End~80~Txt~Architectural|R5|Begin~81~End~100~Txt~Theater|R6|Begin~101~End~255~Txt~No function Default dimmer setting
+ID|Reset|Type|0|R1|Begin~0~End~69~Txt~No function|R2|Begin~70~End~79~Txt~Blackout while pan movement|R3|Begin~80~End~89~Txt~Blackout while color wheel movement|R4|Begin~90~End~99~Txt~Reset all|R5|Begin~100~End~255~Txt~No function
+ID|Show Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~low..high
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Pan~Tilt~Color Wheel~LED Strobe~Master Dimmer~Laser Movement~Laser Strobe~Show~Show Speed / Sound Sensitivity:Show Speed;Sound Sensitivity~Dimmer Mode~Reset
+Name|9-channel|ShortName|9ch|Content|Pan~Tilt~Color Wheel~LED Strobe~Master Dimmer~Laser Movement~Laser Strobe~Dimmer Mode~Reset
+Name|8-channel|ShortName|8ch|Content|Pan~Tilt~Color Wheel~LED Strobe~Master Dimmer~Laser Movement~Laser Strobe~Reset
+Name|6-channel|ShortName|6ch|Content|Show~Show Speed / Sound Sensitivity:Show Speed;Sound Sensitivity~LED Strobe~Master Dimmer~Laser Strobe~Reset
+Name|2-channel|ShortName|2ch|Content|Show~Show Speed / Sound Sensitivity:Show Speed;Sound Sensitivity
+[END_MODES]
