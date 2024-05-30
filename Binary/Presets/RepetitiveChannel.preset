@@ -10,3 +10,4 @@ HSI|Hue~2~0..100%|Saturation~2~0..100%|Intensity~2~0..100%
 Dimmer_Strobe|Dimmer~2~0..100%|Strobe~6~
 Pan+Tilt|Pan~7~|Tilt~8~
 Pan+Tilt fine|Pan~7~|Pan fine~7~|Tilt~8~|Tilt fine~8~
+RGBA|Red~3~0..100%|Green~4~0..100%|Blue~5~0..100%|Amber~14~0..100%
