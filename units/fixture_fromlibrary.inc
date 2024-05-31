@@ -135,6 +135,7 @@ end;
     DefaultValue: byte;
     ChanType: TChannelType;
     Ranges: array of TFixLibSingleRange;
+    AliasOfNameID: string;
 
     procedure InitDefault;
     procedure InitDefaultSingleRange;
@@ -234,6 +235,8 @@ end;
 
 function LoadAvailableChannelsFrom(t: TStringList; p: PFixLibAvailableChannels): boolean;
 var i, k, kEnd: Integer;
+  pSource: PFixLibAvailableChannel;
+  na: string;
 begin
   p^ := NIL;
   k := t.IndexOf('[CHAN_DEF]');
@@ -250,6 +253,25 @@ begin
     for i:=0 to High(p^) do begin
       inc(k);
       Result := Result and p^[i].LoadFromString(t.Strings[k]);
+    end;
+
+    // Fill alias channel with data from their source
+    if Result then begin
+      for i:=0 to High(p^) do begin
+        if Length(p^[i].AliasOfNameID) > 0 then begin
+          pSource := p^.GetChannelsByName(p^[i].AliasOfNameID);
+          if pSource = NIL then begin
+            Log.Error('Try to define the alias channel "'+p^[i].NameID+'" from "'+p^[i].AliasOfNameID+'" but channel "'+p^[i].AliasOfNameID+'" not found', 1);
+            Result := False;
+            break;
+          end else begin
+            na := p^[i].NameID;
+            p^[i].LoadFromString(pSource^.SaveToString);
+            p^[i].NameID := na;
+            p^[i].AliasOfNameID := pSource^.NameID;
+          end;
+        end;
+      end;
     end;
   except
     Result := False;
@@ -647,7 +669,7 @@ begin
   InitDefault;
   prop.Split(s, '|');
   if not prop.StringValueOf('Name', Name, '') then LogError('Name');
-  if not prop.StringValueOf('ShortName', ShortName, Name) then LogError('ShortName');
+  prop.StringValueOf('ShortName', ShortName, Name);
 
   if not prop.StringValueOf('Content', temp, '') then LogError('Content');
   if Length(temp) > 0 then begin
@@ -813,6 +835,7 @@ begin
   NameID := SNotInitialized;
   DefaultValue := 0;
   ChanType := ctConfig;
+  AliasOfNameID := '';
 end;
 
 procedure TFixLibAvailableChannel.InitDefaultSingleRange;
@@ -855,13 +878,18 @@ var prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('ID', NameID);
-  prop.Add('Type', Ord(ChanType));
-  if DefaultValue <> 0 then prop.Add('DefaultValue', DefaultValue);
-  // we save range only if it's not an empty 0..255 range
-  if (Length(Ranges) >= 1) and ((Ranges[0].EndValue <> 255) or
-     (Ranges[0].Text <> '') or (Ranges[0].Extra <> '')) then
-    for i:=0 to High(Ranges) do
-      prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
+
+  if Length(AliasOfNameID) > 0 then begin
+    prop.Add('AliasOf', AliasOfNameID);
+  end else begin
+    prop.Add('Type', Ord(ChanType));
+    if DefaultValue <> 0 then prop.Add('DefaultValue', DefaultValue);
+    // we save range only if it's not an empty 0..255 range
+    if (Length(Ranges) >= 1) and ((Ranges[0].EndValue <> 255) or
+       (Ranges[0].Text <> '') or (Ranges[0].Extra <> '')) then
+      for i:=0 to High(Ranges) do
+        prop.Add('R'+(i+1).ToString, Ranges[i].SaveToString);
+  end;
 
   Result := prop.PackedProperty;
 end;
@@ -879,28 +907,34 @@ begin
 
   try
     prop.StringValueOf('ID', NameID, NameID);
-    prop.IntegerValueOf('Type', vi, Ord(ChanType));
-    ChanType := TChannelType(vi);
-    prop.IntegerValueOf('DefaultValue', vi, DefaultValue);
-    DefaultValue := vi;
-    // search the number of ranges present
-    vi := 0;
-    repeat
-      inc(vi);
-    until not prop.CheckProperties(['R'+vi.ToString]);
 
-    Result := True;
-    if vi-1 = 0 then begin
-      // no range data found -> we force a single one
-      SetLength(Ranges, 1);
-      Ranges[0].InitDefault;
-      Ranges[0].Text := '';
+    if prop.StringValueOf('AliasOf', temp, '') then begin
+      AliasOfNameID := temp;
+      Result := True;
     end else begin
-      // read range's data
-      SetLength(Ranges, vi-1);
-      for i:=0 to High(Ranges) do begin
-        prop.StringValueOf('R'+(i+1).ToString, temp, '');
-        Result := Result and Ranges[i].LoadFromString(temp);
+      prop.IntegerValueOf('Type', vi, Ord(ChanType));
+      ChanType := TChannelType(vi);
+      prop.IntegerValueOf('DefaultValue', vi, DefaultValue);
+      DefaultValue := vi;
+      // search the number of ranges present
+      vi := 0;
+      repeat
+        inc(vi);
+      until not prop.CheckProperties(['R'+vi.ToString]);
+
+      Result := True;
+      if vi-1 = 0 then begin
+        // no range data found -> we force a single one
+        SetLength(Ranges, 1);
+        Ranges[0].InitDefault;
+        Ranges[0].Text := '';
+      end else begin
+        // read range's data
+        SetLength(Ranges, vi-1);
+        for i:=0 to High(Ranges) do begin
+          prop.StringValueOf('R'+(i+1).ToString, temp, '');
+          Result := Result and Ranges[i].LoadFromString(temp);
+        end;
       end;
     end;
   except
