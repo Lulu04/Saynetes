@@ -4,6 +4,7 @@ Folder|acoustic-control|Name|Acoustic Control|Web|https://kinson.pro/manufacture
 Folder|adb|Name|ADB|Web|https://www.adbstagelight.com|RDM|16708
 Folder|afx|Name|AFX|Web|https://lotronic.net/gb/brand/15-afx
 Folder|alien-pro|Name|Alien Pro|Web|http://alienpro.com.mx/
+Folder|alkalite|Name|Alkalite|Web|
 Folder|american-dj|Name|American DJ|Web|https://www.adj.com/
 Folder|ape-labs|Name|Ape Labs|Web|https://apelabs.com/
 Folder|aputure|Name|Aputure|Web|https://www.aputure.com

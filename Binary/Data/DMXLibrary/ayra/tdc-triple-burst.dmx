@@ -1,0 +1,42 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.bax-shop.nl/downloads/products/9000-0007-6647/ayra_tdc_triple_burst_manual.pdf|LinkType2|product page|Url2|https://www.bax-shop.co.uk/led-light-effect/ayra-tdc-triple-burst-led-lichteffect|LinkType3|video|Url3|https://www.youtube.com/watch?v=WKCW9-JtCfs|LinkType4|video|Url4|https://www.youtube.com/watch?v=Xt2d_Y9eGzs
+[GENERAL]
+Manufacturer|Ayra|Name|TDC Triple Burst|Type|30|Authors|Flo Edelmann|Creator|OFL
+[PHYSICAL]
+Width|375|Height|260|Depth|100|Weight|3.00|Power|60|Connector|3-pin|Bulb|15x 3W LED (R/G/B/W/A)
+[CHAN_DEF]
+ID|Show|Type|0|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~37~Txt~Show 1|R3|Begin~38~End~67~Txt~Show 2|R4|Begin~68~End~97~Txt~Show 3|R5|Begin~98~End~127~Txt~Show 4|R6|Begin~128~End~157~Txt~Show 5|R7|Begin~158~End~187~Txt~Show 6|R8|Begin~188~End~217~Txt~Show 7|R9|Begin~218~End~247~Txt~Show 8|R10|Begin~248~End~255~Txt~Random Show 1 - 8
+ID|Color chase|Type|0|R1|Begin~0~End~7~Txt~No function Manual control|R2|Begin~8~End~22~Txt~Color chase 1|R3|Begin~23~End~37~Txt~Color chase 2|R4|Begin~38~End~52~Txt~Color chase 3|R5|Begin~53~End~67~Txt~Color chase 4|R6|Begin~68~End~82~Txt~Color chase 5|R7|Begin~83~End~97~Txt~Color chase 6|R8|Begin~98~End~112~Txt~Color chase 7|R9|Begin~113~End~127~Txt~Color chase 8|R10|Begin~128~End~142~Txt~Color chase 9|R11|Begin~143~End~157~Txt~Color chase 10|R12|Begin~158~End~172~Txt~Color chase 11|R13|Begin~173~End~187~Txt~Color chase 12|R14|Begin~188~End~202~Txt~Color chase 13|R15|Begin~203~End~217~Txt~Color chase 14|R16|Begin~218~End~232~Txt~Color chase 15|R17|Begin~233~End~247~Txt~Color chase 16|R18|Begin~248~End~255~Txt~Stand alone show
+ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~7~Txt~No function|R2|Begin~8~End~247~Txt~slow..fast|R3|Begin~248~End~255~Txt~Sound controlled
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Speed|Type|16|R1|Begin~0~End~7~Txt~Speed stop|R2|Begin~8~End~255~Txt~Speed slow..fast
+ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 1|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 1|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 2|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 2|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White 3|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber 3|Type|14|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1 channel|ShortName|1ch|Content|Show
+Name|3 channel|ShortName|3ch|Content|Color chase~Dimmer~Strobe
+Name|9 channel|ShortName|9ch|Content|Red~Green~Blue~White~Amber~Dimmer~Strobe~Color chase~Speed
+Name|15 channel|ShortName|15ch|Content|Red 1~Green 1~Blue 1~White 1~Amber 1~Red 2~Green 2~Blue 2~White 2~Amber 2~Red 3~Green 3~Blue 3~White 3~Amber 3
+Name|19 channel|Content|Red 1~Green 1~Blue 1~White 1~Amber 1~Red 2~Green 2~Blue 2~White 2~Amber 2~Red 3~Green 3~Blue 3~White 3~Amber 3~Dimmer~Strobe~Color chase~Speed
+[END_MODES]
