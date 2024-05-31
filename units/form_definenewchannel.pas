@@ -162,15 +162,22 @@ begin
     if F.ShowModal = mrOk then begin
       p := F.Selected;
       if p <> NIL then begin
-        DoDeleteAllLines;
-        for i:=0 to High(p^.Ranges) do begin
-          DoAddLine;
-          j := High(FLines);
-          FLines[j].BeginValue := p^.Ranges[i].BeginValue;
-          FLines[j].EndValue := p^.Ranges[i].EndValue;
-          FLines[j].Description := p^.Ranges[i].Text;
-          FLines[j].Extra := p^.Ranges[i].Extra;
-          FLines[j].FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
+        Screen.BeginWaitCursor;
+        try
+          SB.Visible := False;
+          DoDeleteAllLines;
+          for i:=0 to High(p^.Ranges) do begin
+            DoAddLine;
+            j := High(FLines);
+            FLines[j].BeginValue := p^.Ranges[i].BeginValue;
+            FLines[j].EndValue := p^.Ranges[i].EndValue;
+            FLines[j].Description := p^.Ranges[i].Text;
+            FLines[j].Extra := p^.Ranges[i].Extra;
+            FLines[j].FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
+          end;
+          SB.Visible := True;
+        finally
+          Screen.EndWaitCursor;
         end;
       end;
     end;

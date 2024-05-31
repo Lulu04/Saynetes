@@ -179,6 +179,7 @@ begin
   try
     if F.ShowModal = mrOk then begin
       FOnHeightChange(Self);
+      Visible := True;
       Modified := True;
     end;
   finally
@@ -324,6 +325,7 @@ begin
   i := Length(FExistingChannels^);
   SetLength(FExistingChannels^, i+1);
   aChan.CopyTo(FExistingChannels^[i]);
+  Visible := False;
   DoAddChannelFrame(FExistingChannels^[i].NameID);
 end;
 
