@@ -157,12 +157,12 @@ begin
   CB.Items.Add(Ord(ctLIME).ToString+'|Lime fine');
   CB.Items.Add(Ord(ctINDIGO).ToString+'|Indigo|0..100%');
   CB.Items.Add(Ord(ctINDIGO).ToString+'|Indigo fine');
-  CB.Items.Add(Ord(ctWARMWHITE).ToString+'|Warm white|0..100%');
-  CB.Items.Add(Ord(ctWARMWHITE).ToString+'|Warm white fine');
-  CB.Items.Add(Ord(ctCOLDWHITE).ToString+'|Cold white|0..100%');
-  CB.Items.Add(Ord(ctCOLDWHITE).ToString+'|Cold white fine');
+  CB.Items.Add(Ord(ctWARMWHITE).ToString+'|Warm White|0..100%');
+  CB.Items.Add(Ord(ctWARMWHITE).ToString+'|Warm White fine');
+  CB.Items.Add(Ord(ctCOLDWHITE).ToString+'|Cold White|0..100%');
+  CB.Items.Add(Ord(ctCOLDWHITE).ToString+'|Cold White fine');
 
-  CB.Items.Add(Ord(ctCOLORTEMPERATURE).ToString+'|Color temperature');
+  CB.Items.Add(Ord(ctCOLORTEMPERATURE).ToString+'|Color Temperature');
 
   CB.Items.Add(Ord(ctDIMMER).ToString+'|Hue|0..100%');
   CB.Items.Add(Ord(ctDIMMER).ToString+'|Hue fine');
@@ -224,9 +224,9 @@ begin
   CB.Items.Add(Ord(ctZOOM).ToString+'|Zoom');
   CB.Items.Add(Ord(ctFOCUS).ToString+'|Focus');
 
-  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound sensitivity|Low..High');
-  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound sensitivity|High..Low');
-  CB.Items.Add(Ord(ctSOUNDCONTROLED).ToString+'|Sound controled');
+  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound Sensitivity|Low..High');
+  CB.Items.Add(Ord(ctSOUNDSENSITIVITY).ToString+'|Sound Sensitivity|High..Low');
+  CB.Items.Add(Ord(ctSOUNDCONTROLED).ToString+'|Sound Controled');
 
   CB.Items.Add(Ord(ctROTATION).ToString+'|Rotation');
   CB.Items.Add(Ord(ctSPEED).ToString+'|Speed');
