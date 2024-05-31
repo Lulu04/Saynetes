@@ -319,7 +319,7 @@ object FrameEditMode: TFrameEditMode
       Font.Color = clWhite
       Font.Style = [fsBold]
       Images = DataModule1.ImageList1
-      ImageIndex = 22
+      ImageIndex = 0
       Transparent = False
       OnClick = BAddRepetitiveChannelClick
       ShowHint = True
