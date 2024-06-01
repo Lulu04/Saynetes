@@ -104,7 +104,7 @@ begin
         Brush.Color := FLBPlaylist.Color
       else
         Brush.Color := PercentColor(FLBPlaylist.Color, 0.25);
-      Font.Color := $009FD1EC; // $00EAEAEA;
+      Font.Color :=FLBPlaylist.Font.Color;// $009FD1EC;
     end;
     // render dot rectangle if mouse is over item
     if Index = FItemIndexUnderMouse then
