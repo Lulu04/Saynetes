@@ -1062,6 +1062,10 @@ msgstr "Décale seulement l'action précédente et garde la position des autres.
 msgid "Click on the needed alignment"
 msgstr "Cliquez sur l'alignement désiré"
 
+#: tframeaudiocapture.image1.hint
+msgid "Audio input not found"
+msgstr ""
+
 #: tframeaudiocapture.speedbutton1.hint
 msgid "Remove all audio effects"
 msgstr "Supprimer tous les effets audio"
@@ -1998,6 +2002,10 @@ msgstr "Renommer le dossier"
 #: tframeviewmodeitem.image2.hint
 msgid "This channel have switcher"
 msgstr "Ce canal a des commutateurs"
+
+#: tframeviewprojectfolder.bsearchprojectfolder.hint
+msgid "Search folder"
+msgstr "Rechercher un dossier"
 
 #: tframeviewprojectfolder.buttonopenproject.caption
 msgctxt "tframeviewprojectfolder.buttonopenproject.caption"
@@ -3940,3 +3948,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

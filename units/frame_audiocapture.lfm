@@ -18,7 +18,7 @@ object FrameAudioCapture: TFrameAudioCapture
     BevelOuter = bvNone
     ClientHeight = 279
     ClientWidth = 298
-    Color = 6517620
+    Color = 4934475
     ParentColor = False
     TabOrder = 0
     object Shape2: TShape
@@ -405,6 +405,20 @@ object FrameAudioCapture: TFrameAudioCapture
       ImageIndex = 0
       ShowHint = True
       ParentShowHint = False
+    end
+    object Image1: TImage
+      AnchorSideLeft.Control = Panel2
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel2
+      Left = 133
+      Height = 32
+      Hint = 'Audio input not found'
+      Top = 5
+      Width = 32
+      BorderSpacing.Top = 5
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
     end
   end
   object Timer1: TTimer

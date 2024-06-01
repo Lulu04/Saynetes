@@ -1001,6 +1001,10 @@ msgstr ""
 msgid "Click on the needed alignment"
 msgstr ""
 
+#: tframeaudiocapture.image1.hint
+msgid "Audio input not found"
+msgstr ""
+
 #: tframeaudiocapture.speedbutton1.hint
 msgid "Remove all audio effects"
 msgstr ""
@@ -1908,6 +1912,10 @@ msgstr ""
 
 #: tframeviewmodeitem.image2.hint
 msgid "This channel have switcher"
+msgstr ""
+
+#: tframeviewprojectfolder.bsearchprojectfolder.hint
+msgid "Search folder"
 msgstr ""
 
 #: tframeviewprojectfolder.buttonopenproject.caption
