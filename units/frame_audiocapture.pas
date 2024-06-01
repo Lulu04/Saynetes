@@ -14,6 +14,7 @@ type
   { TFrameAudioCapture }
 
   TFrameAudioCapture = class(TFrame)
+    Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -65,7 +66,8 @@ type
   end;
 
 implementation
-uses u_resource_string, u_common, u_utils, u_audio_manager;
+uses u_resource_string, u_common, u_utils, u_audio_manager, u_apputils,
+  BGRABitmap, utilitaire_bgrabitmap;
 {$R *.lfm}
 
 { TFrameAudioCapture }
@@ -207,6 +209,7 @@ begin
 end;
 
 constructor TFrameAudioCapture.Create(aOwner: TComponent);
+var ima: TBGRABitmap;
 begin
   inherited Create(aOwner);
 
@@ -222,6 +225,10 @@ begin
   Label3.Caption := ' ';
   Label4.Caption := ' ';
   Label5.Caption := ' ';
+
+  ima := SVGFileToBGRABitmap(GetAppIconImagesFolder+'MicroNotFound.svg', Image1.ClientWidth, Image1.ClientHeight);
+  ima.AssignToBitmap(Image1.Picture.Bitmap);
+  ima.Free;
 end;
 
 procedure TFrameAudioCapture.EraseBackground(DC: HDC);
@@ -251,6 +258,7 @@ begin
     FModuleIsActivated := True;
     SoundManager.SetOnCaptureBufferEvent( @FrameCaptureLevels1.UpdateProgressBar );
     FrameLed1.State := True;
+    Image1.Visible := False;
   end
   else
   begin
@@ -258,6 +266,7 @@ begin
     FModuleIsActivated := False;
     FrameCaptureLevels1.SetToZero;
     FrameLed1.State := False;
+    Image1.Visible := True;
   end;
 end;
 

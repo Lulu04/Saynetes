@@ -11,5 +11,6 @@
 {"hash":26874739,"name":"tframeaudiocapture.speedbutton1.hint","sourcebytes":[82,101,109,111,118,101,32,97,108,108,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Remove all audio effects"},
 {"hash":1208,"name":"tframeaudiocapture.speedbutton1.caption","sourcebytes":[70,88],"value":"FX"},
 {"hash":184639731,"name":"tframeaudiocapture.speedbutton2.hint","sourcebytes":[65,112,112,108,121,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Apply audio effects"},
-{"hash":1208,"name":"tframeaudiocapture.speedbutton2.caption","sourcebytes":[70,88],"value":"FX"}
+{"hash":1208,"name":"tframeaudiocapture.speedbutton2.caption","sourcebytes":[70,88],"value":"FX"},
+{"hash":179058628,"name":"tframeaudiocapture.image1.hint","sourcebytes":[65,117,100,105,111,32,105,110,112,117,116,32,110,111,116,32,102,111,117,110,100],"value":"Audio input not found"}
 ]}
