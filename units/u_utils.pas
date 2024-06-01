@@ -23,7 +23,7 @@ function ConstructTSequencerInfoList(const aCmds: TCmdList;
 
 function FormatFloatWithDot(const aFmt: string; aValue: single): string;
 // convert the string to single. The string can have '.' or ','
-function StringToSingle(const aStr: string): single;
+function StringToSingle(aStr: string): single;
 
 function CmdWait(aDuration: single): TSingleCmd;
 function CmdLoop: TSingleCmd;
@@ -502,10 +502,10 @@ begin
 
   try
     case aMsgType of
-      mtWarning: Result := SVGFileToBGRABitmap(GetAppImagesFolder+'DlgWarning.svg', aWidth, aHeight);
-      mtError: Result := SVGFileToBGRABitmap(GetAppImagesFolder+'DlgError.svg', aWidth, aHeight);
-      mtInformation: Result := SVGFileToBGRABitmap(GetAppImagesFolder+'DlgInformation.svg', aWidth, aHeight);
-      mtConfirmation: Result := SVGFileToBGRABitmap(GetAppImagesFolder+'DlgQuestion.svg', aWidth, aHeight);
+      mtWarning: Result := SVGFileToBGRABitmap(GetAppIconImagesFolder+'DlgWarning.svg', aWidth, aHeight);
+      mtError: Result := SVGFileToBGRABitmap(GetAppIconImagesFolder+'DlgError.svg', aWidth, aHeight);
+      mtInformation: Result := SVGFileToBGRABitmap(GetAppIconImagesFolder+'DlgInformation.svg', aWidth, aHeight);
+      mtConfirmation: Result := SVGFileToBGRABitmap(GetAppIconImagesFolder+'DlgQuestion.svg', aWidth, aHeight);
       else Result := TBGRABitmap.Create(aWidth, aHeight, BGRAPixelTransparent);
     end;
   except
@@ -563,26 +563,16 @@ begin
     Result[i] := '.';
 end;
 
-function StringToSingle(const aStr: string): single;
-var i, k, integerPart, decimalPart: integer;
-  divisor: double;
+function StringToSingle(aStr: string): single;
+var i: integer;
+  fs: TFormatSettings;
 begin
-  k := Pos('.', aStr);
-  if k = 0 then
-    k := Pos(',', aStr);
-
-  if k = 0 then
-    Result := Single(aStr.ToInteger)
-  else
-  begin
-    integerPart := Copy(aStr, 1, k-1).ToInteger;
-    decimalPart := Copy(aStr, k+1, Length(aStr)-k).ToInteger;
-
-    divisor := 1;
-    for i:=1 to Length(aStr)-k do
-      divisor := divisor*10;
-
-    Result := Single(integerPart+decimalPart/divisor);
+  try
+    fs.DecimalSeparator := '.';
+    Result := StrToFloat(aStr, fs);
+  except
+    fs.DecimalSeparator := ',';
+    Result := StrToFloat(aStr, fs);
   end;
 end;
 
