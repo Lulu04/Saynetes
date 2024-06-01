@@ -419,6 +419,8 @@ begin
 
   BToogleEditMode.Enabled := FrameViewProjector1.GUIMode <> guiPrepaDMX;
 
+  Panel1.Enabled := FrameViewProjector1.GUIMode <> guiPrepaDMX;
+
   FrameMainSequence1.Visible := FrameViewProjector1.GUIMode = guiMainDMX;
   FrameMainAddFixture1.Visible := FrameViewProjector1.GUIMode = guiPrepaDMX;
 end;
