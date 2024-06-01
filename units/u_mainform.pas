@@ -130,7 +130,6 @@ begin
   if not FileExists(ProgramOptions.WorkingProject)
     then PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard)
     else Project.Load(ProgramOptions.WorkingProject);
-
 end;
 
 procedure TFormMain.MenuItem6Click(Sender: TObject);

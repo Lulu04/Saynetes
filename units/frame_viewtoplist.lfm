@@ -97,7 +97,7 @@ object FrameViewTopList: TFrameViewTopList
     end
     object MIDelete: TMenuItem
       Caption = 'sDelete'
-      ImageIndex = 1
+      ImageIndex = 41
       OnClick = MIDeleteClick
     end
     object MenuItem3: TMenuItem
