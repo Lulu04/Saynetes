@@ -25,7 +25,9 @@ type
     FPath: string;
     procedure AddImageToImageList(const aSVGFilename: string; aIL: TImageList);
   public
+    procedure RedrawImageForDmxLibraryTree;
     procedure RedrawImageForChannelTree;
+    procedure RedrawImageForProgramButtons;
   end;
 
 var
@@ -47,7 +49,9 @@ end;
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 begin
+  RedrawImageForDmxLibraryTree;
   RedrawImageForChannelTree;
+  RedrawImageForProgramButtons;
 end;
 
 procedure TDataModule1.AddImageToImageList(const aSVGFilename: string; aIL: TImageList);
@@ -56,6 +60,22 @@ begin
   ima := SVGFileToBGRABitmap(FPath+aSVGFilename, aIL.Width, -1);
   aIL.Add(ima.Bitmap, NIL);
   ima.Free;
+end;
+
+procedure TDataModule1.RedrawImageForDmxLibraryTree;
+begin
+  ILTreeView.BeginUpdate;
+  ILTreeView.Clear;
+  ILTreeView.Width := FormMain.ScaleDesignToForm(16);
+  ILTreeView.Height := ILTreeView.Width;
+
+  FPath := GetAppIconImagesFolder;
+
+  AddImageToImageList('Library.svg', ILTreeView);
+  AddImageToImageList('Folder.svg', ILTreeView);
+  AddImageToImageList('SingleProjector.svg', ILTreeView);
+  AddImageToImageList('DmxMode.svg', ILTreeView);
+  ILTreeView.EndUpdate;
 end;
 
 procedure TDataModule1.RedrawImageForChannelTree;
@@ -120,6 +140,61 @@ begin
   AddImageToImageList('SwitchingChannel.svg', ILChannelType);
   AddImageToImageList('Switch.svg', ILChannelType);
   ILChannelType.EndUpdate;
+end;
+
+procedure TDataModule1.RedrawImageForProgramButtons;
+begin
+  ImageList1.BeginUpdate;
+  ImageList1.Clear;
+  ImageList1.Width := FormMain.ScaleDesignToForm(20);
+  ImageList1.Height := ImageList1.Width;
+
+  FPath := GetAppIconImagesFolder;
+
+  AddImageToImageList('Add.svg', ImageList1);
+  AddImageToImageList('Substract.svg', ImageList1);
+  AddImageToImageList('Cancel.svg', ImageList1);
+  AddImageToImageList('Checked.svg', ImageList1);
+  AddImageToImageList('RightGreenArrow.svg', ImageList1);
+  AddImageToImageList('LeftGreenArrow.svg', ImageList1);     // 5
+  AddImageToImageList('Edit.svg', ImageList1);
+  AddImageToImageList('ClearBrush.svg', ImageList1);
+  AddImageToImageList('Redo.svg', ImageList1);
+  AddImageToImageList('Undo.svg', ImageList1);
+  AddImageToImageList('UpGreenArrow.svg', ImageList1);      // 10
+  AddImageToImageList('DownGreenArrow.svg', ImageList1);
+  AddImageToImageList('OpenFile.svg', ImageList1);
+  AddImageToImageList('SaveFile.svg', ImageList1);
+  AddImageToImageList('Cissor.svg', ImageList1);
+  AddImageToImageList('Play.svg', ImageList1);        // 15
+  AddImageToImageList('Stop.svg', ImageList1);
+  AddImageToImageList('Connect.svg', ImageList1);
+  AddImageToImageList('Loop.svg', ImageList1);
+  AddImageToImageList('Magnify.svg', ImageList1);
+  AddImageToImageList('DownBlackArrow.svg', ImageList1);   // 20
+  AddImageToImageList('Link.svg', ImageList1);
+  AddImageToImageList('RGB.svg', ImageList1);
+  AddImageToImageList('Levels.svg', ImageList1);
+  AddImageToImageList('ZoomOnSelection.svg', ImageList1);
+  AddImageToImageList('ZoomAll.svg', ImageList1);     // 25
+  AddImageToImageList('InsertSequence.svg', ImageList1);
+  AddImageToImageList('ViewAll.svg', ImageList1);
+  AddImageToImageList('DmxEdit.svg', ImageList1);
+  AddImageToImageList('DmxBlackout.svg', ImageList1);
+  AddImageToImageList('OnOff.svg', ImageList1);    // 30
+  AddImageToImageList('AddMusic.svg', ImageList1);
+  AddImageToImageList('Library.svg', ImageList1);
+  AddImageToImageList('SearchFolder.svg', ImageList1);
+  AddImageToImageList('Lock.svg', ImageList1);
+  AddImageToImageList('Unlock.svg', ImageList1);   // 35
+  AddImageToImageList('DmxGroup.svg', ImageList1);
+  AddImageToImageList('ProgramOptions.svg', ImageList1);
+  AddImageToImageList('DmxInfo.svg', ImageList1);
+  AddImageToImageList('ProjectNew.svg', ImageList1);
+  AddImageToImageList('Options.svg', ImageList1);   // 40
+  AddImageToImageList('TrashCan.svg', ImageList1);
+  AddImageToImageList('MagicWand.svg', ImageList1);
+  ImageList1.EndUpdate;
 end;
 
 end.

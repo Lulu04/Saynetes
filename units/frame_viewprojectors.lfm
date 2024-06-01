@@ -87,10 +87,10 @@ object FrameViewProjector: TFrameViewProjector
       object ComboBox1: TComboBox
         AnchorSideLeft.Control = BZoomAll
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 547
+        Left = 551
         Height = 20
         Hint = 'Select the universe(s) to show'
         Top = 7
@@ -111,23 +111,23 @@ object FrameViewProjector: TFrameViewProjector
       object BZoomAll: TSpeedButton
         AnchorSideLeft.Control = BShowInfo
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
         Left = 512
-        Height = 20
+        Height = 24
         Hint = 'View all'
-        Top = 7
-        Width = 20
+        Top = 5
+        Width = 24
         AutoSize = True
         BorderSpacing.Left = 15
+        Constraints.MinHeight = 24
+        Constraints.MinWidth = 24
         Color = clBlack
-        Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 27
-        Transparent = False
         OnClick = BZoomAllClick
         ShowHint = True
         ParentFont = False
@@ -136,18 +136,16 @@ object FrameViewProjector: TFrameViewProjector
       object BShowDMXAdress: TSpeedButton
         AnchorSideLeft.Control = BShowRGBSymbol
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
         Left = 434
-        Height = 20
+        Height = 16
         Hint = 'Show/hide DMX adress'
-        Top = 7
+        Top = 9
         Width = 38
         AutoSize = True
         BorderSpacing.Left = 5
-        Constraints.MaxHeight = 20
-        Constraints.MinHeight = 20
         Caption = 'ADRESS'
         Color = 4545375
         Flat = True
@@ -165,7 +163,7 @@ object FrameViewProjector: TFrameViewProjector
       object BShowRGBSymbol: TSpeedButton
         AnchorSideLeft.Control = BShowLevels
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
@@ -176,12 +174,9 @@ object FrameViewProjector: TFrameViewProjector
         Width = 20
         AutoSize = True
         BorderSpacing.Left = 5
-        Constraints.MaxHeight = 20
-        Constraints.MinHeight = 20
         Color = 4545375
         Flat = True
         Font.Color = 11318976
-        Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 22
@@ -193,6 +188,7 @@ object FrameViewProjector: TFrameViewProjector
         ParentShowHint = False
       end
       object BShowLevels: TSpeedButton
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
@@ -201,14 +197,11 @@ object FrameViewProjector: TFrameViewProjector
         Hint = 'Show/hide the channels levels'
         Top = 7
         Width = 20
-        Anchors = []
+        Anchors = [akTop]
         AutoSize = True
-        Constraints.MaxHeight = 20
-        Constraints.MinHeight = 20
         Color = 4545375
         Flat = True
         Font.Color = 11318976
-        Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 23
@@ -222,22 +215,22 @@ object FrameViewProjector: TFrameViewProjector
       object BAddDMX: TSpeedButton
         AnchorSideLeft.Control = ComboBox1
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 691
-        Height = 20
+        Left = 695
+        Height = 24
         Hint = 'Modify your DMX universes and fixtures.'
-        Top = 7
+        Top = 5
         Width = 36
         AutoSize = True
         BorderSpacing.Left = 15
         Constraints.MaxWidth = 36
+        Constraints.MinHeight = 24
         Constraints.MinWidth = 36
         Color = clBlack
-        Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 28
@@ -249,16 +242,18 @@ object FrameViewProjector: TFrameViewProjector
       end
       object SpeedButton5: TSpeedButton
         AnchorSideLeft.Control = Panel1
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 0
+        Left = 10
         Height = 20
         Hint = 'Shutdown all lights.'
         Top = 7
         Width = 20
         AutoSize = True
+        BorderSpacing.Left = 10
         Color = clBlack
         Font.Height = 12
         Font.Style = [fsBold]
@@ -273,7 +268,7 @@ object FrameViewProjector: TFrameViewProjector
       object BShowInfo: TSpeedButton
         AnchorSideLeft.Control = BShowDMXAdress
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = BShowLevels
+        AnchorSideTop.Control = Panel1
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
@@ -284,11 +279,8 @@ object FrameViewProjector: TFrameViewProjector
         Width = 20
         AutoSize = True
         BorderSpacing.Left = 5
-        Constraints.MaxHeight = 20
-        Constraints.MinHeight = 20
         Color = clBlack
         Font.Color = 15395562
-        Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 38

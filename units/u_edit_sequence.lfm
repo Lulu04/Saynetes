@@ -434,7 +434,7 @@ object FormSequenceEdition: TFormSequenceEdition
         Color = 13553358
         Flat = True
         Images = DataModule1.ImageList1
-        ImageIndex = 42
+        ImageIndex = 25
         ImageWidth = 16
         Transparent = False
         OnClick = B_ViewAllClick
@@ -461,7 +461,7 @@ object FormSequenceEdition: TFormSequenceEdition
         Color = 13553358
         Flat = True
         Images = DataModule1.ImageList1
-        ImageIndex = 43
+        ImageIndex = 24
         Transparent = False
         OnClick = B_ViewSelectionClick
         ShowHint = True

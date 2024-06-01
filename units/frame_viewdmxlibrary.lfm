@@ -20,7 +20,7 @@ object FrameViewDMXLibrary: TFrameViewDMXLibrary
     DragMode = dmAutomatic
     ExpandSignColor = 10473964
     ExpandSignType = tvestArrowFill
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Height = 15
     HotTrack = True
     HotTrackColor = 9240575

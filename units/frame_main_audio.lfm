@@ -328,7 +328,6 @@ object FrameMainAudio: TFrameMainAudio
       Color = 247036
       Images = DataModule1.ImageList1
       ImageIndex = 31
-      Transparent = False
       OnClick = SpeedButton1Click
       ShowHint = True
       ParentShowHint = False
@@ -352,7 +351,6 @@ object FrameMainAudio: TFrameMainAudio
       Color = 247036
       Images = DataModule1.ImageList1
       ImageIndex = 16
-      Transparent = False
       OnClick = SpeedButton2Click
       ShowHint = True
       ParentShowHint = False
@@ -758,7 +756,7 @@ object FrameMainAudio: TFrameMainAudio
     end
     object MI_Delete: TMenuItem
       Caption = 'sDelete'
-      ImageIndex = 2
+      ImageIndex = 41
       OnClick = MI_DeleteClick
     end
   end

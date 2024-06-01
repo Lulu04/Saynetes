@@ -14,6 +14,7 @@ function GetAppStageImagesFolder: string;
 function GetAppFixtureImagesFolder: string;
 function GetAppCursorImagesFolder: string;
 function GetAppChannelImagesFolder: string;
+function GetAppIconImagesFolder: string;
 
 
 implementation
@@ -52,6 +53,11 @@ end;
 function GetAppChannelImagesFolder: string;
 begin
   Result := GetAppImagesFolder+'Channels'+DirectorySeparator;
+end;
+
+function GetAppIconImagesFolder: string;
+begin
+  Result := GetAppImagesFolder+'Icons'+DirectorySeparator;
 end;
 
 end.

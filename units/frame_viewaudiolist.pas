@@ -173,7 +173,7 @@ begin
    if snd.Loop then
    begin
      DataModule1.ImageList1.Draw(LB.Canvas, ARect.Left,
-        ARect.Top+(FNameFontHeight-DataModule1.ImageList1.Height) div 2, 40);
+        ARect.Top+(FNameFontHeight-DataModule1.ImageList1.Height) div 2, 18);
        // Rect(xx, ARect.Top, xx+loopImageWidth, ARect.Top+FNameFontHeight));
    end;
    xx := ARect.Left + DataModule1.ImageList1.Width + margin;

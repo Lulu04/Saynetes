@@ -195,7 +195,7 @@ object FormMain: TFormMain
         Color = 13555931
         Flat = True
         Images = DataModule1.ImageList1
-        ImageIndex = 44
+        ImageIndex = 39
         Transparent = False
         OnClick = MIProjectNewClick
         ShowHint = True
@@ -260,7 +260,7 @@ object FormMain: TFormMain
         Enabled = False
         Flat = True
         Images = DataModule1.ImageList1
-        ImageIndex = 41
+        ImageIndex = 40
         Transparent = False
         OnClick = MIProjectOptionsClick
         ShowHint = True
@@ -327,7 +327,7 @@ object FormMain: TFormMain
         Color = 13555931
         Flat = True
         Images = DataModule1.ImageList1
-        ImageIndex = 45
+        ImageIndex = 37
         Transparent = False
         OnClick = MIProgramOptionsClick
         ShowHint = True
@@ -359,7 +359,7 @@ object FormMain: TFormMain
       Caption = 'Project'
       object MIProjectNew: TMenuItem
         Caption = 'New project...'
-        ImageIndex = 6
+        ImageIndex = 39
         ShortCut = 16462
         OnClick = MIProjectNewClick
       end
@@ -382,7 +382,7 @@ object FormMain: TFormMain
       end
       object MIProjectOptions: TMenuItem
         Caption = 'Project options...'
-        ImageIndex = 41
+        ImageIndex = 40
         OnClick = MIProjectOptionsClick
       end
       object MenuItem2: TMenuItem
@@ -411,7 +411,7 @@ object FormMain: TFormMain
       end
       object MIProgramOptions: TMenuItem
         Caption = 'Program options'
-        ImageIndex = 41
+        ImageIndex = 37
         OnClick = MIProgramOptionsClick
       end
     end
