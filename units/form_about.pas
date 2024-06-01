@@ -65,6 +65,9 @@ begin
   Memo1.Lines.Add('HIDAPI');
   Memo1.Lines.Add('       https://github.com/dioannidis/HIDAPI.pas');
   Memo1.Lines.Add('');
+  Memo1.Lines.Add('Open Fixture Library (OFL)');
+  Memo1.Lines.Add('       https://open-fixture-library.org/');
+  Memo1.Lines.Add('');
 end;
 
 procedure TFormAbout.FormDestroy(Sender: TObject);
