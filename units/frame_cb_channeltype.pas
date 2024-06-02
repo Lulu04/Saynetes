@@ -191,6 +191,8 @@ begin
   CB.Items.Add(Ord(ctSTROBE).ToString+'|Strobe');
   CB.Items.Add(Ord(ctSTROBESPEED).ToString+'|Strobe speed');
 
+  CB.Items.Add(Ord(ctEFFECT).ToString+'|Effect');
+
   CB.Items.Add(Ord(ctPAN).ToString+'|Pan');
   CB.Items.Add(Ord(ctPAN).ToString+'|Pan fine');
   CB.Items.Add(Ord(ctTILT).ToString+'|Tilt');
@@ -273,6 +275,8 @@ begin
   CB.Items.Add(Ord(ctCONFIG).ToString);
   CB.Items.Add(Ord(ctSTROBE).ToString);
   CB.Items.Add(Ord(ctSTROBESPEED).ToString);
+
+  CB.Items.Add(Ord(ctEFFECT).ToString);
 
   CB.Items.Add(Ord(ctPAN).ToString);
   CB.Items.Add(Ord(ctTILT).ToString);

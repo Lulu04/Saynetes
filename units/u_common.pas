@@ -492,7 +492,8 @@ type
                      ctLASERSTROBE,     // 45
                      ctGOBOSHAKE,
                      ctFROST,
-                     ctSOUNDCONTROLED
+                     ctSOUNDCONTROLED,
+                     ctEFFECT
                    );
 var
   FixtureImages: array[TFixtureType] of TBGRABitmap;
