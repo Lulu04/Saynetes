@@ -9,7 +9,7 @@ Width|220|Height|220|Depth|90|Weight|1.50|Power|150|Connector|3-pin|Bulb|3× 30W
 [CHAN_DEF]
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~No function|R2|Begin~1~End~255~Txt~Strobe slow..fast
-ID|Mode|Type|0|R1|Begin~0~End~50~Txt~No function Manual Mode|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Sound Activate|R5|Begin~201~End~255~Txt~Strobe Color
+ID|Mode|Type|49|R1|Begin~0~End~50~Txt~No function Manual Mode|R2|Begin~51~End~100~Txt~ColorJump|R3|Begin~101~End~150~Txt~ColorFade|R4|Begin~151~End~200~Txt~Sound Activate|R5|Begin~201~End~255~Txt~Strobe Color
 ID|FX Speed|Type|16|R1|Begin~0~End~255~Txt~slow..fast
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
