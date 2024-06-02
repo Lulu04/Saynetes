@@ -6,21 +6,28 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, ComCtrls, LCLType, Menus, LCLTranslator,
-  u_list_dmxuniverse, u_common, u_dmx_util;
+  u_list_dmxuniverse, u_common;
 
 type
 
-  TUserChangeChannelNameCallback = procedure(Sender: TObject; aChanIndex: integer; const aNewName: string) of object;
+  TUserRenameChannelCallback = procedure(Sender: TObject; aChanIndex: integer; const aNewName: string) of object;
+  TUserWantChannelAliasCallback = procedure(Sender: TObject; aChanIndex: integer; out pAlias: PFixLibAvailableChannel) of object;
 
   { TFrameViewDMXFixtureChannels }
 
   TFrameViewDMXFixtureChannels = class(TFrame)
+    MISetAsAliasOf: TMenuItem;
+    MIRename: TMenuItem;
+    PopupMenu1: TPopupMenu;
     TV: TTreeView;
+    procedure MIRenameClick(Sender: TObject);
+    procedure MISetAsAliasOfClick(Sender: TObject);
     procedure TVMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure TVSelectionChanged(Sender: TObject);
   private
     FEditionEnabled, FTreeIsCollapsed: boolean;
-    FOnUserChangeChannelName: TUserChangeChannelNameCallback;
+    FOnUserWantChannelAlias: TUserWantChannelAliasCallback;
+    FOnUserRenameChannel: TUserRenameChannelCallback;
     FFixturetype: TFixturetype;
     FOnSelectionChange: TNotifyEvent;
     FReady: boolean;
@@ -30,6 +37,7 @@ type
     procedure SetEditionEnabled(AValue: boolean);
     procedure SetSelectionEnabled(AValue: boolean);
   public
+    constructor Create(TheOwner: TComponent); override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure Clear;
@@ -47,7 +55,8 @@ type
     property FixtureType: TFixturetype read FFixturetype;
 
     property EditionEnabled: boolean read FEditionEnabled write SetEditionEnabled;
-    property OnUserChangeChannelName: TUserChangeChannelNameCallback read FOnUserChangeChannelName write FOnUserChangeChannelName;
+    property OnUserRenameChannel: TUserRenameChannelCallback read FOnUserRenameChannel write FOnUserRenameChannel;
+    property OnUserWantChannelAlias: TUserWantChannelAliasCallback read FOnUserWantChannelAlias write FOnUserWantChannelAlias;
     property SelectionEnabled: boolean read FSelectionEnabled write SetSelectionEnabled;
     property OnSelectionChange: TNotifyEvent read FOnSelectionChange write FOnSelectionChange;
     property Selected: TTreeNode read GetSelected;
@@ -63,32 +72,16 @@ uses u_resource_string, u_dmxlib_inputrange, u_userdialogs, u_utils, u_helper,
 { TFrameViewDMXFixtureChannels }
 
 procedure TFrameViewDMXFixtureChannels.TVSelectionChanged(Sender: TObject);
-var na: string;
-  n: TTreeNode;
 begin
-  // one click on channel name -> ask new name
-  if EditionEnabled and (TV.Selected <> NIL) then begin
-    n := TV.Selected;
-    if n.Level = 2 then n := n.Parent;
-    na := n.Text;
-    if UserInputNoSpecialChar(SNewName, SOk, SCancel, na, mtConfirmation, False) = mrOk then begin
-      n.Text := na;
-      if FOnUserChangeChannelName <> NIL then FOnUserChangeChannelName(Self, n.Index, na);
-    end;
-    exit;
-  end;
-
   if not FSelectionEnabled
     then TV.Selected:=NIL
     else if FOnSelectionChange<>NIL
            then FOnSelectionChange(Self);
-
 end;
 
 procedure TFrameViewDMXFixtureChannels.TVMouseUp(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-var
-  n: TTreeNode;
+var n: TTreeNode;
 begin
   // collapse/develop the tree
   if (Button = mbLeft) and (TV.GetNodeWithExpandSignAt(X, Y) = NIL) then begin
@@ -100,12 +93,57 @@ begin
       if FTreeIsCollapsed then n.Collapse(True)
         else n.Expand(False);
   end;
+
+  if EditionEnabled and (Button in [mbLeft,mbRight]) and (TV.GetNodeAt(X, Y) <> NIL) then begin
+    PopupMenu1.PopUp;
+  end;
+end;
+
+procedure TFrameViewDMXFixtureChannels.MIRenameClick(Sender: TObject);
+var n: TTreeNode;
+  na: String;
+begin
+  n := TV.Selected;
+  if n = NIL then exit;
+  if n.Level = 1 then n := n.Parent;
+  na := n.Text;
+  if UserInputNoSpecialChar(SNewName, SOk, SCancel, na, mtConfirmation, False) = mrOk then begin
+    n.Text := na;
+    if FOnUserRenameChannel <> NIL then FOnUserRenameChannel(Self, n.Index, na);
+  end;
+end;
+
+procedure TFrameViewDMXFixtureChannels.MISetAsAliasOfClick(Sender: TObject);
+var n: TTreeNode;
+  pAlias: PFixLibAvailableChannel;
+  i: integer;
+begin
+  n := TV.Selected;
+  if n = NIL then exit;
+  if n.Level = 1 then n := n.Parent;
+
+  FOnUserWantChannelAlias(Self, n.Index, pAlias);
+  if pAlias = NIL then exit;
+
+  n.ImageIndex := Ord(pAlias^.ChanType); // image associated with channel type
+  n.DeleteChildren;
+  for i:=0 to High(pAlias^.Ranges) do
+    TV.Items.AddChild(n, pAlias^.Ranges[i].ToReadableString);
 end;
 
 procedure TFrameViewDMXFixtureChannels.SetSelectionEnabled(AValue: boolean);
 begin
   if FSelectionEnabled=AValue then Exit;
   FSelectionEnabled:=AValue;
+end;
+
+constructor TFrameViewDMXFixtureChannels.Create(TheOwner: TComponent);
+begin
+  inherited Create(TheOwner);
+
+  // manual translation
+  MIRename.Caption := SRename;
+  MISetAsAliasOf.Caption := SAliasOf_;
 end;
 
 procedure TFrameViewDMXFixtureChannels.SetEditionEnabled(AValue: boolean);

@@ -13,5 +13,10 @@
 {"hash":11429491,"name":"tformdefinenewchannel.label10.caption","sourcebytes":[115,83,119,105,116,99,104,101,114,115],"value":"sSwitchers"},
 {"hash":125631361,"name":"tformdefinenewchannel.label11.caption","sourcebytes":[115,69,120,116,114,97],"value":"sExtra"},
 {"hash":233092782,"name":"tformdefinenewchannel.bimportranges.caption","sourcebytes":[73,109,112,111,114,116,32,114,97,110,103,101,115,32,102,114,111,109,32,97,110,111,116,104,101,114,32,99,104,97,110,110,101,108,46,46,46],"value":"Import ranges from another channel..."},
-{"hash":1277986,"name":"tformdefinenewchannel.brangesgenerator.caption","sourcebytes":[115,82,97,110,103,101,115,71,101,110,101,114,97,116,111,114],"value":"sRangesGenerator"}
+{"hash":1277986,"name":"tformdefinenewchannel.brangesgenerator.caption","sourcebytes":[115,82,97,110,103,101,115,71,101,110,101,114,97,116,111,114],"value":"sRangesGenerator"},
+{"hash":60119017,"name":"tformdefinenewchannel.bsetaliasof.hint","sourcebytes":[83,101,116,115,32,116,104,105,115,32,99,104,97,110,110,101,108,32,97,115,32,97,110,32,97,108,105,97,115,32,111,102,32,97,110,111,116,104,101,114,32,99,104,97,110,110,101,108,13,10,40,100,105,102,102,101,114,101,110,116,32,110,97,109,101,32,98,117,116,32,115,97,109,101,32,116,121,112,101,44,32,114,97,110,103,101,115,32,97,110,100,32,115,119,105,116,99,104,101,114,115,41],"value":"Sets this channel as an alias of another channel\r\n(different name but same type, ranges and switchers)"},
+{"hash":137330982,"name":"tformdefinenewchannel.bsetaliasof.caption","sourcebytes":[115,65,108,105,97,115,79,102],"value":"sAliasOf"},
+{"hash":137330982,"name":"tformdefinenewchannel.label12.caption","sourcebytes":[115,65,108,105,97,115,79,102],"value":"sAliasOf"},
+{"hash":5404860,"name":"tformdefinenewchannel.label13.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":27711779,"name":"tformdefinenewchannel.bremovealias.hint","sourcebytes":[82,101,109,111,118,101,32,116,104,101,32,97,108,105,97,115],"value":"Remove the alias"}
 ]}

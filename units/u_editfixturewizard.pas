@@ -492,7 +492,7 @@ begin
     end;
 
   // channels used by modes
-  // we keep the channels used by modes (in normal or virtual channels)
+  // we keep the channels used by modes (normal, virtual and alias channels)
   A := NIL;
    // add normal channels
   for i:=0 to High(ModeFrames) do begin

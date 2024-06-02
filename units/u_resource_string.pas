@@ -57,6 +57,10 @@ resourcestring
   SModify='Modify';
   SEdit='Edit';
   SRename='Rename';
+  SAliasOf_='Set as an alias of...';
+  SAliasOf='Alias of';
+  SIsAnAliasOf='is an alias of';
+  SThatDoesntExists='that doesn''t exists';
   SUpdate='Update';
   SDefault='Default';
   SCut='Cut';
@@ -108,7 +112,7 @@ resourcestring
   SRed='Red';
   SGreen='Green';
   SBlue='Blue';
-  sAddRepetitiveChannels='Add repetitive channels';
+  sRepeatChannels='Repeat channels';
 
   SManufacturer='Manufacturer';
   SAuthors='Authors';

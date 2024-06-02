@@ -64,15 +64,19 @@ type
     FChannels: TFixLibAvailableChannels;
     FOnAddChannel: TOnAddRepetitiveChannel;
     FPreviewing: boolean;
-    procedure ProcessUserChangeChannelNameEvent(Sender: TObject; aChanIndex: integer; const aNewName: string);
+    procedure ProcessUserRenameChannelEvent(Sender: TObject; aChanIndex: integer; const aNewName: string);
+    procedure ProcessUserWantChannelAlias(Sender: TObject; aChanIndex: integer; out p: PFixLibAvailableChannel);
     function GetEndIndex: integer;
     function GetStartIndex: integer;
   private
+    FExistingChannels: PFixLibAvailableChannels;
     FPresetManager: TPresetManager;
     function PatternToPreset: string;
     procedure PresetToPattern(const A: TStringArray);
   public
     function GetChannelName(const aChannelName: string; aIndex: integer): string;
+
+    property ExistingChannels: PFixLibAvailableChannels read FExistingChannels write FExistingChannels;
 
     property StartIndex: integer read GetStartIndex;
     property EndIndex: integer read GetEndIndex;
@@ -81,7 +85,8 @@ type
 
 
 implementation
-uses LCLType, u_resource_string, u_project_manager;
+uses LCLType, u_resource_string, u_project_manager, form_selectsourcechannel,
+  u_helper;
 
 {$R *.lfm}
 
@@ -92,11 +97,27 @@ begin
   if Key = VK_ESCAPE then ModalResult := mrCancel;
 end;
 
-procedure TFormEditRepetitiveChannel.ProcessUserChangeChannelNameEvent(
+procedure TFormEditRepetitiveChannel.ProcessUserRenameChannelEvent(
   Sender: TObject; aChanIndex: integer; const aNewName: string);
 begin
   FChannels[aChanIndex].NameID := aNewName;
   CheckBox1Change(NIL);
+end;
+
+procedure TFormEditRepetitiveChannel.ProcessUserWantChannelAlias(
+  Sender: TObject; aChanIndex: integer; out p: PFixLibAvailableChannel);
+var F: TFormSelectChannel;
+begin
+  F := TFormSelectChannel.Create(NIL);
+  try
+    F.FillWith(ExistingChannels);
+    if F.ShowModal = mrOk then begin
+      p := F.Selected;
+      FChannels[aChanIndex].AliasOfNameID := F.Selected^.NameID;
+    end else p := NIL;
+  finally
+    F.Free;
+  end;
 end;
 
 function TFormEditRepetitiveChannel.GetEndIndex: integer;
@@ -183,7 +204,9 @@ begin
   FrameViewDMXFixtureChannels.Parent := Panel5;
   FrameViewDMXFixtureChannels.Align := alClient;
   FrameViewDMXFixtureChannels.EditionEnabled := True;
-  FrameViewDMXFixtureChannels.OnUserChangeChannelName := @ProcessUserChangeChannelNameEvent;
+  FrameViewDMXFixtureChannels.SelectionEnabled := True;
+  FrameViewDMXFixtureChannels.OnUserRenameChannel := @ProcessUserRenameChannelEvent;
+  FrameViewDMXFixtureChannels.OnUserWantChannelAlias := @ProcessUserWantChannelAlias;
 
   FPresetManager := TPresetManager.Create(Self);
   FPresetManager.Init1(SRepetitiveChannelPresets, BPreset,
@@ -192,7 +215,7 @@ begin
 
   // manual translation
   BOK.Caption := SOk;
-  Label1.Caption := sAddRepetitiveChannels;
+  Label1.Caption := sRepeatChannels;
   BPreset.Caption := SPreset_;
 end;
 
@@ -245,8 +268,8 @@ var i, j: integer;
 begin
   if Length(FChannels) = 0 then exit;
 
+  Screen.BeginWaitCursor;
   try
-    Screen.BeginWaitCursor;
     for i:=SE1.Value to SE2.Value do begin
       for j:=0 to High(FChannels) do begin
         chan := FChannels[j];

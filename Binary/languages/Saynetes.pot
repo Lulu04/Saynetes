@@ -75,6 +75,16 @@ msgstr ""
 msgid "Import ranges from another channel..."
 msgstr ""
 
+#: tformdefinenewchannel.bremovealias.hint
+msgid "Remove the alias"
+msgstr ""
+
+#: tformdefinenewchannel.bsetaliasof.hint
+msgid ""
+"Sets this channel as an alias of another channel\n"
+"(different name but same type, ranges and switchers)"
+msgstr ""
+
 #: tformdefinenewchannel.label4.caption
 msgid "Default value"
 msgstr ""
@@ -1725,163 +1735,6 @@ msgctxt "tframeviewdmxcursors.miunlockchannel.caption"
 msgid "Unlock"
 msgstr ""
 
-#: tframeviewdmxfixturechannels.menuitem11.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem11.caption"
-msgid "Strobe"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem12.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem12.caption"
-msgid "Config"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem13.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem13.caption"
-msgid "Pan"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem14.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem14.caption"
-msgid "Tilt"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem15.caption
-msgid "Speed pan/Tilt"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem16.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem16.caption"
-msgid "Gobo"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem17.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem17.caption"
-msgid "Rotation Gobo"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem18.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem18.caption"
-msgid "Color changer"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem19.caption
-msgid "UV"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem20.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem20.caption"
-msgid "Speed"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem21.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem21.caption"
-msgid "Speed"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem22.caption
-msgid "No function"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem23.caption
-msgid "Cyan"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem24.caption
-msgid "Magenta"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem25.caption
-msgid "Yellow"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem26.caption
-msgid "Lime"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem27.caption
-msgid "Indigo"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem28.caption
-msgid "Warm white"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem29.caption
-msgid "Cold white"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem3.caption
-msgid "Set as..."
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem30.caption
-msgid "Iris"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem31.caption
-msgid "Blade insertion"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem32.caption
-msgid "Color temperature"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem33.caption
-msgid "Strobe speed"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem34.caption
-msgid "Blade rotation"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem35.caption
-msgid "Sound sensitivity"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem36.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem36.caption"
-msgid "Zoom"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem37.caption
-msgid "Focus"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem38.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem38.caption"
-msgid "Rotation"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem4.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem4.caption"
-msgid "Red"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem5.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem5.caption"
-msgid "Green"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem6.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem6.caption"
-msgid "Blue"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem7.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem7.caption"
-msgid "White"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem8.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem8.caption"
-msgid "Master Dimmer"
-msgstr ""
-
-#: tframeviewdmxfixturechannels.menuitem9.caption
-msgctxt "tframeviewdmxfixturechannels.menuitem9.caption"
-msgid "Amber"
-msgstr ""
-
 #: tframeviewdmxlibrary.micollapsetree.caption
 msgid "Collapse folders"
 msgstr ""
@@ -2110,11 +1963,6 @@ msgstr ""
 msgid "Add new switcher"
 msgstr ""
 
-#: u_resource_string.saddrepetitivechannels
-msgctxt "u_resource_string.saddrepetitivechannels"
-msgid "Add repetitive channels"
-msgstr ""
-
 #: u_resource_string.saddthissequence
 msgctxt "u_resource_string.saddthissequence"
 msgid "Add this sequence"
@@ -2134,6 +1982,14 @@ msgstr ""
 
 #: u_resource_string.safixturemusthaveatleastonechannel
 msgid "A fixture must have at least one channel"
+msgstr ""
+
+#: u_resource_string.saliasof
+msgid "Alias of"
+msgstr ""
+
+#: u_resource_string.saliasof_
+msgid "Set as an alias of..."
 msgstr ""
 
 #: u_resource_string.sall
@@ -2980,6 +2836,10 @@ msgstr ""
 msgid "is already imported"
 msgstr ""
 
+#: u_resource_string.sisanaliasof
+msgid "is an alias of"
+msgstr ""
+
 #: u_resource_string.sitsnameisreplacedby
 msgid "Its name is replaced by"
 msgstr ""
@@ -3462,6 +3322,10 @@ msgctxt "u_resource_string.srename"
 msgid "Rename"
 msgstr ""
 
+#: u_resource_string.srepeatchannels
+msgid "Repeat channels"
+msgstr ""
+
 #: u_resource_string.srepetitivechannelpresets
 msgid "Repetitive channel presets"
 msgstr ""
@@ -3676,6 +3540,10 @@ msgstr ""
 #: u_resource_string.sswitchers
 msgctxt "u_resource_string.sswitchers"
 msgid "Switchers"
+msgstr ""
+
+#: u_resource_string.sthatdoesntexists
+msgid "that doesn't exists"
 msgstr ""
 
 #: u_resource_string.sthefile

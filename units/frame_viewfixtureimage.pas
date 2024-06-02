@@ -5,7 +5,7 @@ unit frame_viewfixtureimage;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls,
+  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, LCLType,
   BGRABitmap, BGRABitmapTypes, u_common;
 
 type
@@ -30,6 +30,8 @@ type
 
   public
     destructor Destroy; override;
+    procedure EraseBackground({%H-}DC: HDC); override;
+
     procedure InitWith(aFT: TFixtureType);
     property FixtureType: TFixtureType read FFixtureType;
     property Checked: boolean read GetChecked write SetChecked;
@@ -76,6 +78,11 @@ begin
   if FImage <> NIL then FImage.Free;
   FImage := NIL;
   inherited Destroy;
+end;
+
+procedure TFrameFixtureImage.EraseBackground(DC: HDC);
+begin
+  //
 end;
 
 procedure TFrameFixtureImage.InitWith(aFT: TFixtureType);

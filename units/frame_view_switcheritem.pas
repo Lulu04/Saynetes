@@ -5,7 +5,7 @@ unit frame_view_switcheritem;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons,
+  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons, LCLType,
   u_list_dmxuniverse;
 
 type
@@ -42,6 +42,8 @@ type
     procedure ProcessLabelMouseLeaveEvent(Sender: TOBject);
   public
     constructor Create(TheOwner: TComponent); override;
+    procedure EraseBackground({%H-}DC: HDC); override;
+
     // init from 'virtualName1:subchannelName1'+LineEnding+
     //           'virtualName2:subchannelName2'+...
     procedure InitFromText(const s: string);
@@ -179,17 +181,29 @@ begin
 end;
 
 procedure TFrameViewSwitcherItems.DoDeleteSwitcherItem(aIndex: integer);
+var i, h: integer;
 begin
   if (aIndex < 0) or (aIndex >= Length(FVirtualNames)) then exit;
 
   // free TLabels and array entries
-  ClientHeight := ClientHeight - FVirtualNames[aIndex].Height;
+  h := FVirtualNames[aIndex].Height;
+  ClientHeight := ClientHeight - h;
   FVirtualNames[aIndex].Free;
   Delete(FVirtualNames, aIndex, 1);
   FSeparator[aIndex].Free;
   Delete(FSeparator, aIndex, 1);
   FSubNames[aIndex].Free;
   Delete(FSubNames, aIndex, 1);
+
+  // decrement tag (index) and adjust y coordinates
+  for i:=aIndex to High(FVirtualNames) do begin
+    FVirtualNames[i].Tag := FVirtualNames[i].Tag - 1;
+    FVirtualNames[i].Top := FVirtualNames[i].Top - h;
+    FSeparator[i].Tag := FSeparator[i].Tag - 1;
+    FSeparator[i].Top := FSeparator[i].Top - h;
+    FSubNames[i].Tag := FSubNames[i].Tag - 1;
+    FSubNames[i].Top := FSubNames[i].Top - h;
+  end;
 
   FOnHeightChange(Self);
   BCopyPrevious.Visible := Length(FVirtualNames) = 0;
@@ -232,6 +246,11 @@ begin
   BAdd.Hint := sAddNewSwitcher;
   BEditSwitcher.Hint := SModify;
   BDeleteSwitcher.Hint := SDelete;
+end;
+
+procedure TFrameViewSwitcherItems.EraseBackground(DC: HDC);
+begin
+  //
 end;
 
 procedure TFrameViewSwitcherItems.InitFromText(const s: string);

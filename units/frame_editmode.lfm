@@ -309,11 +309,11 @@ object FrameEditMode: TFrameEditMode
       Left = 271
       Height = 20
       Top = 148
-      Width = 159
+      Width = 118
       Anchors = [akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 20
-      Caption = 'sAddRepetitiveChannels'
+      Caption = 'sRepeatChannels'
       Color = 16433669
       Flat = True
       Font.Color = clWhite

@@ -6,6 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, StdCtrls, ExtCtrls, Graphics, Buttons,
+  LCLType,
   u_list_dmxuniverse, u_common;
 
 type
@@ -16,6 +17,7 @@ type
     BEditSubChannel: TSpeedButton;
     Image1: TImage;
     Image2: TImage;
+    Label1: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Panel1: TPanel;
@@ -43,6 +45,7 @@ type
     procedure ReplaceChannelName(const aOldName, aNewName: string);
   public
     constructor Create(TheOwner: TComponent); override;
+    procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure Init(aIndex: integer; const aChanName: string);
     property ExistingChannels: PFixLibAvailableChannels read FExistingChannels write FExistingChannels;
@@ -140,6 +143,8 @@ begin
         if Panel1.Controls[i].Name.StartsWith('MyLabel', False) and
            (TLabel(Panel1.Controls[i]).Caption = aOldName) then begin
           p := ExistingChannels^.GetChannelsByName(aNewName);
+          // alias ?
+          if (p <> NIL) and p^.IsAlias then p := ExistingChannels^.GetChannelsByName(p^.AliasOfNameID);
           if p <> NIL then begin
             // change caption
             TLabel(Panel1.Controls[i]).Caption := aNewName;
@@ -256,6 +261,11 @@ begin
   BEditSubChannel.Hint := SEdit;
 end;
 
+procedure TFrameViewModeItem.EraseBackground(DC: HDC);
+begin
+  //
+end;
+
 procedure TFrameViewModeItem.Init(aIndex: integer; const aChanName: string);
 var virtualName: string;
   subChannels: TStringArray;
@@ -268,6 +278,7 @@ begin
   FPackedName := aChanName;
 
   SetImage(Image1, Ord(High(TChannelType))+1);
+  Label1.Visible := False;
 
   if TrySplitVirtual(aChanName, virtualName, subChannels) then begin
     // it's switching channel
@@ -325,12 +336,21 @@ begin
     FIsSwitchingChannel := False;
     p := FExistingChannels^.GetChannelsByName(aChanName);
     s := aChanName;
-    if p = NIL then s := s + ' << '+SNotFound;
+    if p = NIL then s := s + ' << ' + SNotFound;
     Label5.Caption := s;
+    Label5.Hint := '';
     if p <> NIL then begin
-      SetImage(Image1, Ord(p^.ChanType));
-      // check if this channel have switch descriptor
-      if p^.HaveSwitchDescriptor then SetImage(Image2, Ord(High(TChannelType))+2);
+      if p^.IsAlias then begin
+        Label1.Visible := True;
+        Label1.Caption := SAliasOf+' '+p^.AliasOfNameID;
+        Label5.Hint := Label1.Caption;
+      end;
+      if p^.IsAlias then p := FExistingChannels^.GetChannelsByName(p^.AliasOfNameID);
+      if p <> NIL then begin
+        SetImage(Image1, Ord(p^.ChanType));
+        // check if this channel have switch descriptor
+        if p^.HaveSwitchDescriptor then SetImage(Image2, Ord(High(TChannelType))+2);
+      end;
     end;
   end;
 end;

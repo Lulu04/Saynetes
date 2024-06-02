@@ -6,6 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons,
+  LCLType,
   u_list_dmxuniverse, frame_viewmodeitem;
 
 type
@@ -72,6 +73,7 @@ type
     procedure ReplaceChannelName(const aOldName, aNewName: string);
   public
     constructor Create(TheOwner: TComponent); override;
+    procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure InitFrom(const aMode: TFixLibMode);
 
@@ -176,6 +178,7 @@ begin
 
   F := TFormEditRepetitiveChannel.Create(Nil);
   F.OnAddChannel := @ProcessAddRepetitiveChannelEvent;
+  F.ExistingChannels := ExistingChannels;
   try
     if F.ShowModal = mrOk then begin
       FOnHeightChange(Self);
@@ -440,10 +443,15 @@ begin
   Label6.Caption := SNameAlreadyUsed;
   Label7.Caption := SNameAlreadyUsed;
   Label2.Caption := SName;
-  BAddRepetitiveChannel.Caption := sAddRepetitiveChannels;
+  BAddRepetitiveChannel.Caption := sRepeatChannels;
 
   BAddSwitchingChannel.ImageIndex := Ord(High(TChannelType))+1;
   BAddSwitchingChannel.ImageWidth := DataModule1.ImageList1.Width;
+end;
+
+procedure TFrameEditMode.EraseBackground(DC: HDC);
+begin
+  // do nothing
 end;
 
 procedure TFrameEditMode.InitFrom(const aMode: TFixLibMode);
@@ -537,7 +545,7 @@ function TFrameEditMode.GetHaveError: boolean;
 var A, B: TStringArray;
   i, j, k, m: integer;
   virtualNameIsUsed: array of boolean;
-  p: PFixLibAvailableChannel;
+  p, pp: PFixLibAvailableChannel;
 begin
   FErrorMessage := '';
 
@@ -557,9 +565,18 @@ begin
   for i:=0 to High(A) do begin
     p := FExistingChannels^.GetChannelsByName(A[i]);
     if p = NIL then exit(True);
-    if p^.HaveRangesError then begin
-      FErrorMessage := SMode+' "'+ModeName+'": '+SChannel+' '+p^.NameID+' '+SHaveRangeError;
-      exit(True);
+    if not p^.IsAlias then begin
+      if p^.HaveRangesError then begin
+        FErrorMessage := SMode+' "'+ModeName+'": "'+SChannel+'" '+p^.NameID+' '+SHaveRangeError;
+        exit(True);
+      end;
+    end else begin
+      pp := FExistingChannels^.GetChannelsByName(p^.AliasOfNameID);
+      if pp = NIL then begin
+        FErrorMessage := SMode+' "'+ModeName+'": "'+SChannel+'" '+p^.NameID+
+                         ' '+SIsAnAliasOf+' "'+p^.AliasOfNameID+'" '+ SThatDoesntExists;
+        exit(True);
+      end;
     end;
   end;
 

@@ -19,10 +19,14 @@ type
     BRangesGenerator: TSpeedButton;
     BOK: TSpeedButton;
     BCancel: TSpeedButton;
+    BSetAliasOf: TSpeedButton;
     Edit1: TEdit;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -49,9 +53,12 @@ type
     Shape3: TShape;
     Shape4: TShape;
     BImportRanges: TSpeedButton;
+    BRemoveAlias: TSpeedButton;
     Splitter1: TSplitter;
     procedure BRangesGeneratorClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
+    procedure BRemoveAliasClick(Sender: TObject);
+    procedure BSetAliasOfClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
@@ -90,7 +97,8 @@ type
 
 implementation
 
-uses u_resource_string, form_selectsourcechannel, form_rangesgenerator, Math;
+uses u_resource_string, form_selectsourcechannel, form_rangesgenerator,
+  u_helper, Math;
 
 {$R *.lfm}
 
@@ -105,6 +113,8 @@ begin
   Label2.Caption := SName;
   Label5.Caption := SNameAlreadyUsed;
   BRangesGenerator.Caption := sRangesGenerator;
+  BSetAliasOf.Caption := SAliasOf_;
+  Label12.Caption := SAliasOf;
 
 
   Label7.Caption := SMin;
@@ -373,6 +383,7 @@ end;
 procedure TFormDefineNewChannel.EditExistingChannel(p: PFixLibAvailableChannel);
 var i: integer;
   o: TFrameEditRange;
+  pp: PFixLibAvailableChannel;
 begin
   FEditingChannel := True;
   Edit1.Text := p^.NameID;
@@ -381,18 +392,35 @@ begin
   FrameCBChannelType2.SelectedType := p^.ChanType;
   FSelectedChannelType := p^.ChanType;
 
-  DoDeleteLine(0);
-  FLockOnBeginEndValueChange := True;
-  for i:=0 to High(p^.Ranges) do begin
-    DoAddLine;
-    o := FLines[i];
-    o.BeginValue := p^.Ranges[i].BeginValue;
-    o.EndValue := p^.Ranges[i].EndValue;
-    o.Description := p^.Ranges[i].Text;
-    o.Extra := p^.Ranges[i].Extra;
-    o.FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
+  Label12.Visible := p^.IsAlias;
+  Label13.Visible := Label12.Visible;
+  BRemoveAlias.Visible := Label12.Visible;
+  if p^.IsAlias then begin
+    Label13.Caption := p^.AliasOfNameID;
+    pp := FExistingChannels^.GetChannelsByName(p^.AliasOfNameID);
+    if pp = NIL then begin
+      Label13.Caption := Label13.Caption + ' << '+SNotFound;
+      exit;
+    end;
+  end else pp := p;
+
+  Screen.BeginWaitCursor;
+  try
+    DoDeleteLine(0);
+    FLockOnBeginEndValueChange := True;
+    for i:=0 to High(pp^.Ranges) do begin
+      DoAddLine;
+      o := FLines[i];
+      o.BeginValue := pp^.Ranges[i].BeginValue;
+      o.EndValue := pp^.Ranges[i].EndValue;
+      o.Description := pp^.Ranges[i].Text;
+      o.Extra := pp^.Ranges[i].Extra;
+      o.FrameSwitcher.InitFromText(pp^.Ranges[i].GetSwitchsAsText);
+    end;
+    FLockOnBeginEndValueChange := False;
+  finally
+    Screen.EndWaitCursor;
   end;
-  FLockOnBeginEndValueChange := False;
 end;
 
 function TFormDefineNewChannel.GetData: string;
@@ -403,16 +431,20 @@ begin
   FChannelDef.DefaultValue := SE1.Value;
   FChannelDef.ChanType := FSelectedChannelType;
 
-  FChannelDef.Ranges := NIL;
-  SetLength(FChannelDef.Ranges, Length(FLines));
-  for i:=0 to High(FLines) do begin
-    FChannelDef.Ranges[i].InitDefault;
-    FChannelDef.Ranges[i].BeginValue := FLines[i].BeginValue;
-    FChannelDef.Ranges[i].EndValue := FLines[i].EndValue;
-    FChannelDef.Ranges[i].Text := FLines[i].Description;
-    FChannelDef.Ranges[i].Extra := FLines[i].Extra;
-    FLines[i].InitRange(@FChannelDef.Ranges[i]);
-    if FChannelDef.Ranges[i].EndValue = 255 then break;
+  // we save the ranges only if this channel is not an alias of another
+  if Label13.Visible then FChannelDef.AliasOfNameID := Label13.Caption
+    else begin
+      FChannelDef.Ranges := NIL;
+      SetLength(FChannelDef.Ranges, Length(FLines));
+      for i:=0 to High(FLines) do begin
+        FChannelDef.Ranges[i].InitDefault;
+        FChannelDef.Ranges[i].BeginValue := FLines[i].BeginValue;
+        FChannelDef.Ranges[i].EndValue := FLines[i].EndValue;
+        FChannelDef.Ranges[i].Text := FLines[i].Description;
+        FChannelDef.Ranges[i].Extra := FLines[i].Extra;
+        FLines[i].InitRange(@FChannelDef.Ranges[i]);
+        if FChannelDef.Ranges[i].EndValue = 255 then break;
+      end;
   end;
 
   Result := FChannelDef.SaveToString;
@@ -427,6 +459,59 @@ begin
 
   if Sender = BCancel then begin
     ModalResult := mrCancel;
+  end;
+end;
+
+procedure TFormDefineNewChannel.BRemoveAliasClick(Sender: TObject);
+begin
+  Label13.Caption := '';
+  Label12.Visible := False;
+  Label13.Visible := False;
+  BRemoveAlias.Visible := False;
+end;
+
+procedure TFormDefineNewChannel.BSetAliasOfClick(Sender: TObject);
+var F: TFormSelectChannel;
+  p: PFixLibAvailableChannel;
+  i, j: Integer;
+begin
+  F := TFormSelectChannel.Create(NIL);
+  try
+    F.FillWith(FExistingChannels);
+    if F.ShowModal = mrOk then begin
+      p := F.Selected;
+      if p <> NIL then begin
+        Label12.Visible := True;
+        Label13.Visible := True;
+        BRemoveAlias.Visible := True;
+        Label13.Caption := p^.NameID;
+
+        RadioButton2.Checked := True;
+        FrameCBChannelType2.SelectedType := p^.ChanType;
+        FSelectedChannelType := p^.ChanType;
+        SE1.Value := p^.DefaultValue;
+
+        Screen.BeginWaitCursor;
+        try
+          SB.Visible := False;
+          DoDeleteAllLines;
+          for i:=0 to High(p^.Ranges) do begin
+            DoAddLine;
+            j := High(FLines);
+            FLines[j].BeginValue := p^.Ranges[i].BeginValue;
+            FLines[j].EndValue := p^.Ranges[i].EndValue;
+            FLines[j].Description := p^.Ranges[i].Text;
+            FLines[j].Extra := p^.Ranges[i].Extra;
+            FLines[j].FrameSwitcher.InitFromText(p^.Ranges[i].GetSwitchsAsText);
+          end;
+          SB.Visible := True;
+        finally
+          Screen.EndWaitCursor;
+        end;
+      end;
+    end;
+  finally
+    F.Free;
   end;
 end;
 
