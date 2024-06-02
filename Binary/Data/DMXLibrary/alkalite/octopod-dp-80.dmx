@@ -7,96 +7,96 @@ Manufacturer|Alkalite|Name|Octopod DP 80|Type|36|Authors|Lulu|Creator|Saynètes 
 [PHYSICAL]
 Width|175|Height|139|Depth|163|Weight|11.46|Power|115|Connector|3-pin
 [CHAN_DEF]
-ID|Rainbow 1|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Rainbow 1|AliasOf|Rainbow
 ID|Red 1|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 1|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 1|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 1|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 1|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 2|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 1|AliasOf|Programs
+ID|Rainbow 2|AliasOf|Rainbow
 ID|Red 2|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 2|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 2|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 2|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 2|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 3|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 2|AliasOf|Programs
+ID|Rainbow 3|AliasOf|Rainbow
 ID|Red 3|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 3|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 3|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 3|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 3|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 4|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 3|AliasOf|Programs
+ID|Rainbow 4|AliasOf|Rainbow
 ID|Red 4|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 4|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 4|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 4|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 4|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 5|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 4|AliasOf|Programs
+ID|Rainbow 5|AliasOf|Rainbow
 ID|Red 5|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 5|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 5|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 5|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 5|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 6|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 5|AliasOf|Programs
+ID|Rainbow 6|AliasOf|Rainbow
 ID|Red 6|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 6|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 6|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 6|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 6|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 7|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 6|AliasOf|Programs
+ID|Rainbow 7|AliasOf|Rainbow
 ID|Red 7|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 7|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 7|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 7|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 7|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 8|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 7|AliasOf|Programs
+ID|Rainbow 8|AliasOf|Rainbow
 ID|Red 8|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 8|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 8|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 8|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 8|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|RainBow 1/4|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 8|AliasOf|Programs
+ID|RainBow 1/4|AliasOf|Rainbow
 ID|Red 1/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 1/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 1/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 1/4|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 1/4|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|RainBow 2/4|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 1/4|AliasOf|Programs
+ID|RainBow 2/4|AliasOf|Rainbow
 ID|Red 2/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 2/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 2/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 2/4|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 2/4|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|RainBow 3/4|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 2/4|AliasOf|Programs
+ID|RainBow 3/4|AliasOf|Rainbow
 ID|Red 3/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 3/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 3/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 3/4|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 3/4|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|RainBow 4/4|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 3/4|AliasOf|Programs
+ID|RainBow 4/4|AliasOf|Rainbow
 ID|Red 4/4|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 4/4|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 4/4|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 4/4|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 4/4|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 1/2|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 4/4|AliasOf|Programs
+ID|Rainbow 1/2|AliasOf|Rainbow
 ID|Red 1/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 1/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 1/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 1/2|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 1/2|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
-ID|Rainbow 2/2|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
+ID|Programs 1/2|AliasOf|Programs
+ID|Rainbow 2/2|AliasOf|Rainbow
 ID|Red 2/2|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green 2/2|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue 2/2|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe 2/2|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs 2/2|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
+ID|Programs 2/2|AliasOf|Programs
 ID|Rainbow|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~ON
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
 ID|Strobe|Type|6|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~1..20Hz
-ID|Programs|Type|0|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
+ID|Programs|Type|49|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~30~Txt~Chase 1|R3|Begin~31~End~60~Txt~Chase 2|R4|Begin~61~End~90~Txt~Chase 3|R5|Begin~91~End~120~Txt~Chase 4|R6|Begin~121~End~150~Txt~Chase 5|R7|Begin~151~End~180~Txt~Chase 6|R8|Begin~181~End~210~Txt~Chase 7|R9|Begin~211~End~240~Txt~Chase 8|R10|Begin~241~End~255~Txt~Sound controled
 [END_CHAN_DEF]
 [MODES]
 Name|48-channel|ShortName|48ch|Content|Rainbow 1~Red 1~Green 1~Blue 1~Strobe 1~Programs 1~Rainbow 2~Red 2~Green 2~Blue 2~Strobe 2~Programs 2~Rainbow 3~Red 3~Green 3~Blue 3~Strobe 3~Programs 3~Rainbow 4~Red 4~Green 4~Blue 4~Strobe 4~Programs 4~Rainbow 5~Red 5~Green 5~Blue 5~Strobe 5~Programs 5~Rainbow 6~Red 6~Green 6~Blue 6~Strobe 6~Programs 6~Rainbow 7~Red 7~Green 7~Blue 7~Strobe 7~Programs 7~Rainbow 8~Red 8~Green 8~Blue 8~Strobe 8~Programs 8

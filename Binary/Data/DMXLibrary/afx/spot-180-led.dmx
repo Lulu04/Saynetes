@@ -19,7 +19,7 @@ ID|Gobo rotation|Type|11|R1|Begin~0~End~15~Txt~Open|R2|Begin~16~End~95~Txt~Fine 
 ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Near..Far
 ID|Prism|Type|41|R1|Begin~0~End~63~Txt~Open|R2|Begin~64~End~255~Txt~Prism in
 ID|Prism rotation|Type|42|R1|Begin~0~End~15~Txt~Stop|R2|Begin~16~End~135~Txt~CW slow..fast|R3|Begin~136~End~255~Txt~CCW slow..fast
-ID|Programs|Type|0|R1|Begin~0~End~7~Txt~No action|R2|Begin~8~End~131~Txt~Auto mode|R3|Begin~132~End~255~Txt~Sound controled
+ID|Programs|Type|49|R1|Begin~0~End~7~Txt~No action|R2|Begin~8~End~131~Txt~Auto mode|R3|Begin~132~End~255~Txt~Sound controled
 ID|Maintenance|Type|0|R1|Begin~0~End~249~Txt~No function|R2|Begin~250~End~253~Txt~Reset|R3|Begin~254~End~255~Txt~No function
 [END_CHAN_DEF]
 [MODES]
