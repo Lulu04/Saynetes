@@ -52,6 +52,8 @@ var txt: string;
   xx, yy: integer;
   uni: TDMXUniverse;
 begin
+  if Index >= UniverseManager.Count then exit;
+
   uni := UniverseManager.Universes[Index];
 
   with LB.Canvas do

@@ -89,10 +89,10 @@ begin
           UniverseManager.Universes[i].Name, SYes, SNo, mtWarning) <> mrOk then exit;
 
   FormMain.FrameViewProjector1.Sel_None;
+  FrameViewUniverseList1.RemoveSelected;
   UniverseManager.Delete(i);
   FormMain.FrameViewProjector1.FillComboBoxUniverseToShow;
   FormMain.FrameViewProjector1.ExitAddMode;
-  FrameViewUniverseList1.RemoveSelected;
   Project.SetModified;
   UpdateWidgets;
 end;
