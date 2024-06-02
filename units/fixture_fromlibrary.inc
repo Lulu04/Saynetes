@@ -149,6 +149,8 @@ end;
     function HaveSwitchDescriptor: boolean;
     // checks the integrity of each channel ranges
     function HaveRangesError: boolean;
+
+    function IsAlias: boolean;
   end;
   TFixLibAvailableChannels = array of TFixLibAvailableChannel;
   PFixLibAvailableChannels = ^TFixLibAvailableChannels;
@@ -835,6 +837,7 @@ begin
   NameID := SNotInitialized;
   DefaultValue := 0;
   ChanType := ctConfig;
+  Ranges := NIL;
   AliasOfNameID := '';
 end;
 
@@ -949,6 +952,7 @@ procedure TFixLibAvailableChannel.CopyTo(var aTarget: TFixLibAvailableChannel);
 var i: integer;
 begin
   aTarget.NameID := NameID;
+  aTarget.AliasOfNameID := AliasOfNameID;
   aTarget.DefaultValue := DefaultValue;
   aTarget.ChanType := ChanType;
   SetLength(aTarget.Ranges, Length(Ranges));
@@ -978,6 +982,11 @@ begin
   end;
   if current <> 256 then exit(True);
   Result := False;
+end;
+
+function TFixLibAvailableChannel.IsAlias: boolean;
+begin
+  Result := Length(AliasOfNameID) > 0;
 end;
 
 { TFixLibPhysical }

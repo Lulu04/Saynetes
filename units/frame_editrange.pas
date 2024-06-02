@@ -5,7 +5,7 @@ unit frame_editrange;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls,
+  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, LCLType,
   frame_view_switcheritem, u_list_dmxuniverse, System.UITypes;
 
 type
@@ -44,6 +44,7 @@ type
   public
     FrameSwitcher: TFrameViewSwitcherItems;
     constructor Create(TheOwner: TComponent); override;
+    procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure InitRange(p: PFixLibSingleRange);
 
@@ -188,6 +189,11 @@ begin
   FrameSwitcher.AnchorSide[akRight].Control := Panel1;
   FrameSwitcher.AnchorSide[akRight].Side := asrRight;
 
+end;
+
+procedure TFrameEditRange.EraseBackground(DC: HDC);
+begin
+  //
 end;
 
 procedure TFrameEditRange.InitRange(p: PFixLibSingleRange);

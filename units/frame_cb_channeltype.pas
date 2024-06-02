@@ -5,7 +5,7 @@ unit frame_cb_channeltype;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, StdCtrls,
+  Classes, SysUtils, Forms, Controls, StdCtrls, LCLType,
   u_common, Types;
 
 type
@@ -26,6 +26,7 @@ type
     procedure SplitItemData(aIndex: integer; out aChanType: TChannelType; out aReadable, aExtra: string);
   public
     constructor Create(TheOwner: TComponent); override;
+    procedure EraseBackground({%H-}DC: HDC); override;
 
     procedure FillForPresetChannel;
     procedure FillWithMinimalChannelTypes;
@@ -39,7 +40,7 @@ type
 
 implementation
 
-uses u_datamodule, GraphType, LCLType, Graphics;
+uses u_datamodule, GraphType, Graphics;
 
 {$R *.lfm}
 
@@ -124,6 +125,11 @@ constructor TFrameCBChannelType.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   CB.ItemHeight := DataModule1.ILChannelType.Height+ScaleDesignToForm(3);
+end;
+
+procedure TFrameCBChannelType.EraseBackground(DC: HDC);
+begin
+  //
 end;
 
 procedure TFrameCBChannelType.FillForPresetChannel;

@@ -71,9 +71,9 @@ object FormDefineNewChannel: TFormDefineNewChannel
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 8
+      Left = 7
       Height = 20
-      Top = 88
+      Top = 128
       Width = 88
       Caption = 'Default value'
       Font.Color = 15395562
@@ -82,10 +82,16 @@ object FormDefineNewChannel: TFormDefineNewChannel
       ParentFont = False
     end
     object SE1: TSpinEdit
-      Left = 8
+      AnchorSideLeft.Control = Label4
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = Label4
+      AnchorSideBottom.Side = asrBottom
+      Left = 100
       Height = 23
-      Top = 112
+      Top = 125
       Width = 79
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Left = 5
       MaxValue = 255
       TabOrder = 1
     end
@@ -97,7 +103,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 213
+      Top = 226
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -128,7 +134,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 880
       Height = 26
-      Top = 279
+      Top = 292
       Width = 100
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -213,14 +219,14 @@ object FormDefineNewChannel: TFormDefineNewChannel
       end
     end
     object Panel2: TPanel
-      AnchorSideLeft.Control = SE1
+      AnchorSideLeft.Control = Label1
       AnchorSideTop.Control = BRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = SB
       AnchorSideRight.Side = asrBottom
       Left = 8
       Height = 26
-      Top = 167
+      Top = 180
       Width = 842
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 2
@@ -453,8 +459,8 @@ object FormDefineNewChannel: TFormDefineNewChannel
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 293
-      Top = 193
+      Height = 280
+      Top = 206
       Width = 862
       HorzScrollBar.Page = 1
       VertScrollBar.Increment = 20
@@ -467,15 +473,14 @@ object FormDefineNewChannel: TFormDefineNewChannel
       TabOrder = 6
     end
     object BImportRanges: TSpeedButton
-      AnchorSideTop.Control = SE1
-      AnchorSideTop.Side = asrBottom
+      AnchorSideTop.Control = BRangesGenerator
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Panel2
       Cursor = crHandPoint
       Left = 625
       Height = 20
-      Top = 135
+      Top = 158
       Width = 225
       Anchors = [akTop, akRight]
       AutoSize = True
@@ -498,7 +503,7 @@ object FormDefineNewChannel: TFormDefineNewChannel
       Cursor = crHandPoint
       Left = 8
       Height = 20
-      Top = 145
+      Top = 158
       Width = 119
       AutoSize = True
       BorderSpacing.Top = 10
@@ -510,6 +515,100 @@ object FormDefineNewChannel: TFormDefineNewChannel
       ImageIndex = 0
       Transparent = False
       OnClick = BRangesGeneratorClick
+      ParentFont = False
+    end
+    object BSetAliasOf: TSpeedButton
+      AnchorSideLeft.Control = BRangesGenerator
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BRangesGenerator
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 157
+      Height = 20
+      Hint = 'Sets this channel as an alias of another channel'#13#10'(different name but same type, ranges and switchers)'
+      Top = 158
+      Width = 67
+      AutoSize = True
+      BorderSpacing.Left = 30
+      Caption = 'sAliasOf'
+      Color = 16433669
+      Flat = True
+      Font.Color = 15395562
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      Transparent = False
+      OnClick = BSetAliasOfClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object Label12: TLabel
+      AnchorSideLeft.Control = Label1
+      Left = 8
+      Height = 20
+      Top = 96
+      Width = 55
+      Caption = 'sAliasOf'
+      Font.Color = 8454143
+      Font.Height = 20
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object Label13: TLabel
+      AnchorSideLeft.Control = Label12
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label12
+      Left = 68
+      Height = 20
+      Top = 96
+      Width = 37
+      BorderSpacing.Left = 5
+      Caption = 'Label'
+      Font.Color = clYellow
+      Font.Height = 20
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object BRemoveAlias: TSpeedButton
+      AnchorSideLeft.Control = Label13
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label13
+      AnchorSideTop.Side = asrCenter
+      Cursor = crHandPoint
+      Left = 115
+      Height = 20
+      Hint = 'Remove the alias'
+      Top = 96
+      Width = 20
+      AutoSize = True
+      BorderSpacing.Left = 10
+      Color = 16433669
+      Flat = True
+      Font.Color = 15395562
+      Images = DataModule1.ImageList1
+      ImageIndex = 2
+      Visible = False
+      OnClick = BRemoveAliasClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object Label14: TLabel
+      AnchorSideLeft.Control = Label13
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label13
+      Left = 105
+      Height = 1
+      Top = 96
+      Width = 1
+      Font.Color = 15395562
+      Font.Height = 20
+      ParentColor = False
       ParentFont = False
     end
   end

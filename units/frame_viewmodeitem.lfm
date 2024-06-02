@@ -39,6 +39,8 @@ object FrameViewModeItem: TFrameViewModeItem
       Font.Height = 20
       ParentColor = False
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       OnMouseEnter = Panel1MouseEnter
       OnMouseLeave = Panel1MouseLeave
     end
@@ -87,7 +89,7 @@ object FrameViewModeItem: TFrameViewModeItem
     end
     object BEditSubChannel: TSpeedButton
       Cursor = crHandPoint
-      Left = 200
+      Left = 288
       Height = 24
       Top = 0
       Width = 24
@@ -98,6 +100,24 @@ object FrameViewModeItem: TFrameViewModeItem
       OnMouseLeave = BEditSubChannelMouseLeave
       ShowHint = True
       ParentShowHint = False
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = Image2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = Label5
+      AnchorSideBottom.Side = asrBottom
+      Left = 124
+      Height = 15
+      Top = 5
+      Width = 28
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Left = 2
+      Caption = 'Label'
+      Font.Color = clYellow
+      ParentColor = False
+      ParentFont = False
+      OnMouseEnter = Panel1MouseEnter
+      OnMouseLeave = Panel1MouseLeave
     end
   end
 end

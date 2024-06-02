@@ -58,8 +58,8 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
       Left = 8
       Height = 20
       Top = 8
-      Width = 170
-      Caption = 'sAddRepetitiveChannels'
+      Width = 119
+      Caption = 'sRepeatChannels'
       Font.Color = 15395562
       Font.Height = 20
       Font.Style = [fsBold]

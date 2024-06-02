@@ -1,6 +1,6 @@
 {"version":1,"strings":[
 {"hash":30811,"name":"tformeditrepetitivechannel.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
-{"hash":123771571,"name":"tformeditrepetitivechannel.label1.caption","sourcebytes":[115,65,100,100,82,101,112,101,116,105,116,105,118,101,67,104,97,110,110,101,108,115],"value":"sAddRepetitiveChannels"},
+{"hash":36748323,"name":"tformeditrepetitivechannel.label1.caption","sourcebytes":[115,82,101,112,101,97,116,67,104,97,110,110,101,108,115],"value":"sRepeatChannels"},
 {"hash":125662840,"name":"tformeditrepetitivechannel.label2.caption","sourcebytes":[85,115,101,32,112,114,101,102,105,120],"value":"Use prefix"},
 {"hash":126668727,"name":"tformeditrepetitivechannel.label3.caption","sourcebytes":[112,114,101,118,105,101,119],"value":"preview"},
 {"hash":128845432,"name":"tformeditrepetitivechannel.label4.caption","sourcebytes":[85,115,101,32,115,117,102,102,105,120],"value":"Use suffix"},

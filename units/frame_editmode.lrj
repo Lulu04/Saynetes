@@ -12,5 +12,5 @@
 {"hash":70088068,"name":"tframeeditmode.label6.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
 {"hash":70088068,"name":"tframeeditmode.label7.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
 {"hash":133912476,"name":"tframeeditmode.baddswitchingchannel.caption","sourcebytes":[65,100,100,32,118,105,114,116,117,97,108,32,99,104,97,110,110,101,108],"value":"Add virtual channel"},
-{"hash":123771571,"name":"tframeeditmode.baddrepetitivechannel.caption","sourcebytes":[115,65,100,100,82,101,112,101,116,105,116,105,118,101,67,104,97,110,110,101,108,115],"value":"sAddRepetitiveChannels"}
+{"hash":36748323,"name":"tframeeditmode.baddrepetitivechannel.caption","sourcebytes":[115,82,101,112,101,97,116,67,104,97,110,110,101,108,115],"value":"sRepeatChannels"}
 ]}

@@ -32,4 +32,16 @@ object FrameViewDMXFixtureChannels: TFrameViewDMXFixtureChannels
     OnSelectionChanged = TVSelectionChanged
     Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
   end
+  object PopupMenu1: TPopupMenu
+    Left = 148
+    Top = 59
+    object MIRename: TMenuItem
+      Caption = 'sRename'
+      OnClick = MIRenameClick
+    end
+    object MISetAsAliasOf: TMenuItem
+      Caption = 'sAliasOf'
+      OnClick = MISetAsAliasOfClick
+    end
+  end
 end
