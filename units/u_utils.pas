@@ -23,7 +23,7 @@ function ConstructTSequencerInfoList(const aCmds: TCmdList;
 
 function FormatFloatWithDot(const aFmt: string; aValue: single): string;
 // convert the string to single. The string can have '.' or ','
-function StringToSingle(aStr: string): single;
+function StringToSingle(const aStr: string): single;
 
 function CmdWait(aDuration: single): TSingleCmd;
 function CmdLoop: TSingleCmd;
@@ -563,7 +563,7 @@ begin
     Result[i] := '.';
 end;
 
-function StringToSingle(aStr: string): single;
+function StringToSingle(const aStr: string): single;
 var i: integer;
   fs: TFormatSettings;
 begin
