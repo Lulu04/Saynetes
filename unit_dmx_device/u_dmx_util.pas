@@ -387,6 +387,7 @@ begin
     ctGOBOSHAKE: Result:=Result+'CursorGoboShake.svg';
     ctFROST: Result:=Result+'CursorFrost.svg';
     ctSOUNDCONTROLED: Result:=Result+'CursorSoundControled.svg';
+    ctEFFECT: Result:=Result+'CursorEffect.svg';
     else Raise exception.Create('forgot to implement!');
   end;//case
 end;
