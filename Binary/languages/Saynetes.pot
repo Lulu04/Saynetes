@@ -3558,6 +3558,10 @@ msgstr ""
 msgid "The fixture was created successfully !"
 msgstr ""
 
+#: u_resource_string.stheswitcherinrange
+msgid "the switcher in range"
+msgstr ""
+
 #: u_resource_string.sthisfilenamalreadyexists
 msgctxt "u_resource_string.sthisfilenamalreadyexists"
 msgid "this filename already exists !"
@@ -3628,6 +3632,14 @@ msgstr ""
 #: u_resource_string.supdate
 msgctxt "u_resource_string.supdate"
 msgid "Update"
+msgstr ""
+
+#: u_resource_string.susebadsubchannelname
+msgid "use bad sub-channel name"
+msgstr ""
+
+#: u_resource_string.susebadvirtualchannelname
+msgid "use bad virtual channel name"
 msgstr ""
 
 #: u_resource_string.svalue

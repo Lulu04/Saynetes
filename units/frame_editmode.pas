@@ -546,6 +546,7 @@ var A, B: TStringArray;
   i, j, k, m: integer;
   virtualNameIsUsed: array of boolean;
   p, pp: PFixLibAvailableChannel;
+  flagFound: boolean;
 begin
   FErrorMessage := '';
 
@@ -561,27 +562,64 @@ begin
     exit(True);
   end;
 
+  B := GetVirtualChannelUsed;
+
   // check the integrity of each used channels
   for i:=0 to High(A) do begin
     p := FExistingChannels^.GetChannelsByName(A[i]);
     if p = NIL then exit(True);
     if not p^.IsAlias then begin
+      // check ranges
       if p^.HaveRangesError then begin
         FErrorMessage := SMode+' "'+ModeName+'": "'+SChannel+'" '+p^.NameID+' '+SHaveRangeError;
         exit(True);
       end;
+      // check if virtual name in switchers refers to an existing virtual channel
+      for j:=0 to High(p^.Ranges) do
+        for k:=0 to High(p^.Ranges[j].SwitchDescriptors) do begin
+          flagFound := False;
+          for m:=0 to High(B) do
+            if p^.Ranges[j].SwitchDescriptors[k].SwitchVirtualChannel = B[m] then begin
+              flagFound := True;
+              break;
+            end;
+          if not flagFound then begin
+            FErrorMessage := SMode+' "'+ModeName+'", '+LowerCase(SChannel)+' "'+p^.NameID+'", '+
+                   STheSwitcherInRange+' '+p^.Ranges[j].BeginValue.ToString+'..'+p^.Ranges[j].EndValue.ToString+
+                   ' '+SUseBadVirtualChannelName+' "'+p^.Ranges[j].SwitchDescriptors[k].SwitchVirtualChannel+'"';
+            exit(True);
+          end;
+        end;
+      // check if sub-channels in switchers refers to existing channel
+      for j:=0 to High(p^.Ranges) do
+        for k:=0 to High(p^.Ranges[j].SwitchDescriptors) do begin
+          flagFound := False;
+          for m:=0 to High(A) do
+            if FExistingChannels^.GetChannelsByName(p^.Ranges[j].SwitchDescriptors[k].SwitchToSubChannel) <> NIL then begin
+              flagFound := True;
+              break;
+            end;
+          if not flagFound then begin
+            FErrorMessage := SMode+' "'+ModeName+'", '+LowerCase(SChannel)+' "'+p^.NameID+'", '+
+                   STheSwitcherInRange+' '+p^.Ranges[j].BeginValue.ToString+'..'+p^.Ranges[j].EndValue.ToString+
+                   ' '+SUseBadSubChannelName+' "'+p^.Ranges[j].SwitchDescriptors[k].SwitchToSubChannel+'"';
+            exit(True);
+          end;
+        end;
+
     end else begin
+      // is an alias of another
       pp := FExistingChannels^.GetChannelsByName(p^.AliasOfNameID);
       if pp = NIL then begin
-        FErrorMessage := SMode+' "'+ModeName+'": "'+SChannel+'" '+p^.NameID+
-                         ' '+SIsAnAliasOf+' "'+p^.AliasOfNameID+'" '+ SThatDoesntExists;
+        FErrorMessage := SMode+' "'+ModeName+'", '+LowerCase(SChannel)+' "'+p^.NameID+
+                         '" '+SIsAnAliasOf+' "'+p^.AliasOfNameID+'" '+ SThatDoesntExists;
         exit(True);
       end;
     end;
   end;
 
   // checks if the virtual channels defined in this mode are used by at least one another channel
-  B := GetVirtualChannelUsed;
+//  B := GetVirtualChannelUsed;
   if Length(B) > 0 then begin
     virtualNameIsUsed := NIL;
     SetLength(virtualNameIsUsed, Length(B));
@@ -597,7 +635,7 @@ begin
     end;
     for i:=0 to High(virtualNameIsUsed) do
       if not virtualNameIsUsed[i] then begin
-        FErrorMessage := SMode+' "'+ModeName+'": '+
+        FErrorMessage := SMode+' "'+ModeName+'", '+
                         SVirtualChannel+' "'+FVirtualChannelInMode[i].VirtualName+'" '+SDefinedButNotUsed;
         exit(True);
       end;
