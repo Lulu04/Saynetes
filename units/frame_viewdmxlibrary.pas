@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, ComCtrls, LCLType, Menus,
-  LCLTranslator, ExtCtrls, u_list_dmxuniverse;
+  LCLTranslator, ExtCtrls,
+  u_list_dmxuniverse, u_common;
 
 type
 
@@ -71,6 +72,9 @@ type
     function SelectedIsMode: boolean;
 
     procedure SetSelected(const aNodeText: string);
+    // search the fixture in the treeview, select it and make it visible
+    procedure SelectFixture(const aFixtureLocation: TFixtureLibraryLocation);
+
 
     // use this property only if function SelectedIsMode return True
     property SelectedFixtureLocation: TFixtureLibraryLocation read GetSelectedFixtureLocation;
@@ -82,7 +86,7 @@ type
 
 implementation
 
-uses u_resource_string, u_userdialogs, u_common, u_logfile, u_apputils,
+uses u_resource_string, u_userdialogs, u_logfile, u_apputils,
   u_dmx_util, utilitaire_fichier, LazFileUtils, Dialogs;
 
 {$R *.lfm}
@@ -533,6 +537,32 @@ end;
 procedure TFrameViewDMXLibrary.SetSelected(const aNodeText: string);
 begin
   TV.Selected := TV.Items.FindNodeWithText(aNodeText);
+  TV.MakeSelectionVisible;
+end;
+
+procedure TFrameViewDMXLibrary.SelectFixture(const aFixtureLocation: TFixtureLibraryLocation);
+var n: TTreeNode;
+begin
+  // search the node with folder
+  n := TV.Items.FindNodeWithTextPath(aFixtureLocation.SubFolder+'/'+
+                                     ChangeFileExt(aFixtureLocation.Filename, '')+'/'+
+                                     aFixtureLocation.Mode);
+  n := TV.Items.FindNodeWithText(aFixtureLocation.SubFolder);
+  if n = NIL then exit;
+  n.Expand(False);
+  n.MakeVisible;
+
+  n := n.FindNode(ChangeFileExt(aFixtureLocation.Filename, ''));
+  if n = NIL then exit;
+  n.Expand(False);
+  n.MakeVisible;
+
+  n := n.FindNode(aFixtureLocation.Mode);
+  if n = NIL then exit;
+  n.Expand(False);
+  n.MakeVisible;
+
+  TV.Selected := n;
   TV.MakeSelectionVisible;
 end;
 
