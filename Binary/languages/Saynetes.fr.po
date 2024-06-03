@@ -1605,6 +1605,10 @@ msgstr "Supprimer cet intervalle"
 msgid "Modify this time interval..."
 msgstr "Modifier cet intervalle de temps..."
 
+#: tframesequencer.mi_sbrearrange.caption
+msgid "Rearrange all"
+msgstr "Réarranger tous"
+
 #: tframesequencer.mi_sbselecttimeinterval.caption
 msgid "Select this time interval"
 msgstr "Sélectionner cet intervalle"
@@ -1619,11 +1623,6 @@ msgctxt "tframesequencer.mi_sbzoomonselection.caption"
 msgid "Zoom on selection"
 msgstr "Zoom sur la sélection"
 
-#: tframesequencer.mi_stepgroup.caption
-msgctxt "tframesequencer.mi_stepgroup.caption"
-msgid "Group"
-msgstr "Grouper"
-
 #: tframesequencer.mi_stepmodifylength.caption
 msgid "Change duration..."
 msgstr "Modifier la durée..."
@@ -1633,8 +1632,8 @@ msgid "Align..."
 msgstr "Alignement..."
 
 #: tframesequencer.mi_steprearrange.caption
-msgid "Rearrange"
-msgstr "Ré-arranger"
+msgid "Rearrange selection"
+msgstr "Réarranger la sélection"
 
 #: tframesequencer.mi_stepselectall.caption
 msgid "Select all"

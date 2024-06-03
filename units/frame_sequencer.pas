@@ -51,6 +51,7 @@ type
   { TFrameSequencer }
 
   TFrameSequencer = class(TFrameBGLSequencer)
+    MI_SBRearrange: TMenuItem;
     MISBAddOtherAction: TMenuItem;
     MenuItem6: TMenuItem;
     MISBAddDMXAction: TMenuItem;
@@ -80,11 +81,13 @@ type
     MI_StepUngroup: TMenuItem;
     PopLabel: TPopupMenu;
     PopSB: TPopupMenu;
+    Separator1: TMenuItem;
     procedure MISBAddOtherActionClick(Sender: TObject);
     procedure MISBAddDMXActionClick(Sender: TObject);
     procedure MI_SBAddAudioActionClick(Sender: TObject);
     procedure MI_SBModifyTimeClick(Sender: TObject);
     procedure MI_SBPasteClick(Sender: TObject);
+    procedure MI_SBRearrangeClick(Sender: TObject);
     procedure MI_SBSelectTimeIntervalClick(Sender: TObject);
     procedure MI_SBZoomAllClick(Sender: TObject);
     procedure MI_SBZoomOnSelectionClick(Sender: TObject);
@@ -247,7 +250,7 @@ begin
   s := TSequenceStep.Create;
   s.ParentSeq := Self;
   s.TimePos := FClickedTimePos;
-  s.Top := FClickedY;
+  s.Top := (FClickedY div StepFontHeight) * StepFontHeight;
   s.Caption := FormAudioAction.ShortReadableString;
   s.CmdList := FormAudioAction.Cmds;
   s.Duration := FormAudioAction.CmdDuration;
@@ -351,6 +354,11 @@ begin
  ClipBoard_PasteTo( FClickedTimePos );
 end;
 
+procedure TFrameSequencer.MI_SBRearrangeClick(Sender: TObject);
+begin
+  RecomputeVerticalStepsPosition
+end;
+
 procedure TFrameSequencer.MI_SBSelectTimeIntervalClick(Sender: TObject);
 var before, after: TCustomSequencerStep;
 begin
@@ -435,7 +443,7 @@ end;
 
 procedure TFrameSequencer.MI_StepRearrangeClick(Sender: TObject);
 begin
- Sel_RecomputeVerticalStepsPosition;
+  Sel_RecomputeVerticalStepsPosition;
 end;
 
 procedure TFrameSequencer.MI_StepRenameClick(Sender: TObject);
@@ -753,6 +761,7 @@ begin
    RawAdd( step, FALSE );
  end;
  NeedStepsWidthUpdate;
+ NeedStepsTopUpdate;
  View_All;
 end;
 
@@ -854,6 +863,7 @@ end;
 
 procedure TFrameSequencer.TranslateStrings;
 begin
+  MI_StepGroup.Caption := SGroup;
   MI_StepRename.Caption := SRename;
   MI_StepDelete.Caption := SDelete;
   MI_StepCut.Caption := SCut;
