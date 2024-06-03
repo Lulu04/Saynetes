@@ -510,7 +510,7 @@ begin
   SetLength(libFix.AvailableChannels, Length(A));
   for i:=0 to High(A) do begin
     p := FExistingChannels.GetChannelsByName(A[i]);
-    if p = NIL then raise exception.create('error in algorithm');
+    if p = NIL then raise exception.create('error in algorithm: channel "'+A[i]+'" not found');
     p^.CopyTo(libFix.AvailableChannels[i]);
   end;
 
