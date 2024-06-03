@@ -821,20 +821,23 @@ var fix: TDMXFixture;
 begin
   fix := FixtureUnderMouse(X, Y);
 
-  if (FState = msAdding) and (Button = mbLeft) then
-  begin
+  if (FState = msAdding) and (Button = mbLeft) then begin
     DoAddFixture(X, Y);
     exit;
   end;
-  if (FState=msAdding) and (Button=mbRight) then begin
+  if (FState = msAdding) and (Button = mbRight) then begin
     ExitAddMode;
     Redraw;
   end;
 
-  if (FState = msReleased) and (fix = NIL) and (Button = mbLeft) then
-  begin
+  if (FState = msReleased) and (fix = NIL) and (Button = mbLeft) then begin
     Sel_None;
     Redraw;
+  end;
+
+  if (SelectedCount = 1) and (Button = mbLeft) and ModePrepaDMX then begin
+    // retrieve the fixture in the library
+    FormMain.FrameMainAddFixture1.FrameViewDMXLibrary1.SelectFixture(fix.FixLibLocation);
   end;
 
   FState := msReleased;

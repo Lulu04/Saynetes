@@ -1088,10 +1088,13 @@ object FormFixtureWizard: TFormFixtureWizard
         Width = 130
       end
       object Label1: TLabel
-        Left = 203
+        AnchorSideTop.Control = BSave
+        AnchorSideTop.Side = asrBottom
+        Left = 208
         Height = 15
-        Top = 360
+        Top = 408
         Width = 117
+        BorderSpacing.Top = 20
         Caption = 'Manufacturer folder:'
         Font.Color = 11842740
         Font.Style = [fsBold]
@@ -1099,10 +1102,16 @@ object FormFixtureWizard: TFormFixtureWizard
         ParentFont = False
       end
       object Label2: TLabel
-        Left = 225
+        AnchorSideTop.Control = Label1
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Label1
+        AnchorSideRight.Side = asrBottom
+        Left = 230
         Height = 15
-        Top = 384
+        Top = 433
         Width = 95
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 10
         Caption = 'Output filename:'
         Font.Color = 11842740
         Font.Style = [fsBold]
@@ -1112,10 +1121,12 @@ object FormFixtureWizard: TFormFixtureWizard
       object BSave: TSpeedButton
         AnchorSideLeft.Control = PageFinish
         AnchorSideLeft.Side = asrCenter
+        AnchorSideTop.Control = PageFinish
+        AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
         Left = 416
         Height = 37
-        Top = 288
+        Top = 351
         Width = 172
         Caption = 'SAVE FIXTURE'
         Color = 16433669
@@ -1136,7 +1147,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Control = BSave
         Left = 405
         Height = 15
-        Top = 271
+        Top = 334
         Width = 195
         Anchors = [akLeft, akBottom]
         BorderSpacing.Bottom = 2
@@ -1224,9 +1235,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label1
         AnchorSideTop.Side = asrCenter
-        Left = 330
+        Left = 335
         Height = 15
-        Top = 360
+        Top = 408
         Width = 29
         BorderSpacing.Left = 10
         Caption = 'Label'
@@ -1240,9 +1251,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrCenter
-        Left = 330
+        Left = 335
         Height = 15
-        Top = 384
+        Top = 433
         Width = 29
         BorderSpacing.Left = 10
         Caption = 'Label'
@@ -1255,9 +1266,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Control = Label20
         AnchorSideTop.Control = Label20
         AnchorSideTop.Side = asrBottom
-        Left = 330
+        Left = 335
         Height = 28
-        Top = 399
+        Top = 448
         Width = 278
         BevelOuter = bvNone
         ClientHeight = 28

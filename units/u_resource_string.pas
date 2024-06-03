@@ -93,6 +93,9 @@ resourcestring
 
   SAnErrorOccurredWhileRemovingTheFileFromDisk='An error occurred while removing the file from disk';
 
+  SUseBadVirtualChannelName='use bad virtual channel name';
+  SUseBadSubChannelName='use bad sub-channel name';
+  STheSwitcherInRange='the switcher in range';
   SHaveRangeError='have dmx range error';
   SThisModeIsEmpty='This mode is empty or have only virtual channel';
   SErrorOnName='Error on name';

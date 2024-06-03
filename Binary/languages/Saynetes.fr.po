@@ -3662,6 +3662,10 @@ msgstr "Le fichier est corrompu..."
 msgid "The fixture was created successfully !"
 msgstr "L'appareil a été créé avec succès !"
 
+#: u_resource_string.stheswitcherinrange
+msgid "the switcher in range"
+msgstr "le commutateur dans la plage"
+
 #: u_resource_string.sthisfilenamalreadyexists
 msgctxt "u_resource_string.sthisfilenamalreadyexists"
 msgid "this filename already exists !"
@@ -3733,6 +3737,14 @@ msgstr "SEQUENCE INEXISTANTE !!"
 msgctxt "u_resource_string.supdate"
 msgid "Update"
 msgstr "Mettre à jour"
+
+#: u_resource_string.susebadsubchannelname
+msgid "use bad sub-channel name"
+msgstr "utilise un mauvais nom de sous-canal"
+
+#: u_resource_string.susebadvirtualchannelname
+msgid "use bad virtual channel name"
+msgstr "utilise un mauvais nom de canal virtuel"
 
 #: u_resource_string.svalue
 msgid "Value"
@@ -3815,4 +3827,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-
