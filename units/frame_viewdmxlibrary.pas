@@ -10,8 +10,9 @@ uses
 
 type
 
-  TMoveItemEvent=procedure(Sender: TObject; aNode: TTreeNode; const aTargetPath: string; var Accept: boolean) of object;
-  TSelectionChangeEvent=procedure(Sender: TObject; const aFixLocation: TFixtureLibraryLocation) of object;
+  TMoveItemEvent = procedure(Sender: TObject; aNode: TTreeNode; const aTargetPath: string; var Accept: boolean) of object;
+  TSelectionChangeEvent = procedure(Sender: TObject; const aFixLocation: TFixtureLibraryLocation) of object;
+  TStartDragFixtureEvent = TSelectionChangeEvent;
 
   { TFrameViewDMXLibrary }
 
@@ -42,7 +43,7 @@ type
   private
     FOnMoveItem: TMoveItemEvent;
     FOnSelectionChange: TSelectionChangeEvent;
-    FOnStartDragFixture: TNotifyEvent;
+    FOnStartDragFixture: TStartDragFixtureEvent;
     FUserChangeEnabled: boolean;
     function GetSelectedFixtureLocation: TFixtureLibraryLocation;
     procedure SetUserChangeEnabled(AValue: boolean);
@@ -76,7 +77,7 @@ type
     property UserChangeEnabled: boolean read FUserChangeEnabled write SetUserChangeEnabled;
     property OnSelectionChange: TSelectionChangeEvent read FOnSelectionChange write FOnSelectionChange;
     property OnMoveItem: TMoveItemEvent read FOnMoveItem write FOnMoveItem;
-    property OnStartDragFixture: TNotifyEvent read FOnStartDragFixture write FOnStartDragFixture;
+    property OnStartDragFixture: TStartDragFixtureEvent read FOnStartDragFixture write FOnStartDragFixture;
   end;
 
 implementation
@@ -317,9 +318,9 @@ end;
 
 procedure TFrameViewDMXLibrary.TVStartDrag(Sender: TObject; var DragObject: TDragObject);
 begin
-  if not ItsAFile(TV.Selected) then exit;
+  if not ItsAMode(TV.Selected) then exit;
   if FOnStartDragFixture <> NIL then
-    FOnStartDragFixture(Self);
+    FOnStartDragFixture(Self, GetSelectedFixtureLocation);
 end;
 
 function TFrameViewDMXLibrary.SortProc(Node1, Node2: TTreeNode): integer;
