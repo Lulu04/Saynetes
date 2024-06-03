@@ -106,6 +106,7 @@ TManufacturersHelper = type helper for TManufacturers
   procedure Load;
   procedure FillComboBoxWithName(aCB: TComboBox);
   function IndexOfName(const aManufacturerName: string): integer;
+  function IndexOfFolder(const aManufacturerFolder: string): integer;
 end;
 
 
@@ -430,6 +431,14 @@ var i: integer;
 begin
   for i:=0 to High(Self) do
     if Self[i].Name = aManufacturerName then exit(i);
+  Result := -1;
+end;
+
+function TManufacturersHelper.IndexOfFolder(const aManufacturerFolder: string): integer;
+var i: integer;
+begin
+  for i:=0 to High(Self) do
+    if Self[i].Folder = aManufacturerFolder then exit(i);
   Result := -1;
 end;
 
