@@ -286,7 +286,7 @@ end;
 
 function TFixtureToAdd.HaveReferenceToFixture: boolean;
 begin
-  Result := FixtureLocation.IsFilled and (TargetUniverse <> NIL);
+  Result := FixtureLocation.HaveFixtureAndModeOk and (TargetUniverse <> NIL);
 end;
 
 { TFrameViewProjector }
@@ -1905,8 +1905,7 @@ begin
   if (FGUIMode in [guiPrepaDMX, guiMainDMX]) and
      FToogleSpeedButtonManager.Checked[BShowInfo] then
   begin
-    if SelectedCount = 1 then
-    begin
+    if SelectedCount = 1 then begin
       FrameFixtureInfo1.UpdateView;
       Panel9.Height := FrameFixtureInfo1.ViewHeight+2;
       Panel9.Visible := TRUE;
@@ -1932,6 +1931,7 @@ begin
     guiPrepaDMX:
       begin
        BAddDMX.Enabled := FALSE;
+       HidePanelFixtureInfo;
       end;
 
     guiEditSequence:

@@ -46,10 +46,9 @@ type
     function SelectedUniverseIndex: integer;
   private
     FDMXLibraryFilled: boolean;
-    FSelectedLocation: TFixtureLibraryLocation;
     FrameViewDMXFixtureChannels1: TFrameViewDMXFixtureChannels;
     procedure ProcessDMXLibrarySelectionChangeEvent(Sender: TObject; const aFixtureLocation: TFixtureLibraryLocation);
-    procedure ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject);
+    procedure ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject; const aFixtureLocation: TFixtureLibraryLocation);
     procedure UpdateWidgets;
   public
     FrameViewDMXLibrary1: TFrameViewDMXLibrary;
@@ -155,7 +154,6 @@ begin
 
   FrameViewDMXFixtureChannels1.ShowFixture(aFixtureLocation, True);
   if FrameViewDMXFixtureChannels1.Ready then begin
-    aFixtureLocation.CopyTo(FSelectedLocation);
 //    ShowFixtureImage(Image1, FrameViewDMXFixtureChannels1.FixtureType);
     uni := FrameViewUniverseList1.SelectedUniverse;
     if uni <> NIL then FormMain.FrameViewProjector1.FixtureFilenameToAdd(aFixtureLocation, uni)
@@ -163,19 +161,19 @@ begin
   end
   else begin
 //    Image1.Picture.Assign(NIL);
-    FSelectedLocation.InitDefault;
   end;
 end;
 
-procedure TFrameMainAddFixture.ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject);
+procedure TFrameMainAddFixture.ProcessDMXLibraryStartDragFixtureEvent(Sender: TObject;
+  const aFixtureLocation: TFixtureLibraryLocation);
 var uni: TDmxUniverse;
 begin
   uni := FrameViewUniverseList1.SelectedUniverse;
 
-  if (uni <> NIL) and FSelectedLocation.IsFilled then
-    FormMain.FrameViewProjector1.FixtureFilenameToAdd(FSelectedLocation, uni)
-  else
-    FormMain.FrameViewProjector1.ExitAddMode;
+  if (uni = NIL) or not aFixtureLocation.HaveFixtureAndModeOk then FormMain.FrameViewProjector1.ExitAddMode
+    else begin
+      FormMain.FrameViewProjector1.FixtureFilenameToAdd(aFixtureLocation, uni);
+    end;
 end;
 
 procedure TFrameMainAddFixture.UpdateWidgets;

@@ -13,8 +13,10 @@ TFixtureLibraryLocation = record
   // concat the subfolder and the filename
   function RelativePathInLibrary: string;
   function AbsolutPath: string;
-  // return True if AbsolutPath return an existing file and this file have the '.dmx' extension
-  function IsFilled: boolean;
+  // return True if the record locates an existing .dmx file
+  function HaveFixtureOk: boolean;
+  // return true if the record locates an existing .dmx file and an existing mode
+  function HaveFixtureAndModeOk: boolean;
 end;
 
 { TWebLink }
@@ -220,7 +222,8 @@ function IndexOfChannel(const aNameID: string; p: PFixLibAvailableChannels): int
 function TrySplitVirtual(const aFormattedVirtualName: string;
                          out aVirtualName: string;
                          out aSubChannels: TStringArray): boolean;
-
+// check if the mode exists in the specified fixture definition file without loading all the fixture data
+function ModeExistsInFixture(const aFixtureFile, aModeName: string): boolean;
 
 {$endif}
 {$ifdef SectionImplementation}
@@ -303,6 +306,36 @@ begin
   aSubChannels := A[1].Split([';']);
   if Length(aSubChannels) = 0 then exit(False);
   Result := True;
+end;
+
+function ModeExistsInFixture(const aFixtureFile, aModeName: string): boolean;
+var t: TStringlist;
+  i, k, kEnd: integer;
+  prop: TProperties;
+  s: string;
+begin
+  if not FileExists(aFixtureFile) then exit(False);
+
+  t := TStringlist.Create;
+  try
+    try
+      t.LoadFromFile(aFixtureFile);
+      k := t.IndexOf('[MODES]');
+      kEnd := t.IndexOf('[END_MODES]');
+      if (kEnd = -1) or (k = -1) then exit(False);
+      s := '';
+      repeat
+        inc(k);
+        prop.Split(t.Strings[k], '|');
+        if prop.StringValueOf('Name', s, '') and (s = aModeName) then exit(True);
+      until k = kEnd-1;
+      Result := False;
+    except
+      exit(False);
+    end;
+  finally
+    t.Free;
+  end;
 end;
 
 { TSubChannel }
@@ -479,11 +512,16 @@ begin
   Result := ConcatPaths([GetAppDMXLibraryFolder, RelativePathInLibrary]);
 end;
 
-function TFixtureLibraryLocation.IsFilled: boolean;
+function TFixtureLibraryLocation.HaveFixtureOk: boolean;
 var f: string;
 begin
   f := AbsolutPath;
   Result := FileExists(f) and (ExtractFileExt(f) = DMX_LIBRARY_FILE_EXTENSION);
+end;
+
+function TFixtureLibraryLocation.HaveFixtureAndModeOk: boolean;
+begin
+  Result := ModeExistsInFixture(AbsolutPath, Mode);
 end;
 
 { TLibraryFixture }
