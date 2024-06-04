@@ -958,14 +958,9 @@ msgstr "Ajouter existant"
 msgid "Select existing virtual channels"
 msgstr "Sélectionnez les canaux virtuels existants"
 
-#: tformsequenceedition.bkeep0visible.caption
-msgctxt "tformsequenceedition.bkeep0visible.caption"
-msgid "[<"
-msgstr "[<"
-
 #: tformsequenceedition.bkeep0visible.hint
-msgid "Keep the position 0 visible"
-msgstr "Garde la position 0 visible"
+msgid "Keep origin visible"
+msgstr "Garde l'origine visible"
 
 #: tformsequenceedition.bpreview.hint
 msgid "Start the sequence preview"
@@ -1048,6 +1043,10 @@ msgstr "Durée actuelle:"
 #: tform_changesteplength.label3.caption
 msgid "New duration:"
 msgstr "Nouvelle durée:"
+
+#: tform_modifytime.caption
+msgid "Modify time interval"
+msgstr "Modifier l'intervalle de temps"
 
 #: tform_modifytime.label1.caption
 msgid "New value:"
@@ -1592,26 +1591,23 @@ msgctxt "tframesequencer.misbaddotheraction.caption"
 msgid "OTHER action..."
 msgstr "action AUTRE..."
 
+#: tframesequencer.mitimedelete.caption
+msgid "Delete this time interval"
+msgstr "Supprimer cet intervalle de temps"
+
+#: tframesequencer.mitimemodify.caption
+msgctxt "tframesequencer.mitimemodify.caption"
+msgid "Modify this time interval..."
+msgstr "Modifier cet intervalle de temps..."
+
 #: tframesequencer.mi_sbaddaudioaction.caption
 msgctxt "tframesequencer.mi_sbaddaudioaction.caption"
 msgid "AUDIO action..."
 msgstr "action AUDIO..."
 
-#: tframesequencer.mi_sbdeletetime.caption
-msgid "Delete this interval"
-msgstr "Supprimer cet intervalle"
-
-#: tframesequencer.mi_sbmodifytime.caption
-msgid "Modify this time interval..."
-msgstr "Modifier cet intervalle de temps..."
-
 #: tframesequencer.mi_sbrearrange.caption
 msgid "Rearrange all"
-msgstr "Réarranger tous"
-
-#: tframesequencer.mi_sbselecttimeinterval.caption
-msgid "Select this time interval"
-msgstr "Sélectionner cet intervalle"
+msgstr "Réarranger tout"
 
 #: tframesequencer.mi_sbzoomall.caption
 msgctxt "tframesequencer.mi_sbzoomall.caption"
@@ -1623,13 +1619,15 @@ msgctxt "tframesequencer.mi_sbzoomonselection.caption"
 msgid "Zoom on selection"
 msgstr "Zoom sur la sélection"
 
+#: tframesequencer.mi_stepalignsteps.caption
+#, fuzzy
+msgctxt "tframesequencer.mi_stepalignsteps.caption"
+msgid "Align..."
+msgstr "Alignement..."
+
 #: tframesequencer.mi_stepmodifylength.caption
 msgid "Change duration..."
 msgstr "Modifier la durée..."
-
-#: tframesequencer.mi_stepmoveintime.caption
-msgid "Align..."
-msgstr "Alignement..."
 
 #: tframesequencer.mi_steprearrange.caption
 msgid "Rearrange selection"
@@ -2417,7 +2415,7 @@ msgstr "Continuer"
 #: u_resource_string.scopy
 msgctxt "u_resource_string.scopy"
 msgid "Copy"
-msgstr "Copie"
+msgstr "Copier"
 
 #: u_resource_string.scopyrgb
 msgctxt "u_resource_string.scopyrgb"
@@ -3826,3 +3824,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

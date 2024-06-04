@@ -713,6 +713,7 @@ begin
         index := -1;
         Self[i] := A.PackToCmd;
       end;
+      else index := -1;
     end;//case
 
     if index <> -1 then begin
@@ -831,7 +832,7 @@ end;
 
 function TCmdListHelper.IsSingleCmd: boolean;
 begin
- Result := Pos( CMD_SEPARATOR, Self )=0;
+ Result := Pos( CMD_SEPARATOR, Self ) = 0;
 end;
 
 function TCmdListHelper.IsTitle: boolean;

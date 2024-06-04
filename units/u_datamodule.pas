@@ -195,6 +195,9 @@ begin
   AddImageToImageList('Options.svg', ImageList1);   // 40
   AddImageToImageList('TrashCan.svg', ImageList1);
   AddImageToImageList('MagicWand.svg', ImageList1);
+  AddImageToImageList('KeepOriginVisible.svg', ImageList1);
+  AddImageToImageList('ModifyTime.svg', ImageList1);
+  AddImageToImageList('DeleteTime.svg', ImageList1);  // 45
   ImageList1.EndUpdate;
 end;
 

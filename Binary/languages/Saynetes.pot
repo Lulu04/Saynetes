@@ -898,13 +898,8 @@ msgstr ""
 msgid "Select existing virtual channels"
 msgstr ""
 
-#: tformsequenceedition.bkeep0visible.caption
-msgctxt "tformsequenceedition.bkeep0visible.caption"
-msgid "[<"
-msgstr ""
-
 #: tformsequenceedition.bkeep0visible.hint
-msgid "Keep the position 0 visible"
+msgid "Keep origin visible"
 msgstr ""
 
 #: tformsequenceedition.bpreview.hint
@@ -984,6 +979,10 @@ msgstr ""
 
 #: tform_changesteplength.label3.caption
 msgid "New duration:"
+msgstr ""
+
+#: tform_modifytime.caption
+msgid "Modify time interval"
 msgstr ""
 
 #: tform_modifytime.label1.caption
@@ -1519,24 +1518,21 @@ msgstr ""
 msgid "OTHER action..."
 msgstr ""
 
+#: tframesequencer.mitimedelete.caption
+msgid "Delete this time interval"
+msgstr ""
+
+#: tframesequencer.mitimemodify.caption
+msgctxt "tframesequencer.mitimemodify.caption"
+msgid "Modify this time interval..."
+msgstr ""
+
 #: tframesequencer.mi_sbaddaudioaction.caption
 msgid "AUDIO action..."
 msgstr ""
 
-#: tframesequencer.mi_sbdeletetime.caption
-msgid "Delete this interval"
-msgstr ""
-
-#: tframesequencer.mi_sbmodifytime.caption
-msgid "Modify this time interval..."
-msgstr ""
-
 #: tframesequencer.mi_sbrearrange.caption
 msgid "Rearrange all"
-msgstr ""
-
-#: tframesequencer.mi_sbselecttimeinterval.caption
-msgid "Select this time interval"
 msgstr ""
 
 #: tframesequencer.mi_sbzoomall.caption
@@ -1549,12 +1545,13 @@ msgctxt "tframesequencer.mi_sbzoomonselection.caption"
 msgid "Zoom on selection"
 msgstr ""
 
-#: tframesequencer.mi_stepmodifylength.caption
-msgid "Change duration..."
+#: tframesequencer.mi_stepalignsteps.caption
+msgctxt "tframesequencer.mi_stepalignsteps.caption"
+msgid "Align..."
 msgstr ""
 
-#: tframesequencer.mi_stepmoveintime.caption
-msgid "Align..."
+#: tframesequencer.mi_stepmodifylength.caption
+msgid "Change duration..."
 msgstr ""
 
 #: tframesequencer.mi_steprearrange.caption

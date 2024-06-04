@@ -29,6 +29,7 @@ type
     PopupMenu1: TPopupMenu;
     procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer;
       ARect: TRect; State: TOwnerDrawState);
+    procedure LBKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -809,14 +810,20 @@ begin
   end;//with
 end;
 
+procedure TFrameViewCmdList.LBKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  // avoid selection change when user use this keys
+  if Key in [VK_LEFT, VK_UP, VK_RIGHT, VK_DOWN] then Key := VK_UNKNOWN;
+end;
+
 procedure TFrameViewCmdList.LBKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
  case Key of
-   VK_DELETE:
-      begin
-        MIDeleteSelectionClick(NIL);
-        Key := VK_UNKNOWN;
+   VK_DELETE: begin
+     MIDeleteSelectionClick(NIL);
+     Key := VK_UNKNOWN;
    end;
+   VK_LEFT, VK_UP, VK_RIGHT, VK_DOWN: Key := VK_UNKNOWN;
  end;//case
 
 end;

@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, Spin,
-  StdCtrls, ExtCtrls, Buttons, LCLTranslator;
+  StdCtrls, ExtCtrls, Buttons, LCLTranslator,
+  u_notebook_util;
 
 type
 
@@ -14,7 +15,6 @@ type
 
   TForm_ModifyTime = class(TForm)
     BOk: TSpeedButton;
-    BCancel: TSpeedButton;
     FSE: TFloatSpinEdit;
     Label1: TLabel;
     Label2: TLabel;
@@ -25,15 +25,17 @@ type
     RB1: TRadioButton;
     RB3: TRadioButton;
     Shape1: TShape;
-    procedure BCancelClick(Sender: TObject);
     procedure BOkClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var {%H-}CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
   private
+    CheckedLabelManager: TCheckedLabelManager;
     function GetShiftNextSteps: boolean;
   public
-    procedure EnsureVisiblePosition( aPt: TPoint );
+    procedure EnsureVisiblePosition(aPt: TPoint);
 
     property ShiftNextSteps: boolean read GetShiftNextSteps;
   end;
@@ -54,7 +56,6 @@ procedure TForm_ModifyTime.FormShow(Sender: TObject);
 begin
   Label2.Caption := SSeconds_;
   BOk.Caption := SOk;
-  BCancel.Caption := SCancel;
 end;
 
 procedure TForm_ModifyTime.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -63,9 +64,17 @@ begin
   RB2.Enabled := TRUE;
 end;
 
-procedure TForm_ModifyTime.BCancelClick(Sender: TObject);
+procedure TForm_ModifyTime.FormCreate(Sender: TObject);
 begin
-  ModalResult := mrCancel;
+  CheckedLabelManager := TCheckedLabelManager.Create;
+  CheckedLabelManager.CaptureLabelClick(Label3);
+  CheckedLabelManager.CaptureLabelClick(Label4);
+  CheckedLabelManager.CaptureLabelClick(Label5);
+end;
+
+procedure TForm_ModifyTime.FormDestroy(Sender: TObject);
+begin
+  CheckedLabelManager.Free;
 end;
 
 procedure TForm_ModifyTime.BOkClick(Sender: TObject);
@@ -80,8 +89,8 @@ end;
 
 procedure TForm_ModifyTime.EnsureVisiblePosition(aPt: TPoint);
 begin
-  Left := EnsureRange( aPt.x, Monitor.WorkareaRect.Left, Monitor.WorkareaRect.Right-Width );
-  Top := EnsureRange( aPt.y, Monitor.WorkareaRect.Top, Monitor.WorkareaRect.Bottom-Height );
+  Left := EnsureRange(aPt.x, Monitor.WorkareaRect.Left, Monitor.WorkareaRect.Right-Width);
+  Top := EnsureRange(aPt.y, Monitor.WorkareaRect.Top, Monitor.WorkareaRect.Bottom-Height);
 end;
 
 

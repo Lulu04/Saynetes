@@ -40,21 +40,6 @@ inherited FrameSequencer: TFrameSequencer
       ShortCut = 16470
       OnClick = MI_SBPasteClick
     end
-    object MenuItem2: TMenuItem
-      Caption = '-'
-    end
-    object MI_SBSelectTimeInterval: TMenuItem
-      Caption = 'Select this time interval'
-      OnClick = MI_SBSelectTimeIntervalClick
-    end
-    object MI_SBModifyTime: TMenuItem
-      Caption = 'Modify this time interval...'
-      OnClick = MI_SBModifyTimeClick
-    end
-    object MI_SBDeleteTime: TMenuItem
-      Caption = 'Delete this interval'
-      OnClick = MI_SBDeleteTimeClick
-    end
     object MenuItem12: TMenuItem
       Caption = '-'
     end
@@ -96,9 +81,9 @@ inherited FrameSequencer: TFrameSequencer
     object MenuItem3: TMenuItem
       Caption = '-'
     end
-    object MI_StepMoveInTime: TMenuItem
+    object MI_StepAlignSteps: TMenuItem
       Caption = 'Align...'
-      OnClick = MI_StepMoveInTimeClick
+      OnClick = MI_StepAlignStepsClick
     end
     object MI_StepModifyLength: TMenuItem
       Caption = 'Change duration...'
@@ -146,6 +131,21 @@ inherited FrameSequencer: TFrameSequencer
     object MI_StepRearrange: TMenuItem
       Caption = 'Rearrange selection'
       OnClick = MI_StepRearrangeClick
+    end
+  end
+  object PopTime: TPopupMenu[4]
+    Images = DataModule1.ImageList1
+    Left = 72
+    Top = 130
+    object MITimeModify: TMenuItem
+      Caption = 'Modify this time interval...'
+      ImageIndex = 44
+      OnClick = MITimeModifyClick
+    end
+    object MITimeDelete: TMenuItem
+      Caption = 'Delete this time interval'
+      ImageIndex = 45
+      OnClick = MITimeDeleteClick
     end
   end
 end

@@ -1,7 +1,7 @@
 object FormSequenceEdition: TFormSequenceEdition
-  Left = 50
+  Left = 89
   Height = 675
-  Top = 129
+  Top = 140
   Width = 1170
   Caption = 'Sequence edition'
   ClientHeight = 675
@@ -422,20 +422,19 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 27
+        Left = 40
         Height = 25
         Hint = 'View all'
         Top = 8
         Width = 25
         AutoSize = True
-        BorderSpacing.Left = 2
+        BorderSpacing.Left = 15
         Constraints.MinHeight = 25
         Constraints.MinWidth = 25
         Color = 13553358
         Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 25
-        ImageWidth = 16
         Transparent = False
         OnClick = B_ViewAllClick
         ShowHint = True
@@ -449,7 +448,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 54
+        Left = 67
         Height = 25
         Hint = 'Zoom on selection'
         Top = 8
@@ -475,7 +474,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 109
+        Left = 122
         Height = 25
         Top = 8
         Width = 25
@@ -505,7 +504,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 136
+        Left = 149
         Height = 25
         Top = 8
         Width = 25
@@ -535,7 +534,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 191
+        Left = 204
         Height = 25
         Hint = 'Start the sequence preview'
         Top = 8
@@ -566,7 +565,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 218
+        Left = 231
         Height = 25
         Hint = 'Stop the preview'
         Top = 8
@@ -597,7 +596,7 @@ object FormSequenceEdition: TFormSequenceEdition
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 245
+        Left = 258
         Height = 25
         Hint = 'Stop all sounds, and turn off all lights'
         Top = 8
@@ -630,18 +629,19 @@ object FormSequenceEdition: TFormSequenceEdition
         Cursor = crHandPoint
         Left = 0
         Height = 25
-        Hint = 'Keep the position 0 visible'
+        Hint = 'Keep origin visible'
         Top = 8
         Width = 25
         AutoSize = True
         Constraints.MinHeight = 25
         Constraints.MinWidth = 25
-        Caption = '[<'
         Color = 6376005
         Flat = True
         Font.Color = 11318976
         Font.Height = 12
         Font.Style = [fsBold]
+        Images = DataModule1.ImageList1
+        ImageIndex = 43
         Spacing = 0
         Transparent = False
         OnClick = BKeep0VisibleClick
@@ -659,6 +659,7 @@ object FormSequenceEdition: TFormSequenceEdition
     Width = 1170
     Align = alTop
     Color = 247036
+    OnMoved = Splitter2Moved
     ParentColor = False
     ResizeAnchor = akTop
     ResizeStyle = rsLine
