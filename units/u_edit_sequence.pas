@@ -67,6 +67,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure BStopClick(Sender: TObject);
+    procedure Splitter2Moved(Sender: TObject);
   private
     FrameViewCmdList1: TFrameViewCmdList;
     FrameEditString1: TFrameEditString;
@@ -77,7 +78,7 @@ type
     function GetTopDuration: single;
     procedure ProcessSelectionChangeEvent( Sender: TObject );
     procedure ProcessUndoRedoChangeEvent(Sender: TObject);
-    procedure ProcessUserChangeDurationEvent(Sender: TObject);
+    procedure ProcessUserChangeStepDurationEvent(Sender: TObject);
     procedure ProcessOnViewChangeEvent(Sender: TObject);
     procedure ProcessFrameEditString1OnEnterPressed(Sender: TObject);
     procedure SetTopName(AValue: string);
@@ -131,6 +132,7 @@ begin
 
 //  FSeq.BGLVirtualScreen1.QueryLoadTextures;
   FSeq.TranslateStrings;
+  FSeq.RecomputeVerticalStepsPosition;
 
   UpdateWidgetState;
 end;
@@ -164,37 +166,33 @@ begin
   FSeq.Stop;
 end;
 
+procedure TFormSequenceEdition.Splitter2Moved(Sender: TObject);
+begin
+  FSeq.RecomputeVerticalStepsPosition;
+end;
+
 procedure TFormSequenceEdition.ProcessSelectionChangeEvent(Sender: TObject);
 var s: TSequenceStep;
 begin
-  if FSeq.SelectedCount = 1 then
-  begin
-      s := FSeq.Selected[0] as TSequenceStep;
-      Label1.Caption := s.Caption;
-      FrameViewCmdList1.SetWorkingStep(s, FSeq)
-  end
-  else
-  begin
+  if FSeq.SelectedCount = 1 then begin
+    s := FSeq.Selected[0] as TSequenceStep;
+    Label1.Caption := s.Caption;
+    FrameViewCmdList1.SetWorkingStep(s, FSeq)
+  end else begin
     FrameViewCmdList1.SetWorkingStep(NIL, FSeq);
     Label1.Caption := FSeq.SelectedCount.ToString+' '+SSelected;
   end;
 
   UpdateWidgetState;
   // selection label info
-  if (FSeq.SelectedAreaBeginTime = 0) and (FSeq.SelectedAreaEndTime = 0) then
-    Label12.Caption :=''
-  else
-    Label12.Caption := TimeToString( FSeq.SelectedAreaBeginTime );
+  if (FSeq.SelectedAreaBeginTime = 0) and (FSeq.SelectedAreaEndTime = 0) then Label12.Caption :=''
+    else Label12.Caption := TimeToString(FSeq.SelectedAreaBeginTime);
 
-  if FSeq.SelectedAreaEndTime = 0 then
-    Label16.Caption :=''
-  else
-    Label16.Caption := TimeToString( FSeq.SelectedAreaEndTime );
+  if FSeq.SelectedAreaEndTime = 0 then Label16.Caption :=''
+    else Label16.Caption := TimeToString(FSeq.SelectedAreaEndTime);
 
-  if FSeq.SelectedAreaDuration = 0 then
-    Label17.Caption :=''
-  else
-    Label17.Caption := TimeToString( FSeq.SelectedAreaDuration );
+  if FSeq.SelectedAreaDuration = 0 then Label17.Caption :=''
+    else Label17.Caption := TimeToString(FSeq.SelectedAreaDuration);
 end;
 
 function TFormSequenceEdition.GetTopDuration: single;
@@ -220,7 +218,7 @@ begin
   UpdateWidgetState;
 end;
 
-procedure TFormSequenceEdition.ProcessUserChangeDurationEvent(Sender: TObject);
+procedure TFormSequenceEdition.ProcessUserChangeStepDurationEvent(Sender: TObject);
 begin
   ProcessSelectionChangeEvent(Sender);
 end;
@@ -308,10 +306,11 @@ begin
   FSeq.Align := alClient;
   FSeq.OnSelectionChange := @ProcessSelectionChangeEvent;
   FSeq.OnUndoRedoChange := @ProcessUndoRedoChangeEvent;
-  FSeq.OnUserChangeDuration := @ProcessUserChangeDurationEvent;
+  FSeq.OnUserChangeStepDuration := @ProcessUserChangeStepDurationEvent;
   FSeq.OnViewChange := @ProcessOnViewChangeEvent;
   FSeq.BGLVirtualScreen1.OnClick := @Panel7Click; // when user click on sequencer, we remove the focus
                                                   // from the sequence name TEdit
+  FSeq.SetOptions([bglsKeepTimeOriginVisible], True);
 
   FrameViewCmdList1 := TFrameViewCmdList.Create(Self);
   FrameViewCmdList1.Parent := Panel2;
@@ -342,9 +341,7 @@ procedure TFormSequenceEdition.BKeep0VisibleClick(Sender: TObject);
 var b: boolean;
 begin
   b := FToogleSpeedButtonManager.Checked[BKeep0Visible];
-  FSeq.SetOptions([bglsKeepTime0Visible], b);
-  if b then
-    FSeq.View_BeginTime := 0;
+  FSeq.SetOptions([bglsKeepTimeOriginVisible], b);
 end;
 
 procedure TFormSequenceEdition.B_RedoClick(Sender: TObject);

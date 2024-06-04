@@ -1,5 +1,5 @@
 object FormDefineNewChannel: TFormDefineNewChannel
-  Left = 286
+  Left = 279
   Height = 496
   Top = 145
   Width = 992

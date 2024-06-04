@@ -3,16 +3,19 @@ object Form_ModifyTime: TForm_ModifyTime
   Height = 231
   Top = 293
   Width = 345
-  BorderIcons = []
-  BorderStyle = bsNone
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Modify time interval'
   ClientHeight = 231
   ClientWidth = 345
   Color = 5596774
   KeyPreview = True
   OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnKeyUp = FormKeyUp
   OnShow = FormShow
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
     Height = 231
@@ -26,10 +29,10 @@ object Form_ModifyTime: TForm_ModifyTime
   object FSE: TFloatSpinEdit
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    Left = 125
+    Left = 115
     Height = 38
     Top = 40
-    Width = 94
+    Width = 115
     Alignment = taRightJustify
     Color = 4473924
     DecimalPlaces = 3
@@ -61,7 +64,7 @@ object Form_ModifyTime: TForm_ModifyTime
     AnchorSideLeft.Side = asrBottom
     AnchorSideBottom.Control = FSE
     AnchorSideBottom.Side = asrBottom
-    Left = 224
+    Left = 235
     Height = 15
     Top = 63
     Width = 51
@@ -123,26 +126,6 @@ object Form_ModifyTime: TForm_ModifyTime
     Images = DataModule1.ImageList1
     ImageIndex = 3
     OnClick = BOkClick
-  end
-  object BCancel: TSpeedButton
-    AnchorSideTop.Control = Owner
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
-    Cursor = crHandPoint
-    Left = 321
-    Height = 24
-    Top = 0
-    Width = 24
-    Anchors = [akTop, akRight]
-    AutoSize = True
-    BorderSpacing.Bottom = 10
-    Constraints.MinHeight = 24
-    Constraints.MinWidth = 24
-    Images = DataModule1.ImageList1
-    ImageIndex = 2
-    OnClick = BCancelClick
   end
   object Label3: TLabel
     AnchorSideLeft.Control = RB3

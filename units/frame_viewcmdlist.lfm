@@ -27,6 +27,7 @@ object FrameViewCmdList: TFrameViewCmdList
     ItemHeight = 0
     MultiSelect = True
     OnDrawItem = LBDrawItem
+    OnKeyDown = LBKeyDown
     OnKeyUp = LBKeyUp
     OnMouseDown = LBMouseDown
     OnMouseLeave = LBMouseLeave

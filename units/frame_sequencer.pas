@@ -51,14 +51,15 @@ type
   { TFrameSequencer }
 
   TFrameSequencer = class(TFrameBGLSequencer)
+    MITimeDelete: TMenuItem;
+    MITimeModify: TMenuItem;
     MI_SBRearrange: TMenuItem;
     MISBAddOtherAction: TMenuItem;
     MenuItem6: TMenuItem;
     MISBAddDMXAction: TMenuItem;
-    MI_SBSelectTimeInterval: TMenuItem;
     MI_StepModifyLength: TMenuItem;
     MI_StepRearrange: TMenuItem;
-    MI_StepMoveInTime: TMenuItem;
+    MI_StepAlignSteps: TMenuItem;
     MI_SBAddAudioAction: TMenuItem;
     MI_SBZoomAll: TMenuItem;
     MI_StepRename: TMenuItem;
@@ -69,35 +70,32 @@ type
     MI_StepSelectAll: TMenuItem;
     MI_SBPaste: TMenuItem;
     MenuItem12: TMenuItem;
-    MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem8: TMenuItem;
-    MI_SBModifyTime: TMenuItem;
     MI_StepDelete: TMenuItem;
-    MI_SBDeleteTime: TMenuItem;
     MI_StepGroup: TMenuItem;
     MI_SBZoomOnSelection: TMenuItem;
     MI_StepUngroup: TMenuItem;
     PopLabel: TPopupMenu;
     PopSB: TPopupMenu;
+    PopTime: TPopupMenu;
     Separator1: TMenuItem;
+    procedure MITimeDeleteClick(Sender: TObject);
+    procedure MITimeModifyClick(Sender: TObject);
     procedure MISBAddOtherActionClick(Sender: TObject);
     procedure MISBAddDMXActionClick(Sender: TObject);
     procedure MI_SBAddAudioActionClick(Sender: TObject);
-    procedure MI_SBModifyTimeClick(Sender: TObject);
     procedure MI_SBPasteClick(Sender: TObject);
     procedure MI_SBRearrangeClick(Sender: TObject);
-    procedure MI_SBSelectTimeIntervalClick(Sender: TObject);
     procedure MI_SBZoomAllClick(Sender: TObject);
     procedure MI_SBZoomOnSelectionClick(Sender: TObject);
     procedure MI_StepCopyClick(Sender: TObject);
     procedure MI_StepCutClick(Sender: TObject);
     procedure MI_StepDeleteClick(Sender: TObject);
-    procedure MI_SBDeleteTimeClick(Sender: TObject);
     procedure MI_StepGroupClick(Sender: TObject);
     procedure MI_StepModifyLengthClick(Sender: TObject);
-    procedure MI_StepMoveInTimeClick(Sender: TObject);
+    procedure MI_StepAlignStepsClick(Sender: TObject);
     procedure MI_StepPasteClick(Sender: TObject);
     procedure MI_StepRearrangeClick(Sender: TObject);
     procedure MI_StepRenameClick(Sender: TObject);
@@ -106,6 +104,7 @@ type
     FClickedTimePos: single;
     FClickedY: integer;
     FClickedScreen: TPoint;
+    procedure DoSelectTimeInterval(aTimePos: single);
   private
     FUndoRedo: TUndoRedoManager;
     FOnUndoRedoChange: TNotifyEvent;
@@ -276,6 +275,52 @@ begin
   Redraw;
 end;
 
+procedure TFrameSequencer.MITimeModifyClick(Sender: TObject);
+var before, after: TCustomSequencerStep;
+  delta: Single;
+  F: TForm_ModifyTime;
+begin
+ before := GetStepBefore(FClickedTimePos);
+ after := GetStepAfter(FClickedTimePos);
+ if before = after then exit;
+ if after = NIL then exit;
+ if before = NIL
+   then delta := after.TimePos
+   else delta := after.TimePos - before.TimePos;
+
+ F := TForm_ModifyTime.Create(NIL);
+ F.FSE.Value := delta;
+ if before = NIL then begin
+  F.RB1.Checked := TRUE;
+  F.RB2.Enabled := FALSE;
+ end;
+
+ F.EnsureVisiblePosition(FClickedScreen);
+
+ if F.ShowModal = mrOk then begin
+   delta := F.FSE.Value - delta;
+   if delta <> 0 then begin
+     if F.RB1.Checked then ShiftStepTimePositionFrom(after, delta);
+     if F.RB3.Checked
+       then if after.CanApplyTimeOffset(delta)
+              then ApplyTimeOffsetOnStep(after, delta);
+     if F.RB2.Checked then
+       if before.CanApplyTimeOffset(-delta) then
+         ApplyTimeOffsetOnStep(before, -delta);
+     ForceNoAreaSelected;
+     redraw;
+   end;
+ end;
+ F.Free;
+end;
+
+procedure TFrameSequencer.MITimeDeleteClick(Sender: TObject);
+begin
+  DeleteTimeAt(FClickedTimePos);
+  ForceNoAreaSelected;
+  Redraw;
+end;
+
 procedure TFrameSequencer.MISBAddDMXActionClick(Sender: TObject);
 var s: TSequenceStep;
   p: TPoint;
@@ -309,46 +354,6 @@ begin
   end;
 end;
 
-
-procedure TFrameSequencer.MI_SBModifyTimeClick(Sender: TObject);
-var before, after: TCustomSequencerStep;
-  delta: Single;
-  F: TForm_ModifyTime;
-begin
- before := GetStepBefore(FClickedTimePos);
- after := GetStepAfter(FClickedTimePos);
- if before = after then exit;
- if after = NIL then exit;
- if before = NIL
-   then delta := after.TimePos
-   else delta := after.TimePos - before.TimePos;
-
- F := TForm_ModifyTime.Create(NIL);
- F.FSE.Value := delta;
- if before=NIL then begin
-  F.RB1.Checked := TRUE;
-  F.RB2.Enabled := FALSE;
- end;
-
- F.EnsureVisiblePosition( FClickedScreen );
-
- if F.ShowModal = mrOk then begin
-   delta := F.FSE.Value - delta;
-   if delta<>0 then begin
-     if F.RB1.Checked then ShiftStepTimePositionFrom( after, delta );
-     if F.RB3.Checked
-       then if after.CanApplyTimeOffset( delta )
-              then ApplyTimeOffsetOnStep( after, delta );
-     if F.RB2.Checked then
-       if before.CanApplyTimeOffset( -delta ) then
-         ApplyTimeOffsetOnStep( before, -delta );
-     ForceNoAreaSelected;
-     redraw;
-   end;
- end;
- F.Free;
-end;
-
 procedure TFrameSequencer.MI_SBPasteClick(Sender: TObject);
 begin
  ClipBoard_PasteTo( FClickedTimePos );
@@ -359,35 +364,19 @@ begin
   RecomputeVerticalStepsPosition
 end;
 
-procedure TFrameSequencer.MI_SBSelectTimeIntervalClick(Sender: TObject);
-var before, after: TCustomSequencerStep;
-begin
- before := GetStepBefore( FClickedTimePos );
- after := GetStepAfter( FClickedTimePos );
- if before = after then exit;
- if after = NIL then exit;
- Sel_SelectNone;
- if before = NIL then
-   ForceAreaSelected(0, after.TimePos)
- else
-   ForceAreaSelected(before.TimePos, after.TimePos);
- Redraw;
- DoSelectionChangeEvent;
-end;
-
 procedure TFrameSequencer.MI_SBZoomAllClick(Sender: TObject);
 begin
- View_All;
+  View_All;
 end;
 
 procedure TFrameSequencer.MI_SBZoomOnSelectionClick(Sender: TObject);
 begin
- View_ZoomOnSelectedArea;
+  View_ZoomOnSelectedArea;
 end;
 
 procedure TFrameSequencer.MI_StepCopyClick(Sender: TObject);
 begin
- ClipBoard_CopySelection;
+  ClipBoard_CopySelection;
 end;
 
 procedure TFrameSequencer.MI_StepCutClick(Sender: TObject);
@@ -403,12 +392,6 @@ begin
    Sel_Delete;
    FWorkingStep := NIL;
  end;
-end;
-
-procedure TFrameSequencer.MI_SBDeleteTimeClick(Sender: TObject);
-begin
- DeleteTimeAt( FClickedTimePos );
- Redraw;
 end;
 
 procedure TFrameSequencer.MI_StepGroupClick(Sender: TObject);
@@ -427,7 +410,7 @@ begin
  DoSelectionChangeEvent;
 end;
 
-procedure TFrameSequencer.MI_StepMoveInTimeClick(Sender: TObject);
+procedure TFrameSequencer.MI_StepAlignStepsClick(Sender: TObject);
 var F: TForm_MoveStep;
 begin
  F := TForm_MoveStep.Create(NIL);
@@ -462,43 +445,67 @@ begin
  Redraw;
 end;
 
+procedure TFrameSequencer.DoSelectTimeInterval(aTimePos: single);
+var before, after: TCustomSequencerStep;
+begin
+  before := GetStepBefore(aTimePos);
+  after := GetStepAfter(aTimePos);
+  if before = after then exit;
+  if after = NIL then exit;
+  Sel_SelectNone;
+  if before = NIL then ForceAreaSelected(0, after.TimePos)
+    else ForceAreaSelected(before.TimePos, after.TimePos);
+  Redraw;
+  DoSelectionChangeEvent;
+end;
+
 procedure TFrameSequencer.ProcessUndoRedoChangeEvent(Sender: TObject);
 begin
- if FOnUndoRedoChange <> NIL then
-   FOnUndoRedoChange( self );
+  if FOnUndoRedoChange <> NIL then
+    FOnUndoRedoChange(self);
 end;
 
 procedure TFrameSequencer.DoSelectionChangeEvent;
 begin
- UpdateWidgetState;
- inherited DoSelectionChangeEvent;
+  UpdateWidgetState;
+  inherited DoSelectionChangeEvent;
 end;
 
 procedure TFrameSequencer.DoTimeAreaClickEvent(Button: TMouseButton; Shift: TShiftState; TimePos: single);
 begin
+  DoSelectTimeInterval(TimePos);
+
+  if Button = mbRight then begin
+    FClickedTimePos := TimePos;
+    FClickedScreen := Mouse.CursorPos;
+    MITimeModify.Enabled := AnAreaIsSelected;
+    MITimeDelete.Enabled := MITimeModify.Enabled;
+    PopTime.PopUp;
+  end;
 end;
 
-procedure TFrameSequencer.DoEmptyAreaClickEvent(Button: TMouseButton;
-    Shift: TShiftState; TimePos: single);
+procedure TFrameSequencer.DoEmptyAreaClickEvent(Button: TMouseButton; Shift: TShiftState; TimePos: single);
 begin
- FClickedTimePos := TimePos;
- FClickedY := YLineUnderMouse;
- FClickedScreen := Mouse.CursorPos;
- UpdateWidgetState;
- PopSB.PopUp;
- inherited DoEmptyAreaClickEvent(Button, Shift, TimePos);
+  if Button = mbRight then begin
+    FClickedTimePos := TimePos;
+    FClickedY := YLineUnderMouse;
+    FClickedScreen := Mouse.CursorPos;
+    UpdateWidgetState;
+    PopSB.PopUp;
+  end;
+
+  inherited DoEmptyAreaClickEvent(Button, Shift, TimePos);
 end;
 
-procedure TFrameSequencer.DoStepClickEvent(aStep: TCustomSequencerStep;
-    Button: TMouseButton; Shift: TShiftState);
+procedure TFrameSequencer.DoStepClickEvent(aStep: TCustomSequencerStep; Button: TMouseButton; Shift: TShiftState);
 begin
-  if Button = mbRight then
-  begin
+  if Button = mbRight then begin
     FWorkingStep := aStep as TSequenceStep;
     UpdateWidgetState;
     PopLabel.PopUp;
   end;
- inherited DoStepClickEvent(aStep, Button, Shift);
+
+  inherited DoStepClickEvent(aStep, Button, Shift);
 end;
 
 // because classes inherited from TCustomSequencerStep may have some additionnal stuff
@@ -608,141 +615,137 @@ end;
 
 constructor TFrameSequencer.Create(TheOwner: TComponent);
 begin
- inherited Create(TheOwner);
- SetOptions([bglsAlternateColorForVStepPosition], TRUE);
- SetOptions([bglsForceVStepPosition], TRUE);
+  inherited Create(TheOwner);
+  SetOptions([bglsAlternateColorForVStepPosition], TRUE);
+  SetOptions([bglsForceVStepPosition], TRUE);
 
- ColorBackground := RGBToColor(51,51,51);
- ColorBackground1 := BGRA(40,40,40);
- ColorTimeArea := BGRA(38,38,38);
- ColorTimeLegend := BGRA(192,182,172);
- ColorXAxis := BGRA(132,122,112);
- FUndoRedo := TUndoRedoManager.Create;
- FUndoRedo.OnChange := @ProcessUndoRedoChangeEvent;
+  ColorBackground := RGBToColor(51,51,51);
+  ColorBackground1 := BGRA(40,40,40);
+  ColorTimeArea := BGRA(5,5,5);
+  ColorTimeLegend := BGRA(192,182,172);
+  ColorXAxis := BGRA(132,122,112);
+  FUndoRedo := TUndoRedoManager.Create;
+  FUndoRedo.OnChange := @ProcessUndoRedoChangeEvent;
 end;
 
 destructor TFrameSequencer.Destroy;
 begin
- FreeAndNil(FUndoRedo);
- inherited Destroy;
+  FreeAndNil(FUndoRedo);
+  inherited Destroy;
 end;
 
 procedure TFrameSequencer.UpdateWidgetState;
 begin
- MI_StepRename.Enabled := SelectedCount=1;
+  MI_StepRename.Enabled := SelectedCount = 1;
 
- MI_StepMoveInTime.Enabled := SelectedCount>1;
+  MI_StepAlignSteps.Enabled := SelectedCount > 1;
 
- case SelectedCount of
-   1: if TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd then
-        MI_StepModifyLength.Enabled := FALSE
-      else
-        MI_StepModifyLength.Enabled := TRUE;
+  case SelectedCount of
+    1: if TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd then
+         MI_StepModifyLength.Enabled := FALSE
+       else
+         MI_StepModifyLength.Enabled := TRUE;
 
-   else MI_StepModifyLength.Enabled := FALSE;
- end;
+    else MI_StepModifyLength.Enabled := FALSE;
+  end;
 
- // delete step or selection
- if SelectedCount > 1 then
-   MI_StepDelete.Caption := SDeleteSelected
- else
-   MI_StepDelete.Caption := SDeleteThisAction;
+ // MI_StepModifyLength.Enabled := (SelectedCount = 1) and TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd;
 
- MI_StepCut.Enabled := SelectedCount>=1;
- MI_StepCopy.Enabled := MI_StepCut.Enabled;
- MI_StepPaste.Enabled := Clipboard_HasData;
- MI_StepSelectAll.Enabled := TRUE;
+  // delete step or selection
+  if SelectedCount > 1 then MI_StepDelete.Caption := SDeleteSelected
+    else MI_StepDelete.Caption := SDeleteThisAction;
 
- MI_StepGroup.Enabled := SelectedCount>1;
- MI_StepUngroup.Enabled := SelectedCount>1;
+  MI_StepCut.Enabled := SelectedCount >= 1;
+  MI_StepCopy.Enabled := MI_StepCut.Enabled;
+  MI_StepPaste.Enabled := Clipboard_HasData;
+  MI_StepSelectAll.Enabled := TRUE;
 
- MI_StepRearrange.Enabled := SelectedCount>0;
+  MI_StepGroup.Enabled := SelectedCount > 1;
+  MI_StepUngroup.Enabled := SelectedCount > 1;
 
- MI_SBPaste.Enabled := Clipboard_HasData;
-// MI_SBSelectTimeInterval.Enabled := ;
- MI_SBModifyTime.Enabled := AnAreaIsSelected and (SelectedCount=0);
- MI_SBDeleteTime.Enabled := AnAreaIsSelected and (SelectedCount=0);
- MI_SBZoomAll.Enabled := TRUE;
- MI_SBZoomOnSelection.Enabled := AnAreaIsSelected;
+  MI_StepRearrange.Enabled := SelectedCount > 0;
 
+  MI_SBPaste.Enabled := Clipboard_HasData;
+  MI_SBZoomAll.Enabled := TRUE;
+  MI_SBZoomOnSelection.Enabled := AnAreaIsSelected;
 end;
 
 procedure TFrameSequencer.ProcessKey(var Key: word; Shift: TShiftState);
 begin
- case Key of
-   VK_DELETE: if SelectedCount > 0 then Sel_Delete;
-   VK_A: if ssCtrl in Shift then
-         begin
-           Sel_SelectAll;
-           Redraw;
-         end
-         else if ssAlt in Shift then View_All;
-   VK_G: if (ssCtrl in Shift) and (SelectedCount>1) then
-         begin
-           Sel_Group;
-           Redraw;
-         end;
-   VK_U: if (ssCtrl in Shift) and (SelectedCount>1) then
-         begin
-           Sel_Ungroup;
-           Redraw;
-         end;
-   VK_X: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CutSelection;
-   VK_C: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CopySelection;
-   VK_V: if (ssCtrl in Shift) and MouseIsOverSequencer and Clipboard_HasData then ClipBoard_PasteTo( XMouseToTime );
-   VK_S: if ssAlt in Shift then View_ZoomOnSelectedArea;
-   VK_R: if (ssCtrl in Shift) and (SelectedCount=1)
-          then MI_StepRenameClick(nil);
-   VK_Z: if ssCtrl in Shift then begin
-           if ssShift in Shift
-             then Redo
-             else Undo;
-   end;
-   VK_UP: if Sel_CanVerticalShift( -StepHeight ) then begin
-     Sel_VerticalShift( -StepHeight );
-     Redraw;
-   end;
-   VK_DOWN: if Sel_CanVerticalShift( StepHeight ) then begin
-     Sel_VerticalShift( StepHeight );
-     Redraw;
-   end;
- end;
+  case Key of
+    VK_DELETE: if SelectedCount > 0 then Sel_Delete;
+    VK_A: if ssCtrl in Shift then
+          begin
+            Sel_SelectAll;
+            Redraw;
+          end
+          else if ssAlt in Shift then View_All;
+    VK_G: if (ssCtrl in Shift) and (SelectedCount>1) then
+          begin
+            Sel_Group;
+            Redraw;
+          end;
+    VK_U: if (ssCtrl in Shift) and (SelectedCount>1) then
+          begin
+            Sel_Ungroup;
+            Redraw;
+          end;
+    VK_X: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CutSelection;
+    VK_C: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CopySelection;
+    VK_V: if (ssCtrl in Shift) and MouseIsOverSequencer and Clipboard_HasData then ClipBoard_PasteTo(XMouseToTime);
+    VK_S: if ssAlt in Shift then View_ZoomOnSelectedArea;
+    VK_R: if (ssCtrl in Shift) and (SelectedCount=1)
+           then MI_StepRenameClick(nil);
+    VK_Z: if ssCtrl in Shift then begin
+            if ssShift in Shift
+              then Redo
+              else Undo;
+    end;
+    VK_UP: if Sel_CanVerticalShift(-StepHeight) then begin
+      Sel_VerticalShift(-StepHeight);
+      Redraw;
+    end;
+    VK_DOWN: if Sel_CanVerticalShift(StepHeight) then begin
+      Sel_VerticalShift(StepHeight);
+      Redraw;
+    end;
+  end;
 end;
 
 procedure TFrameSequencer.Clear;
 begin
- inherited;
- if not(csDestroying in ComponentState) then
-   FUndoRedo.Clear;
- ClipBoard_Clear;
+  inherited;
+  if not(csDestroying in ComponentState) then
+    FUndoRedo.Clear;
+  ClipBoard_Clear;
 end;
 
 procedure TFrameSequencer.SaveSequences(t: TStrings);
 begin
- t.Add('[SEQUENCER]');
- SequencerToTStrings( Self, t );
+  t.Add('[SEQUENCER]');
+  SequencerToTStrings(Self, t);
 end;
 
 procedure TFrameSequencer.LoadSequences(t: TStrings);
 var k: integer;
 begin
- k := t.IndexOf('[SEQUENCER]');
- if k <> -1 then
-   TStringsToSequencer( t, k+1, Self );
- NeedStepsWidthUpdate;
- View_All;
+  k := t.IndexOf('[SEQUENCER]');
+  if k <> -1 then
+    TStringsToSequencer(t, k+1, Self);
+  NeedStepsWidthUpdate;
+  View_All;
 end;
 
 function TFrameSequencer.ToCmdListOfSingleCmd: TCmdList;
 begin
- Result := StepList.ToCmdListOfSingleCmd;
+  Result := StepList.ToCmdListOfSingleCmd;
 end;
 
 function TFrameSequencer.SaveToSequencerInfoList: TSequencerInfoList;
 begin
- Result := ID.ToString + SEQUENCERINFO_SEPARATOR + // current ID value
-           GroupValue.ToString;                    // current groupID value
- StepList.ToStepDataList( Result );
+  Result := ID.ToString + SEQUENCERINFO_SEPARATOR + // current ID value
+            GroupValue.ToString;                    // current groupID value
+  StepList.ToStepDataList(Result);
 end;
 
 procedure TFrameSequencer.LoadFromSequencerInfoList(const s: TSequencerInfoList);
@@ -750,37 +753,37 @@ var A: TSequencerInfoArray;
     step: TSequenceStep;
     i: Integer;
 begin
- Clear;
- A := s.SplitToSequencerInfoArray;
- if Length( A )=0 then exit;
- ID := A[0].ToInteger;
- GroupValue := A[1].ToInteger;
- for i:=2 to High(A) do begin
-   step := TSequenceStep.Create;
-   step.Deserialize( A[i] );
-   RawAdd( step, FALSE );
- end;
- NeedStepsWidthUpdate;
- NeedStepsTopUpdate;
- View_All;
+  Clear;
+  A := s.SplitToSequencerInfoArray;
+  if Length(A)=0 then exit;
+  ID := A[0].ToInteger;
+  GroupValue := A[1].ToInteger;
+  for i:=2 to High(A) do begin
+    step := TSequenceStep.Create;
+    step.Deserialize( A[i] );
+    RawAdd(step, FALSE);
+  end;
+  NeedStepsWidthUpdate;
+  NeedStepsTopUpdate;
+  View_All;
 end;
 
 procedure TFrameSequencer.Play;
 begin
- if StepList.Count=0 then exit;
- TOPPlayer.StopPreview;
- TOPPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
- TOPPlayer.OnEndPreview := @ProcessPlayerEnd;
- TOPPlayer.PreviewSequencerInfoList( SaveToSequencerInfoList );
- PlayCursorVisible( TRUE );
+  if StepList.Count = 0 then exit;
+  TOPPlayer.StopPreview;
+  TOPPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
+  TOPPlayer.OnEndPreview := @ProcessPlayerEnd;
+  TOPPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList);
+  PlayCursorVisible(TRUE);
 end;
 
 procedure TFrameSequencer.Stop;
 begin
- TOPPlayer.OnTimeElapsed := NIL;
- TOPPlayer.OnEndPreview := NIL;
- TOPPlayer.StopPreview;
- PlayCursorVisible( FALSE );
+  TOPPlayer.OnTimeElapsed := NIL;
+  TOPPlayer.OnEndPreview := NIL;
+  TOPPlayer.StopPreview;
+  PlayCursorVisible(FALSE);
 end;
 
 procedure TFrameSequencer.DoUnDoRedo(ItsUndo: boolean);
@@ -790,75 +793,75 @@ var itemPoped, itemToPush: TUndoRedoItem;
   k, id_: Integer;
   sep: string;
 begin
- if ItsUndo then begin
-   if not FUndoRedo.UndoAvailable then exit;
-   itemPoped := FUndoRedo.PopFromUndo;
- end else begin
-   if not FUndoRedo.RedoAvailable then exit;
-   itemPoped := FUndoRedo.PopFromRedo;
- end;
+  if ItsUndo then begin
+    if not FUndoRedo.UndoAvailable then exit;
+    itemPoped := FUndoRedo.PopFromUndo;
+  end else begin
+    if not FUndoRedo.RedoAvailable then exit;
+    itemPoped := FUndoRedo.PopFromRedo;
+  end;
 
- if itemPoped.Notification in [snAdded, snDeleted]
-   then itemToPush.Data := itemPoped.Data
-   else itemToPush.Data := '';
- itemToPush.Name := itemPoped.Name;
- itemToPush.Notification := itemPoped.Notification;
+  if itemPoped.Notification in [snAdded, snDeleted]
+    then itemToPush.Data := itemPoped.Data
+    else itemToPush.Data := '';
+  itemToPush.Name := itemPoped.Name;
+  itemToPush.Notification := itemPoped.Notification;
 
- A := itemPoped.Data.SplitToStepDataArray;
- k := 0;
- sep:='';
- while k<High(A) do begin
-   step := TSequenceStep.Create;
-   step.DeserializeA( A, k );
-   step.Selected:=FALSE;
-  case itemPoped.Notification of
-    snAdded: begin
-      if ItsUndo then begin
-        RawDeleteStepByID( step.ID );
-        step.Free;
-      end else begin
-        RawAdd( step, FALSE, FALSE );
+  A := itemPoped.Data.SplitToStepDataArray;
+  k := 0;
+  sep:='';
+  while k<High(A) do begin
+    step := TSequenceStep.Create;
+    step.DeserializeA( A, k );
+    step.Selected:=FALSE;
+   case itemPoped.Notification of
+     snAdded: begin
+       if ItsUndo then begin
+         RawDeleteStepByID( step.ID );
+         step.Free;
+       end else begin
+         RawAdd( step, FALSE, FALSE );
+          step.UpdateWidth;
+       end;
+     end;
+     snDeleted: begin
+       if ItsUndo then begin
+         id_ := step.ID;
+         RawAdd( step, FALSE );
+         step.ID := id_;
          step.UpdateWidth;
-      end;
-    end;
-    snDeleted: begin
-      if ItsUndo then begin
-        id_ := step.ID;
-        RawAdd( step, FALSE );
-        step.ID := id_;
-        step.UpdateWidth;
-      end else begin
-        RawDeleteStepByID( step.ID );
-        step.Free;
-      end;
-    end;
-    snChanged: begin
-      step1 := StepList.GetItemByID( step.ID ) as TSequenceStep;
-      itemToPush.Data := itemToPush.Data + sep + step1.Serialize;
-      sep := STEPDATA_SEPARATOR;
-      RawReplaceStepByID( step );
-    end;
-  end;//case
- end;//while
+       end else begin
+         RawDeleteStepByID( step.ID );
+         step.Free;
+       end;
+     end;
+     snChanged: begin
+       step1 := StepList.GetItemByID( step.ID ) as TSequenceStep;
+       itemToPush.Data := itemToPush.Data + sep + step1.Serialize;
+       sep := STEPDATA_SEPARATOR;
+       RawReplaceStepByID( step );
+     end;
+   end;//case
+  end;//while
 
- if ItsUndo then
-   FUndoRedo.PushToRedo( itemToPush )
- else
-   FUndoRedo.PushToUndo( itemToPush );
+  if ItsUndo then
+    FUndoRedo.PushToRedo(itemToPush)
+  else
+    FUndoRedo.PushToUndo(itemToPush);
 
- StepList.Sort;
- Redraw;
- DoSelectionChangeEvent;
+  StepList.Sort;
+  Redraw;
+  DoSelectionChangeEvent;
 end;
 
 procedure TFrameSequencer.Undo;
 begin
- DoUnDoRedo(TRUE);
+  DoUnDoRedo(TRUE);
 end;
 
 procedure TFrameSequencer.Redo;
 begin
- DoUnDoRedo(FALSE);
+  DoUnDoRedo(FALSE);
 end;
 
 procedure TFrameSequencer.TranslateStrings;

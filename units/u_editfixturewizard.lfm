@@ -1,5 +1,5 @@
 object FormFixtureWizard: TFormFixtureWizard
-  Left = 241
+  Left = 247
   Height = 785
   Top = 92
   Width = 1024

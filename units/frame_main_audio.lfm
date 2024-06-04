@@ -6,7 +6,7 @@ object FrameMainAudio: TFrameMainAudio
   ClientHeight = 567
   ClientWidth = 781
   TabOrder = 0
-  DesignLeft = 509
+  DesignLeft = 490
   DesignTop = 150
   object Panel5: TPanel
     AnchorSideLeft.Control = Shape2
