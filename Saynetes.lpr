@@ -55,8 +55,8 @@ begin
   application.ProcessMessages;
 
   Log.AddEmptyLine;
-
   Application.CreateForm(TFormMain, FormMain);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TFormUserConfirmation, FormUserConfirmation);
   Application.CreateForm(TFormDMXRGBTools, FormDMXRGBTools);
   Application.CreateForm(TFormDMXChannelsTools, FormDMXChannelsTools);
@@ -64,7 +64,6 @@ begin
   Application.CreateForm(TFormOtherAction, FormOtherAction);
   Application.CreateForm(TFormAudioAction, FormAudioAction);
   Application.CreateForm(TFormDeviceManager, FormDeviceManager);
-  Application.CreateForm(TDataModule1, DataModule1);
 
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;
 

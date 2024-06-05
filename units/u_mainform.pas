@@ -96,7 +96,7 @@ implementation
 uses LCLType, LCLIntf, u_dmx_library, u_project_manager, u_userdialogs,
   u_resource_string, u_devicemanager_form, u_startupwizard, u_logfile,
   u_program_options, u_audio_manager, u_top_player, u_list_top,
-  u_list_dmxuniverse, u_project_options, form_about, u_dmx_util;
+  u_list_dmxuniverse, u_project_options, form_about, form_splash, u_dmx_util;
 
 {$R *.lfm}
 
@@ -147,7 +147,9 @@ procedure TFormMain.FormCreate(Sender: TObject);
 begin
   FStartup := True;
 
+  FormSplash.TextLoad := SLoadingFixtureImage;
   LoadFixtureImages;
+  FormSplash.TextLoad := SLoadingCursorImage;
   LoadCursorImages(ScaleDesignToForm(25), ScaleDesignToForm(35));
 
   Project := TSaynetesProject.Create;

@@ -102,7 +102,6 @@ type
     lblVol5: TLabel;
     lblVol6: TLabel;
     NB: TNotebook;
-    BCancel: TSpeedButton;
     BOk: TSpeedButton;
     PageDMXRGB: TPage;
     PageAudioCapture: TPage;
@@ -215,11 +214,6 @@ uses LCLType, u_helper, u_list_top, u_audio_manager,
 
 procedure TFormEditSingleAction.BOkClick(Sender: TObject);
 begin
-  if Sender = BCancel then begin
-    ModalResult := mrCancel;
-    exit;
-  end;
-
   if Sender = BOk then begin
 
     ModalResult := mrOk;
@@ -241,6 +235,7 @@ begin
   FrameVelocity1.Align := alClient;
   FrameVelocity1.UpdateList;
   FrameVelocity1.OnChange := @TB1Change;
+
   Label4.Caption := SSequence;
   SpeedButton5.Caption := SReset;
   Label6.Caption := SDurationInSecond;
@@ -262,6 +257,7 @@ begin
   FrameVelocity2.UpdateList;
   FrameVelocity2.OnChange := @TBVolChange;
   BPanNormal.Caption := SCenter;
+  BPitchNormal.Caption := SCenter;
   LabelCurve.Caption := SVelocity;
   lblVol1.Caption := SIn;
   lblattendre9.Caption := SSeconds_;

@@ -939,7 +939,7 @@ msgid "Add this sequence"
 msgstr ""
 
 #: tformsplash.label3.caption
-msgid "Loading program, please wait"
+msgid "Please wait"
 msgstr ""
 
 #: tformstartupwizard.caption
@@ -2591,6 +2591,10 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
+#: u_resource_string.serrorfoundinprojectsequences
+msgid "Error(s) found in the project sequences. Please check"
+msgstr ""
+
 #: u_resource_string.serrorloadingplaylist
 msgid "Error while opening this playlist"
 msgstr ""
@@ -2884,6 +2888,22 @@ msgstr ""
 #: u_resource_string.slevelmin
 msgctxt "u_resource_string.slevelmin"
 msgid "Level min"
+msgstr ""
+
+#: u_resource_string.sloadingcursorimage
+msgid "loading DMX cursor images"
+msgstr ""
+
+#: u_resource_string.sloadingdmxchannelicon
+msgid "loading DMX channel icons"
+msgstr ""
+
+#: u_resource_string.sloadingfixtureimage
+msgid "loading DMX fixture images"
+msgstr ""
+
+#: u_resource_string.sloadingprogramicon
+msgid "loading program icons"
 msgstr ""
 
 #: u_resource_string.sloop

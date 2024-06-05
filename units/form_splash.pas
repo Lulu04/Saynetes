@@ -15,11 +15,13 @@ type
     Image1: TImage;
     Label1: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     procedure FormShow(Sender: TObject);
   private
+    procedure SetTextLoad(AValue: string);
 
   public
-
+    property TextLoad: string write SetTextLoad;
   end;
 
 var
@@ -47,6 +49,14 @@ begin
 
   ima.AssignToBitmap(Image1.Picture.Bitmap);
   ima.Free;
+
+  TextLoad := ' ';
+end;
+
+procedure TFormSplash.SetTextLoad(AValue: string);
+begin
+  Label4.Caption := AValue;
+  Application.ProcessMessages;
 end;
 
 end.

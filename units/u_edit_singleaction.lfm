@@ -6,7 +6,7 @@ object FormEditSingleAction: TFormEditSingleAction
   Width = 521
   Anchors = [akLeft]
   BorderIcons = [biSystemMenu]
-  BorderStyle = bsNone
+  BorderStyle = bsSingle
   ClientHeight = 435
   ClientWidth = 521
   Color = 5596774
@@ -15,6 +15,7 @@ object FormEditSingleAction: TFormEditSingleAction
   OnDestroy = FormDestroy
   OnKeyUp = FormKeyUp
   OnShow = FormShow
+  Position = poMainFormCenter
   LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
@@ -25,21 +26,6 @@ object FormEditSingleAction: TFormEditSingleAction
     Brush.Color = 2736090
     Brush.Style = bsClear
     Pen.Color = 247036
-  end
-  object BCancel: TSpeedButton
-    AnchorSideTop.Control = Owner
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    Left = 496
-    Height = 24
-    Top = 1
-    Width = 24
-    Anchors = [akTop, akRight]
-    BorderSpacing.Top = 1
-    BorderSpacing.Right = 1
-    Images = DataModule1.ImageList1
-    ImageIndex = 2
-    OnClick = BOkClick
   end
   object BOk: TSpeedButton
     AnchorSideRight.Control = Owner
@@ -61,7 +47,6 @@ object FormEditSingleAction: TFormEditSingleAction
   end
   object NB: TNotebook
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = BCancel
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
@@ -70,7 +55,7 @@ object FormEditSingleAction: TFormEditSingleAction
     Height = 381
     Top = 27
     Width = 517
-    PageIndex = 5
+    PageIndex = 1
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 2
     BorderSpacing.Top = 2
@@ -347,6 +332,7 @@ object FormEditSingleAction: TFormEditSingleAction
           Width = 64
           BorderSpacing.Top = 2
           Color = 1644825
+          DecimalPlaces = 3
           Font.Color = 15395562
           Font.Height = -11
           Font.Style = [fsBold]
@@ -455,6 +441,7 @@ object FormEditSingleAction: TFormEditSingleAction
           Width = 64
           BorderSpacing.Top = 5
           Color = 1644825
+          DecimalPlaces = 3
           Font.Color = 15395562
           Font.Height = -11
           Font.Style = [fsBold]
@@ -603,6 +590,7 @@ object FormEditSingleAction: TFormEditSingleAction
           Width = 64
           BorderSpacing.Top = 2
           Color = 1644825
+          DecimalPlaces = 3
           Font.Color = 15395562
           Font.Height = -11
           Font.Style = [fsBold]

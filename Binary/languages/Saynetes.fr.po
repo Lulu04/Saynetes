@@ -1000,8 +1000,8 @@ msgid "Add this sequence"
 msgstr "Ajouter cette séquence"
 
 #: tformsplash.label3.caption
-msgid "Loading program, please wait"
-msgstr "Chargement du programme, veuillez patienter"
+msgid "Please wait"
+msgstr "Veuillez patienter"
 
 #: tformstartupwizard.caption
 msgid "StartUp Wizard"
@@ -1620,10 +1620,9 @@ msgid "Zoom on selection"
 msgstr "Zoom sur la sélection"
 
 #: tframesequencer.mi_stepalignsteps.caption
-#, fuzzy
 msgctxt "tframesequencer.mi_stepalignsteps.caption"
 msgid "Align..."
-msgstr "Alignement..."
+msgstr "Aligner..."
 
 #: tframesequencer.mi_stepmodifylength.caption
 msgid "Change duration..."
@@ -2689,6 +2688,10 @@ msgstr "Activation du"
 msgid "Error"
 msgstr "Erreur"
 
+#: u_resource_string.serrorfoundinprojectsequences
+msgid "Error(s) found in the project sequences. Please check"
+msgstr "Des erreurs ont été trouvés dans les séquences du project. Veuillez vérifier svp"
+
 #: u_resource_string.serrorloadingplaylist
 msgid "Error while opening this playlist"
 msgstr "Erreur lors du chargement de la playlist"
@@ -2985,6 +2988,22 @@ msgstr "Niveau max"
 msgctxt "u_resource_string.slevelmin"
 msgid "Level min"
 msgstr "Niveau min"
+
+#: u_resource_string.sloadingcursorimage
+msgid "loading DMX cursor images"
+msgstr "chargement des images des curseurs DMX"
+
+#: u_resource_string.sloadingdmxchannelicon
+msgid "loading DMX channel icons"
+msgstr "chargement des icones de canaux DMX"
+
+#: u_resource_string.sloadingfixtureimage
+msgid "loading DMX fixture images"
+msgstr "chargement des images d'appareils DMX"
+
+#: u_resource_string.sloadingprogramicon
+msgid "loading program icons"
+msgstr "chargement des icones du programme"
 
 #: u_resource_string.sloop
 msgid "Loop"
@@ -3824,4 +3843,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-
