@@ -125,21 +125,21 @@ const
    CMD_UNKNOW = 0;
 
    // TOP AUDIO
-   CMD_AUDIO_PLAY           =  1    ;  // AUDIOLECTURE IDaudio volume panning
+   CMD_AUDIO_PLAY           =  1    ;  // CMD_AUDIO_PLAY IDaudio volume panning
    TITLECMD_AUDIO_PLAY      = 1001  ;
-   CMD_AUDIO_STOP           =  2    ;  // AUDIOSTOP IDaudio
+   CMD_AUDIO_STOP           =  2    ;  // CMD_AUDIO_STOP IDaudio
    TITLECMD_AUDIO_STOP      = 1002  ;
-   CMD_AUDIO_PAUSE          =  3    ;  // AUDIOPAUSE IDaudio
+   CMD_AUDIO_PAUSE          =  3    ;  // CMD_AUDIO_PAUSE IDaudio
    TITLECMD_AUDIO_PAUSE     = 1003  ;
-   CMD_AUDIO_FADEIN         =  4    ;  // AUDIOFADEIN IDaudio volume duration IDcurve
+   CMD_AUDIO_FADEIN         =  4    ;  // CMD_AUDIO_FADEIN IDaudio volume duration IDcurve
    TITLECMD_AUDIO_FADEIN    = 1004  ;
-   CMD_AUDIO_FADEOUT        =  5    ;  // AUDIOFADEOUT IDaudio duration IDcurve
+   CMD_AUDIO_FADEOUT        =  5    ;  // CMD_AUDIO_FADEOUT IDaudio duration IDcurve
    TITLECMD_AUDIO_FADEOUT   = 1005  ;
-   CMD_AUDIO_SETVOLUME      =  6    ;  // AUDIOFIXEVOLUME IDaudio volume duration IDcurve
+   CMD_AUDIO_SETVOLUME      =  6    ;  // CMD_AUDIO_SETVOLUME IDaudio volume duration IDcurve
    TITLECMD_AUDIO_SETVOLUME = 1006  ;
-   CMD_AUDIO_SETPAN         =  7    ;  // AUDIOFIXEPAN IDaudio panning duration IDcurve
+   CMD_AUDIO_SETPAN         =  7    ;  // CMD_AUDIO_SETPAN IDaudio panning duration IDcurve
    TITLECMD_AUDIO_SETPAN    = 1007  ;
-   CMD_AUDIO_SETPITCH       =  8    ;  // AUDIOFIXEFREQ IDaudio frequence duration IDcurve
+   CMD_AUDIO_SETPITCH       =  8    ;  // CMD_AUDIO_SETPITCH IDaudio frequence duration IDcurve
    TITLECMD_AUDIO_SETPITCH  = 1008  ;
 
    TITLECMD_AUDIO_APPLYFX = 1020; // TITLECMD_AUDIO_APPLYFX  IDaudio  dry/wet  EffectCount
