@@ -1,4 +1,5 @@
 {"version":1,"strings":[
 {"hash":11379539,"name":"tformsplash.label1.caption","sourcebytes":[83,97,121,110,195,168,116,101,115],"value":"Sayn\u00E8tes"},
-{"hash":56482420,"name":"tformsplash.label3.caption","sourcebytes":[76,111,97,100,105,110,103,32,112,114,111,103,114,97,109,44,32,112,108,101,97,115,101,32,119,97,105,116],"value":"Loading program, please wait"}
+{"hash":153156996,"name":"tformsplash.label3.caption","sourcebytes":[80,108,101,97,115,101,32,119,97,105,116],"value":"Please wait"},
+{"hash":5404860,"name":"tformsplash.label4.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
 ]}

@@ -14,6 +14,11 @@ resourcestring
   SCredits='Credits';
   SIconAppBy='Application icon by';
 
+  SLoadingFixtureImage='loading DMX fixture images';
+  SLoadingCursorImage='loading DMX cursor images';
+  SLoadingProgramIcon='loading program icons';
+  SLoadingDmxChannelIcon='loading DMX channel icons';
+
   SEditMode='EDIT MODE';
   SShowMode='SHOW MODE';
   SEntering='Entering';
@@ -192,6 +197,7 @@ resourcestring
   SFileIsNotAProject='This file is not a SAYNÈTE project';
   SFailToLoadTheProject='Fail to load the project';
   SFailToSaveTheProject='Fail to save the project';
+  SErrorFoundInProjectSequences='Error(s) found in the project sequences. Please check';
   SFailToCreateDirectoryNeededByTheProject='Fail to create the directory needed by the project';
   SPleaseNoSpaceOrSpecialCharacters='please no space or special characters';
   SPleaseNoSpecialCharacters='please no special characters';

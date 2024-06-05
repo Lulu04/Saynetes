@@ -35,7 +35,8 @@ var
 
 implementation
 
-uses u_logfile, u_mainform, u_apputils, utilitaire_bgrabitmap, BGRABitmap;
+uses u_logfile, u_mainform, u_apputils, form_splash, u_resource_string,
+  utilitaire_bgrabitmap, BGRABitmap;
 
 {$R *.lfm}
 
@@ -80,6 +81,8 @@ end;
 
 procedure TDataModule1.RedrawImageForChannelTree;
 begin
+  FormSplash.TextLoad := SLoadingDmxChannelIcon;
+
   ILChannelType.BeginUpdate;
   ILChannelType.Clear;
   ILChannelType.Width := FormMain.ScaleDesignToForm(20);
@@ -145,6 +148,8 @@ end;
 
 procedure TDataModule1.RedrawImageForProgramButtons;
 begin
+  FormSplash.TextLoad := SLoadingProgramIcon;
+
   ImageList1.BeginUpdate;
   ImageList1.Clear;
   ImageList1.Width := FormMain.ScaleDesignToForm(20);
