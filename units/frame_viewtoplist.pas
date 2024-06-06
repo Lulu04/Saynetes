@@ -7,6 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, StdCtrls, Types, LCLType,
   LCLTranslator, ExtCtrls, Menus,
+  BGRABitmap, BGRABitmapTypes,
   u_list_top;
 
 type
@@ -41,6 +42,7 @@ type
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseUp(Sender: TObject; Button: TMouseButton;
       {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
+    procedure LBSelectionChange(Sender: TObject; User: boolean);
     procedure MIDeleteClick(Sender: TObject);
     procedure MIDuplicateClick(Sender: TObject);
     procedure MIEditClick(Sender: TObject);
@@ -65,12 +67,14 @@ type
     FMouseOrigin: TPoint;
     FLeftClickedIndex: integer;
   private
+    FErrorImage: TBGRABitmap;
     FNameFontHeight,
     FInfoFontHeight: integer;
     function GetItemHeight: integer;
     procedure SetItemHeight(AValue: integer);
   public
     constructor Create(TheOwner: TComponent); override;
+    destructor Destroy; override;
     procedure EraseBackground({%H-}DC: HDC); override;
     procedure ProcessKeyDown(var Key: Word; {%H-}Shift: TShiftState);
     procedure ProcessKeyUp(var Key: Word; {%H-}Shift: TShiftState);
@@ -94,8 +98,8 @@ type
 implementation
 
 uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
-  u_utils, u_audio_manager, u_mainform, u_common, Graphics,
-  Dialogs, LCLHelper, Math;
+  u_audio_manager, u_mainform, u_common, u_apputils, Graphics,
+  Dialogs, LCLHelper, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -104,7 +108,7 @@ uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
 procedure TFrameViewTopList.LBDrawItem(Control: TWinControl; Index: Integer;
   ARect: TRect; State: TOwnerDrawState);
 var seq: TSequence;
-  i, y, w: integer;
+  i, y, w, xx: integer;
   p: TPoint;
   SF: double;
 begin
@@ -158,21 +162,25 @@ begin
    seq := Sequences.GetTopByID( LB.Items.Strings[Index].ToInteger );
    if seq <> NIL then
    begin
-     if seq.Running then
-     begin
+     // render error icon
+     if seq.HaveError then begin
+       FErrorImage.Draw(LB.Canvas, aRect.Left, aRect.Top+FNameFontHeight-FErrorImage.Height, False);
+       xx := aRect.Left + FErrorImage.Width + ScaleDesignToForm(2);
+     end else xx := aRect.Left + ScaleDesignToForm(8);
+
+     if seq.Running then begin
        Font.Color := $0000FFFF;
        Font.Style := [fsBold];
-     end
-     else
-     begin
+     end else begin
        Font.Color := $00EAEAEA;
        Font.Style := [];
      end;
+
      // Render name
      Font.Height := FNameFontHeight;
-     TextOut( aRect.Left+8, aRect.Top, ExtractFileName(seq.Name));
+     TextOut(xx, aRect.Top, ExtractFileName(seq.Name));
 
-     y := aRect.Bottom-FInfoFontHeight;
+     y := aRect.Bottom - FInfoFontHeight;
      Font.Height := FInfoFontHeight;
      Font.Color := $00EAEAEA;
      // render looped state
@@ -292,6 +300,20 @@ begin
    FLeftClickedIndex := -1;
    LB.Invalidate;
  end;
+end;
+
+procedure TFrameViewTopList.LBSelectionChange(Sender: TObject; User: boolean);
+var i: integer;
+  seq: TSequence;
+begin
+  if LB.ItemIndex = -1 then exit;
+  if not TryStrToInt(LB.GetSelectedText, i) then exit;
+
+  seq := Sequences.GetTopByID(i);
+  if seq = NIL then exit;
+
+  if seq.HaveError then LB.Hint := seq.ErrorMessage
+    else LB.Hint := '';
 end;
 
 procedure TFrameViewTopList.MIDeleteClick(Sender: TObject);
@@ -513,6 +535,14 @@ begin
   ItemHeight := 25;
   FItemIndexUnderMouse := -1;
   FLeftClickedIndex := -1;
+
+  FErrorImage := SVGFileToBGRABitmap(GetAppIconImagesFolder+'SequenceErrorSymbol.svg', -1, ScaleDesignToForm(16));
+end;
+
+destructor TFrameViewTopList.Destroy;
+begin
+  FreeAndNil(FErrorImage);
+  inherited Destroy;
 end;
 
 procedure TFrameViewTopList.ProcessKeyDown(var Key: Word; Shift: TShiftState);

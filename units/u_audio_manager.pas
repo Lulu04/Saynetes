@@ -146,6 +146,7 @@ type
     function IndexToID(aIndex: integer): TSoundID;
     function GetSoundByIndex(aIndex: integer): TALSSound;
     function GetSoundByID(aID: TSoundID): TALSSound;
+    function GetSoundByStrID(aID: string): TALSSound;
     function GetSoundFileNameByIndex(aIndex: TSoundID): string;
     function GetSoundFileNameByID(aID: TSoundID): string;
     function GetLevel(aID: TSoundID): single;
@@ -332,6 +333,13 @@ begin
       end;
     Result := NIL;
 //  end;
+end;
+
+function TSoundManager.GetSoundByStrID(aID: string): TALSSound;
+var i: integer;
+begin
+  if not TryStrToInt(aID, i) then Result := NIL
+    else Result := GetSoundByID(i);
 end;
 
 function TSoundManager.GetSoundFileNameByIndex(aIndex: TSoundID): string;

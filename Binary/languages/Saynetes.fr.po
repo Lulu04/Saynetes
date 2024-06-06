@@ -2230,6 +2230,10 @@ msgstr "Prédéfinis pour le suiveur audio"
 msgid "Audio Effect presets"
 msgstr "Prédéfinis des effets audio"
 
+#: u_resource_string.saudionotfound
+msgid "Audio not found"
+msgstr "Audio non trouvé"
+
 #: u_resource_string.saudiopause
 msgid "AUDIO - PAUSE"
 msgstr "AUDIO - PAUSE"
@@ -2262,6 +2266,94 @@ msgstr "Auteurs"
 msgctxt "u_resource_string.sbacktobegin"
 msgid "BACK TO THE BEGINNING"
 msgstr "REVENIR AU DÉBUT"
+
+#: u_resource_string.sbadamplitude
+msgid "bad amplitude"
+msgstr "valeur d'amplitude erronée"
+
+#: u_resource_string.sbadaudioeffectcountvalue
+msgid "effect count is not equal to 1, 2 or 3"
+msgstr "le nombre d'effets n'est pas égal à 1, 2 ou 3"
+
+#: u_resource_string.sbadaudiopresetindex
+msgid "bad preset index"
+msgstr "index de prédéfini erroné"
+
+#: u_resource_string.sbadbrightness
+msgid "bad max brightness value"
+msgstr "luminosité max erronée"
+
+#: u_resource_string.sbadcolorvalue
+msgid "bad color value"
+msgstr "couleur erronée"
+
+#: u_resource_string.sbaddrywetvalue
+msgid "bad dry/wet value"
+msgstr "valeur dry/wet erronée"
+
+#: u_resource_string.sbaddurationmax
+msgid "bad max duration value"
+msgstr "durée max erronée"
+
+#: u_resource_string.sbaddurationmin
+msgid "bad min duration value"
+msgstr "durée min erronée"
+
+#: u_resource_string.sbadeffecttypevalue
+msgid "bad effect type value"
+msgstr "type d'effet erroné"
+
+#: u_resource_string.sbadgain
+msgid "bad gain value"
+msgstr "valeur de gain erronée"
+
+#: u_resource_string.sbadlevelmax
+msgid "bad max level value"
+msgstr "niveau max erroné"
+
+#: u_resource_string.sbadlevelmin
+msgid "bad min level value"
+msgstr "niveau min erroné"
+
+#: u_resource_string.sbadmaxpercent
+msgid "bad percentage max value"
+msgstr "pourcentage max erroné"
+
+#: u_resource_string.sbadminpercent
+msgid "bad percentage min value"
+msgstr "pourcentage min erroné"
+
+#: u_resource_string.sbadpanvalue
+msgid "bad pan value"
+msgstr "valeur de pan erronée"
+
+#: u_resource_string.sbadpercentvalue
+msgid "percentage error"
+msgstr "pourcentage erroné"
+
+#: u_resource_string.sbadpitchvalue
+msgid "bad pitch value"
+msgstr "valeur de pitch erronée"
+
+#: u_resource_string.sbadsoften
+msgid "bad soften value"
+msgstr "valeur d'adoucissement erronée"
+
+#: u_resource_string.sbadstretchtimevalue
+msgid "bad stretch time value"
+msgstr "valeur d'étirement du temps erronée"
+
+#: u_resource_string.sbadvelocitycurvevalue
+msgid "bad velocity curve value"
+msgstr "index de courbe de vélocité erroné"
+
+#: u_resource_string.sbadvolumevalue
+msgid "bad volume value"
+msgstr "valeur de volume erronée"
+
+#: u_resource_string.sbadwaittime
+msgid "bad wait time value"
+msgstr "temps d'attente erroné"
 
 #: u_resource_string.sbarcoloredled
 msgid "Bar colored LED"
@@ -2365,6 +2457,10 @@ msgstr "Varier le volume à"
 #: u_resource_string.schannel
 msgid "Channel"
 msgstr "Canal"
+
+#: u_resource_string.schannelnotfound
+msgid "channel not found"
+msgstr "canal non trouvé"
 
 #: u_resource_string.schannels
 msgid "channels"
@@ -2646,6 +2742,10 @@ msgctxt "u_resource_string.sdurationinsecond"
 msgid "Duration in second"
 msgstr "Durée en seconde"
 
+#: u_resource_string.sdurationisnegative
+msgid "duration have negative value"
+msgstr "la durée a une valeur négative"
+
 #: u_resource_string.sedit
 msgid "Edit"
 msgstr "Modifier"
@@ -2813,6 +2913,10 @@ msgstr "Appareil"
 #: u_resource_string.sfixturefilealreadyexists
 msgid "There is already a fixture with the same name. The new one is renamed as"
 msgstr "Il y a déjà un appareil avec ce nom de fichier. Le nouveau est renommé en"
+
+#: u_resource_string.sfixturenotfound
+msgid "fixture not found"
+msgstr "appareil non trouvé"
 
 #: u_resource_string.sfixturenotinlibrary
 msgid "fixture not in library"
@@ -3721,6 +3825,10 @@ msgstr "Univers"
 msgid "Universe full or not enough free adress available"
 msgstr "L'univers est plein ou il n'y a pas assez d'adresses libres"
 
+#: u_resource_string.suniversenotfound
+msgid "universe not found"
+msgstr "univers non trouvé"
+
 #: u_resource_string.sunknowcommand
 msgid "UNKNOW COMMAND !!"
 msgstr "COMMANDE INCONNUE !!"
@@ -3748,6 +3856,10 @@ msgstr "!! PRESET INCONNU !!"
 #: u_resource_string.sunknowsequence
 msgid "UNKNOW SEQUENCE !!"
 msgstr "SEQUENCE INEXISTANTE !!"
+
+#: u_resource_string.sunrecognizedaction
+msgid "unrecognized action"
+msgstr "action non reconnue"
 
 #: u_resource_string.supdate
 msgctxt "u_resource_string.supdate"
@@ -3826,6 +3938,10 @@ msgstr "Voulez-vous en créer un ?"
 #: u_resource_string.swrittenby
 msgid "Written by"
 msgstr "Écrit par"
+
+#: u_resource_string.swrongnumberofparameter
+msgid "wrong number of parameters"
+msgstr "nombre de paramètres erroné"
 
 #: u_resource_string.syes
 msgid "Yes"

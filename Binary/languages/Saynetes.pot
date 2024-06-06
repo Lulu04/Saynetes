@@ -2139,6 +2139,10 @@ msgstr ""
 msgid "Audio Effect presets"
 msgstr ""
 
+#: u_resource_string.saudionotfound
+msgid "Audio not found"
+msgstr ""
+
 #: u_resource_string.saudiopause
 msgid "AUDIO - PAUSE"
 msgstr ""
@@ -2169,6 +2173,94 @@ msgstr ""
 
 #: u_resource_string.sbacktobegin
 msgid "BACK TO THE BEGINNING"
+msgstr ""
+
+#: u_resource_string.sbadamplitude
+msgid "bad amplitude"
+msgstr ""
+
+#: u_resource_string.sbadaudioeffectcountvalue
+msgid "effect count is not equal to 1, 2 or 3"
+msgstr ""
+
+#: u_resource_string.sbadaudiopresetindex
+msgid "bad preset index"
+msgstr ""
+
+#: u_resource_string.sbadbrightness
+msgid "bad max brightness value"
+msgstr ""
+
+#: u_resource_string.sbadcolorvalue
+msgid "bad color value"
+msgstr ""
+
+#: u_resource_string.sbaddrywetvalue
+msgid "bad dry/wet value"
+msgstr ""
+
+#: u_resource_string.sbaddurationmax
+msgid "bad max duration value"
+msgstr ""
+
+#: u_resource_string.sbaddurationmin
+msgid "bad min duration value"
+msgstr ""
+
+#: u_resource_string.sbadeffecttypevalue
+msgid "bad effect type value"
+msgstr ""
+
+#: u_resource_string.sbadgain
+msgid "bad gain value"
+msgstr ""
+
+#: u_resource_string.sbadlevelmax
+msgid "bad max level value"
+msgstr ""
+
+#: u_resource_string.sbadlevelmin
+msgid "bad min level value"
+msgstr ""
+
+#: u_resource_string.sbadmaxpercent
+msgid "bad percentage max value"
+msgstr ""
+
+#: u_resource_string.sbadminpercent
+msgid "bad percentage min value"
+msgstr ""
+
+#: u_resource_string.sbadpanvalue
+msgid "bad pan value"
+msgstr ""
+
+#: u_resource_string.sbadpercentvalue
+msgid "percentage error"
+msgstr ""
+
+#: u_resource_string.sbadpitchvalue
+msgid "bad pitch value"
+msgstr ""
+
+#: u_resource_string.sbadsoften
+msgid "bad soften value"
+msgstr ""
+
+#: u_resource_string.sbadstretchtimevalue
+msgid "bad stretch time value"
+msgstr ""
+
+#: u_resource_string.sbadvelocitycurvevalue
+msgid "bad velocity curve value"
+msgstr ""
+
+#: u_resource_string.sbadvolumevalue
+msgid "bad volume value"
+msgstr ""
+
+#: u_resource_string.sbadwaittime
+msgid "bad wait time value"
 msgstr ""
 
 #: u_resource_string.sbarcoloredled
@@ -2272,6 +2364,10 @@ msgstr ""
 
 #: u_resource_string.schannel
 msgid "Channel"
+msgstr ""
+
+#: u_resource_string.schannelnotfound
+msgid "channel not found"
 msgstr ""
 
 #: u_resource_string.schannels
@@ -2550,6 +2646,10 @@ msgctxt "u_resource_string.sdurationinsecond"
 msgid "Duration in second"
 msgstr ""
 
+#: u_resource_string.sdurationisnegative
+msgid "duration have negative value"
+msgstr ""
+
 #: u_resource_string.sedit
 msgid "Edit"
 msgstr ""
@@ -2715,6 +2815,10 @@ msgstr ""
 
 #: u_resource_string.sfixturefilealreadyexists
 msgid "There is already a fixture with the same name. The new one is renamed as"
+msgstr ""
+
+#: u_resource_string.sfixturenotfound
+msgid "fixture not found"
 msgstr ""
 
 #: u_resource_string.sfixturenotinlibrary
@@ -3617,6 +3721,10 @@ msgstr ""
 msgid "Universe full or not enough free adress available"
 msgstr ""
 
+#: u_resource_string.suniversenotfound
+msgid "universe not found"
+msgstr ""
+
 #: u_resource_string.sunknowcommand
 msgid "UNKNOW COMMAND !!"
 msgstr ""
@@ -3643,6 +3751,10 @@ msgstr ""
 
 #: u_resource_string.sunknowsequence
 msgid "UNKNOW SEQUENCE !!"
+msgstr ""
+
+#: u_resource_string.sunrecognizedaction
+msgid "unrecognized action"
 msgstr ""
 
 #: u_resource_string.supdate
@@ -3721,6 +3833,10 @@ msgstr ""
 
 #: u_resource_string.swrittenby
 msgid "Written by"
+msgstr ""
+
+#: u_resource_string.swrongnumberofparameter
+msgid "wrong number of parameters"
 msgstr ""
 
 #: u_resource_string.syes

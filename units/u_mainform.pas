@@ -87,6 +87,9 @@ type
 
     procedure UpdateWidgetState;
     procedure UpdateLayout;
+
+    // called when user delete an audio file, a dmx fixture or an universe
+    procedure CheckSequenceError;
 end;
 
 var
@@ -430,6 +433,12 @@ procedure TFormMain.UpdateLayout;
 begin
   FrameMainAudio1.UpdateLayout;
   FrameMainSequence1.UpdateLayout;
+end;
+
+procedure TFormMain.CheckSequenceError;
+begin
+  if Sequences.CheckErrorInSequences then
+    FrameMainSequence1.FrameViewTopList1.LB.Invalidate;
 end;
 
 

@@ -191,7 +191,7 @@ const
    CMD_DMX_AUDIOFOLLOWER           =  208; // CMD_DMX_AUDIOFOLLOWER IDuniverse IDFixture ChanIndex IDaudio Gain MaxPercent SoftenTime
    TITLECMD_DMX_AUDIOFOLLOWER      = 1208; // TITLECMD_DMX_AUDIOFOLLOWER IDaudio Gain MaxPercent SoftenTime
                                            // Gain: single  range -1.0 to 3.0
-                                           // MaxPercent: single  range 0.0 to 1.1    %
+                                           // MaxPercent: single  range 0.0 to 1.0    %
                                            // SoftenTime: single   range 0.1 to 1.0   seconds
 
    CMD_DMX_FLASH      =  209; // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex
@@ -204,8 +204,8 @@ const
    TITLECMD_DMX_STOPEFFECTRGB = 1210; // TITLECMD_DMX_STOPEFFECTRGB
 
    CMD_DMX_COPYCHANNEL        =  211; // CMD_DMX_COPYCHANNEL SourceIDuniverse SourceIDFixture SourceChanIndex
+                                      //                     TargetIDUniverse TargetIDFixture TargetChanIndex
    TITLECMD_DMX_COPYCHANNEL   = 1211; // TITLECMD_DMX_COPYCHANNEL SourceIDuniverse SourceIDFixture SourceChanIndex
-                                      //                TargetIDUniverse TargetIDFixture TargetChanIndex
 
    TITLECMD_DMX_COPYRGB  = 1212; // TITLECMD_DMX_COPYRGB SourceIDuniverse SourceIDFixture
    CMD_DMX_COPYRGB       =  212; // CMD_DMX_COPYRGB SourceIDuniverse SourceIDFixture TargetIDUniverse TargetIDFixture
