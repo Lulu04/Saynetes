@@ -35,9 +35,12 @@ object FrameViewTopList: TFrameViewTopList
     OnMouseLeave = LBMouseLeave
     OnMouseMove = LBMouseMove
     OnMouseUp = LBMouseUp
+    OnSelectionChange = LBSelectionChange
     Options = []
+    ParentShowHint = False
     ParentFont = False
     PopupMenu = PopupMenu1
+    ShowHint = True
     Style = lbOwnerDrawFixed
     TabOrder = 0
     TabStop = False

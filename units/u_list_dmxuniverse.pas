@@ -282,6 +282,7 @@ type
 
      procedure UnselectAllChannels;
      function GetChannelByIndex(aChanIndex: integer): TDMXChannel;
+     function GetChannelByStrIndex(const aStrChanIndex: string): TDMXChannel;
      procedure SetAllChannelsToZero;
 
      procedure Update(const aElapsedTime: single);
@@ -360,6 +361,7 @@ type
                                     const aFixtureLocation: TFixtureLibraryLocation): TDmxFixture;
 
      function Fixture_GetByID(aID: cardinal): TDmxFixture;
+     function GetFixtureByStrID(const aStrID: string): TDmxFixture;
      function Fixture_WhichContainsThisAdress(aAdress: TDMXAdress): TDMXFixture;
 
      function  Fixture_GetByAdress(aAdress: TDMXAdress): TDmxFixture;
@@ -433,6 +435,7 @@ TUniverseManager = class
      procedure Clear;
      function IndexOf(aUniverse: TDMXUniverse): integer;
      function GetUniverseByID(aID: cardinal): TDMXUniverse;
+     function GetUniverseByStrID(const aStrID: string): TDMXUniverse;
      function UniverseIDToUniverseIndex(aID: cardinal): integer;
      function Add(const aName: string): TDmxUniverse;
      procedure Delete(aIndex: integer);
@@ -1276,6 +1279,13 @@ begin
     Result := Channels[aChanIndex];
 end;
 
+function TDMXFixture.GetChannelByStrIndex(const aStrChanIndex: string): TDMXChannel;
+var index: integer;
+begin
+  if TryStrToInt(aStrChanIndex, index) then Result := GetChannelByIndex(index)
+    else Result := NIL;
+end;
+
 procedure TDMXFixture.SetAllChannelsToZero;
 var chan: TDMXChannel;
 begin
@@ -1514,6 +1524,13 @@ begin
    end;
 
  Result := NIL;
+end;
+
+function TDmxUniverse.GetFixtureByStrID(const aStrID: string): TDmxFixture;
+var i: integer;
+begin
+  if TryStrToInt(aStrID, i) then Result := Fixture_GetByID(i)
+    else Result := NIL;
 end;
 
 function TDmxUniverse.Fixture_WhichContainsThisAdress(aAdress: TDMXAdress ): TDMXFixture;
@@ -1949,6 +1966,13 @@ begin
       Result := uni;
       exit;
    end;
+end;
+
+function TUniverseManager.GetUniverseByStrID(const aStrID: string): TDMXUniverse;
+var id: integer;
+begin
+  if TryStrToInt(aStrID, id) then Result := GetUniverseByID(id)
+    else Result := NIL;
 end;
 
 function TUniverseManager.UniverseIDToUniverseIndex(aID: cardinal): integer;

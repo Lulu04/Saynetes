@@ -260,64 +260,68 @@ var t: TStringList;
   badFile: boolean;
   fileVersion: string;
 begin
- Log.AddEmptyLine;
- Log.Info('Loading project '+aFilename);
- t := TStringList.Create;
- try
+  Log.AddEmptyLine;
+  Log.Info('Loading project '+aFilename);
+  t := TStringList.Create;
   try
-    t.LoadFromFile(aFilename);//, TEncoding.UTF8);
+   try
+     t.LoadFromFile(aFilename);//, TEncoding.UTF8);
 
-    // Checks header
-    badFile := t.IndexOf(APPNAME_HEADER) = -1;
-    badFile := badFile or (t.IndexOf(APP_NAME) = -1);
-    badFile := badFile or (t.IndexOf(APPVERSION_HEADER) = -1);
-    k := t.IndexOf(APP_VERSION);
-    badFile := badFile or (k = -1);
-    if badFile then
-    begin
-      Showmess(SFileIsNotAProject+' '+lineending+aFilename, SOk, mtError);
-      Result := FALSE;
-    end
-    else
-    begin
-      fileVersion := t.Strings[k];
-      Log.Info('project''s file version: '+fileVersion, 1);
+     // Checks header
+     badFile := t.IndexOf(APPNAME_HEADER) = -1;
+     badFile := badFile or (t.IndexOf(APP_NAME) = -1);
+     badFile := badFile or (t.IndexOf(APPVERSION_HEADER) = -1);
+     k := t.IndexOf(APP_VERSION);
+     badFile := badFile or (k = -1);
+     if badFile then
+     begin
+       Showmess(SFileIsNotAProject+' '+lineending+aFilename, SOk, mtError);
+       Result := FALSE;
+     end
+     else
+     begin
+       fileVersion := t.Strings[k];
+       Log.Info('project''s file version: '+fileVersion, 1);
 
-      projectfolder := ExtractFileName(aFilename);
-      projectfolder := ChangeFileExt(projectfolder, '');
-      path := ConcatPaths([ExtractFilePath(aFilename), projectfolder]);
-      FAudioStorage.AbsoluteBaseFolder := path;
-      FImageStorage.AbsoluteBaseFolder := path;
-      Log.Info('project storage setting to '+path, 1);
+       projectfolder := ExtractFileName(aFilename);
+       projectfolder := ChangeFileExt(projectfolder, '');
+       path := ConcatPaths([ExtractFilePath(aFilename), projectfolder]);
+       FAudioStorage.AbsoluteBaseFolder := path;
+       FImageStorage.AbsoluteBaseFolder := path;
+       Log.Info('project storage setting to '+path, 1);
 
-      Result := TRUE;
-      SoundManager.Load(t, FAudioStorage.AbsoluteStorageFolder);
+       Result := TRUE;
+       SoundManager.Load(t, FAudioStorage.AbsoluteStorageFolder);
 
-      if not KeepUniverseManager then Result := Result and UniverseManager.Load
-        else Log.Info('Keep the same universes as previous', 1);
+       if not KeepUniverseManager then Result := Result and UniverseManager.Load
+         else Log.Info('Keep the same universes as previous', 1);
 
-      FormDMXGroup.LoadFrom(GetFolderCommonData+COMMON_PROJECT_DMX_GROUP_FILENAME);
-      Sequences.Load(t);
-      Options.FSaveFolder := path;
-      Options.Load;
+       FormDMXGroup.LoadFrom(GetFolderCommonData+COMMON_PROJECT_DMX_GROUP_FILENAME);
 
-      // push the last used project in program's preferences file
-      ProgramOptions.LockSave;
-      ProgramOptions.LastProjectFileNameUsed := aFilename;
-      ProgramOptions.WorkingProject := aFilename;
-      ProgramOptions.WorkingFolder := ExtractFilePath(aFilename);
-      ProgramOptions.UnlockSave;
-      ProgramOptions.Save;
+       Sequences.Load(t);
+       if Sequences.CheckErrorInSequences then
+         ShowMess(SErrorFoundInProjectSequences, SOk, mtWarning);
 
-      Log.AddEmptyLine;
-    end;
-  except
-    Showmess(SFailToLoadTheProject+' '+lineending+aFilename, SOk, mtError);
-    Result := FALSE;
+       Options.FSaveFolder := path;
+       Options.Load;
+
+       // push the last used project in program's preferences file
+       ProgramOptions.LockSave;
+       ProgramOptions.LastProjectFileNameUsed := aFilename;
+       ProgramOptions.WorkingProject := aFilename;
+       ProgramOptions.WorkingFolder := ExtractFilePath(aFilename);
+       ProgramOptions.UnlockSave;
+       ProgramOptions.Save;
+
+       Log.AddEmptyLine;
+     end;
+   except
+     Showmess(SFailToLoadTheProject+' '+lineending+aFilename, SOk, mtError);
+     Result := FALSE;
+   end;
+  finally
+    t.Free;
   end;
- finally
-   t.Free;
- end;
 end;
 
 procedure TSaynetesProject.DoClose;

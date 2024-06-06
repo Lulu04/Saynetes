@@ -94,6 +94,7 @@ begin
   FormMain.FrameViewProjector1.ExitAddMode;
   Project.SetModified;
   UpdateWidgets;
+  FormMain.CheckSequenceError;
 end;
 
 procedure TFrameMainAddFixture.BDeviceManagerClick(Sender: TObject);

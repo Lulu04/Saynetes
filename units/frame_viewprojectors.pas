@@ -1173,12 +1173,10 @@ begin
 
   F := TFormAskIfShiftAdress.Create(NIL);
   try
-    if F.ShowModal = mrOk then
-    begin
+    if F.ShowModal = mrOk then begin
       FrameViewDMXCursors1.Clear;
 
-      for i:=0 to High(FSelected) do
-      begin
+      for i:=0 to High(FSelected) do begin
         uni := FSelected[i].Universe;
         uni.Fixture_DeleteByID(FSelected[i].ID, F.ShiftAdress);
       end;
@@ -1187,6 +1185,7 @@ begin
       HidePanelFixtureInfo;
       DoDeleteFixtureEvent;
       Project.SetModified;
+      FormMain.CheckSequenceError;
     end;
   finally
     F.Free;

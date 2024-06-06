@@ -105,7 +105,7 @@ type
 
 implementation
 uses u_utils, u_resource_string, u_project_manager, u_common, u_userdialogs,
-  VelocityCurve, Math;
+  u_mainform, VelocityCurve, Math;
 
 {$R *.lfm}
 
@@ -159,6 +159,7 @@ begin
   begin
     FrameViewAudioList1.DeleteSelected;
     Project.Save;
+    FormMain.CheckSequenceError;
   end;
 end;
 

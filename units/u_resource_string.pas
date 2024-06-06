@@ -471,6 +471,37 @@ resourcestring
   SEditSwitcher='Edit switcher';
   SAddVirtualChannelToMode='Add virtual channel to mode';
 
+// error message for sequences
+  SUnrecognizedAction='unrecognized action';
+  SWrongNumberOfParameter='wrong number of parameters';
+  SAudioNotFound='Audio not found';
+  SBadVolumeValue='bad volume value';
+  SBadPanValue='bad pan value';
+  SBadPitchValue='bad pitch value';
+  SDurationIsNegative='duration have negative value';
+  SBadVelocityCurveValue='bad velocity curve value';
+  SBadDryWetValue='bad dry/wet value';
+  SBadAudioEffectCountValue='effect count is not equal to 1, 2 or 3';
+  SBadEffectTypeValue='bad effect type value';
+  SBadAudioPresetIndex='bad preset index';
+  SBadStretchTimeValue='bad stretch time value';
+  SUniverseNotFound='universe not found';
+  SFixtureNotFound='fixture not found';
+  SChannelNotFound='channel not found';
+  SBadPercentValue='percentage error';
+  SBadMinPercent='bad percentage min value';
+  SBadMaxPercent='bad percentage max value';
+  SBadWaitTime='bad wait time value';
+  SBadSoften='bad soften value';
+  SBadColorValue='bad color value';
+  SBadAmplitude='bad amplitude';
+  SBadGain='bad gain value';
+  SBadBrightness='bad max brightness value';
+  SBadLevelMin='bad min level value';
+  SBadLevelMax='bad max level value';
+  SBadDurationMin='bad min duration value';
+  SBadDurationMax='bad max duration value';
+
 // fixture name
   SOther='Other';
   SPlanConvex='PC';
