@@ -3536,6 +3536,10 @@ msgctxt "u_resource_string.sred"
 msgid "Red"
 msgstr "Rouge"
 
+#: u_resource_string.sredo
+msgid "Redo"
+msgstr "Refaire"
+
 #: u_resource_string.sremoveaudiofilefromproject
 msgid "Remove audio file(s) from project ?"
 msgstr "Supprimer le(s) fichier(s) audio du projet ?"
@@ -3815,6 +3819,10 @@ msgstr "à DROITE"
 #: u_resource_string.sunabletoloadfixturedata
 msgid "Unable to load fixture data..."
 msgstr "Impossible de charger les données de l'appareil..."
+
+#: u_resource_string.sundo
+msgid "Undo"
+msgstr "Annuler"
 
 #: u_resource_string.suniverse
 msgctxt "u_resource_string.suniverse"

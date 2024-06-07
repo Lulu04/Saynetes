@@ -344,24 +344,25 @@ begin
 end;
 
 procedure TFrameViewTopList.MIEditClick(Sender: TObject);
-var t: TSequence;
+var seq: TSequence;
+  flagError: Boolean;
 begin
-  t := SelectedTop;
-  if t = NIL then
-    exit;
+  seq := SelectedTop;
+  if seq = NIL then exit;
+  flagError := seq.HaveError;
 
   FormMain.FrameViewProjector1.FreeOpenGLTextures;
 
-
   FormSequenceEdition := TFormSequenceEdition.Create(Self);
   try
-    FormSequenceEdition.SetModifyMode(t.Name, t.SequencerInfoList, LB.ItemIndex);
-    if FormSequenceEdition.ShowModal = mrOk then
-    begin
-      t.Stop;
-      t.Name := FormSequenceEdition.TopName;
-      t.SequencerInfoList := FormSequenceEdition.SequencerInfoList;
+    FormSequenceEdition.SetModifyMode(seq.Name, seq.SequencerInfoList, LB.ItemIndex);
+    if FormSequenceEdition.ShowModal = mrOk then begin
+      seq.Stop;
+      seq.Name := FormSequenceEdition.TopName;
+      seq.SequencerInfoList := FormSequenceEdition.SequencerInfoList;
       Project.SetModified;
+
+      if flagError then FormMain.CheckSequenceError;
     end;
   finally
     FormSequenceEdition.Free;

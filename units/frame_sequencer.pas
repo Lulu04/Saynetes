@@ -7,6 +7,7 @@ interface
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   Menus, StdCtrls, Buttons, LCLTranslator,
+  BGRABitmap, BGRABitmapTypes, BGRAOpenGL,
   frame_bglvirtualscreen_sequencer,
   undo_redo_manager, BGLVirtualScreen,
   u_common;
@@ -36,8 +37,11 @@ type
   TSequenceStep = class(TCustomSequencerStep)
   private
     FCmdList: TCmdList;
+    FErrorMessage: string;
+    FHaveError: boolean;
     procedure SetCmdList(AValue: TCmdList);
   public
+    procedure Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext); override;
     //  '\' is the separator for ID, Caption, TimePos, Top, Group and Cmds.
     function Serialize: string; override;
     procedure Deserialize( const s: string ); override;
@@ -45,6 +49,11 @@ type
     //  ';' is the separator between a command and another
     //  ' ' is the separator between command parameters
     property CmdList: TCmdList read FCmdList write SetCmdList;
+  public
+    // check the cmd list and
+    procedure CheckCmdError;
+    property HaveError: boolean read FHaveError write FHaveError;
+    property ErrorMessage: string read FErrorMessage write FErrorMessage;
   end;
 
 
@@ -118,6 +127,7 @@ type
     function DoMergeStepEvent: TCustomSequencerStep; override;
     procedure DoMoveStepEvent; override;
     procedure DoUserChangeDurationEvent; override;
+    function DoNeedErrorSymbolCallback: TBGRABitmap; override;
   private
     procedure ProcessPlayerTimeElapsed(Sender: TObject);
     procedure ProcessPlayerEnd(Sender: TObject);
@@ -165,9 +175,8 @@ type
 implementation
 uses u_modify_time, u_move_step, u_change_complex_step_length,
   u_resource_string, u_top_player, u_userdialogs, u_edit_otheraction, u_helper,
-  u_add_action_audio, lclintf, LCLType, VelocityCurve, BGRABitmap,
-  BGRABitmapTypes, u_utils, u_edit_sequence,
-  u_add_action_dmx, u_logfile;
+  u_add_action_audio, lclintf, LCLType, VelocityCurve, u_utils, u_edit_sequence,
+  u_add_action_dmx, u_logfile, u_apputils, utilitaire_bgrabitmap;
 var
   FWorkingStep: TSequenceStep;
 
@@ -198,6 +207,17 @@ begin
   if FCmdList = AValue then Exit;
   FCmdList := AValue;
  // Duration := FCmdList.ComputeCmdListDuration;
+end;
+
+procedure TSequenceStep.Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext);
+var xx: Integer;
+begin
+  inherited Redraw(aParentFrame, aBGLContext);
+
+  if not HaveError then exit;
+  xx := aParentFrame.TimePosToAbscissa(TimePos);
+  if (aParentFrame.TextureErrorSymbol <> NIL) then
+    aParentFrame.TextureErrorSymbol.Draw(xx, Top);
 end;
 
 function TSequenceStep.Serialize: string;
@@ -236,6 +256,14 @@ begin
  inc(k);
  CmdList := A[k];
  inc(k);
+end;
+
+procedure TSequenceStep.CheckCmdError;
+begin
+  FHaveError := False;
+  FErrorMessage := '';
+  if FCmdList = '' then exit;
+  FHaveError := FCmdList.HaveError(FErrorMessage);
 end;
 
   { TFrameSequencer }
@@ -578,6 +606,11 @@ begin
   inherited DoUserChangeDurationEvent;
 end;
 
+function TFrameSequencer.DoNeedErrorSymbolCallback: TBGRABitmap;
+begin
+  Result := SVGFileToBGRABitmap(GetAppIconImagesFolder+'SequenceErrorSymbol.svg', -1, StepFont.FullHeight);
+end;
+
 procedure TFrameSequencer.Notify(const aSteps: ArrayOfCustomSequencerStep;
     aAction: TSequencerNotification; const aDescription: string);
 var s: TStepDataList;
@@ -761,6 +794,7 @@ begin
   for i:=2 to High(A) do begin
     step := TSequenceStep.Create;
     step.Deserialize( A[i] );
+    step.CheckCmdError;
     RawAdd(step, FALSE);
   end;
   NeedStepsWidthUpdate;
@@ -830,6 +864,7 @@ begin
          RawAdd( step, FALSE );
          step.ID := id_;
          step.UpdateWidth;
+         step.CheckCmdError;
        end else begin
          RawDeleteStepByID( step.ID );
          step.Free;
@@ -840,6 +875,7 @@ begin
        itemToPush.Data := itemToPush.Data + sep + step1.Serialize;
        sep := STEPDATA_SEPARATOR;
        RawReplaceStepByID( step );
+       step.CheckCmdError;
      end;
    end;//case
   end;//while

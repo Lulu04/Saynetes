@@ -76,11 +76,12 @@ type
     function GetTopName: string;
     function GetSequencerInfoList: TSequencerInfoList;
     function GetTopDuration: single;
-    procedure ProcessSelectionChangeEvent( Sender: TObject );
+    procedure ProcessSelectionChangeEvent(Sender: TObject);
     procedure ProcessUndoRedoChangeEvent(Sender: TObject);
     procedure ProcessUserChangeStepDurationEvent(Sender: TObject);
     procedure ProcessOnViewChangeEvent(Sender: TObject);
     procedure ProcessFrameEditString1OnEnterPressed(Sender: TObject);
+    procedure ProcessFrameViewCmdListOnEditedByUserEvent(Sender: TObject);
     procedure SetTopName(AValue: string);
     procedure UpdateWidgetState;
     procedure RemoveFocusFromFrameEditString1;
@@ -133,6 +134,7 @@ begin
 //  FSeq.BGLVirtualScreen1.QueryLoadTextures;
   FSeq.TranslateStrings;
   FSeq.RecomputeVerticalStepsPosition;
+  FSeq.UndoRedoManager.Clear; // because 'RecomputeVerticalStepsPosition' can be undone
 
   UpdateWidgetState;
 end;
@@ -239,6 +241,11 @@ begin
   FSeq.SetFocus;
 end;
 
+procedure TFormSequenceEdition.ProcessFrameViewCmdListOnEditedByUserEvent(Sender: TObject);
+begin
+  FSeq.Redraw;
+end;
+
 procedure TFormSequenceEdition.SetTopName(AValue: string);
 begin
   FrameEditString1.Text := AValue;
@@ -317,6 +324,7 @@ begin
   FrameViewCmdList1.Align := alClient;
   FrameViewCmdList1.ItemHeight := 16;
   FrameViewCmdList1.UpdateMenuEntryFromProjectOptions;
+  FrameViewCmdList1.OnEditedByUser := @ProcessFrameViewCmdListOnEditedByUserEvent;
 
   FrameEditString1 := TFrameEditString.Create(Self);
   FrameEditString1.Parent := Panel4;
