@@ -53,6 +53,7 @@ type
     FLoading: boolean;
     function GetCmdList: TCmdList;
     procedure SetCmdList(AValue: TCmdList);
+    procedure DoCallbackOnEditedByUser;
   private
     FClipBoard: TStringList;
     procedure ClipBoard_CutSelection;
@@ -66,6 +67,7 @@ type
     function GetItemHeight: integer;
     procedure SetItemHeight(AValue: integer);
   private
+    FOnEditedByUser: TNotifyEvent;
     FWorkingStep: TSequenceStep;
     FParentSeq: TFrameSequencer;
   public
@@ -79,6 +81,7 @@ type
     procedure SetWorkingStep(aStep: TSequenceStep; aParentSeq: TFrameSequencer);
 
     property CmdList: TCmdList read GetCmdList write SetCmdList;
+    property OnEditedByUser: TNotifyEvent read FOnEditedByUser write FOnEditedByUser;
 
     property ReadOnly: boolean read FReadOnly write FReadOnly;
     property ItemHeight: integer read GetItemHeight write SetItemHeight;
@@ -912,6 +915,8 @@ begin
 
   LB.DeleteSelected;
   FWorkingStep.CmdList := GetCmdList;
+  FWorkingStep.CheckCmdError;
+  DoCallbackOnEditedByUser;
 end;
 
 procedure TFrameViewCmdList.MIEditClick(Sender: TObject);
@@ -957,6 +962,8 @@ begin
       FWorkingStep.CmdList := GetCmdList; // save changes in the sequence
       FWorkingStep.Duration := FWorkingStep.CmdList.ComputeCmdListDuration;
       FWorkingStep.UpdateWidth;
+      FWorkingStep.CheckCmdError;
+      DoCallbackOnEditedByUser;
     end;
   end;
   F.Free;
@@ -1012,6 +1019,11 @@ begin
   for cmd in A do
     LB.Items.Add( cmd );
   LB.UnlockSelectionChange;
+end;
+
+procedure TFrameViewCmdList.DoCallbackOnEditedByUser;
+begin
+  if FOnEditedByUser <> NIL then FOnEditedByUser(Self);
 end;
 
 procedure TFrameViewCmdList.ClipBoard_CutSelection;

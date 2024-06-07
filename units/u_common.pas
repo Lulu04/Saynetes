@@ -44,7 +44,7 @@ type
 
 
 type
-  TSingleCmd = string;  // a single command
+  TSingleCmd = string;  // a single command with parameters separated by 'SPACE'
   TParamArray = TStringArray; //  <- splitted TSingleCmd
 
   // group of several commands.  e.g: 'CMD_STARTTOP 12;Wait 5.0;CMD_STOPTOP 12'
