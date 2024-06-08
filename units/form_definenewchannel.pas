@@ -78,6 +78,7 @@ type
     procedure ProcessLineHeightChangeEvent(Sender: TObject);
     procedure ProcessCopyPreviousSwitcherEvent(Sender: TObject);
     procedure ProcessLineBeginEndChangeEvent(Sender: TObject);
+    procedure ProcessEditKeyUpDownEvent(Sender: TObject; aEditType: TEditTypeForKeyUpDown; aSelStart: integer; aKey: Word);
     procedure DoAddLine;
     procedure DoDeleteLine(aIndex: integer);
     procedure DoDeleteAllLines;
@@ -294,6 +295,19 @@ begin
   FLockOnBeginEndValueChange := False;
 end;
 
+procedure TFormDefineNewChannel.ProcessEditKeyUpDownEvent(Sender: TObject;
+  aEditType: TEditTypeForKeyUpDown; aSelStart: integer; aKey: Word);
+var o: TFrameEditRange;
+begin
+  o := TFrameEditRange(Sender);
+  if (aKey = VK_UP) and (o.Index > 0) then begin
+    FLines[o.Index-1].SetFocusOnEdit(aEditType, aSelStart);
+  end else
+  if (aKey = VK_DOWN) and (o.Index < High(FLines)) then begin
+    FLines[o.Index+1].SetFocusOnEdit(aEditType, aSelStart);
+  end;
+end;
+
 procedure TFormDefineNewChannel.DoAddLine;
 var i: integer;
 begin
@@ -320,6 +334,8 @@ begin
     FLines[i].BeginValue := 0;
     FLines[i].EndValue := 255;
   end;
+
+  FLines[i].OnEditKeyUpDown := @ProcessEditKeyUpDownEvent;
 
   inc(FCounterForLineNames);
 end;

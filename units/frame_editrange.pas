@@ -10,6 +10,9 @@ uses
 
 type
 
+  TEditTypeForKeyUpDown = (kudBegin=0, kudEnd, kudText, kudExtra);
+  TOnEditKeyUpDownCallback = procedure(Sender: TObject; aEditType: TEditTypeForKeyUpDown; aSelStart: integer; aKey: Word) of object;
+
   { TFrameEditRange }
 
   TFrameEditRange = class(TFrame)
@@ -24,9 +27,11 @@ type
     Shape4: TShape;
     Shape5: TShape;
     procedure Edit1EditingDone(Sender: TObject);
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     FIndex: integer;
     FOnCopyPreviousSwitcher: TNotifyEvent;
+    FOnEditKeyUpDown: TOnEditKeyUpDownCallback;
     FOnHeightChange: TNotifyEvent;
     FOnValueChange: TNotifyEvent;
     FLockEditBeginEndDone: boolean;
@@ -45,6 +50,7 @@ type
     FrameSwitcher: TFrameViewSwitcherItems;
     constructor Create(TheOwner: TComponent); override;
     procedure EraseBackground({%H-}DC: HDC); override;
+    procedure SetFocusOnEdit(aEditType: TEditTypeForKeyUpDown; aSelStart: integer);
 
     procedure InitRange(p: PFixLibSingleRange);
 
@@ -57,10 +63,12 @@ type
     property OnHeightChange: TNotifyEvent read FOnHeightChange write FOnHeightChange;
     property OnCopyPreviousSwitcher: TNotifyEvent read FOnCopyPreviousSwitcher write FOnCopyPreviousSwitcher;
     property OnBeginEndChange: TNotifyEvent read FOnValueChange write FOnValueChange;
+
+    property OnEditKeyUpDown: TOnEditKeyUpDownCallback read FOnEditKeyUpDown write FOnEditKeyUpDown;
   end;
 
 implementation
-uses Math, u_utils;
+uses Math, u_utils, LazUTF8;
 
 {$R *.lfm}
 
@@ -110,6 +118,67 @@ begin
   FLockEditBeginEndDone := False;
 
   FOnValueChange(Self);
+end;
+
+procedure TFrameEditRange.Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+var e: TEdit;
+begin
+  e := Sender as TEdit;
+  case Key of
+    VK_UP, VK_DOWN: begin
+      if FOnEditKeyUpDown <> NIL then
+        FOnEditKeyUpDown(Self, TEditTypeForKeyUpDown(e.Tag), 10000, Key);
+      key := 0;
+    end;
+
+    VK_LEFT: begin
+      if (Sender = Edit1) and (Edit1.SelStart = 0) then begin
+        // shift to the previous line, edit EXTRA
+        if FOnEditKeyUpDown <> NIL then
+          FOnEditKeyUpDown(Self, kudExtra, e.SelStart, VK_UP);
+        key := 0;
+      end else
+      if (Sender = Edit2) and (Edit2.SelStart = 0) then begin
+        Edit1.SetFocus;
+        Edit1.SelStart := UTF8Length(Edit1.Text);
+        Key := 0;
+      end else
+      if (Sender = Edit3) and (Edit3.SelStart = 0) then begin
+        Edit2.SetFocus;
+        Edit2.SelStart := UTF8Length(Edit2.Text);
+        Key := 0;
+      end else
+      if (Sender = Edit4) and (Edit4.SelStart = 0) then begin
+        Edit3.SetFocus;
+        Edit3.SelStart := UTF8Length(Edit3.Text);
+        Key := 0;
+      end;
+    end;
+
+    VK_RIGHT: begin
+      if (Sender = Edit4) and (Edit4.SelStart = UTF8Length(Edit4.Text)) then begin
+        // shift to the next line, edit BEGIN
+        if FOnEditKeyUpDown <> NIL then
+          FOnEditKeyUpDown(Self, kudBegin, 0, VK_DOWN);
+        key := 0;
+      end else
+      if (Sender = Edit1) and (Edit1.SelStart = UTF8Length(Edit1.Text)) then begin
+        Edit2.SetFocus;
+        Edit2.SelStart := 0;
+        Key := 0;
+      end else
+      if (Sender = Edit2) and (Edit2.SelStart = UTF8Length(Edit2.Text)) then begin
+        Edit3.SetFocus;
+        Edit3.SelStart := 0;
+        Key := 0;
+      end else
+      if (Sender = Edit3) and (Edit3.SelStart = UTF8Length(Edit3.Text)) then begin
+        Edit4.SetFocus;
+        Edit4.SelStart := 0;
+        Key := 0;
+      end;
+    end;
+  end;//case
 end;
 
 function TFrameEditRange.GetBeginValue: integer;
@@ -194,6 +263,34 @@ end;
 procedure TFrameEditRange.EraseBackground(DC: HDC);
 begin
   //
+end;
+
+procedure TFrameEditRange.SetFocusOnEdit(aEditType: TEditTypeForKeyUpDown; aSelStart: integer);
+begin
+  try
+    case aEditType of
+      kudBegin: begin
+        Edit1.SetFocus;
+        Edit1.SelStart := aSelStart;
+      end;
+
+      kudEnd: begin
+        Edit2.SetFocus;
+        Edit2.SelStart := aSelStart;
+      end;
+
+      kudText: begin
+        Edit3.SetFocus;
+        Edit3.SelStart := aSelStart;
+      end;
+
+      kudExtra: begin
+        Edit4.SetFocus;
+        Edit4.SelStart := aSelStart;
+      end;
+    end;
+  except
+  end;
 end;
 
 procedure TFrameEditRange.InitRange(p: PFixLibSingleRange);
