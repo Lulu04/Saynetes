@@ -36,10 +36,12 @@ object FrameEditRange: TFrameEditRange
       Font.Style = [fsBold]
       NumbersOnly = True
       OnEditingDone = Edit1EditingDone
+      OnKeyDown = Edit1KeyDown
       ParentFont = False
       TabOrder = 0
     end
     object Edit2: TEdit
+      Tag = 1
       AnchorSideLeft.Control = Shape1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel1
@@ -53,10 +55,12 @@ object FrameEditRange: TFrameEditRange
       Font.Style = [fsBold]
       NumbersOnly = True
       OnEditingDone = Edit1EditingDone
+      OnKeyDown = Edit1KeyDown
       ParentFont = False
       TabOrder = 1
     end
     object Edit3: TEdit
+      Tag = 2
       AnchorSideLeft.Control = Shape2
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel1
@@ -66,6 +70,7 @@ object FrameEditRange: TFrameEditRange
       Width = 300
       BorderSpacing.Top = 1
       BorderStyle = bsNone
+      OnKeyDown = Edit1KeyDown
       TabOrder = 2
     end
     object Shape1: TShape
@@ -125,6 +130,7 @@ object FrameEditRange: TFrameEditRange
       Pen.Color = 6710886
     end
     object Edit4: TEdit
+      Tag = 3
       AnchorSideLeft.Control = Shape3
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel1
@@ -134,6 +140,7 @@ object FrameEditRange: TFrameEditRange
       Width = 60
       BorderSpacing.Top = 1
       BorderStyle = bsNone
+      OnKeyDown = Edit1KeyDown
       TabOrder = 3
     end
     object Shape5: TShape
