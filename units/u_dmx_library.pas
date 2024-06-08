@@ -76,7 +76,7 @@ begin
     begin
       FrameViewDMXLibrary1.Fill;
       // select the new fixture
-      //FrameViewDMXLibrary1.SetSelected(ChangeFileExt(ExtractFileName(F.SavedFilename),''));
+      FrameViewDMXLibrary1.SelectFixture(F.SavedFixLocation);
     end;
   finally
     F.Free;

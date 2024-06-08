@@ -662,6 +662,26 @@ msgctxt "tformmain.speedbutton7.hint"
 msgid "Program options"
 msgstr ""
 
+#: tformnewmanufacturer.label1.caption
+msgid "Manufacturer name"
+msgstr ""
+
+#: tformnewmanufacturer.label2.caption
+msgid "Folder name on the disk        only a..z and - (minus)"
+msgstr ""
+
+#: tformnewmanufacturer.label3.caption
+msgid "Website (optional)"
+msgstr ""
+
+#: tformnewmanufacturer.label5.caption
+msgid "this manufacturer is already defined"
+msgstr ""
+
+#: tformnewmanufacturer.label6.caption
+msgid "this folder already exists"
+msgstr ""
+
 #: tformotheraction.caption
 msgid "OTHER actions"
 msgstr ""
@@ -3712,8 +3732,16 @@ msgstr ""
 msgid "to RIGHT"
 msgstr ""
 
+#: u_resource_string.sunabletocreatemanufacturerfolder
+msgid "Unable to create the manufacturer folder"
+msgstr ""
+
 #: u_resource_string.sunabletoloadfixturedata
 msgid "Unable to load fixture data..."
+msgstr ""
+
+#: u_resource_string.sunabletosavethefixture
+msgid "Unable to save the fixture..."
 msgstr ""
 
 #: u_resource_string.sundo

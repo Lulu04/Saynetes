@@ -398,7 +398,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="99">
+    <Units Count="100">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1026,6 +1026,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit98>
+      <Unit99>
+        <Filename Value="units\form_newmanufacturer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormNewManufacturer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit99>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

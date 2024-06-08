@@ -111,6 +111,7 @@ end;
 
 TManufacturersHelper = type helper for TManufacturers
   procedure Load;
+  procedure AddAndSave(const aManufacturerName, aFolderName, aWebLink: string);
   procedure FillComboBoxWithName(aCB: TComboBox);
   function IndexOfName(const aManufacturerName: string): integer;
   function IndexOfFolder(const aManufacturerFolder: string): integer;
@@ -421,6 +422,42 @@ begin
       end;
     end;
     if j < t.Count then SetLength(Self, j);
+  finally
+    t.Free;
+  end;
+end;
+
+procedure TManufacturersHelper.AddAndSave(const aManufacturerName, aFolderName, aWebLink: string);
+var t: TStringList;
+  i: integer;
+  rec: TFixtureManufacturer;
+begin
+  if Length(Self) = 0 then Load;
+  if IndexOfName(aManufacturerName) <> -1 then exit;
+  if IndexOfFolder(aFolderName) <> -1 then exit;
+
+  // search the index to insert the entry in the array to keep it sorted by manufacturer names
+  for i:=0 to High(Self)+1 do
+    if i <= High(Self) then
+      if Self[i].Name > aManufacturerName then break;
+
+  // add the new entry
+  rec.Name := aManufacturerName;
+  rec.Folder := aFolderName;
+  rec.WebSite := aWebLink;
+  Insert(rec, Self, i);
+{  i := Length(Self);
+  SetLength(Self, i+1);
+  Self[i].Name := aManufacturerName;
+  Self[i].Folder := aFolderName;
+  Self[i].WebSite := aWebLink;  }
+
+  // pack the array and save
+  t := TStringList.Create;
+  for i:=0 to High(Self) do
+    t.Add('Folder|'+Self[i].Folder+'|Name|'+Self[i].Name+'|Web|'+Self[i].WebSite);
+  try
+    t.SaveToFile(GetAppDMXLibraryFolder + MANUFACTURER_LIST);
   finally
     t.Free;
   end;

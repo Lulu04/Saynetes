@@ -711,6 +711,26 @@ msgctxt "tformmain.speedbutton7.hint"
 msgid "Program options"
 msgstr "Options du programme"
 
+#: tformnewmanufacturer.label1.caption
+msgid "Manufacturer name"
+msgstr "Nom du constructeur"
+
+#: tformnewmanufacturer.label2.caption
+msgid "Folder name on the disk        only a..z and - (minus)"
+msgstr "Nom du dossier sur le disque        seulement a..z et - (moins)"
+
+#: tformnewmanufacturer.label3.caption
+msgid "Website (optional)"
+msgstr "Site internet (optionnel)"
+
+#: tformnewmanufacturer.label5.caption
+msgid "this manufacturer is already defined"
+msgstr "ce constructeur est déjà défini"
+
+#: tformnewmanufacturer.label6.caption
+msgid "this folder already exists"
+msgstr "ce dossier existe déjà"
+
 #: tformotheraction.caption
 msgid "OTHER actions"
 msgstr "AUTRE actions"
@@ -3816,9 +3836,17 @@ msgstr "à GAUCHE"
 msgid "to RIGHT"
 msgstr "à DROITE"
 
+#: u_resource_string.sunabletocreatemanufacturerfolder
+msgid "Unable to create the manufacturer folder"
+msgstr "Impossible de créer le dossier constructeur"
+
 #: u_resource_string.sunabletoloadfixturedata
 msgid "Unable to load fixture data..."
 msgstr "Impossible de charger les données de l'appareil..."
+
+#: u_resource_string.sunabletosavethefixture
+msgid "Unable to save the fixture..."
+msgstr ""
 
 #: u_resource_string.sundo
 msgid "Undo"
@@ -3967,3 +3995,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

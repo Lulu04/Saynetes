@@ -155,6 +155,7 @@ type
     procedure LoadFixtureToEdit;
     function FormatFixtureNameToFilename(s: string): string;
     function GetOutputFilename: string;
+    procedure DoAddManufacturer;
   private
     FSavedFilename: TFixtureLibraryLocation;
     function GeneralDataAreOK: boolean;
@@ -180,7 +181,8 @@ type
 implementation
 
 uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
-  u_datamodule, form_editweblink, u_dmx_util, LazUTF8, Math, utilitaire_bgrabitmap;
+  u_datamodule, form_editweblink, form_newmanufacturer, u_dmx_util, LazUTF8,
+  Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -520,9 +522,12 @@ begin
   if not FEditingExistingFixture and FileExists(f) then
     if AskConfirmation(SAskToOverwriteFixtureFilename, SYes, SCancel, mtWarning) <> mrOk then exit;
 
-  if not libFix.SaveToFile(f) then ShowMess('Enable to save the fixture...', SClose, mtError)
+  if not libFix.SaveToFile(f) then ShowMess(SUnableToSaveTheFixture, SClose, mtError)
     else begin
       FIsModified := False;
+      FSavedFilename.InitDefault;
+      FSavedFilename.SubFolder := FManufacturers[CBManufacturers.ItemIndex].Folder;
+      FSavedFilename.Filename := ChangeFileExt(FormatFixtureNameToFilename(Edit7.Text), DMX_LIBRARY_FILE_EXTENSION);
       ModalResult := mrOk;
     end;
 end;
@@ -631,6 +636,21 @@ begin
   Result := ConcatPaths([GetAppDMXLibraryFolder,
                     FManufacturers[CBManufacturers.ItemIndex].Folder,
                     ChangeFileExt(FormatFixtureNameToFilename(Edit7.Text), DMX_LIBRARY_FILE_EXTENSION)]);
+end;
+
+procedure TFormFixtureWizard.DoAddManufacturer;
+var F: TFormNewManufacturer;
+begin
+  F := TFormNewManufacturer.Create(Nil);
+  F.Manufacturers := @FManufacturers;
+  try
+    if F.ShowModal = mrOk then begin
+      FManufacturers.FillComboBoxWithName(CBManufacturers);
+      CBManufacturers.ItemIndex := FManufacturers.IndexOfName(F.Name);
+    end;
+  finally
+    F.Free;
+  end;
 end;
 
 function TFormFixtureWizard.GeneralDataAreOK: boolean;
@@ -810,7 +830,7 @@ procedure TFormFixtureWizard.BAddManufacturerClick(Sender: TObject);
 var F: TFormEditWebLink;
 begin
   if Sender = BAddManufacturer then begin
-
+    DoAddManufacturer;
   end;
 
   if Sender = BAddWebLink then begin
