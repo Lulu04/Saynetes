@@ -436,21 +436,16 @@ begin
   if IndexOfName(aManufacturerName) <> -1 then exit;
   if IndexOfFolder(aFolderName) <> -1 then exit;
 
-  // search the index to insert the entry in the array to keep it sorted by manufacturer names
+  // search the index where to insert the entry in the array to keep it sorted by manufacturer folder
   for i:=0 to High(Self)+1 do
     if i <= High(Self) then
-      if Self[i].Name > aManufacturerName then break;
+      if CompareStr(Self[i].Folder, aFolderName) > 0 then break;
 
-  // add the new entry
+  // insert the new entry
   rec.Name := aManufacturerName;
   rec.Folder := aFolderName;
   rec.WebSite := aWebLink;
   Insert(rec, Self, i);
-{  i := Length(Self);
-  SetLength(Self, i+1);
-  Self[i].Name := aManufacturerName;
-  Self[i].Folder := aFolderName;
-  Self[i].WebSite := aWebLink;  }
 
   // pack the array and save
   t := TStringList.Create;
