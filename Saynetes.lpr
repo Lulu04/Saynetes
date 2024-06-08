@@ -31,7 +31,8 @@ form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
 form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
 form_selectexistingswitchingchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
-form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash;
+form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
+form_newmanufacturer;
 
 {$R *.res}
 
@@ -69,7 +70,6 @@ begin
 
   FormSplash.close;
   FormSplash.Release;
-
   Application.Run;
 
 end.

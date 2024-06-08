@@ -36,7 +36,7 @@ var
   FormEditWebLink: TFormEditWebLink;
 
 implementation
-uses LCLType;
+uses LCLType, u_resource_string;
 
 {$R *.lfm}
 
@@ -68,6 +68,10 @@ end;
 procedure TFormEditWebLink.FormShow(Sender: TObject);
 begin
   ComboBox1.ItemIndex := 0;
+
+  // manual translations
+  BOK.Caption := SOk;
+  BCancel.Caption := SCancel;
 end;
 
 function TFormEditWebLink.getLinkType: string;
