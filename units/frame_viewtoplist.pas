@@ -42,7 +42,7 @@ type
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseUp(Sender: TObject; Button: TMouseButton;
       {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
-    procedure LBSelectionChange(Sender: TObject; User: boolean);
+    procedure LBSelectionChange(Sender: TObject; {%H-}User: boolean);
     procedure MIDeleteClick(Sender: TObject);
     procedure MIDuplicateClick(Sender: TObject);
     procedure MIEditClick(Sender: TObject);

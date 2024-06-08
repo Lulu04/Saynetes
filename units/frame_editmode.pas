@@ -256,7 +256,7 @@ end;
 procedure TFrameEditMode.DoEditChannelFrame(aIndex: integer);
 var FormNew: TFormDefineNewChannel;
   FormEditSwitching: TFormEditSwitchingChannel;
-  i, j: integer;
+  i: integer;
   oldName, packedName: string;
 begin
   oldName := FChanFrames[aIndex].ChanName;
@@ -683,7 +683,6 @@ end;
 
 procedure TFrameEditMode.ExchangeChannel(i1, i2: integer);
 var o: TFrameViewModeItem;
-  y: integer;
   c: TColor;
   i: integer;
 begin
@@ -693,7 +692,6 @@ begin
   FChanFrames[i2].Color := c;
 
   // exchange y coordinates
-  y := FChanFrames[i2].Top;
   FChanFrames[i2].Top := FChanFrames[i1].Top;
   FChanFrames[i1].Top := FChanFrames[i2].Top + FChanFrames[i2].Height;
 

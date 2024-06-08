@@ -78,20 +78,20 @@ type
     SpeedButton5: TSpeedButton;
     Splitter1: TSplitter;
     procedure BAddDMXClick(Sender: TObject);
-    procedure BGLVirtualScreen1DragOver(Sender, Source: TObject; X, Y: Integer;
-      State: TDragState; var Accept: Boolean);
-    procedure BGLVirtualScreen1LoadTextures(Sender: TObject; BGLContext: TBGLContext);
+    procedure BGLVirtualScreen1DragOver(Sender, Source: TObject; {%H-}X, {%H-}Y: Integer;
+      {%H-}State: TDragState; var Accept: Boolean);
+    procedure BGLVirtualScreen1LoadTextures(Sender: TObject; {%H-}BGLContext: TBGLContext);
     procedure BGLVirtualScreen1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure BGLVirtualScreen1MouseEnter(Sender: TObject);
     procedure BGLVirtualScreen1MouseLeave(Sender: TObject);
-    procedure BGLVirtualScreen1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
-    procedure BGLVirtualScreen1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-    procedure BGLVirtualScreen1MouseWheel(Sender: TObject; Shift: TShiftState;
+    procedure BGLVirtualScreen1MouseMove(Sender: TObject; {%H-}Shift: TShiftState; X, Y: Integer);
+    procedure BGLVirtualScreen1MouseUp(Sender: TObject; Button: TMouseButton; {%H-}Shift: TShiftState; X, Y: Integer);
+    procedure BGLVirtualScreen1MouseWheel(Sender: TObject; {%H-}Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure BGLVirtualScreen1Redraw(Sender: TObject; BGLContext: TBGLContext);
     procedure BGLVirtualScreen1Resize(Sender: TObject);
-    procedure BGLVirtualScreen1UnloadTextures(Sender: TObject; BGLContext: TBGLContext);
+    procedure BGLVirtualScreen1UnloadTextures(Sender: TObject; {%H-}BGLContext: TBGLContext);
     procedure BShowDMXAdressClick(Sender: TObject);
     procedure BZoomAllClick(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
@@ -206,7 +206,7 @@ type
     procedure ProcessViewDMXCursorsMouseOverFixtureEvent(Sender: TObject; aFixture: TDMXFixture);
 
     function MouseIsOver: boolean;
-    procedure ProcessKeyDown(Key: word; Shift: TShiftState);
+    procedure ProcessKeyDown({%H-}Key: word; {%H-}Shift: TShiftState);
     procedure ProcessKeyUp(var Key: Word; Shift: TShiftState);
 
     procedure EraseBackground({%H-}DC: HDC); override;
@@ -354,7 +354,6 @@ end;
 
 procedure TFrameViewProjector.ProcessKeyDown(Key: word; Shift: TShiftState);
 begin
-
 end;
 
 procedure TFrameViewProjector.ProcessKeyUp(var Key: Word; Shift: TShiftState);

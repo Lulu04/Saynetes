@@ -5,7 +5,7 @@ unit frame_viewprojectfolder;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, Buttons, FileCtrl, EditBtn,
+  Classes, SysUtils, Forms, Controls, ExtCtrls, Buttons, FileCtrl,
   StdCtrls, LCLTranslator, Dialogs, Types;
 
 type

@@ -94,8 +94,7 @@ var
 
 implementation
 
-uses u_resource_string, u_helper, u_utils, u_logfile, u_list_dmxuniverse,
-  u_audio_manager, Math, ALSound;
+uses u_resource_string, u_helper, u_utils, u_logfile, ALSound;
 
 { TSequence }
 
@@ -180,13 +179,11 @@ end;
 
 function TSequence.CheckError(aParentList: TTopList): boolean;
 var cmds: TCmdList;
-  i: integer;
-  mess: string;
 
   function ErrorOnCmd(const aCmd: string; out errMess: string): boolean;
   var A: TParamArray;
     B: TCmdArray;
-    j, paramCount, cmd: integer;
+    j: integer;
   begin
     Result := False;
     errMess := '';

@@ -14,7 +14,7 @@ type
 
   TFormChangeFixtureImage = class(TForm)
     ScrollBox1: TScrollBox;
-    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
   private
     FFixtureType: TFixtureType;

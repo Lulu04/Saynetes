@@ -49,7 +49,6 @@ uses u_datamodule, GraphType, Graphics;
 procedure TFrameCBChannelType.CBDrawItem(Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
 var chanType: TChannelType;
   readable, extra: string;
-  c: TColor;
 begin
   SplitItemData(Index, chanType, readable, extra);
 
