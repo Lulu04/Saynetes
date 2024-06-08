@@ -1,0 +1,39 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_0_2_1_1769.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-nox-p-1769.html|LinkType3|video|Url3|https://youtu.be/YcXa1-FsNN4
+[GENERAL]
+Manufacturer|Fos|Name|FOS Nox|Type|9|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|269|Height|650|Depth|389|Weight|25|Power|524|Connector|3-pin|Bulb|470W white LED
+[CHAN_DEF]
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0..630°
+ID|Pan fine|Type|7
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0..270°
+ID|Tilt fine|Type|8
+ID|Color Wheel|Type|12|R1|Begin~0~End~19~Txt~Open / White|R2|Begin~20~End~39~Txt~Color 1|R3|Begin~40~End~59~Txt~Color 2|R4|Begin~60~End~79~Txt~Color 3|R5|Begin~80~End~99~Txt~Color 4|R6|Begin~100~End~127~Txt~Color 5|R7|Begin~128~End~189~Txt~Rainbow effect Fast..Slow|R8|Begin~190~End~193~Txt~Stop|R9|Begin~194~End~255~Txt~Rainbow effect Slow..Fast
+ID|Gobo Wheel 1|Type|10|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~19~Txt~Gobo 1|R3|Begin~20~End~29~Txt~Gobo 2|R4|Begin~30~End~39~Txt~Gobo 3|R5|Begin~40~End~49~Txt~Gobo 4|R6|Begin~50~End~59~Txt~Gobo 5|R7|Begin~60~End~69~Txt~Gobo 6|R8|Begin~70~End~79~Txt~Gobo 7|R9|Begin~80~End~99~Txt~Gobo 1 shake Slow..Fast|R10|Begin~100~End~119~Txt~Gobo 2 shake Slow..Fast|R11|Begin~120~End~139~Txt~Gobo 3 shake Slow..Fast|R12|Begin~140~End~159~Txt~Gobo 4 shake Slow..Fast|R13|Begin~160~End~179~Txt~Gobo 5 shake Slow..Fast|R14|Begin~180~End~199~Txt~Gobo 6 shake Slow..Fast|R15|Begin~200~End~219~Txt~Gobo 7 shake Slow..Fast|R16|Begin~220~End~255~Txt~Rotate Slow..Fast
+ID|Gobo 1 rotation|Type|11|R1|Begin~0~End~127~Txt~Gobo indexing|R2|Begin~128~End~189~Txt~CW Fast..Slow|R3|Begin~190~End~193~Txt~Stop|R4|Begin~194~End~255~Txt~CCW Slow..Fast
+ID|Gobo Wheel 2|Type|10|R1|Begin~0~End~9~Txt~Hole with spot|R2|Begin~10~End~19~Txt~Gobo 1|R3|Begin~20~End~29~Txt~Gobo 2|R4|Begin~30~End~39~Txt~Gobo 3|R5|Begin~40~End~49~Txt~Gobo 4|R6|Begin~50~End~59~Txt~Gobo 5|R7|Begin~60~End~69~Txt~Gobo 6|R8|Begin~70~End~79~Txt~Gobo 7|R9|Begin~80~End~89~Txt~Gobo 8|R10|Begin~90~End~99~Txt~Gobo 9|R11|Begin~100~End~109~Txt~Gobo 10|R12|Begin~110~End~119~Txt~Gobo 11|R13|Begin~120~End~129~Txt~Gobo 1 shake Slow..Fast|R14|Begin~130~End~139~Txt~Gobo 2 shake Slow..Fast|R15|Begin~140~End~149~Txt~Gobo 3 shake Slow..Fast|R16|Begin~150~End~159~Txt~Gobo 4 shake Slow..Fast|R17|Begin~160~End~169~Txt~Gobo 5 shake Slow..Fast|R18|Begin~170~End~179~Txt~Gobo 6 shake Slow..Fast|R19|Begin~180~End~189~Txt~Gobo 7 shake Slow..Fast|R20|Begin~190~End~199~Txt~Gobo 8 shake Slow..Fast|R21|Begin~200~End~209~Txt~Gobo 9 shake Slow..Fast|R22|Begin~210~End~219~Txt~Gobo 10 shake Slow..Fast|R23|Begin~220~End~229~Txt~Gobo 11 shake Slow..Fast|R24|Begin~230~End~255~Txt~Rotate Slow..Fast
+ID|Shutter|Type|6|R1|Begin~0~End~31~Txt~Closed|R2|Begin~32~End~63~Txt~Open|R3|Begin~64~End~95~Txt~Strobe Slow..Fast|R4|Begin~96~End~127~Txt~Open|R5|Begin~128~End~159~Txt~Pulse Slow..Fast|R6|Begin~160~End~191~Txt~Open|R7|Begin~192~End~223~Txt~Random Slow..Fast|R8|Begin~224~End~255~Txt~Open
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|CTO|Type|27
+ID|Focus|Type|32|R1|Begin~0~End~255~Txt~Near..Far
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~Near..Far
+ID|Prism|Type|41|R1|Begin~0~End~5~Txt~OFF|R2|Begin~6~End~127~Txt~Prism 1 ON|R3|Begin~128~End~255~Txt~Prism 2 ON
+ID|Prism rotation|Type|42|R1|Begin~0~End~127~Txt~Stop|R2|Begin~128~End~189~Txt~CW Fast..Slow|R3|Begin~190~End~193~Txt~Stop|R4|Begin~194~End~255~Txt~CCW Slow..Fast
+ID|Iris|Type|25|R1|Begin~0~End~191~Txt~Max..Min|R2|Begin~192~End~223~Txt~Pulse opening Fast..Slow|R3|Begin~224~End~255~Txt~Pulse closing Slow..Fast
+ID|Frost|Type|47|R1|Begin~0~End~199~Txt~OFF|R2|Begin~200~End~255~Txt~ON
+ID|Pan/Tilt speed|Type|9|R1|Begin~0~End~225~Txt~Fast..Slow|R2|Begin~226~End~235~Txt~Blackout by movement|R3|Begin~236~End~245~Txt~Blackout by all wheel changing|R4|Begin~246~End~255~Txt~No function
+ID|Special function|Type|0|R1|Begin~0~End~19~Txt~No function|R2|Begin~20~End~39~Txt~No function|R3|Begin~40~End~59~Txt~No function|R4|Begin~60~End~79~Txt~No function|R5|Begin~80~End~84~Txt~All motor reset|R6|Begin~85~End~87~Txt~Scan motor reset|R7|Begin~88~End~90~Txt~Colors motor reset|R8|Begin~91~End~93~Txt~Gobo motor reset|R9|Begin~94~End~96~Txt~No function|R10|Begin~97~End~99~Txt~Other motor reset|R11|Begin~100~End~119~Txt~Program 1|R12|Begin~120~End~139~Txt~Program 2|R13|Begin~140~End~159~Txt~Program 3|R14|Begin~160~End~179~Txt~Program 4|R15|Begin~180~End~199~Txt~Program 5|R16|Begin~200~End~219~Txt~Program 6|R17|Begin~220~End~239~Txt~Program 7|R18|Begin~240~End~255~Txt~Sound program
+ID|Half Color Wheel|Type|12|R1|Begin~0~End~9~Txt~Open / White|R2|Begin~10~End~19~Txt~White + Color 1|R3|Begin~20~End~29~Txt~Color 1|R4|Begin~30~End~39~Txt~Color 1 + Color 2|R5|Begin~40~End~49~Txt~Color 2|R6|Begin~50~End~59~Txt~Color 2 + Color 3|R7|Begin~60~End~69~Txt~Color 3|R8|Begin~70~End~79~Txt~Color 3 + Color 4|R9|Begin~80~End~89~Txt~Color 4|R10|Begin~90~End~99~Txt~Color 4 + Color 5|R11|Begin~100~End~109~Txt~Color 5|R12|Begin~110~End~127~Txt~Color 5 + White|R13|Begin~128~End~189~Txt~CW Rainbow Fast..Slow|R14|Begin~190~End~193~Txt~Stop|R15|Begin~194~End~255~Txt~CCW Rainbow Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|22-ch No Half Color|ShortName|22ch|Content|Pan~Pan fine~Tilt~Tilt fine~Color Wheel~Gobo Wheel 1~Gobo 1 rotation~Gobo Wheel 2~Shutter~Master dimmer~Cyan~Magenta~Yellow~CTO~Focus~Zoom~Prism~Prism rotation~Iris~Frost~Pan/Tilt speed~Special function
+Name|22-ch with Half Color|Content|Pan~Pan fine~Tilt~Tilt fine~Half Color Wheel~Gobo Wheel 1~Gobo 1 rotation~Gobo Wheel 2~Shutter~Master dimmer~Cyan~Magenta~Yellow~CTO~Focus~Zoom~Prism~Prism rotation~Iris~Frost~Pan/Tilt speed~Special function
+Name|20-ch No Half Color|Content|Pan~Tilt~Color Wheel~Gobo Wheel 1~Gobo 1 rotation~Gobo Wheel 2~Shutter~Master dimmer~Cyan~Magenta~Yellow~CTO~Focus~Zoom~Prism~Prism rotation~Iris~Frost~Pan/Tilt speed~Special function
+Name|20-ch with Half Color|Content|Pan~Tilt~Half Color Wheel~Gobo Wheel 1~Gobo 1 rotation~Gobo Wheel 2~Shutter~Master dimmer~Cyan~Magenta~Yellow~CTO~Focus~Zoom~Prism~Prism rotation~Iris~Frost~Pan/Tilt speed~Special function
+[END_MODES]

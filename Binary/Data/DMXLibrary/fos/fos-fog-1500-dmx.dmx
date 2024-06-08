@@ -1,0 +1,14 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_93.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-fog-1500-dmx-p-93.html
+[GENERAL]
+Manufacturer|Fos|Name|FOS Fog 1500 DMX|Type|10|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|540|Height|340|Depth|350|Weight|8.3|Power|1500|Connector|Other
+[CHAN_DEF]
+ID|Smoke|Type|37|R1|Begin~0~End~5~Txt~OFF|R2|Begin~6~End~255~Txt~Gradual output
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|Content|Smoke
+[END_MODES]

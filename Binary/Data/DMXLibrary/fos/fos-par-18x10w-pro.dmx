@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_66.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-par-18x10w-pro-p-66.html|LinkType3|video|Url3|https://youtu.be/L6UbXXPGOH8
+[GENERAL]
+Manufacturer|Fos|Name|FOS Par 18x10W PRO|Type|16|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|130|Height|100|Depth|230|Weight|4.6|Power|200|Connector|3-pin and 5-pin|Bulb|18x10W RGBW 4-IN-1 high power LED|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~5~Txt~Open|R2|Begin~6~End~255~Txt~Slow..Fast
+ID|Programs|Type|49|R1|Begin~0~End~51~Txt~No function~Switch1~Program Speed/SoundSensitivity:Programs Speed|R2|Begin~52~End~100~Txt~Color Jump~Switch1~Program Speed/SoundSensitivity:Programs Speed|R3|Begin~101~End~150~Txt~Color Pulse~Switch1~Program Speed/SoundSensitivity:Programs Speed|R4|Begin~151~End~200~Txt~Color fade~Switch1~Program Speed/SoundSensitivity:Programs Speed|R5|Begin~201~End~255~Txt~Sound controlled~Switch1~Program Speed/SoundSensitivity:Sound Sensitivity
+ID|Programs Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Sound Sensitivity|Type|29|R1|Begin~0~End~255~Txt~Low..High
+[END_CHAN_DEF]
+[MODES]
+Name|8-channel|ShortName|8ch|Content|Master dimmer~Red~Green~Blue~White~Strobe~Program Speed/SoundSensitivity:Programs Speed;Sound Sensitivity~Programs
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+[END_MODES]

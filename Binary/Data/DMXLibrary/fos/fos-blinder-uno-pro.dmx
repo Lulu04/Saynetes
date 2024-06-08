@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_585.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-blinder-uno-pro-p-585.html|LinkType3|video|Url3|https://youtu.be/EPCRPsFvacg
+[GENERAL]
+Manufacturer|Fos|Name|FOS Blinder UNO PRO|Type|25|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|3.1|Power|120|Connector|3-pin XLR IP65|Bulb|100 Watt Warm White 3000K + 10 Watt Amber LED|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer fine|Type|1
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~240~Txt~Slow..Fast|R3|Begin~241~End~255~Txt~Random Strobe
+ID|Warm White|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Auto Mode|Type|49|R1|Begin~0~End~35~Txt~No function|R2|Begin~36~End~41~Txt~Tungsten Effect|R3|Begin~42~End~71~Txt~Pulse Up|R4|Begin~72~End~107~Txt~Pulse Down|R5|Begin~108~End~143~Txt~Pulse Up & Down|R6|Begin~144~End~215~Txt~2 colors|R7|Begin~216~End~255~Txt~Random effect
+ID|Dimmer Curve|Type|0|R1|Begin~0~End~63~Txt~Linear|R2|Begin~64~End~127~Txt~Square|R3|Begin~128~End~191~Txt~Invert Square|R4|Begin~192~End~255~Txt~S curve
+ID|Dimmer Speed|Type|16|R1|Begin~0~End~254~Txt~Tungsten Effect OFF|R2|Begin~255~End~255~Txt~Tungsten Effect ON
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|Content|Master dimmer
+Name|3-channel|Content|Master dimmer~Master dimmer fine~Strobe
+Name|2-channel|Content|Warm White~Amber
+Name|7-channel|Content|Master dimmer~Master dimmer fine~Strobe~Warm White~Amber~Auto Mode~Dimmer Curve
+Name|8-channel|Content|Master dimmer~Master dimmer fine~Strobe~Warm White~Amber~Auto Mode~Dimmer Curve~Dimmer Speed
+[END_MODES]

@@ -1,0 +1,28 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.altmanlighting.com/wp-content/uploads/2021/02/SPECTRA_MANUAL_REV0_20210204.pdf|LinkType2|product page|Url2|https://www.altmanlighting.com/product/spectra-cyc-100-a/
+[GENERAL]
+Manufacturer|Altman|Name|Spectra CYC 100 RGBW|Type|28|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|296|Height|285|Depth|189|Weight|5|Power|100|Connector|5-pin|Bulb|LED
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red fine|Type|3
+ID|Green fine|Type|4
+ID|Blue fine|Type|5
+ID|White fine|Type|13
+ID|Master dimmer fine|Type|1
+[END_CHAN_DEF]
+[MODES]
+Name|8bit RGBW (601, 602)|Content|Red~Green~Blue~White
+Name|8bit RGBWM (603, 604)|Content|Red~Green~Blue~White~Master dimmer
+Name|16bit RGBW (605, 606)|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine
+Name|16bit RGBWM (607, 608)|Content|Red~Red fine~Green~Green fine~Blue~Blue fine~White~White fine~Master dimmer~Master dimmer fine
+Name|8bit 1-channel (609, 610)|Content|Master dimmer
+Name|16bit 2-channel (611, 612)|Content|Master dimmer~Master dimmer fine
+[END_MODES]
