@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_395.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-par-cob-200w-led-uv-p-395.html|LinkType3|video|Url3|https://youtu.be/-yuoHAx66ws
+[GENERAL]
+Manufacturer|Fos|Name|FOS Par Cob 200w Led UV|Type|25|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|4.7|Power|250|Connector|3-pin|Bulb|200 Watt UV COB LED|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|UV|Type|15|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Strobe 2|Type|6|R1|Begin~0~End~20~Txt~Open|R2|Begin~21~End~200~Txt~Slow..Fast|R3|Begin~201~End~255~Txt~Sound controlled
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Pulse|Type|6|R1|Begin~0~End~20~Txt~No function|R2|Begin~21~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|A2CH|Content|UV~Strobe
+Name|b2CH|Content|UV~Strobe 2
+Name|1-channel|Content|UV
+Name|3-channel|Content|Master dimmer~Strobe~Pulse
+[END_MODES]

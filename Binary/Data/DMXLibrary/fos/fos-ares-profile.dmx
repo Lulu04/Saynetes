@@ -1,0 +1,52 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_0_2_2_2748.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-ares-profile-p-2748.html|LinkType3|video|Url3|https://youtu.be/PAhbZ_wBZUQ
+[GENERAL]
+Manufacturer|Fos|Name|FOS Ares Profile|Type|9|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|374|Height|355|Depth|736|Weight|32|Power|800|Connector|3-pin and 5-pin|Bulb|600W LED
+[CHAN_DEF]
+ID|Pan|Type|7
+ID|Pan fine|Type|7
+ID|Tilt|Type|8
+ID|Tilt fine|Type|8
+ID|Pan/Tilt speed|Type|9|R1|Begin~0~End~255~Txt~Fast..Slow
+ID|Special function|Type|0|R1|Begin~0~End~29~Txt~No function|R2|Begin~30~End~39~Txt~Dimming curve square|R3|Begin~40~End~49~Txt~Dimming curve inverse square|R4|Begin~50~End~59~Txt~Dimming curve linear|R5|Begin~60~End~69~Txt~Dimming curve S shape|R6|Begin~70~End~79~Txt~Scan with shading|R7|Begin~80~End~89~Txt~Scanning without shading|R8|Begin~90~End~99~Txt~Color wheel positioning with shading|R9|Begin~100~End~109~Txt~Color wheel positioning without shading|R10|Begin~110~End~119~Txt~Gobo plate positioning with shading|R11|Begin~120~End~129~Txt~Gobo plate positioning without shading|R12|Begin~130~End~139~Txt~Focus compensation invalid|R13|Begin~140~End~149~Txt~Focus compensation short range|R14|Begin~150~End~159~Txt~Focus compensation Mid range|R15|Begin~160~End~169~Txt~Focus compensation Long range|R16|Begin~170~End~179~Txt~Dimming speed built-in|R17|Begin~180~End~189~Txt~Fast dimming speed|R18|Begin~190~End~199~Txt~Smooth dimming speed|R19|Begin~200~End~209~Txt~All reset|R20|Begin~210~End~219~Txt~Lamp head reset|R21|Begin~220~End~229~Txt~X/Y reset|R22|Begin~230~End~255~Txt~No function
+ID|Strobe|Type|6|R1|Begin~0~End~15~Txt~OFF|R2|Begin~16~End~30~Txt~ON|R3|Begin~31~End~135~Txt~Slow..Fast|R4|Begin~136~End~145~Txt~ON|R5|Begin~146~End~175~Txt~fast closing slow opening Slow..Fast|R6|Begin~176~End~185~Txt~ON|R7|Begin~186~End~215~Txt~fast closing slow opening Slow..Fast|R8|Begin~216~End~225~Txt~ON|R9|Begin~226~End~245~Txt~Random Slow..Fast|R10|Begin~246~End~255~Txt~ON
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer fine|Type|1
+ID|Cyan|Type|18|R1|Begin~0~End~255~Txt~0..100%
+ID|Magenta|Type|19|R1|Begin~0~End~255~Txt~0..100%
+ID|Yellow|Type|20|R1|Begin~0~End~255~Txt~0..100%
+ID|CTO|Type|27
+ID|Color wheel|Type|12|R1|Begin~0~End~131~Txt~Color moves linearly|R2|Begin~132~End~141~Txt~Color 1|R3|Begin~142~End~151~Txt~Color 2|R4|Begin~152~End~161~Txt~Color 3|R5|Begin~162~End~171~Txt~Color 4|R6|Begin~172~End~181~Txt~Color 5|R7|Begin~182~End~191~Txt~Color 6|R8|Begin~192~End~222~Txt~Rotate CW Fast..Slow|R9|Begin~223~End~224~Txt~Stop|R10|Begin~225~End~255~Txt~Rotate CCW Fast..Slow
+ID|Rotating Gobo|Type|10|R1|Begin~0~End~7~Txt~Open/white|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~95~Txt~Rotate CW Fast..Slow|R10|Begin~96~End~97~Txt~Stop|R11|Begin~98~End~129~Txt~Rotate CCW Slow..Fast|R12|Begin~130~End~147~Txt~gobo 1 Shaking Slow..Fast|R13|Begin~148~End~165~Txt~gobo 2 Shaking Slow..Fast|R14|Begin~166~End~183~Txt~gobo 3 Shaking Slow..Fast|R15|Begin~184~End~201~Txt~gobo 4 Shaking Slow..Fast|R16|Begin~202~End~219~Txt~gobo 5 Shaking Slow..Fast|R17|Begin~220~End~237~Txt~gobo 6 Shaking Slow..Fast|R18|Begin~238~End~255~Txt~gobo 7 Shaking Slow..Fast
+ID|Rotating Gobo Rotation|Type|11|R1|Begin~0~End~127~Txt~Autorotation|R2|Begin~128~End~190~Txt~CW Fast..Slow|R3|Begin~191~End~192~Txt~Stop|R4|Begin~193~End~255~Txt~CCW Slow..Fast
+ID|Rotating Gobo Rotation fine|Type|11
+ID|Static gobo|Type|10|R1|Begin~0~End~7~Txt~Open/White|R2|Begin~8~End~15~Txt~Gobo 1|R3|Begin~16~End~23~Txt~Gobo 2|R4|Begin~24~End~31~Txt~Gobo 3|R5|Begin~32~End~39~Txt~Gobo 4|R6|Begin~40~End~47~Txt~Gobo 5|R7|Begin~48~End~55~Txt~Gobo 6|R8|Begin~56~End~63~Txt~Gobo 7|R9|Begin~64~End~95~Txt~Rotate CW Fast..Slow|R10|Begin~96~End~97~Txt~Stop|R11|Begin~98~End~129~Txt~Rotate CCW Slow..Fast|R12|Begin~130~End~147~Txt~gobo 1 Shaking Slow..Fast|R13|Begin~148~End~165~Txt~gobo 2 Shaking Slow..Fast|R14|Begin~166~End~183~Txt~gobo 3 Shaking Slow..Fast|R15|Begin~184~End~201~Txt~gobo 4 Shaking Slow..Fast|R16|Begin~202~End~219~Txt~gobo 5 Shaking Slow..Fast|R17|Begin~220~End~237~Txt~gobo 6 Shaking Slow..Fast|R18|Begin~238~End~255~Txt~gobo 7 Shaking Slow..Fast
+ID|Iris|Type|25|R1|Begin~0~End~255~Txt~Big..Small
+ID|Animation wheel|Type|49|R1|Begin~0~End~15~Txt~No function|R2|Begin~16~End~135~Txt~Rotate CW Fast..Slow|R3|Begin~136~End~255~Txt~Rotate CCW Slow..Fast
+ID|Prism|Type|41|R1|Begin~0~End~15~Txt~No prism|R2|Begin~16~End~255~Txt~Prism in
+ID|Prism rotation|Type|42|R1|Begin~0~End~127~Txt~Auto|R2|Begin~128~End~191~Txt~CW Fast..Slow|R3|Begin~192~End~255~Txt~CCW Slow..Fast
+ID|Prism rotation fine|Type|42
+ID|Frost|Type|47|R1|Begin~0~End~99~Txt~Frost 1 Linear|R2|Begin~100~End~127~Txt~Frost 1|R3|Begin~128~End~227~Txt~Frost 2 Linear|R4|Begin~228~End~255~Txt~Frost 2
+ID|Zoom|Type|31
+ID|Zoom fine|Type|31
+ID|Focus|Type|32
+ID|Focus fine|Type|32
+ID|Blade rotation|Type|30|R1|Begin~0~End~255~Txt~0°..-90°
+ID|Upper Blade 1|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Upper Blade 2|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Left Blade 1|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Left Blade 2|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Below Blade 1|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Below Blade 2|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Right Blade 1|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+ID|Right Blade 2|Type|26|R1|Begin~0~End~255~Txt~0..-100%
+[END_CHAN_DEF]
+[MODES]
+Name|37-channel|ShortName|37ch|Content|Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt speed~Special function~Strobe~Master dimmer~Master dimmer fine~Cyan~Magenta~Yellow~CTO~Color wheel~Rotating Gobo~Rotating Gobo Rotation~Rotating Gobo Rotation fine~Static gobo~Iris~Animation wheel~Prism~Prism rotation~Prism rotation fine~Frost~Zoom~Zoom fine~Focus~Focus fine~Blade rotation~Upper Blade 1~Upper Blade 2~Left Blade 1~Left Blade 2~Below Blade 1~Below Blade 2~Right Blade 1~Right Blade 2
+Name|34-channel|ShortName|34ch|Content|Cyan~Magenta~Yellow~CTO~Color wheel~Strobe~Master dimmer~Master dimmer fine~Rotating Gobo~Rotating Gobo Rotation~Rotating Gobo Rotation fine~Static gobo~Animation wheel~Prism~Prism rotation~Frost~Zoom~Focus~Iris~Blade rotation~Upper Blade 1~Upper Blade 2~Left Blade 1~Left Blade 2~Below Blade 1~Below Blade 2~Right Blade 1~Right Blade 2~Pan~Pan fine~Tilt~Tilt fine~Pan/Tilt speed~Special function
+Name|29-channel|ShortName|29ch|Content|Strobe~Master dimmer~Cyan~Magenta~Yellow~CTO~Color wheel~Rotating Gobo~Rotating Gobo Rotation~Static gobo~Animation wheel~Blade rotation~Upper Blade 1~Upper Blade 2~Left Blade 1~Left Blade 2~Below Blade 1~Below Blade 2~Right Blade 1~Right Blade 2~Iris~Prism~Prism rotation~Frost~Zoom~Focus~Pan~Tilt~Special function
+[END_MODES]

@@ -1,0 +1,22 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_0_2_1_1232.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-cob-par-200-rgbw-p-1232.html|LinkType3|video|Url3|https://youtu.be/SCYyvyCKJpM
+[GENERAL]
+Manufacturer|Fos|Name|FOS COB Par 200 RGBW|Type|25|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|230|Height|280|Depth|350|Weight|3.5|Power|200|Connector|3-pin|Bulb|RGBW COB 200W|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~255~Txt~1..20Hz
+ID|Programs|Type|49|R1|Begin~0~End~49~Txt~No function|R2|Begin~50~End~99~Txt~Color change|R3|Begin~100~End~149~Txt~Color fade|R4|Begin~150~End~199~Txt~Colour fade in/out|R5|Begin~200~End~255~Txt~Sound controlled
+ID|Chase/Fade Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Red~Green~Blue~White
+Name|8-channel|ShortName|8ch|Content|Master dimmer~Strobe~Programs~Chase/Fade Speed~Red~Green~Blue~White
+[END_MODES]

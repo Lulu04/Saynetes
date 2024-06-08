@@ -1,0 +1,23 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_0_2_1_1307.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-par-zoom-ultra-p-1307.html|LinkType3|video|Url3|https://youtu.be/rpXYcG3d1d8
+[GENERAL]
+Manufacturer|Fos|Name|FOS PAR ZOOM ULTRA|Type|16|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|226|Height|285|Depth|380|Weight|6.5|Power|300|Connector|3-pin|Bulb|19x 15 Watt RGBW LEDs|LensMinDegree|10.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Zoom|Type|31|R1|Begin~0~End~255~Txt~0..100%
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Color macro|Type|12|R1|Begin~0~End~0~Txt~OFF|R2|Begin~1~End~255~Txt~Colors
+ID|Programs|Type|49|R1|Begin~0~End~10~Txt~No function|R2|Begin~11~End~119~Txt~Color step changing|R3|Begin~120~End~179~Txt~Color cross fade|R4|Begin~180~End~255~Txt~Color step changeing + cross fade
+ID|Programs Speed|Type|16|R1|Begin~0~End~255~Txt~Fast..Slow
+[END_CHAN_DEF]
+[MODES]
+Name|10-channel|ShortName|10ch|Content|Zoom~Master dimmer~Strobe~Red~Green~Blue~White~Color macro~Programs~Programs Speed
+[END_MODES]

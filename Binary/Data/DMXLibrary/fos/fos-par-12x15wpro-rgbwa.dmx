@@ -1,0 +1,25 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_71.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-par-12x15wpro-rgbwa-p-71.html|LinkType3|video|Url3|https://youtu.be/eTtYv5mTrQ4
+[GENERAL]
+Manufacturer|Fos|Name|FOS Par 12x15WPRO RGBWA|Type|16|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|230|Height|130|Depth|100|Weight|4|Power|190|Connector|3-pin and 5-pin|Bulb|12x 15w RGBWA LEDs|LensMinDegree|25.000|LensMaxDegree|25.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
+ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
+ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%
+ID|White|Type|13|R1|Begin~0~End~255~Txt~0..100%
+ID|Amber|Type|14|R1|Begin~0~End~255~Txt~0..100%
+ID|Color macro|Type|12|R1|Begin~0~End~16~Txt~OFF|R2|Begin~17~End~33~Txt~Red|R3|Begin~34~End~50~Txt~Green|R4|Begin~51~End~67~Txt~Blue|R5|Begin~68~End~84~Txt~White|R6|Begin~85~End~101~Txt~Amber|R7|Begin~102~End~118~Txt~Yellow|R8|Begin~119~End~135~Txt~Cyan|R9|Begin~136~End~152~Txt~Light blue|R10|Begin~153~End~169~Txt~Pale Amber|R11|Begin~170~End~186~Txt~Magenta|R12|Begin~187~End~192~Txt~Light green|R13|Begin~193~End~255~Txt~Full ON
+ID|Strobe|Type|6|R1|Begin~0~End~3~Txt~Open|R2|Begin~4~End~255~Txt~Slow..Fast
+ID|Programs|Type|49|R1|Begin~0~End~49~Txt~No function|R2|Begin~50~End~99~Txt~Color Jump|R3|Begin~100~End~149~Txt~Color Pulse|R4|Begin~150~End~199~Txt~Color fade|R5|Begin~200~End~255~Txt~Sound controlled
+ID|Speed|Type|16|R1|Begin~0~End~255~Txt~Slow..Fast
+ID|Light fade out speed|Type|16|R1|Begin~0~End~255~Txt~Fast..Slow
+[END_CHAN_DEF]
+[MODES]
+Name|11-channel|ShortName|11ch|Content|Master dimmer~Red~Green~Blue~White~Amber~Color macro~Strobe~Programs~Speed~Light fade out speed
+Name|5-channel|ShortName|5ch|Content|Red~Green~Blue~White~Amber
+[END_MODES]

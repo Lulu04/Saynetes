@@ -1,0 +1,16 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_481.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-cob-par-100-zoom-p-481.html|LinkType3|video|Url3|https://youtu.be/ZpSgI6sgVU8
+[GENERAL]
+Manufacturer|Fos|Name|FOS Cob Par 100 Zoom|Type|20|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|560|Height|281|Depth|224|Weight|3.58|Power|105|Connector|3-pin|Bulb|1x 100 Watt COB LED|LensMinDegree|9.000|LensMaxDegree|30.000
+[CHAN_DEF]
+ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~9~Txt~Open|R2|Begin~10~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Master dimmer
+Name|2-channel|ShortName|2ch|Content|Master dimmer~Strobe
+[END_MODES]

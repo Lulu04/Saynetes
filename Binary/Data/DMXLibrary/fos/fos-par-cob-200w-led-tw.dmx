@@ -1,0 +1,21 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.fos-lighting.eu/uploads/products_1_2_1_61.pdf|LinkType2|product page|Url2|https://www.fos-lighting.eu/fos-par-cob-200w-led-tw-p-61.html|LinkType3|video|Url3|https://youtu.be/x4SSa1bLy8k
+[GENERAL]
+Manufacturer|Fos|Name|FOS Par Cob 200w Led TW|Type|25|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|290|Height|260|Depth|305|Weight|4.9|Power|260|Connector|3-pin|Bulb|COB 200W|LensMinDegree|60.000|LensMaxDegree|60.000
+[CHAN_DEF]
+ID|Warm White|Type|23|R1|Begin~0~End~255~Txt~0..100%
+ID|Cold White|Type|24|R1|Begin~0~End~255~Txt~0..100%
+ID|Warm + Cold|Type|1|R1|Begin~0~End~255~Txt~0..100%
+ID|Strobe|Type|6|R1|Begin~0~End~4~Txt~Open|R2|Begin~5~End~255~Txt~Slow..Fast
+ID|Auto programs|Type|49|R1|Begin~0~End~50~Txt~No function|R2|Begin~51~End~100~Txt~Color Chase|R3|Begin~101~End~150~Txt~Color Fade|R4|Begin~151~End~200~Txt~Color Pulse|R5|Begin~201~End~255~Txt~Freeze
+ID|Auto Programs Speed|Type|50|R1|Begin~0~End~255~Txt~Slow..Fast
+[END_CHAN_DEF]
+[MODES]
+Name|b2CH|ShortName|b2CH|Content|Warm White~Cold White
+Name|A2CH|ShortName|A2CH|Content|Warm + Cold~Strobe
+Name|b4CH|ShortName|b4CH|Content|Warm + Cold~Strobe~Auto programs~Auto Programs Speed
+[END_MODES]
