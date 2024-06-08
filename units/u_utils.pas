@@ -564,8 +564,7 @@ begin
 end;
 
 function StringToSingle(const aStr: string): single;
-var i: integer;
-  fs: TFormatSettings;
+var fs: TFormatSettings;
 begin
   try
     fs.DecimalSeparator := '.';
@@ -1197,13 +1196,10 @@ end;
 function TSplitProperty.SingleValueOf(const aPropertyName: string;
   var Value: single; aDefault: single): boolean;
 var i: integer;
-  v: single;
 begin
   Result := ValueIndexOf(aPropertyName, i);
-  if Result then
-    Value := StringToSingle(A[i])
-  else
-    Value := aDefault;
+  if Result then Value := StringToSingle(A[i])
+    else Value := aDefault;
 end;
 
 

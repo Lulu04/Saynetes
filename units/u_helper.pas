@@ -276,7 +276,7 @@ end;
 
 function TVirtualChannelForSwitchsHelper.TrySplitVirtual(const aFormattedVirtualName: string;
   out aVirtualName: string; out aSubChannels: TStringArray): boolean;
-var A, B: TStringArray;
+var A: TStringArray;
 begin
   A := aFormattedVirtualName.Split([':']);
   if Length(A) <> 2 then exit(False);
@@ -361,7 +361,7 @@ end;
 { TFixLibAvailableChannelsHelper }
 
 function TFixLibAvailableChannelsHelper.GetChannelsByName(const aName: string): PFixLibAvailableChannel;
-var i, j: integer;
+var i: integer;
 begin
   for i:=0 to High(Self) do
     if Self[i].NameID = aName then begin
@@ -802,7 +802,6 @@ function TSplittedCmdsHelper.ParamArrayHaveError(out errMess: string): boolean;
 var cmd: Integer;
   vInteger: integer;
   vSingle: single;
-  B: TCmdArray;
   function ErrorOnParamCount(aCount: integer; const aStrCmd: string): boolean;
   begin
     if Length(Self) <> aCount then begin
@@ -907,14 +906,12 @@ var cmd: Integer;
   end;
   function ErrorOnDmxAdress(const aStrUni, aStrFix, aStrCmd: string): boolean; overload;
   var uni: TDmxUniverse;
-    fix: TDmxFixture;
   begin
     uni := UniverseManager.GetUniverseByStrID(aStrUni);
     if uni = NIL then begin
       errMess := aStrCmd+': '+SUniverseNotFound;
       exit(True);
     end;
-    fix := uni.GetFixtureByStrID(aStrFix);
     if uni.GetFixtureByStrID(aStrFix) = NIL then begin
       errMess := aStrCmd+': '+SFixtureNotFound;
       exit(True);

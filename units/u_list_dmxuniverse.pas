@@ -477,8 +477,7 @@ var
 
 implementation
 uses u_resource_string, u_logfile, u_dmx_util,
-  Math, LCLIntf, u_global_var, u_project_manager, u_apputils, u_helper,
-  utilitaire_fichier;
+  Math, LCLIntf, u_global_var, u_project_manager, u_apputils, u_helper;
 
 {$define SectionImplementation}
 {$include fixture_fromlibrary.inc}

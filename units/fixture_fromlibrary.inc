@@ -310,7 +310,7 @@ end;
 
 function ModeExistsInFixture(const aFixtureFile, aModeName: string): boolean;
 var t: TStringlist;
-  i, k, kEnd: integer;
+  k, kEnd: integer;
   prop: TProperties;
   s: string;
 begin

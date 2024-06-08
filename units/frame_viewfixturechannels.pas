@@ -64,7 +64,7 @@ type
 
 implementation
 
-uses u_resource_string, u_dmxlib_inputrange, u_userdialogs, u_utils, u_helper,
+uses u_resource_string, u_userdialogs, u_helper,
   Dialogs;
 
 {$R *.lfm}

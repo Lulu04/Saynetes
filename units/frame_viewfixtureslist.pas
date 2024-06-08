@@ -19,7 +19,7 @@ type
     procedure LBKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseLeave(Sender: TObject);
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBSelectionChange(Sender: TObject; {%H-}User: boolean);
