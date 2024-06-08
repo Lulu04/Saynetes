@@ -502,6 +502,9 @@ resourcestring
   SBadDurationMin='bad min duration value';
   SBadDurationMax='bad max duration value';
 
+  SUnableToCreateManufacturerFolder='Unable to create the manufacturer folder';
+  SUnableToSaveTheFixture='Unable to save the fixture...';
+
 // fixture name
   SOther='Other';
   SPlanConvex='PC';

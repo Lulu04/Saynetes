@@ -1,0 +1,167 @@
+object FormNewManufacturer: TFormNewManufacturer
+  Left = 393
+  Height = 282
+  Top = 302
+  Width = 409
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  ClientHeight = 282
+  ClientWidth = 409
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  Position = poMainFormCenter
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 282
+    Top = 0
+    Width = 409
+    Align = alClient
+    BevelColor = 33023
+    BevelWidth = 2
+    ClientHeight = 282
+    ClientWidth = 409
+    Color = 4345683
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      AnchorSideRight.Side = asrBottom
+      Left = 24
+      Height = 15
+      Top = 24
+      Width = 111
+      Caption = 'Manufacturer name'
+      Font.Color = 15395562
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Label1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 23
+      Top = 39
+      Width = 352
+      OnChange = Edit1Change
+      TabOrder = 0
+    end
+    object BOK: TSpeedButton
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 297
+      Height = 26
+      Top = 244
+      Width = 100
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Right = 10
+      BorderSpacing.Bottom = 10
+      Constraints.MinHeight = 26
+      Constraints.MinWidth = 100
+      Caption = 'sOk'
+      Color = 16433669
+      Flat = True
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Style = [fsBold]
+      Images = DataModule1.ImageList1
+      ImageIndex = 3
+      Transparent = False
+      OnClick = BOKClick
+      ParentFont = False
+    end
+    object Label5: TLabel
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      Left = 187
+      Height = 15
+      Top = 62
+      Width = 189
+      Anchors = [akTop, akRight]
+      Caption = 'this manufacturer is already defined'
+      Font.Color = 6974207
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object Label2: TLabel
+      AnchorSideTop.Control = Label5
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 24
+      Height = 15
+      Top = 97
+      Width = 276
+      BorderSpacing.Top = 20
+      Caption = 'Folder name on the disk        only a..z and - (minus)'
+      Font.Color = 15395562
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Edit2: TEdit
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 23
+      Top = 112
+      Width = 352
+      CharCase = ecLowerCase
+      OnChange = Edit1Change
+      TabOrder = 1
+    end
+    object Label6: TLabel
+      AnchorSideTop.Control = Edit2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit2
+      AnchorSideRight.Side = asrBottom
+      Left = 250
+      Height = 15
+      Top = 135
+      Width = 126
+      Anchors = [akTop, akRight]
+      Caption = 'this folder already exists'
+      Font.Color = 6974207
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object Label3: TLabel
+      AnchorSideTop.Control = Label6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 24
+      Height = 15
+      Top = 170
+      Width = 102
+      BorderSpacing.Top = 20
+      Caption = 'Website (optional)'
+      Font.Color = 15395562
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Edit3: TEdit
+      AnchorSideLeft.Control = Label3
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 23
+      Top = 185
+      Width = 352
+      TabOrder = 2
+    end
+  end
+end
