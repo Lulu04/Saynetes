@@ -493,7 +493,8 @@ type
                      ctGOBOSHAKE,
                      ctFROST,
                      ctSOUNDCONTROLED,
-                     ctEFFECT
+                     ctEFFECT,
+                     ctEFFECTSPEED     // 50
                    );
 var
   FixtureImages: array[TFixtureType] of TBGRABitmap;
@@ -526,6 +527,7 @@ type
     WebSite: string;
   end;
   TManufacturers = array of TFixtureManufacturer;
+  PManufacturers = ^TManufacturers;
 
 implementation
 

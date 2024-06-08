@@ -140,6 +140,7 @@ begin
   AddImageToImageList('Frost.svg', ILChannelType);
   AddImageToImageList('SoundControled.svg', ILChannelType);
   AddImageToImageList('Effect.svg', ILChannelType);
+  AddImageToImageList('EffectSpeed.svg', ILChannelType);
 
   AddImageToImageList('SwitchingChannel.svg', ILChannelType);
   AddImageToImageList('Switch.svg', ILChannelType);

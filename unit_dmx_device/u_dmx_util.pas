@@ -388,6 +388,7 @@ begin
     ctFROST: Result:=Result+'CursorFrost.svg';
     ctSOUNDCONTROLED: Result:=Result+'CursorSoundControled.svg';
     ctEFFECT: Result:=Result+'CursorEffect.svg';
+    ctEFFECTSPEED: Result:=Result+'CursorEffectSpeed.svg';
     else Raise exception.Create('forgot to implement!');
   end;//case
 end;
