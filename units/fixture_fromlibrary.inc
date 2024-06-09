@@ -17,6 +17,8 @@ TFixtureLibraryLocation = record
   function HaveFixtureOk: boolean;
   // return true if the record locates an existing .dmx file and an existing mode
   function HaveFixtureAndModeOk: boolean;
+
+  class operator =(a,b : TFixtureLibraryLocation) : boolean;
 end;
 
 { TWebLink }
@@ -522,6 +524,13 @@ end;
 function TFixtureLibraryLocation.HaveFixtureAndModeOk: boolean;
 begin
   Result := ModeExistsInFixture(AbsolutPath, Mode);
+end;
+
+class operator TFixtureLibraryLocation.=(a, b: TFixtureLibraryLocation): boolean;
+begin
+  Result := (CompareStr(a.SubFolder, b.SubFolder) = 0) and
+            (CompareStr(a.Filename, b.Filename) = 0) and
+            (CompareStr(a.Mode, b.Mode) = 0);
 end;
 
 { TLibraryFixture }
