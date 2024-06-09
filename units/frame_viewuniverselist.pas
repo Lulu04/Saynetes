@@ -84,7 +84,7 @@ begin
 
     // occupied adress
     Font.Height := 14;
-    txt := (uni.LastUsedAdress).ToString+'/'+uni.LastAdress.ToString;
+    txt := (uni.NumberOfAdressOccupied).ToString+'/'+uni.LastAdress.ToString;
     xx := ARect.Right-5-TextWidth(txt);
     TextOut(xx, ARect.Top+2, txt);
 

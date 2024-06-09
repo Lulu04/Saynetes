@@ -127,7 +127,7 @@ begin
   case Key of
     VK_UP, VK_DOWN: begin
       if FOnEditKeyUpDown <> NIL then
-        FOnEditKeyUpDown(Self, TEditTypeForKeyUpDown(e.Tag), 10000, Key);
+        FOnEditKeyUpDown(Self, TEditTypeForKeyUpDown(e.Tag), 0, Key);
       key := 0;
     end;
 

@@ -345,9 +345,12 @@ type
      constructor Create;
      destructor Destroy; override;
 
-     // adressing
+   public  // adressing
+     // return the number of dmx adress occupied, taking any gap into acount
+     function NumberOfAdressOccupied: integer;
+     // return the last adress occupied by a fixture
      function LastUsedAdress: TDMXAdress;
-     function FirstFreeAdress(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
+     function TryToFindFreeAdressRange(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
      function ErrorInAdressing: boolean;
      // return TRUE if aAdress is a valid DMX adress [MIN_DMX_ADRESS..MAX_DMX_ADRESS]
      function IsValidAdress(const aAdress: TDMXAdress): boolean;
@@ -1641,6 +1644,14 @@ begin
   inherited Destroy;
 end;
 
+function TDmxUniverse.NumberOfAdressOccupied: integer;
+var fix: TDmxFixture;
+begin
+  Result := 0;
+  for fix in FFixtures do
+    Result := Result + fix.ChannelsCount;
+end;
+
 
 function TDmxUniverse.LastUsedAdress: TDMXAdress;
 var fix: TDMXFixture;
@@ -1651,7 +1662,7 @@ begin
       Result := fix.LastAdress;
 end;
 
-function TDmxUniverse.FirstFreeAdress(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
+function TDmxUniverse.TryToFindFreeAdressRange(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
 var fix: TDMXFixture;
   A:array of boolean;
   i, c: integer;
