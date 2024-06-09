@@ -834,8 +834,8 @@ begin
     Redraw;
   end;
 
-  if (SelectedCount = 1) and (Button = mbLeft) and ModePrepaDMX then begin
-    // retrieve the fixture in the library
+  if (SelectedCount = 1) and (Button = mbLeft) and ModePrepaDMX and (fix <> NIL) then begin
+    // make visible the fixture in the library
     FormMain.FrameMainAddFixture1.FrameViewDMXLibrary1.SelectFixture(fix.FixLibLocation);
   end;
 
@@ -1839,7 +1839,8 @@ begin
 
   // check if there is enough dmx adress available in the target universe to fit all channels
   chanCount := FLibraryFixtureToAdd.GetChannelCountForMode(FFixtureToAdd.FixtureLocation.Mode);
-  if not targetUni.FirstFreeAdress(chanCount, adress) then begin
+  adress := 0; // avoid compilation hint
+  if not targetUni.TryToFindFreeAdressRange(chanCount, adress) then begin
     ShowMess(SUniverseFull+lineending+targetUni.Name, SOk, mtError);
     ExitAddMode;
     exit;
