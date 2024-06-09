@@ -7,7 +7,7 @@ Manufacturer|cameo|Name|Instant Air 1000 Pro|Type|21|Authors|Felix Edelmann|Crea
 [PHYSICAL]
 Width|385|Height|385|Depth|515|Weight|10.90|Power|74|Connector|3-pin and 5-pin
 [CHAN_DEF]
-ID|Fan|Type|36|R1|Begin~0~End~5~Txt~No function|R2|Begin~6~End~255~Txt~Rotation slow CW..fast CW
+ID|Fan|Type|36|R1|Begin~0~End~5~Txt~OFF|R2|Begin~6~End~255~Txt~Slow..Fast
 [END_CHAN_DEF]
 [MODES]
 Name|1-channel|ShortName|1ch|Content|Fan

@@ -380,9 +380,10 @@ end;
 function TFrameViewDMXLibrary.GetSelectedFixtureLocation: TFixtureLibraryLocation;
 var n: TTreeNode;
 begin
-  n := TV.Selected;
-
   Result.InitDefault;
+  n := TV.Selected;
+  if n = NIL then exit;
+
   if not ItsTheRoot(n) then begin
     Result.SubFolder := RelativePathForNode(n);
     if ItsAFile(n) then begin
@@ -547,26 +548,17 @@ begin
   n := TV.Items.FindNodeWithText(aFixtureLocation.SubFolder);
   if n = NIL then exit;
   n.Expand(False);
+
+  // search the sub-node with filename
+  n := n.FindNode(ChangeFileExt(aFixtureLocation.Filename, ''));
+  if n <> NIL then n.Expand(False);
+
+  // search the sub-node with mode
+  n := n.FindNode(aFixtureLocation.Mode);
+  if n <> NIL then n.Expand(False);
+
   TV.Selected := n;
   TV.MakeSelectionVisible;
-  //n.MakeVisible;
-
-  n := n.FindNode(ChangeFileExt(aFixtureLocation.Filename, ''));
-  if n <> NIL then begin
-    n.Expand(False);
-    TV.Selected := n;
-    TV.MakeSelectionVisible;
-    //n.MakeVisible;
-  end;
-
-  n := n.FindNode(aFixtureLocation.Mode);
-  if n <> NIL then begin
-    n.Expand(False);
-    TV.Selected := n;
-    TV.MakeSelectionVisible;
-    //n.MakeVisible;
-  end;
-
 end;
 
 procedure TFrameViewDMXLibrary.EraseBackground(DC: HDC);
