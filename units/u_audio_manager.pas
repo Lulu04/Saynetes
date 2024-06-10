@@ -158,11 +158,97 @@ type
 var
   SoundManager: TSoundManager;
 
+
+type
+
+  { TAudioPreset }
+
+  TAudioPreset = record
+    Name: string;
+    DryWet: single;
+    EffectCount: integer;
+    Effect1, Preset1,
+    Effect2, Preset2,
+    Effect3, Preset3: integer;
+    procedure InitDefault;
+    procedure InitFromString(s: string);
+  end;
+
+  function EffectIndexToALSoundEffectType(aEffectIndex: integer): TALSEffectType;
+
 implementation
 uses LazUTF8, Forms, u_resource_string, u_logfile, u_utils, u_common,
   u_program_options, PropertyUtils;
 const
   AUDIO_HEADER='[AUDIO FILES]';
+
+{ TAudioPreset }
+
+procedure TAudioPreset.InitDefault;
+begin
+  Name := '';
+  DryWet := 0.5;
+  EffectCount := 0;
+  Effect1 := -1;
+  Preset1 := -1;
+  Effect2 := -1;
+  Preset2 := -1;
+  Effect3 := -1;
+  Preset3 := -1;
+end;
+
+procedure TAudioPreset.InitFromString(s: string);
+var A: TStringArray;
+  effect, preset: integer;
+begin
+  InitDefault;
+  A := s.Split(['|']);
+
+  if Length(A) < 3 then exit;
+  Name := A[0];
+  if not TryStrToInt(A[1], EffectCount) then exit;
+  DryWet := StringToSingle(A[2]);
+
+  if (EffectCount >= 1) and (Length(A) >= 5) then begin
+    if not TryStrToInt(A[3], effect) then exit;
+    if not TryStrToInt(A[4], preset) then exit;
+    Effect1 := effect;
+    Preset1 := preset;
+  end;
+
+  if (EffectCount >= 2) and (Length(A) >= 7) then begin
+    if not TryStrToInt(A[5], effect) then exit;
+    if not TryStrToInt(A[6], preset) then exit;
+    Effect2 := effect;
+    Preset2 := preset;
+  end;
+
+  if (EffectCount = 3) and (Length(A) = 9) then begin
+    if not TryStrToInt(A[7], effect) then exit;
+    if not TryStrToInt(A[8], preset) then exit;
+    Effect3 := effect;
+    Preset3 := preset;
+  end;
+end;
+
+function EffectIndexToALSoundEffectType(aEffectIndex: integer): TALSEffectType;
+begin
+  case aEffectIndex of
+    0: Result := AL_EFFECT_AUTOWAH;
+    1: Result := AL_EFFECT_CHORUS;
+    2: Result := AL_EFFECT_FLANGER;
+    3: Result := AL_EFFECT_COMPRESSOR;
+    4: Result := AL_EFFECT_DISTORTION;
+    5: Result := AL_EFFECT_ECHO;
+    6: Result := AL_EFFECT_EQUALIZER;
+    7: Result := AL_EFFECT_FREQUENCYSHIFTER;
+    8: Result := AL_EFFECT_PITCHSHIFTER;
+    9: Result := AL_EFFECT_RINGMODULATOR;
+   10: Result := AL_EFFECT_VOCALMORPHER;
+   11: Result := AL_EFFECT_EAXREVERB;
+   else Result := AL_EFFECT_NONE;
+  end;
+end;
 
 { TSoundItem }
 

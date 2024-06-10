@@ -184,7 +184,7 @@ private
 
 implementation
 uses u_logfile, u_resource_string, u_utils, u_helper, Graphics,
-  u_project_manager, Dialogs;
+  u_project_manager, u_apputils, Dialogs;
 
 {$R *.lfm}
 
@@ -671,8 +671,7 @@ begin
   FrameViewAudioList1.OnSelectionChange:=@ProcessFileSelectionChange;
 
   FAudioFXPresetManager := TPresetManager.Create(Self);
-  FAudioFXPresetManager.Init1(SAudioFXPresets, BPreset,
-                  ConcatPaths([Project.AppPresetsFolder, 'AudioEffect'+PRESET_FILE_EXTENSION]));
+  FAudioFXPresetManager.Init1(SAudioFXPresets, BPreset, GetAppAudioPresetsFile);
   FAudioFXPresetManager.Init2(@PresetToAudioFX, @AudioFXToPreset);
 
   FNoteBookManager := TNoteBookManager.Create(Notebook1);

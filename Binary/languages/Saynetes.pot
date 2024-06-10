@@ -1030,23 +1030,25 @@ msgstr ""
 msgid "Click on the needed alignment"
 msgstr ""
 
-#: tframeaudiocapture.image1.hint
-msgid "Audio input not found"
-msgstr ""
-
-#: tframeaudiocapture.speedbutton1.hint
-msgid "Remove all audio effects"
-msgstr ""
-
-#: tframeaudiocapture.speedbutton2.hint
+#: tframeaudiocapture.baddfx.hint
+msgctxt "tframeaudiocapture.baddfx.hint"
 msgid "Apply audio effects"
 msgstr ""
 
-#: tframeaudiocapture.speedbutton3.hint
-msgctxt "tframeaudiocapture.speedbutton3.hint"
+#: tframeaudiocapture.bonoff.hint
+msgctxt "tframeaudiocapture.bonoff.hint"
 msgid ""
 "Starts/stops listening to the sound captured from a microphone\n"
 "connected to the computer or from the line input."
+msgstr ""
+
+#: tframeaudiocapture.bremovefx.hint
+msgctxt "tframeaudiocapture.bremovefx.hint"
+msgid "Remove all audio effects"
+msgstr ""
+
+#: tframeaudiocapture.image1.hint
+msgid "Audio input not found"
 msgstr ""
 
 #: tframebuttononoff.speedbutton3.hint

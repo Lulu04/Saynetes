@@ -1093,26 +1093,28 @@ msgstr "Décale seulement l'action précédente et garde la position des autres.
 msgid "Click on the needed alignment"
 msgstr "Cliquez sur l'alignement désiré"
 
-#: tframeaudiocapture.image1.hint
-msgid "Audio input not found"
-msgstr "Entrée audio non trouvée"
-
-#: tframeaudiocapture.speedbutton1.hint
-msgid "Remove all audio effects"
-msgstr "Supprimer tous les effets audio"
-
-#: tframeaudiocapture.speedbutton2.hint
+#: tframeaudiocapture.baddfx.hint
+msgctxt "tframeaudiocapture.baddfx.hint"
 msgid "Apply audio effects"
 msgstr "Appliquer des effets audio"
 
-#: tframeaudiocapture.speedbutton3.hint
-msgctxt "tframeaudiocapture.speedbutton3.hint"
+#: tframeaudiocapture.bonoff.hint
+msgctxt "tframeaudiocapture.bonoff.hint"
 msgid ""
 "Starts/stops listening to the sound captured from a microphone\n"
 "connected to the computer or from the line input."
 msgstr ""
 "Démarre/Stoppe l'écoute du son capturé à partir d'un micro\n"
-"connecté à l'ordinateur ou d'une entrée ligne."
+"connecté à l'ordinateur ou à partir d'une entrée ligne."
+
+#: tframeaudiocapture.bremovefx.hint
+msgctxt "tframeaudiocapture.bremovefx.hint"
+msgid "Remove all audio effects"
+msgstr "Retirer tous les effets audio"
+
+#: tframeaudiocapture.image1.hint
+msgid "Audio input not found"
+msgstr "Entrée audio non trouvée"
 
 #: tframebuttononoff.speedbutton3.hint
 msgctxt "tframebuttononoff.speedbutton3.hint"
@@ -3846,7 +3848,7 @@ msgstr "Impossible de charger les données de l'appareil..."
 
 #: u_resource_string.sunabletosavethefixture
 msgid "Unable to save the fixture..."
-msgstr ""
+msgstr "Impossible de sauver l'appareil..."
 
 #: u_resource_string.sundo
 msgid "Undo"
@@ -3995,4 +3997,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-

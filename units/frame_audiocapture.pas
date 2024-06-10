@@ -7,13 +7,14 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, Buttons, ComCtrls, LCLType,
   StdCtrls, LCLTranslator,
-  frame_audiolevels, frame_led;
+  frame_audiolevels, frame_led, Types;
 
 type
 
   { TFrameAudioCapture }
 
   TFrameAudioCapture = class(TFrame)
+    CBFX: TComboBox;
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
@@ -29,16 +30,22 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
+    BRemoveFX: TSpeedButton;
+    BAddFX: TSpeedButton;
+    BOnOff: TSpeedButton;
     SpeedButton4: TSpeedButton;
     Timer1: TTimer;
     TrackBar1: TTrackBar;
     TrackBar2: TTrackBar;
     TrackBar3: TTrackBar;
-    procedure SpeedButton1Click(Sender: TObject);
-    procedure SpeedButton3Click(Sender: TObject);
+    procedure BRemoveFXClick(Sender: TObject);
+    procedure BAddFXClick(Sender: TObject);
+    procedure CBFXCloseUp(Sender: TObject);
+    procedure CBFXDrawItem(Control: TWinControl; Index: Integer; ARect: TRect;
+      State: TOwnerDrawState);
+    procedure CBFXSelect(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
+    procedure BOnOffClick(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TrackBar1Change(Sender: TObject);
@@ -53,11 +60,12 @@ type
     procedure PanToCursor(AValue: single);
     function CursorToVolume: single;
     procedure VolumeToCursor(AValue: single);
+    procedure DoRemoveEffect;
   public
     constructor Create(aOwner: TComponent); override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
-    procedure Fill; // update trackbar position and label caption
+    procedure Fill; // update trackbar position, label caption and presets list
     procedure UpdateStringAfterLanguageChange;
 
     procedure UpdateVisual;
@@ -67,15 +75,15 @@ type
 
 implementation
 uses u_resource_string, u_common, u_utils, u_audio_manager, u_apputils,
-  BGRABitmap, utilitaire_bgrabitmap;
+  BGRABitmap, utilitaire_bgrabitmap, Graphics;
 {$R *.lfm}
 
 { TFrameAudioCapture }
 
-procedure TFrameAudioCapture.SpeedButton3Click(Sender: TObject);
+procedure TFrameAudioCapture.BOnOffClick(Sender: TObject);
 begin
   // activate/deactivate the capture only if user clicks on the button
-  if Sender = SpeedButton3 then
+  if Sender = BOnOff then
   begin
     if SoundManager.CaptureToPlaybackIsReady then
       SoundManager.StopCaptureToPlayback
@@ -89,12 +97,62 @@ begin
   UpdateVisual;
 end;
 
-procedure TFrameAudioCapture.SpeedButton1Click(Sender: TObject);
+procedure TFrameAudioCapture.BRemoveFXClick(Sender: TObject);
 begin
-  SoundManager.DeleteEffectsOn(CAPTURE_IDAUDIO);
-  Label3.Caption := ' ';
-  Label4.Caption := ' ';
-  Label5.Caption := ' ';
+  DoRemoveEffect;
+end;
+
+procedure TFrameAudioCapture.BAddFXClick(Sender: TObject);
+begin
+  CBFX.Top := BAddFX.Top;
+  CBFX.Visible := True;
+  CBFX.DroppedDown := True;
+end;
+
+procedure TFrameAudioCapture.CBFXCloseUp(Sender: TObject);
+begin
+  CBFX.Visible := False;
+end;
+
+procedure TFrameAudioCapture.CBFXDrawItem(Control: TWinControl; Index: Integer;
+  ARect: TRect; State: TOwnerDrawState);
+var o: TAudioPreset;
+begin
+  o.InitFromString(CBFX.Items.Strings[Index]);
+  with CBFX.Canvas do begin
+    if State >= [odSelected] then Brush.Color := clHighLight
+      else Brush.Color := CBFX.Color;
+    Brush.Style := bsSolid;
+    FillRect(ARect);
+    TextOut(ARect.Left, ARect.Top, o.Name);
+  end;
+end;
+
+procedure TFrameAudioCapture.CBFXSelect(Sender: TObject);
+var i: integer;
+  o: TAudioPreset;
+begin
+  i := CBFX.ItemIndex;
+  CBFX.Visible := False;
+
+  o.InitFromString(CBFX.Items.Strings[i]);
+
+  DoRemoveEffect;
+  if o.EffectCount > 0 then begin
+    if o.EffectCount >= 1 then
+      SoundManager.AddEffectOn(CAPTURE_IDAUDIO, EffectIndexToALSoundEffectType(o.Effect1), o.Preset1);
+    if o.EffectCount >= 2 then
+      SoundManager.AddEffectOn(CAPTURE_IDAUDIO, EffectIndexToALSoundEffectType(o.Effect2), o.Preset2);
+    if o.EffectCount >= 3 then
+      SoundManager.AddEffectOn(CAPTURE_IDAUDIO, EffectIndexToALSoundEffectType(o.Effect3), o.Preset3);
+    SoundManager.ConstructChainOn(CAPTURE_IDAUDIO);
+    SoundManager.SetDryWetOn(CAPTURE_IDAUDIO, o.DryWet);
+  end;
+end;
+
+procedure TFrameAudioCapture.Panel2Click(Sender: TObject);
+begin
+  CBFX.Visible := False;
 end;
 
 procedure TFrameAudioCapture.SpeedButton4Click(Sender: TObject);
@@ -208,6 +266,14 @@ begin
    TrackBar3.Position := Round(Sqrt(AValue)*TrackBar3.Max);
 end;
 
+procedure TFrameAudioCapture.DoRemoveEffect;
+begin
+  SoundManager.DeleteEffectsOn(CAPTURE_IDAUDIO);
+  Label3.Caption := ' ';
+  Label4.Caption := ' ';
+  Label5.Caption := ' ';
+end;
+
 constructor TFrameAudioCapture.Create(aOwner: TComponent);
 var ima: TBGRABitmap;
 begin
@@ -239,6 +305,13 @@ procedure TFrameAudioCapture.Fill;
 begin
   TrackBar1Change(NIL);
   TrackBar2Change(NIL);
+
+  // load audio presets in combobox
+  CBFX.Clear;
+  try
+    CBFX.Items.LoadFromFile(GetAppAudioPresetsFile);
+  except
+  end;
 end;
 
 procedure TFrameAudioCapture.UpdateStringAfterLanguageChange;
@@ -263,11 +336,15 @@ begin
   else
   begin
     Shape3.Brush.Color := $00D6D6D6;
-    FModuleIsActivated := False;
     FrameCaptureLevels1.SetToZero;
     FrameLed1.State := False;
-    Image1.Visible := True;
+    if not FModuleIsActivated then Image1.Visible := True;
+    FModuleIsActivated := False;
   end;
+
+  BAddFX.Enabled := FModuleIsActivated;
+  BRemoveFX.Enabled := FModuleIsActivated;
+  if not FModuleIsActivated then CBFX.Visible := False;
 end;
 
 end.
