@@ -16,9 +16,11 @@ function GetAppCursorImagesFolder: string;
 function GetAppChannelImagesFolder: string;
 function GetAppIconImagesFolder: string;
 
+function GetAppAudioPresetsFile: string;
+
 
 implementation
-uses Forms;
+uses Forms, u_common, u_project_manager;
 
 function GetAppDataFolder: string;
 begin
@@ -58,6 +60,11 @@ end;
 function GetAppIconImagesFolder: string;
 begin
   Result := GetAppImagesFolder+'Icons'+DirectorySeparator;
+end;
+
+function GetAppAudioPresetsFile: string;
+begin
+  Result := ConcatPaths([Project.AppPresetsFolder, 'AudioEffect'+PRESET_FILE_EXTENSION]);
 end;
 
 end.

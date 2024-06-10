@@ -98,7 +98,7 @@ type
 implementation
 
 uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
-  u_audio_manager, u_mainform, u_common, u_apputils, Graphics,
+  u_audio_manager, u_mainform, u_common, u_apputils, u_utils, Graphics,
   Dialogs, LCLHelper, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
@@ -129,14 +129,14 @@ begin
      if Index Mod 2 = 0 then
        Brush.Color := LB.Color
      else
-       Brush.Color := PercentColor(LB.Color,0.15);
+       Brush.Color := u_utils.PercentColor(LB.Color, 0.15);
    end;
 
    if Index = FItemIndexUnderMouse then
    begin
      // render dot rectangle if mouse is over item
      Pen.Style := psDot;
-     Pen.Color := PercentColor(LB.Color,0.95); //RGBToColor(200,200,150);
+     Pen.Color := u_utils.PercentColor(LB.Color,0.95);
      Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
    end
    else FillRect(ARect);

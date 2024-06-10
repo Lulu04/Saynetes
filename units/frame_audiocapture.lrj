@@ -1,5 +1,5 @@
 {"version":1,"strings":[
-{"hash":87140270,"name":"tframeaudiocapture.speedbutton3.hint","sourcebytes":[83,116,97,114,116,115,47,115,116,111,112,115,32,108,105,115,116,101,110,105,110,103,32,116,111,32,116,104,101,32,115,111,117,110,100,32,99,97,112,116,117,114,101,100,32,102,114,111,109,32,97,32,109,105,99,114,111,112,104,111,110,101,13,10,99,111,110,110,101,99,116,101,100,32,116,111,32,116,104,101,32,99,111,109,112,117,116,101,114,32,111,114,32,102,114,111,109,32,116,104,101,32,108,105,110,101,32,105,110,112,117,116,46],"value":"Starts/stops listening to the sound captured from a microphone\r\nconnected to the computer or from the line input."},
+{"hash":87140270,"name":"tframeaudiocapture.bonoff.hint","sourcebytes":[83,116,97,114,116,115,47,115,116,111,112,115,32,108,105,115,116,101,110,105,110,103,32,116,111,32,116,104,101,32,115,111,117,110,100,32,99,97,112,116,117,114,101,100,32,102,114,111,109,32,97,32,109,105,99,114,111,112,104,111,110,101,13,10,99,111,110,110,101,99,116,101,100,32,116,111,32,116,104,101,32,99,111,109,112,117,116,101,114,32,111,114,32,102,114,111,109,32,116,104,101,32,108,105,110,101,32,105,110,112,117,116,46],"value":"Starts/stops listening to the sound captured from a microphone\r\nconnected to the computer or from the line input."},
 {"hash":124099109,"name":"tframeaudiocapture.label1.caption","sourcebytes":[67,65,80,84,85,82,69],"value":"CAPTURE"},
 {"hash":5404860,"name":"tframeaudiocapture.label7.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeaudiocapture.label2.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
@@ -8,9 +8,9 @@
 {"hash":5404860,"name":"tframeaudiocapture.label3.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeaudiocapture.label4.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeaudiocapture.label5.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":26874739,"name":"tframeaudiocapture.speedbutton1.hint","sourcebytes":[82,101,109,111,118,101,32,97,108,108,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Remove all audio effects"},
-{"hash":1208,"name":"tframeaudiocapture.speedbutton1.caption","sourcebytes":[70,88],"value":"FX"},
-{"hash":184639731,"name":"tframeaudiocapture.speedbutton2.hint","sourcebytes":[65,112,112,108,121,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Apply audio effects"},
-{"hash":1208,"name":"tframeaudiocapture.speedbutton2.caption","sourcebytes":[70,88],"value":"FX"},
+{"hash":26874739,"name":"tframeaudiocapture.bremovefx.hint","sourcebytes":[82,101,109,111,118,101,32,97,108,108,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Remove all audio effects"},
+{"hash":1208,"name":"tframeaudiocapture.bremovefx.caption","sourcebytes":[70,88],"value":"FX"},
+{"hash":184639731,"name":"tframeaudiocapture.baddfx.hint","sourcebytes":[65,112,112,108,121,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Apply audio effects"},
+{"hash":1208,"name":"tframeaudiocapture.baddfx.caption","sourcebytes":[70,88],"value":"FX"},
 {"hash":179058628,"name":"tframeaudiocapture.image1.hint","sourcebytes":[65,117,100,105,111,32,105,110,112,117,116,32,110,111,116,32,102,111,117,110,100],"value":"Audio input not found"}
 ]}

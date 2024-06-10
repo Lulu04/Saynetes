@@ -9,8 +9,8 @@ Width|203|Height|203|Depth|193|Weight|4.25|Power|50|Connector|3-pin XLR IP65|Bul
 [CHAN_DEF]
 ID|Master dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Color Macro Simple|Type|12|R1|Begin~0~End~31~Txt~Black #000000|R2|Begin~32~End~63~Txt~Red #ff0000|R3|Begin~64~End~95~Txt~Green #00ff00|R4|Begin~96~End~127~Txt~Blue #0000ff|R5|Begin~128~End~159~Txt~Yellow #ffff00|R6|Begin~160~End~191~Txt~Cyan #00ffff|R7|Begin~192~End~223~Txt~Magenta #ff00ff|R8|Begin~224~End~255~Txt~White #ffffff
-ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~Strobe 0%..100%
-ID|Color Macro Advanced|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~15~Txt~Red #ff0000|R3|Begin~16~End~26~Txt~Green #00ff00|R4|Begin~27~End~37~Txt~Blue #0000ff|R5|Begin~38~End~48~Txt~Yellow #ffff00|R6|Begin~49~End~59~Txt~Cyan #00ffff|R7|Begin~60~End~70~Txt~Magenta #ff00ff|R8|Begin~71~End~80~Txt~White #ffffff|R9|Begin~81~End~150~Txt~ColorJump|R10|Begin~151~End~255~Txt~ColorFade
+ID|Strobe|Type|6|R1|Begin~0~End~255~Txt~0..100%
+ID|Color Macro Advanced|Type|12|R1|Begin~0~End~4~Txt~No function|R2|Begin~5~End~15~Txt~Red~Extra~#ff0000|R3|Begin~16~End~26~Txt~Green~Extra~#00ff00|R4|Begin~27~End~37~Txt~Blue~Extra~#0000ff|R5|Begin~38~End~48~Txt~Yellow~Extra~#ffff00|R6|Begin~49~End~59~Txt~Cyan~Extra~#00ffff|R7|Begin~60~End~70~Txt~Magenta~Extra~#ff00ff|R8|Begin~71~End~80~Txt~White~Extra~#ffffff|R9|Begin~81~End~150~Txt~ColorJump|R10|Begin~151~End~255~Txt~ColorFade
 ID|Red|Type|3|R1|Begin~0~End~255~Txt~0..100%
 ID|Green|Type|4|R1|Begin~0~End~255~Txt~0..100%
 ID|Blue|Type|5|R1|Begin~0~End~255~Txt~0..100%

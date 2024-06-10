@@ -143,7 +143,7 @@ begin
    if Index = FItemIndexUnderMouse then
    begin
      Pen.Style := psDot;
-     Pen.Color := PercentColor(LB.Color,0.95); //RGBToColor(200,200,150);
+     Pen.Color := PercentColor(LB.Color,0.95);
      Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
    end
    else FillRect(ARect);

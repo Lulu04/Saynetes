@@ -555,7 +555,7 @@ end;
 
 procedure TFrameViewProjector.View_Center;
 begin
-  FNeedCenterView:=TRUE;
+  FNeedCenterView := TRUE;
   Redraw;
 end;
 
@@ -873,10 +873,10 @@ var fix: TDMXFixture;
   alpha: byte;
   fixType: TFixtureType;
 begin
-  if not BGLVirtualScreen1.MakeCurrent(false) then
+  if not BGLVirtualScreen1.MakeCurrent(False) then
     exit;
 
-  FInvalidateAlreadySent := FALSE;
+  FInvalidateAlreadySent := False;
 
   if FOpenGLObjectsNeedToBeReconstruct then
   begin
@@ -887,17 +887,20 @@ begin
 
   if FNeedCenterView then
   begin
-    FNeedCenterView := FALSE;
+    FNeedCenterView := False;
     ComputeTotalViewRect;
 
-    w := BGLVirtualScreen1.ClientWidth/FTotalViewRect.Width;
-    h := BGLVirtualScreen1.ClientHeight/FTotalViewRect.Height;
+    w := BGLVirtualScreen1.ClientWidth / FTotalViewRect.Width;
+    h := BGLVirtualScreen1.ClientHeight / FTotalViewRect.Height;
     Zoom := Min(w, h)*0.95;
 
-    FViewOrigin.x := Abs(FTotalViewRect.Left)*FZoom;
-    FViewOrigin.y := Abs(FTotalViewRect.Top)*FZoom;
+    FViewOrigin.x := Abs(FTotalViewRect.Left) * FZoom +
+                     (BGLVirtualScreen1.ClientWidth - FTotalViewRect.Width*FZoom) * 0.5;
+    FViewOrigin.y := Abs(FTotalViewRect.Top) * FZoom +
+                     (BGLVirtualScreen1.ClientHeight - FTotalViewRect.Height*FZoom) * 0.5;
   end;
-  BGLVirtualScreen1.MakeCurrent(FALSE);
+
+  //BGLVirtualScreen1.MakeCurrent(FALSE);
   with BGLContext.Canvas do
   begin
     // background
@@ -1331,7 +1334,7 @@ begin
   // the seats
   if FTextureSeats <> NIL then
   begin
-    FTotalViewRect := FTotalViewRect.Union(RectF(-FTextureSeats.Width/2, 300, FTextureSeats.Width/2, 300+FTextureSeats.Height));
+    FTotalViewRect := FTotalViewRect.Union(RectF(-FTextureSeats.Width/2, ScaleDesignToForm(300), FTextureSeats.Width/2, ScaleDesignToForm(300)+FTextureSeats.Height));
   end;
   // the fixtures
   for u:=0 to UniverseManager.Count-1 do

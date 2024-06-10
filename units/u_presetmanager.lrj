@@ -5,7 +5,6 @@
 {"hash":128724181,"name":"tpresetmanager.speedbutton2.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
 {"hash":57485812,"name":"tpresetmanager.speedbutton3.hint","sourcebytes":[82,101,110,97,109,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116],"value":"Rename the selected preset"},
 {"hash":143411269,"name":"tpresetmanager.speedbutton3.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
-{"hash":125449877,"name":"tpresetmanager.speedbutton4.caption","sourcebytes":[115,67,108,111,115,101],"value":"sClose"},
 {"hash":489380,"name":"tpresetmanager.miadd.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
 {"hash":200216030,"name":"tpresetmanager.mimanager.caption","sourcebytes":[80,114,101,115,101,116,32,109,97,110,97,103,101,114,46,46,46],"value":"Preset manager..."}
 ]}

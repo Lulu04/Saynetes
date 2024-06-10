@@ -469,7 +469,6 @@ begin
     Renderer.FTextStyleForTextRect.Wordbreak := True; // can go to the next line
     TextRect(r, 0, 0, txt, Renderer.FTextStyleForTextRect);
    end;
-
   end;
 end;
 

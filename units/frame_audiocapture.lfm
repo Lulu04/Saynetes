@@ -21,6 +21,7 @@ object FrameAudioCapture: TFrameAudioCapture
     Color = 4934475
     ParentColor = False
     TabOrder = 0
+    OnClick = Panel2Click
     object Shape2: TShape
       AnchorSideLeft.Control = Panel2
       AnchorSideTop.Control = Panel7
@@ -53,7 +54,7 @@ object FrameAudioCapture: TFrameAudioCapture
       Pen.Color = 3552822
       Shape = stRoundSquare
     end
-    object SpeedButton3: TSpeedButton
+    object BOnOff: TSpeedButton
       Tag = 1
       AnchorSideLeft.Control = Shape3
       AnchorSideTop.Control = Shape3
@@ -71,7 +72,7 @@ object FrameAudioCapture: TFrameAudioCapture
       Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 30
-      OnClick = SpeedButton3Click
+      OnClick = BOnOffClick
       ShowHint = True
       ParentShowHint = False
     end
@@ -294,17 +295,17 @@ object FrameAudioCapture: TFrameAudioCapture
     object Label3: TLabel
       AnchorSideLeft.Control = Panel7
       AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BRemoveFX
+      AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Shape4
-      AnchorSideBottom.Control = Label4
       Left = 97
       Height = 13
-      Top = 98
+      Top = 90
       Width = 135
-      Alignment = taCenter
-      Anchors = [akLeft, akRight, akBottom]
+      Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
       BorderSpacing.Right = 5
-      BorderSpacing.Bottom = 5
       Caption = 'Label'
       Font.Color = 15395562
       Font.Height = 13
@@ -315,17 +316,16 @@ object FrameAudioCapture: TFrameAudioCapture
     object Label4: TLabel
       AnchorSideLeft.Control = Panel7
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Shape4
-      AnchorSideTop.Side = asrCenter
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Shape4
-      AnchorSideBottom.Control = Label5
       Left = 97
       Height = 13
-      Top = 116
+      Top = 108
       Width = 135
-      Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
       BorderSpacing.Right = 5
       Caption = 'Label'
       Font.Color = 15395562
@@ -342,9 +342,8 @@ object FrameAudioCapture: TFrameAudioCapture
       AnchorSideRight.Control = Shape4
       Left = 97
       Height = 13
-      Top = 134
+      Top = 126
       Width = 135
-      Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 5
       BorderSpacing.Top = 5
@@ -357,9 +356,9 @@ object FrameAudioCapture: TFrameAudioCapture
       WordWrap = True
     end
     object Panel1: TPanel
-      AnchorSideLeft.Control = SpeedButton3
+      AnchorSideLeft.Control = BOnOff
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = SpeedButton3
+      AnchorSideTop.Control = BOnOff
       AnchorSideTop.Side = asrCenter
       Left = 51
       Height = 10
@@ -369,7 +368,8 @@ object FrameAudioCapture: TFrameAudioCapture
       BevelOuter = bvNone
       TabOrder = 4
     end
-    object SpeedButton1: TSpeedButton
+    object BRemoveFX: TSpeedButton
+      AnchorSideTop.Control = Shape4
       AnchorSideRight.Control = Label3
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Label3
@@ -377,32 +377,36 @@ object FrameAudioCapture: TFrameAudioCapture
       Left = 190
       Height = 20
       Hint = 'Remove all audio effects'
-      Top = 78
+      Top = 65
       Width = 37
-      Anchors = [akRight, akBottom]
+      Anchors = [akTop, akRight]
       AutoSize = True
+      BorderSpacing.Top = 30
       BorderSpacing.Right = 5
       Caption = 'FX'
+      Enabled = False
       Images = DataModule1.ImageList1
-      ImageIndex = 2
-      OnClick = SpeedButton1Click
+      ImageIndex = 7
+      OnClick = BRemoveFXClick
       ShowHint = True
       ParentShowHint = False
     end
-    object SpeedButton2: TSpeedButton
+    object BAddFX: TSpeedButton
       AnchorSideLeft.Control = Label3
-      AnchorSideTop.Control = SpeedButton1
+      AnchorSideTop.Control = BRemoveFX
       Cursor = crHandPoint
       Left = 102
       Height = 20
       Hint = 'Apply audio effects'
-      Top = 78
+      Top = 65
       Width = 37
       AutoSize = True
       BorderSpacing.Left = 5
       Caption = 'FX'
+      Enabled = False
       Images = DataModule1.ImageList1
       ImageIndex = 0
+      OnClick = BAddFXClick
       ShowHint = True
       ParentShowHint = False
     end
@@ -418,6 +422,24 @@ object FrameAudioCapture: TFrameAudioCapture
       BorderSpacing.Top = 5
       ParentShowHint = False
       ShowHint = True
+      Visible = False
+    end
+    object CBFX: TComboBox
+      AnchorSideLeft.Control = Panel2
+      AnchorSideLeft.Side = asrCenter
+      Left = 66
+      Height = 21
+      Top = 168
+      Width = 166
+      Color = 4934475
+      Font.Color = 15395562
+      ItemHeight = 15
+      OnCloseUp = CBFXCloseUp
+      OnDrawItem = CBFXDrawItem
+      OnSelect = CBFXSelect
+      ParentFont = False
+      Style = csOwnerDrawFixed
+      TabOrder = 5
       Visible = False
     end
   end
