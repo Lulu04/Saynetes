@@ -605,7 +605,7 @@ begin
   FFlag_LockPresetSelectionChange := True;
 
   c := A[0].ToInteger;
-  TrackBar1.Position := Round(StringToSingle(A[1])*100);
+  TrackBar1.Position := Round(StringToSingle(A[1])*TrackBar1.Max);
 
   k := 2;
   FEffectsState[0] := c > 0;
