@@ -55,7 +55,7 @@ object FormEditSingleAction: TFormEditSingleAction
     Height = 381
     Top = 27
     Width = 517
-    PageIndex = 1
+    PageIndex = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 2
     BorderSpacing.Top = 2

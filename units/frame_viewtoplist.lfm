@@ -23,10 +23,14 @@ object FrameViewTopList: TFrameViewTopList
     BorderStyle = bsNone
     ClickOnSelChange = False
     Color = 4473924
+    DoubleBuffered = True
+    DragMode = dmAutomatic
     ExtendedSelect = False
     Font.Color = clBlack
     Font.Height = 18
     ItemHeight = 20
+    OnDragDrop = LBDragDrop
+    OnDragOver = LBDragOver
     OnDrawItem = LBDrawItem
     OnKeyDown = LBKeyDown
     OnKeyUp = LBKeyUp
@@ -36,7 +40,9 @@ object FrameViewTopList: TFrameViewTopList
     OnMouseMove = LBMouseMove
     OnMouseUp = LBMouseUp
     OnSelectionChange = LBSelectionChange
+    OnStartDrag = LBStartDrag
     Options = []
+    ParentDoubleBuffered = False
     ParentShowHint = False
     ParentFont = False
     PopupMenu = PopupMenu1

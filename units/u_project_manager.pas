@@ -111,8 +111,8 @@ end;
 var Project: TSaynetesProject;
 
 implementation
-uses u_mainform, u_common, u_list_dmxuniverse, u_list_top, u_audio_manager,
-  u_projectwizard, u_top_player, u_userdialogs, u_resource_string,
+uses u_mainform, u_common, u_list_dmxuniverse, u_list_sequence, u_audio_manager,
+  u_projectwizard, u_sequence_player, u_userdialogs, u_resource_string,
   u_dmxtools_group, u_logfile, Controls, Dialogs, LCLTranslator, Forms,
   utilitaire_fichier, LazFileUtils, u_dmxtools_channels, u_dmxtools_rgb,
   u_program_options, u_utils, u_edit_otheraction;
@@ -142,13 +142,13 @@ begin
   AddFilterToDialogs('All file', '*.*');
 
   Foptions := TProjectOptions.Create;
-  DeviceManager:=TDeviceManager.Create;
+  DeviceManager := TDeviceManager.Create;
   DeviceManager.LookForAvailableDevices;
   SoundManager := TSoundManager.Create;
-  UniverseManager:=TUniverseManager.Create;
-  Sequences:=TTopList.Create;
+  UniverseManager := TUniverseManager.Create;
+  Sequences := TSequenceList.Create;
 
-  TopPlayer:=TTOPPlayer.Create;
+  SeqPlayer := TSequencePlayer.Create;
 
   FAudioStorage:=TCustomStorageFolder.Create('audio');
   FImageStorage:=TCustomStorageFolder.Create('image');
@@ -156,12 +156,12 @@ end;
 
 destructor TSaynetesProject.Destroy;
 begin
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
   Sequences.StopAll;
   UniverseManager.StopThread;
   SoundManager.ResetState;
 
-  TopPlayer.Free;
+  SeqPlayer.Free;
   UniverseManager.Free;
   SoundManager.Free;
   Log.Info('Destroying Sequence Manager');

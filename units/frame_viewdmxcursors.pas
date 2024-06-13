@@ -273,7 +273,7 @@ type
 
 implementation
 uses u_dmxtools_channels, u_dmxtools_rgb,
-  u_dmxtools_group, u_top_player, frame_viewprojectors, u_apputils,
+  u_dmxtools_group, u_sequence_player, frame_viewprojectors, u_apputils,
   utilitaire_bgrabitmap;
 
 {$R *.lfm}
@@ -1063,7 +1063,7 @@ end;
 procedure TFrameViewDMXCursors.BZeroClick(Sender: TObject);
 var i: integer;
 begin
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
   for i:=0 to High(FView) do
    FView[i].Fixture.SetAllChannelsToZero;
   RedrawAll;

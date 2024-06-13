@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Spin, Buttons,
   ComCtrls, LCLType, LCLTranslator,
   frame_bglvirtualscreen_sequencer, frame_viewchannelslist,
-  frame_velocity, u_top_player, u_common,
+  frame_velocity, u_sequence_player, u_common,
   u_list_dmxuniverse;
 
 type
@@ -179,7 +179,7 @@ end;
 
 procedure TFrameFXChannelChaser.SpeedButton10Click(Sender: TObject);
 begin
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
 end;
 
 procedure TFrameFXChannelChaser.SpeedButton9Click(Sender: TObject);
@@ -187,13 +187,13 @@ begin
   if not GenerateCmds then
     exit;
 
-  TopPlayer.PreviewCmdList(FCmds);
+  SeqPlayer.PreviewCmdList(FCmds);
 end;
 
 procedure TFrameFXChannelChaser.BAdd6Click(Sender: TObject);
 begin
   if FrameViewChannelsList1.Count < 2 then exit;
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
   if not GenerateCmds then
     exit;
 

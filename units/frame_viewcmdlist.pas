@@ -89,7 +89,7 @@ type
 
 implementation
 uses u_utils, VelocityCurve, ALSound, u_audio_manager, u_list_dmxuniverse,
-  u_resource_string, u_list_top, u_project_manager, u_helper, u_dmx_util,
+  u_resource_string, u_list_sequence, u_project_manager, u_helper, u_dmx_util,
   frame_bglvirtualscreen_sequencer, u_program_options, u_edit_singleaction,
   u_logfile, BGRABitmap;
 

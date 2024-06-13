@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses u_list_top, u_utils, u_resource_string, u_edit_sequence, LCLType;
+uses u_list_sequence, u_utils, u_resource_string, u_edit_sequence, LCLType;
 
 {$R *.lfm}
 
@@ -124,7 +124,7 @@ begin
   UpdateWidgets;
   if LBStretch.ItemIndex <> -1 then
   begin
-    pt := Sequences.GetTopByIndex(LBStretch.ItemIndex);
+    pt := Sequences.GetSequenceByIndex(LBStretch.ItemIndex);
     pt.TimeStretchFactor.ChangeTo(GetStretchValue, 0.2);
   end;
 end;
@@ -161,7 +161,7 @@ begin
       BeepListBox(LBStart);
       exit;
     end;
-    pt := Sequences.GetTopByIndex(LBStart.ItemIndex);
+    pt := Sequences.GetSequenceByIndex(LBStart.ItemIndex);
     FCmds := CmdStartTop(pt.ID);
     FShortReadableString := SStartSequence+' '+pt.Name;
   end;
@@ -172,7 +172,7 @@ begin
       BeepListBox(LBStop);
       exit;
     end;
-    pt := Sequences.GetTopByIndex(LBStop.ItemIndex);
+    pt := Sequences.GetSequenceByIndex(LBStop.ItemIndex);
     FCmds := CmdStopTop(pt.ID);
     FShortReadableString := SStopSequence+' '+pt.Name;
   end;
@@ -189,7 +189,7 @@ begin
       BeepListBox(LBStretch);
       exit;
     end;
-    pt := Sequences.GetTopByIndex(LBStretch.ItemIndex);
+    pt := Sequences.GetSequenceByIndex(LBStretch.ItemIndex);
     FCmds := CmdTopStretchTime(pt.ID, GetStretchValue, FSE1.Value, Frame_Velocity1.SelectedCurveID);
     FShortReadableString := SStretchTime+' '+SOn_+' '+pt.Name+' '+SCoef+' '+FormatFloat('0.00', GetStretchValue);
     FCmdDuration := FSE1.Value;
@@ -206,20 +206,20 @@ begin
   LBStart.LockSelectionChange;
   LBStart.Clear;
   for i:=0 to Sequences.Count-1 do
-    LBStart.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStart.Items.Add(Sequences.GetSequenceByIndex(i).Name);
 
   LBStart.UnlockSelectionChange;
 
   LBStop.LockSelectionChange;
   LBStop.Clear;
   for i:=0 to Sequences.Count-1 do
-    LBStop.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStop.Items.Add(Sequences.GetSequenceByIndex(i).Name);
   LBStop.UnlockSelectionChange;
 
   LBStretch.LockSelectionChange;
   LBStretch.Clear;
   for i:=0 to Sequences.Count-1 do
-    LBStretch.Items.Add(Sequences.GetTopByIndex(i).Name);
+    LBStretch.Items.Add(Sequences.GetSequenceByIndex(i).Name);
   LBStretch.UnlockSelectionChange;
 end;
 

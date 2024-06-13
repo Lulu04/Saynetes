@@ -1,4 +1,4 @@
-unit u_list_top;
+unit u_list_sequence;
 
 {$mode objfpc}{$H+}
 
@@ -11,7 +11,7 @@ uses
 
 
 type
-  TTopList = class;
+  TSequenceList = class;
   { TSequence }
 
   TSequence = class
@@ -49,15 +49,15 @@ type
      // scan the actions in the SequencerInfoList property and return true if there is an error
      // like dmx fixture not found, audio not found, sequence not found...
      // the two following property are initilized
-     function CheckError(aParentList: TTopList): boolean;
+     function CheckError(aParentList: TSequenceList): boolean;
      property HaveError: boolean read FHaveError write FHaveError;
      property ErrorMessage: string read FErrorMessage write FErrorMessage;
   end;
 
 
-  { TTopList }
+  { TSequenceList }
 
-  TTopList = class(specialize TFPGObjectList<TSequence>)   //class(specialize TList<TSequence>)
+  TSequenceList = class(specialize TFPGObjectList<TSequence>)   //class(specialize TList<TSequence>)
   private
     FID: cardinal;
   public
@@ -67,11 +67,11 @@ type
     function NameAlreadyExists(const aName: string): boolean;
     function IsValidIndex(aIndex: integer): boolean;
 
-    function AddTop(const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
-    function InsertTop(aIndex: integer; const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
-    function GetTopByID(aID: cardinal): TSequence;
+    function AddSequence(const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
+    function InsertSequence(aIndex: integer; const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
+    function GetSequenceByID(aID: cardinal): TSequence;
     function GetSequenceByStrID(const aStrID: string): TSequence;
-    function GetTopByIndex(aIndex: integer): TSequence;
+    function GetSequenceByIndex(aIndex: integer): TSequence;
 
     function GetNameByID(aID: cardinal): string;
     function IDToIndex(aID: cardinal): integer;
@@ -90,7 +90,7 @@ type
   end;
 
 var
-  Sequences: TTopList;
+  Sequences: TSequenceList;
 
 implementation
 
@@ -177,7 +177,7 @@ begin
   Result.SequencerInfoList:=SequencerInfoList;
 end;
 
-function TSequence.CheckError(aParentList: TTopList): boolean;
+function TSequence.CheckError(aParentList: TSequenceList): boolean;
 var cmds: TCmdList;
 
   function ErrorOnCmd(const aCmd: string; out errMess: string): boolean;
@@ -232,28 +232,28 @@ begin
   CmdArray := NIL;   }
 end;
 
-{ TTopList }
+{ TSequenceList }
 
-procedure TTopList.ClearAll;
+procedure TSequenceList.ClearAll;
 begin
   Clear;
   FID:=0;
 end;
 
-function TTopList.NextID: cardinal;
+function TSequenceList.NextID: cardinal;
 begin
   inc(FID);
   Result:=FID;
 end;
 
-function TTopList.GetTopByIndex(aIndex: integer): TSequence;
+function TSequenceList.GetSequenceByIndex(aIndex: integer): TSequence;
 begin
   if (aindex < 0) or (aindex >= Count)
     then Result := NIL
     else Result := Items[aindex];
 end;
 
-function TTopList.NameAlreadyExists(const aName: string): boolean;
+function TSequenceList.NameAlreadyExists(const aName: string): boolean;
 var i: integer;
 begin
  for i:=0 to Count-1 do
@@ -266,12 +266,12 @@ begin
  Result := FALSE;
 end;
 
-function TTopList.IsValidIndex(aIndex: integer): boolean;
+function TSequenceList.IsValidIndex(aIndex: integer): boolean;
 begin
  Result := (aIndex>=0) and (aIndex<Count) and (Count>0);
 end;
 
-function TTopList.AddTop(const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
+function TSequenceList.AddSequence(const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
 begin
   Result := TSequence.Create;
   Result.Name := aName;
@@ -280,7 +280,7 @@ begin
   Add(Result);
 end;
 
-function TTopList.InsertTop(aIndex: integer; const aName: string;
+function TSequenceList.InsertSequence(aIndex: integer; const aName: string;
   const aSequencerInfoList: TSequencerInfoList): TSequence;
 begin
   Result := TSequence.Create;
@@ -290,41 +290,41 @@ begin
   Insert(aIndex, Result);
 end;
 
-function TTopList.GetTopByID(aID: cardinal): TSequence;
+function TSequenceList.GetSequenceByID(aID: cardinal): TSequence;
 var i: Integer;
 begin
   for i:=0 to Count-1 do
-   if GetTopByIndex(i).ID = aID then begin
-           Result := GetTopByIndex(i);
+   if GetSequenceByIndex(i).ID = aID then begin
+           Result := GetSequenceByIndex(i);
            exit;
    end;
   Result := NIL;
 end;
 
-function TTopList.GetSequenceByStrID(const aStrID: string): TSequence;
+function TSequenceList.GetSequenceByStrID(const aStrID: string): TSequence;
 var i: integer;
 begin
-  if TryStrToInt(aStrID, i) then Result := GetTopByID(i)
+  if TryStrToInt(aStrID, i) then Result := GetSequenceByID(i)
     else Result := NIL;
 end;
 
-function TTopList.GetNameByID(aID: cardinal): string;
+function TSequenceList.GetNameByID(aID: cardinal): string;
 var i: integer;
 begin
  for i:=0 to Count-1 do
-  if GetTopByIndex(i).ID = aID then begin
-    Result := GetTopByIndex(i).Name;
+  if GetSequenceByIndex(i).ID = aID then begin
+    Result := GetSequenceByIndex(i).Name;
     exit;
   end;
 
  Result := SUnknowSequence;
 end;
 
-function TTopList.IDToIndex(aID: cardinal): integer;
+function TSequenceList.IDToIndex(aID: cardinal): integer;
 var i: integer;
 begin
   for i:=0 to Count-1 do
-   if GetTopByIndex(i).ID = aID then begin
+   if GetSequenceByIndex(i).ID = aID then begin
      Result := i;
      exit;
    end;
@@ -332,7 +332,7 @@ begin
 end;
 
 const SEQUENCE_HEADER = '[SEQUENCE]';
-procedure TTopList.Save(temp: TStrings);
+procedure TSequenceList.Save(temp: TStrings);
 var i: Integer;
   prop: TPackProperty;
 begin
@@ -368,7 +368,7 @@ begin
  end; }
 end;
 
-procedure TTopList.Load(temp: TStrings);
+procedure TSequenceList.Load(temp: TStrings);
 var c, k, vi: integer;
   o: TSequence;
   prop: TSplitProperty;
@@ -376,7 +376,7 @@ var c, k, vi: integer;
   flagError: boolean;
   procedure LogMissingProperty(const apropName: string);
   begin
-    Log.Error('TTopList.Load - Property '+apropName+' not found', 3);
+    Log.Error('TSequenceList.Load - Property '+apropName+' not found', 3);
     flagError := True;
   end;
 begin
@@ -426,31 +426,31 @@ begin
   end;
 end;
 
-function TTopList.CheckErrorInSequences: boolean;
+function TSequenceList.CheckErrorInSequences: boolean;
 var i: integer;
   seq: TSequence;
 begin
   Result := False;
   for i:=0 to Count-1 do begin
-    seq := GetTopByIndex(i);
+    seq := GetSequenceByIndex(i);
     if seq.CheckError(Self) then Result := True;
   end;
 end;
 
-procedure TTopList.StopAll;
+procedure TSequenceList.StopAll;
 var i: integer;
 begin
   for i:=0 to Count-1 do
-    GetTopByIndex(i).Stop;
+    GetSequenceByIndex(i).Stop;
 end;
 
-function TTopList.Duplicate(aID: cardinal): TSequence;
+function TSequenceList.Duplicate(aID: cardinal): TSequence;
 var source: TSequence;
   i :integer;
   txt: string;
 begin
   Result := NIL;
-  source := GetTopByID(aID);
+  source := GetSequenceByID(aID);
   if source = NIL then exit;
 
   Result := source.Duplicate;

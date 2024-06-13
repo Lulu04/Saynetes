@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, StdCtrls, ComCtrls, Buttons, ExtCtrls,
   LCLType, Spin, Dialogs, Graphics, LCLTranslator,
   frame_viewcolorlist, frame_color_palette,
-  frame_bglvirtualscreen_sequencer, u_top_player, u_common,
+  frame_bglvirtualscreen_sequencer, u_sequence_player, u_common,
   frame_viewfixtureslist, frame_velocity,
   u_list_dmxuniverse;
 
@@ -139,7 +139,7 @@ end;
 
 procedure TFrameFXRGBChaser.BAdd6Click(Sender: TObject);
 begin
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
   if not GenerateCmds then
     exit;
 
@@ -172,7 +172,7 @@ end;
 
 procedure TFrameFXRGBChaser.SpeedButton10Click(Sender: TObject);
 begin
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
 end;
 
 procedure TFrameFXRGBChaser.SpeedButton2Click(Sender: TObject);
@@ -185,7 +185,7 @@ begin
   if not GenerateCmds then
     exit;
 
-  TopPlayer.PreviewCmdList(FCmds);
+  SeqPlayer.PreviewCmdList(FCmds);
 end;
 
 procedure TFrameFXRGBChaser.UpDown1Click(Sender: TObject; Button: TUDBtnType);

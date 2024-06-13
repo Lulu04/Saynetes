@@ -137,7 +137,7 @@ var
 implementation
 
 uses u_utils, u_resource_string, u_audio_manager, u_project_manager,
-  u_helper, u_top_player, ALSound, u_add_action_dmx, u_mainform;
+  u_helper, u_sequence_player, ALSound, u_add_action_dmx, u_mainform;
 
 {$R *.lfm}
 
@@ -258,7 +258,7 @@ end;
 
 procedure TFormDMXRGBTools.FormHide(Sender: TObject);
 begin
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
   //StopAll
 end;
 
@@ -391,14 +391,14 @@ end;
 procedure TFormDMXRGBTools.SpeedButton7Click(Sender: TObject);
 begin
   SoundManager.StopAllSound;
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
 end;
 
 procedure TFormDMXRGBTools.StopAll;
 var i: integer;
   snd: TALSSound;
 begin
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
   i := ComboBox1.ItemIndex;
   if i > -1 then
   begin

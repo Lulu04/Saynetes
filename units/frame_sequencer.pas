@@ -10,7 +10,7 @@ uses
   BGRABitmap, BGRABitmapTypes, BGRAOpenGL,
   frame_bglvirtualscreen_sequencer,
   undo_redo_manager, BGLVirtualScreen,
-  u_common;
+  u_common, u_audioutils;
 
 type
 
@@ -40,6 +40,10 @@ type
     FErrorMessage: string;
     FHaveError: boolean;
     procedure SetCmdList(AValue: TCmdList);
+    procedure DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
+  private
+    FCanShowAudioCurve: boolean;
+   // FAudioCurve: PAudioFileLevel;
   public
     procedure Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext); override;
     //  '\' is the separator for ID, Caption, TimePos, Top, Group and Cmds.
@@ -174,7 +178,7 @@ type
 
 implementation
 uses u_modify_time, u_move_step, u_change_complex_step_length,
-  u_resource_string, u_top_player, u_userdialogs, u_edit_otheraction, u_helper,
+  u_resource_string, u_sequence_player, u_userdialogs, u_edit_otheraction, u_helper,
   u_add_action_audio, lclintf, LCLType, VelocityCurve, u_utils, u_edit_sequence,
   u_add_action_dmx, u_logfile, u_apputils, utilitaire_bgrabitmap;
 var
@@ -206,18 +210,20 @@ procedure TSequenceStep.SetCmdList(AValue: TCmdList);
 begin
   if FCmdList = AValue then Exit;
   FCmdList := AValue;
- // Duration := FCmdList.ComputeCmdListDuration;
 end;
 
-procedure TSequenceStep.Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext);
+procedure TSequenceStep.DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
 var xx: Integer;
 begin
-  inherited Redraw(aParentFrame, aBGLContext);
-
-  if not HaveError then exit;
   xx := aParentFrame.TimePosToAbscissa(TimePos);
   if (aParentFrame.TextureErrorSymbol <> NIL) then
     aParentFrame.TextureErrorSymbol.Draw(xx, Top);
+end;
+
+procedure TSequenceStep.Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext);
+begin
+  inherited Redraw(aParentFrame, aBGLContext);
+  if HaveError then DrawErrorSymbol(aParentFrame);
 end;
 
 function TSequenceStep.Serialize: string;
@@ -235,27 +241,27 @@ procedure TSequenceStep.Deserialize(const s: string);
 var A: TStepDataArray;
   k: integer;
 begin
- A := s.SplitToStepDataArray;
- k :=0;
- DeserializeA( A, k );
+  A := s.SplitToStepDataArray;
+  k :=0;
+  DeserializeA( A, k );
 end;
 
 procedure TSequenceStep.DeserializeA(const A: TStepDataArray; var k: integer);
 begin
- ID := A[k].ToInteger;
- inc(k);
- Caption := A[k];
- inc(k);
- TimePos := StringToSingle(A[k]);
- inc(k);
- Duration := StringToSingle(A[k]);
- inc(k);
- Top := A[k].ToInteger;
- inc(k);
- Group := A[k].ToInteger;
- inc(k);
- CmdList := A[k];
- inc(k);
+  ID := A[k].ToInteger;
+  inc(k);
+  Caption := A[k];
+  inc(k);
+  TimePos := StringToSingle(A[k]);
+  inc(k);
+  Duration := StringToSingle(A[k]);
+  inc(k);
+  Top := A[k].ToInteger;
+  inc(k);
+  Group := A[k].ToInteger;
+  inc(k);
+  CmdList := A[k];
+  inc(k);
 end;
 
 procedure TSequenceStep.CheckCmdError;
@@ -638,7 +644,7 @@ end;
 
 procedure TFrameSequencer.ProcessPlayerTimeElapsed(Sender: TObject);
 begin
- UpdatePlayCursorPosition( TOPPlayer.PreviewTimePosition );
+ UpdatePlayCursorPosition( SeqPlayer.PreviewTimePosition );
 end;
 
 procedure TFrameSequencer.ProcessPlayerEnd(Sender: TObject);
@@ -788,7 +794,7 @@ var A: TSequencerInfoArray;
 begin
   Clear;
   A := s.SplitToSequencerInfoArray;
-  if Length(A)=0 then exit;
+  if Length(A) = 0 then exit;
   ID := A[0].ToInteger;
   GroupValue := A[1].ToInteger;
   for i:=2 to High(A) do begin
@@ -805,18 +811,18 @@ end;
 procedure TFrameSequencer.Play;
 begin
   if StepList.Count = 0 then exit;
-  TOPPlayer.StopPreview;
-  TOPPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
-  TOPPlayer.OnEndPreview := @ProcessPlayerEnd;
-  TOPPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList);
+  SeqPlayer.StopPreview;
+  SeqPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
+  SeqPlayer.OnEndPreview := @ProcessPlayerEnd;
+  SeqPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList);
   PlayCursorVisible(TRUE);
 end;
 
 procedure TFrameSequencer.Stop;
 begin
-  TOPPlayer.OnTimeElapsed := NIL;
-  TOPPlayer.OnEndPreview := NIL;
-  TOPPlayer.StopPreview;
+  SeqPlayer.OnTimeElapsed := NIL;
+  SeqPlayer.OnEndPreview := NIL;
+  SeqPlayer.StopPreview;
   PlayCursorVisible(FALSE);
 end;
 

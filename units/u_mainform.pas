@@ -98,7 +98,7 @@ var
 implementation
 uses LCLType, LCLIntf, u_dmx_library, u_project_manager, u_userdialogs,
   u_resource_string, u_devicemanager_form, u_startupwizard, u_logfile,
-  u_program_options, u_audio_manager, u_top_player, u_list_top,
+  u_program_options, u_audio_manager, u_sequence_player, u_list_sequence,
   u_list_dmxuniverse, u_project_options, form_about, form_splash, u_dmx_util;
 
 {$R *.lfm}
@@ -201,8 +201,8 @@ Log.Debug('    Stop thread universe manager');
     UniverseManager.StopThread;
 Log.Debug('    Stop all sequences');
     Sequences.StopAll;
-Log.Debug('    Stop Top player preview');
-    TopPlayer.StopPreview;
+Log.Debug('    Stop sequence player preview');
+    SeqPlayer.StopPreview;
 Log.Debug('    Sound manager reset state');
     SoundManager.ResetState;
 

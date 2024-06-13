@@ -1,4 +1,4 @@
-unit u_top_player;
+unit u_sequence_player;
 
 {$mode objfpc}{$H+}
 
@@ -6,15 +6,15 @@ interface
 
 uses
   Classes, SysUtils,
-  u_common, u_list_top, u_utils;
+  u_common, u_list_sequence, u_utils;
 
 
 type
 
 
-{ TTOPPlayer }
+{ TSequencePlayer }
 
-TTOPPlayer=class
+TSequencePlayer=class
 private
   ThreadAction: TTimedThread;
   procedure StartThread;
@@ -51,7 +51,7 @@ public
   property OnTimeElapsed: TNotifyEvent read FOnTimeElapsed write FOnTimeElapsed;
 end;
 
-var TopPlayer: TTOPPlayer;
+var SeqPlayer: TSequencePlayer;
 
 
 
@@ -95,21 +95,21 @@ begin
   try
     case cmd of
      CMD_STARTSEQUENCE: begin
-       pt := Sequences.GetTopByID(A[1].ToInteger);
+       pt := Sequences.GetSequenceByID(A[1].ToInteger);
        if pt = NIL then exit;
        if not pt.Running then
          pt.RunAsSequencerInfoList;
      end;
 
      CMD_STOPSEQUENCE: begin
-       pt := Sequences.GetTopByID(A[1].ToInteger);
+       pt := Sequences.GetSequenceByID(A[1].ToInteger);
        if pt = NIL then exit;
        if pt.Running then
          pt.Stop;
      end;
 
      CMD_SEQUENCESTRETCHTIME: begin // ATOPSTRETCHTIME IDTop StretchValue Duration CurveID
-       pt := Sequences.GetTopByID(A[1].ToInteger);
+       pt := Sequences.GetSequenceByID(A[1].ToInteger);
        if pt = NIL then exit;
        pt.TimeStretchFactor.ChangeTo(StringToSingle(A[2]), StringToSingle(A[3]), A[4].ToInteger);
      end;
@@ -308,15 +308,15 @@ begin
   end;
 end;
 
-{ TTOPPlayer }
+{ TSequencePlayer }
 
-procedure TTOPPlayer.StartThread;
+procedure TSequencePlayer.StartThread;
 begin
   //ThreadAction:=TTimedThread.Create(30, FormMain.Handle, LM_MESSAGE_Player, 0, 0, TRUE);
   ThreadAction:=TTimedThread.CreateSynchronize(30, @Update, TRUE);
 end;
 
-procedure TTOPPlayer.StopThread;
+procedure TSequencePlayer.StopThread;
 begin
   if ThreadAction<>NIL then begin
     ThreadAction.Terminate;
@@ -326,29 +326,29 @@ begin
   end;
 end;
 
-procedure TTOPPlayer.DoTimeElapsedEvent;
+procedure TSequencePlayer.DoTimeElapsedEvent;
 begin
   if FOnTimeElapsed<>NIL then FOnTimeElapsed(self);
 end;
 
-procedure TTOPPlayer.DoEndPreviewEvent;
+procedure TSequencePlayer.DoEndPreviewEvent;
 begin
   if FOnEndPreview<>NIL then FOnEndPreview(self);
 end;
 
-function TTOPPlayer.GetPreviewPlaying: boolean;
+function TSequencePlayer.GetPreviewPlaying: boolean;
 begin
   Result:=FPreview.Running;
 end;
 
-constructor TTOPPlayer.Create;
+constructor TSequencePlayer.Create;
 begin
   FPreview:=TSequence.Create;
   StartThread;
   Log.Info('Sequence Player Created');
 end;
 
-destructor TTOPPlayer.Destroy;
+destructor TSequencePlayer.Destroy;
 begin
   StopThread;
   FPreview.Free;
@@ -356,7 +356,7 @@ begin
   inherited Destroy;
 end;
 
-procedure TTOPPlayer.Update;
+procedure TSequencePlayer.Update;
 var TimeNow, deltaT: QWord;
   deltaSec: single;
   P: TStringArray;
@@ -383,7 +383,7 @@ begin
  for i:=-1 to Sequences.Count-1 do
  begin
    if i = -1 then pt := FPreview
-     else pt := Sequences.GetTopByIndex(i);
+     else pt := Sequences.GetSequenceByIndex(i);
    if pt = NIL then continue;
 
    pt.TimeStretchFactor.OnElapse(deltaSec);
@@ -423,7 +423,7 @@ begin
  end;
 end;
 
-procedure TTOPPlayer.PreviewCmdList(const aCmds: TCmdList);
+procedure TSequencePlayer.PreviewCmdList(const aCmds: TCmdList);
 begin
   FPreview.InitByDefault;
   FPreview.SequencerInfoList:=aCmds;
@@ -433,7 +433,7 @@ begin
   FTimeZero := FRunningTime;
 end;
 
-procedure TTOPPlayer.PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList);
+procedure TSequencePlayer.PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList);
 begin
   FPreview.InitByDefault;
   FPreview.SequencerInfoList:=aSequencerInfoList;
@@ -443,7 +443,7 @@ begin
   FTimeZero := FRunningTime;
 end;
 
-procedure TTOPPlayer.StopPreview;
+procedure TSequencePlayer.StopPreview;
 begin
  FPlaying := FALSE;
  FPreview.Stop;
@@ -451,14 +451,14 @@ begin
  OnEndPreview:=NIL;
 end;
 
-function TTOPPlayer.PosPercent: single;
+function TSequencePlayer.PosPercent: single;
 begin
  if not FPreview.Running
    then Result := 0
    else Result := FPreview.LineIndex/High(FPreview.CmdArray);
 end;
 
-function TTOPPlayer.PreviewTimePosition: single;
+function TSequencePlayer.PreviewTimePosition: single;
 begin
  Result:=FPreview.Clock;
 end;

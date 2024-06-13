@@ -205,7 +205,7 @@ type
 
 
 implementation
-uses LCLType, u_helper, u_list_top, u_audio_manager,
+uses LCLType, u_helper, u_list_sequence, u_audio_manager,
   u_resource_string, u_utils, u_logfile;
 
 {$R *.lfm}
@@ -226,7 +226,7 @@ begin
   // sequence
   CBSequence.Clear;
   for i:=0 to Sequences.Count-1 do begin
-    CBSequence.Items.Add(Sequences.GetTopByIndex(i).Name);
+    CBSequence.Items.Add(Sequences.GetSequenceByIndex(i).Name);
   end;
   SpeedButton5.Caption := SReset;
   FrameVelocity1 := TFrame_Velocity.Create(Self);
