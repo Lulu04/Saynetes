@@ -167,7 +167,7 @@ end;
 implementation
 
 uses frame_sequencer, u_utils, u_apputils, u_logfile, u_resource_string,
-  u_audio_manager, u_list_top, PropertyUtils, Math, ALSound, VelocityCurve;
+  u_audio_manager, u_list_sequence, PropertyUtils, Math, ALSound, VelocityCurve;
 
 { TFixLibModesHelper }
 

@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, StdCtrls, Types, LCLType,
   LCLTranslator, ExtCtrls, Menus,
   BGRABitmap, BGRABitmapTypes,
-  u_list_top;
+  u_list_sequence;
 
 type
 
@@ -31,18 +31,18 @@ type
     MINewSequence: TMenuItem;
     PopupMenu1: TPopupMenu;
     Timer1: TTimer;
-    procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect;
-      State: TOwnerDrawState);
+    procedure LBDragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure LBDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
+    procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
     procedure LBKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
-    procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
-      {%H-}Shift: TShiftState; X, Y: Integer);
+    procedure LBMouseDown(Sender: TObject; Button: TMouseButton; {%H-}Shift: TShiftState; X, Y: Integer);
     procedure LBMouseEnter(Sender: TObject);
     procedure LBMouseLeave(Sender: TObject);
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
-    procedure LBMouseUp(Sender: TObject; Button: TMouseButton;
-      {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
+    procedure LBMouseUp(Sender: TObject; Button: TMouseButton; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBSelectionChange(Sender: TObject; {%H-}User: boolean);
+    procedure LBStartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure MIDeleteClick(Sender: TObject);
     procedure MIDuplicateClick(Sender: TObject);
     procedure MIEditClick(Sender: TObject);
@@ -62,10 +62,11 @@ type
     FMouseIsOver,
     FPopupIsVisible: boolean;
     FItemIndexUnderMouse: integer;
+    FLastDraggedTargetIndexPainted: integer;
 
     FMouseCanMoveItem: boolean;
-    FMouseOrigin: TPoint;
-    FLeftClickedIndex: integer;
+    FYDragOriginInClientArea: integer;
+    FDraggedItemIndex: integer;
   private
     FErrorImage: TBGRABitmap;
     FNameFontHeight,
@@ -108,7 +109,7 @@ uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
 procedure TFrameViewTopList.LBDrawItem(Control: TWinControl; Index: Integer;
   ARect: TRect; State: TOwnerDrawState);
 var seq: TSequence;
-  i, y, w, xx: integer;
+  i, y, w, xx, offset: integer;
   p: TPoint;
   SF: double;
 begin
@@ -117,51 +118,44 @@ begin
   with LB.Canvas do
   begin
 
-   if State >= [odSelected] then
-   begin
-     if FMouseIsOver or FPopupIsVisible then
-       Brush.Color := clHighLight
-     else
-       Brush.Color := RGBToColor(94,128,130);//clGray;
-   end
-   else
-   begin
-     if Index Mod 2 = 0 then
-       Brush.Color := LB.Color
-     else
-       Brush.Color := u_utils.PercentColor(LB.Color, 0.15);
+   if State >= [odSelected] then begin
+     if FMouseIsOver or FPopupIsVisible then Brush.Color := clHighLight
+       else Brush.Color := RGBToColor(94,128,130);//clGray;
+   end else begin
+     if Index Mod 2 = 0 then Brush.Color := LB.Color
+       else Brush.Color := u_utils.PercentColor(LB.Color, 0.15);
    end;
 
-   if Index = FItemIndexUnderMouse then
-   begin
+   if (Index = FItemIndexUnderMouse) and (FDraggedItemIndex = -1) then begin
      // render dot rectangle if mouse is over item
      Pen.Style := psDot;
      Pen.Color := u_utils.PercentColor(LB.Color,0.95);
      Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
-   end
-   else FillRect(ARect);
+   end else FillRect(ARect);
 
-   // render drag target position
-   if FLeftClickedIndex <> -1 then
-   begin
+   if FDraggedItemIndex <> -1 then begin
      p := LB.ScreenToClient(Mouse.CursorPos);
-     p.y := EnsureRange(p.y, 0, LB.ClientHeight);
-     i := LB.GetIndexAtY(p.Y);
-     if i = Index then
-     begin
-      Pen.Style := psClear;
-      Brush.Color := clHighLight;
-      if i > FLeftClickedIndex then
-        Rectangle(ARect.Left-1, ARect.Bottom-3, ARect.Right+1, ARect.Bottom)
-      else
-        Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Top+3);
+
+   if p.y < FYDragOriginInClientArea then offset := LB.ItemHeight div 2
+     else if p.y > FYDragOriginInClientArea then offset := -LB.ItemHeight div 2
+       else offset := 0;
+
+     i := LB.GetIndexAtY(p.y+offset);
+     if i = Index then begin
+       FLastDraggedTargetIndexPainted := i;
+       Pen.Style := psClear;
+       Brush.Color := clHighLight;
+       //if i > FDraggedItemIndex then
+       if p.y > ARect.CenterPoint.y then
+         Rectangle(ARect.Left-1, ARect.Bottom-ScaleDesignToForm(3), ARect.Right+1, ARect.Bottom)
+       else
+         Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Top+ScaleDesignToForm(3));
      end;
    end;
    Brush.Style := bsClear;
 
-   seq := Sequences.GetTopByID( LB.Items.Strings[Index].ToInteger );
-   if seq <> NIL then
-   begin
+   seq := Sequences.GetSequenceByID(LB.Items.Strings[Index].ToInteger);
+   if seq <> NIL then begin
      // render error icon
      if seq.HaveError then begin
        FErrorImage.Draw(LB.Canvas, aRect.Left, aRect.Top+FNameFontHeight-FErrorImage.Height, False);
@@ -186,21 +180,52 @@ begin
      // render looped state
      w := Font.GetTextWidth(SLoop);
      if seq.IsLooped then
-       Textout( aRect.Right-w-Round(10*SF), y, SLoop);
+       Textout(aRect.Right-w-Round(10*SF), y, SLoop);
 
      // Render Running state
      if seq.Running then
-       Textout( aRect.Left+Round(10*SF), y, Srunning);
+       Textout(aRect.Left+Round(10*SF), y, Srunning);
 
      w := Font.GetTextWidth(Srunning)+Round(20*SF);
      // render time stretch factor
      if seq.TimeStretchFactor.Value <> 1.0 then
-       Textout( aRect.Left+w, y, 'x'+FormatFloat('0.00', seq.TimeStretchFactor.Value));
-
+       Textout(aRect.Left+w, y, 'x'+FormatFloat('0.00', seq.TimeStretchFactor.Value));
 
      Font.Height := LB.ItemHeight;
    end;
  end;
+end;
+
+procedure TFrameViewTopList.LBDragOver(Sender, Source: TObject; X, Y: Integer;
+  State: TDragState; var Accept: Boolean);
+var i: integer;
+begin
+  i := LB.GetIndexAtY(Y);
+
+  Accept :=  (Sender = LB) and (FDraggedItemIndex <> -1) and (FDraggedItemIndex <> i);
+  if not Accept then exit;
+
+  if State = dsDragMove then begin
+    if (i <> -1) and (i <> FLastDraggedTargetIndexPainted) then begin
+      LB.Invalidate;
+    end;
+  end;
+end;
+
+procedure TFrameViewTopList.LBDragDrop(Sender, Source: TObject; X, Y: Integer);
+var i, offset: integer;
+begin
+  if FDraggedItemIndex = -1 then exit;
+
+  offset := LB.ItemHeight div 2;
+  if Y > FYDragOriginInClientArea then offset := -offset;
+  i := LB.GetIndexAtY(Y + offset);
+  if (i <> -1) and (i <> FDraggedItemIndex) then begin
+    LB.MoveSelection(i - FDraggedItemIndex);
+    Sequences.Move(FDraggedItemIndex, i);
+    Project.SetModified;
+  end;
+  FDraggedItemIndex := -1;
 end;
 
 procedure TFrameViewTopList.LBKeyDown(Sender: TObject; var Key: Word;
@@ -227,14 +252,12 @@ begin
   if (Button = mbLeft) and (i = -1) then
     LB.ItemIndex := -1;
 
-  // prepare for drag
-  if (Button = mbLeft) and (i <> -1) and FMouseCanMoveItem and
-     (LB.Count > 1) then
-  begin
-    FLeftClickedIndex := i;
-    FMouseOrigin := LB.ClientToScreen(Point(X,Y));
+{  // prepare for drag
+  if (Button = mbLeft) and (i <> -1) and FMouseCanMoveItem then begin
+    FDraggedItemIndex := i;
+    FYDragOriginInClientArea := Y;
   end
-  else FLeftClickedIndex := -1;
+  else FDraggedItemIndex := -1;     }
 
   // right click on item = select it
   if (Button = mbRight) and (i <> -1) then
@@ -249,7 +272,7 @@ end;
 
 procedure TFrameViewTopList.LBMouseLeave(Sender: TObject);
 begin
- if FLeftClickedIndex <> -1 then
+ if FDraggedItemIndex <> -1 then
    exit;
 
  FItemIndexUnderMouse := -1;
@@ -263,21 +286,19 @@ procedure TFrameViewTopList.LBMouseMove(Sender: TObject; Shift: TShiftState; X, 
 var i: integer;
 begin
   // dragging an item
-  if (FLeftClickedIndex <> -1) and (LB.ItemIndex <> FLeftClickedIndex) then
+{  if (FDraggedItemIndex <> -1) and (LB.ItemIndex <> FDraggedItemIndex) then
   begin
-    LB.ItemIndex := FLeftClickedIndex;
+    LB.ItemIndex := FDraggedItemIndex;
+
     LB.Invalidate;
     exit;
-  end;
+  end;  }
 
   // mouse is over an item
   i := LB.GetIndexAtY(Y);
-  if i <> FItemIndexUnderMouse then
-  begin
-    if i = -1 then
-      LB.Cursor := crDefault
-    else
-      LB.Cursor := crHandPoint;
+  if i <> FItemIndexUnderMouse then begin
+    if i = -1 then LB.Cursor := crDefault
+      else LB.Cursor := crHandPoint;
     FItemIndexUnderMouse := i;
     LB.Invalidate;
   end;
@@ -287,19 +308,20 @@ procedure TFrameViewTopList.LBMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 var i: integer;
 begin
- if (Button = mbLeft) and (FLeftClickedIndex <> -1) then
+{ if (Button = mbLeft) and (FDraggedItemIndex <> -1) then
  begin
-   Y := EnsureRange(Y, 0, LB.ClientHeight);
+   Y := EnsureRange(Y + LB.ItemHeight div 2, 0, LB.ClientHeight);
    i := LB.GetIndexAtY(Y);
-   if (i <> -1) and (i <> FLeftClickedIndex) then
+   if (i <> -1) and (i <> FDraggedItemIndex) then
    begin
-     LB.MoveSelection(i-FLeftClickedIndex);
-     Sequences.Move(FLeftClickedIndex, i);
+     LB.MoveSelection(i-FDraggedItemIndex);
+     Sequences.Move(FDraggedItemIndex, i);
      Project.SetModified;
    end;
-   FLeftClickedIndex := -1;
+   FDraggedItemIndex := -1;
    LB.Invalidate;
- end;
+ end;  }
+  FDraggedItemIndex := -1;
 end;
 
 procedure TFrameViewTopList.LBSelectionChange(Sender: TObject; User: boolean);
@@ -309,11 +331,17 @@ begin
   if LB.ItemIndex = -1 then exit;
   if not TryStrToInt(LB.GetSelectedText, i) then exit;
 
-  seq := Sequences.GetTopByID(i);
+  seq := Sequences.GetSequenceByID(i);
   if seq = NIL then exit;
 
   if seq.HaveError then LB.Hint := seq.ErrorMessage
     else LB.Hint := '';
+end;
+
+procedure TFrameViewTopList.LBStartDrag(Sender: TObject; var DragObject: TDragObject);
+begin
+  FDraggedItemIndex := LB.ItemIndex;
+  FYDragOriginInClientArea := LB.ScreenToClient(Mouse.CursorPos).y;
 end;
 
 procedure TFrameViewTopList.MIDeleteClick(Sender: TObject);
@@ -383,7 +411,7 @@ begin
    FormSequenceEdition.SetAddMode( SSequence+' '+(Sequences.Count+1).ToString );
    if FormSequenceEdition.ShowModal = mrOk then
    begin
-     with Sequences.InsertTop(LB.ItemIndex, FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList) do
+     with Sequences.InsertSequence(LB.ItemIndex, FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList) do
        Insert(ID);
      Project.SetModified;
    end;
@@ -409,7 +437,7 @@ begin
     FormSequenceEdition.SetAddMode( SSequence+' '+(Sequences.Count+1).ToString );
     if FormSequenceEdition.ShowModal = mrOk then
     begin
-      seq := Sequences.AddTop(FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList);
+      seq := Sequences.AddSequence(FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList);
       Add(seq.ID);
       Project.SetModified;
     end;
@@ -500,7 +528,7 @@ end;
 
 procedure TFrameViewTopList.Timer1Timer(Sender: TObject);
 begin
- if FLeftClickedIndex = -1 then
+ if FDraggedItemIndex = -1 then
    LB.Invalidate;
 end;
 
@@ -514,7 +542,7 @@ begin
   if LB.SelCount <> 1 then
     Result := NIL
   else
-    Result := Sequences.GetTopByIndex(LB.ItemIndex);
+    Result := Sequences.GetSequenceByIndex(LB.ItemIndex);
 end;
 
 function TFrameViewTopList.GetItemHeight: integer;
@@ -535,7 +563,7 @@ begin
   inherited Create(TheOwner);
   ItemHeight := 25;
   FItemIndexUnderMouse := -1;
-  FLeftClickedIndex := -1;
+  FDraggedItemIndex := -1;
 
   FErrorImage := SVGFileToBGRABitmap(GetAppIconImagesFolder+'SequenceErrorSymbol.svg', -1, ScaleDesignToForm(16));
 end;
@@ -561,7 +589,7 @@ begin
     begin
       FSpacePressed := TRUE;
       id := LB.Items.Strings[i].ToInteger;
-      pt := Sequences.GetTopByID(id);
+      pt := Sequences.GetSequenceByID(id);
       if pt <> NIL then
       begin
         if not pt.Running then
@@ -607,10 +635,10 @@ begin
   LB.Clear;
 
   for i:=0 to Sequences.Count-1 do
-    LB.Items.Add( Sequences.GetTopByIndex(i).ID.ToString );
+    LB.Items.Add( Sequences.GetSequenceByIndex(i).ID.ToString );
 
   LB.UnlockSelectionChange;
-  FLeftClickedIndex := -1;
+  FDraggedItemIndex := -1;
 
   MIDelete.Caption := SDelete;
   MIStop.Caption := SStop;

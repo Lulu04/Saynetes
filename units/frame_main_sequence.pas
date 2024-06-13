@@ -54,7 +54,7 @@ type
   end;
 
 implementation
-uses u_project_manager, u_list_top, u_utils, u_logfile;
+uses u_project_manager, u_list_sequence, u_utils, u_logfile;
 
 {$R *.lfm}
 
@@ -132,7 +132,7 @@ end;
 procedure TFrameMainSequence.AddDMXSequenceFromProjectorView(Sender: TObject;
   const aCmd: TSingleCmd; const aShortReadable: string; aDuration: single);
 begin
-  with Sequences.AddTop(aShortReadable,
+  with Sequences.AddSequence(aShortReadable,
               ConstructTSequencerInfoList(aCmd, aShortReadable, aDuration)) do
      FrameViewTopList1.Add(ID);
 

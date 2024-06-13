@@ -161,7 +161,7 @@ var
 implementation
 
 uses LCLType, ALSound, u_resource_string, u_utils,
-  u_audio_manager, u_project_manager, u_helper, u_top_player,
+  u_audio_manager, u_project_manager, u_helper, u_sequence_player,
   u_add_action_dmx, u_mainform;
 
 {$R *.lfm}
@@ -261,7 +261,7 @@ procedure TFormDMXChannelsTools.StopAll;
 var i: integer;
   snd: TALSSound;
 begin
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
   i := ComboBox1.ItemIndex;
   if i >- 1 then
   begin
@@ -823,7 +823,7 @@ end;
 
 procedure TFormDMXChannelsTools.FormHide(Sender: TObject);
 begin
-  TopPlayer.StopPreview;
+  SeqPlayer.StopPreview;
 end;
 
 procedure TFormDMXChannelsTools.FormKeyUp(Sender: TObject; var Key: Word;

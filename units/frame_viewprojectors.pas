@@ -269,7 +269,7 @@ type
 
 implementation
 uses u_project_manager, u_userdialogs, u_resource_string, u_dmxtools_group,
-  u_list_top, u_top_player, u_dmxtools_rgb, u_askifshiftadress,
+  u_list_sequence, u_sequence_player, u_dmxtools_rgb, u_askifshiftadress,
   u_mainform, u_utils, u_logfile, u_program_options, u_apputils, Math,
   ComCtrls, Dialogs, BGRATransform, utilitaire_bgrabitmap;
 
@@ -660,7 +660,7 @@ begin
   try
     BAddDMX.Enabled := False;
     Sequences.StopAll;
-    TopPLayer.StopPreview;
+    SeqPLayer.StopPreview;
 
     UniverseManager.BlackOut;
     UniverseManager.Sel_None;
@@ -1289,7 +1289,7 @@ end;
 
 procedure TFrameViewProjector.SpeedButton5Click(Sender: TObject);
 begin
-  TopPLayer.StopPreview;
+  SeqPLayer.StopPreview;
   UniverseManager.BlackOut;
   Redraw;
   FrameViewDMXCursors1.RedrawVisibleCursors;
