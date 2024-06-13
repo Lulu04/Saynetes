@@ -7,10 +7,10 @@ Manufacturer|cameo|Name|NanoSpot 120|Type|9|Authors|Felix Edelmann|Creator|OFL
 [PHYSICAL]
 Width|159|Height|265|Depth|147|Weight|2.60|Power|40|Connector|3-pin|Bulb|12 W CREE LED|Lumens|428|LensMinDegree|13.000|LensMaxDegree|13.000
 [CHAN_DEF]
-ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0deg..540deg
-ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0deg..230deg
+ID|Pan|Type|7|R1|Begin~0~End~255~Txt~0° to 540°
+ID|Tilt|Type|8|R1|Begin~0~End~255~Txt~0° to 230°
 ID|Motor Running Speed|Type|9|R1|Begin~0~End~255~Txt~fast..slow
-ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~21~Txt~Red~Extra~#ff0000|R3|Begin~22~End~32~Txt~Orange~Extra~#ffaa00|R4|Begin~33~End~43~Txt~Yellow~Extra~#ffff00|R5|Begin~44~End~54~Txt~Green~Extra~#00ff00|R6|Begin~55~End~65~Txt~Blue~Extra~#0000ff|R7|Begin~66~End~76~Txt~Cyan~Extra~#00ffff|R8|Begin~77~End~87~Txt~Purple~Extra~#ff00ff|R9|Begin~88~End~175~Txt~0deg..360deg|R10|Begin~176~End~255~Txt~slow CW..fast CW
+ID|Color Wheel|Type|12|R1|Begin~0~End~10~Txt~Open|R2|Begin~11~End~21~Txt~Red~Extra~#ff0000|R3|Begin~22~End~32~Txt~Orange~Extra~#ffaa00|R4|Begin~33~End~43~Txt~Yellow~Extra~#ffff00|R5|Begin~44~End~54~Txt~Green~Extra~#00ff00|R6|Begin~55~End~65~Txt~Blue~Extra~#0000ff|R7|Begin~66~End~76~Txt~Cyan~Extra~#00ffff|R8|Begin~77~End~87~Txt~Purple~Extra~#ff00ff|R9|Begin~88~End~175~Txt~0°..360°|R10|Begin~176~End~255~Txt~CW Slow to Fast
 ID|Dimmer|Type|1|R1|Begin~0~End~255~Txt~0..100%
 ID|Pan fine|Type|7
 ID|Tilt fine|Type|8
