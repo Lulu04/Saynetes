@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 0
+    PageIndex = 6
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -1298,7 +1298,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Cursor = crHandPoint
     Left = 7
     Height = 30
-    Hint = 'Stops an effect on a channel.'#13#10'The last value calculated by the effect is kept.'
+    Hint = 'Sets the intensity of a channel for a short time, then resets to the previous value.'#13#10'This effect can be combined with another.'
     Top = 139
     Width = 90
     AutoSize = True

@@ -192,8 +192,8 @@ msgstr ""
 #: tformdmxchannelstools.speedbutton10.hint
 msgctxt "tformdmxchannelstools.speedbutton10.hint"
 msgid ""
-"Stops an effect on a channel.\n"
-"The last value calculated by the effect is kept."
+"Sets the intensity of a channel for a short time, then resets to the previous value.\n"
+"This effect can be combined with another."
 msgstr ""
 
 #: tformdmxchannelstools.speedbutton11.hint
@@ -342,8 +342,8 @@ msgstr ""
 #: tformdmxrgbtools.speedbutton9.hint
 msgctxt "tformdmxrgbtools.speedbutton9.hint"
 msgid ""
-"Stops an RGB effect on the selected fixtures.\n"
-"The last color calculated by the effect is kept."
+"Sets an RGB color for a short time, then resets to the previous color.\n"
+"This effect can be combined with another."
 msgstr ""
 
 #: tformeditrepetitivechannel.label13.caption
