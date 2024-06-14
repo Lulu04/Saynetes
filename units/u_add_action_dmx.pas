@@ -15,7 +15,6 @@ type
   TFormAddDMXAction = class(TForm)
     Panel1: TPanel;
     procedure FormClose(Sender: TObject; var {%H-}CloseAction: TCloseAction);
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     procedure ProcessOnAddCmdFromViewProjector(Sender: TObject);
@@ -29,24 +28,19 @@ var
 
 implementation
 
-uses u_common, u_global_var, u_mainform, u_list_dmxuniverse;
+uses u_common, u_global_var, u_mainform, u_list_dmxuniverse,
+  u_dmxtools_channels, u_dmxtools_rgb;
 
 {$R *.lfm}
 
 { TFormAddDMXAction }
 
-procedure TFormAddDMXAction.FormCreate(Sender: TObject);
+procedure TFormAddDMXAction.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-{  FrameViewProjector1 := TFrameViewProjector.Create(Self);
-  FrameViewProjector1.Parent := Self;
-  FrameViewProjector1.Align := alClient;
-  FrameViewProjector1.OnAddCmd := @ProcessOnAddCmdFromViewProjector;
-  FrameViewProjector1.GUIMode := guiEditSequence;   }
-end;
 
-procedure TFormAddDMXAction.FormClose(Sender: TObject;
-  var CloseAction: TCloseAction);
-begin
+  FormDMXChannelsTools.ClearSelectedChannels;
+  FormDMXRGBTools.ClearSelectedFixtures;
+
   UniverseManager.StopThread;
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;
   UniverseManager.StartThread;
