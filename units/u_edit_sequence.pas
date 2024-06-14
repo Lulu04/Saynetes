@@ -105,7 +105,7 @@ var
   FormSequenceEdition: TFormSequenceEdition;
 
 implementation
-uses u_resource_string;
+uses u_resource_string, u_program_options;
 
 {$R *.lfm}
 
@@ -127,6 +127,9 @@ begin
   Label15.Caption := SDuration;
   Label3.Caption := SView;
   Label2.Caption := SSelection;
+
+  FToogleSpeedButtonManager.Checked[BKeep0Visible] := ProgramOptions.KeepOriginVisible;
+  FSeq.SetOptions([bglsKeepTimeOriginVisible], ProgramOptions.KeepOriginVisible);
 
 //  B_Undo.Caption := SUndo;
 //  B_Redo.Caption := SRedo;
@@ -350,6 +353,8 @@ var b: boolean;
 begin
   b := FToogleSpeedButtonManager.Checked[BKeep0Visible];
   FSeq.SetOptions([bglsKeepTimeOriginVisible], b);
+
+  ProgramOptions.KeepOriginVisible := b;
 end;
 
 procedure TFormSequenceEdition.B_RedoClick(Sender: TObject);

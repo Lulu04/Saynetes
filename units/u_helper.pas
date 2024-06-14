@@ -1544,14 +1544,14 @@ begin
     B:=cmd.SplitToParamArray;
     case B[0].ToInteger of
 
-      CMD_WAIT:  // CMD_WAIT DurationF
-//      TITLECMD_DMX_DIMMER: // TITLECMD_DMX_DIMMER Duration CurveID
+      CMD_WAIT,  // CMD_WAIT DurationF
+      TITLECMD_DMX_DIMMER: // TITLECMD_DMX_DIMMER Duration CurveID
          pos+= StringToSingle(B[1]);
 
       CMD_AUDIO_FADEOUT,  // AUDIOFADEOUT IDaudio duration IDcurve
       CMD_AUDIO_CAPTURE_SETVOLUME, // CMD_AUDIO_CAPTURE_SETVOLUME volume duration IDcurve
-      CMD_AUDIO_CAPTURE_SETPAN: // CMD_AUDIO_CAPTURE_SETPAN  panning duration IDcurve
-//      TITLECMD_DMX_DIMMERRGB:  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
+      CMD_AUDIO_CAPTURE_SETPAN, // CMD_AUDIO_CAPTURE_SETPAN  panning duration IDcurve
+      TITLECMD_DMX_DIMMERRGB:  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
         pos+= StringToSingle(B[2]);
 
       CMD_AUDIO_FADEIN,    // AUDIOFADEIN IDaudio volume duration IDcurve
@@ -1561,21 +1561,21 @@ begin
       CMD_SEQUENCESTRETCHTIME:  // CMD_SEQUENCESTRETCHTIME IDSeq StretchValueF DurationF CurveID
          pos+= StringToSingle(B[3]);
 
-      CMD_DMX_DIMMERRGB:  // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
-         pos+= StringToSingle(B[4]);
-
-      CMD_DMX_DIMMER:  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
-         pos+= StringToSingle(B[5]);
-
-      CMD_DMX_FLASH, // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
-      CMD_DMX_FLASHRGB: // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
-         pos+= StringToSingle(B[7]);
-
-//      TITLECMD_DMX_FLASH: // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
+//      CMD_DMX_DIMMERRGB:  // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
 //         pos+= StringToSingle(B[4]);
 
-//      TITLECMD_DMX_FLASHRGB: // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
+//      CMD_DMX_DIMMER:  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
 //         pos+= StringToSingle(B[5]);
+
+//      CMD_DMX_FLASH, // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
+//      CMD_DMX_FLASHRGB: // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
+//         pos+= StringToSingle(B[7]);
+
+      TITLECMD_DMX_FLASH: // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
+         pos+= StringToSingle(B[4]);
+
+      TITLECMD_DMX_FLASHRGB: // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
+         pos+= StringToSingle(B[5]);
 
       CMD_INTERNALDMXWAVE: //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
                                     //                Percent1 Duration1 CurveID1

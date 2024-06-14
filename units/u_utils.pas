@@ -523,15 +523,42 @@ begin
 end;
 
 function StringToSingle(const aStr: string): single;
-var fs: TFormatSettings;
+var i: integer;
+    err: word;
+    s: string;
 begin
-  try
+  Result := 0;
+  Val(aStr, Result, err);
+  if err <> 0 then begin
+    i := Pos(',', aStr);
+    if i = 0 then raise exception.Create('string to single conversion error with "'+aStr+'"')
+      else begin
+        s := aStr;
+        s[i] := '.';
+        Val(s, Result, err);
+      end;
+  end;
+
+{  if TryStrToFloat(aStr, Result) then exit;
+  // conversion failed -> we replace '.' by ','  or  ',' by '.'
+  i := Pos('.', aStr);
+  if i > 0 then begin
+    aStr[i] := ',';
+    Result := StrToFloat(aStr);
+  end else begin
+    i := Pos(',', aStr);
+    aStr[i] := '.';
+    Result := StrToFloat(aStr);
+  end;
+}
+
+{  try
     fs.DecimalSeparator := '.';
     Result := StrToFloat(aStr, fs);
   except
     fs.DecimalSeparator := ',';
     Result := StrToFloat(aStr, fs);
-  end;
+  end;   }
 end;
 
 function CmdWait(aDuration: single): TSingleCmd;

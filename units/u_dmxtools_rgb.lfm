@@ -1091,7 +1091,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Cursor = crHandPoint
     Left = 5
     Height = 30
-    Hint = 'Stops an RGB effect on the selected fixtures.'#13#10'The last color calculated by the effect is kept.'
+    Hint = 'Sets an RGB color for a short time, then resets to the previous color.'#13#10'This effect can be combined with another.'
     Top = 104
     Width = 90
     AutoSize = True

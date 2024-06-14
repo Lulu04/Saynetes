@@ -70,7 +70,7 @@ uses u_resource_string, u_utils, u_common, LCLType;
 
 procedure TFrameEditString.Edit1Change(Sender: TObject);
 begin
-  Label2.Visible := not TextIsValid;
+  Label2.Visible := False;
   if FOnTextChange <> NIL then
     FOnTextChange(Self);
 end;
@@ -125,17 +125,20 @@ begin
     exit;
   end;
 
-  //FMode: integer; // 0= all char     1= no special    2=filename
+  //FMode:   0= all chars     1= no special    2= filename
   case FMode of
     0: Result := (Edit1.Text<>'') or FAllowEmptyString;
-    1:
-      begin
-        if FAllowEmptyString and (Edit1.Text='') then
-          Result := TRUE
-        else
+    1: begin
+      if Edit1.Text = '' then Result := FAllowEmptyString
+        else begin
           Result := StringIsValid(Edit1.Text);
+          Label2.Visible := not Result;
+      end;
     end;
-    2: Result := FileNameIsValid(Edit1.Text);
+    2: begin
+      Result := FileNameIsValid(Edit1.Text);
+      Label2.Visible := not Result;
+    end;
   end;//case
 end;
 

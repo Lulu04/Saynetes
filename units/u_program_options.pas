@@ -95,9 +95,12 @@ private
   FPlaybackDeviceIndex,
   FCaptureDeviceIndex: integer;
 
-  // DMX
+  // DMX View
   FStageType: TStageType;
   FSeatType: TSeatType;
+
+  // Sequencer
+  FKeepOriginVisible: boolean;
 
   FSaveFolder,
   FSaveFileName: string;
@@ -106,6 +109,7 @@ private
   FLockSave: boolean;
   function GetLastProject: string;
   procedure InitByDefault;
+  procedure SetKeepOriginVisible(AValue: boolean);
   procedure SetLanguage(AValue: string);
   procedure SetLastProject(AValue: string);
   procedure SetMaxRecentProjectFile(AValue: integer);
@@ -143,6 +147,9 @@ public
   // DMX
   property StageType: TStageType read FStageType;
   property SeatType: TSeatType read FSeatType;
+
+  // Sequencer
+  property KeepOriginVisible: boolean read FKeepOriginVisible write SetKeepOriginVisible;
 
 end;
 
@@ -189,6 +196,13 @@ begin
   // DMX
   FStageType := stRectangle;
   FSeatType := seatType1;
+end;
+
+procedure TProgramOptions.SetKeepOriginVisible(AValue: boolean);
+begin
+  if FKeepOriginVisible = AValue then Exit;
+  FKeepOriginVisible := AValue;
+  Save;
 end;
 
 procedure TProgramOptions.SetLanguage(AValue: string);
@@ -265,6 +279,7 @@ const
   APP_GENERAL_HEADER = '[APPLICATION GENERAL]';
   AUDIO_HEADER = '[AUDIO]';
   DMX_HEADER = '[DMX]';
+  SEQUENCER_HEADER = '[SEQUENCER]';
 
 procedure TProgramOptions.Save;
 var t: TStringList;
@@ -303,6 +318,12 @@ begin
    prop.Add('Stage', Ord(FStageType));
    prop.Add('Seat', Ord(FSeatType));
    t.Add(DMX_HEADER);
+   t.Add(prop.PackedProperty);
+
+   // Sequencer
+   prop.Init('|');
+   prop.Add('KeepOriginVisible', FKeepOriginVisible);
+   t.Add(SEQUENCER_HEADER);
    t.Add(prop.PackedProperty);
 
    try
@@ -382,6 +403,13 @@ begin
     FStageType := TStageType(EnsureRange(i, 0, Ord(High(TStageType))));
     prop.integerValueOf('Seat', i, 1);
     FSeatType := TSeatType(EnsureRange(i, 0, Ord(High(TSeatType))));
+
+    // Sequencer
+    k := t.IndexOf(SEQUENCER_HEADER);
+    if (k > -1) and (k < t.Count) then prop.Split(t.Strings[k+1], '|')
+      else prop.SetEmpty;
+    prop.BooleanValueOf('KeepOriginVisible', FKeepOriginVisible, True);
+
   finally
     t.Free;
     UnLockSave;
