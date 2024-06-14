@@ -504,7 +504,7 @@
         <IsPartOfProject Value="True"/>
       </Unit19>
       <Unit20>
-        <Filename Value="units\u_list_top.pas"/>
+        <Filename Value="units\u_list_sequence.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit20>
       <Unit21>
@@ -536,7 +536,7 @@
         <ResourceBaseClass Value="Frame"/>
       </Unit24>
       <Unit25>
-        <Filename Value="units\u_top_player.pas"/>
+        <Filename Value="units\u_sequence_player.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit25>
       <Unit26>

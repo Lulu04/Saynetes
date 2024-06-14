@@ -1006,7 +1006,7 @@ begin
           Translate(fix.ScreenPos.x, fix.ScreenPos.y);
           FillRect(5,5,20,25,BGRA(255,100,80));
           FillRect(20,5,35,25,BGRA(80,255,80));
-          FillRect(35,5,50,25,BGRA(80,100,255));
+          FillRect(35,5,50,25,BGRA(64,199,255));
         end;
         // render locked state
         if fix.Locked then
@@ -1030,11 +1030,18 @@ begin
           begin
              case fix.Channels[j].ChannelType of
                ctRED: c := BGRA(255,50,50,alpha);
-               ctGreen: c := BGRA(50,255,50,alpha);
-               ctBlue: c := BGRA(50,100,255,alpha);
-               ctWhite: c := BGRA(255,255,255,alpha);
-               ctAmber: c := BGRA(255,162,100,alpha);
+               ctGREEN: c := BGRA(50,255,50,alpha);
+               ctBLUE: c := BGRA(64,199,255,alpha);
+               ctWHITE: c := BGRA(255,255,255,alpha);
+               ctCOLDWHITE: c := BGRA(228,247,255,alpha);
+               ctWARMWHITE: c := BGRA(254,255,168,alpha);
+               ctAMBER: c := BGRA(255,162,100,alpha);
                ctUV: c := BGRA(240,48,255,alpha);
+               ctCYAN: c := BGRA(0,251,255,alpha);
+               ctYELLOW: c := BGRA(254,255,0,alpha);
+               ctLIME: c := BGRA(192,255,0,alpha);
+               ctINDIGO: c := BGRA(147,0,255,alpha);
+               ctMAGENTA: c := BGRA(255,0,254,alpha);
                else c := BGRA(220,200,120,alpha);
              end;
 

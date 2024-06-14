@@ -136,8 +136,10 @@ begin
 
      CMD_AUDIO_FADEIN: begin // AUDIOFADEIN IDaudio volume duration IDcurve
        snd := SoundManager.GetSoundByID(A[1].ToInteger);
-       if snd <> NIL then
+       if snd <> NIL then begin
+         snd.Stop; // necessary to avoid a bug in ALSound or openAL: when lower pitch then fadeIn the same sound
          snd.FadeIn(StringToSingle(A[2]), StringToSingle(A[3]), TALSCurveID(A[4].ToInteger));
+       end;
      end;
 
      CMD_AUDIO_FADEOUT: begin // AUDIOFADEOUT IDaudio duration IDcurve

@@ -7,7 +7,7 @@ interface
 
 uses
   Classes, SysUtils,
-  ALSound;
+  ALSound, u_audioutils;
 
 const
     AUDIO_PARAM_SEPARATOR='|';
@@ -34,6 +34,7 @@ type
     Effects: TFPList;
     EffectNames: string;
     EffectNamesArray: TStringArray;//array of string;
+    Curve: TAudioFileLevel;
     // add and chain the effect
     procedure AddEffect(const aEffect: TALSEffect; const aEffectName, aPresetName: string);
     procedure SetDryWet(AValue: single);
@@ -60,6 +61,7 @@ type
     procedure RegisterSoundToItemList(aSnd: TALSSound);
     procedure DeleteSoundFromItemList(aID: TSoundID);
     procedure DeleteAllSoundFromItemList;
+    function GetItemByID(aID: TSoundID): PSoundItem;
 
     procedure AddEffectToSoundItem(aID: TSoundID; const aEffect: TALSEffect; const aEffectName, aPresetName: string);
     procedure DeleteAllEffectOnSoundItem(aID: TSoundID);
@@ -86,8 +88,8 @@ type
     destructor Destroy; override;
 
     procedure Clear;
-    procedure Save( aStringList: TStringList );
-    procedure Load( aStringList: TStringList; aAbsolutPathToAdd:string );
+    procedure Save(aStringList: TStringList);
+    procedure Load(aStringList: TStringList; aAbsolutPathToAdd: string);
 
     function AddStream(const aFilename: string): TALSSound;
     function AddSound(const aFilename: string): TALSSound;
@@ -150,6 +152,7 @@ type
     function GetSoundFileNameByIndex(aIndex: TSoundID): string;
     function GetSoundFileNameByID(aID: TSoundID): string;
     function GetLevel(aID: TSoundID): single;
+    function GetAudioCurve(aID: TSoundID): PAudioFileLevel;
 
     property Count: integer read GetCount;
     property PlayList: TALSPlaylist read GetPlayList;
@@ -335,6 +338,12 @@ begin
   p^.Effects := TFPList.Create;
   p^.EffectNames := '';
   p^.EffectNamesArray := NIL;
+
+  p^.Curve.InitDefault;
+  if aSnd.Tag <> CAPTURE_IDAUDIO then begin
+    p^.Curve.LoadFromFile(aSnd.Filename);
+  end;
+
   FSoundItems.Add(p);
   //Log.Debug('ID'+aSnd.Tag.ToString+' '+aSnd.Filename, 3);
 end;
@@ -368,6 +377,16 @@ begin
    Dispose(item);
    FSoundItems.Delete( 0 );
  end;
+end;
+
+function TSoundManager.GetItemByID(aID: TSoundID): PSoundItem;
+var i: integer;
+begin
+  for i:=0 to FSoundItems.Count-1 do begin
+    Result := PSoundItem(FSoundItems.Items[i]);
+    if Result^.SoundID = aID then exit;
+  end;
+  Result := NIL;
 end;
 
 procedure TSoundManager.AddEffectToSoundItem(aID: TSoundID;
@@ -545,6 +564,7 @@ var
   fname: string;
   prop: TProperties;
   vbool: boolean;
+  audioLevel: TAudioFileLevel;
 begin
  audioType := '';
  fname := '';
@@ -582,14 +602,19 @@ begin
     then fname := ConcatPaths([aAbsolutPathToAdd, fname]);
 
   case audioType of
-    'memory': snd := AddSound(fname);
+    'memory': snd := FPlaybackContext.AddSound(fname, True); //AddSound(fname);
   else
-    snd := AddStream(fname);
+    snd := FPlaybackContext.AddStream(fname, True); // AddStream(fname);
   end;
+
+  audioLevel.InitDefault;
+  if not audioLevel.LoadFromFile(fname) then
+    Log.Error('Unable to create audio peak file for '+fname);
 
   if not prop.IntegerValueOf('ID', v, 0) then
     Log.Error('ID property NOT FOUND for '+fname, 3);
   snd.Tag := v;
+  RegisterSoundToItemList(snd);
   if FIDValue < snd.Tag then FIDValue := snd.Tag; // adjust the current ID
 
   if not prop.BooleanValueOf('LOOP', vbool, False) then
@@ -1115,6 +1140,14 @@ begin
       Result := s / snd.ChannelCount;
     end;
   end;
+end;
+
+function TSoundManager.GetAudioCurve(aID: TSoundID): PAudioFileLevel;
+var item: PSoundItem;
+begin
+  item := GetItemByID(aID);
+  if item <> NIL then Result := @item^.Curve
+    else Result := NIL;
 end;
 
 

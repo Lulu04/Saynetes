@@ -97,6 +97,7 @@ const
 const
    PROJECT_FILE_EXTENSION = '.say';
    DMX_LIBRARY_FILE_EXTENSION = '.dmx';
+   PEAK_AUDIO_FILE_EXTENSION = '.pk';
 
    PLAYLIST_FOLDER = 'Playlists';
    PLAYLIST_FILE_EXTENSION = '.playlist';
@@ -169,7 +170,7 @@ const
    CMD_DMX_DIMMER       =  200;  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
    TITLECMD_DMX_DIMMER  = 1200;  // TITLECMD_DMX_DIMMER Duration CurveID
 
-   CMD_DMX_FLAME        =  201;  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
+   CMD_DMX_FLAME        =  201;  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax WaitTime Soften
    TITLECMD_DMX_FLAME   = 1201;  // TITLECMD_DMX_FLAME  LevelMinF LevelMaxF WaitTimeF SoftenF
                                    // LevelMin: single  range 0.0 to 1.0
                                    // LevelMax: single  range 0.0 to 1.0
@@ -234,18 +235,6 @@ const
    VIDEOFIXEVOLUME     = 354;
    VIDEOFADEVOLUME     = 355;  // VIDEOFADEVOLUME volume durée
    VIDEOPOSITION       = 356;
-
-  FichierCouleur    =    'Data'+DirectorySeparator+'ColorList.col';  // liste des couleurs rvb
-
-  APPLICATION_PRESET_PATH = 'Data'+DirectorySeparator+'PRESET'+DirectorySeparator;
-
-  CHEMINBIBLIOTHEQUEDMX = 'Data'+DirectorySeparator+'DMXLibrary'+DirectorySeparator;
-  CHEMIN_FICHIER_IMAGE_BIBLIOTHEQUE = 'Data'+DirectorySeparator+'icons'+DirectorySeparator+
-                                      'FixtureImages'+DirectorySeparator;
-
-
-  LM_MESSAGE_AffichageDMXPrincipal = LM_USER + 1 ;   // message pour l'affichage dmx principal
-
 
 type
 

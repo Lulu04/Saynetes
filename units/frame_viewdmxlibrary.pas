@@ -343,7 +343,6 @@ begin
  end;
  {Nodes are of the same type, so do a normal alpha sort}
  Result := StrIComp( PChar(Node1.Text), PChar(Node2.Text) );
-// Result := AnsiStrIComp( PChar(UTF8ToSys(Node1.Text)), PChar(UTF8ToSys(Node2.Text)) );
 end;
 
 function TFrameViewDMXLibrary.GetSelectedFixtureFileName: string;
@@ -448,7 +447,6 @@ begin
  TV.Items.Clear; // clear the TreeView
  with TV.Items.AddFirst(nil, SDMXLibrary) do
    begin
-    Selected := true;
     ImageIndex := 0;
     SelectedIndex := 0;
    end;
