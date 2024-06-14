@@ -115,7 +115,8 @@ end;
 procedure TFrame_ColorPalette.PresetToColor(const A: TStringArray);
 var c: TColorChartColor;
 begin
-  c.InitFromStringArray(A);
+  c.Percentage := 0.5; // to avoid hint compilation
+  c.InitFromString(A[0]);
   FGradient.ChartColor := c;
 end;
 
