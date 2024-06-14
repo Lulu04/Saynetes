@@ -119,14 +119,6 @@ function BGRAPixelToString( p: TBGRAPixel ): string;
 function StringToBGRAPixel( const s: string ): TBGRAPixel;
 
 
-// sauve le contenu d'un sequenceur dans un TString. Pas d'entête.
-procedure SequencerToTStrings( aSequencer: TFrameBGLSequencer; aTemp: TStrings );
-// recharge un séquenceur à partir d'un TStrings.
-// aStartIndex est l'index de la première donnée dans le TStrings
-procedure TStringsToSequencer( aTemp: TStrings; aStartIndex: integer; aSequencer: TFrameBGLSequencer );
-
-
-
 
 // returns FALSE if the string have at least one characters not allowed for filename usage
 // see const FORBIDENCHARS in u_common
@@ -279,39 +271,6 @@ implementation
 uses VelocityCurve, u_resource_string, u_apputils, LCLIntf, dateutils, Math,
   utilitaire_bgrabitmap, Forms;
 
-
-procedure SequencerToTStrings(aSequencer: TFrameBGLSequencer; aTemp: TStrings);
-var i: Integer;
-begin
- aTemp.Add( aSequencer.ID.ToString );    // current ID value
- aTemp.Add(aSequencer.GroupValue.ToString ); // current group value
- with aSequencer.StepList do begin
-    aTemp.Add( Count.ToString );  // count
-    for i:=0 to Count-1 do
-     aTemp.Add( TSequenceStep(Items[i]).Serialize );  // steps
- end;
-end;
-
-procedure TStringsToSequencer(aTemp: TStrings; aStartIndex: integer; aSequencer: TFrameBGLSequencer);
-var c: integer;
-  step: TSequenceStep;
-begin
- aSequencer.Clear;
- if aStartIndex<>-1 then begin
-   aSequencer.ID := aTemp.Strings[aStartIndex].ToInteger;
-   inc(aStartIndex);
-   aSequencer.GroupValue := aTemp.Strings[aStartIndex].ToInteger;
-   inc(aStartIndex);
-   c := aTemp.Strings[aStartIndex].ToInteger;
-   while c>0 do begin
-        inc(aStartIndex);
-        step := TSequenceStep.Create;
-        step.Deserialize( aTemp.Strings[aStartIndex] );
-        aSequencer.RawAdd( step, FALSE );
-        dec(c);
-   end;
- end;
-end;
 
 function StringIsValid(const s: string): boolean;
 begin
