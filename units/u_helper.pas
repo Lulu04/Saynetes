@@ -21,6 +21,7 @@ public
   function IsSingleCmd: boolean;
   function IsTitle: boolean;
   function IsWait(out sec: single): boolean;
+  function IsAudioPlay(out aAudioID: integer): boolean; // title + action
   procedure ChangeParamFromTitleParam(const aTitleCmd: TSingleCmd);
   function SplitToParamArray: TParamArray;
   procedure ConcatCmd(aCmd: TSingleCmd);
@@ -545,6 +546,7 @@ begin
 
  for i:=0 to Self.Count-1 do begin
    step := Self.Items[i] as TSequenceStep;
+   //prop.Add('
    OutString += sep + step.Serialize;
    sep := SEQUENCERINFO_SEPARATOR;
  end;
@@ -1369,6 +1371,24 @@ begin
    Result := A[0] = CMD_WAIT.ToString;
    if Result then sec := StringToSingle(A[1]);
  end;
+end;
+
+function TCmdListHelper.IsAudioPlay(out aAudioID: integer): boolean;
+var A: TCmdArray;
+  B: TParamArray;
+  i, cmd: Integer;
+begin
+  Result := FALSE;
+  if Self.IsSingleCmd then exit;
+
+  A := Self.SplitToCmdArray;
+  try
+    for i:=0 to High(A) do begin
+      B := A[i].SplitToParamArray;
+      if TryStrToInt(B[0], cmd) and (cmd = CMD_AUDIO_PLAY) and TryStrToInt(B[1], aAudioID) then exit(True);
+    end;
+  except
+  end;
 end;
 
 procedure TCmdListHelper.ChangeParamFromTitleParam(const aTitleCmd: TSingleCmd);

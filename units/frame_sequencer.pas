@@ -42,8 +42,7 @@ type
     procedure SetCmdList(AValue: TCmdList);
     procedure DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
   private
-    FCanShowAudioCurve: boolean;
-   // FAudioCurve: PAudioFileLevel;
+    FAudioCurve: PAudioFileLevel;
   public
     procedure Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext); override;
     //  '\' is the separator for ID, Caption, TimePos, Top, Group and Cmds.
@@ -146,8 +145,8 @@ type
     procedure ProcessKey(var Key: word; Shift: TShiftState);
 
     procedure Clear; override;
-    procedure SaveSequences( t: TStrings );
-    procedure LoadSequences( t: TStrings );
+//    procedure SaveSequences( t: TStrings );
+//    procedure LoadSequences( t: TStrings );
 
     // converti chaque étape en étape contenant une seule commande
     // les étapes contenant plusieurs commandes ou des pauses sont converties en plusieurs étapes
@@ -178,9 +177,10 @@ type
 
 implementation
 uses u_modify_time, u_move_step, u_change_complex_step_length,
-  u_resource_string, u_sequence_player, u_userdialogs, u_edit_otheraction, u_helper,
-  u_add_action_audio, lclintf, LCLType, VelocityCurve, u_utils, u_edit_sequence,
-  u_add_action_dmx, u_logfile, u_apputils, utilitaire_bgrabitmap;
+  u_resource_string, u_sequence_player, u_userdialogs, u_edit_otheraction,
+  u_helper, u_add_action_audio, lclintf, LCLType, VelocityCurve,
+  u_edit_sequence, u_add_action_dmx, u_logfile, u_apputils, u_audio_manager,
+  utilitaire_bgrabitmap, PropertyUtils;
 var
   FWorkingStep: TSequenceStep;
 
@@ -207,9 +207,14 @@ end;
 { TSequenceStep }
 
 procedure TSequenceStep.SetCmdList(AValue: TCmdList);
+var audioID: integer;
 begin
   if FCmdList = AValue then Exit;
   FCmdList := AValue;
+
+  // check if cmd is single with Audio-Play
+  if FCmdList.IsAudioPlay(audioID) then FAudioCurve := SoundManager.GetAudioCurve(audioID)
+    else FAudioCurve := NIL;
 end;
 
 procedure TSequenceStep.DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
@@ -221,7 +226,31 @@ begin
 end;
 
 procedure TSequenceStep.Redraw(aParentFrame: TFrameBGLSequencer; aBGLContext: TBGLContext);
+var xBegin, xEnd: Integer;
+  timeBegin, yRef, halfHeight, timeDelta: Single;
+  peak: TSamplePeak;
 begin
+  // first, render audio curve
+  if FAudioCurve <> NIL then begin
+    xBegin := aParentFrame.TimePosToAbscissa(TimePos);
+    xEnd := aParentFrame.TimePosToAbscissa(TimePos + FAudioCurve^.Duration);
+    if not((xBegin > aBGLContext.Canvas.Width) or (xEnd < 0)) then begin
+      timeBegin := 0;
+      timeDelta := aParentFrame.AbscissaToTimePos(1);
+      halfHeight := aParentFrame.StepHeight / 2;
+      yRef := Top + halfHeight;
+      repeat
+        if (xBegin >= 0) and (xBegin+1 <= aBGLContext.Canvas.Width) then begin
+          peak := FAudioCurve^.GetPeakBetween(timeBegin, timeBegin+timeDelta);
+          aBGLContext.Canvas.Line(xBegin, yRef-(peak.Positive/32767*halfHeight),
+                                  xBegin+1, yRef-(peak.Negative/32768*halfHeight), BGRA(255,77,65));
+        end;
+        timeBegin := timeBegin + timeDelta;
+        inc(xBegin);
+      until xBegin > xEnd;
+    end;
+  end;
+
   inherited Redraw(aParentFrame, aBGLContext);
   if HaveError then DrawErrorSymbol(aParentFrame);
 end;
@@ -242,8 +271,8 @@ var A: TStepDataArray;
   k: integer;
 begin
   A := s.SplitToStepDataArray;
-  k :=0;
-  DeserializeA( A, k );
+  k := 0;
+  DeserializeA(A, k);
 end;
 
 procedure TSequenceStep.DeserializeA(const A: TStepDataArray; var k: integer);
@@ -759,13 +788,13 @@ begin
   ClipBoard_Clear;
 end;
 
-procedure TFrameSequencer.SaveSequences(t: TStrings);
+{procedure TFrameSequencer.SaveSequences(t: TStrings);
 begin
   t.Add('[SEQUENCER]');
   SequencerToTStrings(Self, t);
-end;
+end;  }
 
-procedure TFrameSequencer.LoadSequences(t: TStrings);
+{procedure TFrameSequencer.LoadSequences(t: TStrings);
 var k: integer;
 begin
   k := t.IndexOf('[SEQUENCER]');
@@ -773,7 +802,7 @@ begin
     TStringsToSequencer(t, k+1, Self);
   NeedStepsWidthUpdate;
   View_All;
-end;
+end; }
 
 function TFrameSequencer.ToCmdListOfSingleCmd: TCmdList;
 begin
@@ -781,7 +810,14 @@ begin
 end;
 
 function TFrameSequencer.SaveToSequencerInfoList: TSequencerInfoList;
+var prop: TProperties;
 begin
+  prop.Init(SEQUENCERINFO_SEPARATOR);
+  prop.Add('CurrentID', ID);
+  prop.Add('GroupValue', GroupValue);
+  //prop.Add('StepData',
+  Result := prop.PackedProperty;
+
   Result := ID.ToString + SEQUENCERINFO_SEPARATOR + // current ID value
             GroupValue.ToString;                    // current groupID value
   StepList.ToStepDataList(Result);
