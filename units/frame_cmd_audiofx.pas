@@ -184,7 +184,7 @@ private
 
 implementation
 uses u_logfile, u_resource_string, u_utils, u_helper, Graphics,
-  u_project_manager, u_apputils, Dialogs;
+  u_apputils, Dialogs;
 
 {$R *.lfm}
 
