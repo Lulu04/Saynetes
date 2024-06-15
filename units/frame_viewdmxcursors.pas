@@ -302,7 +302,7 @@ var
 
 function TViewCursor.GetCursorPos: integer;
 begin
-  Result := Round(CursorArea.Top);
+  Result := CursorArea.Top;
 end;
 
 function TViewCursor.GetPercentValue: single;
@@ -311,10 +311,8 @@ begin
 end;
 
 procedure TViewCursor.SetCursorPos(AValue: integer);
-var h: integer;
 begin
-  h := ImageCursorSize.cy shr 1;
-  AValue := EnsureRange(AValue, CursorPathArea.Top-h, CursorPathArea.Bottom-h);
+  AValue := EnsureRange(AValue, CursorPathArea.Top, CursorPathArea.Bottom);
   SetPercentValue(YCursorToPercent(AValue));
 end;
 
@@ -328,14 +326,12 @@ end;
 
 function TViewCursor.PercentToYCursor(aPercent: single): integer;
 begin
-  Result := Round(CursorPathArea.Height*(1-aPercent)+CursorPathArea.Top -
-                  ImageCursorSize.cy*0.5);
+  Result := Round(CursorPathArea.Height*(1-aPercent)+CursorPathArea.Top);
 end;
 
 function TViewCursor.YCursorToPercent(aY: integer): single;
 begin
-  Result := aY+ImageCursorSize.cy*0.5;
-  Result := 1-(Result-CursorPathArea.Top)/CursorPathArea.Height;
+  Result := 1-(aY-CursorPathArea.Top)/CursorPathArea.Height;
 end;
 
 procedure TViewCursor.UpdateCursorArea;
@@ -344,7 +340,7 @@ begin
     CursorArea.Top := PercentToYCursor(Channel.FFlashValue)
   else
     CursorArea.Top := PercentToYCursor(Channel.PercentValue);
-  CursorArea.Bottom := CursorArea.Top+ImageCursorSize.cy;
+  CursorArea.Bottom := CursorArea.Top + ImageCursorSize.cy;
 end;
 
 procedure TViewCursor.UpdateIsVisibleOnView;
@@ -381,7 +377,7 @@ begin
      Brush.Style := bsSolid;
      Pen.Style := psClear;
      Rectangle(r);
-     // draw effect
+     // draw
      Brush.Style := bsClear;
      txt := EffectToText(Channel.CurrentEffect);
      UseFont(Renderer.FFixtureFont);
@@ -393,6 +389,7 @@ begin
 
    if Channel.FFlashIsActive then b := PercentToDMXByte(Channel.FFlashValue)
      else b := PercentToDMXByte(Channel.PercentValue);
+
    if (Channel.ByteValuePainted <> b) or
       (Channel.LockedPainted = Channel.Locked) or
       aDrawAll then begin
@@ -408,17 +405,20 @@ begin
      w := Font.GetTextWidth( txt );
      Font.Color := FColorValue;
      TextOut(r.Left+(r.Width-w) shr 1, r.Top, txt);
-     // erase previous cursor
-{     r.Left := 0;
-     r.Top := CursorArea.Top - (CursorPathArea.Top-(ImageCursors[0].Height shr 1));
-     r.Width := CursorArea.width;
-     r.Height := CursorArea.Height;
-     r1 := Renderer.AdjustRect(CursorAreaLastDrawn);
-     if (r.Top >= 0)  and (r.Top < Renderer.FCursorBackGround.Height) then
-       Renderer.FCursorBackGround.DrawPart(r, aCanvas, r1.Left, r1.Top, True); }
-     r := Renderer.AdjustRect(CursorPathArea);
 
-     Renderer.FCursorBackGround.Draw(aCanvas, r.Left, r.Top - ImageCursorSize.cy shr 1);
+     if aDrawAll then begin
+       r := Renderer.AdjustRect(CursorPathArea);
+       Renderer.FCursorBackGround.Draw(aCanvas, r.Left, r.Top);
+     end else begin
+       // erase only previous cursor rect
+       r1 := Renderer.AdjustRect(CursorAreaLastDrawn);
+       r.Left := 0;
+       r.Right := CursorArea.width;
+       r.Top := CursorAreaLastDrawn.Top - CursorPathArea.Top;
+       r.Bottom := CursorAreaLastDrawn.Bottom - CursorPathArea.Top;
+       Renderer.FCursorBackGround.DrawPart(r, aCanvas, r1.Left, r1.Top, True);
+     end;
+
      // draw cursor
      UpdateCursorArea;
      CursorAreaLastDrawn := CursorArea;
@@ -518,13 +518,13 @@ begin
                                       r.Bottom-Renderer.FChannelNameFont.Height*7,
                                       r.Right,
                                       r.Bottom);
-    xx := r.Left+(r.Width-ImageCursorSize.cx) div 2; //cursor path is centered on channel area
-    Cursors[i].CursorPathArea := Rect(xx, Cursors[i].ValueArea.Bottom+ImageCursorSize.cy shr 1,
+    xx := r.Left+(r.Width-ImageCursorSize.cx) div 2; //cursor path is H centered on channel area
+    Cursors[i].CursorPathArea := Rect(xx, Cursors[i].ValueArea.Bottom,
                                 xx+ImageCursorSize.cx,
-                                Cursors[i].ChannelNameArea.Top-ImageCursorSize.cy shr 1-1);
+                                Cursors[i].ChannelNameArea.Top-ImageCursorSize.cy-1);
 
     // adjust cursor image background
-   if Renderer.FCursorBackGround.Height <> Cursors[i].CursorPathArea.Height +ImageCursorSize.cy then
+   if Renderer.FCursorBackGround.Height <> Cursors[i].CursorPathArea.Height then
       Renderer.AdjustCursorBackGroundImage( Cursors[i].CursorPathArea.Height );
 
     Cursors[i].CursorArea.Left := Cursors[i].CursorPathArea.Left;
@@ -1694,7 +1694,7 @@ const GRADUATION_COUNT = 10;
 begin
   if aCursorPathHeight < 0 then aCursorPathHeight := 0;
   // resize
-  FCursorBackGround.SetSize(ImageCursorSize.cx, aCursorPathHeight+ImageCursorSize.cy);
+  FCursorBackGround.SetSize(ImageCursorSize.cx, aCursorPathHeight + ImageCursorSize.cy);
   // background
   FCursorBackGround.Fill(FColorFixtureBackground);
 
@@ -1705,23 +1705,25 @@ begin
   c := BGRA(0,0,0,150);
   FCursorBackGround.DrawVertLine(x, y, y+aCursorPathHeight, c);     // vertical axis
   FCursorBackGround.DrawVertLine(x+1, y, y+aCursorPathHeight, c);
-  // cursor graduations
-  c := BGRA(0,0,0,80);
-  yy := y;
+  // number of cursor graduations
   gradCount := GRADUATION_COUNT;
   repeat
-   deltay := aCursorPathHeight/gradCount; // we want 10 big graduations
-   if deltay < ScaleDesignToForm(30) then dec(gradCount);
-  until (deltay > ScaleDesignToForm(30)) or (gradCount = 0);
+   deltay := aCursorPathHeight / gradCount; // we want 10 big graduations
+   if deltay < ScaleDesignToForm(15) then dec(gradCount);
+  until (deltay > ScaleDesignToForm(15)) or (gradCount = 0);
   if gradCount > 0 then begin
-    for i:=0 to GRADUATION_COUNT-1 do begin
-     FCursorBackGround.DrawLine(0, Round(yy), ImageCursorSize.cx, Round(yy), c, true);
+    c := BGRA(0,0,0,80);
+    yy := y;
+    for i:=0 to gradCount-1 do begin
+      y := Round(yy);
+      FCursorBackGround.DrawLine(0, y, ImageCursorSize.cx, y, c, true);
 
-     yy := yy+deltay*0.5;
-     FCursorBackGround.DrawLine(0, Round(yy), ImageCursorSize.cx shr 2, Round(yy), c, True);
-     FCursorBackGround.DrawLine(ImageCursorSize.cx shr 2, Round(yy), ImageCursorSize.cx, Round(yy), c, True);
-     yy := yy+deltay*0.5;
+      y := Round(yy + deltay * 0.5);
+      FCursorBackGround.DrawLine(ImageCursorSize.cx div 4, y, ImageCursorSize.cx *3div 4, y, c, True);
+      yy := yy + deltay;
     end;
+    y := Round(yy);
+    FCursorBackGround.DrawLine(0, y, ImageCursorSize.cx, y, c, true);
   end;
 end;
 
