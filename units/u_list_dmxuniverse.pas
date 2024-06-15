@@ -658,6 +658,7 @@ begin
     ValueFromEffect := aPercent;
     FDimmer.Value := aPercent;
     Universe.NeedToBeRedraw := TRUE;
+    FNeedToRepaintWholeChannel := True;
   end
   else
   begin

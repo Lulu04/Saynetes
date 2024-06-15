@@ -1710,7 +1710,7 @@ begin
   repeat
    deltay := aCursorPathHeight / gradCount; // we want 10 big graduations
    if deltay < ScaleDesignToForm(15) then dec(gradCount);
-  until (deltay > ScaleDesignToForm(15)) or (gradCount = 0);
+  until (deltay >= ScaleDesignToForm(15)) or (gradCount = 0);
   if gradCount > 0 then begin
     c := BGRA(0,0,0,80);
     yy := y;

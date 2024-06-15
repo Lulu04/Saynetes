@@ -270,8 +270,8 @@ type
 implementation
 uses u_project_manager, u_userdialogs, u_resource_string, u_dmxtools_group,
   u_list_sequence, u_sequence_player, u_dmxtools_rgb, u_askifshiftadress,
-  u_mainform, u_utils, u_logfile, u_program_options, u_apputils, Math,
-  ComCtrls, Dialogs, BGRATransform, utilitaire_bgrabitmap;
+  u_mainform, u_logfile, u_program_options, u_apputils, Math,
+  ComCtrls, Dialogs, BGRATransform, utilitaire_bgrabitmap, PropertyUtils;
 
 
 {$R *.lfm}
@@ -576,20 +576,20 @@ end;
 
 const OPTION_PROJECTOR_VIEW_HEADER='[OPTIONS PROJECTOR VIEW]';
 procedure TFrameViewProjector.SaveProjectOptionsTo(t: TStringList);
-var prop: TPackProperty;
+var prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('ShowLevel', FShowLevel);
   prop.Add('ShowRGBSymbol', FShowRGBSymbol);
   prop.Add('ShowAdress', FShowDMXAdress);
   prop.Add('ShowFixtureInfo', FShowFixtureInfo);
-  prop.Add('HeightCursorView', Panel2.Height);
+  prop.Add('SplitterTop', Splitter1.Top);
   t.Add(OPTION_PROJECTOR_VIEW_HEADER);
   t.Add(prop.PackedProperty);
 end;
 
 procedure TFrameViewProjector.LoadProjectOptionsFrom(t: TStringList);
-var prop: TSplitProperty;
+var prop: TProperties;
   bv: boolean;
   k: Integer;
 begin
@@ -616,8 +616,8 @@ begin
   FToogleSpeedButtonManager.SetState(BShowInfo, bv);
   FShowFixtureInfo := bv;
 
-  prop.IntegerValueOf('HeightCursorView', k, Height div 3);
-  Panel2.Height := k;
+  prop.IntegerValueOf('SplitterTop', k, Round(Height*0.6));
+  Splitter1.Top := k;
 end;
 
 procedure TFrameViewProjector.RegisterCmd(const aCmd: TSingleCmd;
