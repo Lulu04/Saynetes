@@ -564,7 +564,6 @@ var
   fname: string;
   prop: TProperties;
   vbool: boolean;
-  audioLevel: TAudioFileLevel;
 begin
  audioType := '';
  fname := '';
@@ -606,10 +605,6 @@ begin
   else
     snd := FPlaybackContext.AddStream(fname, True); // AddStream(fname);
   end;
-
-  audioLevel.InitDefault;
-  if not audioLevel.LoadFromFile(fname) then
-    Log.Error('Unable to create audio peak file for '+fname);
 
   if not prop.IntegerValueOf('ID', v, 0) then
     Log.Error('ID property NOT FOUND for '+fname, 3);
