@@ -192,6 +192,21 @@ msgctxt "tformdevicemanager.speedbutton1.caption"
 msgid "Close"
 msgstr "Fermer"
 
+#: tformdmxchannelstools.baudioplay.hint
+msgctxt "tformdmxchannelstools.baudioplay.hint"
+msgid "Play selected audio file"
+msgstr "Lecture du fichier audio sélectionné"
+
+#: tformdmxchannelstools.baudiostop.hint
+msgctxt "tformdmxchannelstools.baudiostop.hint"
+msgid "Stop audio"
+msgstr "Stoppe l'audio"
+
+#: tformdmxchannelstools.bflashpreview.hint
+msgctxt "tformdmxchannelstools.bflashpreview.hint"
+msgid "Apply flash effect to the selected channels"
+msgstr "Appliquer l'effet flash sur les canaux sélectionnés"
+
 #: tformdmxchannelstools.caption
 msgid "Channels tools"
 msgstr "Outils canaux"
@@ -220,11 +235,6 @@ msgstr ""
 "Fixe l'intensité d'un canal pendant un court instant puis remet la valeur précédente.\n"
 "Cet effet peut être conjugué avec un autre."
 
-#: tformdmxchannelstools.speedbutton11.hint
-msgctxt "tformdmxchannelstools.speedbutton11.hint"
-msgid "Apply flash effect to the selected channels"
-msgstr "Appliquer l'effet flash sur les canaux sélectionnés"
-
 #: tformdmxchannelstools.speedbutton2.hint
 msgctxt "tformdmxchannelstools.speedbutton2.hint"
 msgid "Simulates a flame effect on the selected channels"
@@ -252,16 +262,6 @@ msgid ""
 msgstr ""
 "Stoppe un effet sur un canal.\n"
 "La dernière valeur calculée par l'effet est gardée."
-
-#: tformdmxchannelstools.speedbutton6.hint
-msgctxt "tformdmxchannelstools.speedbutton6.hint"
-msgid "Play selected audio file"
-msgstr "Joue le fichier audio sélectionné"
-
-#: tformdmxchannelstools.speedbutton7.hint
-msgctxt "tformdmxchannelstools.speedbutton7.hint"
-msgid "Stop audio"
-msgstr "Stoppe l'audio"
 
 #: tformdmxchannelstools.speedbutton8.hint
 msgctxt "tformdmxchannelstools.speedbutton8.hint"
@@ -2229,11 +2229,6 @@ msgctxt "u_resource_string.saudiofiles"
 msgid "Audio files"
 msgstr "Fichiers audio"
 
-#: u_resource_string.saudiofollow
-msgctxt "u_resource_string.saudiofollow"
-msgid "Audio"
-msgstr "Audio"
-
 #: u_resource_string.saudiofollower
 msgid ""
 "Audio\n"
@@ -2531,11 +2526,6 @@ msgstr "Continuer"
 msgctxt "u_resource_string.scopy"
 msgid "Copy"
 msgstr "Copier"
-
-#: u_resource_string.scopyrgb
-msgctxt "u_resource_string.scopyrgb"
-msgid "Copy RGB"
-msgstr "Copie RVB"
 
 #: u_resource_string.scopy_
 msgid "copy"
@@ -2955,11 +2945,6 @@ msgstr "Flamme"
 msgid "Flame presets"
 msgstr "Prédéfinis pour la flamme"
 
-#: u_resource_string.sflamergb
-msgctxt "u_resource_string.sflamergb"
-msgid "Flame RGB"
-msgstr "Flamme RVB"
-
 #: u_resource_string.sflash
 msgid "Flash"
 msgstr "Flash"
@@ -3120,6 +3105,10 @@ msgstr "chargement des images des curseurs DMX"
 #: u_resource_string.sloadingdmxchannelicon
 msgid "loading DMX channel icons"
 msgstr "chargement des icones de canaux DMX"
+
+#: u_resource_string.sloadingdmxeffectsimage
+msgid "loading DMX effect images"
+msgstr "chargement des images des effets DMX"
 
 #: u_resource_string.sloadingfixtureimage
 msgid "loading DMX fixture images"
@@ -3995,3 +3984,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+
