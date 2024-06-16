@@ -35,6 +35,9 @@ uses
   procedure FreeFixtureImages;
   procedure LoadCursorImages(aWidth, aHeight: integer);
   procedure FreeCursorImages;
+  procedure LoadDmxEffectsImages(aWidth, aHeight: integer);
+  procedure FreeDmxEffectsImages;
+  function GetDMXEffectImageFor(aFX: TDmxEffect): TBGRABitmap;
 
   // fill a TImage with an image according an TFixtureType passed as parameter
   procedure ShowFixtureImage(aImage: TImage; aFT: TFixtureType);
@@ -42,7 +45,7 @@ uses
 
   function DMXCursorImageFileNameFor(aCT: TChanneltype): string;
 
-  function EffectToText(aFX: TDmxEffect): string;
+//  function EffectToText(aFX: TDmxEffect): string;
   function IsChannelEffect(aFX: TDmxEffect): boolean;
 
   function GetFixtureFromCmd(const aCmd: TSingleCmd): TDMXFixture;
@@ -294,6 +297,41 @@ begin
   end;
 end;
 
+procedure LoadDmxEffectsImages(aWidth, aHeight: integer);
+var path: string;
+  i: integer;
+begin
+  path := GetAppDMXEffectImagesFolder;
+  for i:=0 to High(ImageDmxEffects) do
+    try
+      ImageDmxEffects[i] := SVGFileToBGRABitmap(path+ImageDmxEffectsNames[i], aWidth, aHeight);
+    except
+      ImageDmxEffects[i] := TBGRABitmap.Create(aWidth, aHeight, BGRAWhite);
+    end;
+end;
+
+procedure FreeDmxEffectsImages;
+var i: integer;
+begin
+  for i:=0 to High(ImageDmxEffects) do begin
+    ImageDmxEffects[i].Free;
+    ImageDmxEffects[i] := NIL;
+  end;
+end;
+
+function GetDMXEffectImageFor(aFX: TDmxEffect): TBGRABitmap;
+begin
+  case aFX of
+   deDimmer: Result := ImageDmxEffects[0];
+   deFlame: Result := ImageDmxEffects[1];
+   deAudioFollower: Result := ImageDmxEffects[2];
+   deCopy: Result := ImageDmxEffects[3];
+   deFlameRGB: Result := ImageDmxEffects[4];
+   deAudioFollowerRGB: Result := ImageDmxEffects[5];
+   else Result := NIL;
+  end;
+end;
+
 procedure ShowFixtureImage(aImage: TImage; aFT:TFixtureType);
 var ima: TBGRABitmap;
     bmp: TBitmap;
@@ -393,7 +431,7 @@ begin
   end;//case
 end;
 
-function EffectToText(aFX: TDmxEffect): string;
+{function EffectToText(aFX: TDmxEffect): string;
 begin
   case aFX of
     deNOEFFECT: Result:='';
@@ -407,7 +445,7 @@ begin
     deFlash: Result:=SFlash;
     else Result:=SUnknown;
   end;
-end;
+end;  }
 
 function IsChannelEffect(aFX: TDmxEffect): boolean;
 begin

@@ -15,6 +15,7 @@ function GetAppFixtureImagesFolder: string;
 function GetAppCursorImagesFolder: string;
 function GetAppChannelImagesFolder: string;
 function GetAppIconImagesFolder: string;
+function GetAppDMXEffectImagesFolder: string;
 
 function GetAppAudioPresetsFile: string;
 
@@ -60,6 +61,11 @@ end;
 function GetAppIconImagesFolder: string;
 begin
   Result := GetAppImagesFolder+'Icons'+DirectorySeparator;
+end;
+
+function GetAppDMXEffectImagesFolder: string;
+begin
+  Result := GetAppImagesFolder+'DmxEffects'+DirectorySeparator;
 end;
 
 function GetAppAudioPresetsFile: string;

@@ -170,6 +170,21 @@ msgctxt "tformdevicemanager.speedbutton1.caption"
 msgid "Close"
 msgstr ""
 
+#: tformdmxchannelstools.baudioplay.hint
+msgctxt "tformdmxchannelstools.baudioplay.hint"
+msgid "Play selected audio file"
+msgstr ""
+
+#: tformdmxchannelstools.baudiostop.hint
+msgctxt "tformdmxchannelstools.baudiostop.hint"
+msgid "Stop audio"
+msgstr ""
+
+#: tformdmxchannelstools.bflashpreview.hint
+msgctxt "tformdmxchannelstools.bflashpreview.hint"
+msgid "Apply flash effect to the selected channels"
+msgstr ""
+
 #: tformdmxchannelstools.caption
 msgid "Channels tools"
 msgstr ""
@@ -196,11 +211,6 @@ msgid ""
 "This effect can be combined with another."
 msgstr ""
 
-#: tformdmxchannelstools.speedbutton11.hint
-msgctxt "tformdmxchannelstools.speedbutton11.hint"
-msgid "Apply flash effect to the selected channels"
-msgstr ""
-
 #: tformdmxchannelstools.speedbutton2.hint
 msgid "Simulates a flame effect on the selected channels"
 msgstr ""
@@ -220,16 +230,6 @@ msgctxt "tformdmxchannelstools.speedbutton5.hint"
 msgid ""
 "Stops an effect on a channel.\n"
 "The last value calculated by the effect is kept."
-msgstr ""
-
-#: tformdmxchannelstools.speedbutton6.hint
-msgctxt "tformdmxchannelstools.speedbutton6.hint"
-msgid "Play selected audio file"
-msgstr ""
-
-#: tformdmxchannelstools.speedbutton7.hint
-msgctxt "tformdmxchannelstools.speedbutton7.hint"
-msgid "Stop audio"
 msgstr ""
 
 #: tformdmxchannelstools.speedbutton8.hint
@@ -2142,11 +2142,6 @@ msgctxt "u_resource_string.saudiofiles"
 msgid "Audio files"
 msgstr ""
 
-#: u_resource_string.saudiofollow
-msgctxt "u_resource_string.saudiofollow"
-msgid "Audio"
-msgstr ""
-
 #: u_resource_string.saudiofollower
 msgid ""
 "Audio\n"
@@ -2439,10 +2434,6 @@ msgstr ""
 #: u_resource_string.scopy
 msgctxt "u_resource_string.scopy"
 msgid "Copy"
-msgstr ""
-
-#: u_resource_string.scopyrgb
-msgid "Copy RGB"
 msgstr ""
 
 #: u_resource_string.scopy_
@@ -2860,10 +2851,6 @@ msgstr ""
 msgid "Flame presets"
 msgstr ""
 
-#: u_resource_string.sflamergb
-msgid "Flame RGB"
-msgstr ""
-
 #: u_resource_string.sflash
 msgid "Flash"
 msgstr ""
@@ -3022,6 +3009,10 @@ msgstr ""
 
 #: u_resource_string.sloadingdmxchannelicon
 msgid "loading DMX channel icons"
+msgstr ""
+
+#: u_resource_string.sloadingdmxeffectsimage
+msgid "loading DMX effect images"
 msgstr ""
 
 #: u_resource_string.sloadingfixtureimage
