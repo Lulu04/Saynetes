@@ -437,7 +437,8 @@ begin
     Pen.Color := $0003C4FC;
     Pen.Width := 1;
     r := Renderer.AdjustRect(CursorPathArea);
-    Rectangle(r.Left+1, r.Top+1, r.Right-1, r.Bottom-1);
+    r.Bottom := r.Top + Renderer.FCursorBackGround.Height;
+    Rectangle(r.Left+1, r.Top+1, r.Right-1, r.Bottom);
    end;
 
    r := Renderer.AdjustRect(ChannelNameArea);

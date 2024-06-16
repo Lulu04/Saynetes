@@ -75,14 +75,14 @@ type
     Shape2: TShape;
     SpeedButton1: TSpeedButton;
     SpeedButton10: TSpeedButton;
-    SpeedButton11: TSpeedButton;
+    BFlashPreview: TSpeedButton;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
     SpeedButton5: TSpeedButton;
     BAdd5: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    SpeedButton7: TSpeedButton;
+    BAudioPlay: TSpeedButton;
+    BAudioStop: TSpeedButton;
     SpeedButton8: TSpeedButton;
     ButtonFlamePreset: TSpeedButton;
     TB1: TTrackBar;
@@ -99,9 +99,9 @@ type
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
-    procedure SpeedButton11Click(Sender: TObject);
-    procedure SpeedButton6Click(Sender: TObject);
-    procedure SpeedButton7Click(Sender: TObject);
+    procedure BFlashPreviewClick(Sender: TObject);
+    procedure BAudioPlayClick(Sender: TObject);
+    procedure BAudioStopClick(Sender: TObject);
     procedure TB1Change(Sender: TObject);
   private
     FFirstShown: boolean;
@@ -221,12 +221,12 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFormDMXChannelsTools.SpeedButton11Click(Sender: TObject);
+procedure TFormDMXChannelsTools.BFlashPreviewClick(Sender: TObject);
 begin
   ApplyEffectOnTargetChannels;
 end;
 
-procedure TFormDMXChannelsTools.SpeedButton6Click(Sender: TObject);
+procedure TFormDMXChannelsTools.BAudioPlayClick(Sender: TObject);
 var snd: TALSSound;
 begin
   UpdateWidgets;
@@ -239,7 +239,7 @@ begin
     snd.Play;
 end;
 
-procedure TFormDMXChannelsTools.SpeedButton7Click(Sender: TObject);
+procedure TFormDMXChannelsTools.BAudioStopClick(Sender: TObject);
 begin
   SoundManager.StopAllSound;
 end;
@@ -308,6 +308,7 @@ begin
     Label21.Caption := FrameViewChannelsList1.Selected[0].Name;
     FTargetViewProjector.FrameViewDMXCursors1.SetSourceChannelForCopy(FrameViewChannelsList1.Selected[0]);
     ApplyEffectOnTargetChannels;
+    FTargetViewProjector.FrameViewDMXCursors1.RedrawAll;
   end;
 end;
 
@@ -551,7 +552,7 @@ begin
   begin
     sourcechan := FTargetViewProjector.FrameViewDMXCursors1.GetSourceChannelForCopy;
     for i:=0 to High(FTargetChannels) do
-     if FTargetChannels[i].Selected and (FTargetChannels[i] <> sourcechan) then
+     if FTargetChannels[i].Selected then
        FTargetChannels[i].StartCopy(sourcechan);
   end;
 

@@ -728,13 +728,14 @@ end;
 
 procedure TDMXChannel.StartCopy(aSourceChannel: TDMXChannel);
 begin
-  if (aSourceChannel <> NIL) and (aSourceChannel <> Self) then
+  if aSourceChannel = NIL then exit;
+  if aSourceChannel <> Self then
   begin
     FCopySourceChannel := aSourceChannel;
     CurrentEffect := deCopy;
     FWaveActivated := FALSE;
     Universe.FNeedToBeRedraw := TRUE;
-  end;
+  end else CurrentEffect := deNOEFFECT;
 end;
 
 procedure TDMXChannel.StartInternalWave(aPercent1, aDuration1: single;
@@ -757,6 +758,7 @@ procedure TDMXChannel.StopEffect;
 begin
   CurrentEffect := deNOEFFECT;
   FWaveActivated := FALSE;
+  FNeedToRepaintWholeChannel := True;
 end;
 
 
@@ -937,7 +939,7 @@ end;
 
 function TDMXFixture.SaveToString: string;
 var chan: TDMXChannel;
-    prop: TPackProperty;
+    prop: TProperties;
     i: integer;
 begin
   prop.Init(FIXTURESEPARATOR);
@@ -967,7 +969,7 @@ function TDMXFixture.LoadFromString(const s: string): boolean;
 var i, j, vi: integer;
   libfix: TLibraryFixture;
   chan: TDMXChannel;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1, virtualName: string;
   vb: boolean;
   vs: single;
@@ -1386,10 +1388,12 @@ begin
   if not HasRGBChannel then exit;
   if aSourceFixture = NIL then exit;
   if not aSourceFixture.HasRGBChannel then exit;
-
-  Channels[FRedChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FRedChannelIndex]);
-  Channels[FGreenChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FGreenChannelIndex]);
-  Channels[FBlueChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FBlueChannelIndex]);
+  if Self = aSourceFixture then StopEffectRGB
+    else begin
+      Channels[FRedChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FRedChannelIndex]);
+      Channels[FGreenChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FGreenChannelIndex]);
+      Channels[FBlueChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FBlueChannelIndex]);
+    end;
 end;
 
 procedure TDMXFixture.StartFlashRGB(aColor: TColor; apcMin, apcMax, aDurationMin, aDurationMax: single);
@@ -1732,7 +1736,7 @@ const UNIVERSEHEAD = '[UNIVERSE ';
 procedure TDmxUniverse.SaveTo(t: TStringList; aIndex: integer);
 var fix: TDMXFixture;
   dev: TBaseDMXDevice;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('ID', integer(ID));
@@ -1757,7 +1761,7 @@ function TDmxUniverse.LoadFrom(t: TStringList; aIndex: integer; aInitDevice: boo
 var vi, i, k, c: integer;
   fix: TDMXFixture;
   dev: TBaseDMXDevice;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1, s2: string;
   procedure LogMissingProperty(const apropName: string);
   begin
@@ -2140,7 +2144,7 @@ end;
 const UNIVERSE_HEADER='[UNIVERSE]';
 function TUniverseManager.Save: boolean;
 var i: integer;
-  prop: TPackProperty;
+  prop: TProperties;
   f: string;
   t: TStringList;
 begin
@@ -2173,7 +2177,7 @@ end;
 
 procedure TUniverseManager.SaveTo(t: TStringList);
 var i: integer;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   if Count = 0 then exit;
 
@@ -2288,7 +2292,7 @@ end;
 function TUniverseManager.LoadFrom(t: TStringList; aInitDevice: boolean): boolean;
 var i, k, c, vi: integer;
   uni: TDMXUniverse;
-  prop: TSplitProperty;
+  prop: TProperties;
   procedure LogMissingProperty(const apropName: string);
   begin
     Log.Error('TUniverseManager.LoadFrom - property '+apropName+' not found', 3);

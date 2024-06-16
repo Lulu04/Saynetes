@@ -949,7 +949,7 @@ begin
        // render state 'mouse over' in cursor view
        if FTargetFixtureInViewCursor=fix then
        begin
-         Rectangle(0, 0, tex.Width, tex.Height, FColorSelection, BGRA(255,255,0,80));
+         Rectangle(0, 0, tex.Width, tex.Height, FColorSelection, BGRA(255,255,0,160));
        end;
 
        // render fixture image

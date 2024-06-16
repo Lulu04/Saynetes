@@ -99,6 +99,7 @@ type
     FCheckedLabelManager: TCheckedLabelManager;
     FTargetFixtures: ArrayOfDmxFixtures;
     procedure GetTargetFixtures;
+    procedure ApplyEffectOnTargetFixtures;
     procedure StopAll;
     procedure ProcessPageSelectionChange(Sender: TObject);
     procedure ProcessCopySelectionChange(Sender: TObject);
@@ -296,90 +297,9 @@ begin
 end;
 
 procedure TFormDMXRGBTools.ProcessColorChangeEvent(Sender: TObject);
-var i: Integer;
-  snd: TALSSound;
-  vmin, vmax, dmin, dmax: single;
 begin
   UpdateWidgets;
-  GetTargetFixtures;
-  if length(FTargetFixtures) = 0 then exit;
-
-  if Notebook1.PageIndex=Notebook1.IndexOf(PageDimmer) then
-  begin
-    for i:=0 to High(FTargetFixtures) do
-    begin
-      FTargetFixtures[i].RGBColor := Frame_ColorPalette1.SelectedColor;
-
-      if FTargetFixtures[i].IsVisibleOnViewCursor then
-        FTargetViewProjector.FrameViewDMXCursors1.RedrawRGBChannelsOnFixture(FTargetFixtures[i]);
-    end;
-    if FTargetViewProjector.FShowLevel then
-      FTargetViewProjector.Redraw;
-  end;
-
-  if Notebook1.PageIndex = Notebook1.IndexOf(PageFlame) then
-  begin
-    for i:=0 to High(FTargetFixtures) do
-      FTargetFixtures[i].StartFlameRGB(Frame_ColorPalette1.SelectedColor,
-                                       TB2.Position/100,
-                                       TB3.Position/TB3.Max,
-                                       TB7.Position/TB7.Max);
-   // if FTargetViewProjector.FShowLevel then
-   //   FTargetViewProjector.Redraw;
-  end;
-
-  if Notebook1.PageIndex = Notebook1.IndexOf(PageAudioFollower) then
-  begin
-    snd := SoundManager.GetSoundByIndex(ComboBox1.ItemIndex);
-    if snd = NIL then
-    begin
-      for i:=0 to High(FTargetFixtures) do
-      begin
-        FTargetFixtures[i].RGBColor := Frame_ColorPalette1.SelectedColor;
-      end;
-    end
-    else begin
-      if snd.State <> ALS_PLAYING then
-        snd.Play;
-      for i:=0 to High(FTargetFixtures) do
-      begin
-        FTargetFixtures[i].StartAudioFollowerRGB(snd.Tag,
-                                                 Frame_ColorPalette1.SelectedColor,
-                                                 TB4.Position/10,
-                                                 TB6.Position/10);
-      end;
-    end;
-    if FTargetViewProjector.FShowLevel then
-          FTargetViewProjector.Redraw;
-  end;
-
-  if Notebook1.PageIndex = Notebook1.IndexOf(PageCopy) then
-  begin
-
-  end;
-
-  if Notebook1.PageIndex=Notebook1.IndexOf(PageStop) then
-  begin
-
-  end;
-
-  if Notebook1.PageIndex=Notebook1.IndexOf(PageFlash) then
-  begin
-
-    vmax := FFrameTrackBar1.PercentValue;
-    if RadioButton1.Checked then
-      vmin := vmax
-    else
-      vmin := FFrameTrackBar1.IntervalMin;
-    dmin := FloatSpinEdit2.Value;
-    if RadioButton3.Checked then
-      dmax := dmin
-    else
-      dmax := FloatSpinEdit3.Value;
-
-    for i:=0 to High(FTargetFixtures) do
-      FTargetFixtures[i].StartFlashRGB(Frame_ColorPalette1.SelectedColor, vmin, vmax, dmin, dmax);
-  end;
+  ApplyEffectOnTargetFixtures;
 end;
 
 procedure TFormDMXRGBTools.RadioButton1Change(Sender: TObject);
@@ -400,11 +320,9 @@ var i: integer;
 begin
   SeqPlayer.StopPreview;
   i := ComboBox1.ItemIndex;
-  if i > -1 then
-  begin
+  if i > -1 then begin
     snd := SoundManager.GetSoundByIndex(ComboBox1.ItemIndex);
-    if snd <> NIL then
-      snd.Stop;
+    if snd <> NIL then snd.Stop;
   end;
 
   GetTargetFixtures;
@@ -420,6 +338,18 @@ begin
                                  (Notebook1.ActivePageComponent = PageAudioFollower) or
                                  (Notebook1.ActivePageComponent = PageChaser) or
                                  (Notebook1.ActivePageComponent = PageFlash);
+
+  if Notebook1.PageIndex <> Notebook1.IndexOf(PageCopy) then begin
+    FTargetViewProjector.FixtureSourceForCopy := NIL;
+    FTargetViewProjector.FrameViewDMXCursors1.SetSourceFixtureForRGBCopy(NIL);
+  end else
+    ProcessCopySelectionChange(NIL);
+
+  if (Notebook1.PageIndex = Notebook1.IndexOf(PageFlame)) or
+     (Notebook1.PageIndex = Notebook1.IndexOf(PageCopy)) or
+     (Notebook1.PageIndex = Notebook1.IndexOf(PageStop)) then
+    ApplyEffectOnTargetFixtures;
+
 end;
 
 procedure TFormDMXRGBTools.ProcessCopySelectionChange(Sender: TObject);
@@ -437,6 +367,7 @@ begin
     Label20.Caption := FrameViewFixturesList1.Selected[0].Description;
     FTargetViewProjector.FixtureSourceForCopy := FrameViewFixturesList1.Selected[0];
     FTargetViewProjector.FrameViewDMXCursors1.SetSourceFixtureForRGBCopy(FrameViewFixturesList1.Selected[0]);
+    ApplyEffectOnTargetFixtures;
   end;
 end;
 
@@ -711,6 +642,95 @@ end;
 procedure TFormDMXRGBTools.GetTargetFixtures;
 begin
   FTargetFixtures := FTargetViewProjector.FrameViewDMXCursors1.GetTargetFixtures;
+end;
+
+procedure TFormDMXRGBTools.ApplyEffectOnTargetFixtures;
+var i: Integer;
+  snd: TALSSound;
+  vmin, vmax, dmin, dmax: single;
+  sourceFix: TDMXFixture;
+begin
+  GetTargetFixtures;
+  if length(FTargetFixtures) = 0 then exit;
+
+  if Notebook1.PageIndex=Notebook1.IndexOf(PageDimmer) then
+  begin
+    for i:=0 to High(FTargetFixtures) do
+    begin
+      FTargetFixtures[i].RGBColor := Frame_ColorPalette1.SelectedColor;
+
+      if FTargetFixtures[i].IsVisibleOnViewCursor then
+        FTargetViewProjector.FrameViewDMXCursors1.RedrawRGBChannelsOnFixture(FTargetFixtures[i]);
+    end;
+    if FTargetViewProjector.FShowLevel then
+      FTargetViewProjector.Redraw;
+  end;
+
+  if Notebook1.PageIndex = Notebook1.IndexOf(PageFlame) then
+  begin
+    for i:=0 to High(FTargetFixtures) do
+      FTargetFixtures[i].StartFlameRGB(Frame_ColorPalette1.SelectedColor,
+                                       TB2.Position/100,
+                                       TB3.Position/TB3.Max,
+                                       TB7.Position/TB7.Max);
+   // if FTargetViewProjector.FShowLevel then
+   //   FTargetViewProjector.Redraw;
+  end;
+
+  if Notebook1.PageIndex = Notebook1.IndexOf(PageAudioFollower) then
+  begin
+    snd := SoundManager.GetSoundByIndex(ComboBox1.ItemIndex);
+    if snd = NIL then
+    begin
+      for i:=0 to High(FTargetFixtures) do
+      begin
+        FTargetFixtures[i].RGBColor := Frame_ColorPalette1.SelectedColor;
+      end;
+    end
+    else begin
+      if snd.State <> ALS_PLAYING then
+        snd.Play;
+      for i:=0 to High(FTargetFixtures) do
+      begin
+        FTargetFixtures[i].StartAudioFollowerRGB(snd.Tag,
+                                                 Frame_ColorPalette1.SelectedColor,
+                                                 TB4.Position/10,
+                                                 TB6.Position/10);
+      end;
+    end;
+    if FTargetViewProjector.FShowLevel then
+          FTargetViewProjector.Redraw;
+  end;
+
+  if Notebook1.PageIndex = Notebook1.IndexOf(PageCopy) then
+  begin
+    sourceFix := FTargetViewProjector.FixtureSourceForCopy;
+    for i:=0 to High(FTargetFixtures) do
+      FTargetFixtures[i].StartCopyRGB(sourceFix);
+  end;
+
+  if Notebook1.PageIndex=Notebook1.IndexOf(PageStop) then
+  begin
+
+  end;
+
+  if Notebook1.PageIndex=Notebook1.IndexOf(PageFlash) then
+  begin
+
+    vmax := FFrameTrackBar1.PercentValue;
+    if RadioButton1.Checked then
+      vmin := vmax
+    else
+      vmin := FFrameTrackBar1.IntervalMin;
+    dmin := FloatSpinEdit2.Value;
+    if RadioButton3.Checked then
+      dmax := dmin
+    else
+      dmax := FloatSpinEdit3.Value;
+
+    for i:=0 to High(FTargetFixtures) do
+      FTargetFixtures[i].StartFlashRGB(Frame_ColorPalette1.SelectedColor, vmin, vmax, dmin, dmax);
+  end;
 end;
 
 end.

@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 6
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -388,7 +388,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     object PageAudioFollower: TPage
       object Label5: TLabel
         AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = SpeedButton6
+        AnchorSideTop.Control = BAudioPlay
         AnchorSideTop.Side = asrBottom
         Left = 0
         Height = 15
@@ -413,7 +413,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Frequency = 4
         Max = 30
         Min = -10
-        OnChange = SpeedButton6Click
+        OnChange = BAudioPlayClick
         Position = 0
         ShowSelRange = False
         TickMarks = tmTopLeft
@@ -445,7 +445,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Width = 249
         Frequency = 20
         Max = 255
-        OnChange = SpeedButton6Click
+        OnChange = BAudioPlayClick
         Position = 200
         ShowSelRange = False
         TickMarks = tmTopLeft
@@ -477,7 +477,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Top = 229
         Width = 249
         Min = 1
-        OnChange = SpeedButton6Click
+        OnChange = BAudioPlayClick
         Position = 5
         ShowSelRange = False
         TickMarks = tmTopLeft
@@ -531,10 +531,10 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Style = csDropDownList
         TabOrder = 3
       end
-      object SpeedButton6: TSpeedButton
+      object BAudioPlay: TSpeedButton
         AnchorSideTop.Control = ComboBox1
         AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = SpeedButton7
+        AnchorSideRight.Control = BAudioStop
         Left = 129
         Height = 19
         Hint = 'Play selected audio file'
@@ -547,11 +547,11 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Images = DataModule1.ImageList1
         ImageIndex = 15
         Transparent = False
-        OnClick = SpeedButton6Click
+        OnClick = BAudioPlayClick
         ShowHint = True
         ParentShowHint = False
       end
-      object SpeedButton7: TSpeedButton
+      object BAudioStop: TSpeedButton
         AnchorSideTop.Control = ComboBox1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageAudioFollower
@@ -568,7 +568,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Images = DataModule1.ImageList1
         ImageIndex = 16
         Transparent = False
-        OnClick = SpeedButton7Click
+        OnClick = BAudioStopClick
         ShowHint = True
         ParentShowHint = False
       end
@@ -914,7 +914,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentFont = False
         WordWrap = True
       end
-      object SpeedButton11: TSpeedButton
+      object BFlashPreview: TSpeedButton
         AnchorSideLeft.Control = Panel4
         AnchorSideTop.Control = Panel4
         AnchorSideTop.Side = asrBottom
@@ -931,12 +931,12 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Images = DataModule1.ImageList1
         ImageIndex = 15
         Transparent = False
-        OnClick = SpeedButton11Click
+        OnClick = BFlashPreviewClick
         ShowHint = True
         ParentShowHint = False
       end
       object BAdd6: TSpeedButton
-        AnchorSideTop.Control = SpeedButton11
+        AnchorSideTop.Control = BFlashPreview
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageFlash
         AnchorSideRight.Side = asrBottom
