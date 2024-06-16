@@ -154,6 +154,8 @@ begin
   LoadFixtureImages;
   FormSplash.TextLoad := SLoadingCursorImage;
   LoadCursorImages(ScaleDesignToForm(25), ScaleDesignToForm(35));
+  FormSplash.TextLoad := SLoadingDmxEffectsImage;
+  LoadDmxEffectsImages(ScaleDesignToForm(14), -1);
 
   Project := TSaynetesProject.Create;
 
@@ -217,6 +219,7 @@ begin
   ProgramOptions.Free;
   FreeFixtureImages;
   FreeCursorImages;
+  FreeDmxEffectsImages;
 end;
 
 procedure TFormMain.MIProjectCloseClick(Sender: TObject);

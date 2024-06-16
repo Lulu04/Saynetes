@@ -489,7 +489,14 @@ var
   FixtureImages: array[TFixtureType] of TBGRABitmap;
   ImageCursors: array[TChannelType] of TBGRABitmap;
   ImageCursorSize: TSize;
-  ImageDmxEffects: array[0..6] of TBGRABitmap;
+
+const
+  DMX_EFFECT_IMAGE_COUNT = 6;
+  ImageDmxEffectsNames: array[0..DMX_EFFECT_IMAGE_COUNT-1] of string = (
+         'Dimmer.svg',    'Flame.svg',    'AudioFollower.svg',    'Copy.svg',
+         'FlameRGB.svg',    'AudioFollowerRGB.svg');
+var
+  ImageDmxEffects: array[0..DMX_EFFECT_IMAGE_COUNT-1] of TBGRABitmap;
 
 type
 

@@ -18,6 +18,7 @@ resourcestring
   SLoadingCursorImage='loading DMX cursor images';
   SLoadingProgramIcon='loading program icons';
   SLoadingDmxChannelIcon='loading DMX channel icons';
+  SLoadingDmxEffectsImage='loading DMX effect images';
 
   SEditMode='EDIT MODE';
   SShowMode='SHOW MODE';
@@ -349,12 +350,12 @@ resourcestring
   SFlame='Flame';
   SChaser='Chaser';
   SAudioFollower='Audio'+LineEnding+'Follower';
-  SAudioFollow='Audio';
-  SFlameRGB='Flame RGB';
+//  SAudioFollow='Audio';
+//  SFlameRGB='Flame RGB';
   SFlash='Flash';
   SCopy='Copy';
   SCopy_='copy';
-  SCopyRGB='Copy RGB';
+//  SCopyRGB='Copy RGB';
   SUnknown='Unknown';
   SError='Error';
   SSerialNumber='Serial number';

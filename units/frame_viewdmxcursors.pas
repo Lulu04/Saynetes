@@ -357,6 +357,7 @@ var
   txt: String;
   b: byte;
   w: Integer;
+  ima: TBGRABitmap;
     procedure UseFont(aFont: TFont);
     begin
       aCanvas.Font.Name := aFont.Name;
@@ -368,23 +369,20 @@ begin
   begin
    Renderer.FTextStyleForTextRect.Wordbreak := False; // can't go to the next line
 
-   // Effect text
+   // Effect icon
    if (Channel.EffectPainted <> Ord(Channel.CurrentEffect)) or aDrawAll then begin
      Channel.EffectPainted := Ord(Channel.CurrentEffect);
      // erase
      r := Renderer.AdjustRect(EffectArea);
+     r.Right := r.Right + 1;
+     r.Bottom := r.Bottom + 1;
      Brush.Color := FColorFixtureBackground;
      Brush.Style := bsSolid;
      Pen.Style := psClear;
      Rectangle(r);
      // draw
-     Brush.Style := bsClear;
-     txt := EffectToText(Channel.CurrentEffect);
-     UseFont(Renderer.FFixtureFont);
-     if Length(txt) > 0 then begin
-       Font.Color := FColorEffect;
-       TextRect(r, 0, 0, txt, Renderer.FTextStyleForTextRect);
-     end;
+     ima := GetDMXEffectImageFor(Channel.CurrentEffect);
+     if ima <> NIL then ima.Draw(aCanvas, r.Left, r.Top, False);
    end;
 
    if Channel.FFlashIsActive then b := PercentToDMXByte(Channel.FFlashValue)
@@ -504,16 +502,17 @@ begin
                                 FixtureNameArea.Bottom+Renderer.FFixtureFont.Height);
 
   r := Rect(FixtureArea.Left+FIXTURE_SPACE_BEFORE_AFTER_CHANNEL,
-                     FixtureDescriptionArea.Bottom,
-                     FixtureArea.Left+FIXTURE_SPACE_BEFORE_AFTER_CHANNEL+Renderer.ChannelWidth,
-                     FixtureArea.Bottom-5);
+            FixtureDescriptionArea.Bottom,
+            FixtureArea.Left+FIXTURE_SPACE_BEFORE_AFTER_CHANNEL+Renderer.ChannelWidth,
+            FixtureArea.Bottom-5);
 
   for i:=0 to High(Cursors) do begin
     Cursors[i].Channel := Fixture.Channels[i];
 
     Cursors[i].ChannelArea := r;
     Cursors[i].Renderer := Renderer;
-    Cursors[i].EffectArea := Rect(r.Left, r.Top, r.Right, r.Top+Renderer.FEffectValueFont.Height);
+    xx := r.Left+(r.Width-ImageDmxEffects[0].Width) div 2;
+    Cursors[i].EffectArea := Rect(xx, r.Top, xx+ImageDmxEffects[0].Width, r.Top+ImageDmxEffects[0].Height);
     Cursors[i].ValueArea := Rect(r.Left, Cursors[i].EffectArea.Bottom, r.Right, Cursors[i].EffectArea.Bottom+Renderer.FEffectValueFont.Height);
     Cursors[i].ChannelNameArea := Rect(r.Left,
                                       r.Bottom-Renderer.FChannelNameFont.Height*7,
