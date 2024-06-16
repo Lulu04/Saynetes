@@ -54,7 +54,7 @@ type
   end;
 
 implementation
-uses u_project_manager, u_list_sequence, u_utils, u_logfile;
+uses u_project_manager, u_list_sequence, u_utils, u_logfile, PropertyUtils;
 
 {$R *.lfm}
 
@@ -141,7 +141,7 @@ end;
 
 const PROJECTOPTION_FRAMESEQUENCER_HEADER='[FRAME_SEQUENCER]';
 procedure TFrameMainSequence.SaveProjectOptionsTo(t: TStringList);
-var prop: TPackProperty;
+var prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('HeightPanelProjectList', FWantedTopSplitter2); // Panel3.Height);
@@ -151,7 +151,7 @@ begin
 end;
 
 procedure TFrameMainSequence.LoadProjectOptionsFrom(t: TStringList);
-var prop: TSplitProperty;
+var prop: TProperties;
   k: Integer;
 begin
   k := t.IndexOf(PROJECTOPTION_FRAMESEQUENCER_HEADER);

@@ -94,7 +94,7 @@ var
 
 implementation
 
-uses u_resource_string, u_helper, u_utils, u_logfile, ALSound;
+uses u_resource_string, u_helper, u_utils, u_logfile, ALSound, PropertyUtils;
 
 { TSequence }
 
@@ -334,7 +334,7 @@ end;
 const SEQUENCE_HEADER = '[SEQUENCE]';
 procedure TSequenceList.Save(temp: TStrings);
 var i: Integer;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   if Count = 0 then
     exit;
@@ -371,7 +371,7 @@ end;
 procedure TSequenceList.Load(temp: TStrings);
 var c, k, vi: integer;
   o: TSequence;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1, s2: string;
   flagError: boolean;
   procedure LogMissingProperty(const apropName: string);

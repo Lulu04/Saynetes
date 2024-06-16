@@ -939,7 +939,7 @@ end;
 
 function TDMXFixture.SaveToString: string;
 var chan: TDMXChannel;
-    prop: TPackProperty;
+    prop: TProperties;
     i: integer;
 begin
   prop.Init(FIXTURESEPARATOR);
@@ -969,7 +969,7 @@ function TDMXFixture.LoadFromString(const s: string): boolean;
 var i, j, vi: integer;
   libfix: TLibraryFixture;
   chan: TDMXChannel;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1, virtualName: string;
   vb: boolean;
   vs: single;
@@ -1736,7 +1736,7 @@ const UNIVERSEHEAD = '[UNIVERSE ';
 procedure TDmxUniverse.SaveTo(t: TStringList; aIndex: integer);
 var fix: TDMXFixture;
   dev: TBaseDMXDevice;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   prop.Init('|');
   prop.Add('ID', integer(ID));
@@ -1761,7 +1761,7 @@ function TDmxUniverse.LoadFrom(t: TStringList; aIndex: integer; aInitDevice: boo
 var vi, i, k, c: integer;
   fix: TDMXFixture;
   dev: TBaseDMXDevice;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1, s2: string;
   procedure LogMissingProperty(const apropName: string);
   begin
@@ -2144,7 +2144,7 @@ end;
 const UNIVERSE_HEADER='[UNIVERSE]';
 function TUniverseManager.Save: boolean;
 var i: integer;
-  prop: TPackProperty;
+  prop: TProperties;
   f: string;
   t: TStringList;
 begin
@@ -2177,7 +2177,7 @@ end;
 
 procedure TUniverseManager.SaveTo(t: TStringList);
 var i: integer;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   if Count = 0 then exit;
 
@@ -2292,7 +2292,7 @@ end;
 function TUniverseManager.LoadFrom(t: TStringList; aInitDevice: boolean): boolean;
 var i, k, c, vi: integer;
   uni: TDMXUniverse;
-  prop: TSplitProperty;
+  prop: TProperties;
   procedure LogMissingProperty(const apropName: string);
   begin
     Log.Error('TUniverseManager.LoadFrom - property '+apropName+' not found', 3);

@@ -489,6 +489,7 @@ var
   FixtureImages: array[TFixtureType] of TBGRABitmap;
   ImageCursors: array[TChannelType] of TBGRABitmap;
   ImageCursorSize: TSize;
+  ImageDmxEffects: array[0..6] of TBGRABitmap;
 
 type
 

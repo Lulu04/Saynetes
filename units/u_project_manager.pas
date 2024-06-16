@@ -115,7 +115,7 @@ uses u_mainform, u_common, u_list_dmxuniverse, u_list_sequence, u_audio_manager,
   u_projectwizard, u_sequence_player, u_userdialogs, u_resource_string,
   u_dmxtools_group, u_logfile, Controls, Dialogs, LCLTranslator, Forms,
   utilitaire_fichier, LazFileUtils, u_dmxtools_channels, u_dmxtools_rgb,
-  u_program_options, u_utils, u_edit_otheraction;
+  u_program_options, u_utils, u_edit_otheraction, PropertyUtils;
 
 
 { TSaynetesProject }
@@ -493,7 +493,7 @@ const
 procedure TProjectOptions.Save;
 var t: TStringList;
   f: string;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   if not Project.IsReady then exit;
   if FLockSave then exit;
@@ -546,7 +546,7 @@ procedure TProjectOptions.Load;
 var k: integer;
   t: TStringList;
   f: string;
-  prop: TSplitProperty;
+  prop: TProperties;
   bv: boolean;
   procedure LogMissingProperty(const propName: string);
   begin

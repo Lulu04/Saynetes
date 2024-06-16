@@ -158,7 +158,7 @@ var
 
 
 implementation
-uses LCLType, ALSound, u_project_manager, u_utils, u_logfile,
+uses LCLType, ALSound, u_project_manager, u_utils, u_logfile, PropertyUtils,
   u_resource_string, u_dmx_util, BGRABitmap, BGRABitmapTypes, BGRASVG, Math;
 
 {$R *.lfm}
@@ -284,7 +284,7 @@ const
 procedure TProgramOptions.Save;
 var t: TStringList;
   i: Integer;
-  prop: TPackProperty;
+  prop: TProperties;
 begin
   if FLockSave then exit;
 
@@ -339,7 +339,7 @@ end;
 procedure TProgramOptions.Load;
 var i, k: integer;
   t: TStringList;
-  prop: TSplitProperty;
+  prop: TProperties;
   s1: string;
 begin
   Log.Info('Loading program options from '+FSaveFileName);
