@@ -728,13 +728,14 @@ end;
 
 procedure TDMXChannel.StartCopy(aSourceChannel: TDMXChannel);
 begin
-  if (aSourceChannel <> NIL) and (aSourceChannel <> Self) then
+  if aSourceChannel = NIL then exit;
+  if aSourceChannel <> Self then
   begin
     FCopySourceChannel := aSourceChannel;
     CurrentEffect := deCopy;
     FWaveActivated := FALSE;
     Universe.FNeedToBeRedraw := TRUE;
-  end;
+  end else CurrentEffect := deNOEFFECT;
 end;
 
 procedure TDMXChannel.StartInternalWave(aPercent1, aDuration1: single;
@@ -757,6 +758,7 @@ procedure TDMXChannel.StopEffect;
 begin
   CurrentEffect := deNOEFFECT;
   FWaveActivated := FALSE;
+  FNeedToRepaintWholeChannel := True;
 end;
 
 
@@ -1386,10 +1388,12 @@ begin
   if not HasRGBChannel then exit;
   if aSourceFixture = NIL then exit;
   if not aSourceFixture.HasRGBChannel then exit;
-
-  Channels[FRedChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FRedChannelIndex]);
-  Channels[FGreenChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FGreenChannelIndex]);
-  Channels[FBlueChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FBlueChannelIndex]);
+  if Self = aSourceFixture then StopEffectRGB
+    else begin
+      Channels[FRedChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FRedChannelIndex]);
+      Channels[FGreenChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FGreenChannelIndex]);
+      Channels[FBlueChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FBlueChannelIndex]);
+    end;
 end;
 
 procedure TDMXFixture.StartFlashRGB(aColor: TColor; apcMin, apcMax, aDurationMin, aDurationMax: single);
