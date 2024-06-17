@@ -669,7 +669,7 @@ begin
       RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
     end;
 
-    PHOTOFADEINCOULEUR: begin        // 40 couleur durée alpha
+    IMAGEFADEINCOLOR: begin        // 40 couleur durée alpha
         txt := SScreen+' - ';
         Font.Color := coul_action_photo ;
         Font.Style := [fsBold] ;
@@ -689,8 +689,7 @@ begin
         txt := txt + ' '+SFinalOpacity+' ' + A[3] ;
         TextOut( arect.Left + 8 + x + 20 , arect.Top , txt ) ;
     end;
-    PHOTOFADEINIMAGE :           // 41 zoom couleur durée alpha FichierImage
-       begin
+    IMAGEFADEIN: begin  // 41 Zoom bgColor Duration alpha FichierImage
         txt := SScreen+' - ' ;
         Font.Color := coul_action_photo ;
         Font.Style := [fsBold] ;
@@ -714,8 +713,7 @@ begin
         txt := txt + ExtractFileName( A[5] );
         TextOut( arect.Left + 8 + x + 20, arect.Top, txt );
        end;
-    PHOTOFADEOUT :           // 42 durée
-       begin
+    IMAGEFADEOUT: begin       // 42 Duration
         txt := SPhoto+' - ';
         Font.Color := coul_action_photo ;
         Font.Style := [fsBold] ;

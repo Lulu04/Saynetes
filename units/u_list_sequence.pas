@@ -213,23 +213,7 @@ begin
   cmds := SequencerInfoList.SequencerInfoListToCmdListOfSingleCmd;
   HaveError := cmds.HaveError(FErrorMessage);
   Result := HaveError;
-  if Result then Log.Warning('Sequence "'+Name+' error detected: '+FErrorMessage);
-
-{  cmds := SequencerInfoList.SequencerInfoListToCmdListOfSingleCmd;
-  CmdArray := cmds.SplitToCmdArray;
-  cmds := '';
-  Result := False;
-  for i:=0 to High(CmdArray) do begin
-    if ErrorOnCmd(CmdArray[i], mess) then begin
-      if not HaveError then begin
-        HaveError := True;
-        ErrorMessage := mess;
-      end;
-      Log.Warning('Sequence "'+Name+' error detected: '+mess);
-      Result := True;
-    end;
-  end;
-  CmdArray := NIL;   }
+  if Result then Log.Warning('Error in "'+Name+'": '+FErrorMessage, 3);
 end;
 
 { TSequenceList }

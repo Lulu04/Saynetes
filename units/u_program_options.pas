@@ -130,6 +130,7 @@ public
   property SaveFolder: string read FSaveFolder;
 
   // General
+  procedure SetLastOpenedProject(const aProjectFileName: string);
   property WorkingProject: string read FWorkingProject write SetWorkingProject;
   property WorkingFolder: string read FWorkingFolder write SetWorkingFolder;
 
@@ -441,6 +442,29 @@ begin
       exit;
     end;
   end;
+end;
+
+procedure TProgramOptions.SetLastOpenedProject(const aProjectFileName: string);
+var flagSave: boolean;
+begin
+  flagSave := False;
+  LockSave;
+  if LastProjectFileNameUsed <> aProjectFileName then begin
+    LastProjectFileNameUsed := aProjectFileName;
+    flagSave := True;
+  end;
+
+  if WorkingProject <> aProjectFileName then begin
+    WorkingProject := aProjectFileName;
+    flagSave := True;
+  end;
+
+  if WorkingFolder <> ExcludeTrailingPathDelimiter(ExtractFilePath(aProjectFileName)) then begin
+    WorkingFolder := ExtractFilePath(aProjectFileName);
+    flagSave := True;
+  end;
+  UnlockSave;
+  if flagSave then Save;
 end;
 
 { TFormProgramOptions }

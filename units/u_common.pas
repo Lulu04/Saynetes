@@ -221,9 +221,9 @@ const
 
    // Image on external screen
 
-   PHOTOFADEINCOULEUR = 300;  // PHOTOFADEINCOULEUR couleurfond durée alpha
-   PHOTOFADEINIMAGE   = 301;  // PHOTOFADEINIMAGE zoom couleurfond durée
-   PHOTOFADEOUT       = 302;  // PHOTOFADEOUT durée
+   IMAGEFADEINCOLOR = 300;  // IMAGEFADEINCOLOR Color Duration alpha
+   IMAGEFADEIN      = 301;  // IMAGEFADEIN Zoom bgColor Duration
+   IMAGEFADEOUT     = 302;  // IMAGEFADEOUT Duration
 
 
    // Video on external screen
