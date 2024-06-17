@@ -590,7 +590,7 @@ end;
 function TFrameSequencer.DoMergeStepEvent: TCustomSequencerStep;
 var sl: TStepList;
   step, first: TSequenceStep;
-  timebase, tp: single;
+  timebase, tp, shiftTimeToKeepOrder: single;
   cap: string;
   istart, i, y: integer;
 begin
@@ -602,11 +602,12 @@ begin
  y := first.Top;
 
  sl := TStepList.Create;
+ shiftTimeToKeepOrder := 0.0;
  for i:=istart to StepList.Count-1 do begin
    step := TSequenceStep( StepList.Items[i] );
    if step.Selected then begin
      tp := step.TimePos - timebase;
-     step.CmdList.OneStepForOneCmd( sl, tp );
+     step.CmdList.OneStepForOneCmd(sl, tp, shiftTimeToKeepOrder);
    end;
  end;
  sl.Sort;

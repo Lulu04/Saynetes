@@ -34,7 +34,7 @@ public
   function ComputeCmdListDuration: single;
   // pour chaque commande de la liste, on ajoute une étape au séquenceur cible
   // utile pour 'aplatir les cmds avant une exécution
-  procedure OneStepForOneCmd( aSLTarget: TStepList; var aTimePos: single );
+  procedure OneStepForOneCmd( aSLTarget: TStepList; var aTimePos: single; var shiftTimeToKeepOrder: single);
 public
   function SplitToStepDataArray: TStepDataArray;
 public
@@ -487,15 +487,16 @@ end;
 { TTStepListHelper }
 
 function TTStepListHelper.ToStepListOfSingleCmd: TStepList;
-var tp: single;
+var tp, shiftTimeToKeepOrder: single;
   step: TSequenceStep;
   i: integer;
 begin
  Result := TStepList.Create;
+ shiftTimeToKeepOrder := 0.0;
  for i:=0 to Self.Count-1 do begin
    step := TSequenceStep(Self.Items[i]);
    tp := step.TimePos;
-   step.CmdList.OneStepForOneCmd( Result, tp );
+   step.CmdList.OneStepForOneCmd(Result, tp, shiftTimeToKeepOrder);
  end;
 end;
 
@@ -1623,7 +1624,7 @@ function TCmdListHelper.SequencerInfoListToCmdListOfSingleCmd: string;
 var A: TSequencerInfoArray;
   temp: TStepList;
   step: TSequenceStep;
-  tp: single;
+  tp, shiftTimeToKeepOrder: single;
   i: Integer;
 begin
  Result := '';
@@ -1632,10 +1633,11 @@ begin
 
  step := TSequenceStep.Create;
  temp:= TStepList.Create;
+ shiftTimeToKeepOrder := 0.0;
  for i:=2 to High(A) do begin  // skip ID and GroupValue
   step.Deserialize( A[i] );
-  tp := step.TimePos;
-  step.CmdList.OneStepForOneCmd( temp, tp );
+  tp := step.TimePos + shiftTimeToKeepOrder;
+  step.CmdList.OneStepForOneCmd( temp, tp, shiftTimeToKeepOrder );
  end;
  temp.Sort;
  SetLength(A, 0 ); // free unused memory
@@ -1669,13 +1671,13 @@ begin
   Result := False;
 end;
 
-procedure TCmdListHelper.OneStepForOneCmd(aSLTarget: TStepList; var aTimePos: single );
+procedure TCmdListHelper.OneStepForOneCmd(aSLTarget: TStepList; var aTimePos: single; var shiftTimeToKeepOrder: single);
 var A: TCmdArray;
   i: Integer;
   step: TSequenceStep;
   tp: single;
   B: TParamArray;
-const _deltaTime = 0.00001;
+const _deltaTimeAmount = 0.00001;
 begin
  // a CmdList can be:
  //    - a single Cmd -> wait or any basic action
@@ -1686,20 +1688,23 @@ begin
  for i:=0 to High(A) do
  begin
   if not A[i].IsSingleCmd then
-    A[i].OneStepForOneCmd( aSLTarget, tp ) // explore the list using recursivity
+    A[i].OneStepForOneCmd( aSLTarget, tp, shiftTimeToKeepOrder ) // explore the list using recursivity
   else
   begin
     B:=A[i].SplitToParamArray;
-    if B[0]=CMD_WAIT.ToString then
-      tp := tp+StringToSingle(B[1])
+    if B[0]=CMD_WAIT.ToString then begin
+      tp := tp+StringToSingle(B[1]);
+      shiftTimeToKeepOrder := 0.0;
+    end
     else
     begin
       // it's a basic action
       step:= TSequenceStep.Create;
-      step.TimePos := tp;
+      step.TimePos := tp + shiftTimeToKeepOrder;
       step.CmdList := A[i];
       aSLTarget.Add( step );
-tp := tp + _deltaTime;// Shift the action to keep them in the same order...!!
+      tp := tp + shiftTimeToKeepOrder;// Shift the action to keep them in the same order while sorting...!!
+      shiftTimeToKeepOrder := shiftTimeToKeepOrder + _deltaTimeAmount;
     end;
   end;
  end;
