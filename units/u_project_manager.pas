@@ -288,7 +288,7 @@ begin
        path := ConcatPaths([ExtractFilePath(aFilename), projectfolder]);
        FAudioStorage.AbsoluteBaseFolder := path;
        FImageStorage.AbsoluteBaseFolder := path;
-       Log.Info('project storage setting to '+path, 1);
+       Log.Info('project storage: "'+path+'"', 1);
 
        Result := TRUE;
        SoundManager.Load(t, FAudioStorage.AbsoluteStorageFolder);
@@ -306,12 +306,7 @@ begin
        Options.Load;
 
        // push the last used project in program's preferences file
-       ProgramOptions.LockSave;
-       ProgramOptions.LastProjectFileNameUsed := aFilename;
-       ProgramOptions.WorkingProject := aFilename;
-       ProgramOptions.WorkingFolder := ExtractFilePath(aFilename);
-       ProgramOptions.UnlockSave;
-       ProgramOptions.Save;
+       ProgramOptions.SetLastOpenedProject(aFilename);
 
        Log.AddEmptyLine;
      end;
