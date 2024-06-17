@@ -1273,6 +1273,21 @@ begin
       if ErrorOnSingleRange(Self[5], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMax) then exit(True);
     end;
 
+    CMD_INTERNALDMXWAVE: begin //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
+                               //                Percent1 Duration1 CurveID1
+                               //                KeepTime
+                               //                Percent2 Duration2 CurveID2
+      if ErrorOnParamCount(11, SDMXWave) then exit(True);
+      if ErrorOnDmxAdress(Self[1], Self[2], Self[3], SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[4], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[5], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[6], SDMXWave) then exit(True);
+      if ErrorOnDuration(Self[7], SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[8], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[9], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[10], SDMXWave) then exit(True);
+    end;
+
     else begin
       errMess := SUnrecognizedAction+' ('+cmd.ToString+')';
       exit(True);
