@@ -56,18 +56,15 @@ begin
 end;
 
 procedure TForm_ChangeStepLength.BOkClick(Sender: TObject);
-var
-  coef: Double;
+var coef: Double;
   A: TCmdArray;
 begin
  if FReferenceStep.Duration <> FSE1.Value then begin
    FSeq.Notify(FSeq.Selected, snChanged, SModifyDuration);
 
-   coef := FSE1.Value/FReferenceStep.Duration;
+   coef := FSE1.Value / FReferenceStep.Duration;
    A := FReferenceStep.CmdList.SplitToCmdArray;
-  // A.MultiplyAllDurationByCoeff(coef); // .MultiplyAllPauseByCoeff( coef );
-
-   A.SetCmdDuration(FSE1.Value);
+   A.MultiplyAllDurationByCoeff(coef);
 
    FReferenceStep.CmdList := A.PackToCmdList;
    FReferenceStep.Duration := FSE1.Value;

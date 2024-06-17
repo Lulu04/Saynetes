@@ -630,15 +630,21 @@ begin
 end;
 
 procedure TFrameSequencer.DoUserChangeDurationEvent;
-var i: integer;
-  A: TCmdArray;
+var A: TCmdArray;
+  coef: double;
+  step: TSequenceStep;
+  i: integer;
 begin
- for i:=0 To SelectedCount-1 do
- begin
-    A := TSequenceStep(Selected[i]).CmdList.SplitToCmdArray;
-    A.SetCmdDuration(Selected[i].Duration);
-    TSequenceStep(Selected[i]).CmdList := A.PackToCmdList;
- end;
+  for i:=0 to SelectedCount-1 do begin
+    step := TSequenceStep(Selected[i]);
+    if step.Duration = 0 then coef := 0
+      else coef := step.Duration / step.DurationBeforeChange;
+
+     A := step.CmdList.SplitToCmdArray;
+     A.MultiplyAllDurationByCoeff(coef);
+
+     step.CmdList := A.PackToCmdList;
+  end;
   inherited DoUserChangeDurationEvent;
 end;
 
