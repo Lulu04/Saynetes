@@ -41,7 +41,7 @@ type
   end;
 
 implementation
-uses Math, u_resource_string, LCLType;
+uses Math, u_resource_string, LCLType, LCLIntf;
 
 { TForm_ModifyTime }
 
@@ -89,8 +89,8 @@ end;
 
 procedure TForm_ModifyTime.EnsureVisiblePosition(aPt: TPoint);
 begin
-  Left := EnsureRange(aPt.x, Monitor.WorkareaRect.Left, Monitor.WorkareaRect.Right-Width);
-  Top := EnsureRange(aPt.y, Monitor.WorkareaRect.Top, Monitor.WorkareaRect.Bottom-Height);
+  Left := EnsureRange(aPt.x, Monitor.WorkareaRect.Left, Monitor.WorkareaRect.Right-Width-ScaleDesignToForm(10));
+  Top := EnsureRange(aPt.y, Monitor.WorkareaRect.Top, Monitor.WorkareaRect.Bottom-Height-ScaleDesignToForm(40));
 end;
 
 
