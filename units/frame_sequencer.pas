@@ -38,7 +38,7 @@ type
   private
     FCmdList: TCmdList;
     FErrorMessage: string;
-    FHaveError: boolean;
+    FHaveError, FUserCanChangeDuration: boolean;
     procedure SetCmdList(AValue: TCmdList);
     procedure DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
   private
@@ -112,6 +112,8 @@ type
     procedure MI_StepRearrangeClick(Sender: TObject);
     procedure MI_StepRenameClick(Sender: TObject);
     procedure MI_StepUngroupClick(Sender: TObject);
+    procedure PopLabelPopup(Sender: TObject);
+    procedure PopSBPopup(Sender: TObject);
   private
     FClickedTimePos: single;
     FClickedY: integer;
@@ -141,7 +143,6 @@ type
         const aDescription: string); override;
     constructor Create( TheOwner: TComponent ); override;
     destructor Destroy; override;
-    procedure UpdateWidgetState; virtual;
     procedure ProcessKey(var Key: word; Shift: TShiftState);
 
     procedure Clear; override;
@@ -298,7 +299,8 @@ begin
   FHaveError := False;
   FErrorMessage := '';
   if FCmdList = '' then exit;
-  FHaveError := FCmdList.HaveError(FErrorMessage);
+  FUserCanChangeDuration := False;
+  FHaveError := FCmdList.HaveError(FErrorMessage, FUserCanChangeDuration);
 end;
 
   { TFrameSequencer }
@@ -466,20 +468,20 @@ end;
 procedure TFrameSequencer.MI_StepModifyLengthClick(Sender: TObject);
 var F: TForm_ChangeStepLength;
 begin
- F := TForm_ChangeStepLength.Create(NIL);
- F.Init( Self, FWorkingStep );
- F.Free;
- FWorkingStep := NIL;
- DoSelectionChangeEvent;
+  F := TForm_ChangeStepLength.Create(NIL);
+  F.Init( Self, FWorkingStep );
+  F.Free;
+  FWorkingStep := NIL;
+  DoSelectionChangeEvent;
 end;
 
 procedure TFrameSequencer.MI_StepAlignStepsClick(Sender: TObject);
 var F: TForm_MoveStep;
 begin
- F := TForm_MoveStep.Create(NIL);
- F.Init( Self, FWorkingStep );
- F.Free;
- FWorkingStep := NIL;
+  F := TForm_MoveStep.Create(NIL);
+  F.Init( Self, FWorkingStep );
+  F.Free;
+  FWorkingStep := NIL;
 end;
 
 procedure TFrameSequencer.MI_StepPasteClick(Sender: TObject);
@@ -508,6 +510,42 @@ begin
  Redraw;
 end;
 
+procedure TFrameSequencer.PopLabelPopup(Sender: TObject);
+var i: integer;
+  flag: boolean;
+begin
+  MI_StepRename.Enabled := SelectedCount = 1;
+
+  MI_StepAlignSteps.Enabled := SelectedCount > 1;
+
+  flag := False;
+  for i:=0 to High(Selected) do flag := flag or TSequenceStep(Selected[i]).FUserCanChangeDuration;
+  MI_StepModifyLength.Enabled := flag;
+
+ // MI_StepModifyLength.Enabled := (SelectedCount = 1) and TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd;
+
+  // delete step or selection
+  if SelectedCount > 1 then MI_StepDelete.Caption := SDeleteSelected
+    else MI_StepDelete.Caption := SDeleteThisAction;
+
+  MI_StepCut.Enabled := SelectedCount >= 1;
+  MI_StepCopy.Enabled := MI_StepCut.Enabled;
+  MI_StepPaste.Enabled := Clipboard_HasData;
+  MI_StepSelectAll.Enabled := TRUE;
+
+  MI_StepGroup.Enabled := SelectedCount > 1;
+  MI_StepUngroup.Enabled := SelectedCount > 1;
+
+  MI_StepRearrange.Enabled := SelectedCount > 0;
+end;
+
+procedure TFrameSequencer.PopSBPopup(Sender: TObject);
+begin
+  MI_SBPaste.Enabled := Clipboard_HasData;
+  MI_SBZoomAll.Enabled := TRUE;
+  MI_SBZoomOnSelection.Enabled := AnAreaIsSelected;
+end;
+
 procedure TFrameSequencer.DoSelectTimeInterval(aTimePos: single);
 var before, after: TCustomSequencerStep;
 begin
@@ -530,7 +568,6 @@ end;
 
 procedure TFrameSequencer.DoSelectionChangeEvent;
 begin
-  UpdateWidgetState;
   inherited DoSelectionChangeEvent;
 end;
 
@@ -553,7 +590,6 @@ begin
     FClickedTimePos := TimePos;
     FClickedY := YLineUnderMouse;
     FClickedScreen := Mouse.CursorPos;
-    UpdateWidgetState;
     PopSB.PopUp;
   end;
 
@@ -564,7 +600,6 @@ procedure TFrameSequencer.DoStepClickEvent(aStep: TCustomSequencerStep; Button: 
 begin
   if Button = mbRight then begin
     FWorkingStep := aStep as TSequenceStep;
-    UpdateWidgetState;
     PopLabel.PopUp;
   end;
 
@@ -637,13 +672,18 @@ var A: TCmdArray;
 begin
   for i:=0 to SelectedCount-1 do begin
     step := TSequenceStep(Selected[i]);
-    if step.Duration = 0 then coef := 0
-      else coef := step.Duration / step.DurationBeforeChange;
+    if step.FUserCanChangeDuration then begin
+      if step.Duration = 0 then coef := 0
+        else coef := step.Duration / step.DurationBeforeChange;
 
-     A := step.CmdList.SplitToCmdArray;
-     A.MultiplyAllDurationByCoeff(coef);
+       A := step.CmdList.SplitToCmdArray;
+       A.MultiplyAllDurationByCoeff(coef);
 
-     step.CmdList := A.PackToCmdList;
+       step.CmdList := A.PackToCmdList;
+     end else begin
+      step.Duration := 0;
+      Redraw;
+     end;
   end;
   inherited DoUserChangeDurationEvent;
 end;
@@ -707,42 +747,6 @@ destructor TFrameSequencer.Destroy;
 begin
   FreeAndNil(FUndoRedo);
   inherited Destroy;
-end;
-
-procedure TFrameSequencer.UpdateWidgetState;
-begin
-  MI_StepRename.Enabled := SelectedCount = 1;
-
-  MI_StepAlignSteps.Enabled := SelectedCount > 1;
-
-  case SelectedCount of
-    1: if TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd then
-         MI_StepModifyLength.Enabled := FALSE
-       else
-         MI_StepModifyLength.Enabled := TRUE;
-
-    else MI_StepModifyLength.Enabled := FALSE;
-  end;
-
- // MI_StepModifyLength.Enabled := (SelectedCount = 1) and TSequenceStep(Sel_FirstStepSelected).CmdList.IsSingleCmd;
-
-  // delete step or selection
-  if SelectedCount > 1 then MI_StepDelete.Caption := SDeleteSelected
-    else MI_StepDelete.Caption := SDeleteThisAction;
-
-  MI_StepCut.Enabled := SelectedCount >= 1;
-  MI_StepCopy.Enabled := MI_StepCut.Enabled;
-  MI_StepPaste.Enabled := Clipboard_HasData;
-  MI_StepSelectAll.Enabled := TRUE;
-
-  MI_StepGroup.Enabled := SelectedCount > 1;
-  MI_StepUngroup.Enabled := SelectedCount > 1;
-
-  MI_StepRearrange.Enabled := SelectedCount > 0;
-
-  MI_SBPaste.Enabled := Clipboard_HasData;
-  MI_SBZoomAll.Enabled := TRUE;
-  MI_SBZoomOnSelection.Enabled := AnAreaIsSelected;
 end;
 
 procedure TFrameSequencer.ProcessKey(var Key: word; Shift: TShiftState);

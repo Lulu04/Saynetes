@@ -15,7 +15,6 @@ type
   { TForm_ChangeStepLength }
 
   TForm_ChangeStepLength = class(TForm)
-    BCancel: TSpeedButton;
     BOk: TSpeedButton;
     FSE1: TFloatSpinEdit;
     Label1: TLabel;
@@ -25,9 +24,8 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Shape1: TShape;
-    procedure BCancelClick(Sender: TObject);
     procedure BOkClick(Sender: TObject);
-    procedure FormKeyPress(Sender: TObject; var Key: char);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
   private
     FReferenceStep: TSequenceStep;
@@ -38,21 +36,19 @@ type
 
 
 implementation
-uses u_project_manager,
-  u_helper, u_resource_string;
+uses u_project_manager, u_helper, u_resource_string, LCLType;
 
 { TForm_ChangeStepLength }
 
-procedure TForm_ChangeStepLength.FormKeyPress(Sender: TObject; var Key: char);
+procedure TForm_ChangeStepLength.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
-  if Key=chr(27) then ModalResult := mrCancel;
+  if Key = VK_ESCAPE then ModalResult := mrCancel;
 end;
 
 procedure TForm_ChangeStepLength.FormShow(Sender: TObject);
 begin
   Label5.Caption := SSeconds_;
   BOk.Caption := SOk;
-  BCancel.Caption := SCancel;
 end;
 
 procedure TForm_ChangeStepLength.BOkClick(Sender: TObject);
@@ -72,11 +68,6 @@ begin
    FSeq.Redraw;
    ModalResult := mrOk;
  end;
-end;
-
-procedure TForm_ChangeStepLength.BCancelClick(Sender: TObject);
-begin
-  ModalResult := mrCancel;
 end;
 
 procedure TForm_ChangeStepLength.Init(Seq: TFrameSequencer; aReference: TSequenceStep );

@@ -28,11 +28,12 @@ public
   procedure ConcatCmdList(aCmdList: TCmdList);
   // scan the single command or the group of several commands and return True if an error is found,
   // errMess is actualized with an error message
-  function HaveError(out errMess: string): boolean;
+  // haveDuration is sets to True if at least one action have a duration
+  function HaveError(out errMess: string; out haveDuration: boolean): boolean;
 public
   function SplitToCmdArray: TCmdArray;
   function ComputeCmdListDuration: single;
-  // pour chaque commande de la liste, on ajoute une étape au séquenceur cible
+  // for each command of the list, we add a step to the target TSteplist.
   // utile pour 'aplatir les cmds avant une exécution
   procedure OneStepForOneCmd( aSLTarget: TStepList; var aTimePos: single; var shiftTimeToKeepOrder: single);
 public
@@ -62,7 +63,8 @@ TSplittedCmdsHelper = type helper for TStringArray
 
   // scan the comman parameters and return True if an error is found
   // errMess return an error message
-  function ParamArrayHaveError(out errMess: string): boolean;
+  // haveDuration is sets to True if the action have a duration
+  function ParamArrayHaveError(out errMess: string; out haveDuration: boolean): boolean;
 end;
 
 { TTStepListHelper }
@@ -858,7 +860,7 @@ begin
   end;
 end;
 
-function TSplittedCmdsHelper.ParamArrayHaveError(out errMess: string): boolean;
+function TSplittedCmdsHelper.ParamArrayHaveError(out errMess: string; out haveDuration: boolean): boolean;
 var cmd: Integer;
   vInteger: integer;
   vSingle: single;
@@ -1045,6 +1047,7 @@ begin
       if ErrorOnVolume(Self[2], SAudioFadeIn) then exit(True);
       if ErrorOnDuration(Self[3], SAudioFadeIn) then exit(True);
       if ErrorOnCurve(Self[4], SAudioFadeIn) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_AUDIO_FADEOUT: begin  // CMD_AUDIO_FADEOUT IDaudio duration IDcurve
@@ -1052,6 +1055,7 @@ begin
       if ErrorOnAudioID(Self[1], SAudioFadeOut) then exit(True);
       if ErrorOnDuration(Self[2], SAudioFadeOut) then exit(True);
       if ErrorOnCurve(Self[3], SAudioFadeOut) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_AUDIO_SETVOLUME: begin  // CMD_AUDIO_SETVOLUME IDaudio volume duration IDcurve
@@ -1060,6 +1064,7 @@ begin
       if ErrorOnVolume(Self[2], SAudioSetVolume) then exit(True);
       if ErrorOnDuration(Self[3], SAudioSetVolume) then exit(True);
       if ErrorOnCurve(Self[4], SAudioSetVolume) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_AUDIO_SETPAN: begin  // CMD_AUDIO_SETPAN IDaudio panning duration IDcurve
@@ -1068,6 +1073,7 @@ begin
       if ErrorOnPan(Self[2], SAudioSetPan) then exit(True);
       if ErrorOnDuration(Self[3], SAudioSetPan) then exit(True);
       if ErrorOnCurve(Self[4], SAudioSetPan) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_AUDIO_SETPITCH: begin  // CMD_AUDIO_SETPITCH IDaudio frequence duration IDcurve
@@ -1076,6 +1082,7 @@ begin
       if ErrorOnPitch(Self[2], SAudioSetFreq) then exit(True);
       if ErrorOnDuration(Self[3], SAudioSetFreq) then exit(True);
       if ErrorOnCurve(Self[4], SAudioSetFreq) then exit(True);
+      haveDuration := True;
     end;
 
     TITLECMD_AUDIO_APPLYFX: begin // TITLECMD_AUDIO_APPLYFX  IDaudio  dry/wet  EffectCount
@@ -1109,6 +1116,7 @@ begin
       if ErrorOnVolume(Self[1], SAudioCaptureSetVolume) then exit(True);
       if ErrorOnDuration(Self[2], SAudioCaptureSetVolume) then exit(True);
       if ErrorOnCurve(Self[3], SAudioCaptureSetVolume) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_AUDIO_CAPTURE_SETPAN: begin // CMD_AUDIO_CAPTURE_SETPAN  panning duration IDcurve
@@ -1116,6 +1124,7 @@ begin
       if ErrorOnPan(Self[1], SAudioCaptureSetPan) then exit(True);
       if ErrorOnDuration(Self[2], SAudioCaptureSetPan) then exit(True);
       if ErrorOnCurve(Self[3], SAudioCaptureSetPan) then exit(True);
+      haveDuration := True;
     end;
 
     TITLECMD_AUDIO_CAPTURE_APPLYFX: begin // TITLECMD_AUDIO_CAPTURE_APPLYFX  dry/wet  EffectCount
@@ -1137,6 +1146,7 @@ begin
     CMD_WAIT: begin  // CMD_WAIT DurationF
       if ErrorOnParamCount(2, SWait) then exit(True);
       if ErrorOnDuration(Self[1], SWait) then exit(True);
+      haveDuration := True;
     end;
     CMD_LOOP: begin  // CMD_LOOP
       if ErrorOnParamCount(1, SWait) then exit(True);
@@ -1155,6 +1165,7 @@ begin
       if ErrorOnSingleRange(Self[2], 0.25, 7.0, SStretchTime, SBadStretchTimeValue) then exit(True);
       if ErrorOnDuration(Self[3], SStretchTime) then exit(True);
       if ErrorOnCurve(Self[4], SStretchTime) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_DMX_DIMMER: begin  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
@@ -1163,12 +1174,14 @@ begin
       if ErrorOnSingleRange(Self[4], 0.0, 1.0, SDMXDimmer, SBadPercentValue) then exit(True);
       if ErrorOnDuration(Self[5], SDMXDimmer) then exit(True);
       if ErrorOnCurve(Self[6], SDMXDimmer) then exit(True);
+      haveDuration := True;
     end;
 
     TITLECMD_DMX_DIMMER: begin  // TITLECMD_DMX_DIMMER Duration CurveID
       if ErrorOnParamCount(3, SDMXDimmer) then exit(True);
       if ErrorOnDuration(Self[1], SDMXDimmer) then exit(True);
       if ErrorOnCurve(Self[2], SDMXDimmer) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_DMX_FLAME: begin  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
@@ -1203,6 +1216,7 @@ begin
       if ErrorOnColor(Self[3], SDMXDimmerRGB) then exit(True);
       if ErrorOnDuration(Self[4], SDMXDimmerRGB) then exit(True);
       if ErrorOnCurve(Self[5], SDMXDimmerRGB) then exit(True);
+      haveDuration := True;
     end;
 
     TITLECMD_DMX_DIMMERRGB: begin  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
@@ -1210,6 +1224,7 @@ begin
       if ErrorOnColor(Self[1], SDMXDimmerRGB) then exit(True);
       if ErrorOnDuration(Self[2], SDMXDimmerRGB) then exit(True);
       if ErrorOnCurve(Self[3], SDMXDimmerRGB) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_DMX_FLAMERGB: begin // CMD_DMX_FLAMERGB IDuniverse IDFixture Color Speed Amplitude Soften
@@ -1270,6 +1285,7 @@ begin
       if ErrorOnSingleRange(Self[5], 0.0, 1.0, SDMXFlash, SBadLevelMax) then exit(True);
       if ErrorOnSingleRange(Self[6], 0.0, 1.0, SDMXFlash, SBadDurationMin) then exit(True);
       if ErrorOnSingleRange(Self[7], 0.0, 1.0, SDMXFlash, SBadDurationMax) then exit(True);
+      haveDuration := True;
     end;
 
     TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
@@ -1278,6 +1294,7 @@ begin
       if ErrorOnSingleRange(Self[2], 0.0, 1.0, SDMXFlash, SBadLevelMax) then exit(True);
       if ErrorOnSingleRange(Self[3], 0.1, 1000.0, SDMXFlash, SBadDurationMin) then exit(True);
       if ErrorOnSingleRange(Self[4], 0.1, 1000.0, SDMXFlash, SBadDurationMax) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_DMX_STOPEFFECTRGB: begin // CMD_DMX_STOPEFFECTRGB IDuniverse IDFixture
@@ -1319,6 +1336,7 @@ begin
       if ErrorOnSingleRange(Self[3], 0.0, 1.0, SDMXFlashRGB, SBadLevelMax) then exit(True);
       if ErrorOnSingleRange(Self[4], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMin) then exit(True);
       if ErrorOnSingleRange(Self[5], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMax) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
@@ -1329,6 +1347,7 @@ begin
       if ErrorOnSingleRange(Self[3], 0.0, 1.0, SDMXFlashRGB, SBadLevelMax) then exit(True);
       if ErrorOnSingleRange(Self[4], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMin) then exit(True);
       if ErrorOnSingleRange(Self[5], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMax) then exit(True);
+      haveDuration := True;
     end;
 
     CMD_INTERNALDMXWAVE: begin //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
@@ -1344,6 +1363,7 @@ begin
       if ErrorOnSingleRange(Self[8], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
       if ErrorOnDuration(Self[9], SDMXWave) then exit(True);
       if ErrorOnCurve(Self[10], SDMXWave) then exit(True);
+      haveDuration := True;
     end;
 
     else begin
@@ -1562,7 +1582,7 @@ begin
   ConcatCmd( aCmdList );
 end;
 
-function TCmdListHelper.HaveError(out errMess: string): boolean;
+function TCmdListHelper.HaveError(out errMess: string; out haveDuration: boolean): boolean;
 var i: integer;
   B: TCmdArray;
   A: TParamArray;
@@ -1572,11 +1592,11 @@ begin
 
   if Self.IsSingleCmd then begin
     A := Self.SplitToParamArray;
-    Result := A.ParamArrayHaveError(errMess);
+    Result := A.ParamArrayHaveError(errMess, haveDuration);
   end else begin
     B := Self.SplitToCmdArray;
     for i:=0 to High(B) do
-      if B[i].HaveError(errMess) then exit(True);
+      if B[i].HaveError(errMess, haveDuration) then exit(True);
   end;
 end;
 

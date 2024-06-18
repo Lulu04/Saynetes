@@ -15,6 +15,7 @@ inherited FrameSequencer: TFrameSequencer
   end
   object PopSB: TPopupMenu[2]
     Images = DataModule1.ImageList1
+    OnPopup = PopSBPopup
     Left = 72
     Top = 40
     object MI_SBAddAudioAction: TMenuItem
@@ -65,6 +66,7 @@ inherited FrameSequencer: TFrameSequencer
   end
   object PopLabel: TPopupMenu[3]
     Images = DataModule1.ImageList1
+    OnPopup = PopLabelPopup
     Left = 200
     Top = 40
     object MI_StepRename: TMenuItem
