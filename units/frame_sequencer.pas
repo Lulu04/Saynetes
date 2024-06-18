@@ -124,7 +124,6 @@ type
     FOnUndoRedoChange: TNotifyEvent;
     procedure ProcessUndoRedoChangeEvent( Sender: TObject );
   protected
-    procedure DoSelectionChangeEvent; override;
     procedure DoTimeAreaClickEvent( {%H-}Button: TMouseButton; {%H-}Shift: TShiftState; {%H-}TimePos: single ); override;
     procedure DoEmptyAreaClickEvent( Button: TMouseButton; Shift: TShiftState; TimePos: single ); override;
     procedure DoStepClickEvent( aStep: TCustomSequencerStep; Button: TMouseButton; Shift: TShiftState ); override;
@@ -566,11 +565,6 @@ begin
     FOnUndoRedoChange(self);
 end;
 
-procedure TFrameSequencer.DoSelectionChangeEvent;
-begin
-  inherited DoSelectionChangeEvent;
-end;
-
 procedure TFrameSequencer.DoTimeAreaClickEvent(Button: TMouseButton; Shift: TShiftState; TimePos: single);
 begin
   DoSelectTimeInterval(TimePos);
@@ -601,9 +595,7 @@ begin
   if Button = mbRight then begin
     FWorkingStep := aStep as TSequenceStep;
     PopLabel.PopUp;
-  end;
-
-  inherited DoStepClickEvent(aStep, Button, Shift);
+  end else inherited DoStepClickEvent(aStep, Button, Shift);
 end;
 
 // because classes inherited from TCustomSequencerStep may have some additionnal stuff
