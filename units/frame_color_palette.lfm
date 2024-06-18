@@ -239,7 +239,7 @@ object Frame_ColorPalette: TFrame_ColorPalette
       Flat = True
       Font.Style = [fsItalic]
       Images = DataModule1.ImageList1
-      ImageIndex = 10
+      ImageIndex = 46
       OnClick = SpeedButton1Click
       ParentFont = False
     end
