@@ -179,6 +179,7 @@ end;
 
 function TSequence.CheckError(aParentList: TSequenceList): boolean;
 var cmds: TCmdList;
+    haveDuration: boolean;
 
   function ErrorOnCmd(const aCmd: string; out errMess: string): boolean;
   var A: TParamArray;
@@ -197,13 +198,14 @@ var cmds: TCmdList;
     end else begin
       // its a single action
       A := aCmd.SplitToParamArray;
-      Result := A.ParamArrayHaveError(errMess);
+      Result := A.ParamArrayHaveError(errMess, haveDuration);
     end;
   end;
 
 begin
   HaveError := False;
   ErrorMessage := '';
+  haveDuration := False;
 
   if SequencerInfoList = '' then begin
     Log.Warning('Sequence "'+Name+'" is empty', 1);
@@ -211,7 +213,7 @@ begin
   end;
 
   cmds := SequencerInfoList.SequencerInfoListToCmdListOfSingleCmd;
-  HaveError := cmds.HaveError(FErrorMessage);
+  HaveError := cmds.HaveError(FErrorMessage, haveDuration);
   Result := HaveError;
   if Result then Log.Warning('Error in "'+Name+'": '+FErrorMessage, 3);
 end;

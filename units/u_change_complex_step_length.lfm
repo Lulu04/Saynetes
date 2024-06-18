@@ -3,11 +3,13 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
   Height = 167
   Top = 316
   Width = 320
-  BorderIcons = []
-  BorderStyle = bsNone
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   ClientHeight = 167
   ClientWidth = 320
-  OnKeyPress = FormKeyPress
+  Color = 5596774
+  KeyPreview = True
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   LCLVersion = '2.2.6.0'
   object Shape1: TShape
@@ -16,9 +18,8 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Top = 0
     Width = 320
     Align = alClient
-    Brush.Color = 2736090
-    Pen.Color = 5395026
-    Pen.Width = 3
+    Brush.Style = bsClear
+    Pen.Color = 247036
   end
   object Label1: TLabel
     AnchorSideLeft.Control = Owner
@@ -34,10 +35,12 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     AutoSize = False
     BorderSpacing.Top = 17
     Caption = 'Step Name'
+    Font.Color = 15395562
     Font.Name = '20'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    WordWrap = True
   end
   object FSE1: TFloatSpinEdit
     AnchorSideLeft.Control = Label3
@@ -60,6 +63,7 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Top = 56
     Width = 91
     Caption = 'Current duration:'
+    Font.Color = 15395562
     ParentColor = False
     ParentFont = False
   end
@@ -69,6 +73,7 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Top = 96
     Width = 75
     Caption = 'New duration:'
+    Font.Color = 15395562
     ParentColor = False
     ParentFont = False
   end
@@ -81,6 +86,7 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Width = 28
     BorderSpacing.Left = 10
     Caption = 'Label'
+    Font.Color = 15395562
     ParentColor = False
     ParentFont = False
   end
@@ -94,6 +100,7 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Width = 51
     BorderSpacing.Left = 5
     Caption = 'second(s)'
+    Font.Color = 15395562
     ParentColor = False
     ParentFont = False
   end
@@ -106,35 +113,23 @@ object Form_ChangeStepLength: TForm_ChangeStepLength
     Width = 51
     BorderSpacing.Left = 5
     Caption = 'second(s)'
+    Font.Color = 15395562
     ParentColor = False
     ParentFont = False
-  end
-  object BCancel: TSpeedButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
-    Left = 184
-    Height = 24
-    Top = 128
-    Width = 80
-    Anchors = []
-    BorderSpacing.Bottom = 10
-    Caption = 'sCancel'
-    Images = DataModule1.ImageList1
-    ImageIndex = 2
-    OnClick = BCancelClick
   end
   object BOk: TSpeedButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 48
+    Left = 210
     Height = 24
-    Top = 128
+    Top = 133
     Width = 80
-    Anchors = []
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Right = 30
     BorderSpacing.Bottom = 10
     Caption = 'sOk'
     Images = DataModule1.ImageList1
