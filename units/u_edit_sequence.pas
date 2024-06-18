@@ -138,6 +138,7 @@ begin
   FSeq.TranslateStrings;
   FSeq.RecomputeVerticalStepsPosition;
   FSeq.UndoRedoManager.Clear; // because 'RecomputeVerticalStepsPosition' can be undone
+  FSeq.View_All;
 
   UpdateWidgetState;
 end;
