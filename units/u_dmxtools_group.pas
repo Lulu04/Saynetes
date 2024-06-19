@@ -143,18 +143,15 @@ begin
   FNoteBookManager.Free;
 end;
 
-procedure TFormDMXGroup.FormKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TFormDMXGroup.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   FShiftPressed := Shift >= [ssShift];
 end;
 
-procedure TFormDMXGroup.FormKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TFormDMXGroup.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
-  if Key = VK_ESCAPE then
-    Close;
-  FShiftPressed := not(Shift >= [ssShift]);
+  if Key = VK_ESCAPE then Close;
+  FShiftPressed := Shift >= [ssShift];
 end;
 
 procedure TFormDMXGroup.FormShow(Sender: TObject);
