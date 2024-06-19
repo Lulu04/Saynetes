@@ -302,7 +302,6 @@ object FrameFXChannelChaser: TFrameFXChannelChaser
       Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 15
-      Transparent = False
       OnClick = SpeedButton9Click
       ShowHint = True
       ParentShowHint = False
@@ -322,7 +321,6 @@ object FrameFXChannelChaser: TFrameFXChannelChaser
       Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 16
-      Transparent = False
       OnClick = SpeedButton10Click
       ShowHint = True
       ParentShowHint = False
