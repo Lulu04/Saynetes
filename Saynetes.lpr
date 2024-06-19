@@ -43,7 +43,11 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
 
-  Log:=TLog.Create(ConcatPaths([Application.Location, 'Saynetes.log']));
+  // check if the folder to save application configuration file, log file, etc...
+  // exists. if not, try to create it.
+  CheckAppConfigFolder;
+
+  Log := TLog.Create(GetAppConfigFolder + 'saynetes.log');
   Log.DeleteLogFile;
   Log.Info('Saynète: Starting application', 0, True);
   ProgramOptions := TProgramOptions.Create;

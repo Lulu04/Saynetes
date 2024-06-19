@@ -164,7 +164,7 @@ begin
 
   FPresetManager := TPresetManager.Create(Self);
   FPresetManager.Init1(SColorPresets, BPreset,
-                  ConcatPaths([Project.AppPresetsFolder, 'SingleColor'+PRESET_FILE_EXTENSION]));
+                  ConcatPaths([GetPresetsFolder, 'SingleColorList'+PRESET_FILE_EXTENSION]));
   FPresetManager.Init2(@PresetToColor, @ColorToPreset);
 end;
 

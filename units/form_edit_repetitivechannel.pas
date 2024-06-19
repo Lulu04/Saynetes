@@ -85,7 +85,8 @@ type
 
 
 implementation
-uses LCLType, u_resource_string, u_project_manager, form_selectsourcechannel;
+uses LCLType, u_resource_string, u_project_manager, form_selectsourcechannel,
+  u_apputils;
 
 {$R *.lfm}
 
@@ -209,7 +210,7 @@ begin
 
   FPresetManager := TPresetManager.Create(Self);
   FPresetManager.Init1(SRepetitiveChannelPresets, BPreset,
-                  ConcatPaths([Project.AppPresetsFolder, 'RepetitiveChannel'+PRESET_FILE_EXTENSION]));
+                  ConcatPaths([GetPresetsFolder, 'RepetitiveChannel'+PRESET_FILE_EXTENSION]));
   FPresetManager.Init2(@PresetToPattern, @PatternToPreset);
 
   // manual translation

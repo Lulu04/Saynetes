@@ -35,7 +35,6 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 16
-      Transparent = False
       OnClick = SpeedButton10Click
       ShowHint = True
       ParentShowHint = False
@@ -59,7 +58,6 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 15
-      Transparent = False
       OnClick = SpeedButton9Click
       ShowHint = True
       ParentShowHint = False
@@ -438,6 +436,7 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 3
       BorderSpacing.Right = 1
+      Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 1
       OnClick = SpeedButton2Click
@@ -455,6 +454,7 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Width = 22
       BorderSpacing.Left = 1
       BorderSpacing.Right = 3
+      Flat = True
       Images = DataModule1.ImageList1
       ImageIndex = 0
       OnClick = SpeedButton1Click

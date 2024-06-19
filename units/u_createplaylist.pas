@@ -54,7 +54,7 @@ var
 implementation
 
 uses LCLHelper, LazFileUtils, u_project_manager, u_common,
-  u_userdialogs, u_resource_string;
+  u_userdialogs, u_resource_string, u_apputils;
 
 {$R *.lfm}
 
@@ -92,9 +92,9 @@ begin
 
 
   flagError := FALSE;
-  if DirectoryExistsUTF8(Project.PlaylistsFolder) then begin
+  if DirectoryExistsUTF8(GetPlaylistsFolder) then begin
     try
-      f := ConcatPaths([Project.PlaylistsFolder, FrameEditString1.Text+PLAYLIST_FILE_EXTENSION]);
+      f := ConcatPaths([GetPlaylistsFolder, FrameEditString1.Text+PLAYLIST_FILE_EXTENSION]);
       LB.Items.SaveToFile(f);
       ShowMess(SPlaylistSavedSuccess, SOk, mtCustom);
       ModalResult := mrOk;

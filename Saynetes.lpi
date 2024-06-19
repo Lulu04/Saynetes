@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="112">
+      <ExcludedOriginals Count="113">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -130,11 +130,12 @@
         <Item105 Value="sWeight"/>
         <Item106 Value="sYes"/>
         <Item107 Value="_"/>
-        <Item108 Value="1/1"/>
-        <Item109 Value="1s"/>
-        <Item110 Value="5s"/>
-        <Item111 Value="10s"/>
-        <Item112 Value="15s"/>
+        <Item108 Value="#"/>
+        <Item109 Value="1/1"/>
+        <Item110 Value="1s"/>
+        <Item111 Value="5s"/>
+        <Item112 Value="10s"/>
+        <Item113 Value="15s"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>

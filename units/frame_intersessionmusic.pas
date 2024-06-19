@@ -66,7 +66,7 @@ type
 implementation
 uses ALSound, u_audio_manager, LCLType, Graphics,
   u_common, u_project_manager, u_createplaylist, u_userdialogs,
-  u_resource_string, u_utils, VelocityCurve,
+  u_resource_string, u_utils, u_apputils, VelocityCurve,
   System.UITypes, LazFileUtils;
 
 {$R *.lfm}
@@ -341,7 +341,7 @@ procedure TFrameIntersessionMusic.Fill;
 begin
   FLBPlaylist.Mask := '*'+PLAYLIST_FILE_EXTENSION;
 
-  FLBPlaylist.Directory := Project.PlaylistsFolder;
+  FLBPlaylist.Directory := GetPlaylistsFolder;
   FLBPlaylist.UpdateFileList;
 
   UpdateWidgets;
