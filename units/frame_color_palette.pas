@@ -15,11 +15,14 @@ type
 
   TFrame_ColorPalette = class(TFrame)
     BPreset: TSpeedButton;
+    Edit1: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
     PB1: TPaintBox;
     PB2: TPaintBox;
     SE1: TSpinEdit;
@@ -27,7 +30,11 @@ type
     SE3: TSpinEdit;
     Shape1: TShape;
     SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
    FOnChange: TNotifyEvent;
    FGradient: TLightColorGradient;
@@ -59,7 +66,7 @@ type
 
 implementation
 
-uses u_resource_string, u_project_manager, u_common;
+uses u_resource_string, u_project_manager, u_common, u_apputils, Math;
 
 { TFrame_ColorPalette }
 
@@ -73,6 +80,33 @@ end;   }
 procedure TFrame_ColorPalette.SpeedButton1Click(Sender: TObject);
 begin
   FGradient.ResetCursorToMiddle;
+end;
+
+procedure TFrame_ColorPalette.SpeedButton2Click(Sender: TObject);
+var s: string;
+  r, g ,b: integer;
+  c: TColorChartColor;
+begin
+  if Sender = SpeedButton2 then begin
+    Panel3.Visible := True;
+  end;
+
+  if Sender = SpeedButton3 then begin
+    s := Trim(Edit1.Text);
+    if length(s) <> 7 then exit;
+    if s[1] <> '#' then exit;
+    if not TryStrToInt('$'+Copy(s, 2, 2), r) then exit;
+    if not InRange(r, 0, 255) then exit;
+    if not TryStrToInt('$'+Copy(s, 4, 2), g) then exit;
+    if not InRange(g, 0, 255) then exit;
+    if not TryStrToInt('$'+Copy(s, 6, 2), b) then exit;
+    if not InRange(b, 0, 255) then exit;
+    c.Percentage := 0.5;
+    c.BaseColor := RGBToColor(r, g, b);
+    FGradient.ChartColor := c;
+    Panel3.Visible := False;
+  end;
+  if Sender = SpeedButton4 then Panel3.Visible := False;
 end;
 
 procedure TFrame_ColorPalette.ProcessColorChange(Sender: TObject);

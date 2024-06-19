@@ -2017,6 +2017,18 @@ msgstr "Renommer..."
 msgid "Normal speed"
 msgstr "Vitesse normale"
 
+#: tframe_colorpalette.label4.caption
+msgid ""
+"Enter web color\n"
+"(# + hex triplet)"
+msgstr ""
+"Entrez une couleur web\n"
+"(# + triplet hexadécimal)"
+
+#: tframe_colorpalette.speedbutton2.hint
+msgid "Click to enter web color"
+msgstr "Cliquez pour saisir une couleur web"
+
 #: tframe_velocity.cb.hint
 msgid "Use the velocity curves if you want a movement other than linear."
 msgstr "Utilisez les courbes de vélocité si vous voulez un mouvement autre que linéaire."
