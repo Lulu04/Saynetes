@@ -113,8 +113,8 @@ type
 
 implementation
 
-uses Math, u_resource_string, u_project_manager,
-  u_helper, u_dmxtools_rgb, frame_sequencer, u_mainform, u_add_action_dmx;
+uses Math, u_resource_string, u_project_manager, u_helper, u_dmxtools_rgb,
+  frame_sequencer, u_mainform, u_add_action_dmx, u_apputils;
 
 {$R *.lfm}
 
@@ -439,7 +439,7 @@ begin
   FrameViewColorList1.Align:=alClient;
   FrameViewColorList1.PresetManager.Init1(SColorPresets,
                   SpeedButton3,
-                  ConcatPaths([Project.AppPresetsFolder, 'ColorList'+PRESET_FILE_EXTENSION]));
+                  ConcatPaths([GetPresetsFolder, 'ChaserColorList'+PRESET_FILE_EXTENSION]));
 
   FrameViewFixturesList1:=TFrameViewFixturesList.Create(Self);
   FrameViewFixturesList1.Parent:=Panel2;

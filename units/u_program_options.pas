@@ -85,7 +85,7 @@ type
 
 { TProgramOptions }
 
-TProgramOptions=class
+TProgramOptions = class
 private
   FLanguage: string;
   FMaxRecentProjectFile: integer;
@@ -127,8 +127,6 @@ public
 
   procedure RemoveProjectNameFromRecentList(const aProjectName: string);
 
-  property SaveFolder: string read FSaveFolder;
-
   // General
   procedure SetLastOpenedProject(const aProjectFileName: string);
   property WorkingProject: string read FWorkingProject write SetWorkingProject;
@@ -159,8 +157,9 @@ var
 
 
 implementation
-uses LCLType, ALSound, u_project_manager, u_utils, u_logfile, PropertyUtils,
-  u_resource_string, u_dmx_util, BGRABitmap, BGRABitmapTypes, BGRASVG, Math;
+uses LCLType, ALSound, u_project_manager, u_logfile, PropertyUtils,
+  u_resource_string, u_apputils, u_dmx_util, BGRABitmap, BGRABitmapTypes,
+  BGRASVG, Math, Project_util;
 
 {$R *.lfm}
 
@@ -168,11 +167,9 @@ uses LCLType, ALSound, u_project_manager, u_utils, u_logfile, PropertyUtils,
 
 constructor TProgramOptions.Create;
 begin
-  //FSaveFolder:=CreateAPPSaveFolder('');
-  FSaveFolder := Application.Location;
+  FSaveFolder := GetAppConfigFolder;
   FSaveFileName := ConcatPaths([FSaveFolder, APP_CONFIG_FILENAME]);
-  if not FileExists(FSaveFileName) then
-  begin
+  if not FileExists(FSaveFileName) then begin
     InitByDefault;
     Save;
   end;

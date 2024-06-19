@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 2
+    PageIndex = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -535,6 +535,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideTop.Control = ComboBox1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = BAudioStop
+        Cursor = crHandPoint
         Left = 129
         Height = 19
         Hint = 'Play selected audio file'
@@ -544,9 +545,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BorderSpacing.Top = 5
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 15
-        Transparent = False
         OnClick = BAudioPlayClick
         ShowHint = True
         ParentShowHint = False
@@ -556,6 +557,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageAudioFollower
         AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
         Left = 189
         Height = 19
         Hint = 'Stop audio'
@@ -565,9 +567,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BorderSpacing.Top = 5
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 16
-        Transparent = False
         OnClick = BAudioStopClick
         ShowHint = True
         ParentShowHint = False
@@ -928,9 +930,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BorderSpacing.Left = 20
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 15
-        Transparent = False
         OnClick = BFlashPreviewClick
         ShowHint = True
         ParentShowHint = False

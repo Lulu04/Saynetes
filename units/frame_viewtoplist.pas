@@ -57,6 +57,8 @@ type
   private
     function GetSelCount: integer;
     function GetSelectedTop: TSequence;
+    procedure RemoveErrorHint;
+    procedure SetErrorHint(aItemIndex: integer);
   private
     FSpacePressed,
     FMouseIsOver,
@@ -300,6 +302,7 @@ begin
     if i = -1 then LB.Cursor := crDefault
       else LB.Cursor := crHandPoint;
     FItemIndexUnderMouse := i;
+    SetErrorHint(i);
     LB.Invalidate;
   end;
 end;
@@ -329,13 +332,7 @@ var i: integer;
   seq: TSequence;
 begin
   if LB.ItemIndex = -1 then exit;
-  if not TryStrToInt(LB.GetSelectedText, i) then exit;
-
-  seq := Sequences.GetSequenceByID(i);
-  if seq = NIL then exit;
-
-  if seq.HaveError then LB.Hint := seq.ErrorMessage
-    else LB.Hint := '';
+  SetErrorHint(LB.ItemIndex);
 end;
 
 procedure TFrameViewTopList.LBStartDrag(Sender: TObject; var DragObject: TDragObject);
@@ -354,6 +351,7 @@ begin
   if AskConfirmation(SAreYouSureToDeleteThisSequence, SYes, SCancel, mtWarning)<>mrOk then
     exit;
   DeleteSelection;
+  RemoveErrorHint;
   Project.SetModified;
 end;
 
@@ -390,6 +388,7 @@ begin
       seq.SequencerInfoList := FormSequenceEdition.SequencerInfoList;
       Project.SetModified;
 
+      RemoveErrorHint;
       if flagError then FormMain.CheckSequenceError;
     end;
   finally
@@ -543,6 +542,24 @@ begin
     Result := NIL
   else
     Result := Sequences.GetSequenceByIndex(LB.ItemIndex);
+end;
+
+procedure TFrameViewTopList.RemoveErrorHint;
+begin
+  LB.Hint := '';
+end;
+
+procedure TFrameViewTopList.SetErrorHint(aItemIndex: integer);
+var i: integer;
+  seq: TSequence;
+begin
+  LB.Hint := '';
+  if aItemIndex = -1 then exit;
+  if not TryStrToInt(LB.Items.Strings[aItemIndex], i) then exit;
+
+  seq := Sequences.GetSequenceByID(i);
+  if seq = NIL then exit;
+  if seq.HaveError then LB.Hint := seq.ErrorMessage;
 end;
 
 function TFrameViewTopList.GetItemHeight: integer;

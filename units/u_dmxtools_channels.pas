@@ -162,7 +162,7 @@ implementation
 
 uses LCLType, ALSound, u_resource_string, u_utils,
   u_audio_manager, u_project_manager, u_helper, u_sequence_player,
-  u_add_action_dmx, u_mainform;
+  u_add_action_dmx, u_mainform, u_apputils;
 
 {$R *.lfm}
 
@@ -753,12 +753,12 @@ begin
 
   FFlamePresetManager := TPresetManager.Create(Self);
   FFlamePresetManager.Init1(SFlamePresets, ButtonFlamePreset,
-                  ConcatPaths([Project.AppPresetsFolder, 'Flame'+PRESET_FILE_EXTENSION]));
+                  ConcatPaths([GetPresetsFolder, 'Flame'+PRESET_FILE_EXTENSION]));
   FFlamePresetManager.Init2(@PresetToFlame, @FlameToPreset);
 
   FAudioFollowerPresetManager := TPresetManager.Create(Self);
   FAudioFollowerPresetManager.Init1(SAudioFollowerPresets, ButtonAudioFollowerPreset,
-                  ConcatPaths([Project.AppPresetsFolder, 'AudioFollower'+PRESET_FILE_EXTENSION]));
+                  ConcatPaths([GetPresetsFolder, 'AudioFollower'+PRESET_FILE_EXTENSION]));
   FAudioFollowerPresetManager.Init2(@PresetToAudioFollower, @AudioFollowerToPreset);
 
   FFirstShown := True;

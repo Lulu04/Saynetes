@@ -1931,6 +1931,16 @@ msgstr ""
 msgid "Normal speed"
 msgstr ""
 
+#: tframe_colorpalette.label4.caption
+msgid ""
+"Enter web color\n"
+"(# + hex triplet)"
+msgstr ""
+
+#: tframe_colorpalette.speedbutton2.hint
+msgid "Click to enter web color"
+msgstr ""
+
 #: tframe_velocity.cb.hint
 msgid "Use the velocity curves if you want a movement other than linear."
 msgstr ""

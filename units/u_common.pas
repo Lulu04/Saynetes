@@ -10,7 +10,8 @@ uses
 const
   APP_NAME: string = 'Saynète';
   APP_VERSION: string = '3.1.0';
-  APP_CONFIG_FILENAME = 'Saynetes.ini'; // The program's options saving file
+  APP_CONFIG_FOLDER = 'Saynetes'; // the folder created by app to save program options, log file...
+  APP_CONFIG_FILENAME = 'Saynetes.cfg'; // The program's options saving file
 
 
   // sub-folder (located in project folder) where are saved the data common to

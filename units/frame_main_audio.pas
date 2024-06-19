@@ -518,8 +518,8 @@ begin
   Label3.Caption := SVolume;
   Label4.Caption := SPan;
   Label20.Caption := SPitch;
-  BPanCenter.Caption := SCenter_;
-  BPitchNormal.Caption := SNormal_;
+  BPanCenter.Hint := SCenter_;
+  BPitchNormal.Hint := SNormal_;
 
   MI_Delete.Caption := SDelete;
   MILoop.Caption := SLoop;
