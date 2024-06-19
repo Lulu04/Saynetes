@@ -187,7 +187,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Height = 298
     Top = 186
     Width = 263
-    PageIndex = 6
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Right = 3
@@ -544,6 +544,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         AnchorSideTop.Control = ComboBox1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = SpeedButton7
+        Cursor = crHandPoint
         Left = 143
         Height = 19
         Hint = 'Play selected audio file'
@@ -553,9 +554,9 @@ object FormDMXRGBTools: TFormDMXRGBTools
         BorderSpacing.Top = 3
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 15
-        Transparent = False
         OnClick = ProcessColorChangeEvent
         ShowHint = True
         ParentShowHint = False
@@ -565,6 +566,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageAudioFollower
         AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
         Left = 203
         Height = 19
         Hint = 'Stop audio'
@@ -574,9 +576,9 @@ object FormDMXRGBTools: TFormDMXRGBTools
         BorderSpacing.Top = 3
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 16
-        Transparent = False
         OnClick = SpeedButton7Click
         ShowHint = True
         ParentShowHint = False
@@ -1033,9 +1035,9 @@ object FormDMXRGBTools: TFormDMXRGBTools
         BorderSpacing.Left = 20
         BorderSpacing.Right = 15
         Color = 13816530
+        Flat = True
         Images = DataModule1.ImageList1
         ImageIndex = 15
-        Transparent = False
         OnClick = ProcessColorChangeEvent
         ShowHint = True
         ParentShowHint = False
