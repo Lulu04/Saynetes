@@ -79,8 +79,6 @@ private
   FImageStorage: TCustomStorageFolder;
   FKeepUniverseManager: boolean;
   Foptions: TProjectOptions;
-  function GetPlaylistsFolder: string;
-  function AppGetPresetsFolder: string;
 public
   constructor Create;
   destructor Destroy; override;
@@ -102,8 +100,6 @@ public
   property ImageStorage: TCustomStorageFolder read FImageStorage;
 
   property Options: TProjectOptions read Foptions;
-  property AppPresetsFolder: string read AppGetPresetsFolder;
-  property PlaylistsFolder: string read GetPlaylistsFolder;
 
   property KeepUniverseManager: boolean read FKeepUniverseManager write FKeepUniverseManager;
 end;
@@ -119,20 +115,6 @@ uses u_mainform, u_common, u_list_dmxuniverse, u_list_sequence, u_audio_manager,
 
 
 { TSaynetesProject }
-
-function TSaynetesProject.AppGetPresetsFolder: string;
-begin
-  Result:=ConcatPaths([Application.Location, PRESET_FOLDER]);
-  if not DirectoryExistsUTF8(Result)
-    then CreateDirUTF8(Result);
-end;
-
-function TSaynetesProject.GetPlaylistsFolder: string;
-begin
-  Result:=ConcatPaths([Application.Location, PLAYLIST_FOLDER]);
-  if not DirectoryExistsUTF8(Result)
-    then CreateDirUTF8(Result);
-end;
 
 constructor TSaynetesProject.Create;
 begin
