@@ -193,8 +193,7 @@ begin
 
   for i:=0 to High(cg.A) do
   begin
-    UniverseManager.RetrieveChannel(cg.A[i].IDUni, cg.A[i].IDFix, cg.A[i].ChanIndex, uni, fix, chan);
-    if (uni <> NIL) and (fix <> NIL) and (chan <> NIL) then
+    if UniverseManager.RetrieveChannel(cg.A[i].IDUni, cg.A[i].IDFix, cg.A[i].ChanIndex, uni, fix, chan) then
     begin
       if not fix.Selected then
       begin
@@ -206,6 +205,8 @@ begin
   end;
   FTargetViewProjector.FrameViewDMXCursors1.UpdateView;
   FTargetViewProjector.Redraw;
+
+  if not FShiftPressed then Close;
 end;
 
 procedure TFormDMXGroup.LBRGBMouseDown(Sender: TObject; Button: TMouseButton;
@@ -239,6 +240,8 @@ begin
       FTargetViewProjector.AddToSelected(fix);
   end;
   FTargetViewProjector.Redraw;
+
+  if not FShiftPressed then Close;
 end;
 
 procedure TFormDMXGroup.MIChannelDeleteClick(Sender: TObject);
