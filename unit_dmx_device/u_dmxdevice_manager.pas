@@ -25,7 +25,7 @@ TDMXDeviceType=(dtNo_Device,
 
 TDMXBuffer=packed array[1..512] of byte;
 
-TPortDirection=(pdIn=0, pdOut=1);
+TPortDirection=(pdIn=0, pdOut);
 
 function PortDirectionToString(aDir: TPortDirection): string;
 
