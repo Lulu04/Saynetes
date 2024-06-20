@@ -5,7 +5,7 @@
 {"hash":207826531,"name":"tframeviewdmxcursors.bchanneltools.caption","sourcebytes":[67,72,65,78,78,69,76,83],"value":"CHANNELS"},
 {"hash":187458387,"name":"tframeviewdmxcursors.brgbtools.hint","sourcebytes":[83,104,111,119,47,104,105,100,101,32,116,104,101,32,82,71,66,32,116,111,111,108,115],"value":"Show/hide the RGB tools"},
 {"hash":493234,"name":"tframeviewdmxcursors.brgbtools.caption","sourcebytes":[115,82,71,66],"value":"sRGB"},
-{"hash":167273503,"name":"tframeviewdmxcursors.bzero.hint","sourcebytes":[70,111,114,99,101,32,97,108,108,32,99,117,114,115,111,114,115,32,116,111,32,122,101,114,111],"value":"Force all cursors to zero"},
+{"hash":10711701,"name":"tframeviewdmxcursors.bzero.hint","sourcebytes":[70,111,114,99,101,32,97,108,108,32,99,117,114,115,111,114,115,32,116,111,32,116,104,101,105,114,32,100,101,102,97,117,108,116,32,118,97,108,117,101],"value":"Force all cursors to their default value"},
 {"hash":387695,"name":"tframeviewdmxcursors.bzero.caption","sourcebytes":[90,69,82,79],"value":"ZERO"},
 {"hash":5243337,"name":"tframeviewdmxcursors.ball.hint","sourcebytes":[67,108,105,99,107,32,116,111,32,97,99,116,105,118,97,116,101,47,100,101,97,99,116,105,118,97,116,101,46,13,10,87,104,101,110,32,121,111,117,32,109,111,118,101,115,32,97,32,99,117,114,115,111,114,44,32,105,116,115,32,118,97,108,117,101,32,105,115,32,99,111,112,105,101,100,32,111,110,32,97,108,108,32,99,104,97,110,110,101,108,115,32,40,115,101,108,101,99,116,101,100,32,111,114,32,110,111,116,41],"value":"Click to activate/deactivate.\r\nWhen you moves a cursor, its value is copied on all channels (selected or not)"},
 {"hash":17932,"name":"tframeviewdmxcursors.ball.caption","sourcebytes":[65,76,76],"value":"ALL"},
