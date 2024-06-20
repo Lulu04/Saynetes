@@ -1797,8 +1797,8 @@ msgstr "ZÉRO"
 
 #: tframeviewdmxcursors.bzero.hint
 msgctxt "tframeviewdmxcursors.bzero.hint"
-msgid "Force all cursors to zero"
-msgstr "Force tous les curseurs à zéro"
+msgid "Force all cursors to their default value"
+msgstr "Force tous les curseurs sur leur valeur par défaut"
 
 #: tframeviewdmxcursors.menuitem1.caption
 msgid "Only this channel on this fixture"
@@ -3996,4 +3996,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-

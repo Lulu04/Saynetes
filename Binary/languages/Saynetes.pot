@@ -1716,7 +1716,7 @@ msgstr ""
 
 #: tframeviewdmxcursors.bzero.hint
 msgctxt "tframeviewdmxcursors.bzero.hint"
-msgid "Force all cursors to zero"
+msgid "Force all cursors to their default value"
 msgstr ""
 
 #: tframeviewdmxcursors.menuitem1.caption
