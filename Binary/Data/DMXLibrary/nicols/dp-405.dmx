@@ -1,0 +1,19 @@
+[SAYNETE]
+Version|3.1.0
+[LINKS]
+LinkType1|manual|Url1|https://www.manualslib.com/manual/2519810/Nicols-Dp-405.html
+[GENERAL]
+Manufacturer|Nicols|Name|DP 405|Type|13|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|318|Height|165|Depth|96|Weight|3.5|Power|3520|Connector|3-pin
+[DIPSWITCH]
+OnIsUp|true|MSBIsLeft|false|F0|0|F1|0|F2|0|F3|0|F4|0|F5|0|F6|0|F7|0|F8|0|F9|2
+[CHAN_DEF]
+ID|Dimmer 1|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 2|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 3|Type|2|R1|Begin~0~End~255~Txt~0..100%
+ID|Dimmer 4|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|4-channel|ShortName|4ch|Content|Dimmer 1~Dimmer 2~Dimmer 3~Dimmer 4
+[END_MODES]
