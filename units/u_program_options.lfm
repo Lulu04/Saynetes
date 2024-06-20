@@ -111,7 +111,7 @@ object FormProgramOptions: TFormProgramOptions
         DragMode = dmAutomatic
         ExpandSignColor = 10473964
         ExpandSignType = tvestArrowFill
-        Font.Color = 10473964
+        Font.Color = 15395562
         Font.Height = 15
         HotTrack = True
         HotTrackColor = 9240575
@@ -151,7 +151,7 @@ object FormProgramOptions: TFormProgramOptions
         Height = 450
         Top = 1
         Width = 673
-        PageIndex = 0
+        PageIndex = 4
         Align = alClient
         TabOrder = 0
         object PageAppGeneral: TPage
@@ -167,7 +167,7 @@ object FormProgramOptions: TFormProgramOptions
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 20
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -197,7 +197,7 @@ object FormProgramOptions: TFormProgramOptions
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 20
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -229,7 +229,7 @@ object FormProgramOptions: TFormProgramOptions
             BorderSpacing.Left = 20
             BorderSpacing.Right = 20
             Caption = 'Label'
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsItalic]
             ParentColor = False
             ParentFont = False
@@ -262,7 +262,7 @@ object FormProgramOptions: TFormProgramOptions
             BorderSpacing.Left = 20
             BorderSpacing.Top = 20
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -285,7 +285,7 @@ object FormProgramOptions: TFormProgramOptions
             Top = 44
             Width = 139
             Caption = '"SPACE" key run sequence'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -309,7 +309,7 @@ object FormProgramOptions: TFormProgramOptions
             Top = 63
             Width = 241
             Caption = '"SPACE" key run sequence and select the next'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -327,7 +327,7 @@ object FormProgramOptions: TFormProgramOptions
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 20
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -359,7 +359,7 @@ object FormProgramOptions: TFormProgramOptions
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 20
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -388,7 +388,7 @@ object FormProgramOptions: TFormProgramOptions
             Top = 83
             Width = 28
             Caption = 'Label'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -401,7 +401,7 @@ object FormProgramOptions: TFormProgramOptions
             Top = 163
             Width = 28
             Caption = 'Label'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -421,7 +421,7 @@ object FormProgramOptions: TFormProgramOptions
             BorderSpacing.Left = 20
             BorderSpacing.Top = 10
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -470,7 +470,7 @@ object FormProgramOptions: TFormProgramOptions
             Width = 97
             BorderSpacing.Top = 10
             Caption = 'Shape of the stage'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -484,7 +484,7 @@ object FormProgramOptions: TFormProgramOptions
             Width = 27
             BorderSpacing.Top = 10
             Caption = 'Seats'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
