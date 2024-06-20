@@ -109,8 +109,9 @@ begin
 
   // Enable edition for guiPrepaDMX  mode
   FrameEditString1.ReadOnly := False;//FormViewProjector.FrameViewProjector1.GUIMode <> guiPrepaDMX;// not Project.ProjectPrefs.EditMode;
-  CBUni.Enabled := TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
-  SE1.Enabled := TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
+  CBUni.Enabled := False; // TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
+  SE1.Enabled := True;// TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
+  SE1.ReadOnly := True;
 
   // update caption language
   Label2.Caption := SUniverse;

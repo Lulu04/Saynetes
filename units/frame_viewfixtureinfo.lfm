@@ -115,13 +115,14 @@ object FrameFixtureInfo: TFrameFixtureInfo
       Left = 3
       Height = 23
       Top = 138
-      Width = 56
+      Width = 48
       Color = 1644825
       Font.Color = 15395562
       MaxValue = 512
       MinValue = 1
       OnChange = SE1Change
       ParentFont = False
+      ReadOnly = True
       TabOrder = 2
       Value = 1
     end
@@ -131,7 +132,7 @@ object FrameFixtureInfo: TFrameFixtureInfo
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = SE1
       AnchorSideBottom.Side = asrCenter
-      Left = 64
+      Left = 56
       Height = 15
       Top = 141
       Width = 16
@@ -146,10 +147,10 @@ object FrameFixtureInfo: TFrameFixtureInfo
       AnchorSideLeft.Control = Label4
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = SE1
-      Left = 85
+      Left = 77
       Height = 23
       Top = 138
-      Width = 43
+      Width = 40
       BorderSpacing.Left = 5
       Color = 1644825
       Font.Color = 15395562
@@ -182,10 +183,10 @@ object FrameFixtureInfo: TFrameFixtureInfo
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 172
+      Left = 175
       Height = 23
       Top = 138
-      Width = 43
+      Width = 40
       Anchors = [akTop, akRight]
       Color = 1644825
       Font.Color = 15395562
