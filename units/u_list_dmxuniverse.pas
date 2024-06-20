@@ -1309,7 +1309,7 @@ begin
   CurrentFixtureEffect := deNOEFFECT;
   for chan in FChannels do
     if not chan.Locked then begin
-      chan.PercentValue := 0.0;
+      chan.PercentValue := chan.DefaultValue / 255;
       chan.CurrentEffect := deNOEFFECT;
     end;
 end;

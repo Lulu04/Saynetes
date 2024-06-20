@@ -120,7 +120,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       Cursor = crHandPoint
       Left = 15
       Height = 20
-      Hint = 'Force all cursors to zero'
+      Hint = 'Force all cursors to their default value'
       Top = 7
       Width = 43
       Anchors = []
