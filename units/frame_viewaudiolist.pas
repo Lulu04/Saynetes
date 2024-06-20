@@ -764,8 +764,10 @@ begin
       f := ExtractFileName(snd.Filename);
       // first remove from audio manager to release the file
       SoundManager.DeleteSoundByID(id);
-      // remove from storage
+      // remove from audio storage
       Project.AudioStorage.DeleteFile(f);
+      // remove peak file from audio storage
+      Project.AudioStorage.DeleteFile(ChangeFileExt(f, PEAK_AUDIO_FILE_EXTENSION));
     end;
   // remove from listbox
   LB.DeleteSelected;

@@ -34,7 +34,7 @@ type
     Effects: TFPList;
     EffectNames: string;
     EffectNamesArray: TStringArray;//array of string;
-    Curve: TAudioFileLevel;
+    Peaks: TAudioFileLevel;
     // add and chain the effect
     procedure AddEffect(const aEffect: TALSEffect; const aEffectName, aPresetName: string);
     procedure SetDryWet(AValue: single);
@@ -339,9 +339,9 @@ begin
   p^.EffectNames := '';
   p^.EffectNamesArray := NIL;
 
-  p^.Curve.InitDefault;
+  p^.Peaks.InitDefault;
   if aSnd.Tag <> CAPTURE_IDAUDIO then begin
-    p^.Curve.LoadFromFile(aSnd.Filename);
+    p^.Peaks.LoadFromFile(aSnd.Filename);
   end;
 
   FSoundItems.Add(p);
@@ -1134,7 +1134,7 @@ function TSoundManager.GetAudioCurve(aID: TSoundID): PAudioFileLevel;
 var item: PSoundItem;
 begin
   item := GetItemByID(aID);
-  if item <> NIL then Result := @item^.Curve
+  if item <> NIL then Result := @item^.Peaks
     else Result := NIL;
 end;
 

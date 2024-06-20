@@ -411,7 +411,11 @@ begin
                       else pt.LoopToBegin;
                     loopAlreadyDone := True;
                   end
-                  else ExecuteCmd(P);
+                  else begin
+                    ExecuteCmd(P);
+                    //Log.Debug('execute "'+pt.CmdArray[pt.LineIndex]+'"');
+                  end;
+
                 end;
               pt.NextLine;
            until pt.EndOfPlay or (pt.WaitSec > 0);
