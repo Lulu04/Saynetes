@@ -228,7 +228,7 @@ begin
      // make a copy of the file into audio project folder
      if Project.AudioStorage.StoreFileExt( source, target, newPath ) then
      begin
-       snd := SoundManager.AddStream( newPath );
+       snd := SoundManager.AddStream( newPath ); // construct the peak file
        FrameViewAudioList1.LB.ItemIndex := FrameViewAudioList1.LB.Items.Add( snd.Tag.ToString );
        flag := TRUE;
      end else ShowMess(SAnErrorOccurredWhileImportingTheFileToTheProject+
