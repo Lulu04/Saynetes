@@ -540,22 +540,26 @@ begin
 end;
 
 procedure TFrameViewDMXLibrary.SelectFixture(const aFixtureLocation: TFixtureLibraryLocation);
-var n: TTreeNode;
+var nodeFolder, nodeFilename, nodeMode: TTreeNode;
 begin
   // search the node with folder
-  n := TV.Items.FindNodeWithText(aFixtureLocation.SubFolder);
-  if n = NIL then exit;
-  n.Expand(False);
+  nodeFolder := TV.Items.FindNodeWithText(aFixtureLocation.SubFolder);
+  if nodeFolder = NIL then exit;
+  nodeFolder.Expand(False);
 
   // search the sub-node with filename
-  n := n.FindNode(ChangeFileExt(aFixtureLocation.Filename, ''));
-  if n <> NIL then n.Expand(False);
+  nodeFilename := nodeFolder.FindNode(ChangeFileExt(aFixtureLocation.Filename, ''));
+  if nodeFilename <> NIL then nodeFilename.Expand(False);
 
   // search the sub-node with mode
-  n := n.FindNode(aFixtureLocation.Mode);
-  if n <> NIL then n.Expand(False);
+  if nodeFilename <> NIL then begin
+    nodeMode := nodeFilename.FindNode(aFixtureLocation.Mode);
+    if nodeMode <> NIL then nodeMode.Expand(False);
+  end else nodeMode := NIL;
 
-  TV.Selected := n;
+  if nodeMode <> NIL then TV.Selected := nodeMode
+    else if nodeFilename <> NIL then TV.Selected := nodeFilename
+      else TV.Selected := nodeFolder;
   TV.MakeSelectionVisible;
 end;
 
