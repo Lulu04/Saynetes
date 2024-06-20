@@ -1,0 +1,12 @@
+[SAYNETE]
+Version|3.1.0
+[GENERAL]
+Manufacturer|Generic|Name|Dimmer 1 channel|Type|12|Authors|Lulu|Creator|Saynètes 3.1.0
+[PHYSICAL]
+Width|0|Height|0|Depth|0|Weight|0|Power|3000|Connector|3-pin
+[CHAN_DEF]
+ID|Dimmer|Type|2|R1|Begin~0~End~255~Txt~0..100%
+[END_CHAN_DEF]
+[MODES]
+Name|1-channel|ShortName|1ch|Content|Dimmer
+[END_MODES]
