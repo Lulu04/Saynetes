@@ -7,12 +7,12 @@ object FormStartUpWizard: TFormStartUpWizard
   Caption = 'StartUp Wizard'
   ClientHeight = 324
   ClientWidth = 433
-  Color = 1715249
+  Color = 2434341
   KeyPreview = True
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
     Height = 324
@@ -39,7 +39,7 @@ object FormStartUpWizard: TFormStartUpWizard
     Caption = 'Create a new project'
     Color = 4737096
     Flat = True
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Style = [fsBold]
     ImageIndex = 6
     Transparent = False
@@ -92,7 +92,7 @@ object FormStartUpWizard: TFormStartUpWizard
     Width = 113
     BorderSpacing.Top = 20
     Caption = 'Open a recent project'
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Style = [fsItalic]
     ParentColor = False
     ParentFont = False
@@ -115,7 +115,7 @@ object FormStartUpWizard: TFormStartUpWizard
     Caption = 'Open a  project'
     Color = 4737096
     Flat = True
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Style = [fsBold]
     ImageIndex = 12
     Transparent = False
@@ -140,7 +140,7 @@ object FormStartUpWizard: TFormStartUpWizard
     Caption = 'Quit'
     Color = 4737096
     Flat = True
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Style = [fsBold]
     ImageIndex = 30
     Transparent = False
@@ -164,7 +164,7 @@ object FormStartUpWizard: TFormStartUpWizard
     BorderSpacing.Top = 30
     BorderSpacing.Right = 20
     Caption = 'Welcome !'#13#10'What would you like to do ?'
-    Font.Color = 10473964
+    Font.Color = 15395562
     Font.Height = 20
     ParentColor = False
     ParentFont = False

@@ -110,7 +110,7 @@ object FormProjectOptions: TFormProjectOptions
         DragMode = dmAutomatic
         ExpandSignColor = 10473964
         ExpandSignType = tvestArrowFill
-        Font.Color = 10473964
+        Font.Color = 15395562
         Font.Height = 15
         HotTrack = True
         HotTrackColor = 9240575
@@ -172,7 +172,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 46
             Width = 104
             Caption = 'Show capture panel'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -199,7 +199,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 27
             Width = 138
             Caption = 'Show sound control panel'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -217,7 +217,7 @@ object FormProjectOptions: TFormProjectOptions
             BorderSpacing.Left = 20
             BorderSpacing.Top = 10
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -237,7 +237,7 @@ object FormProjectOptions: TFormProjectOptions
             BorderSpacing.Left = 20
             BorderSpacing.Top = 10
             BorderSpacing.Right = 20
-            Font.Color = 10473964
+            Font.Color = 15395562
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -264,7 +264,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 27
             Width = 94
             Caption = 'Show DMX adress'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -290,7 +290,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 46
             Width = 99
             Caption = 'Show fixture name'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -316,7 +316,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 65
             Width = 128
             Caption = 'Show fixture description'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -342,7 +342,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 84
             Width = 107
             Caption = 'Show channel name'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -356,7 +356,7 @@ object FormProjectOptions: TFormProjectOptions
             Width = 73
             BorderSpacing.Top = 10
             Caption = 'Show color as'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -386,7 +386,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 111
             Width = 92
             Caption = 'colored rectangle'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end
@@ -412,7 +412,7 @@ object FormProjectOptions: TFormProjectOptions
             Top = 130
             Width = 55
             Caption = 'text (r,g,b)'
-            Font.Color = 10473964
+            Font.Color = 15395562
             ParentColor = False
             ParentFont = False
           end

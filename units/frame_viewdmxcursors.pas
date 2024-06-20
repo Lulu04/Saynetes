@@ -633,14 +633,15 @@ begin
 
     // fixture description
     r := Renderer.AdjustRect(FixtureDescriptionArea);
+    if Renderer.ModePrepaDMX then begin
+      Brush.Style := bsSolid;
+      Brush.Color := u_utils.PercentColor(FColorFixtureBackground, -0.3);
+      Pen.Style := psClear;
+      Rectangle(r.Left, r.Top, r.Right, r.Bottom);
+      Brush.Style := bsClear;
+    end;
     Font.Color := FColorDescription;
     TextRect(r, 0, 0, Fixture.Description, Renderer.FTextStyleForTextRect);
-
-    if MouseIsOverFixtureDescriptionArea then
-    begin
-      Pen.Color := $00EAEAEA;
-      Rectangle(r.Left, r.Top, r.Right, r.Bottom);
-    end;
 
     Renderer.FTextStyleForTextRect.Wordbreak := True; // can go to the next line
 
@@ -699,12 +700,15 @@ begin
 
     Brush.Style := bsClear;
 
-    if MouseIsOverFixtureDescriptionArea then
+{
+    if Renderer.ModePrepaDMX {and MouseOverFixtureDescription(p.x, p.y)} then
+//    if MouseIsOverFixtureDescriptionArea then
     begin
-      Pen.Color := $00EAEAEA;
+      Pen.Color := $00C0C0C0;
+      Pen.Style := psDot;
       r := Renderer.AdjustRect(FixtureDescriptionArea);
-      Rectangle(r.Left, r.Top, r.Right, r.Bottom);
-    end;
+      Rectangle(r.Left, r.Top, r.Right-1, r.Bottom);
+    end; }
 
    // Renderer.FTextStyleForTextRect.Wordbreak := True; // can go to the next line
 
@@ -841,8 +845,9 @@ begin
     flag := False;
 
     case GUIMode of
-      guiPrepaDMX:
+      guiPrepaDMX: begin
         flag := (pfix^.MouseOverFixtureDescription(X, Y)) or mouseOverChannelName;
+      end;
 
       guiMainDMX,
       guiEditSequence:
@@ -871,14 +876,14 @@ begin
   if Length(FView) = 0 then exit;
   X := X+View_Begin;
 
-  if (FMouseState = msReleased) and (Button = mbRight) and ModePrepaDMX then
+  if (FMouseState = msReleased) and (Button in [mbRight, mbLeft]) and ModePrepaDMX then
   begin
     pfix := FixtureUnderMouse(X, Y);
     if pfix <> NIL then
     begin
       if pfix^.MouseOverFixtureDescription(X, Y) then
       begin
-        // input fixture description from user
+        // user want to change fixture description
         txt := pfix^.Fixture.Description;
         if UserInputNoSpecialChar(SNewDescription, SOk, SCancel, txt, mtConfirmation, TRUE) = mrOk then
         begin
@@ -892,11 +897,11 @@ begin
         cur := pfix^.ChannelNameUnderMouse(X, Y);
         if cur <> NIL then
         begin
-          // input channel name from user
-          txt := cur^.Channel.Name;
+          // user want to change channel name
+          txt := cur^.Channel.UserDefinedName;
           if UserInputNoSpecialChar(SNewName, SOk, SCancel, txt, mtConfirmation, TRUE) = mrOk then
           begin
-            cur^.Channel.Name := txt;
+            cur^.Channel.UserDefinedName := txt;
             RedrawVisibleCursors;
             Project.SetModified;
           end;
@@ -1752,7 +1757,7 @@ begin
   FColorChannelNameBackGround := PercentColor(FColorFixtureBackground, -0.2);
   FColorBackgroundAdressDMX := PercentColor(FColorFixtureBackground, -0.5);
   FColorDMXAdress := RGBToColor(255,255,200);
-  FColorFixtureName := $009FD1EC;
+  FColorFixtureName := $00C0C0C0;
   FColorDescription := $00EAEAEA;
   FColorEffect := RGBToColor(255,128,64);
   FColorValue := clWhite;

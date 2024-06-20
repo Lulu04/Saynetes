@@ -101,6 +101,8 @@ type
     procedure SetChannelType(AValue: TChannelType);
     procedure SetDefaultValue(AValue: byte);
     procedure SetPercentValue(AValue: single);
+   private
+    FUserDefinedName: string;
     procedure SetSubChannelIndex(AValue: integer);
     procedure SetSubChannelName(AValue: string);
    private
@@ -113,6 +115,7 @@ type
    public
     property SubChannelIndex: integer read FSubChannelIndex write SetSubChannelIndex;
     property Name: string read GetSubChannelName write SetSubChannelName;
+    property UserDefinedName: string read FUserDefinedName write FUserDefinedName;
     property ChannelType: TChannelType read GetSubChannelType write SetChannelType;
     property Ranges: PArrayOfChannelRange read GetSubChannelRanges;
 //    Name: string;
@@ -806,7 +809,8 @@ end;
 
 function TBaseDMXChannel.GetSubChannelName: string;
 begin
-  Result := FSubChannels[FSubChannelIndex].Name;
+  if FUserDefinedName <> '' then Result := FUserDefinedName
+    else Result := FSubChannels[FSubChannelIndex].Name;
 end;
 
 function TBaseDMXChannel.GetSubChannelType: TChannelType;
@@ -959,6 +963,11 @@ begin
       prop.Add('Locked'+i.ToString, chan.Locked);
       prop.Add('LockValue'+i.ToString, chan.ByteValue);
     end;
+
+    if chan.UserDefinedName <> '' then begin
+      prop.Add('Name'+i.ToString, chan.UserDefinedName);
+    end;
+
     inc(i);
   end;
 
@@ -1087,6 +1096,9 @@ begin
 
       if prop.IntegerValueOf('LockValue'+(i+1).ToString, vi, 0) then
         chan.FPercentValue := vi/255;
+
+      if prop.StringValueOf('Name'+(i+1).ToString, s1, '') then
+        chan.UserDefinedName := s1;
 
       chan.Universe := Universe;
     end;
@@ -1296,10 +1308,10 @@ var chan: TDMXChannel;
 begin
   CurrentFixtureEffect := deNOEFFECT;
   for chan in FChannels do
-  begin
-    chan.PercentValue := 0.0;
-    chan.CurrentEffect := deNOEFFECT;
-  end;
+    if not chan.Locked then begin
+      chan.PercentValue := 0.0;
+      chan.CurrentEffect := deNOEFFECT;
+    end;
 end;
 
 procedure TDMXFixture.Update(const aElapsedTime: single);
@@ -2413,11 +2425,9 @@ var uni: TDMXUniverse;
   fix: TDMXFixture;
 begin
  for uni in FUniverses do
-  for fix in uni.FFixtures do
-  begin
+  for fix in uni.FFixtures do begin
     fix.CurrentFixtureEffect := deNOEFFECT;
     fix.SetAllChannelsToZero;
-
   end;
 end;
 
