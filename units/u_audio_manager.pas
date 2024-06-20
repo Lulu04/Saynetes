@@ -394,13 +394,10 @@ procedure TSoundManager.AddEffectToSoundItem(aID: TSoundID;
 var item: PSoundItem;
   i: integer;
 begin
-  for i:=0 to FSoundItems.Count-1 do
-  begin
+  for i:=0 to FSoundItems.Count-1 do begin
     item := PSoundItem(FSoundItems[i]);
-    if item^.SoundID = aID then
-    begin
+    if item^.SoundID = aID then begin
       item^.AddEffect(aEffect, aEffectName, aPresetName);
-//Log.Debug('    Now ID'+aID.ToString+' have '+item^.Effects.Count.ToString+' effect(s)');
       exit;
     end;
   end;
@@ -735,8 +732,7 @@ begin
 end;
 
 function TSoundManager.AddEffectOn(aID: TSoundID; aEffectType: TALSEffectType; aPresetIndex: integer): TALSEffect;
-var
-  snd: TALSSound;
+var snd: TALSSound;
   txt: String;
 begin
   case aEffectType of
@@ -802,13 +798,10 @@ begin
       end;
   end;
 
-  if not Result.Ready then
-  begin
+  if not Result.Ready then begin
     snd := GetSoundByID(aID);
-    if snd <> NIL then
-      txt := ' for '+snd.Filename
-    else
-      txt := ' for a sound that does not exist in the list';
+    if snd <> NIL then txt := ' for '+snd.Filename
+      else txt := ' for a sound that does not exist in the list (ID'+aID.ToString+')';
     Log.Warning('Failed to create audio effect '+AudioFXToString(aEffectType, aPresetIndex)+txt);
   end;
 
