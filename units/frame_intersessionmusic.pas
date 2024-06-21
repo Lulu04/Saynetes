@@ -65,7 +65,7 @@ type
 
 implementation
 uses ALSound, u_audio_manager, LCLType, Graphics,
-  u_common, u_project_manager, u_createplaylist, u_userdialogs,
+  u_common, u_createplaylist, u_userdialogs,
   u_resource_string, u_utils, u_apputils, VelocityCurve,
   System.UITypes, LazFileUtils;
 

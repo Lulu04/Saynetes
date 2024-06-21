@@ -66,7 +66,7 @@ type
 
 implementation
 
-uses u_resource_string, u_project_manager, u_common, u_apputils, Math;
+uses u_resource_string, u_common, u_apputils, Math;
 
 { TFrame_ColorPalette }
 
