@@ -48,6 +48,7 @@ public
   property PreviewPlaying: boolean read GetPreviewPlaying;
   property OnEndPreview: TNotifyEvent read FOnEndPreview write FOnEndPreview;
 
+  // Callback fired every 50ms to update the cursor position on the sequence view
   property OnTimeElapsed: TNotifyEvent read FOnTimeElapsed write FOnTimeElapsed;
 end;
 
@@ -388,7 +389,7 @@ begin
      else pt := Sequences.GetSequenceByIndex(i);
    if pt = NIL then continue;
 
-   pt.TimeStretchFactor.OnElapse(deltaSec);
+   pt.TimeStretchFactor.OnElapse(deltaSec); // update strech factor value
    if pt.Running and (Length(pt.CmdArray) > 0) then
    begin
      pt.Clock := pt.Clock+deltaSec*pt.TimeStretchFactor.Value;
