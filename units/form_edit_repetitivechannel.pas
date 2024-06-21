@@ -85,7 +85,7 @@ type
 
 
 implementation
-uses LCLType, u_resource_string, u_project_manager, form_selectsourcechannel,
+uses LCLType, u_resource_string, form_selectsourcechannel,
   u_apputils;
 
 {$R *.lfm}
