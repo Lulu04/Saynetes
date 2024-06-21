@@ -128,35 +128,35 @@ end;
 
 procedure TSequence.RunAsCmdList;
 begin
-  CmdArray:=SequencerInfoList.SplitToCmdArray;
-  LineIndex:=0;
-  WaitSec:=0.0;
-  Clock:=0.0;
-  if Length(CmdArray)>0
-    then Running:=TRUE;
+  CmdArray := SequencerInfoList.SplitToCmdArray;
+  LineIndex := 0;
+  WaitSec := 0.0;
+  Clock := 0.0;
+  if Length(CmdArray) > 0
+    then Running := TRUE;
 end;
 
 procedure TSequence.RunAsSequencerInfoList;
 var cmds: TCmdList;
 begin
-  cmds:=SequencerInfoList.SequencerInfoListToCmdListOfSingleCmd;
-  CmdArray:=cmds.SplitToCmdArray;
-  LineIndex:=0;
-  WaitSec:=0.0;
-  Clock:=0.0;
-  if Length(CmdArray)>0
-    then Running:=TRUE;
+  cmds := SequencerInfoList.SequencerInfoListToCmdListOfSingleCmd;
+  CmdArray := cmds.SplitToCmdArray;
+  LineIndex := 0;
+  WaitSec := 0.0;
+  Clock := 0.0;
+  if Length(CmdArray) > 0
+    then Running := TRUE;
 end;
 
 procedure TSequence.LoopToBegin;
 begin
-  LineIndex:=-1;
-  Clock:=0.0;
+  LineIndex := -1;
+  Clock := 0.0;
 end;
 
 procedure TSequence.Stop;
 begin
-  Running:=FALSE;
+  Running := FALSE;
 end;
 
 procedure TSequence.NextLine;
@@ -166,15 +166,15 @@ end;
 
 function TSequence.EndOfPlay: boolean;
 begin
-  Result:= LineIndex>=Length(CmdArray);
+  Result:= LineIndex >= Length(CmdArray);
 end;
 
 function TSequence.Duplicate: TSequence;
 begin
-  Result:=TSequence.Create;
-  Result.Name:=Name;
-  Result.ID:=ID;
-  Result.SequencerInfoList:=SequencerInfoList;
+  Result := TSequence.Create;
+  Result.Name := Name;
+  Result.ID := ID;
+  Result.SequencerInfoList := SequencerInfoList;
 end;
 
 function TSequence.CheckError(aParentList: TSequenceList): boolean;
@@ -223,13 +223,13 @@ end;
 procedure TSequenceList.ClearAll;
 begin
   Clear;
-  FID:=0;
+  FID := 0;
 end;
 
 function TSequenceList.NextID: cardinal;
 begin
   inc(FID);
-  Result:=FID;
+  Result := FID;
 end;
 
 function TSequenceList.GetSequenceByIndex(aIndex: integer): TSequence;
@@ -254,7 +254,7 @@ end;
 
 function TSequenceList.IsValidIndex(aIndex: integer): boolean;
 begin
- Result := (aIndex>=0) and (aIndex<Count) and (Count>0);
+ Result := (aIndex >= 0) and (aIndex < Count) and (Count > 0);
 end;
 
 function TSequenceList.AddSequence(const aName: string; const aSequencerInfoList: TSequencerInfoList): TSequence;
@@ -281,8 +281,8 @@ var i: Integer;
 begin
   for i:=0 to Count-1 do
    if GetSequenceByIndex(i).ID = aID then begin
-           Result := GetSequenceByIndex(i);
-           exit;
+     Result := GetSequenceByIndex(i);
+     exit;
    end;
   Result := NIL;
 end;
@@ -339,19 +339,6 @@ begin
     prop.Add('Data', Items[i].SequencerInfoList);
     temp.Add(prop.PackedProperty);
   end;
-
-
-{
- temp.Add('[TOP]');
- temp.Add( FID.ToString );   // current ID value
- temp.Add( Count.ToString ); // count
-
- for i:=0 to Count-1 do
- begin
-   temp.Add(Items[i].Name);             // name
-   temp.Add(Items[i].ID.ToString);      // ID
-   temp.Add(Items[i].SequencerInfoList);  // TSequencerInfoList
- end; }
 end;
 
 procedure TSequenceList.Load(temp: TStrings);
