@@ -2,6 +2,7 @@
 {"hash":35992126,"name":"tframesequencer.mi_sbaddaudioaction.caption","sourcebytes":[65,85,68,73,79,32,97,99,116,105,111,110,46,46,46],"value":"AUDIO action..."},
 {"hash":66091246,"name":"tframesequencer.misbadddmxaction.caption","sourcebytes":[68,77,88,32,97,99,116,105,111,110,46,46,46],"value":"DMX action..."},
 {"hash":107103278,"name":"tframesequencer.misbaddotheraction.caption","sourcebytes":[79,84,72,69,82,32,97,99,116,105,111,110,46,46,46],"value":"OTHER action..."},
+{"hash":56067061,"name":"tframesequencer.misbstartfromhere.caption","sourcebytes":[83,116,97,114,116,32,115,101,113,117,101,110,99,101,32,102,114,111,109,32,104,101,114,101],"value":"Start sequence from here"},
 {"hash":126257829,"name":"tframesequencer.mi_sbpaste.caption","sourcebytes":[115,80,97,115,116,101],"value":"sPaste"},
 {"hash":264856556,"name":"tframesequencer.mi_sbzoomall.caption","sourcebytes":[86,105,101,119,32,97,108,108],"value":"View all"},
 {"hash":100381710,"name":"tframesequencer.mi_sbzoomonselection.caption","sourcebytes":[90,111,111,109,32,111,110,32,115,101,108,101,99,116,105,111,110],"value":"Zoom on selection"},

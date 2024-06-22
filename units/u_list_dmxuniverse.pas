@@ -400,7 +400,7 @@ type
      property Size: integer read GetSize;
      property OptimizeUsedChannels: boolean read FOptimizeUsedChannels write SetOptimizeUsedChannels;
   public
-     procedure Update(const aElapsedTime: single);
+     procedure Update(const aElapsedTime: single; aUpdateDevice: boolean);
      property NeedToBeRedraw: boolean read FNeedToBeRedraw write FNeedToBeRedraw;
   end;
 
@@ -468,8 +468,12 @@ TUniverseManager = class
      procedure BlackOut;
 
      // compute effects
-     procedure Update;
-
+     procedure Update; overload;
+     // compute effects without send channel values to device and without redraw dmx view
+     // use this procedure when user need to start a sequence from another position than zero
+     procedure Update(const aElapsedTime: single); overload;
+     // send current data to dmx device for each universe
+     procedure SendCurrentDataToDevice;
 
      property Universes[index: integer]: TDmxUniverse read GetUniverse;
      property Count: integer read GetCount;
@@ -1956,14 +1960,17 @@ begin
   dev.UpdateChannel(DevicePath.PortIndex, aAdress, aValue);
 end;
 
-procedure TDmxUniverse.Update(const aElapsedTime: single);
+procedure TDmxUniverse.Update(const aElapsedTime: single; aUpdateDevice: boolean);
 var fix: TDMXFixture;
   dev: TBaseDMXDevice;
 begin
-  dev := DeviceManager.Device[DevicePath.DeviceIndex];
   for fix in FFixtures do
-   fix.Update(aElapsedTime);
-  dev.SendAll(DevicePath.PortIndex);
+    fix.Update(aElapsedTime);
+
+  if aUpdateDevice then begin
+    dev := DeviceManager.Device[DevicePath.DeviceIndex];
+    dev.SendAll(DevicePath.PortIndex);
+  end;
 end;
 
 
@@ -2051,9 +2058,11 @@ end;
 
 procedure TUniverseManager.StartThread;
 begin
-  if FThreadAction = NIL then
-    FThreadAction := TTimedThread.CreateQueue(DMX_REFRESH_PERIOD_MS, @Update, TRUE);
-    //FThreadAction := TTimedThread.CreateSynchronize(DMX_REFRESH_PERIOD_MS, @Update, TRUE);
+  if FThreadAction <> NIL then exit;
+
+  FTimeOrigin := GetTickCount64;
+  FThreadAction := TTimedThread.CreateQueue(DMX_REFRESH_PERIOD_MS, @Update, TRUE);
+  //FThreadAction := TTimedThread.CreateSynchronize(DMX_REFRESH_PERIOD_MS, @Update, TRUE);
 end;
 
 procedure TUniverseManager.StopThread;
@@ -2070,7 +2079,6 @@ end;
 constructor TUniverseManager.Create;
 begin
   FUniverses := TDMXUniverseList.Create(TRUE);
-  FTimeOrigin := GetTickCount64;
   StartThread;
   Log.Info('Universe Manager created');
 end;
@@ -2443,7 +2451,7 @@ begin
   flagredraw := FALSE;
   for uni in FUniverses do
   begin
-    uni.Update(elapsedSec);
+    uni.Update(elapsedSec, True);
     flagredraw := flagredraw or uni.NeedToBeRedraw;
     uni.NeedToBeRedraw := FALSE;
   end;
@@ -2451,6 +2459,34 @@ begin
   // query refresh projectors
   if flagredraw and FProjectorViewToRefreshForThreadUniverse.ChannelsLevelAreVisible then
       FProjectorViewToRefreshForThreadUniverse.Redraw;
+end;
+
+procedure TUniverseManager.Update(const aElapsedTime: single);
+var uni: TDMXUniverse;
+begin
+  for uni in FUniverses do begin
+    uni.Update(aElapsedTime, False);
+    uni.NeedToBeRedraw := FALSE;
+  end;
+end;
+
+procedure TUniverseManager.SendCurrentDataToDevice;
+var uni: TDMXUniverse;
+    i, j: integer;
+    adr: TDmxAdress;
+    fix: TDMXFixture;
+begin
+  for uni in FUniverses do
+    for i:=0 to uni.FixturesCount-1 do begin
+      fix := uni.Fixtures[i];
+      adr := fix.Adress;
+      j := 0;
+      repeat
+        uni.SendToDevice(adr, fix.Channels[j].ByteValue);
+        inc(j);
+        inc(adr);
+      until adr > fix.LastAdress;
+    end;
 end;
 
 

@@ -63,6 +63,7 @@ type
   { TFrameSequencer }
 
   TFrameSequencer = class(TFrameBGLSequencer)
+    MISBStartFromHere: TMenuItem;
     MITimeDelete: TMenuItem;
     MITimeModify: TMenuItem;
     MI_SBRearrange: TMenuItem;
@@ -93,6 +94,8 @@ type
     PopSB: TPopupMenu;
     PopTime: TPopupMenu;
     Separator1: TMenuItem;
+    Separator2: TMenuItem;
+    procedure MISBStartFromHereClick(Sender: TObject);
     procedure MITimeDeleteClick(Sender: TObject);
     procedure MITimeModifyClick(Sender: TObject);
     procedure MISBAddOtherActionClick(Sender: TObject);
@@ -385,6 +388,26 @@ begin
   Redraw;
 end;
 
+procedure TFrameSequencer.MISBStartFromHereClick(Sender: TObject);
+var step: TCustomSequencerStep;
+begin
+  if StepList.Count = 0 then exit;
+  if FClickedTimePos = 0 then begin
+    Play;
+    exit;
+  end;
+
+  step := GetLastStep;
+  if step = NIL then exit;
+  if FClickedTimePos >= step.TimePos+step.Duration then exit;
+
+  SeqPlayer.StopPreview;
+  SeqPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
+  SeqPlayer.OnEndPreview := @ProcessPlayerEnd;
+  SeqPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList, FClickedTimePos);
+  PlayCursorVisible(TRUE);
+end;
+
 procedure TFrameSequencer.MISBAddDMXActionClick(Sender: TObject);
 var s: TSequenceStep;
   p: TPoint;
@@ -541,7 +564,7 @@ end;
 procedure TFrameSequencer.PopSBPopup(Sender: TObject);
 begin
   MI_SBPaste.Enabled := Clipboard_HasData;
-  MI_SBZoomAll.Enabled := TRUE;
+  MI_SBZoomAll.Enabled := True;
   MI_SBZoomOnSelection.Enabled := AnAreaIsSelected;
 end;
 
@@ -567,6 +590,8 @@ end;
 
 procedure TFrameSequencer.DoTimeAreaClickEvent(Button: TMouseButton; Shift: TShiftState; TimePos: single);
 begin
+  if IsPlaying then exit;
+
   DoSelectTimeInterval(TimePos);
 
   if Button = mbRight then begin
@@ -580,6 +605,8 @@ end;
 
 procedure TFrameSequencer.DoEmptyAreaClickEvent(Button: TMouseButton; Shift: TShiftState; TimePos: single);
 begin
+  if IsPlaying then exit;
+
   if Button = mbRight then begin
     FClickedTimePos := TimePos;
     FClickedY := YLineUnderMouse;
@@ -592,6 +619,8 @@ end;
 
 procedure TFrameSequencer.DoStepClickEvent(aStep: TCustomSequencerStep; Button: TMouseButton; Shift: TShiftState);
 begin
+  if IsPlaying then exit;
+
   if Button = mbRight then begin
     FWorkingStep := aStep as TSequenceStep;
     PopLabel.PopUp;
@@ -712,12 +741,12 @@ end;
 
 procedure TFrameSequencer.ProcessPlayerTimeElapsed(Sender: TObject);
 begin
- UpdatePlayCursorPosition( SeqPlayer.PreviewTimePosition );
+  UpdatePlayCursorPosition( SeqPlayer.PreviewTimePosition );
 end;
 
 procedure TFrameSequencer.ProcessPlayerEnd(Sender: TObject);
 begin
- Stop;
+  Stop;
 end;
 
 constructor TFrameSequencer.Create(TheOwner: TComponent);
@@ -744,39 +773,39 @@ end;
 procedure TFrameSequencer.ProcessKey(var Key: word; Shift: TShiftState);
 begin
   case Key of
-    VK_DELETE: if SelectedCount > 0 then Sel_Delete;
+    VK_DELETE: if (SelectedCount > 0) and not IsPlaying then Sel_Delete;
     VK_A: if ssCtrl in Shift then
           begin
             Sel_SelectAll;
             Redraw;
           end
           else if ssAlt in Shift then View_All;
-    VK_G: if (ssCtrl in Shift) and (SelectedCount>1) then
+    VK_G: if (ssCtrl in Shift) and (SelectedCount>1) and not IsPlaying then
           begin
             Sel_Group;
             Redraw;
           end;
-    VK_U: if (ssCtrl in Shift) and (SelectedCount>1) then
+    VK_U: if (ssCtrl in Shift) and (SelectedCount>1) and not IsPlaying then
           begin
             Sel_Ungroup;
             Redraw;
           end;
-    VK_X: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CutSelection;
+    VK_X: if (ssCtrl in Shift) and (SelectedCount>0) and not IsPlaying then ClipBoard_CutSelection;
     VK_C: if (ssCtrl in Shift) and (SelectedCount>0) then ClipBoard_CopySelection;
-    VK_V: if (ssCtrl in Shift) and MouseIsOverSequencer and Clipboard_HasData then ClipBoard_PasteTo(XMouseToTime);
+    VK_V: if (ssCtrl in Shift) and MouseIsOverSequencer and Clipboard_HasData and not IsPlaying then ClipBoard_PasteTo(XMouseToTime);
     VK_S: if ssAlt in Shift then View_ZoomOnSelectedArea;
-    VK_R: if (ssCtrl in Shift) and (SelectedCount=1)
+    VK_R: if (ssCtrl in Shift) and (SelectedCount=1) and not IsPlaying
            then MI_StepRenameClick(nil);
-    VK_Z: if ssCtrl in Shift then begin
+    VK_Z: if (ssCtrl in Shift) and not IsPlaying then begin
             if ssShift in Shift
               then Redo
               else Undo;
     end;
-    VK_UP: if Sel_CanVerticalShift(-StepHeight) then begin
+    VK_UP: if Sel_CanVerticalShift(-StepHeight) and not IsPlaying then begin
       Sel_VerticalShift(-StepHeight);
       Redraw;
     end;
-    VK_DOWN: if Sel_CanVerticalShift(StepHeight) then begin
+    VK_DOWN: if Sel_CanVerticalShift(StepHeight) and not IsPlaying then begin
       Sel_VerticalShift(StepHeight);
       Redraw;
     end;
@@ -863,6 +892,8 @@ begin
   SeqPlayer.OnEndPreview := NIL;
   SeqPlayer.StopPreview;
   PlayCursorVisible(FALSE);
+
+  FormSequenceEdition.ProcessEndOfSequencePreview;
 end;
 
 procedure TFrameSequencer.DoUnDoRedo(ItsUndo: boolean);

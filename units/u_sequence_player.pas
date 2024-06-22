@@ -14,7 +14,7 @@ type
 
 { TSequencePlayer }
 
-TSequencePlayer=class
+TSequencePlayer = class
 private
   ThreadAction: TTimedThread;
   procedure StartThread;
@@ -22,23 +22,24 @@ private
 private
   FOnTimeElapsed,
   FOnEndPreview: TNotifyEvent;
-  FRunningTime,
-  FTimeZero: QWORD;
+  FRunningTime: QWORD;
   FPlaying: boolean;
   procedure DoTimeElapsedEvent;
   procedure DoEndPreviewEvent;
 private
-  FMsAccu: integer;
+  FMsAccuForTimeElapsedEvent: integer;
   FPreview: TSequence;
   function GetPreviewPlaying: boolean;
+  procedure SetOnTimeElapsed(AValue: TNotifyEvent);
 
 public
   constructor Create;
   destructor Destroy; override;
   procedure Update;
 
-  procedure PreviewCmdList( const aCmds: TCmdList );
-  procedure PreviewSequencerInfoList( aSequencerInfoList: TSequencerInfoList );
+  procedure PreviewCmdList(const aCmds: TCmdList);
+  procedure PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList); overload;
+  procedure PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList; aFromTimePos: single); overload;
 
   procedure StopPreview;
 
@@ -49,7 +50,7 @@ public
   property OnEndPreview: TNotifyEvent read FOnEndPreview write FOnEndPreview;
 
   // Callback fired every 50ms to update the cursor position on the sequence view
-  property OnTimeElapsed: TNotifyEvent read FOnTimeElapsed write FOnTimeElapsed;
+  property OnTimeElapsed: TNotifyEvent read FOnTimeElapsed write SetOnTimeElapsed;
 end;
 
 var SeqPlayer: TSequencePlayer;
@@ -61,7 +62,7 @@ var SeqPlayer: TSequencePlayer;
 
 implementation
 uses LCLIntf, Graphics, u_list_dmxuniverse,
-  u_audio_manager, u_helper, u_logfile, u_mainform, ALSound;
+  u_audio_manager, u_helper, u_logfile, u_mainform, ALSound, Math;
 
 
 var snd: TALSSound;
@@ -315,38 +316,43 @@ end;
 
 procedure TSequencePlayer.StartThread;
 begin
-  //ThreadAction:=TTimedThread.Create(30, FormMain.Handle, LM_MESSAGE_Player, 0, 0, TRUE);
-  ThreadAction:=TTimedThread.CreateSynchronize(30, @Update, TRUE);
+  //ThreadAction := TTimedThread.Create(30, FormMain.Handle, LM_MESSAGE_Player, 0, 0, TRUE);
+  ThreadAction := TTimedThread.CreateSynchronize(30, @Update, TRUE);
 end;
 
 procedure TSequencePlayer.StopThread;
 begin
-  if ThreadAction<>NIL then begin
+  if ThreadAction <> NIL then begin
     ThreadAction.Terminate;
     ThreadAction.WaitFor;
     ThreadAction.Free;
-    ThreadAction:=NIL;
+    ThreadAction := NIL;
   end;
 end;
 
 procedure TSequencePlayer.DoTimeElapsedEvent;
 begin
-  if FOnTimeElapsed<>NIL then FOnTimeElapsed(self);
+  if FOnTimeElapsed <> NIL then FOnTimeElapsed(self);
 end;
 
 procedure TSequencePlayer.DoEndPreviewEvent;
 begin
-  if FOnEndPreview<>NIL then FOnEndPreview(self);
+  if FOnEndPreview <> NIL then FOnEndPreview(self);
 end;
 
 function TSequencePlayer.GetPreviewPlaying: boolean;
 begin
-  Result:=FPreview.Running;
+  Result := FPreview.Running;
+end;
+
+procedure TSequencePlayer.SetOnTimeElapsed(AValue: TNotifyEvent);
+begin
+  FOnTimeElapsed:=AValue;
 end;
 
 constructor TSequencePlayer.Create;
 begin
-  FPreview:=TSequence.Create;
+  FPreview := TSequence.Create;
   StartThread;
   Log.Info('Sequence Player Created');
 end;
@@ -360,102 +366,137 @@ begin
 end;
 
 procedure TSequencePlayer.Update;
-var TimeNow, deltaT: QWord;
+var timeNow, deltaMS: QWord;
   deltaSec: single;
-  P: TStringArray;
   pt: TSequence;
-  i, cmd: Integer;
-  loopAlreadyDone: boolean;
+  i: Integer;
 begin
- TimeNow := GetTickCount64;
- deltaT := TimeNow - FRunningTime;
- if deltaT = 0 then
-   exit;
+  timeNow := GetTickCount64;
+  deltaMS := timeNow - FRunningTime;
+  if deltaMS = 0 then exit;
 
- FRunningTime += deltaT;
+  FRunningTime := timeNow;
 
- FMsAccu += deltaT;
- if FMsAccu > 50 then
- begin
-   FMsAccu -= 50;
-   DoTimeElapsedEvent;
- end;
+  FMsAccuForTimeElapsedEvent := FMsAccuForTimeElapsedEvent + deltaMS;
+  if FMsAccuForTimeElapsedEvent > 50 then begin
+    FMsAccuForTimeElapsedEvent := FMsAccuForTimeElapsedEvent - 50;
+    DoTimeElapsedEvent;
+  end;
 
- deltaSec := deltaT*0.001;
- // scan all top
- for i:=-1 to Sequences.Count-1 do
- begin
-   if i = -1 then pt := FPreview
-     else pt := Sequences.GetSequenceByIndex(i);
-   if pt = NIL then continue;
-
-   pt.TimeStretchFactor.OnElapse(deltaSec); // update strech factor value
-   if pt.Running and (Length(pt.CmdArray) > 0) then
-   begin
-     pt.Clock := pt.Clock+deltaSec*pt.TimeStretchFactor.Value;
-     if pt.WaitSec > 0 then
-       pt.WaitSec -= deltaSec*pt.TimeStretchFactor.Value;
-     if pt.WaitSec <= 0 then
-     begin
-           loopAlreadyDone := False;
-           repeat
-              if pt.EndOfPlay then break;
-              P := pt.CmdArray[pt.LineIndex].SplitToParamArray; // read and split one cmd
-              if (Length(P) > 0) and TryStrToInt(P[0], cmd) then
-                case cmd of
-                  CMD_WAIT: begin
-                    pt.WaitSec += StringToSingle(P[1]); // trick to take in account the small pause value<deltaT
-                    loopAlreadyDone := False;
-                  end;
-                  CMD_LOOP: begin
-                    if loopAlreadyDone then pt.WaitSec := 10 // avoid infinite loop in case of sequence with only loop action.
-                      else pt.LoopToBegin;
-                    loopAlreadyDone := True;
-                  end
-                  else begin
-                    ExecuteCmd(P);
-                    //Log.Debug('execute "'+pt.CmdArray[pt.LineIndex]+'"');
-                  end;
-
-                end;
-              pt.NextLine;
-           until pt.EndOfPlay or (pt.WaitSec > 0);
-
-           if pt.EndOfPlay then begin
-             pt.Stop;
-             if i = -1 then DoEndPreviewEvent;
-           end;
-     end;
-   end;
- end;
+  deltaSec := deltaMS * 0.001;
+  // scan all top
+  for i:=-1 to Sequences.Count-1 do begin
+    if i = -1 then pt := FPreview
+      else pt := Sequences.GetSequenceByIndex(i);
+    if pt <> NIL then begin
+      if pt.Running then begin
+        pt.Update(deltaSec);
+        if (i = -1) and not pt.Running then
+          DoEndPreviewEvent;
+      end else pt.TimeStretchFactor.OnElapse(deltaSec);
+    end;
+  end;
 end;
 
 procedure TSequencePlayer.PreviewCmdList(const aCmds: TCmdList);
 begin
   FPreview.InitByDefault;
-  FPreview.SequencerInfoList:=aCmds;
+  FPreview.SequencerInfoList := aCmds;
   FPreview.RunAsCmdList;
-  FMsAccu := 0;
+  FMsAccuForTimeElapsedEvent := 0;
   FRunningTime := GetTickCount64;
-  FTimeZero := FRunningTime;
 end;
 
 procedure TSequencePlayer.PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList);
 begin
   FPreview.InitByDefault;
-  FPreview.SequencerInfoList:=aSequencerInfoList;
+  FPreview.SequencerInfoList := aSequencerInfoList;
   FPreview.RunAsSequencerInfoList;
-  FMsAccu := 0;
+  FMsAccuForTimeElapsedEvent := 0;
   FRunningTime := GetTickCount64;
-  FTimeZero := FRunningTime;
+end;
+
+procedure TSequencePlayer.PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList; aFromTimePos: single);
+var delta: single;
+  timePosReached: Boolean;
+  timePlayOrigin: array of single;
+  i: integer;
+  snd: TALSSound;
+  v: single;
+  procedure _Update(aTime: single);
+  begin
+    FPreview.Update(aTime);
+    SoundManager.PlaybackContext.Update(aTime);
+    UniverseManager.Update(aTime);
+  end;
+
+begin
+  FPreview.InitByDefault;
+  FPreview.SequencerInfoList := aSequencerInfoList;
+
+  SoundManager.PlaybackContext.AutoUpdate := False; // stops sounds auto-update
+  SoundManager.PlaybackContext.MasterGain.Value := 0.0; // we don't want to listen audio that will start
+  UniverseManager.StopThread; // stop universe auto-update (don't update view, don't sent data to dmx device)
+  StopThread;   // stop sequence player auto-update
+
+  // sets all timePlayOrigin to -1
+  timePlayOrigin := NIL;
+  SetLength(timePlayOrigin, SoundManager.Count);
+  for i:=0 to High(timePlayOrigin) do timePlayOrigin[i] := -1.0;
+
+  FPreview.RunAsSequencerInfoList; // put sequence in play mode
+  timePosReached := False;
+  repeat
+    if FPreview.WaitSec > 0.0 then begin
+      if FPreview.Clock + FPreview.WaitSec < aFromTimePos then _Update(FPreview.WaitSec)
+        else begin
+          delta := Max(0, aFromTimePos - FPreview.Clock);
+          _Update(delta);
+          timePosReached := True;
+        end;
+    end else begin
+      _Update(0.001);
+    end;
+
+    for i:=0 to High(timePlayOrigin) do begin
+      if (timePlayOrigin[i] = -1) and (SoundManager.PlaybackContext.Sounds[i].State = ALS_PLAYING) then
+        timePlayOrigin[i] := FPreview.Clock
+      else if (timePlayOrigin[i] <> -1) and (SoundManager.PlaybackContext.Sounds[i].State <> ALS_PLAYING) then
+        timePlayOrigin[i] := -1;
+    end;
+
+  until timePosReached;
+
+  // send all current dmx value to dmx device
+  UniverseManager.SendCurrentDataToDevice;
+
+  // sets right position on audio that remain in play mode
+  for i:=0 to High(timePlayOrigin) do begin
+    snd := SoundManager.PlaybackContext.Sounds[i];
+    if (snd.State = ALS_PLAYING) and not snd.Loop and (timePlayOrigin[i] <> -1) then begin
+      v := aFromTimePos - timePlayOrigin[i];
+      if snd.Loop then
+        while v >= snd.TotalDuration do v := v - snd.TotalDuration;
+      snd.TimePosition := v;
+    end;
+  end;
+
+  FPreview.Clock := aFromTimePos;
+  FMsAccuForTimeElapsedEvent := 0;
+  FRunningTime := GetTickCount64;
+  SoundManager.PlaybackContext.MasterGain.ChangeTo(1.0, 0.1);
+  SoundManager.PlaybackContext.AutoUpdate := True; // re-starts sounds auto-update
+  UniverseManager.StartThread; // re-starts universe auto-update
+  StartThread;   // re-starts sequence player auto-update
+
 end;
 
 procedure TSequencePlayer.StopPreview;
 begin
  FPlaying := FALSE;
  FPreview.Stop;
- OnTimeElapsed:=NIL;
- OnEndPreview:=NIL;
+ OnTimeElapsed := NIL;
+ OnEndPreview := NIL;
 end;
 
 function TSequencePlayer.PosPercent: single;
@@ -467,7 +508,7 @@ end;
 
 function TSequencePlayer.PreviewTimePosition: single;
 begin
- Result:=FPreview.Clock;
+ Result := FPreview.Clock;
 end;
 
 end.
