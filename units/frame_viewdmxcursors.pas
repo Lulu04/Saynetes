@@ -699,17 +699,6 @@ begin
     end;
 
     Brush.Style := bsClear;
-
-{
-    if Renderer.ModePrepaDMX {and MouseOverFixtureDescription(p.x, p.y)} then
-//    if MouseIsOverFixtureDescriptionArea then
-    begin
-      Pen.Color := $00C0C0C0;
-      Pen.Style := psDot;
-      r := Renderer.AdjustRect(FixtureDescriptionArea);
-      Rectangle(r.Left, r.Top, r.Right-1, r.Bottom);
-    end; }
-
    // Renderer.FTextStyleForTextRect.Wordbreak := True; // can go to the next line
 
     for i:=0 to High(Cursors) do
