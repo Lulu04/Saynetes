@@ -15,5 +15,6 @@
 {"hash":128724181,"name":"tframeviewprojector.midelete.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
 {"hash":214796480,"name":"tframeviewprojector.micreatergbgroup.caption","sourcebytes":[67,114,101,97,116,101,32,82,71,66,32,103,114,111,117,112],"value":"Create RGB group"},
 {"hash":341403,"name":"tframeviewprojector.milockfixture.caption","sourcebytes":[76,111,99,107],"value":"Lock"},
-{"hash":96810395,"name":"tframeviewprojector.miunlockfixture.caption","sourcebytes":[85,110,108,111,99,107],"value":"Unlock"}
+{"hash":96810395,"name":"tframeviewprojector.miunlockfixture.caption","sourcebytes":[85,110,108,111,99,107],"value":"Unlock"},
+{"hash":237374162,"name":"tframeviewprojector.mishowfixturemanual.caption","sourcebytes":[79,112,101,110,32,109,97,110,117,97,108,32,105,110,32,98,114,111,119,115,101,114],"value":"Open manual in browser"}
 ]}

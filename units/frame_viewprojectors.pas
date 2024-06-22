@@ -60,6 +60,7 @@ type
     BZoomAll: TSpeedButton;
     ComboBox1: TComboBox;
     MenuItem1: TMenuItem;
+    MIShowFixtureManual: TMenuItem;
     MenuItem3: TMenuItem;
     MICreateRGBGroup: TMenuItem;
     MIDelete: TMenuItem;
@@ -75,6 +76,7 @@ type
     Panel9: TPanel;
     PopFixture_ModeEditAction: TPopupMenu;
     PopFixture_ModePrepaDMX: TPopupMenu;
+    Separator1: TMenuItem;
     SpeedButton5: TSpeedButton;
     Splitter1: TSplitter;
     procedure BAddDMXClick(Sender: TObject);
@@ -100,6 +102,7 @@ type
     procedure MIHFlipClick(Sender: TObject);
     procedure MILockFixtureClick(Sender: TObject);
     procedure MIRotationClick(Sender: TObject);
+    procedure MIShowFixtureManualClick(Sender: TObject);
     procedure MIUnlockFixtureClick(Sender: TObject);
     procedure MIVFlipClick(Sender: TObject);
     procedure MIZoomClick(Sender: TObject);
@@ -1237,6 +1240,34 @@ procedure TFrameViewProjector.MIRotationClick(Sender: TObject);
 begin
   FSelectionMode := smRotationItem;
   Redraw;
+end;
+
+procedure TFrameViewProjector.MIShowFixtureManualClick(Sender: TObject);
+var fixLib: TLibraryFixture;
+  locs: array of TFixtureLibraryLocation;
+  i, j, k: integer;
+  flag: boolean;
+begin
+  if SelectedCount = 0 then exit;
+
+  // keep only one instance of same fixture location
+  locs := NIL;
+  SetLength(locs, SelectedCount);
+  for i:=0 to High(locs) do locs[i].InitDefault;
+  j := 0;
+  for i:=0 to SelectedCount-1 do begin
+    flag := False;
+    for k:=0 to High(locs) do
+      if (k <> i) and (Selected[i].FixLibLocation = locs[k]) then flag := True;
+
+    if not flag then begin
+      locs[j] := Selected[i].FixLibLocation;
+      inc(j);
+    end;
+  end;
+
+  for i:=0 to j-1 do
+    if fixLib.LoadFrom(locs[i]) then fixLib.OpenManualInBrowser;
 end;
 
 procedure TFrameViewProjector.MIUnlockFixtureClick(Sender: TObject);
