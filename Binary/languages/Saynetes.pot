@@ -1540,6 +1540,10 @@ msgstr ""
 msgid "OTHER action..."
 msgstr ""
 
+#: tframesequencer.misbstartfromhere.caption
+msgid "Start sequence from here"
+msgstr ""
+
 #: tframesequencer.mitimedelete.caption
 msgid "Delete this time interval"
 msgstr ""

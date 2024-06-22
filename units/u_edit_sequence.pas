@@ -90,6 +90,7 @@ type
     FToogleSpeedButtonManager: TToggleSpeedButtonManager;
   public
     FSeq: TFrameSequencer;
+    procedure ProcessEndOfSequencePreview;
 
     procedure SetAddMode(const aNewName: string);
     procedure SetModifyMode(const aName: string; const aSequencerInfoList: TSequencerInfoList; aTopIndex: integer);
@@ -281,6 +282,11 @@ begin
   FrameViewCmdList1.LB.SetFocus;
 end;
 
+procedure TFormSequenceEdition.ProcessEndOfSequencePreview;
+begin
+  BPreview.Enabled := True;
+end;
+
 procedure TFormSequenceEdition.SetAddMode( const aNewName: string );
 begin
   FModifyMode := FALSE;
@@ -346,6 +352,7 @@ end;
 
 procedure TFormSequenceEdition.B_ActionClick(Sender: TObject);
 begin
+  BPreview.Enabled := False;
   FSeq.Play;
 end;
 

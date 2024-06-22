@@ -36,6 +36,7 @@ type
      procedure InitByDefault;
      procedure RunAsCmdList;
      procedure RunAsSequencerInfoList;
+     procedure Update(const aElapsedTime: single);
      procedure LoopToBegin;
      procedure Stop;
      procedure NextLine;
@@ -94,7 +95,8 @@ var
 
 implementation
 
-uses u_resource_string, u_helper, u_utils, u_logfile, ALSound, PropertyUtils;
+uses u_resource_string, u_helper, u_logfile, u_sequence_player,
+  ALSound, PropertyUtils;
 
 { TSequence }
 
@@ -146,6 +148,44 @@ begin
   Clock := 0.0;
   if Length(CmdArray) > 0
     then Running := TRUE;
+end;
+
+procedure TSequence.Update(const aElapsedTime: single);
+var loopAlreadyDone: boolean;
+  A: TStringArray;
+  cmd: Integer;
+begin
+  TimeStretchFactor.OnElapse(aElapsedTime); // update strech factor value
+  if not Running or (Length(CmdArray) = 0) then exit;
+
+  Clock := Clock + aElapsedTime * TimeStretchFactor.Value;
+  if WaitSec > 0 then
+    WaitSec := WaitSec - (aElapsedTime * TimeStretchFactor.Value);
+  if WaitSec <= 0 then begin
+    loopAlreadyDone := False;
+    repeat
+      if EndOfPlay then break;
+      A := CmdArray[LineIndex].SplitToParamArray; // read and split one cmd
+      if (Length(A) > 0) and TryStrToInt(A[0], cmd) then
+        case cmd of
+          CMD_WAIT: begin
+            WaitSec += StringToSingle(A[1]); // trick to take in account the small pause value shortest than deltaMS
+            loopAlreadyDone := False;
+          end;
+          CMD_LOOP: begin
+            if loopAlreadyDone then WaitSec := 10 // avoid infinite loop in case of sequence with only loop action.
+              else LoopToBegin;
+            loopAlreadyDone := True;
+          end
+          else begin
+            ExecuteCmd(A);
+            //Log.Debug('execute "'+CmdArray[LineIndex]+'"');
+          end;
+        end;
+      NextLine;
+    until EndOfPlay or (WaitSec > 0);
+    if EndOfPlay then Stop;
+  end;
 end;
 
 procedure TSequence.LoopToBegin;

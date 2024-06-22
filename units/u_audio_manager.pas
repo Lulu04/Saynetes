@@ -156,6 +156,7 @@ type
 
     property Count: integer read GetCount;
     property PlayList: TALSPlaylist read GetPlayList;
+    property PlaybackContext: TALSPlaybackContext read FPlaybackContext;
   end;
 
 var

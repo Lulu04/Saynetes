@@ -1,6 +1,6 @@
 inherited FrameSequencer: TFrameSequencer
-  DesignLeft = 675
-  DesignTop = 371
+  DesignLeft = 644
+  DesignTop = 361
   inherited BGLVirtualScreen1: TBGLVirtualScreen
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -34,6 +34,14 @@ inherited FrameSequencer: TFrameSequencer
       OnClick = MISBAddOtherActionClick
     end
     object MenuItem8: TMenuItem
+      Caption = '-'
+    end
+    object MISBStartFromHere: TMenuItem
+      Caption = 'Start sequence from here'
+      ImageIndex = 15
+      OnClick = MISBStartFromHereClick
+    end
+    object Separator2: TMenuItem
       Caption = '-'
     end
     object MI_SBPaste: TMenuItem

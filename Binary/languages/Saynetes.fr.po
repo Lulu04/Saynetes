@@ -1611,6 +1611,10 @@ msgctxt "tframesequencer.misbaddotheraction.caption"
 msgid "OTHER action..."
 msgstr "action AUTRE..."
 
+#: tframesequencer.misbstartfromhere.caption
+msgid "Start sequence from here"
+msgstr "Démarrer la séquence à partir d'ici"
+
 #: tframesequencer.mitimedelete.caption
 msgid "Delete this time interval"
 msgstr "Supprimer cet intervalle de temps"

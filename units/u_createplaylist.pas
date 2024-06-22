@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses LCLHelper, LazFileUtils, u_project_manager, u_common,
+uses LCLHelper, LazFileUtils, u_common,
   u_userdialogs, u_resource_string, u_apputils;
 
 {$R *.lfm}
