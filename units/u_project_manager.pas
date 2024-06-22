@@ -339,6 +339,7 @@ procedure TSaynetesProject.UpdateStringAfterLanguageChange;
 begin
   FormMain.FrameMainAudio1.UpdateStringAfterLanguageChange;
   FormMain.FrameMainSequence1.FrameIntersessionMusic1.UpdateStringAfterLanguageChange;
+  FormMain.FrameViewProjector1.FillComboBoxUniverseToShow;
   FormMain.FrameViewProjector1.FrameViewDMXCursors1.UpdateStringAfterLanguageChange;
 
   if FormDMXChannelsTools <> NIL then
