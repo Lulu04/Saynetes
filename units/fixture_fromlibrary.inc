@@ -18,7 +18,8 @@ TFixtureLibraryLocation = record
   // return true if the record locates an existing .dmx file and an existing mode
   function HaveFixtureAndModeOk: boolean;
 
-  class operator =(a,b : TFixtureLibraryLocation) : boolean;
+  class operator =(a,b: TFixtureLibraryLocation): boolean;
+  class operator <>(a,b: TFixtureLibraryLocation): boolean;
 end;
 
 { TWebLink }
@@ -212,6 +213,8 @@ TLibraryFixture = record
 
   function GetChannelNamesForMode(const aModeName: string): TStringArray;
   function GetChannelCountForMode(const aMode: string): integer;
+
+  procedure OpenManualInBrowser;
 end;
 
 
@@ -533,6 +536,11 @@ begin
             (CompareStr(a.Mode, b.Mode) = 0);
 end;
 
+class operator TFixtureLibraryLocation.<>(a, b: TFixtureLibraryLocation): boolean;
+begin
+  Result := not (a = b);
+end;
+
 { TLibraryFixture }
 
 procedure TLibraryFixture.InitDefault;
@@ -674,6 +682,14 @@ begin
   Result := 0;
   j := Modes.IndexOf(aMode);
   if j <> -1 then Result := Length(Modes[j].ChannelsIDToUse);
+end;
+
+procedure TLibraryFixture.OpenManualInBrowser;
+var i: integer;
+begin
+  for i:=0 to High(WebLinks) do
+    if WebLinks[i].LinkType = 'manual' then
+      OpenURL(WebLinks[i].Url);
 end;
 
 { TFixLibMode }

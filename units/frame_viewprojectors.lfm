@@ -363,6 +363,7 @@ object FrameViewProjector: TFrameViewProjector
     end
   end
   object PopFixture_ModeEditAction: TPopupMenu
+    Images = DataModule1.ImageList1
     OnPopup = PopFixture_ModeEditActionPopup
     Left = 371
     Top = 106
@@ -383,6 +384,13 @@ object FrameViewProjector: TFrameViewProjector
       Caption = 'Unlock'
       ImageIndex = 35
       OnClick = MIUnlockFixtureClick
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object MIShowFixtureManual: TMenuItem
+      Caption = 'Open manual in browser'
+      OnClick = MIShowFixtureManualClick
     end
   end
 end

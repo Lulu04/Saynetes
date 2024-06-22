@@ -1878,6 +1878,10 @@ msgctxt "tframeviewprojector.mirotation.caption"
 msgid "Rotation"
 msgstr ""
 
+#: tframeviewprojector.mishowfixturemanual.caption
+msgid "Open manual in browser"
+msgstr ""
+
 #: tframeviewprojector.miunlockfixture.caption
 msgctxt "tframeviewprojector.miunlockfixture.caption"
 msgid "Unlock"
