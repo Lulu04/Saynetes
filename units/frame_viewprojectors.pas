@@ -427,15 +427,17 @@ begin
 end;
 
 procedure TFrameViewProjector.FillComboBoxUniverseToShow;
-var i: integer;
+var i, j: integer;
 begin
-  i := ComboBox1.ItemIndex;
+  j := ComboBox1.ItemIndex;
   ComboBox1.Clear;
   ComboBox1.Items.Add(SAll);
   for i:=0 to UniverseManager.Count-1 do
     ComboBox1.Items.Add(SOnly+UniverseManager.Universes[i].Name);
-  ComboBox1.ItemIndex := 0;
-  ComboBox1.Enabled := UniverseManager.Count>0;
+  if (j = -1) and (ComboBox1.Items.Count > 0) then j := 0
+    else if j >= ComboBox1.Items.Count then j := 0;
+  ComboBox1.ItemIndex := j;
+  ComboBox1.Enabled := UniverseManager.Count > 0;
 
   UpdateComboBoxLanguage;
 end;
