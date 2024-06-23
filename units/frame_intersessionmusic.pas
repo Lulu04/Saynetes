@@ -221,19 +221,13 @@ begin
 end;
 
 procedure TFrameIntersessionMusic.SpeedButton3Click(Sender: TObject);
-var c: TColor;
 begin
   case SoundManager.PlayList.State of
     ALS_STOPPED, ALS_PAUSED:
       begin
        if SoundManager.Playlist.Count = 0 then
        begin
-         c := FLBPlaylist.Color;
-         FLBPlaylist.Color := PercentColor(c, 0.5);
-         Application.processMessages;
-         Sleep(100);
-         FLBPlaylist.Color := c;
-         Application.processMessages;
+         DoRedFlashOnWinControl(FLBPlaylist);
          exit;
        end;
 
@@ -356,6 +350,7 @@ constructor TFrameIntersessionMusic.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   Fill;
+  UpdateWidgets;
 
   FrameLed1 := TFrameLed.Create(Self);
   FrameLed1.AssociateToPanel(Panel2);
