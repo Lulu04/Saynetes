@@ -196,16 +196,17 @@ begin
 
   if CanClose then begin
     Log.AddEmptyLine;
-    Log.Info('Save program''s options');
-    ProgramOptions.Save;
     Log.info('Saynètes: Application Shut down', 0, True);
-Log.Debug('    Stop thread universe manager');
+    Log.Info('Save program''s options', 1);
+    ProgramOptions.IntersessionMusicVolume := self.FrameMainSequence1.FrameIntersessionMusic1.Volume;
+    ProgramOptions.Save;
+    Log.Info('Stop thread universe manager', 1);
     UniverseManager.StopThread;
-Log.Debug('    Stop all sequences');
+    Log.Info('Stop all sequences', 1);
     Sequences.StopAll;
-Log.Debug('    Stop sequence player preview');
+    Log.Info('Stop sequence player preview', 1);
     SeqPlayer.StopPreview;
-Log.Debug('    Sound manager reset state');
+    Log.Info('Sound manager reset state', 1);
     SoundManager.ResetState;
 
     FrameViewProjector1.FreeOpenGLTextures;
