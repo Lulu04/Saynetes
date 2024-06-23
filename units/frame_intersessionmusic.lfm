@@ -60,7 +60,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       BorderSpacing.Left = 3
       BorderSpacing.Right = 5
       BorderStyle = bsNone
-      Color = 1644825
+      Color = 3947580
       Directory = 'C:\lazarus'
       ExtendedSelect = False
       Font.Color = 15395562
@@ -68,6 +68,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       ItemHeight = 0
       Mask = '*.playlist'
       OnDrawItem = FLBPlaylistDrawItem
+      OnMouseLeave = FLBPlaylistMouseLeave
       OnMouseMove = FLBPlaylistMouseMove
       OnSelectionChange = FLBPlaylistSelectionChange
       ParentShowHint = False

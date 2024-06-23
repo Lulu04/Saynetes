@@ -50,7 +50,7 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 5
       BorderSpacing.Bottom = 5
-      Color = 1644825
+      Color = 3947580
       Directory = 'C:\lazarus'
       ExtendedSelect = False
       Font.Color = 10473964
@@ -59,6 +59,7 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       Mask = '*.say'
       OnDblClick = FLBProjectsDblClick
       OnDrawItem = FLBProjectsDrawItem
+      OnMouseLeave = FLBProjectsMouseLeave
       OnMouseMove = FLBProjectsMouseMove
       ParentShowHint = False
       ParentFont = False
