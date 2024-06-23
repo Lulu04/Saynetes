@@ -245,8 +245,8 @@ end;
 
 procedure TFrameMainAudio.SpeedButton2Click(Sender: TObject);
 begin
- SoundManager.StopAllSound;
- SoundManager.DeleteAllEffects;
+ SoundManager.StopAllSound(False);
+ SoundManager.DeleteAllEffects(False);
 end;
 
 procedure TFrameMainAudio.TBPanChange(Sender: TObject);

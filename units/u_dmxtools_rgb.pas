@@ -310,7 +310,7 @@ end;
 
 procedure TFormDMXRGBTools.SpeedButton7Click(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
+  SoundManager.StopAllSound(False);
   SeqPlayer.StopPreview;
 end;
 

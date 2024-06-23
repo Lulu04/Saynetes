@@ -423,12 +423,15 @@ begin
   // velocity curve
   PanelCurve.Visible := (TargetIsFile and (FSelectedActionIndex in [3..7])) or
           (not TargetIsFile and (FSelectedActionIndex in [2,3]));
+
+  BListen.Visible := TargetIsFile;
+  BStopAll.Visible := BListen.Visible;
 end;
 
 procedure TFrameCmdAudio.ProcessSourceChangeEvent(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
 
   if not TargetIsFile then
   begin
@@ -569,8 +572,8 @@ end;
 
 procedure TFrameCmdAudio.BStopAllClick(Sender: TObject);
 begin
- SoundManager.StopAllSound;
- SoundManager.DeleteAllEffects;
+ SoundManager.StopAllSound(True);
+ SoundManager.DeleteAllEffects(True);
 end;
 
 procedure TFrameCmdAudio.BAddClick(Sender: TObject);
@@ -603,8 +606,8 @@ begin
     end;
   end;
 
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
   DoOnAddCmd;
 end;
 

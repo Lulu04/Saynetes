@@ -241,7 +241,7 @@ end;
 
 procedure TFormDMXChannelsTools.BAudioStopClick(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
+  SoundManager.StopAllSound(False);
 end;
 
 procedure TFormDMXChannelsTools.TB1Change(Sender: TObject);
