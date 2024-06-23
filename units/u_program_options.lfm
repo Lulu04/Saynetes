@@ -125,13 +125,11 @@ object FormProgramOptions: TFormProgramOptions
         OnSelectionChanged = TVSelectionChanged
         Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips]
         Items.Data = {
-          F9FFFFFF020004000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020000000000
-          0000010700000047656E6572616CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-          000000000000000700000047656E6572616CFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-          FFFF00000000000000000005000000436F6C6F72FFFFFFFFFFFFFFFFFFFFFFFF
-          FFFFFFFF0000000000000000000800000053657175656E6365FFFFFFFFFFFFFF
-          FFFFFFFFFFFFFFFFFF00000000000000000005000000417564696FFFFFFFFFFF
-          FFFFFFFFFFFFFFFFFFFFFF00000000000000000003000000444D58
+          F9FFFFFF020004000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
+          0000000700000047656E6572616CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+          000000000000000800000053657175656E6365FFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFF00000000000000000005000000417564696FFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFF00000000000000000003000000444D58
         }
         TreeLinePenStyle = psSolid
       end
@@ -151,7 +149,7 @@ object FormProgramOptions: TFormProgramOptions
         Height = 450
         Top = 1
         Width = 673
-        PageIndex = 4
+        PageIndex = 3
         Align = alClient
         TabOrder = 0
         object PageAppGeneral: TPage
@@ -234,17 +232,6 @@ object FormProgramOptions: TFormProgramOptions
             ParentColor = False
             ParentFont = False
             WordWrap = True
-          end
-        end
-        object PageAppColor: TPage
-          object ColorButton1: TColorButton
-            Left = 223
-            Height = 62
-            Top = 135
-            Width = 177
-            BorderWidth = 2
-            ButtonColorSize = 16
-            ButtonColor = 8388863
           end
         end
         object PageSequence: TPage
