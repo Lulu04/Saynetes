@@ -133,7 +133,7 @@ object FormOtherAction: TFormOtherAction
     Height = 331
     Top = 2
     Width = 288
-    PageIndex = 0
+    PageIndex = 3
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 2
     BorderSpacing.Right = 2
@@ -321,9 +321,9 @@ object FormOtherAction: TFormOtherAction
         ParentFont = False
       end
       object Label3: TLabel
-        AnchorSideLeft.Control = PageStart
-        AnchorSideTop.Control = PageStart
-        Left = 0
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideTop.Control = PageStretchTime
+        Left = 3
         Height = 15
         Top = 2
         Width = 113
