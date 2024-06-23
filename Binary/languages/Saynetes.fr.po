@@ -2147,6 +2147,10 @@ msgstr "Erreur lors de l'importation du fichier au projet !!"
 msgid "An error occurred while removing the file from disk"
 msgstr "Erreur lors de la suppression du fichier sur le disque"
 
+#: u_resource_string.sapplicationwrittenwith
+msgid "Application written with"
+msgstr "Application écrite en"
+
 #: u_resource_string.sapply
 msgid "Apply"
 msgstr "Appliquer"

@@ -110,6 +110,7 @@ object FormAbout: TFormAbout
     BorderSpacing.Right = 10
     BorderSpacing.Bottom = 10
     Color = 3881787
+    ReadOnly = True
     ScrollBars = ssAutoVertical
     TabOrder = 0
   end
