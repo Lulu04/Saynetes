@@ -60,7 +60,7 @@ type
     FSoundItems: TFPList;
     procedure RegisterSoundToItemList(aSnd: TALSSound);
     procedure DeleteSoundFromItemList(aID: TSoundID);
-    procedure DeleteAllSoundFromItemList;
+    procedure DeleteAllSoundFromItemList(aDeleteAlsoCaptureSound: boolean);
     function GetItemByID(aID: TSoundID): PSoundItem;
 
     procedure AddEffectToSoundItem(aID: TSoundID; const aEffect: TALSEffect; const aEffectName, aPresetName: string);
@@ -87,6 +87,7 @@ type
     constructor Create;
     destructor Destroy; override;
 
+    // remove all effects and sounds, except effects and playback applyed on capture
     procedure Clear;
     procedure Save(aStringList: TStringList);
     procedure Load(aStringList: TStringList; aAbsolutPathToAdd: string);
@@ -95,7 +96,9 @@ type
     function AddSound(const aFilename: string): TALSSound;
     procedure DeleteSoundByID(aID: TSoundID);
 
-    procedure StopAllSound;
+    procedure StopAllSound(aStopAlsoCapturePlayback: boolean);
+    procedure DeleteAllEffects(aDeleteAlsoCaptureEffect: boolean);
+    procedure DeleteAllSounds(aDeleteAlsoCaptureSound: boolean);
 
     function AutoWahPresetList: TStringArray;
     function ChorusPresetList: TStringArray;
@@ -116,8 +119,6 @@ type
     procedure DeleteEffectsOn(aID: TSoundID);
     function GetEffectsNamesOn(aID: TSoundID): string;
     function GetEffectsNamesArrayOn(aID: TSoundID): TStringArray;
-    procedure DeleteAllEffects;
-    procedure DeleteAllSounds;
 
     procedure ToogleLoopModeOn(aID: TSoundID);
 
@@ -366,18 +367,20 @@ begin
  end;
 end;
 
-procedure TSoundManager.DeleteAllSoundFromItemList;
+procedure TSoundManager.DeleteAllSoundFromItemList(aDeleteAlsoCaptureSound: boolean);
 var item: PSoundItem;
+  i: integer;
 begin
- while FSoundItems.Count > 0 do
- begin
-   item := PSoundItem(FSoundItems.Items[0]);
+  for i:=FSoundItems.Count-1 downto 0 do begin
+    item := PSoundItem(FSoundItems.Items[i]);
 
-   item^.FreeEffectsList;
-
-   Dispose(item);
-   FSoundItems.Delete( 0 );
- end;
+    if ((item^.SoundID = CAPTURE_IDAUDIO) and aDeleteAlsoCaptureSound) or
+       (item^.SoundID <> CAPTURE_IDAUDIO) then begin
+      item^.FreeEffectsList;
+      Dispose(item);
+      FSoundItems.Delete(i);
+    end;
+  end;
 end;
 
 function TSoundManager.GetItemByID(aID: TSoundID): PSoundItem;
@@ -503,17 +506,17 @@ var c: integer;
 begin
   Log.Info('Destroying Sound Manager');
 
-  DeleteAllEffects;
+  DeleteAllEffects(True);
   StopCaptureToPlayback;
-  StopAllSound;
+  StopAllSound(True);
 
-  DeleteAllSoundFromItemList;
-Log.Debug('Freed all sounds from item list', 1);
+  DeleteAllSoundFromItemList(True);
+  Log.Info('Freed all sounds from item list', 1);
   FSoundItems.Free;
 
   c := FPlaybackContext.SoundCount;
   FPlaybackContext.Free;
-Log.Debug('freed playback context', 1);
+  Log.Info('freed playback context', 1);
 
   if c > 0 then
     Log.Info('freed '+c.ToString+' sound(s)', 1);
@@ -522,8 +525,8 @@ end;
 
 procedure TSoundManager.Clear;
 begin
-  DeleteAllEffects;
-  DeleteAllSounds;
+  DeleteAllEffects(False);
+  DeleteAllSounds(False);
 end;
 
 procedure TSoundManager.Save(aStringList: TStringList);
@@ -643,24 +646,42 @@ begin
   DeleteSoundFromItemList(aID);
 end;
 
-procedure TSoundManager.StopAllSound;
-begin
-  FPlaybackContext.StopAllSound;
-end;
-
-procedure TSoundManager.DeleteAllEffects;
+procedure TSoundManager.StopAllSound(aStopAlsoCapturePlayback: boolean);
 var i: integer;
 begin
-  for i:=0 to FSoundItems.Count-1 do
-    PSoundItem(FSoundItems.Items[i])^.DeleteAllEffects;
+  if aStopAlsoCapturePlayback then FPlaybackContext.StopAllSound
+    else begin
+      for i:=FPlaybackContext.SoundCount-1 to 0 do
+        if FPlaybackContext.Sounds[i].Tag <> CAPTURE_IDAUDIO then
+          FPlaybackContext.Sounds[i].Stop;
+    end;
 end;
 
-procedure TSoundManager.DeleteAllSounds;
+procedure TSoundManager.DeleteAllEffects(aDeleteAlsoCaptureEffect: boolean);
+var i: integer;
+  sndItem: PSoundItem;
 begin
-  DeleteAllSoundFromItemList;
+  for i:=0 to FSoundItems.Count-1 do begin
+    sndItem := PSoundItem(FSoundItems.Items[i]);
+    if ((sndItem^.SoundID = CAPTURE_IDAUDIO) and aDeleteAlsoCaptureEffect) or
+       (sndItem^.SoundID <> CAPTURE_IDAUDIO) then
+      sndItem^.DeleteAllEffects;
+  end;
+end;
+
+procedure TSoundManager.DeleteAllSounds(aDeleteAlsoCaptureSound: boolean);
+var i: integer;
+begin
+  DeleteAllSoundFromItemList(aDeleteAlsoCaptureSound);
 
   ResetIdValue;
-  FPlaybackContext.DeleteAll;
+
+  if aDeleteAlsoCaptureSound then FPlaybackContext.DeleteAll
+    else begin
+      for i:=FPlaybackContext.SoundCount-1 downto 0 do
+        if FPlaybackContext.Sounds[i].Tag <> CAPTURE_IDAUDIO then
+          FPlaybackContext.Delete(FPlaybackContext.Sounds[i]);
+    end;
 end;
 
 procedure TSoundManager.ToogleLoopModeOn(aID: TSoundID);
@@ -1062,8 +1083,8 @@ end;
 
 procedure TSoundManager.ResetState;
 begin
-  StopAllSound;
-  DeleteAllEffects;
+  StopAllSound(True);
+  DeleteAllEffects(True);
   StopCaptureToPlayback;
 end;
 

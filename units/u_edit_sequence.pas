@@ -374,8 +374,8 @@ procedure TFormSequenceEdition.B_ShutDownClick(Sender: TObject);
 begin
   //SoundManager.StopCaptureToPlayback;
 
-  SoundManager.DeleteAllEffects;
-  SoundManager.StopAllSound;
+  SoundManager.DeleteAllEffects(True);
+  SoundManager.StopAllSound(True);
   UniverseManager.BlackOut;
 end;
 

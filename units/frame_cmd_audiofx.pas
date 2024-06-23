@@ -201,8 +201,8 @@ end;
 
 procedure TFrameCmdAudioFX.BStopAllClick(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
 end;
 
 procedure TFrameCmdAudioFX.BAddCmdClick(Sender: TObject);
@@ -214,8 +214,8 @@ begin
      FToogleSpeedButtonManager.Checked[SpeedButton6] then
     exit;
 
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
 
   FSelectedSounds := FrameViewAudioList1.GetSelected;
 
@@ -332,7 +332,7 @@ begin
     exit;
 
   // Delete all previous effects on all sounds.
-  SoundManager.DeleteAllEffects;
+  SoundManager.DeleteAllEffects(True);
   if not Panel4.Enabled then
     exit;
 
@@ -455,8 +455,8 @@ end;
 
 procedure TFrameCmdAudioFX.ProcessFileSelectionChange(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
 
   if AutoPlay and
      not FToogleSpeedButtonManager.Checked[SpeedButton7] then
@@ -646,8 +646,8 @@ end;
 
 procedure TFrameCmdAudioFX.ProcessSourceChangeEvent(Sender: TObject);
 begin
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(True);
+  SoundManager.DeleteAllEffects(True);
 
   if not TargetIsFile then
   begin

@@ -401,8 +401,8 @@ end;
 
 procedure TFrameViewTopList.MIInsertSequenceClick(Sender: TObject);
 begin
- SoundManager.StopAllSound;
- SoundManager.DeleteAllEffects;
+ SoundManager.StopAllSound(False);
+ SoundManager.DeleteAllEffects(False);
  Sequences.StopAll;
 
  FormSequenceEdition := TFormSequenceEdition.Create(Self);
@@ -426,8 +426,8 @@ procedure TFrameViewTopList.MINewSequenceClick(Sender: TObject);
 var seq: TSequence;
 begin
  // keep the capture ON
-  SoundManager.StopAllSound;
-  SoundManager.DeleteAllEffects;
+  SoundManager.StopAllSound(False);
+  SoundManager.DeleteAllEffects(False);
 
   Sequences.StopAll;
 
