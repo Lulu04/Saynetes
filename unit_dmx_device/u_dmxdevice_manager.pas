@@ -535,7 +535,7 @@ begin
   if DoSetUsedChannelCount(aPortindex, AValue) then
   begin
     FPorts[aPortindex].UsedChannel := AValue;
-    Log.Debug(Name+' sets used channel to '+AValue.ToString)
+    Log.Info(Name+' sets used channel to '+AValue.ToString)
   end
   else Log.Error(Name+' failed to set used channel to '+AValue.ToString);
 end;
@@ -600,19 +600,16 @@ begin
 
   if AValue = pdIn then
     s := 'input' else s:='output';
-  Log.Debug(Name+' Trying to set port '+aPortindex.ToString+' direction to '+s);
+  Log.Info(Name+' Trying to set port '+aPortindex.ToString+' direction to '+s);
 
-  if DoSetPortDirection(aPortindex, AValue) then
-  begin
+  if DoSetPortDirection(aPortindex, AValue) then begin
     if PortCount > 1
-      then Log.Debug(Name+' Port '+aPortindex.ToString+' sets to '+s)
-      else Log.Debug(Name+' sets to '+s);
-  end
-  else
-  begin
+      then Log.Info(Name+' Port '+aPortindex.ToString+' sets to '+s, 1)
+      else Log.Info(Name+' sets to '+s, 1);
+  end else begin
     if PortCount > 1
-      then Log.Error(Name+' Failed to set port '+aPortindex.ToString+' to '+s)
-      else Log.Error(Name+' Failed to set to '+s);
+      then Log.Error(Name+' Failed to set port '+aPortindex.ToString+' to '+s, 1)
+      else Log.Error(Name+' Failed to set to '+s, 1);
   end;
 
   FPorts[aPortindex].Direction := AValue;
@@ -676,9 +673,9 @@ begin
     Result := DoClose(aPortindex);
     FPorts[aPortindex].IsOpen := not Result;
     if Result then
-      Log.Debug(Name+' port '+aPortindex.ToString+' closed')
+      Log.Info(Name+' port '+aPortindex.ToString+' closed', 1)
     else
-      Log.Error(Name+' failed to close the port '+aPortindex.ToString);
+      Log.Error(Name+' failed to close the port '+aPortindex.ToString, 1);
   end
   else Result := FALSE;
 end;

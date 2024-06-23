@@ -508,15 +508,15 @@ begin
   StopAllSound;
 
   DeleteAllSoundFromItemList;
-Log.Debug('    Freed all sounds from item list');
+Log.Debug('Freed all sounds from item list', 1);
   FSoundItems.Free;
 
   c := FPlaybackContext.SoundCount;
   FPlaybackContext.Free;
-Log.Debug('    Freed playback context');
+Log.Debug('freed playback context', 1);
 
   if c > 0 then
-    Log.Info('    Freed '+c.ToString+' sound(s)');
+    Log.Info('freed '+c.ToString+' sound(s)', 1);
   inherited Destroy;
 end;
 
