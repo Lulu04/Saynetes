@@ -13,6 +13,7 @@ resourcestring
   SWrittenBy='Written by';
   SCredits='Credits';
   SIconAppBy='Application icon by';
+  SApplicationWrittenWith='Application written with';
 
   SLoadingFixtureImage='loading DMX fixture images';
   SLoadingCursorImage='loading DMX cursor images';

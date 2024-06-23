@@ -2058,6 +2058,10 @@ msgstr ""
 msgid "An error occurred while removing the file from disk"
 msgstr ""
 
+#: u_resource_string.sapplicationwrittenwith
+msgid "Application written with"
+msgstr ""
+
 #: u_resource_string.sapply
 msgid "Apply"
 msgstr ""
