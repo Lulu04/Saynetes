@@ -41,10 +41,10 @@ type
     FMouseMovingCursor: boolean;
     FClickOrigin: TPoint;
 
-    function GetIntervalMax: single;
-    function GetIntervalMin: single;
-    procedure SetIntervalMax(AValue: single);
-    procedure SetIntervalMin(AValue: single);
+    function GetPercentMax: single;
+    function GetPercentMin: single;
+    procedure SetPercentMax(AValue: single);
+    procedure SetPercentMin(AValue: single);
     function AxisWidth: integer;
     procedure UpdateCursorsImage;
     procedure DeleteCursorsImage;
@@ -55,18 +55,17 @@ type
     destructor Destroy; override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
-    procedure Init(aOrientation: TTrackBarOrientation; aReversed,
-        aActiveIntervalMode, aShowValue: boolean);
+    procedure Init(aOrientation: TTrackBarOrientation; aReversed, aActiveIntervalMode, aShowValue: boolean);
 
     // The percentage value when the interval mode is not activated. Range is [0..1]
     // If interval mode is not activated, this property refer to IntervalMax
-    property PercentValue: single read GetIntervalMax write SetIntervalMax;
+    property PercentValue: single read GetPercentMax write SetPercentMax;
     // The Min percentage value selected by the user when the interval mode is activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentValue
-    property IntervalMin: single read GetIntervalMin write SetIntervalMin;
+    property PercentMin: single read GetPercentMin write SetPercentMin;
     // The Max percentage value selected by the user when the interval mode is activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentValue
-    property IntervalMax: single read GetIntervalMax write SetIntervalMax;
+    property PercentMax: single read GetPercentMax write SetPercentMax;
 
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
   end;
@@ -281,12 +280,12 @@ begin
   Result := ScaleDesignToForm(2);
 end;
 
-function TFrameTrackBar.GetIntervalMax: single;
+function TFrameTrackBar.GetPercentMax: single;
 begin
   Result := FCursorMax.PercentValue;
 end;
 
-function TFrameTrackBar.GetIntervalMin: single;
+function TFrameTrackBar.GetPercentMin: single;
 begin
   if FIntervalMode then
     Result := FCursorMin.PercentValue
@@ -294,7 +293,7 @@ begin
     Result := FCursorMax.PercentValue;
 end;
 
-procedure TFrameTrackBar.SetIntervalMax(AValue: single);
+procedure TFrameTrackBar.SetPercentMax(AValue: single);
 begin
   AValue := EnsureRange(AValue, 0, 1);
   if FCursorMax.PercentValue = AValue then exit;
@@ -303,9 +302,9 @@ begin
   ProcessValueChange;
 end;
 
-procedure TFrameTrackBar.SetIntervalMin(AValue: single);
+procedure TFrameTrackBar.SetPercentMin(AValue: single);
 begin
-  if not FIntervalMode then SetIntervalMax(AValue)
+  if not FIntervalMode then SetPercentMax(AValue)
   else begin
     AValue := EnsureRange(AValue, 0, 1);
     if FCursorMin.PercentValue = AValue then exit;
