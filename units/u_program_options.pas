@@ -95,6 +95,7 @@ private
   // AUDIO
   FPlaybackDeviceIndex,
   FCaptureDeviceIndex: integer;
+  FIntersessionMusicVolume: single;
 
   // DMX View
   FStageType: TStageType;
@@ -144,7 +145,7 @@ public
   // Audio
   property PlaybackDeviceIndex: integer read FPlaybackDeviceIndex;
   property CaptureDeviceIndex: integer read FCaptureDeviceIndex;
-
+  property IntersessionMusicVolume: single read FIntersessionMusicVolume write FIntersessionMusicVolume;
 
   // DMX
   property StageType: TStageType read FStageType write SetStageType;
@@ -193,6 +194,7 @@ begin
   // Audio
   FPlaybackDeviceIndex := 0;
   FCaptureDeviceIndex := 0;
+  FIntersessionMusicVolume := 0.5;
 
   // DMX
   FStageType := stRectangle;
@@ -323,6 +325,7 @@ begin
    prop.Init('|');
    prop.Add('Playback', FPlaybackDeviceIndex);
    prop.Add('Capture', FCaptureDeviceIndex);
+   prop.Add('IntersessionMusicVolume', FIntersessionMusicVolume);
    t.Add(AUDIO_HEADER);
    t.Add(prop.PackedProperty);
 
@@ -405,6 +408,7 @@ begin
     FPlaybackDeviceIndex := i;
     prop.integerValueOf('Capture', i, 1);
     FCaptureDeviceIndex := i;
+    prop.SingleValueOf('IntersessionMusicVolume', FIntersessionMusicVolume, FIntersessionMusicVolume);
 
     // DMX
     k := t.IndexOf(DMX_HEADER);

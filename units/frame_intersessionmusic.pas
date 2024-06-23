@@ -62,12 +62,14 @@ type
     constructor Create(TheOwner: TComponent); override;
 
     procedure UpdateStringAfterLanguageChange;
+    // returns the volume sets by user
+    function Volume: single;
   end;
 
 implementation
 uses ALSound, u_audio_manager, LCLType, Graphics,
   u_common, u_createplaylist, u_userdialogs,
-  u_resource_string, u_utils, u_apputils, VelocityCurve,
+  u_resource_string, u_utils, u_apputils, u_program_options, VelocityCurve,
   System.UITypes, LazFileUtils;
 
 {$R *.lfm}
@@ -350,6 +352,8 @@ begin
   Label2.Caption := SPlaylist;
   Label7.Caption := SVolume;
 
+  TB1.Position := Round(ProgramOptions.IntersessionMusicVolume*TB1.Max);
+
   FItemIndexUnderMouse := -1;
 end;
 
@@ -377,6 +381,11 @@ procedure TFrameIntersessionMusic.UpdateStringAfterLanguageChange;
 begin
   BNext.Hint := SNext;
   BPrevious.Hint := SPrevious;
+end;
+
+function TFrameIntersessionMusic.Volume: single;
+begin
+  Result := TB1.Position / TB1.Max;
 end;
 
 end.
