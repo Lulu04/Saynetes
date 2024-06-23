@@ -146,7 +146,7 @@ object FormProjectOptions: TFormProjectOptions
         Height = 403
         Top = 1
         Width = 495
-        PageIndex = 1
+        PageIndex = 0
         Align = alClient
         TabOrder = 0
         object PageMainView: TPage

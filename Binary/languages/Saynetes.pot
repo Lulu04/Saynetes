@@ -2106,6 +2106,10 @@ msgstr ""
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr ""
 
+#: u_resource_string.saudio
+msgid "Audio"
+msgstr ""
+
 #: u_resource_string.saudiocaptureconnecteffect
 msgid "AUDIO CAPTURE - CONNECT EFFECT"
 msgstr ""
@@ -2578,6 +2582,10 @@ msgstr ""
 msgid "Disk is full or write protected."
 msgstr ""
 
+#: u_resource_string.sdmx
+msgid "DMX"
+msgstr ""
+
 #: u_resource_string.sdmxaudiofollower
 msgid "DMX - AUDIO FOLLOWER"
 msgstr ""
@@ -2906,6 +2914,11 @@ msgctxt "u_resource_string.sgain"
 msgid "Gain"
 msgstr ""
 
+#: u_resource_string.sgeneral
+msgctxt "u_resource_string.sgeneral"
+msgid "General"
+msgstr ""
+
 #: u_resource_string.sgreen
 msgctxt "u_resource_string.sgreen"
 msgid "Green"
@@ -3055,6 +3068,10 @@ msgstr ""
 
 #: u_resource_string.slumens
 msgid "Lumens"
+msgstr ""
+
+#: u_resource_string.smainview
+msgid "Main view"
 msgstr ""
 
 #: u_resource_string.smanufacturer

@@ -144,10 +144,18 @@ begin
 end;
 
 procedure TFormProjectOptions.UpdateLanguageOnWidgets;
+var n: TTreeNode;
 begin
   BOk.Caption := SOk;
   BCancel.Caption := SCancel;
   BApply.Caption := SApply;
+
+  TV.BeginUpdate;
+  TV.Items.Clear;
+  n := TV.Items.AddFirst(NIL, SMainView);
+  TV.Items.Add(n, SSequence);
+  TV.Selected := n;
+  TV.EndUpdate;
 end;
 
 procedure TFormProjectOptions.ProjectOptionsToWidgets;
