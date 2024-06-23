@@ -871,7 +871,7 @@ msgstr "Options du projet"
 #: tformprojectoptions.dividerbevel3.caption
 msgctxt "tformprojectoptions.dividerbevel3.caption"
 msgid "Panel to show"
-msgstr "Montre/Cache"
+msgstr "Panneau visible"
 
 #: tformprojectoptions.dividerbevel5.caption
 msgid "DMX actions"
@@ -2195,6 +2195,10 @@ msgstr "Un appareil avec ce nom de fichier existe déjà, voulez-vous l'écraser
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr "Pour rappel, les plages doivent couvrir l'intervalle de 0 à 255"
 
+#: u_resource_string.saudio
+msgid "Audio"
+msgstr "Audio"
+
 #: u_resource_string.saudiocaptureconnecteffect
 msgid "AUDIO CAPTURE - CONNECT EFFECT"
 msgstr "AUDIO CAPTURE - CONNECTE L'EFFET"
@@ -2673,6 +2677,10 @@ msgstr "Gradateur RVB"
 msgid "Disk is full or write protected."
 msgstr "Disque plein ou protégé en écriture."
 
+#: u_resource_string.sdmx
+msgid "DMX"
+msgstr "DMX"
+
 #: u_resource_string.sdmxaudiofollower
 msgid "DMX - AUDIO FOLLOWER"
 msgstr "DMX - SUIVEUR AUDIO"
@@ -3002,6 +3010,11 @@ msgctxt "u_resource_string.sgain"
 msgid "Gain"
 msgstr "Gain"
 
+#: u_resource_string.sgeneral
+msgctxt "u_resource_string.sgeneral"
+msgid "General"
+msgstr "Général"
+
 #: u_resource_string.sgreen
 msgctxt "u_resource_string.sgreen"
 msgid "Green"
@@ -3153,6 +3166,10 @@ msgstr "BOUCLE AVANT"
 #: u_resource_string.slumens
 msgid "Lumens"
 msgstr "Lumens"
+
+#: u_resource_string.smainview
+msgid "Main view"
+msgstr "Vue principale"
 
 #: u_resource_string.smanufacturer
 msgid "Manufacturer"
@@ -3684,7 +3701,7 @@ msgstr "Seq"
 #: u_resource_string.ssequence
 msgctxt "u_resource_string.ssequence"
 msgid "Sequence"
-msgstr "Sequence"
+msgstr "Séquence"
 
 #: u_resource_string.ssequencename
 msgid "Sequence name"

@@ -15,7 +15,6 @@ type
 
   TFormProgramOptions = class(TForm)
     BApply: TSpeedButton;
-    ColorButton1: TColorButton;
     ComboBox1: TComboBox;
     ComboBox2: TComboBox;
     ComboBox3: TComboBox;
@@ -38,7 +37,6 @@ type
     PageDMX: TPage;
     PageAudioDevice: TPage;
     PageSequence: TPage;
-    PageAppColor: TPage;
     PageAppGeneral: TPage;
     PaintBox1: TPaintBox;
     Panel1: TPanel;
@@ -66,6 +64,9 @@ type
     procedure UpdateLanguageOnWidgets;
     procedure ProgramOptionsToWidgets;
     procedure WidgetsToProgramOptions;
+  private
+    FSelectedStageIndex,
+    FSelectedSeatIndex: integer;
   public
 
   end;
@@ -113,6 +114,8 @@ private
   procedure SetLanguage(AValue: string);
   procedure SetLastProject(AValue: string);
   procedure SetMaxRecentProjectFile(AValue: integer);
+  procedure SetSeatType(AValue: TSeatType);
+  procedure SetStageType(AValue: TStageType);
   procedure SetWorkingFolder(AValue: string);
   procedure SetWorkingProject(AValue: string);
 public
@@ -144,8 +147,8 @@ public
 
 
   // DMX
-  property StageType: TStageType read FStageType;
-  property SeatType: TSeatType read FSeatType;
+  property StageType: TStageType read FStageType write SetStageType;
+  property SeatType: TSeatType read FSeatType write SetSeatType;
 
   // Sequencer
   property KeepOriginVisible: boolean read FKeepOriginVisible write SetKeepOriginVisible;
@@ -159,7 +162,7 @@ var
 implementation
 uses LCLType, ALSound, u_project_manager, u_logfile, PropertyUtils,
   u_resource_string, u_apputils, u_dmx_util, BGRABitmap, BGRABitmapTypes,
-  BGRASVG, Math, Project_util;
+  Math, Project_util, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -255,6 +258,18 @@ begin
   if FMaxRecentProjectFile = AValue then Exit;
   FMaxRecentProjectFile := AValue;
   Save;
+end;
+
+procedure TProgramOptions.SetSeatType(AValue: TSeatType);
+begin
+  if FSeatType = AValue then Exit;
+  FSeatType := AValue;
+end;
+
+procedure TProgramOptions.SetStageType(AValue: TStageType);
+begin
+  if FStageType = AValue then Exit;
+  FStageType := AValue;
 end;
 
 procedure TProgramOptions.SetWorkingFolder(AValue: string);
@@ -483,9 +498,18 @@ end;
 
 procedure TFormProgramOptions.CBStageSelect(Sender: TObject);
 begin
-  ProgramOptions.FStageType := TStageType(CBStage.ItemIndex);
-  ProgramOptions.FSeatType := TSeatType(CBSeats.ItemIndex);
   PaintBox1.Invalidate;
+  if FLoadingOptions then exit;
+
+  if (Sender = CBStage) and (CBStage.ItemIndex <> -1) then begin
+    FSelectedStageIndex := CBStage.ItemIndex;
+  //  ProgramOptions.StageType := TStageType(CBStage.ItemIndex)
+  end;
+
+  if (Sender = CBSeats) and (CBSeats.ItemIndex <> -1) then begin
+    FSelectedSeatIndex := CBSeats.ItemIndex;
+  //  ProgramOptions.SeatType := TSeatType(CBSeats.ItemIndex);
+  end;
 end;
 
 procedure TFormProgramOptions.FormShow(Sender: TObject);
@@ -493,7 +517,6 @@ begin
   RefreshAudioDeviceList;
   ProgramOptionsToWidgets;
   UpdateLanguageOnWidgets;
-
 
   TV.Selected := TV.Items.GetFirstNode;
 end;
@@ -519,8 +542,6 @@ end;
 
 procedure TFormProgramOptions.PaintBox1Paint(Sender: TObject);
 var ima: TBGRABitmap;
-  svg: TBGRASvg;
-  aspectRatio: single;
   h, margin: integer;
   f: string;
 begin
@@ -538,14 +559,8 @@ begin
   f := StageSvgFileFor(TStageType(CBStage.ItemIndex));
   if f <> '' then
   begin
-    svg := TBGRASvg.Create(f);
-    aspectRatio := svg.WidthAsPixel/svg.HeightAsPixel;
-    ima := TBGRABitmap.Create(Trunc(h*aspectRatio), h);
-
-    svg.StretchDraw(ima.Canvas2D, taCenter, tlCenter,
-      0, 0, ima.Width, ima.Height);
+    ima := SVGFileToBGRABitmap(f, -1, h);
     ima.Draw(PaintBox1.Canvas, (PaintBox1.ClientWidth-ima.Width) div 2, margin);
-    svg.Free;
     ima.Free;
   end;
 
@@ -553,23 +568,17 @@ begin
   f := SeatSvgFileFor(TSeatType(CBSeats.ItemIndex));
   if f <> '' then
   begin
-    svg := TBGRASvg.Create(f);
-    aspectRatio := svg.WidthAsPixel/svg.HeightAsPixel;
-    ima := TBGRABitmap.Create(Trunc(h*aspectRatio), h);
-
-    svg.StretchDraw(ima.Canvas2D, taCenter, tlCenter,
-      0, 0, ima.Width, ima.Height);
+    ima := SVGFileToBGRABitmap(f, -1, h);
     ima.Draw(PaintBox1.Canvas, (PaintBox1.ClientWidth-ima.Width) div 2, h+margin*2);
-    svg.Free;
     ima.Free;
   end;
 end;
 
 procedure TFormProgramOptions.TVSelectionChanged(Sender: TObject);
-var
-  nodeParent: TTreeNode;
+var nodeParent: TTreeNode;
   txt: string;
 begin
+  if TV.Selected = NIL then exit;
   txt := 'Selected: '+TV.Selected.Text+' Level '+TV.Selected.Level.ToString+' Index'+TV.Selected.Index.ToString;
 
   nodeParent := TV.Selected;
@@ -579,13 +588,9 @@ begin
   Caption := txt;
 
   case nodeParent.Index of
-   0: // Application
+   0: // General
      begin
-       case TV.Selected.Index of
-        0: Notebook1.PageIndex := Notebook1.IndexOf(PageAppGeneral);
-        1: Notebook1.PageIndex := Notebook1.IndexOf(PageAppColor);
-       end;
-
+       Notebook1.PageIndex := Notebook1.IndexOf(PageAppGeneral);
      end;
    1: // Sequence
      begin
@@ -619,25 +624,42 @@ begin
 end;
 
 procedure TFormProgramOptions.UpdateLanguageOnWidgets;
+var n: TTreeNode;
+   procedure AddToCB(aCB: TComboBox; aIndex: integer; const aStr: string);
+   begin
+     if aIndex < aCB.Items.Count then aCB.Items.Strings[aIndex] := aStr
+       else aCB.Items.Add(aStr);
+   end;
+
 begin
   BOk.Caption := SOk;
   BCancel.Caption := SCancel;
   BApply.Caption := SApply;
 
+  TV.BeginUpdate;
+  TV.Items.Clear;
+  n := TV.Items.AddFirst(NIL, SGeneral);
+  TV.Items.Add(n, SSequence);
+  TV.Items.Add(n, SAudio);
+  TV.Items.Add(n, SDmx);
+  TV.Selected := n;
+  TV.EndUpdate;
+
   Label1.Caption := SRequireTheProgramToBeRestarted;
   Label4.Caption := SRequireTheProgramToBeRestarted;
   Label5.Caption := SRequireTheProgramToBeRestarted;
 
-  CBStage.Items.Strings[0] := SNone;
-  CBStage.Items.Strings[1] := SRectangle;
-  CBStage.Items.Strings[2] := SQuare;
-  CBStage.Items.Strings[3] := SHalfCircle;
-  CBStage.Items.Strings[4] := SEllipse;
-  CBStage.Items.Strings[5] := SCustom1;
+  AddToCB(CBStage, 0, SNone);
+  AddToCB(CBStage, 1, SRectangle);
+  AddToCB(CBStage, 2, SQuare);
+  AddToCB(CBStage, 3, SHalfCircle);
+  AddToCB(CBStage, 4, SEllipse);
+  AddToCB(CBStage, 5, SCustom1);
 
-  CBSeats.Items.Strings[0] := SNone;
-  CBSeats.Items.Strings[1] := SSeats1;
-  CBSeats.Items.Strings[2] := SSeats2;
+  AddToCB(CBSeats, 0, SNone);
+  AddToCB(CBSeats, 1, SSeats1);
+  AddToCB(CBSeats, 2, SSeats2);
+
 end;
 
 procedure TFormProgramOptions.ProgramOptionsToWidgets;
@@ -669,8 +691,10 @@ begin
     ComboBox3.ItemIndex := i;
 
 // DMX
-    CBStage.ItemIndex := Ord(ProgramOptions.FStageType);
-    CBSeats.ItemIndex := Ord(ProgramOptions.FSeatType);
+    FSelectedStageIndex := Ord(ProgramOptions.StageType);
+    CBStage.ItemIndex := FSelectedStageIndex;
+    FSelectedSeatIndex := Ord(ProgramOptions.SeatType);
+    CBSeats.ItemIndex := FSelectedSeatIndex;
   finally
     FLoadingOptions := False;
   end;
@@ -686,7 +710,6 @@ begin
 // Application - General
    // language
    ProgramOptions.Language := SupportedLanguages[ComboBox1.ItemIndex].ShortName;
-   UpdateLanguageOnWidgets;
    // max recent
    ProgramOptions.MaxRecentProjectFile := SpinEdit1.Value;
 
@@ -697,13 +720,13 @@ begin
      else ProgramOptions.FCaptureDeviceIndex := ComboBox3.ItemIndex;
 
    // DMX
-   ProgramOptions.FStageType := TStageType(CBStage.ItemIndex);
-   ProgramOptions.FSeatType := TSeatType(CBSeats.ItemIndex);
-
+   ProgramOptions.StageType := TStageType(FSelectedStageIndex);
+   ProgramOptions.SeatType := TSeatType(FSelectedSeatIndex);
   finally
     ProgramOptions.UnlockSave;
     ProgramOptions.Save;
   end;
+   UpdateLanguageOnWidgets;
 
 end;
 

@@ -92,6 +92,10 @@ resourcestring
   SSequence='Sequence';
   SSeq='Seq';
   Srunning='running';
+  SGeneral='General';
+  SDmx='DMX';
+  SAudio='Audio';
+  SMainView='Main view';
 
   SAddAction='Add action';
   SApplyTheModifications='Apply the modifications';

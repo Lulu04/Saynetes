@@ -9,7 +9,7 @@ uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, LCLType, StdCtrls, Menus,
   Buttons, Graphics, frame_bglvirtualscreen_sequencer, Types, LCLTranslator,
   BGRABitmap, BGRABitmapTypes, BGLVirtualScreen, BGRAOpenGL, BGRAOpenGLType,
-  BGRASVG, BGRAFontGL,
+  BGRAFontGL,
   u_list_dmxuniverse, u_dmx_util, u_common,
   frame_viewdmxcursors, frame_velocity, u_notebook_util, frame_viewfixtureinfo;
 
@@ -1785,8 +1785,6 @@ end;
 
 procedure TFrameViewProjector.CreateSeatsTexture;
 var ima: TBGRABitmap;
-  svg: TBGRASvg;
-  aspectratio: single;
   f: string;
 begin
   if FTextureSeats <> NIL then
@@ -1799,20 +1797,13 @@ begin
     exit;
   end;
 
-  svg := TBGRASvg.Create(f);
-  aspectratio := svg.WidthAsPixel/svg.HeightAsPixel;
-  ima := TBGRABitmap.Create(trunc(350*aspectratio),350);
-
-  svg.StretchDraw(ima.Canvas2D, taCenter, tlCenter,0, 0, ima.Width, ima.Height);
+  ima := SVGFileToBGRABitmap(f, -1, ScaleDesignToForm(350));
   FTextureSeats := BGLTexture(ima);
-  svg.Free;
   ima.Free;
 end;
 
 procedure TFrameViewProjector.CreateStageTexture;
 var ima: TBGRABitmap;
-  svg: TBGRASvg;
-  aspectratio: single;
   f: string;
 begin
   if FTextureStage <> NIL then
@@ -1825,13 +1816,8 @@ begin
     exit;
   end;
 
-  svg := TBGRASvg.Create(f);
-  aspectratio := svg.WidthAsPixel/svg.HeightAsPixel;
-  ima := TBGRABitmap.Create(trunc(300*aspectratio),300);
-
-  svg.StretchDraw(ima.Canvas2D, taCenter, tlCenter,0, 0, ima.Width, ima.Height);
+  ima := SVGFileToBGRABitmap(f, -1, ScaleDesignToForm(300));
   FTextureStage := BGLTexture(ima);
-  svg.Free;
   ima.Free;
 end;
 
