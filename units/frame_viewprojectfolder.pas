@@ -70,8 +70,8 @@ begin
 
     Project.Load( f );
 
-    Project.KeepUniverseManager := FALSE;
   finally
+    Project.KeepUniverseManager := FALSE;
     Enabled := True;
     Screen.EndTempCursor(crHourGlass);
 
