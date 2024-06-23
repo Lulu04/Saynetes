@@ -1428,7 +1428,7 @@ msgstr ""
 
 #: tframeintersessionmusic.flbplaylist.hint
 msgctxt "tframeintersessionmusic.flbplaylist.hint"
-msgid "This is the list of intermission musics"
+msgid "This is the list of intersession musics"
 msgstr ""
 
 #: tframeintersessionmusic.label1.caption

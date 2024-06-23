@@ -36,6 +36,7 @@ type
     TB1: TTrackBar;
     procedure BPreviousMouseEnter(Sender: TObject);
     procedure FLBPlaylistDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
+    procedure FLBPlaylistMouseLeave(Sender: TObject);
     procedure FLBPlaylistMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure FLBPlaylistSelectionChange(Sender: TObject; {%H-}User: boolean);
     procedure MIDeletePlaylistClick(Sender: TObject);
@@ -103,14 +104,14 @@ begin
       if Index Mod 2 = 0 then
         Brush.Color := FLBPlaylist.Color
       else
-        Brush.Color := PercentColor(FLBPlaylist.Color, 0.25);
+        Brush.Color := u_utils.PercentColor(FLBPlaylist.Color, 0.25);
       Font.Color :=FLBPlaylist.Font.Color;// $009FD1EC;
     end;
     // render dot rectangle if mouse is over item
     if Index = FItemIndexUnderMouse then
     begin
       Pen.Style := psDot;
-      Pen.Color := PercentColor(FLBPlaylist.Color,0.95); //RGBToColor(200,200,150);
+      Pen.Color := u_utils.PercentColor(FLBPlaylist.Color,1); //RGBToColor(200,200,150);
       Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
     end
     else FillRect(ARect);
@@ -118,6 +119,12 @@ begin
     Brush.Style := bsClear;
     TextOut(ARect.Left+3, aRect.Top, ChangeFileExt(FLBPlaylist.Items.Strings[Index], ''));
   end;
+end;
+
+procedure TFrameIntersessionMusic.FLBPlaylistMouseLeave(Sender: TObject);
+begin
+  FItemIndexUnderMouse := -1;
+  FLBPlaylist.Invalidate;
 end;
 
 procedure TFrameIntersessionMusic.BPreviousMouseEnter(Sender: TObject);

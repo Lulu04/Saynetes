@@ -1,6 +1,6 @@
 {"version":1,"strings":[
 {"hash":51994499,"name":"tframeintersessionmusic.label1.caption","sourcebytes":[73,78,84,69,82,83,69,83,83,73,79,78,32,77,85,83,73,67],"value":"INTERSESSION MUSIC"},
-{"hash":124298355,"name":"tframeintersessionmusic.flbplaylist.hint","sourcebytes":[84,104,105,115,32,105,115,32,116,104,101,32,108,105,115,116,32,111,102,32,105,110,116,101,114,109,105,115,115,105,111,110,32,109,117,115,105,99,115],"value":"This is the list of intermission musics"},
+{"hash":191407299,"name":"tframeintersessionmusic.flbplaylist.hint","sourcebytes":[84,104,105,115,32,105,115,32,116,104,101,32,108,105,115,116,32,111,102,32,105,110,116,101,114,115,101,115,115,105,111,110,32,109,117,115,105,99,115],"value":"This is the list of intersession musics"},
 {"hash":5404860,"name":"tframeintersessionmusic.label10.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeintersessionmusic.label11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":148257861,"name":"tframeintersessionmusic.label7.caption","sourcebytes":[115,86,111,108,117,109,101],"value":"sVolume"},

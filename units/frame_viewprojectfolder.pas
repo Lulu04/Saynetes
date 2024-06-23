@@ -26,6 +26,7 @@ type
     procedure DirectoryEdit1AcceptDirectory(Sender: TObject; var Value: String);
     procedure FLBProjectsDblClick(Sender: TObject);
     procedure FLBProjectsDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
+    procedure FLBProjectsMouseLeave(Sender: TObject);
     procedure FLBProjectsMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure BSearchProjectFolderClick(Sender: TObject);
   private
@@ -69,8 +70,8 @@ begin
 
     Project.Load( f );
 
-    Project.KeepUniverseManager := FALSE;
   finally
+    Project.KeepUniverseManager := FALSE;
     Enabled := True;
     Screen.EndTempCursor(crHourGlass);
 
@@ -104,7 +105,7 @@ begin
     if Index = FItemIndexUnderMouse then
     begin
       Pen.Style := psDot;
-      Pen.Color := PercentColorRelative(FLBProjects.Color, 0.95);
+      Pen.Color := PercentColorRelative(FLBProjects.Color, 1);
       Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
     end
     else FillRect(ARect);
@@ -112,6 +113,12 @@ begin
     Brush.Style := bsClear;
     TextOut(ARect.Left+3, aRect.Top, ChangeFileExt(FLBProjects.Items.Strings[Index], ''));
   end;
+end;
+
+procedure TFrameViewProjectFolder.FLBProjectsMouseLeave(Sender: TObject);
+begin
+  FItemIndexUnderMouse := -1;
+  FLBProjects.Invalidate;
 end;
 
 procedure TFrameViewProjectFolder.FLBProjectsMouseMove(Sender: TObject;
