@@ -1495,7 +1495,7 @@ msgstr "Déplace les couleurs sélectionnées"
 
 #: tframeintersessionmusic.flbplaylist.hint
 msgctxt "tframeintersessionmusic.flbplaylist.hint"
-msgid "This is the list of intermission musics"
+msgid "This is the list of intersession musics"
 msgstr "C'est la liste des musiques d'entracte"
 
 #: tframeintersessionmusic.label1.caption

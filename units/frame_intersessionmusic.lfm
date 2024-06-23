@@ -53,7 +53,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Cursor = crHandPoint
       Left = 3
       Height = 181
-      Hint = 'This is the list of intermission musics'
+      Hint = 'This is the list of intersession musics'
       Top = 52
       Width = 313
       Anchors = [akTop, akLeft, akRight, akBottom]
