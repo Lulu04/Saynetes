@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, FileCtrl, Menus, StdCtrls,
   Buttons, ComCtrls, LCLTranslator, Types,
-  frame_led;
+  frame_led, frame_trackbar;
 
 type
 
@@ -26,6 +26,7 @@ type
     MINewPlaylist: TMenuItem;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
     PopupPlaylist: TPopupMenu;
     Shape2: TShape;
     Shape3: TShape;
@@ -33,7 +34,6 @@ type
     BNext: TSpeedButton;
     SpeedButton3: TSpeedButton;
     Timer1: TTimer;
-    TB1: TTrackBar;
     procedure BPreviousMouseEnter(Sender: TObject);
     procedure FLBPlaylistDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
     procedure FLBPlaylistMouseLeave(Sender: TObject);
@@ -45,15 +45,16 @@ type
     procedure PopupPlaylistPopup(Sender: TObject);
     procedure BPreviousClick(Sender: TObject);
     procedure SpeedButton3Click(Sender: TObject);
-    procedure TB1Change(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
+    FrameTB: TFrameTrackBar;
     FrameLed1: TFrameLed;
     FPreviousPlaylist: string;
+    procedure ProcessVolumeChange(Sender: TObject);
     procedure LoadPlaylist(const aFilename: string);
     function PlaylistIsPlaying: boolean;
     procedure UpdateWidgets;
-    function GetVolume: single;
+    function GetVolumeSquared: single;
     procedure Fill;
     procedure StopPlaylist;
   private
@@ -70,7 +71,7 @@ implementation
 uses ALSound, u_audio_manager, LCLType, Graphics,
   u_common, u_createplaylist, u_userdialogs,
   u_resource_string, u_utils, u_apputils, u_program_options, VelocityCurve,
-  System.UITypes, LazFileUtils;
+  System.UITypes, LazFileUtils, BGRABitmapTypes;
 
 {$R *.lfm}
 
@@ -246,7 +247,7 @@ begin
        else
        begin
          SoundManager.Playlist.Play(0);
-         SoundManager.Playlist.Volume := GetVolume;
+         SoundManager.Playlist.Volume := GetVolumeSquared;
        end;
        FrameLed1.State := True;
       end;
@@ -260,18 +261,18 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.TB1Change(Sender: TObject);
-begin
-  SoundManager.Playlist.Volume := GetVolume;
-  UpdateWidgets;
-end;
-
 procedure TFrameIntersessionMusic.Timer1Timer(Sender: TObject);
 begin
   Timer1.Enabled := FALSE;
   if PlaylistIsPlaying then
     UpdateWidgets;
   Timer1.Enabled := TRUE;
+end;
+
+procedure TFrameIntersessionMusic.ProcessVolumeChange(Sender: TObject);
+begin
+  SoundManager.Playlist.Volume := GetVolumeSquared;
+  UpdateWidgets;
 end;
 
 procedure TFrameIntersessionMusic.LoadPlaylist(const aFilename: string);
@@ -304,7 +305,7 @@ end;
 
 procedure TFrameIntersessionMusic.UpdateWidgets;
 begin
-  Label7.Caption := SVolume+LineEnding+FormatFloat('0.0', GetVolume*100)+'%';
+  Label7.Caption := SVolume+LineEnding+FormatFloat('0.0', Volume{GetVolumeSquared}*100)+'%';
 
   case SoundManager.PlayList.State of
    ALS_PLAYING:
@@ -335,9 +336,10 @@ begin
   end;
 end;
 
-function TFrameIntersessionMusic.GetVolume: single;
+function TFrameIntersessionMusic.GetVolumeSquared: single;
 begin
-  Result := (TB1.Position/TB1.Max)*(TB1.Position/TB1.Max);
+  Result := FrameTB.PercentValue;
+  Result := Result * Result;
 end;
 
 procedure TFrameIntersessionMusic.Fill;
@@ -352,7 +354,7 @@ begin
   Label2.Caption := SPlaylist;
   Label7.Caption := SVolume;
 
-  TB1.Position := Round(ProgramOptions.IntersessionMusicVolume*TB1.Max);
+  FrameTB.PercentValue := ProgramOptions.IntersessionMusicVolume;
 
   FItemIndexUnderMouse := -1;
 end;
@@ -360,13 +362,20 @@ end;
 constructor TFrameIntersessionMusic.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
-  Fill;
-  UpdateWidgets;
 
   FrameLed1 := TFrameLed.Create(Self);
   FrameLed1.AssociateToPanel(Panel2);
   FrameLed1.GreenType;
   FrameLed1.BlinkWhenOn := True;
+
+  FrameTB := TFrameTrackBar.Create(Self);
+  FrameTB.Parent := Panel3;
+  FrameTB.Align := alClient;
+  FrameTB.Init(trVertical, True, False, False);
+  FrameTB.OnChange := @ProcessVolumeChange;
+
+  Fill;
+  UpdateWidgets;
 end;
 
 procedure TFrameIntersessionMusic.StopPlaylist;
@@ -385,7 +394,7 @@ end;
 
 function TFrameIntersessionMusic.Volume: single;
 begin
-  Result := TB1.Position / TB1.Max;
+  Result := FrameTB.PercentValue;
 end;
 
 end.

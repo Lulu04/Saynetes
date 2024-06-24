@@ -55,10 +55,10 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Height = 181
       Hint = 'This is the list of intersession musics'
       Top = 52
-      Width = 313
+      Width = 334
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 3
-      BorderSpacing.Right = 5
+      BorderSpacing.Right = 10
       BorderStyle = bsNone
       Color = 3947580
       Directory = 'C:\lazarus'
@@ -84,7 +84,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Label11
-      Left = 144
+      Left = 155
       Height = 17
       Top = 233
       Width = 31
@@ -101,7 +101,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
-      Left = 144
+      Left = 155
       Height = 17
       Top = 250
       Width = 31
@@ -114,65 +114,42 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       ParentFont = False
     end
     object Shape2: TShape
-      AnchorSideTop.Control = Label1
+      AnchorSideLeft.Control = Panel3
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Label7
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
-      Left = 321
-      Height = 248
-      Top = 27
-      Width = 66
-      Anchors = [akTop, akRight, akBottom]
-      BorderSpacing.Top = 10
-      BorderSpacing.Right = 5
+      Left = 347
+      Height = 233
+      Top = 42
+      Width = 27
+      Anchors = [akTop, akLeft, akBottom]
       BorderSpacing.Bottom = 2
       Brush.Color = 6978171
+      Brush.Style = bsClear
       Pen.Color = 3552822
-      Pen.Width = 2
       Shape = stRoundRect
     end
     object Label7: TLabel
-      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Control = Panel3
       AnchorSideLeft.Side = asrCenter
-      AnchorSideTop.Control = Shape2
-      AnchorSideBottom.Control = TB1
-      Left = 332
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      Left = 338
       Height = 15
       Top = 27
       Width = 45
       Alignment = taCenter
+      BorderSpacing.Top = 10
       Caption = 'sVolume'
       Font.Color = 15395562
       Font.Style = [fsItalic]
       ParentColor = False
       ParentFont = False
       WordWrap = True
-    end
-    object TB1: TTrackBar
-      AnchorSideLeft.Control = Shape2
-      AnchorSideTop.Control = Label7
-      AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = Shape2
-      AnchorSideBottom.Side = asrBottom
-      Cursor = crHandPoint
-      Left = 347
-      Height = 230
-      Top = 43
-      Width = 31
-      Frequency = 20
-      Max = 200
-      OnChange = TB1Change
-      Orientation = trVertical
-      Position = 100
-      Reversed = True
-      ShowSelRange = False
-      Anchors = [akTop, akLeft, akBottom]
-      BorderSpacing.Left = 26
-      BorderSpacing.Top = 1
-      BorderSpacing.Bottom = 2
-      TabOrder = 1
     end
     object Shape3: TShape
       Tag = 1
@@ -230,7 +207,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Label10
       Cursor = crHandPoint
-      Left = 104
+      Left = 115
       Height = 20
       Top = 234
       Width = 20
@@ -253,7 +230,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Side = asrBottom
       Cursor = crHandPoint
-      Left = 195
+      Left = 206
       Height = 20
       Top = 234
       Width = 20
@@ -279,6 +256,27 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Width = 14
       BorderSpacing.Left = 15
       BevelOuter = bvNone
+      TabOrder = 1
+    end
+    object Panel3: TPanel
+      AnchorSideLeft.Control = Shape2
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Shape2
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Shape2
+      AnchorSideBottom.Side = asrBottom
+      Left = 349
+      Height = 225
+      Top = 46
+      Width = 23
+      Anchors = [akTop, akRight, akBottom]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 20
+      BorderSpacing.Bottom = 4
+      BevelOuter = bvNone
+      Color = 4934475
+      ParentColor = False
       TabOrder = 2
     end
   end
