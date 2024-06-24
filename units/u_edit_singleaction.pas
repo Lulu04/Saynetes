@@ -433,16 +433,16 @@ begin
     end;
     TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
       FParams[1] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[2] := FormatFloatWithDot('0.00', FrameTrackBar2.IntervalMin);
-      FParams[3] := FormatFloatWithDot('0.00', FrameTrackBar2.IntervalMax);
+      FParams[2] := FormatFloatWithDot('0.00', FrameTrackBar2.PercentMin);
+      FParams[3] := FormatFloatWithDot('0.00', FrameTrackBar2.PercentMax);
       FParams[4] := FormatFloatWithDot('0.00', FloatSpinEdit4.Value);
       if RadioButton5.Checked then FParams[5] := FParams[4]
         else FParams[5] := FormatFloatWithDot('0.00', FloatSpinEdit5.Value);
     end;
     CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
       FParams[3] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[4] := FormatFloatWithDot('0.00', FrameTrackBar2.IntervalMin);
-      FParams[5] := FormatFloatWithDot('0.00', FrameTrackBar2.IntervalMax);
+      FParams[4] := FormatFloatWithDot('0.00', FrameTrackBar2.PercentMin);
+      FParams[5] := FormatFloatWithDot('0.00', FrameTrackBar2.PercentMax);
       FParams[6] := FormatFloatWithDot('0.00', FloatSpinEdit4.Value);
       if RadioButton5.Checked then FParams[7] := FParams[6]
         else FParams[7] := FormatFloatWithDot('0.00', FloatSpinEdit5.Value);
@@ -625,15 +625,15 @@ begin
      FParams[4] := FormatFloatWithDot('0.00', TB8.Position/10);
    end;
    CMD_DMX_FLASH: begin // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
-     FParams[4] := FormatFloatWithDot('0.00', FrameTrackBar1.IntervalMin);
-     FParams[5] := FormatFloatWithDot('0.00', FrameTrackBar1.IntervalMax);
+     FParams[4] := FormatFloatWithDot('0.00', FrameTrackBar1.PercentMin);
+     FParams[5] := FormatFloatWithDot('0.00', FrameTrackBar1.PercentMax);
      FParams[6] := FormatFloatWithDot('0.00', FloatSpinEdit2.Value);
      if RadioButton3.Checked then FParams[7] := FParams[6]
        else FParams[7] := FormatFloatWithDot('0.00', FloatSpinEdit3.Value);
    end;
    TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
-     FParams[1] := FormatFloatWithDot('0.00', FrameTrackBar1.IntervalMin);
-     FParams[2] := FormatFloatWithDot('0.00', FrameTrackBar1.IntervalMax);
+     FParams[1] := FormatFloatWithDot('0.00', FrameTrackBar1.PercentMin);
+     FParams[2] := FormatFloatWithDot('0.00', FrameTrackBar1.PercentMax);
      FParams[3] := FormatFloatWithDot('0.00', FloatSpinEdit2.Value);
      if RadioButton3.Checked then FParams[4] := FParams[3]
        else FParams[4] := FormatFloatWithDot('0.00', FloatSpinEdit3.Value);
@@ -943,8 +943,8 @@ begin
        if FParams[4] = FParams[5] then RadioButton1.Checked := True else RadioButton2.Checked := True;
        if FParams[6] = FParams[7] then RadioButton3.Checked := True else RadioButton4.Checked := True;
        FrameTrackBar1.Init(trHorizontal, False, RadioButton2.Checked, True);
-       FrameTrackBar1.IntervalMin := StringToSingle(FParams[4]);
-       FrameTrackBar1.IntervalMax := StringToSingle(FParams[5]);
+       FrameTrackBar1.PercentMin := StringToSingle(FParams[4]);
+       FrameTrackBar1.PercentMax := StringToSingle(FParams[5]);
        FloatSpinEdit2.Value := StringToSingle(FParams[6]);
        FloatSpinEdit3.Value := StringToSingle(FParams[7]);
      end;
@@ -958,8 +958,8 @@ begin
        if FParams[1] = FParams[2] then RadioButton1.Checked := True else RadioButton2.Checked := True;
        if FParams[3] = FParams[4] then RadioButton3.Checked := True else RadioButton4.Checked := True;
        FrameTrackBar1.Init(trHorizontal, False, RadioButton2.Checked, True);
-       FrameTrackBar1.IntervalMin := StringToSingle(FParams[1]);
-       FrameTrackBar1.IntervalMax := StringToSingle(FParams[2]);
+       FrameTrackBar1.PercentMin := StringToSingle(FParams[1]);
+       FrameTrackBar1.PercentMax := StringToSingle(FParams[2]);
        FloatSpinEdit2.Value := StringToSingle(FParams[3]);
        FloatSpinEdit3.Value := StringToSingle(FParams[4]);
      end;
@@ -1062,8 +1062,8 @@ begin
        if FParams[2] = FParams[3] then RadioButton7.Checked := True else RadioButton8.Checked := True;
        if FParams[4] = FParams[5] then RadioButton5.Checked := True else RadioButton6.Checked := True;
        FrameTrackBar2.Init(trHorizontal, False, RadioButton8.Checked, True);
-       FrameTrackBar2.IntervalMin := StringToSingle(FParams[2]);
-       FrameTrackBar2.IntervalMax := StringToSingle(FParams[3]);
+       FrameTrackBar2.PercentMin := StringToSingle(FParams[2]);
+       FrameTrackBar2.PercentMax := StringToSingle(FParams[3]);
        FloatSpinEdit4.Value := StringToSingle(FParams[4]);
        FloatSpinEdit5.Value := StringToSingle(FParams[5]);
        FSE8Change(NIL);
@@ -1080,8 +1080,8 @@ begin
        if FParams[4] = FParams[5] then RadioButton7.Checked := True else RadioButton8.Checked := True;
        if FParams[6] = FParams[7] then RadioButton5.Checked := True else RadioButton6.Checked := True;
        FrameTrackBar2.Init(trHorizontal, False, RadioButton8.Checked, True);
-       FrameTrackBar2.IntervalMin := StringToSingle(FParams[4]);
-       FrameTrackBar2.IntervalMax := StringToSingle(FParams[5]);
+       FrameTrackBar2.PercentMin := StringToSingle(FParams[4]);
+       FrameTrackBar2.PercentMax := StringToSingle(FParams[5]);
        FloatSpinEdit4.Value := StringToSingle(FParams[6]);
        FloatSpinEdit5.Value := StringToSingle(FParams[7]);
        FSE8Change(NIL);

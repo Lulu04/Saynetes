@@ -187,7 +187,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Height = 298
     Top = 186
     Width = 263
-    PageIndex = 2
+    PageIndex = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Right = 3

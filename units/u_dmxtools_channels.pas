@@ -162,7 +162,7 @@ implementation
 
 uses LCLType, ALSound, u_resource_string, u_utils,
   u_audio_manager, u_project_manager, u_helper, u_sequence_player,
-  u_add_action_dmx, u_mainform, u_apputils;
+  u_add_action_dmx, u_mainform, u_apputils, BGRABitmapTypes;
 
 {$R *.lfm}
 
@@ -427,7 +427,7 @@ begin
   if RadioButton1.Checked then
     vmin := vmax
   else
-    vmin := FrameTrackBar1.IntervalMin;
+    vmin := FrameTrackBar1.PercentMin;
 
   dmin := FloatSpinEdit2.Value;
   if RadioButton3.Checked then
@@ -566,7 +566,7 @@ begin
       if RadioButton1.Checked then
         vmin := vmax
       else
-        vmin := FrameTrackBar1.IntervalMin;
+        vmin := FrameTrackBar1.PercentMin;
       dmin := FloatSpinEdit2.Value;
       if RadioButton3.Checked then
         dmax := dmin
@@ -749,6 +749,8 @@ begin
   FrameTrackBar1.Parent := Panel5;
   FrameTrackBar1.Align := alClient;
   FrameTrackBar1.Init(trHorizontal, False, False, True);
+  FrameTrackBar1.CursorFillColor := BGRA(255,128,0);
+  FrameTrackBar1.CursorOutlineColor := BGRA(192,96,0);
   FrameTrackBar1.OnChange := @RadioButton1Change;
 
   FFlamePresetManager := TPresetManager.Create(Self);
