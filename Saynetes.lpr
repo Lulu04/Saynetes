@@ -32,7 +32,7 @@ form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
 form_selectexistingswitchingchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
 form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
-form_newmanufacturer;
+form_newmanufacturer, BGRABitmapTypes;
 
 {$R *.res}
 
@@ -52,6 +52,8 @@ begin
   Log.Info('Saynète: Starting application', 0, True);
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
+
+  TFrameTrackBar.SetGlobalCursorColors(BGRA(0,160,255), BGRA(0,160,255,128));
 
   // create splash window
   FormSplash := TFormSplash.Create(Application);
