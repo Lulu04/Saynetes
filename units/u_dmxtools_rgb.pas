@@ -138,7 +138,8 @@ var
 implementation
 
 uses u_utils, u_resource_string, u_audio_manager, u_project_manager,
-  u_helper, u_sequence_player, ALSound, u_add_action_dmx, u_mainform;
+  u_helper, u_sequence_player, ALSound, u_add_action_dmx, u_mainform,
+  BGRABitmapTypes;
 
 {$R *.lfm}
 
@@ -188,6 +189,8 @@ begin
   FFrameTrackBar1.Parent := Panel5;
   FFrameTrackBar1.Align := alClient;
   FFrameTrackBar1.Init(trHorizontal, False, True, True);
+  FFrameTrackBar1.CursorFillColor := BGRA(255,128,0);
+  FFrameTrackBar1.CursorOutlineColor := BGRA(192,96,0);
   FFrameTrackBar1.OnChange := @RadioButton1Change;
   FFrameTrackBar1.Enabled := False;
 
@@ -541,7 +544,7 @@ begin
   if RadioButton1.Checked then
     vmin := vmax
   else
-    vmin := FFrameTrackBar1.IntervalMin;
+    vmin := FFrameTrackBar1.PercentMin;
 
   dmin := FloatSpinEdit2.Value;
   if RadioButton3.Checked then
@@ -721,7 +724,7 @@ begin
     if RadioButton1.Checked then
       vmin := vmax
     else
-      vmin := FFrameTrackBar1.IntervalMin;
+      vmin := FFrameTrackBar1.PercentMin;
     dmin := FloatSpinEdit2.Value;
     if RadioButton3.Checked then
       dmax := dmin

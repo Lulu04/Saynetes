@@ -9,7 +9,7 @@ uses
   BGRABitmap, BGRABitmapTypes;
 
 type
-  TTrackBarOrientation = ( trHorizontal, trVertical);
+  TTrackBarOrientation = (trHorizontal, trVertical);
 
   { TFrameTrackBar }
 
@@ -28,11 +28,14 @@ type
     end;
     PFrameTrackBarCursor = ^TFrameTrackBarCursor;
   private
+    class var FGlobalCursorFillColor, FGlobalCursorOutlineColor: TBGRAPixel;
+    class var FInstanceCreated: boolean;
+  private
     FOrientation: TTrackBarOrientation;
     FReversed,
     FIntervalMode,
     FShowValue: Boolean;
-    FCursorMax,          // used for single cursor
+    FCursorMax,
     FCursorMin: TFrameTrackBarCursor;
     FWorkingCursor: PFrameTrackBarCursor;
     FCursorPositionRange: single;
@@ -40,9 +43,14 @@ type
 
     FMouseMovingCursor: boolean;
     FClickOrigin: TPoint;
+    FCursorFillColor, FCursorOutlineColor: TBGRAPixel;
 
+    function GetCursorFillColor: TBGRAPixel;
+    function GetCursorOutlineColor: TBGRAPixel;
     function GetPercentMax: single;
     function GetPercentMin: single;
+    procedure SetCursorFillColor(AValue: TBGRAPixel);
+    procedure SetCursorOutlineColor(AValue: TBGRAPixel);
     procedure SetPercentMax(AValue: single);
     procedure SetPercentMin(AValue: single);
     function AxisWidth: integer;
@@ -57,6 +65,9 @@ type
 
     procedure Init(aOrientation: TTrackBarOrientation; aReversed, aActiveIntervalMode, aShowValue: boolean);
 
+    // sets the cursor colors used for each new instance created
+    class procedure SetGlobalCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
+
     // The percentage value when the interval mode is not activated. Range is [0..1]
     // If interval mode is not activated, this property refer to IntervalMax
     property PercentValue: single read GetPercentMax write SetPercentMax;
@@ -66,6 +77,10 @@ type
     // The Max percentage value selected by the user when the interval mode is activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentValue
     property PercentMax: single read GetPercentMax write SetPercentMax;
+
+    // Sets the color for this instance only
+    property CursorFillColor: TBGRAPixel read GetCursorFillColor write SetCursorFillColor;
+    property CursorOutlineColor: TBGRAPixel read GetCursorOutlineColor write SetCursorOutlineColor;
 
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
   end;
@@ -143,7 +158,7 @@ end;
 
 procedure TFrameTrackBar.PBPaint(Sender: TObject);
 var t: TBGRABitmap;
-  x: integer;
+  x, y: integer;
   txt: String;
 begin
   with PB.Canvas do begin
@@ -154,41 +169,37 @@ begin
       Pen.Color := clGrayText;
     if FOrientation = trHorizontal then
     begin
-      x := PB.ClientHeight div 4;
-      Line(FCursorMax.R.Width shr 1, x,
-           FCursorMax.R.Width shr 1, PB.ClientHeight-x);
-      Line(PB.ClientWidth-FCursorMax.R.Width shr 1, x,
-           PB.ClientWidth-FCursorMax.R.Width shr 1, PB.ClientHeight-x);
-      Line(FCursorMax.R.Width shr 1, PB.ClientHeight shr 1,
-           PB.ClientWidth-FCursorMax.R.Width shr 1, PB.ClientHeight shr 1);
-      Line(FCursorMax.R.Width shr 1, PB.ClientHeight shr 1+1,
-           PB.ClientWidth-FCursorMax.R.Width shr 1, PB.ClientHeight shr 1+1);
+      y := PB.ClientHeight div 4;
+      x := FCursorMax.R.Width shr 1;
+      if FIntervalMode then begin
+        Line(x, y, x, PB.ClientHeight-y);
+        Line(PB.ClientWidth-x, y, PB.ClientWidth-x, PB.ClientHeight-y);
+      end;
+      y := PB.ClientHeight shr 1;
+      Line(x, y, PB.ClientWidth-x, y);
+      Line(x, y+1, PB.ClientWidth-x, y+1);
       if FIntervalMode and Enabled then
       begin
-        Pen.Color := RGBToColor(192,96,0); // BGRA(192,96,0), 1, BGRA(255,128,0)
-        Line(FCursorMin.R.CenterPoint.x, PB.ClientHeight shr 1,
-             FCursorMax.R.CenterPoint.x, PB.ClientHeight shr 1);
-        Line(FCursorMin.R.CenterPoint.x, PB.ClientHeight shr 1+1,
-             FCursorMax.R.CenterPoint.x, PB.ClientHeight shr 1+1);
+        Pen.Color := FCursorOutlineColor;
+        Line(FCursorMin.R.CenterPoint.x, y, FCursorMax.R.CenterPoint.x, y);
+        Line(FCursorMin.R.CenterPoint.x, y+1, FCursorMax.R.CenterPoint.x, y+1);
       end;
     end
     else begin
       x := PB.ClientWidth div 4;
-      Line(x, FCursorMax.R.Height shr 1,
-           PB.ClientWidth-x, FCursorMax.R.Height shr 1);
-      Line(x, PB.ClientHeight-FCursorMax.R.Height shr 1,
-           PB.ClientWidth-x, PB.ClientHeight-FCursorMax.R.Height shr 1 );
-      Line(PB.ClientWidth shr 1, FCursorMax.R.Height shr 1,
-           PB.ClientWidth shr 1, PB.ClientHeight-FCursorMax.R.Height shr 1);
-      Line(PB.ClientWidth shr 1+1, FCursorMax.R.Height shr 1,
-           PB.ClientWidth shr 1+1, PB.ClientHeight-FCursorMax.R.Height shr 1);
+      y := FCursorMax.R.Height shr 1;
+      if FIntervalMode then begin
+        Line(x, y, PB.ClientWidth-x, y);
+        Line(x, PB.ClientHeight-y, PB.ClientWidth-x, PB.ClientHeight-y);
+      end;
+      x := PB.ClientWidth shr 1;
+      Line(x, y, x, PB.ClientHeight-y);
+      Line(x+1, y, x+1, PB.ClientHeight-y);
       if FIntervalMode and Enabled then
       begin
-        Pen.Color := RGBToColor(192,96,0); // BGRA(192,96,0), 1, BGRA(255,128,0)
-        Line(PB.ClientWidth shr 1, FCursorMin.R.CenterPoint.y,
-             PB.ClientWidth shr 1, FCursorMax.R.CenterPoint.y);
-        Line(PB.ClientWidth shr 1+1, FCursorMin.R.CenterPoint.y,
-             PB.ClientWidth shr 1+1, FCursorMax.R.CenterPoint.y);
+        Pen.Color := FCursorOutlineColor; ;
+        Line(x, FCursorMin.R.CenterPoint.y, x, FCursorMax.R.CenterPoint.y);
+        Line(x+1, FCursorMin.R.CenterPoint.y, x+1, FCursorMax.R.CenterPoint.y);
       end;
     end;
   end;
@@ -215,12 +226,10 @@ begin
   with PB.Canvas do begin
     Brush.Style := bsClear;
 
-    if Enabled then
-      Font.Color := Self.Font.Color
-    else
-      Font.Color := clGrayText;
+    if Enabled then Font.Color := Self.Font.Color
+      else Font.Color := clGrayText;
 
-    txt := FormatFloat('0.0', FCursorMax.PercentValue*100)+'%';
+    txt := FormatFloat('0.0', PercentValue*100)+'%';
     if FOrientation = trHorizontal then
     begin
       x := GetTextWidth(txt);
@@ -240,7 +249,7 @@ begin
     end;
 
     if FIntervalMode then begin
-      txt := FormatFloat('0.0', FCursorMin.PercentValue*100)+'%';
+      txt := FormatFloat('0.0', PercentMin*100)+'%';
 
       if FOrientation = trHorizontal then
       begin
@@ -283,6 +292,17 @@ end;
 function TFrameTrackBar.GetPercentMax: single;
 begin
   Result := FCursorMax.PercentValue;
+  if FReversed then Result := 1.0 - Result;
+end;
+
+function TFrameTrackBar.GetCursorFillColor: TBGRAPixel;
+begin
+  Result := FCursorFillColor;
+end;
+
+function TFrameTrackBar.GetCursorOutlineColor: TBGRAPixel;
+begin
+  Result := FCursorOutlineColor;
 end;
 
 function TFrameTrackBar.GetPercentMin: single;
@@ -291,11 +311,30 @@ begin
     Result := FCursorMin.PercentValue
   else
     Result := FCursorMax.PercentValue;
+
+  if FReversed then Result := 1.0 - Result;
+end;
+
+procedure TFrameTrackBar.SetCursorFillColor(AValue: TBGRAPixel);
+begin
+  if FCursorFillColor = AValue then Exit;
+  FCursorFillColor := AValue;
+  UpdateCursorsImage;
+  PB.Invalidate;
+end;
+
+procedure TFrameTrackBar.SetCursorOutlineColor(AValue: TBGRAPixel);
+begin
+  if FCursorOutlineColor = AValue then Exit;
+  FCursorOutlineColor := AValue;
+  UpdateCursorsImage;
+  PB.Invalidate;
 end;
 
 procedure TFrameTrackBar.SetPercentMax(AValue: single);
 begin
   AValue := EnsureRange(AValue, 0, 1);
+  if FReversed then AValue := 1.0 - AValue;
   if FCursorMax.PercentValue = AValue then exit;
 
   FCursorMax.PercentValue := AValue;
@@ -307,6 +346,7 @@ begin
   if not FIntervalMode then SetPercentMax(AValue)
   else begin
     AValue := EnsureRange(AValue, 0, 1);
+    if FReversed then AValue := 1.0 - AValue;
     if FCursorMin.PercentValue = AValue then exit;
 
     FCursorMin.PercentValue := AValue;
@@ -323,39 +363,39 @@ begin
   begin
     if FOrientation = trHorizontal then
     begin
-      w := EnsureRange(Round(PB.Height*0.05), 12, 16);
+      w := EnsureRange(Round(PB.Height*0.05), ScaleDesignToForm(12), ScaleDesignToForm(16));
       h := PB.Height;
     end
     else begin
       w := PB.Width;
-      h := EnsureRange(Round(PB.Width*0.05), 12, 16);
+      h := EnsureRange(Round(PB.Width*0.05), ScaleDesignToForm(12), ScaleDesignToForm(16));
     end;
     FCursorMax.CursorImage := TBGRABitmap.Create(w, h, BGRAPixelTransparent);
     FCursorMax.CursorImage.RoundRectAntialias(0, 0, w-1, h-1,
           Min(w-1, h-1)*0.5, Min(w-1, h-1)*0.5,
-          BGRA(192,96,0), 1, BGRA(255,128,0));
+          FCursorOutlineColor, 1, FCursorFillColor);
   end
   else begin
     if FOrientation = trHorizontal then
     begin
-      w := EnsureRange(Round(PB.ClientHeight*0.05), 12, 16);
+      w := EnsureRange(Round(PB.ClientHeight*0.05), ScaleDesignToForm(12), ScaleDesignToForm(16));
       h := (PB.ClientHeight - AxisWidth) div 2;
     end
     else begin
       w := (PB.ClientWidth - AxisWidth) div 2;
-      h := EnsureRange(Round(PB.ClientWidth*0.05), 12, 16);
+      h := EnsureRange(Round(PB.ClientWidth*0.05), ScaleDesignToForm(12), ScaleDesignToForm(16));
     end;
     FCursorMax.CursorImage := TBGRABitmap.Create(w, h, BGRAPixelTransparent);
     FCursorMax.CursorImage.DrawPolygonAntialias(
               [PointF(0,0), PointF(w-1,0), PointF(w-1,h/2), PointF(w/2,h-1),
                PointF(0,h/2), PointF(0,0)],
-              BGRA(192,96,0), 1, BGRA(255,128,0));
+              FCursorOutlineColor, 1, FCursorFillColor);
 
     FCursorMin.CursorImage := TBGRABitmap.Create(w, h, BGRAPixelTransparent);
     FCursorMin.CursorImage.DrawPolygonAntialias(
               [PointF(0,h-1), PointF(0,h/2), PointF(w/2,0), PointF(w-1,h/2),
                PointF(w-1,h-1), PointF(0,h-1)],
-              BGRA(192,96,0), 1, BGRA(255,128,0));
+              FCursorOutlineColor, 1, FCursorFillColor);
   end;
 end;
 
@@ -439,6 +479,14 @@ begin
   UpdateCursorsRect;
   FCursorMax.PercentValue := 1.0;
   FCursorMin.PercentValue := 0.0;
+
+  if not FInstanceCreated then begin
+    FGlobalCursorFillColor := BGRA(255,128,0);
+    FGlobalCursorOutlineColor := BGRA(192,96,0);
+    FInstanceCreated := True;
+  end;
+  FCursorFillColor := FGlobalCursorFillColor;
+  FCursorOutlineColor := FGlobalCursorOutlineColor;
 end;
 
 procedure TFrameTrackBar.EraseBackground(DC: HDC);
@@ -456,6 +504,13 @@ begin
   UpdateCursorsImage;
   UpdateCursorsRect;
   PB.Invalidate;
+end;
+
+class procedure TFrameTrackBar.SetGlobalCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
+begin
+  FGlobalCursorFillColor := aFillColor;
+  FGlobalCursorOutlineColor := aOutlineColor;
+  if not FInstanceCreated then FInstanceCreated := True;
 end;
 
 end.
