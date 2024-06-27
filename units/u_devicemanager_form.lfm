@@ -15,7 +15,7 @@ object FormDeviceManager: TFormDeviceManager
   OnKeyDown = FormKeyDown
   OnShow = FormShow
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '2.2.4.0'
   object NB1: TNotebook
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Panel1
@@ -24,7 +24,7 @@ object FormDeviceManager: TFormDeviceManager
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SpeedButton1
     Left = 0
-    Height = 388
+    Height = 387
     Top = 29
     Width = 1013
     PageIndex = 0
@@ -40,7 +40,7 @@ object FormDeviceManager: TFormDeviceManager
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Panel3
         Left = 5
-        Height = 335
+        Height = 334
         Top = 20
         Width = 588
         AlternateColor = 5131854
@@ -123,7 +123,7 @@ object FormDeviceManager: TFormDeviceManager
         AnchorSideBottom.Side = asrBottom
         Left = 5
         Height = 33
-        Top = 355
+        Top = 354
         Width = 588
         Anchors = [akLeft, akRight, akBottom]
         BevelOuter = bvNone
@@ -138,7 +138,7 @@ object FormDeviceManager: TFormDeviceManager
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Panel3
         Left = 631
-        Height = 335
+        Height = 334
         Top = 20
         Width = 377
         AlternateColor = 5131854
@@ -213,7 +213,7 @@ object FormDeviceManager: TFormDeviceManager
         AnchorSideBottom.Side = asrBottom
         Left = 631
         Height = 33
-        Top = 355
+        Top = 354
         Width = 377
         Anchors = [akTop, akLeft, akRight, akBottom]
         BevelOuter = bvNone
@@ -343,7 +343,7 @@ object FormDeviceManager: TFormDeviceManager
       Left = 1
       Height = 25
       Top = 2
-      Width = 80
+      Width = 89
       AutoSize = True
       BorderSpacing.Left = 1
       Constraints.MinHeight = 25
@@ -361,7 +361,7 @@ object FormDeviceManager: TFormDeviceManager
       AnchorSideTop.Control = Panel1
       AnchorSideTop.Side = asrCenter
       Cursor = crHandPoint
-      Left = 82
+      Left = 91
       Height = 25
       Top = 2
       Width = 80
@@ -376,7 +376,7 @@ object FormDeviceManager: TFormDeviceManager
     end
     object SE1: TSpinEdit
       Left = 293
-      Height = 23
+      Height = 33
       Top = 5
       Width = 50
       Color = 6908265
@@ -393,7 +393,7 @@ object FormDeviceManager: TFormDeviceManager
       AnchorSideTop.Control = Panel1
       AnchorSideTop.Side = asrCenter
       Cursor = crHandPoint
-      Left = 163
+      Left = 172
       Height = 25
       Top = 2
       Width = 80
@@ -414,8 +414,8 @@ object FormDeviceManager: TFormDeviceManager
     AnchorSideBottom.Side = asrBottom
     Cursor = crHandPoint
     Left = 446
-    Height = 20
-    Top = 437
+    Height = 21
+    Top = 436
     Width = 120
     Anchors = [akLeft, akBottom]
     AutoSize = True
@@ -440,7 +440,7 @@ object FormDeviceManager: TFormDeviceManager
     AutoSelect = False
     AutoSize = False
     Color = 6908265
-    ItemHeight = 15
+    ItemHeight = 0
     OnSelect = CBDeviceListSelect
     Style = csDropDownList
     TabOrder = 2
@@ -455,7 +455,7 @@ object FormDeviceManager: TFormDeviceManager
     AutoSelect = False
     AutoSize = False
     Color = 6908265
-    ItemHeight = 15
+    ItemHeight = 0
     OnSelect = CBDeviceDirectionSelect
     Style = csDropDownList
     TabOrder = 3

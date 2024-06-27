@@ -9,7 +9,7 @@ uses
   Buttons, ComCtrls, Dialogs, Menus, LCLTranslator,
   ALSound, frame_viewaudiolist,
   u_audio_manager,
-  frame_audiocapture;
+  frame_audiocapture, frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -37,6 +37,9 @@ type
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
     PopupMenu1: TPopupMenu;
     SB_fadein10s: TSpeedButton;
     SB_fadein1s: TSpeedButton;
@@ -53,9 +56,6 @@ type
     Shape4: TShape;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    TBPan: TTrackBar;
-    TBPitch: TTrackBar;
-    TBVolume: TTrackBar;
     Timer1: TTimer;
     procedure BPanCenterClick(Sender: TObject);
     procedure BPitchNormalClick(Sender: TObject);
@@ -76,16 +76,13 @@ type
     function SelectedSound: TALSSound;
     procedure ProcessSoundRightClick(Sender: TObject);
 
-    function CursorToVolume: single;
-    procedure VolumeToCursor(AValue: single);
-    function CursorToPan: single;
-    procedure PanToCursor(AValue: single);
-    function CursorToPitch: single;
-    procedure PitchToCursor(AValue: single);
     procedure RedockPanels;
   public
     FrameAudioCapture1: TFrameAudioCapture;
     FrameViewAudioList1: TFrameViewAudioList;
+    FrameTBVolume: TFrameTBAudioVolume;
+    FrameTBPan: TFrameTBAudioPan;
+    FrameTBPitch: TFrameTBAudioPitch;
 
     constructor Create(aOwner: TComponent); override;
     procedure EraseBackground({%H-}DC: HDC); override;
@@ -118,7 +115,7 @@ begin
  if snd <> NIL then
    snd.Pan.Value := ALS_PAN_CENTER
  else
-   TBPan.Position := 0;
+   FrameTBPan.Value := ALS_PAN_CENTER;
 end;
 
 procedure TFrameMainAudio.BPitchNormalClick(Sender: TObject);
@@ -128,7 +125,7 @@ begin
  if snd <> NIL then
    snd.Pitch.Value := ALS_PITCH_NORMAL
  else
-   TBPitch.Position := 100;
+   FrameTBPitch.Value := ALS_PITCH_NORMAL;
 end;
 
 procedure TFrameMainAudio.MILoopClick(Sender: TObject);
@@ -253,10 +250,10 @@ procedure TFrameMainAudio.TBPanChange(Sender: TObject);
 var snd: TALSSound;
  v: single;
 begin
-  v := CursorToPan;
+  v := FrameTBPan.Value;
   lbl_pan.Caption := PanToStringPercent(v);
 
-  if Sender = TBPan then
+  if Sender = FrameTBPan then
   begin
     snd := SelectedSound;
     if snd <> NIL then
@@ -268,10 +265,10 @@ procedure TFrameMainAudio.TBPitchChange(Sender: TObject);
 var snd: TALSSound;
  v: single;
 begin
-  v := CursorToPitch;
+  v := FrameTBPitch.Value;
   lbl_freq.Caption := PitchToString(v);
 
-  if Sender = TBPitch then
+  if Sender = FrameTBPitch then
   begin
     snd := SelectedSound;
     if snd <> NIL then
@@ -283,10 +280,10 @@ procedure TFrameMainAudio.TBVolumeChange(Sender: TObject);
 var snd: TALSSound;
  v: single;
 begin
-  v := CursorToVolume;
+  v := FrameTBVolume.Value;
   lbl_volume.Caption := VolumeToStringPercent(v);
 
-  if Sender = TBVolume then begin
+  if Sender = FrameTBVolume then begin
     snd := SelectedSound;
     if snd <> NIL then
       snd.Volume.Value := v;
@@ -296,6 +293,7 @@ end;
 procedure TFrameMainAudio.Timer1Timer(Sender: TObject);
 var snd: TALSSound;
  callback: TNotifyEvent;
+ v: single;
 begin
   Timer1.Enabled:=FALSE;
   // update the position of the trackbar for the selected audio
@@ -303,25 +301,28 @@ begin
   if snd <> NIL then
   begin
     // volume
-    callback := TBVolume.OnChange;
-    TBVolume.OnChange := NIL;
-    VolumeToCursor(snd.Volume.Value);
-    TBVolume.OnChange := callback;
-    lbl_volume.Caption := VolumeToStringPercent(snd.Volume.Value);
+    callback := FrameTBVolume.OnChange;
+    FrameTBVolume.OnChange := NIL;
+    v := snd.Volume.Value;
+    FrameTBVolume.Value := v;
+    FrameTBVolume.OnChange := callback;
+    lbl_volume.Caption := VolumeToStringPercent(v);
 
     // pan
-    callback := TBPan.OnChange;
-    TBPan.OnChange := NIL;
-    PanToCursor(snd.Pan.Value);
-    TBPan.OnChange := callback;
-    lbl_pan.Caption := PanToStringPercent(snd.Pan.Value);
+    callback := FrameTBPan.OnChange;
+    FrameTBPan.OnChange := NIL;
+    v := snd.Pan.Value;
+    FrameTBPan.Value := v;
+    FrameTBPan.OnChange := callback;
+    lbl_pan.Caption := PanToStringPercent(v);
 
     // frequency
-    callback := TBPitch.OnChange;
-    TBPitch.OnChange := NIL;
-    PitchToCursor(snd.Pitch.Value);
-    TBPitch.OnChange := callback;
-    lbl_freq.Caption := PitchToString(snd.Pitch.Value);
+    callback := FrameTBPitch.OnChange;
+    FrameTBPitch.OnChange := NIL;
+    v := snd.Pitch.Value;
+    FrameTBPitch.Value := v;
+    FrameTBPitch.OnChange := callback;
+    lbl_freq.Caption := PitchToString(v);
   end;
 
   Timer1.Enabled:=TRUE;
@@ -343,37 +344,6 @@ begin
     exit;
 
   PopupMenu1.PopUp;
-end;
-
-function TFrameMainAudio.CursorToVolume: single;
-begin
-  Result := TBVolume.Position/TBVolume.Max;
-  Result := Result*Result;
-end;
-
-procedure TFrameMainAudio.VolumeToCursor(AValue: single);
-begin
-  TBVolume.Position := Round(Sqrt(AValue)*TBVolume.Max);
-end;
-
-function TFrameMainAudio.CursorToPan: single;
-begin
-  Result := TBPan.Position*0.01;
-end;
-
-procedure TFrameMainAudio.PanToCursor(AValue: single);
-begin
-  TBPan.Position := Round(AValue*100);
-end;
-
-function TFrameMainAudio.CursorToPitch: single;
-begin
-  Result := TBPitch.Position*0.01;
-end;
-
-procedure TFrameMainAudio.PitchToCursor(AValue: single);
-begin
-  TBPitch.Position := Round(AValue*100);
 end;
 
 procedure TFrameMainAudio.RedockPanels;
@@ -443,6 +413,21 @@ begin
   FrameAudioCapture1 := TFrameAudioCapture.Create(Self);
   FrameAudioCapture1.Parent := Panel2;
   FrameAudioCapture1.Align := alClient;
+
+  FrameTBVolume := TFrameTBAudioVolume.Create(Self, Panel7);
+  FrameTBVolume.Init(trHorizontal, False, False, False);
+  FrameTBVolume.Value := 1.0;
+  FrameTBVolume.OnChange := @TBVolumeChange;
+
+  FrameTBPan := TFrameTBAudioPan.Create(Self, Panel8);
+  FrameTBPan.Init(trHorizontal, False, False, False);
+  FrameTBPan.Value := 0.0;
+  FrameTBPan.OnChange := @TBPanChange;
+
+  FrameTBPitch := TFrameTBAudioPitch.Create(Self, Panel9);
+  FrameTBPitch.Init(trHorizontal, False, False, False);
+  FrameTBPitch.Value := 1.0;
+  FrameTBPitch.OnChange := @TBPitchChange;
 end;
 
 procedure TFrameMainAudio.EraseBackground(DC: HDC);
@@ -504,16 +489,12 @@ begin
 end;
 
 procedure TFrameMainAudio.UpdateStringAfterLanguageChange;
-var v: Single;
 begin
   FrameAudioCapture1.UpdateStringAfterLanguageChange;
 
-  v := CursorToVolume;
-  lbl_volume.Caption := VolumeToStringPercent(v);
-  v := CursorToPan;
-  lbl_pan.Caption := PanToStringPercent(v);
-  v := CursorToPitch;
-  lbl_freq.Caption := PitchToString(v);
+  lbl_volume.Caption := VolumeToStringPercent(FrameTBVolume.Value);
+  lbl_pan.Caption := PanToStringPercent(FrameTBPan.Value);
+  lbl_freq.Caption := PitchToString(FrameTBPitch.Value);
 
   Label3.Caption := SVolume;
   Label4.Caption := SPan;

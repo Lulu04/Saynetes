@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, FileCtrl, Menus, StdCtrls,
   Buttons, ComCtrls, LCLTranslator, Types,
-  frame_led, frame_trackbar;
+  frame_led, frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -47,14 +47,13 @@ type
     procedure SpeedButton3Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
-    FrameTB: TFrameTrackBar;
+    FrameTBVol: TFrameTBAudioVolume;
     FrameLed1: TFrameLed;
     FPreviousPlaylist: string;
     procedure ProcessVolumeChange(Sender: TObject);
     procedure LoadPlaylist(const aFilename: string);
     function PlaylistIsPlaying: boolean;
     procedure UpdateWidgets;
-    function GetVolumeSquared: single;
     procedure Fill;
     procedure StopPlaylist;
   private
@@ -63,7 +62,7 @@ type
     constructor Create(TheOwner: TComponent); override;
 
     procedure UpdateStringAfterLanguageChange;
-    // returns the volume sets by user
+    // returns the volume sets by user (not squared)
     function Volume: single;
   end;
 
@@ -247,7 +246,7 @@ begin
        else
        begin
          SoundManager.Playlist.Play(0);
-         SoundManager.Playlist.Volume := GetVolumeSquared;
+         SoundManager.Playlist.Volume := FrameTBVol.Value;
        end;
        FrameLed1.State := True;
       end;
@@ -271,7 +270,7 @@ end;
 
 procedure TFrameIntersessionMusic.ProcessVolumeChange(Sender: TObject);
 begin
-  SoundManager.Playlist.Volume := GetVolumeSquared;
+  SoundManager.Playlist.Volume := FrameTBVol.Value;
   UpdateWidgets;
 end;
 
@@ -280,7 +279,7 @@ var t: TStringList;
   i: integer;
   flagOn: boolean;
 begin
-  t:=TStringList.Create;
+  t := TStringList.Create;
   try
     try
       t.LoadFromFile(aFilename);
@@ -305,7 +304,7 @@ end;
 
 procedure TFrameIntersessionMusic.UpdateWidgets;
 begin
-  Label7.Caption := SVolume+LineEnding+FormatFloat('0.0', Volume{GetVolumeSquared}*100)+'%';
+  Label7.Caption := SVolume+LineEnding+FormatFloat('0.0', FrameTBVol.Value*100)+'%';
 
   case SoundManager.PlayList.State of
    ALS_PLAYING:
@@ -336,12 +335,6 @@ begin
   end;
 end;
 
-function TFrameIntersessionMusic.GetVolumeSquared: single;
-begin
-  Result := FrameTB.PercentValue;
-  Result := Result * Result;
-end;
-
 procedure TFrameIntersessionMusic.Fill;
 begin
   FLBPlaylist.Mask := '*'+PLAYLIST_FILE_EXTENSION;
@@ -354,7 +347,7 @@ begin
   Label2.Caption := SPlaylist;
   Label7.Caption := SVolume;
 
-  FrameTB.PercentValue := ProgramOptions.IntersessionMusicVolume;
+  FrameTBVol.Value := ProgramOptions.IntersessionMusicVolume;
 
   FItemIndexUnderMouse := -1;
 end;
@@ -368,11 +361,9 @@ begin
   FrameLed1.GreenType;
   FrameLed1.BlinkWhenOn := True;
 
-  FrameTB := TFrameTrackBar.Create(Self);
-  FrameTB.Parent := Panel3;
-  FrameTB.Align := alClient;
-  FrameTB.Init(trVertical, True, False, False);
-  FrameTB.OnChange := @ProcessVolumeChange;
+  FrameTBVol := TFrameTBAudioVolume.Create(Self, Panel3);
+  FrameTBVol.Init(trVertical, True, False, False);
+  FrameTBVol.OnChange := @ProcessVolumeChange;
 
   Fill;
   UpdateWidgets;
@@ -394,7 +385,7 @@ end;
 
 function TFrameIntersessionMusic.Volume: single;
 begin
-  Result := FrameTB.PercentValue;
+  Result := FrameTBVol.Value;
 end;
 
 end.

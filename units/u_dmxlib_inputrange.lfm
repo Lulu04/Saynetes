@@ -16,7 +16,7 @@ object FormInputDMXRange: TFormInputDMXRange
   LCLVersion = '2.2.4.0'
   object Label1: TLabel
     Left = 40
-    Height = 20
+    Height = 23
     Top = 24
     Width = 100
     Caption = 'Begin'
@@ -28,7 +28,7 @@ object FormInputDMXRange: TFormInputDMXRange
   end
   object Label2: TLabel
     Left = 40
-    Height = 20
+    Height = 23
     Top = 72
     Width = 100
     Caption = 'End'
@@ -43,7 +43,7 @@ object FormInputDMXRange: TFormInputDMXRange
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Label1
     Left = 140
-    Height = 29
+    Height = 35
     Top = 24
     Width = 98
     Color = 9174223
@@ -58,7 +58,7 @@ object FormInputDMXRange: TFormInputDMXRange
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Label2
     Left = 140
-    Height = 29
+    Height = 35
     Top = 72
     Width = 98
     Color = 9174223
@@ -120,7 +120,7 @@ object FormInputDMXRange: TFormInputDMXRange
     AnchorSideRight.Side = asrBottom
     Left = 4
     Height = 75
-    Top = 109
+    Top = 115
     Width = 286
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 4

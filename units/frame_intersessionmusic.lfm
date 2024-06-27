@@ -19,7 +19,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
     BevelOuter = bvNone
     ClientHeight = 277
     ClientWidth = 392
-    Color = 4934475
+    Color = 2894892
     ParentColor = False
     TabOrder = 0
     object Label1: TLabel
@@ -128,8 +128,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Width = 27
       Anchors = [akTop, akLeft, akBottom]
       BorderSpacing.Bottom = 2
-      Brush.Color = 6978171
-      Brush.Style = bsClear
+      Brush.Color = 3815994
       Pen.Color = 3552822
       Shape = stRoundRect
     end
@@ -275,7 +274,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       BorderSpacing.Right = 20
       BorderSpacing.Bottom = 4
       BevelOuter = bvNone
-      Color = 4934475
+      Color = 3815994
       ParentColor = False
       TabOrder = 2
     end

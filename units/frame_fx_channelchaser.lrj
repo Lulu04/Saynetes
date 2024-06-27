@@ -8,8 +8,5 @@
 {"hash":99845079,"name":"tframefxchannelchaser.speedbutton10.hint","sourcebytes":[83,116,111,112,32,116,104,101,32,112,114,101,118,105,101,119],"value":"Stop the preview"},
 {"hash":5404860,"name":"tframefxchannelchaser.label24.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframefxchannelchaser.badd6.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":213795144,"name":"tframefxchannelchaser.label2.caption","sourcebytes":[76,101,118,101,108,32,109,97,120],"value":"Level max"},
-{"hash":5404860,"name":"tframefxchannelchaser.label11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":213795134,"name":"tframefxchannelchaser.label4.caption","sourcebytes":[76,101,118,101,108,32,109,105,110],"value":"Level min"},
-{"hash":5404860,"name":"tframefxchannelchaser.label13.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
+{"hash":137153603,"name":"tframefxchannelchaser.label2.caption","sourcebytes":[115,76,101,118,101,108,115],"value":"sLevels"}
 ]}

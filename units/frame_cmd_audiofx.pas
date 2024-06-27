@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons, ComCtrls,
   LCLTranslator,
   ALSound, u_audio_manager, frame_viewaudiolist, u_common, u_presetmanager,
-  u_notebook_util, frame_led, frame_buttononoff;
+  u_notebook_util, frame_led, frame_buttononoff, frame_trackbar,
+  frame_trackbar_customized;
 
 type
 
@@ -88,6 +89,7 @@ type
     Panel13: TPanel;
     Panel14: TPanel;
     Panel15: TPanel;
+    Panel16: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -121,7 +123,6 @@ type
     SpeedButton6: TSpeedButton;
     SpeedButton7: TSpeedButton;
     Timer1: TTimer;
-    TrackBar1: TTrackBar;
     procedure BListenClick(Sender: TObject);
     procedure BStopAllClick(Sender: TObject);
     procedure BAddCmdClick(Sender: TObject);
@@ -169,9 +170,10 @@ private
   private
     FToogleSpeedButtonManager: TToggleSpeedButtonManager;
     FNoteBookManager: TNoteBookManager;
+    FrameTBDryWet: TFrameTBAudioDryWet;
   public
     procedure ProcessSourceChangeEvent(Sender: TObject);
-    constructor Create( TheOwner: TComponent ); override;
+    constructor Create(TheOwner: TComponent); override;
     destructor Destroy; override;
 
     procedure Init;
@@ -301,9 +303,9 @@ begin
     exit;
 
   if TargetIsFile then
-    FrameViewAudioList1.SetDryWetOnSelected(TrackBar1.Position/TrackBar1.Max)
+    FrameViewAudioList1.SetDryWetOnSelected(FrameTBDryWet.Value)
   else
-    SoundManager.SetDryWetOn(CAPTURE_IDAUDIO, TrackBar1.Position/TrackBar1.Max);
+    SoundManager.SetDryWetOn(CAPTURE_IDAUDIO, FrameTBDryWet.Value);
 end;
 
 procedure TFrameCmdAudioFX.FillPresetList(aCB: TComboBox; aEffectIndex: integer);
@@ -349,12 +351,12 @@ begin
     begin
       FrameViewAudioList1.ChainEffectOnSelected;
       // Apply Dry/Wet gain.
-      FrameViewAudioList1.SetDryWetOnSelected( TrackBar1.Position/TrackBar1.Max );
+      FrameViewAudioList1.SetDryWetOnSelected(FrameTBDryWet.Value);
     end
     else
     begin
       SoundManager.ConstructChainOn( CAPTURE_IDAUDIO );
-      SoundManager.SetDryWetOn(CAPTURE_IDAUDIO, TrackBar1.Position/TrackBar1.Max);
+      SoundManager.SetDryWetOn(CAPTURE_IDAUDIO, FrameTBDryWet.Value);
     end;
   end;
 
@@ -469,7 +471,7 @@ var i: integer;
   wetdry: single;
 begin
   FCmds := '';
-  wetdry := TrackBar1.position/TrackBar1.Max;
+  wetdry := FrameTBDryWet.Value;
 
   if TargetIsFile then
   begin
@@ -582,7 +584,7 @@ end;
 function TFrameCmdAudioFX.AudioFXToPreset: string;
 begin
   Result := GetEffectCount.ToString+PRESET_SEPARATOR+
-            FormatFloatWithDot('0.000', TrackBar1.Position/TrackBar1.Max);
+            FormatFloatWithDot('0.000', FrameTBDryWet.Value);
   if FEffectsState[0] then
     Result := Result+PRESET_SEPARATOR+ComboBox5.ItemIndex.ToString+
                      PRESET_SEPARATOR+ComboBox6.ItemIndex.ToString;
@@ -605,7 +607,7 @@ begin
   FFlag_LockPresetSelectionChange := True;
 
   c := A[0].ToInteger;
-  TrackBar1.Position := Round(StringToSingle(A[1])*TrackBar1.Max);
+  FrameTBDryWet.Value := StringToSingle(A[1]);
 
   k := 2;
   FEffectsState[0] := c > 0;
@@ -735,6 +737,11 @@ begin
   FEffectsState[1] := False;
   FEffectsState[2] := False;
   UpdatePanelEffects;
+
+  FrameTBDryWet := TFrameTBAudioDryWet.Create(Self, Panel16);
+  FrameTBDryWet.Init(trHorizontal, False, False, False);
+  FrameTBDryWet.Value := 0.5;
+  FrameTBDryWet.OnChange := @TrackBar1Change;
 
   Timer1.Enabled := True;
 

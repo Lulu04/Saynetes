@@ -17,7 +17,7 @@ object FrameCmdAudio: TFrameCmdAudio
     BevelOuter = bvNone
     ClientHeight = 401
     ClientWidth = 858
-    Color = 5596774
+    Color = 4868682
     ParentColor = False
     TabOrder = 0
     object BAdd: TBitBtn
@@ -410,6 +410,7 @@ object FrameCmdAudio: TFrameCmdAudio
         end
       end
       object PageCapture: TPage
+        Color = 4868682
         object Label7: TLabel
           AnchorSideLeft.Control = Panel5
           AnchorSideBottom.Control = Panel5
@@ -436,6 +437,7 @@ object FrameCmdAudio: TFrameCmdAudio
           Top = 62
           Width = 200
           Anchors = [akTop, akRight]
+          BevelOuter = bvNone
           ClientHeight = 196
           ClientWidth = 200
           Color = 4473924
@@ -446,11 +448,11 @@ object FrameCmdAudio: TFrameCmdAudio
             AnchorSideRight.Control = Panel5
             AnchorSideRight.Side = asrBottom
             Cursor = crHandPoint
-            Left = 3
+            Left = 2
             Height = 22
             Hint = 'Start capturing sound from audio input.'
             Top = 28
-            Width = 194
+            Width = 196
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 2
             BorderSpacing.Right = 2
@@ -471,11 +473,11 @@ object FrameCmdAudio: TFrameCmdAudio
             AnchorSideRight.Control = Panel5
             AnchorSideRight.Side = asrBottom
             Cursor = crHandPoint
-            Left = 3
+            Left = 2
             Height = 22
             Hint = 'Stops the audio capture.'
             Top = 66
-            Width = 194
+            Width = 196
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 2
             BorderSpacing.Right = 2
@@ -496,11 +498,11 @@ object FrameCmdAudio: TFrameCmdAudio
             AnchorSideRight.Control = Panel5
             AnchorSideRight.Side = asrBottom
             Cursor = crHandPoint
-            Left = 3
+            Left = 2
             Height = 22
             Hint = 'Changes the capture''s volume to the specified value within the specified time.'
             Top = 104
-            Width = 194
+            Width = 196
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 2
             BorderSpacing.Right = 2
@@ -521,11 +523,11 @@ object FrameCmdAudio: TFrameCmdAudio
             AnchorSideRight.Control = Panel5
             AnchorSideRight.Side = asrBottom
             Cursor = crHandPoint
-            Left = 3
+            Left = 2
             Height = 22
             Hint = 'Changes the capture''s panning to the specified value within the specified time.'
             Top = 142
-            Width = 194
+            Width = 196
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 2
             BorderSpacing.Right = 2
@@ -628,33 +630,13 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentColor = False
           ParentFont = False
         end
-        object TBVol: TTrackBar
-          AnchorSideLeft.Control = PanelVolume
-          AnchorSideTop.Control = LabelVolume
-          AnchorSideTop.Side = asrBottom
-          AnchorSideRight.Control = PanelVolume
-          AnchorSideRight.Side = asrBottom
-          Cursor = crHandPoint
-          Left = 0
-          Height = 29
-          Top = 13
-          Width = 262
-          Frequency = 100
-          Max = 500
-          OnChange = TBVolChange
-          Position = 500
-          ShowSelRange = False
-          TickMarks = tmTopLeft
-          Anchors = [akTop, akLeft, akRight]
-          TabOrder = 0
-        end
         object lblVol1: TLabel
           AnchorSideTop.Control = FSE1
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = FSE1
           Left = 66
           Height = 13
-          Top = 48
+          Top = 41
           Width = 28
           Anchors = [akTop, akRight]
           BorderSpacing.Right = 5
@@ -666,13 +648,13 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentFont = False
         end
         object FSE1: TFloatSpinEdit
-          AnchorSideLeft.Control = TBVol
+          AnchorSideLeft.Control = PanelVolume
           AnchorSideLeft.Side = asrCenter
-          AnchorSideTop.Control = TBVol
+          AnchorSideTop.Control = Panel10
           AnchorSideTop.Side = asrBottom
           Left = 99
           Height = 21
-          Top = 44
+          Top = 37
           Width = 64
           BorderSpacing.Top = 2
           Color = 1644825
@@ -682,7 +664,7 @@ object FrameCmdAudio: TFrameCmdAudio
           Increment = 0.5
           MaxValue = 1000
           ParentFont = False
-          TabOrder = 1
+          TabOrder = 0
           Value = 1
         end
         object lblattendre9: TLabel
@@ -692,7 +674,7 @@ object FrameCmdAudio: TFrameCmdAudio
           AnchorSideTop.Side = asrCenter
           Left = 168
           Height = 13
-          Top = 48
+          Top = 41
           Width = 28
           BorderSpacing.Left = 5
           Caption = 'Label'
@@ -701,6 +683,20 @@ object FrameCmdAudio: TFrameCmdAudio
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
+        end
+        object Panel10: TPanel
+          AnchorSideLeft.Control = PanelVolume
+          AnchorSideTop.Control = LabelVolume
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelVolume
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 22
+          Top = 13
+          Width = 262
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvNone
+          TabOrder = 1
         end
       end
       object PanelPan: TPanel
@@ -720,11 +716,11 @@ object FrameCmdAudio: TFrameCmdAudio
         TabOrder = 1
         object LabelPan: TLabel
           AnchorSideLeft.Control = PanelPan
-          AnchorSideTop.Control = PanelPan
-          AnchorSideBottom.Control = TBPan
+          AnchorSideBottom.Control = BPanNormal
+          AnchorSideBottom.Side = asrBottom
           Left = 20
           Height = 13
-          Top = 10
+          Top = 7
           Width = 28
           Anchors = [akLeft, akBottom]
           BorderSpacing.Left = 20
@@ -735,33 +731,12 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentColor = False
           ParentFont = False
         end
-        object TBPan: TTrackBar
-          AnchorSideLeft.Control = PanelPan
-          AnchorSideTop.Control = BPanNormal
-          AnchorSideTop.Side = asrBottom
-          AnchorSideRight.Control = PanelPan
-          AnchorSideRight.Side = asrBottom
-          Cursor = crHandPoint
-          Left = 0
-          Height = 28
-          Top = 23
-          Width = 262
-          Frequency = 10
-          Max = 100
-          Min = -100
-          OnChange = TBPanChange
-          Position = 0
-          ShowSelRange = False
-          TickMarks = tmTopLeft
-          Anchors = [akTop, akLeft, akRight]
-          TabOrder = 0
-        end
         object lblVol3: TLabel
           AnchorSideTop.Control = FSE2
           AnchorSideRight.Control = FSE2
           Left = 66
           Height = 13
-          Top = 59
+          Top = 50
           Width = 28
           Anchors = [akTop, akRight]
           BorderSpacing.Top = 3
@@ -774,13 +749,13 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentFont = False
         end
         object FSE2: TFloatSpinEdit
-          AnchorSideLeft.Control = TBPan
+          AnchorSideLeft.Control = PanelPan
           AnchorSideLeft.Side = asrCenter
-          AnchorSideTop.Control = TBPan
+          AnchorSideTop.Control = Panel8
           AnchorSideTop.Side = asrBottom
           Left = 99
           Height = 21
-          Top = 56
+          Top = 47
           Width = 64
           BorderSpacing.Top = 5
           Color = 1644825
@@ -790,7 +765,7 @@ object FrameCmdAudio: TFrameCmdAudio
           Increment = 0.5
           MaxValue = 1000
           ParentFont = False
-          TabOrder = 1
+          TabOrder = 0
           Value = 1
         end
         object lblattendre11: TLabel
@@ -799,7 +774,7 @@ object FrameCmdAudio: TFrameCmdAudio
           AnchorSideTop.Control = FSE2
           Left = 168
           Height = 13
-          Top = 59
+          Top = 50
           Width = 28
           BorderSpacing.Left = 5
           BorderSpacing.Top = 3
@@ -810,24 +785,39 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentColor = False
           ParentFont = False
         end
-        object BPanNormal: TButton
+        object BPanNormal: TSpeedButton
           AnchorSideTop.Control = PanelPan
           AnchorSideRight.Control = PanelPan
           AnchorSideRight.Side = asrBottom
           Cursor = crHandPoint
-          Left = 211
-          Height = 23
+          Left = 242
+          Height = 20
           Top = 0
-          Width = 51
+          Width = 20
           Anchors = [akTop, akRight]
           AutoSize = True
-          Caption = 'Label'
+          Flat = True
           Font.Color = 15473178
           Font.Height = -11
           Font.Style = [fsItalic]
+          Images = DataModule1.ImageList1
+          ImageIndex = 46
           OnClick = BPanNormalClick
           ParentFont = False
-          TabOrder = 2
+        end
+        object Panel8: TPanel
+          AnchorSideLeft.Control = PanelPan
+          AnchorSideTop.Control = LabelPan
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelPan
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 22
+          Top = 20
+          Width = 262
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvNone
+          TabOrder = 1
         end
       end
       object PanelPitch: TPanel
@@ -849,12 +839,10 @@ object FrameCmdAudio: TFrameCmdAudio
         object LabelPitch: TLabel
           AnchorSideLeft.Control = PanelPitch
           AnchorSideTop.Control = PanelPitch
-          AnchorSideBottom.Control = TBPitch
           Left = 20
           Height = 13
-          Top = 10
+          Top = 0
           Width = 28
-          Anchors = [akLeft, akBottom]
           BorderSpacing.Left = 20
           Caption = 'Label'
           Font.Color = 15395562
@@ -863,53 +851,12 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentColor = False
           ParentFont = False
         end
-        object BPitchNormal: TButton
-          AnchorSideLeft.Control = PanelPitch
-          AnchorSideTop.Control = PanelPitch
-          AnchorSideRight.Control = PanelPitch
-          AnchorSideRight.Side = asrBottom
-          Cursor = crHandPoint
-          Left = 211
-          Height = 23
-          Top = 0
-          Width = 51
-          Anchors = [akTop, akRight]
-          AutoSize = True
-          Caption = 'Label'
-          Font.Color = 15473178
-          Font.Height = -11
-          Font.Style = [fsItalic]
-          OnClick = BPitchNormalClick
-          ParentFont = False
-          TabOrder = 0
-        end
-        object TBPitch: TTrackBar
-          AnchorSideLeft.Control = PanelPitch
-          AnchorSideTop.Control = BPitchNormal
-          AnchorSideTop.Side = asrBottom
-          AnchorSideRight.Control = PanelPitch
-          AnchorSideRight.Side = asrBottom
-          Cursor = crHandPoint
-          Left = 0
-          Height = 28
-          Top = 23
-          Width = 262
-          Frequency = 20
-          Max = 400
-          Min = 10
-          OnChange = TBPitchChange
-          Position = 100
-          ShowSelRange = False
-          TickMarks = tmTopLeft
-          Anchors = [akTop, akLeft, akRight]
-          TabOrder = 1
-        end
         object lblVol4: TLabel
           AnchorSideTop.Control = FSE3
           AnchorSideRight.Control = FSE3
           Left = 66
           Height = 13
-          Top = 56
+          Top = 47
           Width = 28
           Anchors = [akTop, akRight]
           BorderSpacing.Top = 3
@@ -922,13 +869,13 @@ object FrameCmdAudio: TFrameCmdAudio
           ParentFont = False
         end
         object FSE3: TFloatSpinEdit
-          AnchorSideLeft.Control = TBPitch
+          AnchorSideLeft.Control = Panel7
           AnchorSideLeft.Side = asrCenter
-          AnchorSideTop.Control = TBPitch
+          AnchorSideTop.Control = Panel7
           AnchorSideTop.Side = asrBottom
           Left = 99
           Height = 21
-          Top = 53
+          Top = 44
           Width = 64
           BorderSpacing.Top = 2
           Color = 1644825
@@ -938,7 +885,7 @@ object FrameCmdAudio: TFrameCmdAudio
           Increment = 0.5
           MaxValue = 1000
           ParentFont = False
-          TabOrder = 2
+          TabOrder = 0
           Value = 1
         end
         object lblattendre13: TLabel
@@ -947,7 +894,7 @@ object FrameCmdAudio: TFrameCmdAudio
           AnchorSideTop.Control = FSE3
           Left = 168
           Height = 13
-          Top = 56
+          Top = 47
           Width = 28
           BorderSpacing.Left = 5
           BorderSpacing.Top = 3
@@ -956,6 +903,40 @@ object FrameCmdAudio: TFrameCmdAudio
           Font.Height = -11
           Font.Style = [fsBold]
           ParentColor = False
+          ParentFont = False
+        end
+        object Panel7: TPanel
+          AnchorSideLeft.Control = PanelPitch
+          AnchorSideTop.Control = BPitchNormal
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelPitch
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 22
+          Top = 20
+          Width = 262
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvNone
+          TabOrder = 1
+        end
+        object BPitchNormal: TSpeedButton
+          AnchorSideTop.Control = PanelPitch
+          AnchorSideRight.Control = PanelPitch
+          AnchorSideRight.Side = asrBottom
+          Cursor = crHandPoint
+          Left = 242
+          Height = 20
+          Top = 0
+          Width = 20
+          Anchors = [akTop, akRight]
+          AutoSize = True
+          Flat = True
+          Font.Color = 15473178
+          Font.Height = -11
+          Font.Style = [fsItalic]
+          Images = DataModule1.ImageList1
+          ImageIndex = 46
+          OnClick = BPitchNormalClick
           ParentFont = False
         end
       end

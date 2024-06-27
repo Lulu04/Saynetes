@@ -481,6 +481,7 @@ begin
   {$endif}
 
   ALSManager.LoadLibraries;
+  ALSManager.VolumeMode := ALS_VOLUME_MODE_SQUARED;
 
   i := ProgramOptions.PlaybackDeviceIndex;
   A := ALSManager.ListOfPlaybackDeviceName;
@@ -651,7 +652,7 @@ var i: integer;
 begin
   if aStopAlsoCapturePlayback then FPlaybackContext.StopAllSound
     else begin
-      for i:=FPlaybackContext.SoundCount-1 to 0 do
+      for i:=0 to FPlaybackContext.SoundCount-1 do
         if FPlaybackContext.Sounds[i].Tag <> CAPTURE_IDAUDIO then
           FPlaybackContext.Sounds[i].Stop;
     end;

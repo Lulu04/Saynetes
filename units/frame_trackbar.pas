@@ -5,7 +5,7 @@ unit frame_trackbar;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, ComCtrls, LCLType,
+  Classes, SysUtils, Forms, Controls, ExtCtrls, ComCtrls, LCLType, Graphics,
   BGRABitmap, BGRABitmapTypes;
 
 type
@@ -29,7 +29,7 @@ type
     PFrameTrackBarCursor = ^TFrameTrackBarCursor;
   private
     class var FGlobalCursorFillColor, FGlobalCursorOutlineColor: TBGRAPixel;
-    class var FInstanceCreated: boolean;
+    class var FInstanceCount: integer;
   private
     FOrientation: TTrackBarOrientation;
     FReversed,
@@ -41,118 +41,90 @@ type
     FCursorPositionRange: single;
     FOnChange: TNotifyEvent;
 
-    FMouseMovingCursor: boolean;
+    FMouseCanMoveCursor, FMouseMovingCursor: boolean;
     FClickOrigin: TPoint;
     FCursorFillColor, FCursorOutlineColor: TBGRAPixel;
-
+    procedure LoopUserMoveCursor;
     function GetCursorFillColor: TBGRAPixel;
     function GetCursorOutlineColor: TBGRAPixel;
-    function GetPercentMax: single;
-    function GetPercentMin: single;
     procedure SetCursorFillColor(AValue: TBGRAPixel);
     procedure SetCursorOutlineColor(AValue: TBGRAPixel);
-    procedure SetPercentMax(AValue: single);
-    procedure SetPercentMin(AValue: single);
     function AxisWidth: integer;
     procedure UpdateCursorsImage;
     procedure DeleteCursorsImage;
     procedure UpdateCursorsRect;
     procedure ProcessValueChange;
+    function GetPercentValue: single;
+    function GetPercentMin: single;
+    procedure SetPercentValue(AValue: single);
+    procedure SetPercentMin(AValue: single);
   public
-    constructor Create(TheOwner: TComponent); override;
+    constructor Create(TheOwner: TComponent; aParent: TWinControl);
     destructor Destroy; override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
+    // TTrackBarOrientation = trVertical or trHorizontal
     procedure Init(aOrientation: TTrackBarOrientation; aReversed, aActiveIntervalMode, aShowValue: boolean);
 
     // sets the cursor colors used for each new instance created
     class procedure SetGlobalCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
 
     // The percentage value when the interval mode is not activated. Range is [0..1]
-    // If interval mode is not activated, this property refer to IntervalMax
-    property PercentValue: single read GetPercentMax write SetPercentMax;
+    // If interval mode is not activated, this property refer to PercentMax
+    property PercentValue: single read GetPercentValue write SetPercentValue;
     // The Min percentage value selected by the user when the interval mode is activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentValue
     property PercentMin: single read GetPercentMin write SetPercentMin;
     // The Max percentage value selected by the user when the interval mode is activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentValue
-    property PercentMax: single read GetPercentMax write SetPercentMax;
+    property PercentMax: single read GetPercentValue write SetPercentValue;
 
     // Sets the color for this instance only
     property CursorFillColor: TBGRAPixel read GetCursorFillColor write SetCursorFillColor;
     property CursorOutlineColor: TBGRAPixel read GetCursorOutlineColor write SetCursorOutlineColor;
 
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
+    property UserMovingCursor: boolean read FMouseMovingCursor;
   end;
 implementation
-uses Math, Graphics, u_utils;
+uses Math, u_utils;
 
 {$R *.lfm}
 
 { TFrameTrackBar }
 
-procedure TFrameTrackBar.PBMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
+procedure TFrameTrackBar.PBMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 begin
+  FClickOrigin := Mouse.CursorPos;
+
   if FCursorMax.R.Contains(Point(X, Y)) then
   begin
-    FMouseMovingCursor := True;
+    FMouseCanMoveCursor := True;
     FWorkingCursor := @FCursorMax;
   end;
 
   if FIntervalMode and FCursorMin.R.Contains(Point(X, Y)) then
   begin
-    FMouseMovingCursor := True;
+    FMouseCanMoveCursor := True;
     FWorkingCursor := @FCursorMin;
   end;
-
-  FClickOrigin := Mouse.CursorPos;
 end;
 
 procedure TFrameTrackBar.PBMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
 var delta: integer;
 begin
-  if FMouseMovingCursor then
-  begin
-    PB.Cursor := crHandPoint;
-    case FOrientation of
-      trHorizontal:
-        if (X >= 0) and (X <= PB.ClientWidth) then
-        begin
-          delta := Mouse.CursorPos.x-FClickOrigin.x;
-          FWorkingCursor^.PercentValue := EnsureRange((FWorkingCursor^.R.Left+delta)/FCursorPositionRange, 0, 1);
-          if FWorkingCursor = @FCursorMax then
-            if FCursorMin.PercentValue > FCursorMax.PercentValue then
-               FCursorMin.PercentValue := FCursorMax.PercentValue;
-          if FWorkingCursor = @FCursorMin then
-            if FCursorMax.PercentValue < FCursorMin.PercentValue then
-               FCursorMax.PercentValue := FCursorMin.PercentValue;
-          ProcessValueChange;
-
-          FClickOrigin.x := Mouse.CursorPos.x;
-        end;
-
-      trVertical:
-        if (Y >= 0) and (Y <= PB.ClientHeight) then
-        begin
-          delta := Mouse.CursorPos.y-FClickOrigin.y;
-          FWorkingCursor^.PercentValue := EnsureRange((FWorkingCursor^.R.Top+delta)/FCursorPositionRange, 0, 1);
-          ProcessValueChange;
-          FClickOrigin.y := Mouse.CursorPos.y;
-        end;
-    end;
-  end
-  else
-  if FCursorMax.R.Contains(Point(X, Y)) or
-     (FCursorMin.R.Contains(Point(X, Y)) and FIntervalMode) then
-    PB.Cursor := crHandPoint
-  else
-    PB.Cursor := crDefault;
+  if FMouseCanMoveCursor then LoopUserMoveCursor
+  else begin
+    if FCursorMax.R.Contains(Point(X, Y)) or
+       (FCursorMin.R.Contains(Point(X, Y)) and FIntervalMode) then PB.Cursor := crHandPoint
+      else PB.Cursor := crDefault;
+  end;
 end;
 
 procedure TFrameTrackBar.PBMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
+  FMouseCanMoveCursor := False;
   FMouseMovingCursor := False;
 end;
 
@@ -284,12 +256,53 @@ begin
   UpdateCursorsRect;
 end;
 
+procedure TFrameTrackBar.LoopUserMoveCursor;
+var delta: integer;
+  p: TPoint;
+begin
+  if FMouseMovingCursor then exit;
+  FMouseMovingCursor := True;
+  FClickOrigin := PB.ScreenToClient(Mouse.CursorPos);
+
+  repeat
+    p := PB.ScreenToClient(Mouse.CursorPos);
+    p.x := EnsureRange(p.x, 0, PB.ClientWidth);
+    p.y := EnsureRange(p.y, 0, PB.ClientHeight);
+
+    case FOrientation of
+      trHorizontal: begin
+        delta := p.x - FClickOrigin.x;
+        FWorkingCursor^.PercentValue := EnsureRange((FWorkingCursor^.R.Left+delta)/FCursorPositionRange, 0, 1);
+        if FWorkingCursor = @FCursorMax then
+          if FCursorMin.PercentValue > FCursorMax.PercentValue then
+             FCursorMin.PercentValue := FCursorMax.PercentValue;
+        if FWorkingCursor = @FCursorMin then
+          if FCursorMax.PercentValue < FCursorMin.PercentValue then
+             FCursorMax.PercentValue := FCursorMin.PercentValue;
+        ProcessValueChange;
+
+        FClickOrigin.x := p.x;
+      end;
+
+      trVertical: begin
+        delta := p.y - FClickOrigin.y;
+        FWorkingCursor^.PercentValue := EnsureRange((FWorkingCursor^.R.Top+delta)/FCursorPositionRange, 0, 1);
+        ProcessValueChange;
+        FClickOrigin.y := p.y;
+      end;
+    end;
+
+    Application.ProcessMessages;
+    Sleep(1);
+  until not FMouseMovingCursor;
+end;
+
 function TFrameTrackBar.AxisWidth: integer;
 begin
   Result := ScaleDesignToForm(2);
 end;
 
-function TFrameTrackBar.GetPercentMax: single;
+function TFrameTrackBar.GetPercentValue: single;
 begin
   Result := FCursorMax.PercentValue;
   if FReversed then Result := 1.0 - Result;
@@ -331,7 +344,7 @@ begin
   PB.Invalidate;
 end;
 
-procedure TFrameTrackBar.SetPercentMax(AValue: single);
+procedure TFrameTrackBar.SetPercentValue(AValue: single);
 begin
   AValue := EnsureRange(AValue, 0, 1);
   if FReversed then AValue := 1.0 - AValue;
@@ -343,7 +356,7 @@ end;
 
 procedure TFrameTrackBar.SetPercentMin(AValue: single);
 begin
-  if not FIntervalMode then SetPercentMax(AValue)
+  if not FIntervalMode then SetPercentValue(AValue)
   else begin
     AValue := EnsureRange(AValue, 0, 1);
     if FReversed then AValue := 1.0 - AValue;
@@ -460,8 +473,7 @@ begin
   UpdateCursorsRect;
   PB.Invalidate;
 
-  if FOnChange <> NIL then
-    FOnChange(Self);
+  if FOnChange <> NIL then FOnChange(Self);
 end;
 
 destructor TFrameTrackBar.Destroy;
@@ -470,9 +482,17 @@ begin
   inherited Destroy;
 end;
 
-constructor TFrameTrackBar.Create(TheOwner: TComponent);
+constructor TFrameTrackBar.Create(TheOwner: TComponent; aParent: TWinControl);
 begin
   inherited Create(TheOwner);
+  if FInstanceCount = 0 then begin
+    FGlobalCursorFillColor := BGRA(255,128,0);
+    FGlobalCursorOutlineColor := BGRA(192,96,0);
+  end;
+  inc(FInstanceCount);
+  Name := 'FrameTrackBar'+FInstanceCount.ToString;
+  Parent := aParent;
+  Align := alClient;
   FOrientation := trHorizontal;
   UpdateCursorsImage;
 
@@ -480,11 +500,6 @@ begin
   FCursorMax.PercentValue := 1.0;
   FCursorMin.PercentValue := 0.0;
 
-  if not FInstanceCreated then begin
-    FGlobalCursorFillColor := BGRA(255,128,0);
-    FGlobalCursorOutlineColor := BGRA(192,96,0);
-    FInstanceCreated := True;
-  end;
   FCursorFillColor := FGlobalCursorFillColor;
   FCursorOutlineColor := FGlobalCursorOutlineColor;
 end;
@@ -510,7 +525,7 @@ class procedure TFrameTrackBar.SetGlobalCursorColors(aFillColor, aOutlineColor: 
 begin
   FGlobalCursorFillColor := aFillColor;
   FGlobalCursorOutlineColor := aOutlineColor;
-  if not FInstanceCreated then FInstanceCreated := True;
+  inc(FInstanceCount);
 end;
 
 end.

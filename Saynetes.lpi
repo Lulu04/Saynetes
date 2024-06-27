@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="113">
+      <ExcludedOriginals Count="114">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -81,61 +81,62 @@
         <Item56 Value="sLens"/>
         <Item57 Value="sLevel max"/>
         <Item58 Value="sLevel min"/>
-        <Item59 Value="sLoop"/>
-        <Item60 Value="sLumens"/>
-        <Item61 Value="sManufacturer"/>
-        <Item62 Value="sMax"/>
-        <Item63 Value="sMax degree"/>
-        <Item64 Value="sMin"/>
-        <Item65 Value="sMin degree"/>
-        <Item66 Value="SModify"/>
-        <Item67 Value="SNameAlreadyUsed"/>
-        <Item68 Value="sName"/>
-        <Item69 Value="sNext"/>
-        <Item70 Value="sNo"/>
-        <Item71 Value="sOk"/>
-        <Item72 Value="sOFF"/>
-        <Item73 Value="sON"/>
-        <Item74 Value="sPaste"/>
-        <Item75 Value="sPitch"/>
-        <Item76 Value="sPlaylist"/>
-        <Item77 Value="sPower"/>
-        <Item78 Value="sPreview"/>
-        <Item79 Value="sPrevious"/>
-        <Item80 Value="sRandom intensity between"/>
-        <Item81 Value="sRandom duration between"/>
-        <Item82 Value="sRandom value between"/>
-        <Item83 Value="sRange"/>
-        <Item84 Value="sRangesGenerator"/>
-        <Item85 Value="sRename"/>
-        <Item86 Value="sRepeatChannels"/>
-        <Item87 Value="sReset"/>
-        <Item88 Value="sRGB"/>
-        <Item89 Value="sSave"/>
-        <Item90 Value="second(s)"/>
-        <Item91 Value="sSelection"/>
-        <Item92 Value="sSequence"/>
-        <Item93 Value="sSoften"/>
-        <Item94 Value="sSoften on"/>
-        <Item95 Value="sStop"/>
-        <Item96 Value="sSwitchers"/>
-        <Item97 Value="sto"/>
-        <Item98 Value="sUpdate"/>
-        <Item99 Value="sVelocity"/>
-        <Item100 Value="sView"/>
-        <Item101 Value="sVolume"/>
-        <Item102 Value="sWait time"/>
-        <Item103 Value="sWatt"/>
-        <Item104 Value="sWebLinks"/>
-        <Item105 Value="sWeight"/>
-        <Item106 Value="sYes"/>
-        <Item107 Value="_"/>
-        <Item108 Value="#"/>
-        <Item109 Value="1/1"/>
-        <Item110 Value="1s"/>
-        <Item111 Value="5s"/>
-        <Item112 Value="10s"/>
-        <Item113 Value="15s"/>
+        <Item59 Value="sLevels"/>
+        <Item60 Value="sLoop"/>
+        <Item61 Value="sLumens"/>
+        <Item62 Value="sManufacturer"/>
+        <Item63 Value="sMax"/>
+        <Item64 Value="sMax degree"/>
+        <Item65 Value="sMin"/>
+        <Item66 Value="sMin degree"/>
+        <Item67 Value="SModify"/>
+        <Item68 Value="SNameAlreadyUsed"/>
+        <Item69 Value="sName"/>
+        <Item70 Value="sNext"/>
+        <Item71 Value="sNo"/>
+        <Item72 Value="sOk"/>
+        <Item73 Value="sOFF"/>
+        <Item74 Value="sON"/>
+        <Item75 Value="sPaste"/>
+        <Item76 Value="sPitch"/>
+        <Item77 Value="sPlaylist"/>
+        <Item78 Value="sPower"/>
+        <Item79 Value="sPreview"/>
+        <Item80 Value="sPrevious"/>
+        <Item81 Value="sRandom intensity between"/>
+        <Item82 Value="sRandom duration between"/>
+        <Item83 Value="sRandom value between"/>
+        <Item84 Value="sRange"/>
+        <Item85 Value="sRangesGenerator"/>
+        <Item86 Value="sRename"/>
+        <Item87 Value="sRepeatChannels"/>
+        <Item88 Value="sReset"/>
+        <Item89 Value="sRGB"/>
+        <Item90 Value="sSave"/>
+        <Item91 Value="second(s)"/>
+        <Item92 Value="sSelection"/>
+        <Item93 Value="sSequence"/>
+        <Item94 Value="sSoften"/>
+        <Item95 Value="sSoften on"/>
+        <Item96 Value="sStop"/>
+        <Item97 Value="sSwitchers"/>
+        <Item98 Value="sto"/>
+        <Item99 Value="sUpdate"/>
+        <Item100 Value="sVelocity"/>
+        <Item101 Value="sView"/>
+        <Item102 Value="sVolume"/>
+        <Item103 Value="sWait time"/>
+        <Item104 Value="sWatt"/>
+        <Item105 Value="sWebLinks"/>
+        <Item106 Value="sWeight"/>
+        <Item107 Value="sYes"/>
+        <Item108 Value="_"/>
+        <Item109 Value="#"/>
+        <Item110 Value="1/1"/>
+        <Item111 Value="1s"/>
+        <Item112 Value="5s"/>
+        <Item113 Value="10s"/>
+        <Item114 Value="15s"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>
@@ -399,7 +400,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="100">
+    <Units Count="101">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1034,6 +1035,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit99>
+      <Unit100>
+        <Filename Value="units\frame_trackbar_customized.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit100>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -9,7 +9,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
   ClientWidth = 579
   OnCreate = FormCreate
   Position = poOwnerFormCenter
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '2.2.4.0'
   object Panel1: TPanel
     Left = 0
     Height = 343
@@ -25,9 +25,9 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
     TabOrder = 0
     object Label1: TLabel
       Left = 8
-      Height = 20
+      Height = 23
       Top = 8
-      Width = 197
+      Width = 271
       Caption = 'SAddVirtualChannelToMode'
       Font.Color = 15395562
       Font.Height = 20
@@ -39,10 +39,10 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideLeft.Control = Label1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Label1
-      Left = 213
-      Height = 20
+      Left = 287
+      Height = 23
       Top = 8
-      Width = 37
+      Width = 52
       BorderSpacing.Left = 8
       Caption = 'Label'
       Font.Color = 15395562
@@ -54,9 +54,9 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
     object Label2: TLabel
       AnchorSideLeft.Control = Panel1
       Left = 12
-      Height = 20
+      Height = 23
       Top = 104
-      Width = 155
+      Width = 210
       BorderSpacing.Left = 10
       Caption = 'Select the sub-channels'
       Font.Color = 15395562
@@ -72,8 +72,8 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
       Left = 249
-      Height = 20
-      Top = 311
+      Height = 21
+      Top = 310
       Width = 80
       Anchors = [akLeft, akBottom]
       AutoSize = True
@@ -98,7 +98,7 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
       Left = 417
-      Height = 20
+      Height = 21
       Top = 197
       Width = 150
       Anchors = [akTop, akRight]
@@ -119,9 +119,9 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
     object Label3: TLabel
       AnchorSideLeft.Control = Panel1
       Left = 12
-      Height = 20
+      Height = 23
       Top = 61
-      Width = 87
+      Width = 119
       BorderSpacing.Left = 10
       Caption = 'Virtual name:'
       Font.Color = 15395562
@@ -136,10 +136,10 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Label3
       AnchorSideBottom.Side = asrBottom
-      Left = 109
-      Height = 23
-      Top = 58
-      Width = 458
+      Left = 141
+      Height = 33
+      Top = 51
+      Width = 426
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 10
@@ -152,8 +152,8 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideRight.Control = BNew
       AnchorSideBottom.Control = Label7
       Left = 12
-      Height = 167
-      Top = 124
+      Height = 161
+      Top = 127
       Width = 395
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
@@ -166,16 +166,17 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       OnSelectionChange = LBSelectionChange
       ParentFont = False
       TabOrder = 1
+      TopIndex = -1
     end
     object Label6: TLabel
       AnchorSideLeft.Control = Edit1
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Side = asrBottom
-      Left = 109
-      Height = 15
-      Top = 81
-      Width = 104
+      Left = 141
+      Height = 17
+      Top = 84
+      Width = 134
       Caption = 'SNameAlreadyUsed'
       Font.Color = 6974207
       ParentColor = False
@@ -188,9 +189,9 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = BOk
       Left = 12
-      Height = 15
-      Top = 291
-      Width = 286
+      Height = 17
+      Top = 288
+      Width = 351
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 5
       Caption = 'a switching channel must have at least 2 sub-channels'

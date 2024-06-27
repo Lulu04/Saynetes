@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, Buttons, ComCtrls, LCLType,
   StdCtrls, LCLTranslator,
-  frame_audiolevels, frame_led, Types;
+  frame_audiolevels, frame_led, frame_trackbar, frame_trackbar_customized, Types;
 
 type
 
@@ -25,6 +25,9 @@ type
     Label8: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
     Panel7: TPanel;
     Shape1: TShape;
     Shape2: TShape;
@@ -35,9 +38,6 @@ type
     BOnOff: TSpeedButton;
     SpeedButton4: TSpeedButton;
     Timer1: TTimer;
-    TrackBar1: TTrackBar;
-    TrackBar2: TTrackBar;
-    TrackBar3: TTrackBar;
     procedure BRemoveFXClick(Sender: TObject);
     procedure BAddFXClick(Sender: TObject);
     procedure CBFXCloseUp(Sender: TObject);
@@ -48,18 +48,17 @@ type
     procedure BOnOffClick(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
-    procedure TrackBar1Change(Sender: TObject);
-    procedure TrackBar2Change(Sender: TObject);
-    procedure TrackBar3Change(Sender: TObject);
+    procedure TBInChange(Sender: TObject);
+    procedure TBPanChange(Sender: TObject);
+    procedure TBOutChange(Sender: TObject);
   private
     FModuleIsActivated: boolean;
     FrameCaptureLevels1: TFrameAudioLevels;
     FrameLed1: TFrameLed;
-    function CursorToPreAmp: single;
-    function CursorToPan: single;
-    procedure PanToCursor(AValue: single);
-    function CursorToVolume: single;
-    procedure VolumeToCursor(AValue: single);
+    FrameTBOut: TFrameTBAudioVolume;
+    FrameTBIn: TFrameTBAudioCapturePreAmp;
+    FrameTBPan: TFrameTBAudioPan;
+    function GetPreAmp: single;
     procedure DoRemoveEffect;
   public
     constructor Create(aOwner: TComponent); override;
@@ -69,7 +68,7 @@ type
     procedure UpdateStringAfterLanguageChange;
 
     procedure UpdateVisual;
-    property PreAmp: single read CursorToPreAmp; // pre amp value
+    property PreAmp: single read GetPreAmp; // pre amp value
 
   end;
 
@@ -90,7 +89,7 @@ begin
     else
     begin
       SoundManager.StartCaptureToPlayback;
-      TrackBar1Change(NIL); // apply preamp
+      TBInChange(NIL); // apply preamp
     end;
   end;
 
@@ -157,7 +156,7 @@ end;
 
 procedure TFrameAudioCapture.SpeedButton4Click(Sender: TObject);
 begin
-  TrackBar2.Position := 0;
+  FrameTBPan.Value := 0.0;
 end;
 
 procedure TFrameAudioCapture.Timer1Timer(Sender: TObject);
@@ -171,19 +170,19 @@ begin
 
   if SoundManager.CaptureToPlaybackIsReady then
   begin
-    // volume
-    callback := TrackBar3.OnChange;
-    TrackBar3.OnChange := NIL;
-    VolumeToCursor(SoundManager.CaptureGetVolume);//Round(SoundManager.CaptureGetVolume*TrackBar3.Max);
-    TrackBar3.OnChange := callback;
-    TrackBar3Change(NIL);
+    // output volume
+    callback := FrameTBOut.OnChange;
+    FrameTBOut.OnChange := NIL;
+    FrameTBOut.Value := SoundManager.CaptureGetVolume;
+    FrameTBOut.OnChange := callback;
+    TBOutChange(NIL);
 
-    // pan
-    callback := TrackBar2.OnChange;
-    TrackBar2.OnChange := NIL;
-    PanToCursor(SoundManager.GetCapturePan);
-    TrackBar2.OnChange := callback;
-    TrackBar2Change(NIL);
+    // output pan
+    callback := FrameTBPan.OnChange;
+    FrameTBPan.OnChange := NIL;
+    FrameTBPan.Value := SoundManager.GetCapturePan;
+    FrameTBPan.OnChange := callback;
+    TBPanChange(NIL);
 
     // effect names
     A := SoundManager.GetEffectsNamesArrayOn(CAPTURE_IDAUDIO);
@@ -218,52 +217,32 @@ begin
   Timer1.Enabled := TRUE;
 end;
 
-procedure TFrameAudioCapture.TrackBar1Change(Sender: TObject);
+procedure TFrameAudioCapture.TBInChange(Sender: TObject);
+var v: single;
 begin
-  if Sender = TrackBar1 then
-    SoundManager.SetCapturePreAmp(CursorToPreAmp);
-  Label7.Caption := SPreAmp+LineEnding+'x'+FormatFloat('0.0', CursorToPreAmp);
+  v := FrameTBIn.Value;
+  if Sender = FrameTBIn then
+    SoundManager.SetCapturePreAmp(v*v);
+  Label7.Caption := SPreAmp+LineEnding+'x'+FormatFloat('0.0', v);
 end;
 
-procedure TFrameAudioCapture.TrackBar2Change(Sender: TObject);
+procedure TFrameAudioCapture.TBPanChange(Sender: TObject);
 begin
   if Sender <> NIL then
-    SoundManager.SetCapturePan(CursorToPan);
-  Label2.Caption := SPan+' '+PanToStringPercent(CursorToPan);
+    SoundManager.SetCapturePan(FrameTBPan.Value);
+  Label2.Caption := SPan+' '+PanToStringPercent(FrameTBPan.Value);
 end;
 
-procedure TFrameAudioCapture.TrackBar3Change(Sender: TObject);
+procedure TFrameAudioCapture.TBOutChange(Sender: TObject);
 begin
-  if Sender <> NIL then
-    SoundManager.SetCaptureVolume(CursorToVolume);
-  Label8.Caption := SVolume+LineEnding+VolumeToStringPercent(CursorToVolume);
+  if Sender = FrameTBOut then
+    SoundManager.SetCaptureVolume(FrameTBOut.Value);
+  Label8.Caption := SVolume+LineEnding+VolumeToStringPercent(FrameTBOut.Value);
 end;
 
-function TFrameAudioCapture.CursorToPreAmp: single;
+function TFrameAudioCapture.GetPreAmp: single;
 begin
-  Result := TrackBar1.Position*0.01;
-  Result := Result * Result;
-end;
-
-function TFrameAudioCapture.CursorToPan: single;
-begin
-  Result := TrackBar2.Position*0.01;
-end;
-
-procedure TFrameAudioCapture.PanToCursor(AValue: single);
-begin
-  TrackBar2.Position := Round(AValue*TrackBar2.Max);
-end;
-
-function TFrameAudioCapture.CursorToVolume: single;
-begin
-  Result := TrackBar3.Position/TrackBar3.Max;
-  Result := Result*Result;
-end;
-
-procedure TFrameAudioCapture.VolumeToCursor(AValue: single);
-begin
-   TrackBar3.Position := Round(Sqrt(AValue)*TrackBar3.Max);
+  Result := FrameTBIn.Value;
 end;
 
 procedure TFrameAudioCapture.DoRemoveEffect;
@@ -288,6 +267,21 @@ begin
   FrameLed1.GreenType;
   FrameLed1.BlinkWhenOn := True;
 
+  FrameTBOut := TFrameTBAudioVolume.Create(Self, Panel3);
+  FrameTBOut.Init(trVertical, True, False, False);
+  FrameTBOut.Value := 1.0;
+  FrameTBOut.OnChange := @TBOutChange;
+
+  FrameTBPan := TFrameTBAudioPan.Create(Self, Panel4);
+  FrameTBPan.Init(trHorizontal, False, False, False);
+  FrameTBPan.Value := 0.0;
+  FrameTBPan.OnChange := @TBPanChange;
+
+  FrameTBIn := TFrameTBAudioCapturePreAmp.Create(Self, Panel5);
+  FrameTBIn.Init(trVertical, True, False, False);
+  FrameTBIn.Value := 1.0;
+  FrameTBIn.OnChange := @TBInChange;
+
   Label3.Caption := ' ';
   Label4.Caption := ' ';
   Label5.Caption := ' ';
@@ -303,8 +297,9 @@ end;
 
 procedure TFrameAudioCapture.Fill;
 begin
-  TrackBar1Change(NIL);
-  TrackBar2Change(NIL);
+  TBInChange(NIL);
+  TBPanChange(NIL);
+  TBOutChange(NIL);
 
   // load audio presets in combobox
   CBFX.Clear;
@@ -316,11 +311,10 @@ end;
 
 procedure TFrameAudioCapture.UpdateStringAfterLanguageChange;
 begin
-  SpeedButton4.Caption := SCenter_;
   Label1.Caption := SAudioCapture_;
-  Label8.Caption := SVolume;
-  TrackBar1Change(NIL);
-  TrackBar2Change(NIL);
+  TBOutChange(NIL);
+  TBInChange(NIL);
+  TBPanChange(NIL);
 end;
 
 procedure TFrameAudioCapture.UpdateVisual;

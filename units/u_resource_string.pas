@@ -404,6 +404,7 @@ resourcestring
   SSoftenOn='Soften on';
   SSoften='Soften';
   SWaitTime='Wait time';
+  SLevels='Levels';
   SLevelMin='Level min';
   SLevelMax='Level max';
   SMin='Min';

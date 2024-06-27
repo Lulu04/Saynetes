@@ -803,11 +803,6 @@ msgctxt "tformotheraction.speedbutton4.hint"
 msgid "Stretch time allows you to speed up/down the execution of another sequence."
 msgstr "Strech time (L'étirement de temps) vous permet d'accélérer ou de ralentir l'exécution d'une autre séquence."
 
-#: tformotheraction.speedbutton5.caption
-msgctxt "tformotheraction.speedbutton5.caption"
-msgid "RESET"
-msgstr "RESET"
-
 #: tformprogramoptions.caption
 msgctxt "tformprogramoptions.caption"
 msgid "Program options"
@@ -1380,11 +1375,6 @@ msgctxt "tframeeditstring.label2.caption"
 msgid "please no space or special characters"
 msgstr "svp pas d'espace ou de caractères spéciaux"
 
-#: tframefxchannelchaser.label2.caption
-msgctxt "tframefxchannelchaser.label2.caption"
-msgid "Level max"
-msgstr "Niveau max"
-
 #: tframefxchannelchaser.label22.caption
 msgctxt "tframefxchannelchaser.label22.caption"
 msgid "Steps"
@@ -1404,11 +1394,6 @@ msgstr "Délai"
 msgctxt "tframefxchannelchaser.label26.caption"
 msgid "Spacing"
 msgstr "Espacement"
-
-#: tframefxchannelchaser.label4.caption
-msgctxt "tframefxchannelchaser.label4.caption"
-msgid "Level min"
-msgstr "Niveau min"
 
 #: tframefxchannelchaser.shape5.hint
 msgctxt "tframefxchannelchaser.shape5.hint"
@@ -1891,8 +1876,12 @@ msgstr "Ouvre le projet sélectionné"
 
 #: tframeviewprojectfolder.flbprojects.hint
 msgctxt "tframeviewprojectfolder.flbprojects.hint"
-msgid "The list of projects found in the above folder"
-msgstr "La liste des projets trouvés dans le dossier ci-dessus"
+msgid ""
+"The list of projects found in the above folder\n"
+"Double click to open"
+msgstr ""
+"La liste des projets trouvés dans le dossier ci-dessus\n"
+"Double clic pour ouvrir"
 
 #: tframeviewprojectfolder.label7.caption
 msgctxt "tframeviewprojectfolder.label7.caption"
@@ -3135,6 +3124,10 @@ msgctxt "u_resource_string.slevelmin"
 msgid "Level min"
 msgstr "Niveau min"
 
+#: u_resource_string.slevels
+msgid "Levels"
+msgstr "Niveaux"
+
 #: u_resource_string.sloadingcursorimage
 msgid "loading DMX cursor images"
 msgstr "chargement des images des curseurs DMX"
@@ -4025,3 +4018,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

@@ -328,8 +328,6 @@ begin
 end;
 
 procedure TFrameViewTopList.LBSelectionChange(Sender: TObject; User: boolean);
-var i: integer;
-  seq: TSequence;
 begin
   if LB.ItemIndex = -1 then exit;
   SetErrorHint(LB.ItemIndex);

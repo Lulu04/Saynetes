@@ -9,7 +9,7 @@ uses
   ComCtrls, LCLType, LCLTranslator,
   frame_bglvirtualscreen_sequencer, frame_viewchannelslist,
   frame_velocity, u_sequence_player, u_common,
-  u_list_dmxuniverse;
+  u_list_dmxuniverse, frame_trackbar;
 
 type
 
@@ -20,19 +20,17 @@ type
     CBMove: TComboBox;
     CBMode: TComboBox;
     FSE1: TFloatSpinEdit;
-    Label11: TLabel;
-    Label13: TLabel;
     Label2: TLabel;
     Label22: TLabel;
     Label23: TLabel;
     Label24: TLabel;
     Label25: TLabel;
     Label26: TLabel;
-    Label4: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
+    Panel5: TPanel;
     Shape6: TShape;
     Shape1: TShape;
     Shape7: TShape;
@@ -40,8 +38,6 @@ type
     Shape5: TShape;
     SpeedButton10: TSpeedButton;
     SpeedButton9: TSpeedButton;
-    TB1: TTrackBar;
-    TB3: TTrackBar;
     UpDown1: TUpDown;
     procedure BAdd6Click(Sender: TObject);
     procedure Panel4Resize(Sender: TObject);
@@ -80,6 +76,7 @@ type
   public
     FrameViewChannelsList1: TFrameViewChannelsList;
     Frame_Velocity1: TFrame_Velocity;
+    FrameTBMinMax: TFRameTrackBar;
     procedure UpdateWidgets;
   public
 //    FTargetViewProjector: TFrameViewProjector;
@@ -100,8 +97,9 @@ type
 
 implementation
 
-uses u_project_manager, u_resource_string, u_utils, u_helper,
-  u_dmxtools_channels, frame_sequencer, u_mainform, u_add_action_dmx, Math;
+uses u_project_manager, u_resource_string, u_helper,
+  u_dmxtools_channels, frame_sequencer, u_mainform, u_add_action_dmx, Math,
+  BGRABitmapTypes;
 
 {$R *.lfm}
 
@@ -210,7 +208,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB1.Position/TB1.Max,
+                              FrameTBMinMax.PercentMax,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -219,7 +217,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB3.Position/TB3.Max,
+                              FrameTBMinMax.PercentMin,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -233,7 +231,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB1.Position/TB1.Max,
+                              FrameTBMinMax.PercentMax,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -242,7 +240,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB3.Position/TB3.Max,
+                              FrameTBMinMax.PercentMin,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -256,7 +254,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB1.Position/TB1.Max,
+                              FrameTBMinMax.PercentMax,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -265,7 +263,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB3.Position/TB3.Max,
+                              FrameTBMinMax.PercentMin,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -275,7 +273,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB1.Position/TB1.Max,
+                              FrameTBMinMax.PercentMax,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -284,7 +282,7 @@ begin
   begin
     FStepList.AddCmdDMXDimmer(tp,
                               FrameViewChannelsList1.Channels[i],
-                              TB3.Position/TB3.Max,
+                              FrameTBMinMax.PercentMin,
                               FSE1.Value,
                               Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -299,11 +297,11 @@ begin
   begin
     FStepList.AddCmdWave(tp,
                          FrameViewChannelsList1.Channels[i],
-                         TB1.Position/TB1.Max,
+                         FrameTBMinMax.PercentMax,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID,
                          0.0,
-                         TB3.Position/TB3.Max,
+                         FrameTBMinMax.PercentMin,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID);
       tp := tp+GetDelay;
@@ -317,11 +315,11 @@ begin
   begin
     FStepList.AddCmdWave(tp,
                          FrameViewChannelsList1.Channels[i],
-                         TB1.Position/TB1.Max,
+                         FrameTBMinMax.PercentMax,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID,
                          0.0,
-                         TB3.Position/TB3.Max,
+                         FrameTBMinMax.PercentMin,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -335,11 +333,11 @@ begin
   begin
     FStepList.AddCmdWave(tp,
                          FrameViewChannelsList1.Channels[i],
-                         TB1.Position/TB1.Max,
+                         FrameTBMinMax.PercentMax,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID,
                          0.0,
-                         TB3.Position/TB3.Max,
+                         FrameTBMinMax.PercentMin,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -348,11 +346,11 @@ begin
   begin
     FStepList.AddCmdWave(tp,
                          FrameViewChannelsList1.Channels[i],
-                         TB1.Position/TB1.Max,
+                         FrameTBMinMax.PercentMax,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID,
                          0.0,
-                         TB3.Position/TB3.Max,
+                         FrameTBMinMax.PercentMin,
                          FSE1.Value,
                          Frame_Velocity1.SelectedCurveID);
     tp := tp+GetDelay;
@@ -445,8 +443,6 @@ end;
 
 procedure TFrameFXChannelChaser.UpdateWidgets;
 begin
-  Label11.Caption := DMXPercentToString(TB1.Position/TB1.Max);
-  Label13.Caption := DMXPercentToString(TB3.Position/TB3.Max);
   Label26.Caption := FormatFloat('0.00', GetDelay)+SSec;
   Shape1.Visible := Abs(GetDelay-FSE1.Value) < 0.01;
 end;
@@ -464,6 +460,12 @@ begin
   FrameViewChannelsList1.Parent := Panel1;
   FrameViewChannelsList1.Align := alClient;
   FrameViewChannelsList1.MultiSelect := TRUE;
+
+  FrameTBMinMax := TFRameTrackBar.Create(Self, Panel5);
+  FrameTBMinMax.Init(trHorizontal, False, True, True);
+  FrameTBMinMax.PercentMin := 0.25;
+  FrameTBMinMax.PercentMax := 0.75;
+  FrameTBMinMax.OnChange := @TBChange;
 
   CBMove.Clear;
   CBMove.Items.Add(SOneShoot);
@@ -530,6 +532,7 @@ begin
   CBMode.Items.Strings[0] := SMode1;
   CBMode.Items.Strings[1] := SMode2;
 
+  Label2.Caption := SLevels;
 //  Label24.Caption := SCurve_;  <- done automatically
 end;
 

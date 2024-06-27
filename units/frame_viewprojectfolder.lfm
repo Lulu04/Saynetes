@@ -18,7 +18,7 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
     BevelOuter = bvNone
     ClientHeight = 282
     ClientWidth = 345
-    Color = 4934475
+    Color = 2894892
     ParentColor = False
     TabOrder = 0
     object Label7: TLabel
@@ -44,12 +44,13 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       Cursor = crHandPoint
       Left = 2
       Height = 191
-      Hint = 'The list of projects found in the above folder'
+      Hint = 'The list of projects found in the above folder'#13#10'Double click to open'
       Top = 56
       Width = 341
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 5
       BorderSpacing.Bottom = 5
+      BorderStyle = bsNone
       Color = 3947580
       Directory = 'C:\lazarus'
       ExtendedSelect = False

@@ -145,6 +145,7 @@ object FormOtherAction: TFormOtherAction
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = PageStart
         AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
         Left = 216
         Height = 25
         Top = 303
@@ -208,6 +209,7 @@ object FormOtherAction: TFormOtherAction
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = PageStop
         AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
         Left = 216
         Height = 25
         Top = 303
@@ -271,6 +273,7 @@ object FormOtherAction: TFormOtherAction
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = PageLoop
         AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
         Left = 216
         Height = 25
         Top = 303
@@ -299,6 +302,7 @@ object FormOtherAction: TFormOtherAction
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = PageStretchTime
         AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
         Left = 216
         Height = 25
         Top = 303
@@ -342,15 +346,14 @@ object FormOtherAction: TFormOtherAction
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageStretchTime
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = Label5
+        AnchorSideBottom.Control = SpeedButton5
         Left = 2
-        Height = 167
+        Height = 173
         Top = 17
         Width = 284
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Left = 2
         BorderSpacing.Right = 2
-        BorderSpacing.Bottom = 3
         Color = 3947580
         ItemHeight = 0
         TabOrder = 0
@@ -427,10 +430,10 @@ object FormOtherAction: TFormOtherAction
       end
       object Label5: TLabel
         AnchorSideLeft.Control = PageStretchTime
-        AnchorSideBottom.Control = TB1
+        AnchorSideBottom.Control = Panel2
         Left = 3
         Height = 15
-        Top = 187
+        Top = 195
         Width = 32
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 3
@@ -446,7 +449,7 @@ object FormOtherAction: TFormOtherAction
         AnchorSideTop.Control = Label5
         Left = 40
         Height = 15
-        Top = 187
+        Top = 195
         Width = 29
         BorderSpacing.Left = 5
         Caption = 'Label'
@@ -455,46 +458,42 @@ object FormOtherAction: TFormOtherAction
         ParentColor = False
         ParentFont = False
       end
-      object TB1: TTrackBar
-        AnchorSideLeft.Control = PageStretchTime
-        AnchorSideTop.Control = Label5
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageStretchTime
-        AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = Label25
-        Left = 0
-        Height = 30
-        Top = 202
-        Width = 288
-        Frequency = 75
-        Max = 700
-        Min = 25
-        OnChange = TB1Change
-        Position = 100
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akLeft, akRight, akBottom]
-        BorderSpacing.Bottom = 5
-        TabOrder = 3
-      end
       object SpeedButton5: TSpeedButton
-        AnchorSideRight.Control = TB1
+        AnchorSideRight.Control = Panel2
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = TB1
-        Left = 228
-        Height = 16
-        Top = 186
-        Width = 40
+        AnchorSideBottom.Control = Panel2
+        Cursor = crHandPoint
+        Left = 243
+        Height = 20
+        Top = 190
+        Width = 20
         Anchors = [akRight, akBottom]
         AutoSize = True
         BorderSpacing.Right = 20
-        Constraints.MinWidth = 40
-        Caption = 'RESET'
+        Flat = True
         Font.Color = clBlack
         Font.Height = 12
         Font.Style = [fsBold]
+        Images = DataModule1.ImageList1
+        ImageIndex = 46
         OnClick = SpeedButton5Click
         ParentFont = False
+      end
+      object Panel2: TPanel
+        AnchorSideLeft.Control = PageStretchTime
+        AnchorSideRight.Control = PageStretchTime
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Label25
+        Left = 5
+        Height = 22
+        Top = 210
+        Width = 278
+        Anchors = [akLeft, akRight, akBottom]
+        BorderSpacing.Left = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Bottom = 5
+        BevelOuter = bvNone
+        TabOrder = 3
       end
     end
   end

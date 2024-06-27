@@ -40,9 +40,7 @@
 {"hash":5404860,"name":"tframecmdaudio.labelpan.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.lblvol3.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.lblattendre11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":5404860,"name":"tframecmdaudio.bpannormal.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.labelpitch.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":5404860,"name":"tframecmdaudio.bpitchnormal.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.lblvol4.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.lblattendre13.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframecmdaudio.labelcurve.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}

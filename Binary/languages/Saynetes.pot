@@ -747,11 +747,6 @@ msgstr ""
 msgid "Stretch time allows you to speed up/down the execution of another sequence."
 msgstr ""
 
-#: tformotheraction.speedbutton5.caption
-msgctxt "tformotheraction.speedbutton5.caption"
-msgid "RESET"
-msgstr ""
-
 #: tformprogramoptions.caption
 msgctxt "tformprogramoptions.caption"
 msgid "Program options"
@@ -1313,11 +1308,6 @@ msgctxt "tframeeditstring.label2.caption"
 msgid "please no space or special characters"
 msgstr ""
 
-#: tframefxchannelchaser.label2.caption
-msgctxt "tframefxchannelchaser.label2.caption"
-msgid "Level max"
-msgstr ""
-
 #: tframefxchannelchaser.label22.caption
 msgctxt "tframefxchannelchaser.label22.caption"
 msgid "Steps"
@@ -1336,11 +1326,6 @@ msgstr ""
 #: tframefxchannelchaser.label26.caption
 msgctxt "tframefxchannelchaser.label26.caption"
 msgid "Spacing"
-msgstr ""
-
-#: tframefxchannelchaser.label4.caption
-msgctxt "tframefxchannelchaser.label4.caption"
-msgid "Level min"
 msgstr ""
 
 #: tframefxchannelchaser.shape5.hint
@@ -1805,7 +1790,9 @@ msgstr ""
 
 #: tframeviewprojectfolder.flbprojects.hint
 msgctxt "tframeviewprojectfolder.flbprojects.hint"
-msgid "The list of projects found in the above folder"
+msgid ""
+"The list of projects found in the above folder\n"
+"Double click to open"
 msgstr ""
 
 #: tframeviewprojectfolder.label7.caption
@@ -3036,6 +3023,10 @@ msgstr ""
 #: u_resource_string.slevelmin
 msgctxt "u_resource_string.slevelmin"
 msgid "Level min"
+msgstr ""
+
+#: u_resource_string.slevels
+msgid "Levels"
 msgstr ""
 
 #: u_resource_string.sloadingcursorimage
