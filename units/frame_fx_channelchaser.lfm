@@ -63,7 +63,7 @@ object FrameFXChannelChaser: TFrameFXChannelChaser
       AnchorSideRight.Control = UpDown1
       AnchorSideBottom.Control = Label2
       Left = 2
-      Height = 180
+      Height = 210
       Top = 15
       Width = 188
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -85,7 +85,7 @@ object FrameFXChannelChaser: TFrameFXChannelChaser
       Cursor = crHandPoint
       Left = 194
       Height = 57
-      Top = 77
+      Top = 92
       Width = 13
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 3
@@ -386,108 +386,35 @@ object FrameFXChannelChaser: TFrameFXChannelChaser
     end
     object Label2: TLabel
       AnchorSideLeft.Control = Panel3
-      AnchorSideBottom.Control = TB1
+      AnchorSideBottom.Control = Panel5
       Left = 4
       Height = 15
-      Top = 201
-      Width = 53
+      Top = 231
+      Width = 37
       Anchors = [akLeft, akBottom]
       BorderSpacing.Left = 3
-      Caption = 'Level max'
+      Caption = 'sLevels'
       Font.Color = 15395562
       Font.Style = [fsItalic]
       ParentColor = False
       ParentFont = False
     end
-    object Label11: TLabel
-      AnchorSideLeft.Control = Label2
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Label2
-      Left = 72
-      Height = 15
-      Top = 201
-      Width = 29
-      BorderSpacing.Left = 15
-      Caption = 'Label'
-      Font.Color = 15395562
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-    end
-    object TB1: TTrackBar
+    object Panel5: TPanel
       AnchorSideLeft.Control = Panel3
-      AnchorSideTop.Control = Label2
-      AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = Panel3
-      AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = Label4
-      Cursor = crHandPoint
-      Left = 1
-      Height = 30
-      Top = 216
-      Width = 209
-      Frequency = 10
-      Max = 200
-      Min = 1
-      OnChange = TBChange
-      Position = 150
-      ShowSelRange = False
-      TickMarks = tmTopLeft
-      Anchors = [akLeft, akRight, akBottom]
-      TabOrder = 7
-    end
-    object Label4: TLabel
-      AnchorSideLeft.Control = Panel3
-      AnchorSideTop.Control = TB1
-      AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = TB3
-      Left = 4
-      Height = 15
-      Top = 246
-      Width = 50
-      Anchors = [akLeft, akBottom]
-      BorderSpacing.Left = 3
-      Caption = 'Level min'
-      Font.Color = 15395562
-      Font.Style = [fsItalic]
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label13: TLabel
-      AnchorSideLeft.Control = Label4
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Label4
-      Left = 69
-      Height = 15
-      Top = 246
-      Width = 29
-      BorderSpacing.Left = 15
-      Caption = 'Label'
-      Font.Color = 15395562
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-    end
-    object TB3: TTrackBar
-      AnchorSideLeft.Control = Panel3
-      AnchorSideTop.Control = Label4
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Panel3
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = FSE1
-      Cursor = crHandPoint
-      Left = 1
-      Height = 30
-      Top = 261
-      Width = 209
-      Frequency = 10
-      Max = 199
-      OnChange = TBChange
-      Position = 50
-      ShowSelRange = False
-      TickMarks = tmTopLeft
+      Left = 4
+      Height = 40
+      Top = 246
+      Width = 203
       Anchors = [akLeft, akRight, akBottom]
-      TabOrder = 8
+      BorderSpacing.Left = 3
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 5
+      BevelOuter = bvNone
+      TabOrder = 7
     end
   end
 end

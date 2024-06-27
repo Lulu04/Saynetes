@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, ExtCtrls,
-  StdCtrls, Spin, ComCtrls, u_notebook_util, u_common, frame_velocity;
+  StdCtrls, Spin, ComCtrls, u_notebook_util, u_common, frame_velocity,
+  frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -34,6 +35,7 @@ type
     PageStop: TPage;
     PageStart: TPage;
     Panel1: TPanel;
+    Panel2: TPanel;
     Shape1: TShape;
     Shape2: TShape;
     SpeedButton1: TSpeedButton;
@@ -41,7 +43,6 @@ type
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
     SpeedButton5: TSpeedButton;
-    TB1: TTrackBar;
     procedure BAdd1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -52,10 +53,10 @@ type
   private
     FNoteBookManager: TNoteBookManager;
     Frame_Velocity1: TFrame_Velocity;
+    FrameStretchSpeed: TFrameTBSequenceStretchSpeed;
     FCmdDuration: single;
     FCmds: TCmdList;
     FShortReadableString: string;
-    function GetStretchValue: single;
     procedure UpdateWidgets;
   public
     procedure Fill;
@@ -82,6 +83,11 @@ begin
   Frame_Velocity1 := TFrame_Velocity.Create(Self);
   Frame_Velocity1.Parent := Panel1;
   Frame_Velocity1.Align := alClient;
+
+  FrameStretchSpeed := TFrameTBSequenceStretchSpeed.Create(Self, Panel2);
+  FrameStretchSpeed.Init(trHorizontal, False, False, False);
+  FrameStretchSpeed.Value := 1.0;
+  FrameStretchSpeed.OnChange := @TB1Change;
 
   FNoteBookManager := TNoteBookManager.Create(Notebook1);
   with FNoteBookManager do
@@ -115,7 +121,8 @@ end;
 
 procedure TFormOtherAction.SpeedButton5Click(Sender: TObject);
 begin
-  TB1.Position := 100;
+  FrameStretchSpeed.Value := 1.0;
+  TB1Change(NIL);
 end;
 
 procedure TFormOtherAction.TB1Change(Sender: TObject);
@@ -125,18 +132,13 @@ begin
   if LBStretch.ItemIndex <> -1 then
   begin
     pt := Sequences.GetSequenceByIndex(LBStretch.ItemIndex);
-    pt.TimeStretchFactor.ChangeTo(GetStretchValue, 0.2);
+    pt.TimeStretchFactor.ChangeTo(FrameStretchSpeed.Value, 0.2);
   end;
-end;
-
-function TFormOtherAction.GetStretchValue: single;
-begin
-  Result := TB1.Position/100;
 end;
 
 procedure TFormOtherAction.UpdateWidgets;
 begin
-  Label11.Caption := StrechTimeToString(GetStretchValue);
+  Label11.Caption := StrechTimeToString(FrameStretchSpeed.Value);
 end;
 
 procedure TFormOtherAction.BAdd1Click(Sender: TObject);
@@ -190,8 +192,8 @@ begin
       exit;
     end;
     pt := Sequences.GetSequenceByIndex(LBStretch.ItemIndex);
-    FCmds := CmdTopStretchTime(pt.ID, GetStretchValue, FSE1.Value, Frame_Velocity1.SelectedCurveID);
-    FShortReadableString := SStretchTime+' '+SOn_+' '+pt.Name+' '+SCoef+' '+FormatFloat('0.00', GetStretchValue);
+    FCmds := CmdTopStretchTime(pt.ID, FrameStretchSpeed.Value, FSE1.Value, Frame_Velocity1.SelectedCurveID);
+    FShortReadableString := SStretchTime+' '+SOn_+' '+pt.Name+' '+SCoef+' '+FormatFloat('0.00', FrameStretchSpeed.Value);
     FCmdDuration := FSE1.Value;
   end;
 

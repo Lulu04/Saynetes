@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 0
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -140,116 +140,40 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
       end
     end
     object PageFlame: TPage
-      object Label2: TLabel
-        AnchorSideLeft.Control = PageFlame
-        AnchorSideTop.Control = ButtonFlamePreset
-        AnchorSideTop.Side = asrBottom
-        Left = 2
-        Height = 15
-        Top = 19
-        Width = 58
-        BorderSpacing.Left = 2
-        Caption = 'sLevel max'
-        Font.Color = 15395562
-        ParentColor = False
-        ParentFont = False
-      end
       object Label3: TLabel
-        AnchorSideLeft.Control = Label2
-        AnchorSideTop.Control = TB3
+        AnchorSideTop.Control = Panel8
         AnchorSideTop.Side = asrBottom
         Left = 2
         Height = 15
-        Top = 109
+        Top = 99
         Width = 56
+        BorderSpacing.Top = 10
         Caption = 'sWait time'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
       end
       object Label4: TLabel
-        AnchorSideLeft.Control = Label2
-        AnchorSideTop.Control = TB1
         AnchorSideTop.Side = asrBottom
         Left = 2
         Height = 15
-        Top = 64
-        Width = 56
-        Caption = 'sLevel min'
+        Top = 32
+        Width = 37
+        Caption = 'sLevels'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
       end
-      object TB1: TTrackBar
-        AnchorSideLeft.Control = PageFlame
-        AnchorSideTop.Control = Label2
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageFlame
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 30
-        Top = 34
-        Width = 249
-        Frequency = 10
-        Max = 200
-        Min = 1
-        OnChange = TB1Change
-        Position = 150
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 0
-      end
-      object TB2: TTrackBar
-        AnchorSideLeft.Control = PageFlame
-        AnchorSideTop.Control = Label3
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageFlame
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 30
-        Top = 124
-        Width = 249
-        Frequency = 10
-        Max = 200
-        Min = 5
-        OnChange = TB1Change
-        Position = 25
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 1
-      end
-      object TB3: TTrackBar
-        AnchorSideLeft.Control = PageFlame
-        AnchorSideTop.Control = Label4
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageFlame
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 30
-        Top = 79
-        Width = 249
-        Frequency = 10
-        Max = 199
-        OnChange = TB1Change
-        Position = 50
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 2
-      end
       object BAdd2: TSpeedButton
-        AnchorSideTop.Control = TB7
+        AnchorSideTop.Control = Panel6
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageFlame
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = PageFlame
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
         Left = 178
         Height = 25
-        Top = 214
+        Top = 202
         Width = 70
         Anchors = [akTop, akRight]
         AutoSize = True
@@ -269,43 +193,13 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         OnClick = BAdd1Click
         ParentFont = False
       end
-      object Label11: TLabel
-        AnchorSideLeft.Control = Label2
-        AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Label2
-        Left = 75
-        Height = 15
-        Top = 19
-        Width = 28
-        BorderSpacing.Left = 15
-        Caption = 'Label'
-        Font.Color = 15395562
-        Font.Height = 15
-        ParentColor = False
-        ParentFont = False
-      end
       object Label12: TLabel
         AnchorSideLeft.Control = Label3
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label3
         Left = 73
         Height = 15
-        Top = 109
-        Width = 28
-        BorderSpacing.Left = 15
-        Caption = 'Label'
-        Font.Color = 15395562
-        Font.Height = 15
-        ParentColor = False
-        ParentFont = False
-      end
-      object Label13: TLabel
-        AnchorSideLeft.Control = Label4
-        AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Label4
-        Left = 73
-        Height = 15
-        Top = 64
+        Top = 99
         Width = 28
         BorderSpacing.Left = 15
         Caption = 'Label'
@@ -315,36 +209,17 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentFont = False
       end
       object Label14: TLabel
-        AnchorSideLeft.Control = Label2
-        AnchorSideTop.Control = TB2
+        AnchorSideTop.Control = Panel7
         AnchorSideTop.Side = asrBottom
         Left = 2
         Height = 15
-        Top = 154
+        Top = 148
         Width = 39
+        BorderSpacing.Top = 10
         Caption = 'sSoften'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
-      end
-      object TB7: TTrackBar
-        AnchorSideLeft.Control = PageFlame
-        AnchorSideTop.Control = Label14
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageFlame
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 30
-        Top = 169
-        Width = 249
-        Frequency = 10
-        Max = 100
-        OnChange = TB1Change
-        Position = 100
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 3
       end
       object Label15: TLabel
         AnchorSideLeft.Control = Label14
@@ -352,7 +227,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideTop.Control = Label14
         Left = 56
         Height = 15
-        Top = 154
+        Top = 148
         Width = 28
         BorderSpacing.Left = 15
         Caption = 'Label'
@@ -384,6 +259,57 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentFont = False
         ParentShowHint = False
       end
+      object Panel6: TPanel
+        AnchorSideLeft.Control = PageFlame
+        AnchorSideTop.Control = Label14
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageFlame
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 22
+        Top = 165
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 0
+      end
+      object Panel7: TPanel
+        AnchorSideLeft.Control = PageFlame
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageFlame
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 22
+        Top = 116
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 1
+      end
+      object Panel8: TPanel
+        AnchorSideLeft.Control = PageFlame
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageFlame
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 40
+        Top = 49
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 2
+      end
     end
     object PageAudioFollower: TPage
       object Label5: TLabel
@@ -400,65 +326,27 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentColor = False
         ParentFont = False
       end
-      object TB4: TTrackBar
-        AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = Label5
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageAudioFollower
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 46
-        Top = 97
-        Width = 249
-        Frequency = 4
-        Max = 30
-        Min = -10
-        OnChange = BAudioPlayClick
-        Position = 0
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 0
-      end
       object Label6: TLabel
         AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = TB4
+        AnchorSideTop.Control = Panel11
         AnchorSideTop.Side = asrBottom
         Left = 0
         Height = 15
-        Top = 143
+        Top = 131
         Width = 86
+        BorderSpacing.Top = 10
         Caption = 'sBrightness max'
         Font.Color = 15395562
         ParentColor = False
         ParentFont = False
       end
-      object TB5: TTrackBar
-        AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = Label6
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageAudioFollower
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 46
-        Top = 158
-        Width = 249
-        Frequency = 20
-        Max = 255
-        OnChange = BAudioPlayClick
-        Position = 200
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 1
-      end
       object Label7: TLabel
         AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = TB5
+        AnchorSideTop.Control = Panel10
         AnchorSideTop.Side = asrBottom
         Left = 0
         Height = 15
-        Top = 214
+        Top = 180
         Width = 56
         BorderSpacing.Top = 10
         Caption = 'sSoften on'
@@ -466,26 +354,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentColor = False
         ParentFont = False
       end
-      object TB6: TTrackBar
-        AnchorSideLeft.Control = PageAudioFollower
-        AnchorSideTop.Control = Label7
-        AnchorSideTop.Side = asrBottom
-        AnchorSideRight.Control = PageAudioFollower
-        AnchorSideRight.Side = asrBottom
-        Left = 0
-        Height = 46
-        Top = 229
-        Width = 249
-        Min = 1
-        OnChange = BAudioPlayClick
-        Position = 5
-        ShowSelRange = False
-        TickMarks = tmTopLeft
-        Anchors = [akTop, akLeft, akRight]
-        TabOrder = 2
-      end
       object BAdd3: TSpeedButton
-        AnchorSideTop.Control = TB6
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageAudioFollower
         AnchorSideRight.Side = asrBottom
@@ -494,9 +363,9 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Cursor = crHandPoint
         Left = 178
         Height = 25
-        Top = 290
+        Top = 352
         Width = 70
-        Anchors = [akTop, akRight]
+        Anchors = [akRight]
         AutoSize = True
         BorderSpacing.Top = 15
         BorderSpacing.Right = 1
@@ -529,7 +398,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Color = 2565927
         ItemHeight = 15
         Style = csDropDownList
-        TabOrder = 3
+        TabOrder = 0
       end
       object BAudioPlay: TSpeedButton
         AnchorSideTop.Control = ComboBox1
@@ -598,7 +467,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideRight.Side = asrBottom
         Left = 96
         Height = 15
-        Top = 143
+        Top = 131
         Width = 28
         BorderSpacing.Left = 10
         BorderSpacing.Right = 20
@@ -615,7 +484,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         AnchorSideRight.Side = asrBottom
         Left = 66
         Height = 15
-        Top = 214
+        Top = 180
         Width = 28
         BorderSpacing.Left = 10
         Caption = 'Label'
@@ -654,6 +523,57 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Width = 40
         Caption = 'sFollow'
         ParentColor = False
+      end
+      object Panel9: TPanel
+        AnchorSideLeft.Control = PageAudioFollower
+        AnchorSideTop.Control = Label7
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageAudioFollower
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 22
+        Top = 197
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 1
+      end
+      object Panel10: TPanel
+        AnchorSideLeft.Control = PageAudioFollower
+        AnchorSideTop.Control = Label6
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageAudioFollower
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 22
+        Top = 148
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 2
+      end
+      object Panel11: TPanel
+        AnchorSideLeft.Control = PageAudioFollower
+        AnchorSideTop.Control = Label5
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = PageAudioFollower
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 22
+        Top = 99
+        Width = 239
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 5
+        BevelOuter = bvNone
+        TabOrder = 3
       end
     end
     object PageCopy: TPage

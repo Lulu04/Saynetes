@@ -18,7 +18,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
     BevelOuter = bvNone
     ClientHeight = 401
     ClientWidth = 858
-    Color = 5596774
+    Color = 4868682
     ParentColor = False
     TabOrder = 0
     object BAddCmd: TBitBtn
@@ -124,31 +124,13 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       ParentColor = False
       ParentFont = False
     end
-    object TrackBar1: TTrackBar
-      AnchorSideTop.Control = Panel4
-      AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Side = asrBottom
-      Cursor = crHandPoint
-      Left = 544
-      Height = 49
-      Top = 225
-      Width = 232
-      Frequency = 10
-      Max = 200
-      OnChange = TrackBar1Change
-      Position = 50
-      ShowSelRange = False
-      Anchors = [akLeft]
-      TabOrder = 2
-    end
     object Label20: TLabel
-      AnchorSideLeft.Control = TrackBar1
-      AnchorSideTop.Control = TrackBar1
+      AnchorSideLeft.Control = Panel16
       AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = TrackBar1
-      Left = 544
+      AnchorSideBottom.Control = Panel16
+      Left = 552
       Height = 12
-      Top = 213
+      Top = 228
       Width = 16
       Anchors = [akLeft, akBottom]
       Caption = 'DRY'
@@ -158,13 +140,13 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       ParentFont = False
     end
     object Label21: TLabel
-      AnchorSideLeft.Control = TrackBar1
+      AnchorSideLeft.Control = Panel16
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = TrackBar1
-      Left = 637
+      AnchorSideBottom.Control = Panel16
+      Left = 645
       Height = 15
-      Top = 210
+      Top = 225
       Width = 46
       Anchors = [akLeft, akBottom]
       BorderSpacing.Top = 6
@@ -175,12 +157,12 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       ParentFont = False
     end
     object Label22: TLabel
-      AnchorSideRight.Control = TrackBar1
+      AnchorSideRight.Control = Panel16
       AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = TrackBar1
-      Left = 758
+      AnchorSideBottom.Control = Panel16
+      Left = 766
       Height = 12
-      Top = 213
+      Top = 228
       Width = 18
       Anchors = [akRight, akBottom]
       Caption = 'WET'
@@ -202,7 +184,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       BevelOuter = bvNone
       ClientHeight = 135
       ClientWidth = 743
-      TabOrder = 3
+      TabOrder = 2
       object Panel5: TPanel
         AnchorSideLeft.Control = Panel4
         AnchorSideTop.Control = Panel4
@@ -1239,7 +1221,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Shape18
       Left = 826
-      Height = 167
+      Height = 172
       Top = 80
       Width = 4
       Anchors = [akTop, akRight, akBottom]
@@ -1252,21 +1234,21 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Shape4
       AnchorSideRight.Side = asrBottom
-      Left = 788
+      Left = 796
       Height = 4
-      Top = 247
-      Width = 42
+      Top = 252
+      Width = 34
       Anchors = [akTop, akLeft, akRight]
       Brush.Color = clBlack
     end
     object Shape15: TShape
-      AnchorSideLeft.Control = TrackBar1
+      AnchorSideLeft.Control = Panel16
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = TrackBar1
+      AnchorSideTop.Control = Panel16
       AnchorSideTop.Side = asrCenter
-      Left = 776
+      Left = 784
       Height = 12
-      Top = 243
+      Top = 248
       Width = 12
       Brush.Color = clBlack
       Shape = stTriangleLeft
@@ -1279,8 +1261,8 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideRight.Control = Shape12
       Left = 507
       Height = 4
-      Top = 247
-      Width = 25
+      Top = 252
+      Width = 33
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
       Brush.Color = clBlack
@@ -1288,12 +1270,12 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
     object Shape12: TShape
       AnchorSideLeft.Control = Shape11
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = TrackBar1
+      AnchorSideTop.Control = Panel16
       AnchorSideTop.Side = asrCenter
-      AnchorSideRight.Control = TrackBar1
-      Left = 532
+      AnchorSideRight.Control = Panel16
+      Left = 540
       Height = 12
-      Top = 243
+      Top = 248
       Width = 12
       Anchors = [akTop, akRight]
       Brush.Color = clBlack
@@ -1313,15 +1295,15 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       Brush.Color = clBlack
     end
     object Shape16: TShape
-      AnchorSideLeft.Control = TrackBar1
+      AnchorSideLeft.Control = Panel16
       AnchorSideLeft.Side = asrCenter
-      AnchorSideTop.Control = TrackBar1
+      AnchorSideTop.Control = Panel16
       AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = Shape17
-      Left = 658
-      Height = 25
+      Left = 666
+      Height = 20
       Top = 274
       Width = 4
+      BorderSpacing.Top = 5
       Brush.Color = clBlack
     end
     object Shape17: TShape
@@ -1329,9 +1311,9 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Shape16
       AnchorSideTop.Side = asrBottom
-      Left = 654
+      Left = 662
       Height = 12
-      Top = 299
+      Top = 294
       Width = 12
       Brush.Color = clBlack
       Shape = stTriangleDown
@@ -1341,16 +1323,16 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Label12
       AnchorSideTop.Side = asrBottom
-      Left = 629
+      Left = 637
       Height = 27
-      Top = 326
+      Top = 321
       Width = 62
       BevelOuter = bvNone
       ClientHeight = 27
       ClientWidth = 62
       Color = 4473924
       ParentColor = False
-      TabOrder = 4
+      TabOrder = 3
       object BListen: TSpeedButton
         AnchorSideLeft.Control = Panel8
         AnchorSideTop.Control = Panel8
@@ -1432,8 +1414,8 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Shape11
-      Left = 517
-      Height = 87
+      Left = 521
+      Height = 92
       Top = 160
       Width = 4
       Anchors = [akTop, akLeft, akBottom]
@@ -1449,7 +1431,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       Left = 34
       Height = 4
       Top = 160
-      Width = 487
+      Width = 491
       Anchors = [akTop, akLeft, akRight]
       Brush.Color = clBlack
     end
@@ -1459,9 +1441,9 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Shape5
       AnchorSideBottom.Side = asrBottom
-      Left = 513
+      Left = 517
       Height = 12
-      Top = 215
+      Top = 220
       Width = 12
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 20
@@ -1473,24 +1455,24 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideTop.Control = Panel8
       AnchorSideTop.Side = asrBottom
       Cursor = crHandPoint
-      Left = 634
+      Left = 642
       Height = 19
-      Top = 358
+      Top = 353
       Width = 20
       BorderSpacing.Left = 5
       BorderSpacing.Top = 5
       Checked = True
       State = cbChecked
-      TabOrder = 5
+      TabOrder = 4
     end
     object Label2: TLabel
       AnchorSideLeft.Control = CheckBox1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = CheckBox1
       Cursor = crHandPoint
-      Left = 654
+      Left = 662
       Height = 15
-      Top = 358
+      Top = 353
       Width = 69
       Caption = 'Auto preview'
       Font.Color = 15395562
@@ -1550,7 +1532,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       PageIndex = 0
       Anchors = [akTop, akLeft, akBottom]
       BorderSpacing.Bottom = 2
-      TabOrder = 6
+      TabOrder = 5
       object PageFile: TPage
         object Panel2: TPanel
           Left = 0
@@ -1666,9 +1648,9 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideTop.Control = Shape17
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Panel8
-      Left = 632
+      Left = 640
       Height = 15
-      Top = 311
+      Top = 306
       Width = 41
       BorderSpacing.Left = 3
       Caption = 'Preview'
@@ -1679,12 +1661,12 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
     end
     object Shape22: TShape
       AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = TrackBar1
+      AnchorSideTop.Control = Shape23
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Panel3
       Left = 318
       Height = 12
-      Top = 243
+      Top = 248
       Width = 12
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 3
@@ -1699,7 +1681,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       AnchorSideRight.Control = Shape22
       Left = 307
       Height = 4
-      Top = 247
+      Top = 252
       Width = 11
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
@@ -1719,6 +1701,16 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       Font.Style = [fsItalic]
       ParentColor = False
       ParentFont = False
+    end
+    object Panel16: TPanel
+      Left = 552
+      Height = 29
+      Top = 240
+      Width = 232
+      BevelOuter = bvNone
+      Color = 4868682
+      ParentColor = False
+      TabOrder = 6
     end
   end
   object Timer1: TTimer

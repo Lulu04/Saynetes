@@ -11,7 +11,7 @@ object FormEditWebLink: TFormEditWebLink
   KeyPreview = True
   OnKeyUp = FormKeyUp
   OnShow = FormShow
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '2.2.4.0'
   object Shape1: TShape
     Left = 0
     Height = 118
@@ -29,10 +29,10 @@ object FormEditWebLink: TFormEditWebLink
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Cursor = crHandPoint
-    Left = 403
-    Height = 20
-    Top = 88
-    Width = 65
+    Left = 389
+    Height = 21
+    Top = 87
+    Width = 79
     Anchors = [akRight, akBottom]
     AutoSize = True
     BorderSpacing.Top = 40
@@ -55,10 +55,10 @@ object FormEditWebLink: TFormEditWebLink
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Cursor = crHandPoint
-    Left = 318
-    Height = 20
-    Top = 88
-    Width = 45
+    Left = 297
+    Height = 21
+    Top = 87
+    Width = 52
     Anchors = [akRight, akBottom]
     AutoSize = True
     BorderSpacing.Top = 20
@@ -79,9 +79,9 @@ object FormEditWebLink: TFormEditWebLink
   object Label18: TLabel
     AnchorSideRight.Side = asrBottom
     Left = 32
-    Height = 15
+    Height = 17
     Top = 24
-    Width = 64
+    Width = 83
     Caption = 'Type of link'
     Font.Color = 15395562
     Font.Style = [fsBold]
@@ -94,13 +94,13 @@ object FormEditWebLink: TFormEditWebLink
     AnchorSideLeft.Side = asrBottom
     AnchorSideBottom.Control = Label18
     AnchorSideBottom.Side = asrBottom
-    Left = 111
-    Height = 23
-    Top = 16
+    Left = 130
+    Height = 29
+    Top = 12
     Width = 133
     Anchors = [akLeft, akBottom]
     BorderSpacing.Left = 15
-    ItemHeight = 15
+    ItemHeight = 0
     Items.Strings = (
       'manual'
       'product page'
@@ -113,9 +113,9 @@ object FormEditWebLink: TFormEditWebLink
   object Label19: TLabel
     AnchorSideRight.Side = asrBottom
     Left = 79
-    Height = 15
+    Height = 17
     Top = 56
-    Width = 17
+    Width = 21
     Caption = 'Url'
     Font.Color = 15395562
     Font.Style = [fsBold]
@@ -128,7 +128,7 @@ object FormEditWebLink: TFormEditWebLink
     AnchorSideLeft.Side = asrBottom
     AnchorSideBottom.Side = asrBottom
     Left = 112
-    Height = 23
+    Height = 33
     Top = 48
     Width = 371
     Anchors = [akTop]

@@ -9,7 +9,7 @@ uses
   StdCtrls, Spin, ComCtrls, LCLTranslator, frame_velocity, u_notebook_util,
   u_list_dmxuniverse, frame_color_palette, u_common,
   frame_fx_rgbchaser, frame_viewfixtureslist, frame_viewprojectors,
-  frame_trackbar;
+  frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -57,11 +57,16 @@ type
     PageFlame: TPage;
     PageStop: TPage;
     Panel1: TPanel;
+    Panel10: TPanel;
+    Panel11: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -78,11 +83,6 @@ type
     SpeedButton7: TSpeedButton;
     SpeedButton8: TSpeedButton;
     SpeedButton9: TSpeedButton;
-    TB2: TTrackBar;
-    TB3: TTrackBar;
-    TB4: TTrackBar;
-    TB6: TTrackBar;
-    TB7: TTrackBar;
     procedure BAdd1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -116,6 +116,11 @@ type
     procedure SetGUIMode(AValue: TGUIMode);
    private
     FFrameTrackBar1: TFrameTrackBar;
+    FrameTBFlameWait: TFrameTBDmxFlameRGBWait;
+    FrameTBFlameAmplitude: TFrameTBDmxFlameRGBAmplitude;
+    FrameTBFlameSoften: TFrameTBDmxFlameRGBSoften;
+    FrameTBFollowGain: TFrameTBDmxAudioFollowerGain;
+    FrameTBFollowSoften: TFrameTBDmxAudioFollowerSoften;
   public
     Frame_ColorPalette1: TFrame_ColorPalette;
     FrameFXRGBChaser1: TFrameFXRGBChaser;
@@ -185,14 +190,36 @@ begin
     OnSelectionChange := @ProcessPageSelectionChange;
   end;
 
-  FFrameTrackBar1 := TFrameTrackBar.Create(NIL);
-  FFrameTrackBar1.Parent := Panel5;
-  FFrameTrackBar1.Align := alClient;
+  FFrameTrackBar1 := TFrameTrackBar.Create(Self, Panel5);
   FFrameTrackBar1.Init(trHorizontal, False, True, True);
-  FFrameTrackBar1.CursorFillColor := BGRA(255,128,0);
-  FFrameTrackBar1.CursorOutlineColor := BGRA(192,96,0);
   FFrameTrackBar1.OnChange := @RadioButton1Change;
   FFrameTrackBar1.Enabled := False;
+
+  FrameTBFlameWait := TFrameTBDmxFlameRGBWait.Create(Self, Panel9);
+  FrameTBFlameWait.Init(trHorizontal, False, False, False);
+  FrameTBFlameWait.Value := 0.125;
+  FrameTBFlameWait.OnChange := @ProcessColorChangeEvent;
+
+  FrameTBFlameAmplitude := TFrameTBDmxFlameRGBAmplitude.Create(Self, Panel8);
+  FrameTBFlameAmplitude.Init(trHorizontal, False, False, False);
+  FrameTBFlameAmplitude.Value := 0.5;
+  FrameTBFlameAmplitude.OnChange := @ProcessColorChangeEvent;
+
+  FrameTBFlameSoften := TFrameTBDmxFlameRGBSoften.Create(Self, Panel7);
+  FrameTBFlameSoften.Init(trHorizontal, False, False, False);
+  FrameTBFlameSoften.Value := 1.0;
+  FrameTBFlameSoften.OnChange := @ProcessColorChangeEvent;
+
+  FrameTBFollowGain := TFrameTBDmxAudioFollowerGain.Create(Self, Panel11);
+  FrameTBFollowGain.Init(trHorizontal, False, False, False);
+  FrameTBFollowGain.Value := 0.0;
+  FrameTBFollowGain.OnChange := @ProcessColorChangeEvent;
+
+  FrameTBFollowSoften := TFrameTBDmxAudioFollowerSoften.Create(Self, Panel10);
+  FrameTBFollowSoften.Init(trHorizontal, False, False, False);
+  FrameTBFollowSoften.Value := 0.5;
+  FrameTBFollowSoften.OnChange := @ProcessColorChangeEvent;
+
 
   FCheckedLabelManager := TCheckedLabelManager.Create;
   FCheckedLabelManager.CaptureLabelClick(Label28);
@@ -375,17 +402,17 @@ begin
 end;
 
 procedure TFormDMXRGBTools.UpdateWidgets;
+var v: single;
 begin
   // audio follower
-  if TB4.Position < 0 then
-    Label8.Caption := TB4.Position.ToString
-  else
-    Label8.Caption := '+'+TB4.Position.ToString;
-  Label10.Caption := FormatFloat('0.00', TB6.Position/10)+SSec;
+  v := FrameTBFollowGain.Value;
+  Label8.Caption := FormatFloat('0.00', v);
+  if v > 0 then Label8.Caption := '+' + Label8.Caption;
+  Label10.Caption := FormatFloat('0.00', FrameTBFollowSoften.Value)+SSec;
   // flame
-  Label12.Caption := FormatFloat('0.00', TB2.Position/100)+SSec;
-  Label13.Caption := FormatFloat('0.0', TB3.Position/TB3.Max*100)+'%';
-  Label15.Caption := FormatFloat('0.0', TB7.Position/TB7.Max*100)+'%';
+  Label12.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
+  Label13.Caption := FormatFloat('0.0', FrameTBFlameAmplitude.Value*100)+'%';
+  Label15.Caption := FormatFloat('0.0', FrameTBFlameSoften.Value*100)+'%';
   // flash
   FFrameTrackBar1.Enabled := RadioButton2.Checked;
   FloatSpinEdit3.Enabled := RadioButton4.Checked;
@@ -426,9 +453,9 @@ var i: integer;
   fix: TDMXFixture;
 begin
   FCmd := CmdTitleDMXFlameRGB(Frame_ColorPalette1.SelectedColor,
-                             TB2.Position/100,
-                             TB3.Position/TB3.Max,
-                             TB7.Position/TB7.Max);
+                             FrameTBFlameWait.Value,
+                             FrameTBFlameAmplitude.Value,
+                             FrameTBFlameSoften.Value);
 
   for i:=0 to High(FTargetFixtures) do
   begin
@@ -437,9 +464,9 @@ begin
       FCmd.ConcatCmd(CmdDMXFlameRGB(fix.Universe.ID,
                      fix.ID,
                      Frame_ColorPalette1.SelectedColor,
-                     TB2.Position/100,
-                     TB3.Position/TB3.Max,
-                     TB7.Position/TB7.Max));
+                     FrameTBFlameWait.Value,
+                     FrameTBFlameAmplitude.Value,
+                     FrameTBFlameSoften.Value));
   end;
   // DMXFLAMMERVB IDuniverse IDFixture dmxadress Color Speed Amplitude Soften
   FShortReadable := SDMXFlameRGB+' '+SOn_+' ';
@@ -460,8 +487,8 @@ begin
 
   FCmd := CmdTitleDMXAudioFollowerRGB(snd.Tag,
                                       Frame_ColorPalette1.SelectedColor,
-                                      TB4.Position/10,
-                                      TB6.Position/10);
+                                      FrameTBFollowGain.Value,
+                                      FrameTBFollowSoften.Value);
 
   for i:=0 to High(FTargetFixtures) do
   begin
@@ -471,8 +498,8 @@ begin
                      fix.ID,
                      snd.Tag,
                      Frame_ColorPalette1.SelectedColor,
-                     TB4.Position/10,
-                     TB6.Position/10));
+                     FrameTBFollowGain.Value,
+                     FrameTBFollowSoften.Value));
   end;
   // DMXSUIVEURAUDIORVB IDuniverse IDFixture IDaudio Color Gain MaxPercent SoftenTime
   FShortReadable := SDMXAudioFollowerRGB+' '+ExtractFileName(snd.Filename)+' '+SOn_+' ';
@@ -540,7 +567,7 @@ var i: integer;
   fix: TDMXFixture;
   vmin, vmax, dmin, dmax: single;
 begin
-  vmax := FFrameTrackBar1.PercentValue;
+  vmax := FFrameTrackBar1.PercentMax;
   if RadioButton1.Checked then
     vmin := vmax
   else
@@ -673,9 +700,9 @@ begin
   begin
     for i:=0 to High(FTargetFixtures) do
       FTargetFixtures[i].StartFlameRGB(Frame_ColorPalette1.SelectedColor,
-                                       TB2.Position/100,
-                                       TB3.Position/TB3.Max,
-                                       TB7.Position/TB7.Max);
+                                       FrameTBFlameWait.Value,
+                                       FrameTBFlameAmplitude.Value,
+                                       FrameTBFlameSoften.Value);
    // if FTargetViewProjector.FShowLevel then
    //   FTargetViewProjector.Redraw;
   end;
@@ -697,8 +724,8 @@ begin
       begin
         FTargetFixtures[i].StartAudioFollowerRGB(snd.Tag,
                                                  Frame_ColorPalette1.SelectedColor,
-                                                 TB4.Position/10,
-                                                 TB6.Position/10);
+                                                 FrameTBFollowGain.Value,
+                                                 FrameTBFollowSoften.Value);
       end;
     end;
     if FTargetViewProjector.FShowLevel then
@@ -720,7 +747,7 @@ begin
   if Notebook1.PageIndex=Notebook1.IndexOf(PageFlash) then
   begin
 
-    vmax := FFrameTrackBar1.PercentValue;
+    vmax := FFrameTrackBar1.PercentMax;
     if RadioButton1.Checked then
       vmin := vmax
     else

@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons, Spin,
   ComCtrls, LCLType, LCLTranslator,
   frame_viewaudiolist,
-  u_common, frame_velocity, u_audio_manager, u_notebook_util;
+  u_common, frame_velocity, u_audio_manager, u_notebook_util,
+  frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -16,8 +17,8 @@ type
 
   TFrameCmdAudio = class(TFrame)
     BAdd: TBitBtn;
-    BPitchNormal: TButton;
-    BPanNormal: TButton;
+    BPanNormal: TSpeedButton;
+    BPitchNormal: TSpeedButton;
     FSE1: TFloatSpinEdit;
     FSE2: TFloatSpinEdit;
     FSE3: TFloatSpinEdit;
@@ -39,11 +40,14 @@ type
     PageCapture: TPage;
     PageFile: TPage;
     Panel1: TPanel;
+    Panel10: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
     Panel9: TPanel;
     PanelVolume: TPanel;
     PanelPan: TPanel;
@@ -65,9 +69,6 @@ type
     SpeedButton7: TSpeedButton;
     SpeedButton8: TSpeedButton;
     SpeedButton9: TSpeedButton;
-    TBPan: TTrackBar;
-    TBPitch: TTrackBar;
-    TBVol: TTrackBar;
     procedure BListenClick(Sender: TObject);
     procedure BPanNormalClick(Sender: TObject);
     procedure BStopAllClick(Sender: TObject);
@@ -102,9 +103,6 @@ type
     procedure GenerateCmdForVolumeCapture;
     procedure GenerateCmdForPanCapture;
 
-    function GetVolume: single;
-    function GetPan: single;
-    function GetPitch: single;
     procedure UpdateVolumeLabel;
     procedure UpdatePanLabel;
     procedure UpdatePitchLabel;
@@ -113,6 +111,9 @@ type
     FFileSBManager,
     FCaptureSBManager: TToggleSpeedButtonManager;
     FNoteBookManager: TNoteBookManager;
+    FrameTBVol: TFrameTBAudioVolume;
+    FrameTBPan: TFrameTBAudioPan;
+    FrameTBPitch: TFrameTBAudioPitch;
     procedure StartPlayback(aFromBegining: boolean);
     function TargetIsFile: boolean;
   public
@@ -135,7 +136,7 @@ type
 
 implementation
 
-uses u_resource_string, u_utils, u_helper, ALSound, LCLHelper, Graphics,
+uses u_resource_string, u_utils, u_helper, ALSound, Graphics,
   frame_bglvirtualscreen_sequencer;
 
 {$R *.lfm}
@@ -151,41 +152,40 @@ end;
 procedure TFrameCmdAudio.TBPanChange(Sender: TObject);
 begin
   if TargetIsFile then
-    FrameViewAudioList1.SetPanOnSelected( GetPan )
+    FrameViewAudioList1.SetPanOnSelected(FrameTBPan.Value)
   else
-    SoundManager.CaptureSetPan( GetPan );
+    SoundManager.CaptureSetPan(FrameTBPan.Value);
   UpdatePanLabel;
 end;
 
 procedure TFrameCmdAudio.TBPitchChange(Sender: TObject);
 begin
- FrameViewAudioList1.SetPitchOnSelected( GetPitch );
- UpdatePitchLabel;
+  FrameViewAudioList1.SetPitchOnSelected(FrameTBPitch.Value);
+  UpdatePitchLabel;
 end;
 
 procedure TFrameCmdAudio.TBVolChange(Sender: TObject);
 begin
   if TargetIsFile then
-    FrameViewAudioList1.SetVolumeOnSelected( GetVolume )
+    FrameViewAudioList1.SetVolumeOnSelected(FrameTBVol.Value)
   else
-    SoundManager.CaptureSetVolume( GetVolume );
+    SoundManager.CaptureSetVolume(FrameTBVol.Value);
   UpdateVolumeLabel;
 end;
 
 procedure TFrameCmdAudio.DoOnAddCmd;
 begin
-  if FOnAddCmd<>NIL
+  if FOnAddCmd <> NIL
     then FOnAddCmd(Self);
 end;
 
 procedure TFrameCmdAudio.ProcessSelectionChange(Sender: TObject);
 var snd: TALSSound;
 begin
-  snd:=FrameViewAudioList1.FirstSelected;
-  if snd<>NIL then begin
-    TBVol.Position:=TBVol.Max;
-    TBPan.Position:=0;
-    TBPitch.Position:=100;
+  snd := FrameViewAudioList1.FirstSelected;
+  if snd <> NIL then begin
+    FrameTBVol.Value := 1.0;
+    FrameTBPitch.Value := 1.0;
   end;
 end;
 
@@ -193,18 +193,18 @@ procedure TFrameCmdAudio.GenerateCmdForPlayFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioPlay;
+  FCmds := CmdTitleAudioPlay;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
-    FCmds.ConcatCmd(CmdAudioPlay(snd.Tag, GetVolume, GetPan));
+    snd := FSelectedSounds[i];
+    FCmds.ConcatCmd(CmdAudioPlay(snd.Tag, FrameTBVol.Value, FrameTBPan.Value));
   end;
 
-  FShortReadableString:=SAudioPlay+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FCmdDuration:=0.0;
+  FShortReadableString := SAudioPlay + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FCmdDuration := 0.0;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForPauseFile;
@@ -214,107 +214,107 @@ begin
   FCmds:=CmdTitleAudioPause;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
+    snd := FSelectedSounds[i];
     FCmds.ConcatCmd(CmdAudioPause(snd.Tag));
   end;
 
-  FShortReadableString:=SAudioPause+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FCmdDuration:=0.0;
+  FShortReadableString := SAudioPause + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FCmdDuration := 0.0;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForStopFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioStop;
+  FCmds := CmdTitleAudioStop;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
+    snd := FSelectedSounds[i];
     FCmds.ConcatCmd(CmdAudioStop(snd.Tag));
   end;
 
-  FShortReadableString:=SAudioStop+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FCmdDuration:=0.0;
+  FShortReadableString := SAudioStop + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FCmdDuration := 0.0;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForFadeInFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioFadeIN;
+  FCmds := CmdTitleAudioFadeIN;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
-    FCmds.ConcatCmd(CmdAudioFadeIN(snd.Tag, GetVolume, FSE1.Value, Frame_Velocity1.SelectedCurveID));
+    snd := FSelectedSounds[i];
+    FCmds.ConcatCmd(CmdAudioFadeIN(snd.Tag, FrameTBVol.Value, FSE1.Value, Frame_Velocity1.SelectedCurveID));
   end;
 
-  FShortReadableString:=SAudioFadeIn+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FCmdDuration:=FSE1.Value;
+  FShortReadableString := SAudioFadeIn + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FCmdDuration := FSE1.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForFadeOutFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioFadeOUT;
+  FCmds := CmdTitleAudioFadeOUT;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
+    snd := FSelectedSounds[i];
     FCmds.ConcatCmd(CmdAudioFadeOUT(snd.Tag, FSE1.Value, Frame_Velocity1.SelectedCurveID));
   end;
 
-  FShortReadableString:=SAudioFadeOut+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FCmdDuration:=FSE1.Value;
+  FShortReadableString := SAudioFadeOut + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FCmdDuration := FSE1.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForVolumeFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioChangeVolume;
+  FCmds := CmdTitleAudioChangeVolume;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
-    FCmds.ConcatCmd(CmdAudioChangeVolume(snd.Tag, GetVolume, FSE1.Value, Frame_Velocity1.SelectedCurveID));
+    snd := FSelectedSounds[i];
+    FCmds.ConcatCmd(CmdAudioChangeVolume(snd.Tag, FrameTBVol.Value, FSE1.Value, Frame_Velocity1.SelectedCurveID));
   end;
 
-  FShortReadableString:=SAudioSetVolume+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FShortReadableString:=FShortReadableString+' '+STo+' '+VolumeToStringPercent(TBVol.Percent);
-  FCmdDuration:=FSE1.Value;
+  FShortReadableString := SAudioSetVolume + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString+SMultiple
+    else FShortReadableString := FShortReadableString+ExtractFileName(snd.Filename);
+  FShortReadableString := FShortReadableString + ' ' + STo + ' ' + VolumeToStringPercent(FrameTBVol.Value);
+  FCmdDuration := FSE1.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForPanFile;
 var i: integer;
   snd: TALSSound;
 begin
-  FCmds:=CmdTitleAudioChangePan;
+  FCmds := CmdTitleAudioChangePan;
 
   for i:=0 to High(FSelectedSounds) do begin
-    snd:=FSelectedSounds[i];
-    FCmds.ConcatCmd(CmdAudioChangePan(snd.Tag, GetPan, FSE2.Value, Frame_Velocity1.SelectedCurveID));
+    snd := FSelectedSounds[i];
+    FCmds.ConcatCmd(CmdAudioChangePan(snd.Tag, FrameTBPan.Value, FSE2.Value, Frame_Velocity1.SelectedCurveID));
   end;
 
-  FShortReadableString:=SAudioSetPan+' ';
-  if Length(FSelectedSounds)>1
-    then FShortReadableString:=FShortReadableString+SMultiple
-    else FShortReadableString:=FShortReadableString+ExtractFileName(snd.Filename);
-  FShortReadableString:=FShortReadableString+' '+STo+' '+PanToStringPercent(TBPan.Position/100);
-  FCmdDuration:=FSE2.Value;
+  FShortReadableString := SAudioSetPan + ' ';
+  if Length(FSelectedSounds) > 1
+    then FShortReadableString := FShortReadableString + SMultiple
+    else FShortReadableString := FShortReadableString + ExtractFileName(snd.Filename);
+  FShortReadableString := FShortReadableString + ' ' + STo + ' ' + PanToStringPercent(FrameTBPan.Value);
+  FCmdDuration := FSE2.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForPitchFile;
@@ -323,7 +323,7 @@ var i: integer;
   v: single;
 begin
   FCmds := CmdTitleAudioChangePitch;
-  v := GetPitch;
+  v := FrameTBPitch.Value;
   for i:=0 to High(FSelectedSounds) do begin
     snd := FSelectedSounds[i];
     FCmds.ConcatCmd(CmdAudioChangePitch(snd.Tag, v, FSE3.Value, Frame_Velocity1.SelectedCurveID));
@@ -340,69 +340,54 @@ end;
 procedure TFrameCmdAudio.GenerateCmdForStartCapture;
 begin
   FCmds := CmdAudioCaptureStart;
-  FShortReadableString:=SAudioCaptureStart;
+  FShortReadableString := SAudioCaptureStart;
   FCmdDuration := 0;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForStopCapture;
 begin
   FCmds := CmdAudioCaptureStop;
-  FShortReadableString:=SAudioCaptureStop;
+  FShortReadableString := SAudioCaptureStop;
   FCmdDuration := 0;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForVolumeCapture;
 begin
-  FCmds:=CmdAudioCaptureChangeVolume(GetVolume, FSE1.Value, Frame_Velocity1.SelectedCurveID);
-  FShortReadableString:=SAudioCaptureSetVolume+' '+STo+' '+VolumeToStringPercent(TBVol.Percent);
+  FCmds := CmdAudioCaptureChangeVolume(FrameTBVol.Value, FSE1.Value, Frame_Velocity1.SelectedCurveID);
+  FShortReadableString := SAudioCaptureSetVolume + ' ' + STo + ' ' + VolumeToStringPercent(FrameTBVol.Value);
   FCmdDuration := FSE1.Value;
 end;
 
 procedure TFrameCmdAudio.GenerateCmdForPanCapture;
 begin
-  FCmds:=CmdAudioCaptureChangePan(GetPan, FSE1.Value, Frame_Velocity1.SelectedCurveID);
-  FShortReadableString:=SAudioCaptureSetPan+' '+STo+' '+PanToStringPercent(TBPan.Position/100);
+  FCmds := CmdAudioCaptureChangePan(FrameTBPan.Value, FSE1.Value, Frame_Velocity1.SelectedCurveID);
+  FShortReadableString := SAudioCaptureSetPan + ' ' + STo + ' ' + PanToStringPercent(FrameTBPan.Value);
   FCmdDuration := FSE1.Value;
-end;
-
-function TFrameCmdAudio.GetVolume: single;
-begin
-  Result := TBVol.Position/TBVol.Max;
-end;
-
-function TFrameCmdAudio.GetPan: single;
-begin
-  Result := TBPan.Position/100;
-end;
-
-function TFrameCmdAudio.GetPitch: single;
-begin
-  Result := TBPitch.Position/100;
 end;
 
 procedure TFrameCmdAudio.UpdateVolumeLabel;
 begin
-  LabelVolume.Caption := SVolume+' '+VolumeToStringPercent( GetVolume );
+  LabelVolume.Caption := SVolume + ' ' + VolumeToStringPercent(FrameTBVol.Value);
 end;
 
 procedure TFrameCmdAudio.UpdatePanLabel;
 begin
-  LabelPan.Caption := SPan+' '+PanToStringPercent(GetPan);
+  LabelPan.Caption := SPan + ' ' + PanToStringPercent(FrameTBPan.Value);
 end;
 
 procedure TFrameCmdAudio.UpdatePitchLabel;
 begin
-  LabelPitch.Caption := SPitch+' '+PitchToString( GetPitch );
+  LabelPitch.Caption := SPitch + ' ' + PitchToString(FrameTBPitch.Value);
 end;
 
 procedure TFrameCmdAudio.UpdatePanels;
 begin
   // volume
-  PanelVolume.Visible := (TargetIsFile and (FSelectedActionIndex in [0,3,6,7] )) or
+  PanelVolume.Visible := (TargetIsFile and (FSelectedActionIndex in [0,3,6,7])) or
         (not TargetIsFile and (FSelectedActionIndex = 2));
   if PanelVolume.Visible then begin
     LabelVolume.Visible := not (TargetIsFile and FFileSBManager.Checked[SpeedButton10]);
-    TBVol.Visible := LabelVolume.Visible;
+    FrameTBVol.Visible := LabelVolume.Visible;
     lblVol1.Visible := FSelectedActionIndex in [3,6,7];
     FSE1.Visible := lblVol1.Visible;
     lblattendre9.Visible := lblVol1.Visible;
@@ -418,7 +403,7 @@ begin
   end;
 
   // pitch
-  PanelPitch.Visible := TargetIsFile and (FSelectedActionIndex=5);
+  PanelPitch.Visible := TargetIsFile and (FSelectedActionIndex = 5);
 
   // velocity curve
   PanelCurve.Visible := (TargetIsFile and (FSelectedActionIndex in [3..7])) or
@@ -461,15 +446,30 @@ end;
 constructor TFrameCmdAudio.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
-  FrameViewAudioList1:=TFrameViewAudioList.Create(Self);
-  FrameViewAudioList1.Parent:=Panel2;
-  FrameViewAudioList1.Align:=alClient;
-  FrameViewAudioList1.MultiSelect:=FALSE;
-  FrameViewAudioList1.OnSelectionChange:=@ProcessSelectionChange;
+  FrameViewAudioList1 := TFrameViewAudioList.Create(Self);
+  FrameViewAudioList1.Parent := Panel2;
+  FrameViewAudioList1.Align := alClient;
+  FrameViewAudioList1.MultiSelect := FALSE;
+  FrameViewAudioList1.OnSelectionChange := @ProcessSelectionChange;
 
-  Frame_Velocity1:=TFrame_Velocity.Create(Self);
-  Frame_Velocity1.Parent:=Panel3;
-  Frame_Velocity1.Align:=alClient;
+  Frame_Velocity1 := TFrame_Velocity.Create(Self);
+  Frame_Velocity1.Parent := Panel3;
+  Frame_Velocity1.Align := alClient;
+
+  FrameTBVol := TFrameTBAudioVolume.Create(Self, Panel10);
+  FrameTBVol.Init(trHorizontal, False, False, False);
+  FrameTBVol.Value := 1.0;
+  FrameTBVol.OnChange := @TBVolChange;
+
+  FrameTBPan := TFrameTBAudioPan.Create(Self, Panel8);
+  FrameTBPan.Init(trHorizontal, False, False, False);
+  FrameTBPan.Value:= 0.0;
+  FrameTBPan.OnChange := @TBPanChange;
+
+  FrameTBPitch := TFrameTBAudioPitch.Create(Self, Panel7);
+  FrameTBPitch.Init(trHorizontal, False, False, False);
+  FrameTBPitch.Value := 1.0;
+  FrameTBPitch.OnChange := @TBPitchChange;
 
   FNoteBookManager := TNoteBookManager.Create(Notebook1);
   with FNoteBookManager do
@@ -478,11 +478,11 @@ begin
     SetDeactivatedColors($00484848, $00EAEAEA);
     LinkButtonToPage(SpeedButton4, PageFile);
     LinkButtonToPage(SpeedButton5, PageCapture);
-    ActivePage( PageFile );
+    ActivePage(PageFile);
     OnSelectionChange := @ProcessSourceChangeEvent;
   end;
 
-  FFileSBManager:=TToggleSpeedButtonManager.Create;
+  FFileSBManager := TToggleSpeedButtonManager.Create;
   with FFileSBManager do
   begin
     ToggleType := tsbLikeRadioButton;
@@ -499,7 +499,7 @@ begin
     Add(SpeedButton10, FALSE);
   end;
 
-  FCaptureSBManager:=TToggleSpeedButtonManager.Create;
+  FCaptureSBManager := TToggleSpeedButtonManager.Create;
   with FCaptureSBManager do
   begin
     ToggleType := tsbLikeRadioButton;
@@ -547,8 +547,6 @@ begin
   LabelCurve.Caption := SCurve_;
   lblVol1.Caption := SIn;
   lblattendre9.Caption := SSeconds_;
-  BPitchNormal.Caption := SNormal;
-  BPanNormal.Caption := SCenter_;
   SpeedButton4.Caption := SFiles_;
   SpeedButton5.Caption := SAudioCapture_;
   BAdd.Caption := SAdd;
@@ -566,8 +564,9 @@ end;
 
 procedure TFrameCmdAudio.BPanNormalClick(Sender: TObject);
 begin
- TBPan.Position := 0;
- FrameViewAudioList1.SetPanOnSelected(0);
+  FrameTBPan.Value := 0.0;
+  FrameViewAudioList1.SetPanOnSelected(0);
+  TBPanChange(NIL);
 end;
 
 procedure TFrameCmdAudio.BStopAllClick(Sender: TObject);
@@ -613,8 +612,9 @@ end;
 
 procedure TFrameCmdAudio.BPitchNormalClick(Sender: TObject);
 begin
- TBPitch.Position := 100;
- FrameViewAudioList1.SetNormalPitchOnSelected;
+  FrameTBPitch.Value := 1.0;
+  FrameViewAudioList1.SetNormalPitchOnSelected;
+  TBPitchChange(NIL);
 end;
 
 end.

@@ -70,7 +70,7 @@ var
 
   procedure MarkAsClipped(aPanel: TPanel);
   begin
-    aPanel.Color := RGBToColor(251,141,136);
+    aPanel.Color := RGBToColor(255,50,0);
     aPanel.Tag := 6;
   end;
 

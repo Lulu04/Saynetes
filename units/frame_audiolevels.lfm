@@ -23,7 +23,6 @@ object FrameAudioLevels: TFrameAudioLevels
     Brush.Color = 6978171
     Pen.Color = 3552822
     Pen.EndCap = pecFlat
-    Pen.Width = 2
     OnResize = Shape1Resize
     Shape = stRoundRect
   end

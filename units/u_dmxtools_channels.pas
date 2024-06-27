@@ -9,7 +9,7 @@ uses
   StdCtrls, Spin, ComCtrls, LCLTranslator, frame_velocity, u_notebook_util,
   u_list_dmxuniverse, frame_fx_channelchaser, u_common,
   frame_viewchannelslist, u_presetmanager, frame_viewprojectors,
-  frame_trackbar;
+  frame_trackbar, frame_trackbar_customized;
 
 type
 
@@ -28,16 +28,13 @@ type
     FloatSpinEdit3: TFloatSpinEdit;
     Label1: TLabel;
     Label10: TLabel;
-    Label11: TLabel;
     Label12: TLabel;
-    Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
     Label19: TLabel;
-    Label2: TLabel;
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
@@ -63,10 +60,16 @@ type
     PageFlame: TPage;
     PageDimmer: TPage;
     Panel1: TPanel;
+    Panel10: TPanel;
+    Panel11: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
+    Panel6: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -85,13 +88,6 @@ type
     BAudioStop: TSpeedButton;
     SpeedButton8: TSpeedButton;
     ButtonFlamePreset: TSpeedButton;
-    TB1: TTrackBar;
-    TB2: TTrackBar;
-    TB3: TTrackBar;
-    TB4: TTrackBar;
-    TB5: TTrackBar;
-    TB6: TTrackBar;
-    TB7: TTrackBar;
     procedure BAdd1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -134,7 +130,13 @@ type
     function AudioFollowerToPreset: string;
     procedure PresetToAudioFollower(const A: TStringArray);
   private
-    FrameTrackBar1: TFrameTrackBar;
+    FrameTrackBar1: TFrametrackBar;
+    FrameTBFlameLevels: TFrametrackBar;
+    FrameTBFlameWait: TFrameTBDmxFlameWait;
+    FrameTBFlameSoften: TFrameTBDmxFlameSoften;
+    FrameTBFollowGain: TFrameTBDmxAudioFollowerGain;
+    FrameTBFollowBrightness: TFrameTBDmxAudioFollowerBrightness;
+    FrameTBFollowSoften: TFrameTBDmxAudioFollowerSoften;
   private
     FTargetViewProjector: TFrameViewProjector;
     FGUIMode: TGUIMode;
@@ -246,13 +248,6 @@ end;
 
 procedure TFormDMXChannelsTools.TB1Change(Sender: TObject);
 begin
-  if Sender = TB1 then
-   if TB1.Position <= TB3.Position then
-     TB3.Position := TB1.Position-1;
-  if Sender = TB3 then
-   if TB3.Position >= TB1.Position then
-     TB1.Position := TB3.Position+1;
-
   ApplyEffectOnTargetChannels;
   UpdateWidgets;
 end;
@@ -313,19 +308,18 @@ begin
 end;
 
 procedure TFormDMXChannelsTools.UpdateWidgets;
+var v: single;
 begin
   // audio follower
-  if TB4.Position < 0 then
-    Label8.Caption := TB4.Position.ToString
-  else
-    Label8.Caption := '+'+TB4.Position.ToString;
-  Label9.Caption := TB5.Position.ToString+' ('+FormatFloat('0.0', TB5.Position/TB5.Max*100)+'%)';
-  Label10.Caption := FormatFloat('0.00', TB6.Position/10)+SSec;
+  v := FrameTBFollowGain.Value;
+  Label8.Caption := FormatFloat('0.00', v);
+  if v > 0.0 then Label8.Caption := '+' + Label8.Caption;
+  Label9.Caption := Round(FrameTBFollowBrightness.Value*255).ToString+' ('+
+                    FormatFloat('0.0', FrameTBFollowBrightness.Value*100)+'%)';
+  Label10.Caption := FormatFloat('0.00', FrameTBFollowSoften.Value)+SSec;
   // flame
-  Label11.Caption := FormatFloat('0.0', TB1.Position/TB1.Max*100)+'%';
-  Label13.Caption := FormatFloat('0.0', TB3.Position/TB3.Max*100)+'%';
-  Label12.Caption := FormatFloat('0.00', TB2.Position/100)+SSec;
-  Label15.Caption := FormatFloat('0.0', TB7.Position/TB7.Max*100)+'%';
+  Label12.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
+  Label15.Caption := FormatFloat('0.0', FrameTBFlameSoften.Value*100)+'%';
   // flash
   FloatSpinEdit3.Enabled := RadioButton4.Checked;
 end;
@@ -364,10 +358,10 @@ procedure TFormDMXChannelsTools.GenerateCmdForFlame;
 var i: integer;
   chan: TDMXChannel;
 begin
-  FCmd := CmdTitleDMXFlame(TB3.Position/TB3.Max,
-                          TB1.Position/TB1.Max,
-                          TB2.Position/100,
-                          TB7.Position/TB7.Max);
+  FCmd := CmdTitleDMXFlame(FrameTBFlameLevels.PercentMin,
+                           FrameTBFlameLevels.PercentMax,
+                           FrameTBFlameWait.Value,
+                           FrameTBFlameSoften.Value);
   GetTargetChannels;
   for i:=0 to High(FTargetChannels) do
   begin
@@ -375,10 +369,10 @@ begin
     FCmd.ConcatCmd(CmdDMXFlame(chan.Universe.ID,
                    chan.Fixture.ID,
                    chan.Index,
-                   TB3.Position/TB3.Max,
-                   TB1.Position/TB1.Max,
-                   TB2.Position/100,
-                   TB7.Position/TB7.Max));
+                   FrameTBFlameLevels.PercentMin,
+                   FrameTBFlameLevels.PercentMax,
+                   FrameTBFlameWait.Value,
+                   FrameTBFlameSoften.Value));
   end;
   // DMXFLAMME IDuniverse IDFixture dmxadress LevelMin LevelMax Speed Soften Addmode
   FShortReadable := SDMXFlame;
@@ -397,14 +391,18 @@ var i: integer;
   snd: TALSSound;
 begin
   snd := SoundManager.GetSoundByIndex(ComboBox1.ItemIndex);
-  FCmd := CmdTitleDMXAudioFollower(snd.Tag, TB4.Position/10, TB5.Position/TB5.Max, TB6.Position/10);
+  FCmd := CmdTitleDMXAudioFollower(snd.Tag,
+                                   FrameTBFollowGain.Value,
+                                   FrameTBFollowBrightness.Value,
+                                   FrameTBFollowSoften.Value);
 
   GetTargetChannels;
   for i:=0 to High(FTargetChannels) do
   begin
     chan := FTargetChannels[i];
     FCmd.ConcatCmd(CmdDMXAudioFollower(chan.Universe.ID, chan.Fixture.ID, chan.Index,
-                   snd.Tag, TB4.Position/10, TB5.Position/TB5.Max, TB6.Position/10));
+                   snd.Tag, FrameTBFollowGain.Value, FrameTBFollowBrightness.Value,
+                   FrameTBFollowSoften.Value));
   end;
   // DMXSUIVEURAUDIO IDuniverse IDFixture dmxadress IDaudio gainF MaxPercentF SoftenTimeF
   FShortReadable := SDMXAudioFollower+' '+ExtractFileName(snd.Filename)+' '+SOn_;
@@ -423,7 +421,7 @@ var i: integer;
   chan: TDMXChannel;
   vmin, vmax, dmin, dmax: single;
 begin
-  vmax :=FrameTrackBar1.PercentValue;
+  vmax :=FrameTrackBar1.PercentMax;
   if RadioButton1.Checked then
     vmin := vmax
   else
@@ -532,10 +530,10 @@ begin
   if Notebook1.PageIndex=Notebook1.IndexOf(PageFlame) then
     for i:=0 to High(FTargetChannels) do
     begin
-      FTargetChannels[i].StartFlame(TB3.Position/TB3.Max,
-                                    TB1.Position/TB1.Max,
-                                    TB2.Position/100,
-                                    TB7.Position/TB7.Max);
+      FTargetChannels[i].StartFlame(FrameTBFlameLevels.PercentMin,
+                                    FrameTBFlameLevels.PercentMax,
+                                    FrameTBFlameWait.Value,
+                                    FrameTBFlameSoften.Value);
     end;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageAudioFollower) then
@@ -544,8 +542,8 @@ begin
     if snd = NIL then
       exit;
     for i:=0 to High(FTargetChannels) do
-      FTargetChannels[i].StartAudioFollower(snd.Tag, TB4.Position/10,
-                       TB5.Position/TB5.Max, TB6.Position/10);
+      FTargetChannels[i].StartAudioFollower(snd.Tag, FrameTBFollowGain.Value,
+                       FrameTBFollowBrightness.Value, FrameTBFollowSoften.Value);
   end;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageCopy) then
@@ -562,7 +560,7 @@ begin
   if Notebook1.PageIndex = Notebook1.IndexOf(PageFlash) then
     for i:=0 to High(FTargetChannels) do
     begin
-      vmax := FrameTrackBar1.PercentValue;
+      vmax := FrameTrackBar1.PercentMax;
       if RadioButton1.Checked then
         vmin := vmax
       else
@@ -587,36 +585,36 @@ end;
 
 function TFormDMXChannelsTools.FlameToPreset: string;
 begin
-  Result := TB1.Position.ToString+PRESET_SEPARATOR+
-            TB3.Position.ToString+PRESET_SEPARATOR+
-            TB2.Position.ToString+PRESET_SEPARATOR+
-            TB7.Position.ToString;
+  Result := FormatFloatWithDot('0.00', FrameTBFlameLevels.PercentMax)+PRESET_SEPARATOR+
+            FormatFloatWithDot('0.00', FrameTBFlameLevels.PercentMin)+PRESET_SEPARATOR+
+            FormatFloatWithDot('0.00', FrameTBFlameWait.Value)+PRESET_SEPARATOR+
+            FormatFloatWithDot('0.00', FrameTBFlameSoften.Value);
 end;
 
 procedure TFormDMXChannelsTools.PresetToFlame(const A: TStringArray);
 begin
   if Length(A) <> 4 then exit;
-  TB1.Position := A[0].ToInteger;
-  TB3.Position := A[1].ToInteger;
-  TB2.Position := A[2].ToInteger;
-  TB7.Position := A[3].ToInteger;
+  FrameTBFlameLevels.PercentMax := StringToSingle(A[0]);
+  FrameTBFlameLevels.PercentMin := StringToSingle(A[1]);
+  FrameTBFlameWait.Value := StringToSingle(A[2]);
+  FrameTBFlameSoften.Value := StringToSingle(A[3]);
   UpdateWidgets;
   ApplyEffectOnTargetChannels;
 end;
 
 function TFormDMXChannelsTools.AudioFollowerToPreset: string;
 begin
-  Result := TB4.Position.ToString+PRESET_SEPARATOR+
-            TB5.Position.ToString+PRESET_SEPARATOR+
-            TB6.Position.ToString;
+  Result := FormatFloatWithDot('0.00', FrameTBFollowGain.Value)+PRESET_SEPARATOR+
+            FormatFloatWithDot('0.00', FrameTBFollowBrightness.Value)+PRESET_SEPARATOR+
+            FormatFloatWithDot('0.00', FrameTBFollowSoften.Value);
 end;
 
 procedure TFormDMXChannelsTools.PresetToAudioFollower(const A: TStringArray);
 begin
   if Length(A) <> 3 then exit;
-  TB4.Position := A[0].ToInteger;
-  TB5.Position := A[1].ToInteger;
-  TB6.Position := A[2].ToInteger;
+  FrameTBFollowGain.Value := StringToSingle(A[0]);
+  FrameTBFollowBrightness.Value := StringToSingle(A[1]);
+  FrameTBFollowSoften.Value := StringToSingle(A[2]);
   UpdateWidgets;
 end;
 
@@ -670,8 +668,7 @@ procedure TFormDMXChannelsTools.UpdateStringAfterLanguageChange;
 begin
   Label1.Caption := SDurationInSecond;
   Label25.Caption := SVelocity;
-  Label4.Caption := SLevelMin;
-  Label2.Caption := SLevelMax;
+  Label4.Caption := SLevels;
   Label3.Caption := SWaitTime;
   Label14.Caption := SSoften;
   Label23.Caption := SFollow;
@@ -745,13 +742,41 @@ begin
   FCheckedLabelManager.CaptureLabelClick(Label22);
   FCheckedLabelManager.CaptureLabelClick(Label30);
 
-  FrameTrackBar1 := TFrameTrackBar.Create(Self);
-  FrameTrackBar1.Parent := Panel5;
-  FrameTrackBar1.Align := alClient;
+  FrameTrackBar1 := TFrameTrackBar.Create(Self, Panel5);
   FrameTrackBar1.Init(trHorizontal, False, False, True);
-  FrameTrackBar1.CursorFillColor := BGRA(255,128,0);
-  FrameTrackBar1.CursorOutlineColor := BGRA(192,96,0);
   FrameTrackBar1.OnChange := @RadioButton1Change;
+
+  FrameTBFlameLevels := TFrameTrackBar.Create(Self, Panel8);
+  FrameTBFlameLevels.Init(trHorizontal, False, True, True);
+  FrameTBFlameLevels.PercentMin := 0.25;
+  FrameTBFlameLevels.PercentMax := 0.75;
+  FrameTBFlameLevels.OnChange := @TB1Change;
+
+  FrameTBFlameWait := TFrameTBDmxFlameWait.Create(Self, Panel7);
+  FrameTBFlameWait.Init(trHorizontal, False, False, False);
+  FrameTBFlameWait.Value := 0.5;
+  FrameTBFlameWait.OnChange := @TB1Change;
+
+  FrameTBFlameSoften := TFrameTBDmxFlameSoften.Create(Self, Panel6);
+  FrameTBFlameSoften.Init(trHorizontal, False, False, False);
+  FrameTBFlameSoften.Value := 1.0;
+  FrameTBFlameSoften.OnChange := @TB1Change;
+
+  FrameTBFollowGain := TFrameTBDmxAudioFollowerGain.Create(Self, Panel11);
+  FrameTBFollowGain.Init(trHorizontal, False, False, False);
+  FrameTBFollowGain.Value := 0.0;
+  FrameTBFollowGain.OnChange := @BAudioPlayClick;
+
+  FrameTBFollowBrightness := TFrameTBDmxAudioFollowerBrightness.Create(Self, Panel10);
+  FrameTBFollowBrightness.Init(trHorizontal, False, False, False);
+  FrameTBFollowBrightness.Value := 0.75;
+  FrameTBFollowBrightness.OnChange := @BAudioPlayClick;
+
+  FrameTBFollowSoften := TFrameTBDmxAudioFollowerSoften.Create(Self, Panel9);
+  FrameTBFollowSoften.Init(trHorizontal, False, False, False);
+  FrameTBFollowSoften.Value := 0.75;
+  FrameTBFollowSoften.OnChange := @BAudioPlayClick;
+
 
   FFlamePresetManager := TPresetManager.Create(Self);
   FFlamePresetManager.Init1(SFlamePresets, ButtonFlamePreset,
