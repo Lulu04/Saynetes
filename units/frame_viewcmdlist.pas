@@ -108,9 +108,11 @@ var txt, txt2: string;
    begin
     Result := FormatFloat('0.0', StringToSingle(v)*100)+'%';
    end;
-   function DurationValue(v: string): string;
+   function DurationValue(d: string): string;
+   var v: single;
    begin
-    Result := FormatFloat('0.00', StringToSingle(v))+SSec;
+    v := StringToSingle(d);
+    Result := FormatFloat('0.00', v)+SSec;
    end;
    function FormatFloat1Decimal(v: string): string;
    begin
@@ -129,6 +131,11 @@ var txt, txt2: string;
    function FormatPan( p: string ): string;
    begin
     Result := SPan+' '+PanToStringPercent(StringToSingle(p));
+   end;
+
+   function FormatPitch(p: string): string;
+   begin
+    Result := PitchToString(StringToSingle(p));
    end;
 
    function FormatDryWet(p: string): string;
@@ -389,22 +396,18 @@ begin
         Font.Height := Font.Height-1;
         txt := FormatAudioFile( A[1] ) + '  ' +
                FormatVolume( A[2] );
-        if StringToSingle( A[3] ) > 1
-          then txt := txt + '   '+SIn+' ' + A[3] + SSeconds
-          else txt := txt + '   '+SIn+' ' + A[3] + SSecond;
-        x:=RenderCmdText( txt, x, coul_action_audio)+10;
-        RenderCurve( x, arect.Top, A[4] );
+        txt := txt + '   '+SIn+' ' + DurationValue(A[3]);
+        x := RenderCmdText( txt, x, coul_action_audio)+10;
+        RenderCurve(x, arect.Top, A[4]);
     end;
 
     CMD_AUDIO_FADEOUT: begin // CMD_AUDIO_FADEOUT IDaudio duration IDcurve
         RenderBackground;
         Font.Height := Font.Height - 1;
         txt := FormatAudioFile( A[1] );
-        if StringToSingle ( A[2] ) > 1
-          then txt := txt + '   '+SIn+' ' + A[2] + ' '+SSeconds
-          else txt := txt + '   '+SIn+' ' + A[2] + ' '+SSecond;
-        x:=RenderCmdText( txt, x, coul_action_audio)+10;
-        RenderCurve( x, arect.Top, A[3] );
+        txt := txt + '   '+SIn+' '+DurationValue(A[2]);
+        x := RenderCmdText( txt, x, coul_action_audio)+10;
+        RenderCurve(x, arect.Top, A[3]);
     end;
 
     CMD_AUDIO_SETVOLUME: begin // CMD_AUDIO_SETVOLUME IDaudio volume duration IDcurve
@@ -412,21 +415,16 @@ begin
         Font.Height := Font.Height - 1 ;
         txt := FormatAudioFile( A[1] );
         txt := txt + '   '+STo+' ' + FormatVolume(A[2]);
-        if StringToSingle ( A[3] ) > 1
-          then txt := txt + '   '+SIn+' ' + A[3] + ' '+SSeconds
-          else txt := txt + '   '+SIn+' ' + A[3] + ' '+SSecond;
-        x:=RenderCmdText( txt, x, coul_action_audio)+10;
-        RenderCurve( x, arect.Top, A[4] );
+        txt := txt + '   '+SIn+' ' + DurationValue(A[3]);
+        x := RenderCmdText( txt, x, coul_action_audio)+10;
+        RenderCurve(x, arect.Top, A[4]);
     end;
 
     CMD_AUDIO_SETPAN: begin// CMD_AUDIO_SETPAN IDaudio pan duration IDcurve
       RenderBackground;
       Font.Height := Font.Height-1;
       txt := FormatAudioFile(A[1])+'   '+FormatPan(A[2]);
-      if StringToSingle(A[3]) > 1 then
-        txt := txt+'   '+SIn+'   '+A[3]+' '+SSeconds
-      else
-        txt := txt+'   '+SIn+'   '+A[3]+' '+SSecond;
+      txt := txt+'   '+SIn+'   '+DurationValue(A[3]);
       x:=RenderCmdText( txt, x, coul_action_audio)+10;
       RenderCurve( x, arect.Top, A[4] );
     end;
@@ -434,12 +432,9 @@ begin
     CMD_AUDIO_SETPITCH: begin   // CMD_AUDIO_SETPITCH IDaudio pitch duration IDcurve
       RenderBackground;
       Font.Height := Font.Height-1;
-      txt := FormatAudioFile(A[1]) + '   '+STo+' ' + A[2];
-      if StringToSingle ( A[3] )>1 then
-        txt := txt+'   '+SIn+'   '+A[3]+' '+SSeconds
-      else
-        txt := txt+'   '+SIn+'   '+A[3]+' '+SSecond;
-      x:=RenderCmdText( txt, x, coul_action_audio)+10;
+      txt := FormatAudioFile(A[1]) + '   '+STo+' ' + FormatPitch(A[2]);
+      txt := txt+'   '+SIn+'   '+DurationValue(A[3]);
+      x := RenderCmdText( txt, x, coul_action_audio)+10;
       RenderCurve( x, arect.Top, A[4] );
     end;
 
@@ -560,45 +555,45 @@ begin
 
     TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME LevelMin LevelMax WaitTimeF Soften
      RenderBackground;
-     txt:=SMin+' '+DMXPercent(A[1])+' '+SMax+' '+DMXPercent(A[2])+' '+SWaitTime+' '+DurationValue(A[3])+' '+
-          SSoften+' '+DMXPercent(A[4]);
+     txt := SMin+' '+DMXPercent(A[1])+' '+SMax+' '+DMXPercent(A[2])+' '+SWaitTime+' '+DurationValue(A[3])+' '+
+           SSoften+' '+DMXPercent(A[4]);
      RenderTitle(SDMXFlame, txt, coul_action_dmx);
     end;
 
     CMD_DMX_FLAME: begin  // CMD_DMX_FLAME IDuniverse IDFixture dmxadress LevelMin LevelMax Speed Soften
        RenderBackground;
-        Font.Height:=Font.Height-1;
-        txt:=FormatDmxTrack(A[1],A[2],A[3]);
+        Font.Height := Font.Height - 1;
+        txt := FormatDmxTrack(A[1], A[2], A[3]);
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color WaitTime Amplitude Soften
        RenderBackground;
-        x:=RenderTitle(SDMXFlameRGB+' ', '', coul_action_dmx);
-        x:=RenderColor(x, A[1]);
-        txt:=SWaitTime+' '+DurationValue(A[2])+' '+SAmplitude+' '+DMXPercent(A[3])+' '+
+        x := RenderTitle(SDMXFlameRGB+' ', '', coul_action_dmx);
+        x := RenderColor(x, A[1]);
+        txt := SWaitTime+' '+DurationValue(A[2])+' '+SAmplitude+' '+DMXPercent(A[3])+' '+
              SSoften+' '+DMXPercent(A[4]);
-        x:=RenderCmdText(txt, x, coul_action_dmx);
+        x := RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     CMD_DMX_FLAMERGB: begin   // CMD_DMX_FLAMERGB IDuniverse IDFixture Color WaitTime Amplitude Soften
        RenderBackground;
-        Font.Height:=Font.Height-1;
+        Font.Height := Font.Height-1;
         RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_DIMMERRGB: begin // TITLECMD_DMX_DIMMERRGB color duration IDcurve
         RenderBackground;
-        x:=RenderTitle(SDMXDimmerRGB+' ', '', coul_action_dmx);
-        x:=RenderColor(x, A[1]);
-        txt:=SIn+' ' + DurationValue(A[2]);
-        x:=RenderCmdText(txt, x, coul_action_dmx)+10;
+        x := RenderTitle(SDMXDimmerRGB+' ', '', coul_action_dmx);
+        x := RenderColor(x, A[1]);
+        txt := SIn+' ' + DurationValue(A[2]);
+        x := RenderCmdText(txt, x, coul_action_dmx)+10;
         RenderCurve(x, arect.Top+1, A[3]);
     end;
 
     CMD_DMX_DIMMERRGB: begin // CMD_DMX_DIMMERRGB IDuniverse IDFixture color duration IDcurve
         RenderBackground;
-        Font.Height:=Font.Height-1;
+        Font.Height := Font.Height-1;
         RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
     end;
 
@@ -609,7 +604,7 @@ begin
 
     CMD_DMX_STOPEFFECTRGB: begin // CMD_DMX_STOPEFFECTRGB IDuniverse IDFixture
         RenderBackground;
-        Font.Height:=Font.Height-1;
+        Font.Height := Font.Height-1;
         RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
     end;
 
@@ -619,44 +614,44 @@ begin
     end;
     CMD_DMX_COPYRGB: begin // CMD_DMX_COPYRGB SourceIDuniverse SourceIDFixture TargetIDuniverse TargetIDFixture
         RenderBackground;
-        Font.Height:=Font.Height-1;
-        txt:= SOn_+'  '+FormatFixtureName(A[3], A[4]);
+        Font.Height := Font.Height-1;
+        txt := SOn_+'  '+FormatFixtureName(A[3], A[4]);
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_AUDIOFOLLOWER: begin // TITLECMD_DMX_AUDIOFOLLOWER IDaudio gain MaxPercent SoftenTime
         RenderBackground;
-        txt:=''''+FormatAudioFile(A[1])+''' '+SGain+' '+A[2]+' '+SMax+' '+
-             DMXPercent(A[3])+' '+SSoftenOn+' '+DurationValue(A[4]);
+        txt := ''''+FormatAudioFile(A[1])+''' '+SGain+' '+A[2]+' '+SMax+' '+
+               DMXPercent(A[3])+' '+SSoftenOn+' '+DurationValue(A[4]);
         RenderTitle(SDMXAudioFollower, txt, coul_action_dmx);
     end;
 
     CMD_DMX_AUDIOFOLLOWER: begin // CMD_DMX_AUDIOFOLLOWER IDuniverse IDFixture dmxadress IDaudio gainF MaxPercentF SmoothTimeF
         RenderBackground;
         txt := FormatDmxTrack(A[1], A[2], A[3]);
-        Font.Height:=Font.Height-1;
+        Font.Height := Font.Height-1;
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_AUDIOFOLLOWERRGB: begin  // TITLECMD_DMX_AUDIOFOLLOWERRGB IDaudio Color Gain SoftenTime
         RenderBackground;
-        x:=RenderTitle(SDMXAudioFollowerRGB+' ', '', coul_action_dmx);
-        x:=RenderColor(x, A[2]);
-        txt:=SOn_+' '''+FormatAudioFile(A[1])+''' '+SGain+' '+FormatFloat1Decimal(A[3])+' '+SSoftenOn+' '+DurationValue(A[4]);
+        x := RenderTitle(SDMXAudioFollowerRGB+' ', '', coul_action_dmx);
+        x := RenderColor(x, A[2]);
+        txt := SOn_+' '''+FormatAudioFile(A[1])+''' '+SGain+' '+FormatFloat1Decimal(A[3])+' '+SSoftenOn+' '+DurationValue(A[4]);
         RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     CMD_DMX_AUDIOFOLLOWERRGB: begin // CMD_DMX_AUDIOFOLLOWERRGB IDuniverse IDFixture IDaudio Color Gain SoftenTime
         RenderBackground;
-        Font.Height:=Font.Height-1;
-        txt:=FormatFixtureName(A[1], A[2]);
-        RenderCmdText( txt, x, coul_action_dmx);
+        Font.Height := Font.Height-1;
+        txt := FormatFixtureName(A[1], A[2]);
+        RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
      RenderBackground;
-     x:=RenderTitle(SDMXFlashRGB+' ', '', coul_action_dmx);
-     x:=RenderColor(x, A[1]);
+     x := RenderTitle(SDMXFlashRGB+' ', '', coul_action_dmx);
+     x := RenderColor(x, A[1]);
      if A[2] <> A[3] then txt := SRandomIntensity+' '+DMXPercent(A[2])+' - '+DMXPercent(A[3])+' '
        else txt := SFixedIntensity+' '+DMXPercent(A[2]);
      if A[4] <> A[5] then txt := txt+SRandomDuration+' '+DurationValue(A[4])+' - '+DurationValue(A[5])
@@ -669,7 +664,7 @@ begin
       RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
     end;
 
-    IMAGEFADEINCOLOR: begin        // 40 couleur durée alpha
+    IMAGEFADEINCOLOR: begin        // 40 Color Duration Alpha
         txt := SScreen+' - ';
         Font.Color := coul_action_photo ;
         Font.Style := [fsBold] ;
