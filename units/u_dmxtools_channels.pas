@@ -303,7 +303,7 @@ begin
     Label21.Caption := FrameViewChannelsList1.Selected[0].Name;
     FTargetViewProjector.FrameViewDMXCursors1.SetSourceChannelForCopy(FrameViewChannelsList1.Selected[0]);
     ApplyEffectOnTargetChannels;
-    FTargetViewProjector.FrameViewDMXCursors1.RedrawAll;
+    FTargetViewProjector.FrameViewDMXCursors1.RedrawVisibleFixtures;
   end;
 end;
 
@@ -575,12 +575,12 @@ begin
 end;
 
 procedure TFormDMXChannelsTools.StopEffectOnSelected;
-var
-  i: Integer;
+var i: Integer;
 begin
   for i:=0 to High(FTargetChannels) do
    if FTargetChannels[i].Selected then
      FTargetChannels[i].StopEffect;
+  FTargetViewProjector.FrameViewDMXCursors1.RedrawVisibleFixtures;
 end;
 
 function TFormDMXChannelsTools.FlameToPreset: string;

@@ -34,7 +34,8 @@ type
     CursorPathArea,
     ChannelNameArea,
     CursorArea,
-    CursorAreaLastDrawn: TRect;
+    CursorAreaLastDrawn,
+    BackgroundArea: TRect;
     Channel: TDMXChannel;
     IsSourceForCopy: boolean;
 
@@ -57,7 +58,8 @@ type
     FixtureArea,
     DmxAdressArea,
     FixtureNameArea,
-    FixtureDescriptionArea: TRect;
+    FixtureDescriptionArea,
+    BackgroundArea: TRect;
     function GetSelected: boolean;
     procedure SetSelected(AValue: boolean);
    public
@@ -212,12 +214,16 @@ type
     FCopyAll,
     FCopySelected,
     FCopySameType: boolean;
+    FCurrentSourceChannelForCopy: TDMXChannel;
     function GetSourceFixtureForRGBCopy: TDMXFixture;
   private
     FInvalidateAlreadySent: boolean;
     FGUIMode: TGUIMode;
     FParentViewProjector: TFrame;
     procedure SetGUIMode(AValue: TGUIMode);
+  private
+    FImage: TBitmap;
+    procedure DrawBackgroundOnFImage;
   public
     constructor Create(aOwner: TComponent);override;
     destructor Destroy; override;
@@ -485,7 +491,9 @@ begin
   ww := FIXTURE_SPACE_BEFORE_AFTER_CHANNEL*2+Renderer.ChannelWidth*Fixture.ChannelsCount+
         SPACE_BETWEEN_CHANNEL*(Fixture.ChannelsCount-1);
 
+
   FixtureArea := Rect(aR.Left, aR.Top+5, aR.Left+ww, aR.Bottom-5);
+  BackgroundArea := FixtureArea;
 
   txt := '  512  ';//+Fixture^.Adress.ToString+' ';
   DmxAdressArea := Rect(FixtureArea.Left+1,
@@ -506,7 +514,10 @@ begin
             FixtureArea.Left+FIXTURE_SPACE_BEFORE_AFTER_CHANNEL+Renderer.ChannelWidth,
             FixtureArea.Bottom-5);
 
+
   for i:=0 to High(Cursors) do begin
+    Cursors[i].BackgroundArea := r;
+
     Cursors[i].Channel := Fixture.Channels[i];
 
     Cursors[i].ChannelArea := r;
@@ -759,8 +770,8 @@ begin
     begin
       // channel selection
       InternalChannelSelection(pchannelName, not pchannelName^.Channel.Selected);
-      pchannelName^.DrawDynamicPartOn(PB.Canvas, False);
-      //Redraw;
+      pchannelName^.DrawDynamicPartOn(FImage.Canvas, False);
+      RedrawAll;
       exit;
     end;
   end;
@@ -891,7 +902,7 @@ begin
           if UserInputNoSpecialChar(SNewName, SOk, SCancel, txt, mtConfirmation, TRUE) = mrOk then
           begin
             cur^.Channel.UserDefinedName := txt;
-            RedrawVisibleCursors;
+            RedrawVisibleFixtures;
             Project.SetModified;
           end;
         end;
@@ -918,21 +929,18 @@ begin
 end;
 
 procedure TFrameViewDMXCursors.PBPaint(Sender: TObject);
+var r: TRect;
 begin
   FInvalidateAlreadySent := FALSE;
 
-  with PB.Canvas do
-  begin
-    Pen.Style := psClear;
-    Brush.Color := FColorBackground;
-    Rectangle(PB.ClientRect);
-  end;
-
-  RedrawVisibleFixtures;
+  //PB.Canvas.CopyRect(PB.ClientRect, FImage.Canvas, PB.ClientRect);
+  r := PB.Canvas.ClipRect;
+  PB.Canvas.CopyRect(r, FImage.Canvas, r);
 end;
 
 procedure TFrameViewDMXCursors.PBResize(Sender: TObject);
 begin
+  FImage.SetSize(PB.ClientWidth, PB.ClientHeight);
   UpdateView;
 end;
 
@@ -945,7 +953,8 @@ begin
     cur := @FWorkingFixture^.Cursors[i];
     InternalChannelSelection(cur, cur^.Channel = FWorkingCursor^.Channel);
   end;
-  RedrawVisibleCursors;
+  RedrawVisibleFixtures;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.MenuItem2Click(Sender: TObject);
@@ -953,7 +962,8 @@ var i: integer;
 begin
   for i:=0 to High(FWorkingFixture^.Cursors) do
    InternalChannelSelection(@FWorkingFixture^.Cursors[i], TRUE);
-  RedrawVisibleCursors;
+  RedrawVisibleFixtures;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.MICreateGroupClick(Sender: TObject);
@@ -974,7 +984,8 @@ begin
     for j:=0 to High(FView[i].Cursors) do
      InternalChannelSelection(@FView[i].Cursors[j], fix.Channels[j].ChannelType=chantype);
   end;
-  RedrawVisibleCursors;
+  RedrawVisibleFixtures;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.MIAllOnAllClick(Sender: TObject);
@@ -983,7 +994,8 @@ begin
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
      InternalChannelSelection(@FView[i].Cursors[j], TRUE);
-  RedrawVisibleCursors;
+  RedrawVisibleFixtures;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.MISelectOnAllClick(Sender: TObject);
@@ -993,12 +1005,11 @@ begin
   chantype := FWorkingCursor^.Channel.ChannelType;
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
-     if (FView[i].Cursors[j].Channel.ChannelType=chantype) then
-     begin
+     if (FView[i].Cursors[j].Channel.ChannelType = chantype) then
        InternalChannelSelection(@FView[i].Cursors[j], TRUE);
-       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
-     end;
- // RedrawVisibleCursors;
+
+  RedrawVisibleFixtures;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.MILockChannelClick(Sender: TObject);
@@ -1007,11 +1018,10 @@ begin
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
      if FView[i].Cursors[j].Channel.Selected then
-     begin
        FView[i].Cursors[j].Channel.Locked := TRUE;
-       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, True);
-     end;
- // RedrawVisibleCursors;
+
+  RedrawVisibleFixtures;
+  RedrawAll;
   TFrameViewprojector(ParentViewProjector).Redraw;
   Project.SetModified;
 end;
@@ -1022,11 +1032,10 @@ begin
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
      if FView[i].Cursors[j].Channel.Selected then
-     begin
        FView[i].Cursors[j].Channel.Locked := FALSE;
-       FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, True);
-     end;
- // RedrawVisibleCursors;
+
+  RedrawVisibleFixtures;
+  RedrawAll;
   TFrameViewprojector(ParentViewProjector).Redraw;
   Project.SetModified;
 end;
@@ -1050,6 +1059,7 @@ begin
   begin
     View_Begin := ScrollPos;
     UpdateWhoIsVisibleOnView;
+    RedrawVisibleFixtures;
     RedrawAll;
   end;
 end;
@@ -1060,6 +1070,7 @@ begin
   SeqPLayer.StopPreview;
   for i:=0 to High(FView) do
    FView[i].Fixture.SetAllChannelsToZero;
+  RedrawVisibleFixtures;
   RedrawAll;
   UpdateLevelOnViewProjector;
 end;
@@ -1093,9 +1104,10 @@ begin
    for j:=0 to FView[i].ChannelsCount-1 do
    begin
     FView[i].Cursors[j].Channel.Selected := FALSE;
-    FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+    FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, False);
    end;
 
+  RedrawAll;
   ClearChannelOnOtherWindows;
 end;
 
@@ -1140,7 +1152,7 @@ begin
   aViewCursor^.CursorPos := aViewCursor^.CursorPos+delta;
   sourceChan := aViewCursor^.Channel;
 
-  aViewCursor^.DrawDynamicPartOn(PB.Canvas, False);
+  aViewCursor^.DrawDynamicPartOn(FImage.Canvas, False);
 
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
@@ -1158,7 +1170,7 @@ begin
       begin
         FView[i].Cursors[j].CursorPos := aViewCursor^.CursorPos;
         FView[i].Cursors[j].Channel.CurrentEffect := deNOEFFECT;
-        FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+        FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, False);
       end;
     end;
 end;
@@ -1186,19 +1198,23 @@ end;
 
 procedure TFrameViewDMXCursors.ProcessLoopMoveCursor;
 var yOrigin, yCurrent, delta: integer;
+  p: TPoint;
 begin
   FMouseState := msMovingCursor;
   FWorkingCursor^.Channel.HandledByUser := TRUE;
   yOrigin := PB.ScreenToClient(Mouse.CursorPos).y;
   repeat
-    yCurrent := PB.ScreenToClient(Mouse.CursorPos).y;
+    yCurrent := EnsureRange(PB.ScreenToClient(Mouse.CursorPos).y,
+                            FWorkingCursor^.CursorPathArea.Top,
+                            FWorkingCursor^.CursorPathArea.Bottom+FWorkingCursor^.CursorArea.Height-1);
+
     delta := yCurrent-yOrigin;
     if delta <> 0 then
     begin
       InternalMoveCursor(FWorkingCursor, delta);
-      //Redraw;
       UpdateLevelOnViewProjector;
       yOrigin := yCurrent;
+      RedrawAll;
     end
     else Sleep(1);
     Application.ProcessMessages;
@@ -1223,6 +1239,7 @@ begin
         accu := 0;
       View_Begin := Trunc(accu);
       UpdateWhoIsVisibleOnView;
+      RedrawVisibleFixtures;
       RedrawAll;
     end;
     Application.ProcessMessages;
@@ -1359,28 +1376,6 @@ begin
   FZoom := AValue;
 end;
 
-{procedure TFrameViewDMXCursors.UpdateViewFirstLastIndex;
-var i: integer;
-begin
-  FViewFirstIndex := -1;
-  FViewLastIndex := -1;
-
-  for i:=0 to High(FView) do
-    if FView[i].Fixture.IsVisibleOnViewCursor then
-    begin
-      FViewFirstIndex := i;
-      break;
-    end;
-  if FViewFirstIndex = -1 then
-    exit;
-  for i:=High(FView) downto 0 do
-    if FView[i].Fixture.IsVisibleOnViewCursor then
-    begin
-      FViewLastIndex := i;
-      break;
-    end;
-end;  }
-
 function TFrameViewDMXCursors.SomeSelectedHaveRGB: boolean;
 var i: integer;
 begin
@@ -1471,27 +1466,6 @@ begin
       FViewLastIndex := i;
       exit;
     end;
-
-{
-  FViewFirstIndex := -1;
-  FViewLastIndex := -1;
-
-  for i:=0 to High(FView) do
-    if FView[i].Fixture.IsVisibleOnViewCursor then
-    begin
-      FViewFirstIndex := i;
-      break;
-    end;
-
-  if FViewFirstIndex = -1 then
-    exit;
-  for i:=High(FView) downto 0 do
-    if FView[i].Fixture.IsVisibleOnViewCursor then
-    begin
-      FViewLastIndex := i;
-      break;
-    end;
-}
 end;
 
 procedure TFrameViewDMXCursors.UpdateView;
@@ -1508,6 +1482,7 @@ begin
       //here the view can't fit the whole fixture-> we ensure the view show some of them
     View_Begin := EnsureRange(View_Begin, FTotalViewArea.Left, FTotalViewArea.Right-PB.ClientWidth);
 
+  RedrawVisibleFixtures;
   RedrawAll;
 end;
 
@@ -1593,21 +1568,34 @@ begin
   UpdateStringAfterLanguageChange;
 end;
 
+procedure TFrameViewDMXCursors.DrawBackgroundOnFImage;
+begin
+  with FImage.Canvas do begin
+    Pen.Style := psClear;
+    Brush.Color := FColorBackground;
+    Rectangle(0, 0, FImage.Width, FImage.Height);
+  end;
+end;
+
 procedure TFrameViewDMXCursors.SetSourceFixtureForRGBCopy(AValue: TDMXFixture);
 var i: integer;
 begin
   for i:=0 to High(FView) do
    FView[i].IsSourceForRGBCopy := FView[i].Fixture=AValue;
+  RedrawVisibleFixtures;
   RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.SetSourceChannelForCopy(AValue: TDMXChannel);
 var i, j: integer;
 begin
+  if AValue = FCurrentSourceChannelForCopy then exit;
+  FCurrentSourceChannelForCopy := AValue;
+
   for i:=0 to High(FView) do
     for j:=0 to High(FView[i].Cursors) do
       FView[i].Cursors[j].IsSourceForCopy := FView[i].Cursors[j].Channel = AValue;
-  RedrawVisibleFixtures;
+  RedrawVisibleCursors;
 end;
 
 procedure TFrameViewDMXCursors.UpdateEditMode;
@@ -1729,6 +1717,7 @@ begin
   FGUIMode := guiMainDMX;
   FChannelWidth := 50;
   FZoom := 5;
+  FImage := TBitmap.Create;
 
   CreateGraphicObjects;
   AdjustGraphicObjectsForZoom;
@@ -1767,6 +1756,7 @@ destructor TFrameViewDMXCursors.Destroy;
 begin
   DeleteGraphicObjects;
   FToogleSpeedButtonManager.Free;
+  FreeAndNil(FImage);
   inherited Destroy;
 end;
 
@@ -1785,25 +1775,26 @@ begin
 end;
 
 procedure TFrameViewDMXCursors.RedrawVisibleFixtures;
-var
-  i: Integer;
+var i: Integer;
 begin
+  DrawBackgroundOnFImage;
   if (Length(FView) > 0) and (FViewFirstIndex <> -1) then
   begin
-   for i:=FViewFirstIndex to FViewLastIndex do
-      FView[i].DrawBackgroundOn( PB.Canvas );
-
-   RedrawVisibleCursors;
+   for i:=FViewFirstIndex to FViewLastIndex do begin
+      FView[i].DrawBackgroundOn( FImage.Canvas );
+      FView[i].DrawDynamicPartOn(FImage.Canvas, True);
+   end;
   end;
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.RedrawVisibleCursors;
-var
-  i: Integer;
+var i: Integer;
 begin
   if (Length(FView) > 0) and (FViewFirstIndex <> -1) then
    for i:=FViewFirstIndex to FViewLastIndex do
-     FView[i].DrawDynamicPartOn(PB.Canvas, True);
+     FView[i].DrawDynamicPartOn(FImage.Canvas, True);
+  RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.Clear;
@@ -1873,7 +1864,10 @@ end;
 
 procedure TFrameViewDMXCursors.SetChannelUnderMouse(aChan: TDMXChannel);
 begin
+  if FChannelUnderMouse = aChan then exit;
+
   FChannelUnderMouse := aChan;
+  RedrawVisibleFixtures;
   RedrawAll;
 end;
 
@@ -1887,8 +1881,9 @@ begin
   for i:=FViewFirstIndex to FViewLastIndex do
     if FView[i].Fixture = aFix then
     begin
-      FView[i].DrawBackgroundOn(PB.Canvas);
-      FView[i].DrawDynamicPartOn(PB.Canvas, False);
+      FView[i].DrawBackgroundOn(FImage.Canvas);
+      FView[i].DrawDynamicPartOn(FImage.Canvas, False);
+      exit;
     end;
 end;
 
@@ -1900,15 +1895,16 @@ begin
     exit;
 
   for i:=FViewFirstIndex to FViewLastIndex do
-    if (FView[i].Fixture = aFix)
-       and FView[i].Fixture.HasRGBChannel then
+    if (FView[i].Fixture = aFix) then
     begin
+      if not FView[i].Fixture.HasRGBChannel then exit;
       j := aFix.RedChannelIndex;
-      FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+      FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, False);
       j := aFix.GreenChannelIndex;
-      FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+      FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, False);
       j := aFix.BlueChannelIndex;
-      FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, False);
+      FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, False);
+      exit;
     end;
 end;
 
@@ -1924,7 +1920,7 @@ begin
       for j:=0 to High(FView[i].Cursors) do
         if FView[i].Cursors[j].Channel = aChan then
         begin
-          FView[i].Cursors[j].DrawDynamicPartOn(PB.Canvas, aDrawAll);
+          FView[i].Cursors[j].DrawDynamicPartOn(FImage.Canvas, aDrawAll);
           exit;
         end;
 end;
