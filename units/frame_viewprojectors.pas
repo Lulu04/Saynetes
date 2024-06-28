@@ -114,7 +114,8 @@ type
     FViewOrigin: TPointF;
     FZoom: single;
     FColorBackground,
-    FColorSelection: TBGRAPixel;
+    FColorSelection,
+    FColorMouseOver: TBGRAPixel;
     FState: TViewDMXProjectorsMouseState;
     FSelectionMode: TViewDMXProjectorSelectionMode;
     FSelectionRect,
@@ -330,8 +331,8 @@ begin
   FToogleSpeedButtonManager.Add(BShowInfo, FALSE);
 
   FColorBackground := BGRA(21,21,21); // BGRA(51,51,51);
-  FColorSelection := BGRA(255,255,200);
-
+  FColorSelection := BGRA(0,142,255); // BGRA(255,255,200);
+  FColorMouseOver := BGRA(167,202,253);
 end;
 
 destructor TFrameViewProjector.Destroy;
@@ -954,7 +955,8 @@ begin
        // render state 'mouse over' in cursor view
        if FTargetFixtureInViewCursor=fix then
        begin
-         Rectangle(0, 0, tex.Width, tex.Height, FColorSelection, BGRA(255,255,0,160));
+         Rectangle(0, 0, tex.Width, tex.Height, FColorSelection, FColorMouseOver);
+
        end;
 
        // render fixture image
@@ -1094,7 +1096,7 @@ begin
     // rectangular area selection
     if FState = msRectSelection then
     begin
-      Rectangle(FSelectionRect.Left, FSelectionRect.Top, FSelectionRect.Right, FSelectionRect.Bottom, BGRA(255,255,180), 1.+1/FZoom);
+      Rectangle(FSelectionRect.Left, FSelectionRect.Top, FSelectionRect.Right, FSelectionRect.Bottom, FColorSelection, 1.+1/FZoom);
     end;
 
     // render the fixture to add under mouse cursor
