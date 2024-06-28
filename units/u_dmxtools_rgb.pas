@@ -396,8 +396,8 @@ begin
     Label19.Caption := FrameViewFixturesList1.Selected[0].Name;
     Label20.Caption := FrameViewFixturesList1.Selected[0].Description;
     FTargetViewProjector.FixtureSourceForCopy := FrameViewFixturesList1.Selected[0];
+    ApplyEffectOnTargetFixtures; // must be before the next line !
     FTargetViewProjector.FrameViewDMXCursors1.SetSourceFixtureForRGBCopy(FrameViewFixturesList1.Selected[0]);
-    ApplyEffectOnTargetFixtures;
   end;
 end;
 
