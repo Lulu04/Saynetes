@@ -397,8 +397,8 @@ object FrameAudioCapture: TFrameAudioCapture
       AnchorSideBottom.Control = Shape1
       AnchorSideBottom.Side = asrBottom
       Left = 101
-      Height = 23
-      Top = 249
+      Height = 22
+      Top = 250
       Width = 188
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 4
