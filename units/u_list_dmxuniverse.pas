@@ -2457,8 +2457,11 @@ begin
   end;
 
   // query refresh projectors
-  if flagredraw and FProjectorViewToRefreshForThreadUniverse.ChannelsLevelAreVisible then
-      FProjectorViewToRefreshForThreadUniverse.Redraw;
+  if flagredraw and FProjectorViewToRefreshForThreadUniverse.ChannelsLevelAreVisible then begin
+    FProjectorViewToRefreshForThreadUniverse.Redraw;
+    FProjectorViewToRefreshForThreadUniverse.FrameViewDMXCursors1.RedrawAll;
+  end;
+
 end;
 
 procedure TUniverseManager.Update(const aElapsedTime: single);

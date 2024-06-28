@@ -1237,7 +1237,7 @@ begin
    Selected[i].Locked := TRUE;
 
   Redraw;
-  FrameViewDMXCursors1.RedrawVisibleCursors;
+  FrameViewDMXCursors1.RedrawVisibleFixtures;
 end;
 
 procedure TFrameViewProjector.MIRotationClick(Sender: TObject);
@@ -1281,7 +1281,7 @@ begin
    Selected[i].Locked := FALSE;
 
   Redraw;
-  FrameViewDMXCursors1.RedrawVisibleCursors;
+  FrameViewDMXCursors1.RedrawVisibleFixtures;
 end;
 
 procedure TFrameViewProjector.MIVFlipClick(Sender: TObject);
@@ -1334,7 +1334,7 @@ begin
   SeqPLayer.StopPreview;
   UniverseManager.BlackOut;
   Redraw;
-  FrameViewDMXCursors1.RedrawVisibleCursors;
+  FrameViewDMXCursors1.RedrawVisibleFixtures;
 end;
 
 procedure TFrameViewProjector.Splitter1Moved(Sender: TObject);
