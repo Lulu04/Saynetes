@@ -7,9 +7,9 @@
 {"hash":5404860,"name":"tframeaudiocapture.label3.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeaudiocapture.label4.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframeaudiocapture.label5.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":26874739,"name":"tframeaudiocapture.bremovefx.hint","sourcebytes":[82,101,109,111,118,101,32,97,108,108,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Remove all audio effects"},
-{"hash":1208,"name":"tframeaudiocapture.bremovefx.caption","sourcebytes":[70,88],"value":"FX"},
-{"hash":184639731,"name":"tframeaudiocapture.baddfx.hint","sourcebytes":[65,112,112,108,121,32,97,117,100,105,111,32,101,102,102,101,99,116,115],"value":"Apply audio effects"},
-{"hash":1208,"name":"tframeaudiocapture.baddfx.caption","sourcebytes":[70,88],"value":"FX"},
+{"hash":126515283,"name":"tframeaudiocapture.bremovefx.hint","sourcebytes":[82,101,109,111,118,101,32,101,102,102,101,99,116,115],"value":"Remove effects"},
+{"hash":30648,"name":"tframeaudiocapture.bremovefx.caption","sourcebytes":[115,70,88],"value":"sFX"},
+{"hash":62620051,"name":"tframeaudiocapture.baddfx.hint","sourcebytes":[65,112,112,108,121,32,101,102,102,101,99,116,115],"value":"Apply effects"},
+{"hash":30648,"name":"tframeaudiocapture.baddfx.caption","sourcebytes":[115,70,88],"value":"sFX"},
 {"hash":179058628,"name":"tframeaudiocapture.image1.hint","sourcebytes":[65,117,100,105,111,32,105,110,112,117,116,32,110,111,116,32,102,111,117,110,100],"value":"Audio input not found"}
 ]}

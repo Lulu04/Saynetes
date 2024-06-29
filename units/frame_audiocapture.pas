@@ -312,6 +312,9 @@ end;
 procedure TFrameAudioCapture.UpdateStringAfterLanguageChange;
 begin
   Label1.Caption := SAudioCapture_;
+  BAddFX.Caption := sFX;
+  BRemoveFX.Caption := SFX;
+
   TBOutChange(NIL);
   TBInChange(NIL);
   TBPanChange(NIL);
