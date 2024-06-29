@@ -80,7 +80,7 @@ object FrameViewProjector: TFrameViewProjector
       BevelOuter = bvNone
       ClientHeight = 35
       ClientWidth = 736
-      Color = 7303023
+      Color = 3684408
       ParentColor = False
       TabOrder = 0
       OnResize = Panel1Resize
