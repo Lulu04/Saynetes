@@ -17,12 +17,16 @@ type
 
   TFormSequenceEdition = class(TForm)
     BKeep0Visible: TSpeedButton;
+    BShutdownPopup: TSpeedButton;
     B_Redo: TSpeedButton;
-    B_ShutDown: TSpeedButton;
+    BStopPreview: TSpeedButton;
     B_Undo: TSpeedButton;
-    BPreview: TSpeedButton;
+    BStartPreview: TSpeedButton;
     B_ViewAll: TSpeedButton;
     B_ViewSelection: TSpeedButton;
+    MIStopAudioAndLight: TMenuItem;
+    MIOnlyBlackout: TMenuItem;
+    MIStopOnlyAudio: TMenuItem;
     Panel4: TPanel;
     Label1: TLabel;
     Label10: TLabel;
@@ -46,15 +50,15 @@ type
     Panel6: TPanel;
     Panel7: TPanel;
     PanelFx1: TPanel;
+    PopShutdown: TPopupMenu;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    BStop: TSpeedButton;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
     procedure BKeep0VisibleClick(Sender: TObject);
     procedure B_ActionClick(Sender: TObject);
     procedure B_RedoClick(Sender: TObject);
-    procedure B_ShutDownClick(Sender: TObject);
+    procedure BStopPreviewClick(Sender: TObject);
     procedure B_UndoClick(Sender: TObject);
     procedure B_ViewAllClick(Sender: TObject);
     procedure B_ViewSelectionClick(Sender: TObject);
@@ -66,7 +70,6 @@ type
     procedure Panel7Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure BStopClick(Sender: TObject);
     procedure Splitter2Moved(Sender: TObject);
   private
     FrameViewCmdList1: TFrameViewCmdList;
@@ -106,14 +109,29 @@ var
   FormSequenceEdition: TFormSequenceEdition;
 
 implementation
-uses u_resource_string, u_program_options;
+uses u_resource_string, u_program_options, LCLType;
 
 {$R *.lfm}
 
 { TFormSequenceEdition }
 
 procedure TFormSequenceEdition.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+var t: single;
 begin
+  if Key = VK_SPACE then begin
+    if FSeq.IsPlaying then BStopPreviewClick(BStopPreview)
+        else begin
+          if not FSeq.MouseIsOverSequencer then FSeq.Play
+            else begin
+              t := FSeq.AbscissaToTimePos(FSeq.BGLVirtualScreen1.ScreenToClient(Mouse.CursorPos).x);
+              FSeq.PlayFrom(t);
+            end;
+        end;
+    Key := 0;
+    exit;
+  end;
+
+
   if not FrameEditString1.HaveFocus then FSeq.ProcessKey(Key, Shift);
 end;
 
@@ -128,6 +146,9 @@ begin
   Label15.Caption := SDuration;
   Label3.Caption := SView;
   Label2.Caption := SSelection;
+
+  BStopPreview.Caption := MIStopOnlyAudio.Caption;
+  BStopPreview.Tag := BStopPreview.Tag;
 
   FToogleSpeedButtonManager.Checked[BKeep0Visible] := ProgramOptions.KeepOriginVisible;
   FSeq.SetOptions([bglsKeepTimeOriginVisible], ProgramOptions.KeepOriginVisible);
@@ -166,11 +187,6 @@ begin
     exit;
 
   ModalResult := mrOk;
-end;
-
-procedure TFormSequenceEdition.BStopClick(Sender: TObject);
-begin
-  FSeq.Stop;
 end;
 
 procedure TFormSequenceEdition.Splitter2Moved(Sender: TObject);
@@ -271,10 +287,9 @@ begin
   else
     B_Redo.Hint := '';
 
-  BPreview.Enabled := FSeq.StepList.Count > 0;
-  BStop.Enabled := BPreview.Enabled;
-  B_ViewAll.Enabled := BPreview.Enabled;
-  B_ViewSelection.Enabled := BPreview.Enabled;
+  BStartPreview.Enabled := FSeq.StepList.Count > 0;
+  B_ViewAll.Enabled := BStartPreview.Enabled;
+  B_ViewSelection.Enabled := BStartPreview.Enabled;
 end;
 
 procedure TFormSequenceEdition.RemoveFocusFromFrameEditString1;
@@ -284,7 +299,7 @@ end;
 
 procedure TFormSequenceEdition.ProcessEndOfSequencePreview;
 begin
-  BPreview.Enabled := True;
+  BStartPreview.Enabled := True;
 end;
 
 procedure TFormSequenceEdition.SetAddMode( const aNewName: string );
@@ -352,7 +367,7 @@ end;
 
 procedure TFormSequenceEdition.B_ActionClick(Sender: TObject);
 begin
-  BPreview.Enabled := False;
+  BStartPreview.Enabled := False;
   FSeq.Play;
 end;
 
@@ -370,13 +385,38 @@ begin
   FSeq.Redo;
 end;
 
-procedure TFormSequenceEdition.B_ShutDownClick(Sender: TObject);
+procedure TFormSequenceEdition.BStopPreviewClick(Sender: TObject);
+var p: TPoint;
+  m: TMenuItem;
 begin
-  //SoundManager.StopCaptureToPlayback;
+  if Sender = BShutdownPopup then begin
+    p.x := BStopPreview.Left;
+    p.y := BStopPreview.Top + BStopPreview.Height;
+    p := PanelFx1.ClientToScreen(p);
+    PopShutdown.PopUp(p.x, p.y);
+  end;
 
-  SoundManager.DeleteAllEffects(True);
-  SoundManager.StopAllSound(True);
-  UniverseManager.BlackOut;
+  if (Sender = MIStopOnlyAudio) or (Sender = MIOnlyBlackout) or (Sender = MIStopAudioAndLight) then begin
+    m := Sender as TMenuItem;
+    BStopPreview.Caption := m.Caption;
+    BStopPreview.Tag := m.Tag;
+  end;
+
+  if Sender = BStopPreview then begin
+    FSeq.Stop;
+    case BStopPreview.Tag of
+      0: begin
+        SoundManager.StopAllSound(False);
+      end;
+      1: begin
+        UniverseManager.BlackOut;
+      end;
+      2: begin
+        SoundManager.StopAllSound(False);
+        UniverseManager.BlackOut;
+      end;
+    end;
+  end;
 end;
 
 procedure TFormSequenceEdition.B_UndoClick(Sender: TObject);

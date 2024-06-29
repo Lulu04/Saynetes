@@ -39,6 +39,7 @@ inherited FrameSequencer: TFrameSequencer
     object MISBStartFromHere: TMenuItem
       Caption = 'Start sequence from here'
       ImageIndex = 15
+      ShortCut = 32
       OnClick = MISBStartFromHereClick
     end
     object Separator2: TMenuItem

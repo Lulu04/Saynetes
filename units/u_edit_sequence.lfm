@@ -1,7 +1,7 @@
 object FormSequenceEdition: TFormSequenceEdition
-  Left = 89
+  Left = 189
   Height = 675
-  Top = 140
+  Top = 123
   Width = 1170
   Caption = 'Sequence edition'
   ClientHeight = 675
@@ -69,7 +69,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -124,7 +123,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -137,7 +135,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -167,7 +164,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -222,7 +218,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -235,7 +230,6 @@ object FormSequenceEdition: TFormSequenceEdition
         AutoSize = False
         Caption = 'Label'
         Font.Color = 15395562
-        Font.Height = 20
         ParentColor = False
         ParentFont = False
       end
@@ -526,7 +520,7 @@ object FormSequenceEdition: TFormSequenceEdition
         ParentFont = False
         ParentShowHint = False
       end
-      object BPreview: TSpeedButton
+      object BStartPreview: TSpeedButton
         AnchorSideLeft.Control = B_Redo
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = PanelFx1
@@ -536,7 +530,7 @@ object FormSequenceEdition: TFormSequenceEdition
         Cursor = crHandPoint
         Left = 204
         Height = 25
-        Hint = 'Start the sequence preview'
+        Hint = 'Start the sequence preview'#13#10'(SPACE)'
         Top = 8
         Width = 25
         AutoSize = True
@@ -557,65 +551,31 @@ object FormSequenceEdition: TFormSequenceEdition
         ParentFont = False
         ParentShowHint = False
       end
-      object BStop: TSpeedButton
-        AnchorSideLeft.Control = BPreview
+      object BStopPreview: TSpeedButton
+        AnchorSideLeft.Control = BStartPreview
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = PanelFx1
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Control = PanelFx1
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 231
+        Left = 233
         Height = 25
-        Hint = 'Stop the preview'
+        Hint = 'Stop the preview'#13#10'(SPACE)'
         Top = 8
-        Width = 25
+        Width = 48
         AutoSize = True
-        BorderSpacing.Left = 2
+        BorderSpacing.Left = 4
         Constraints.MinHeight = 25
-        Constraints.MinWidth = 25
+        Caption = 'Label'
         Color = 13553358
-        Enabled = False
         Flat = True
         Font.Color = clBlack
-        Font.Height = 12
-        Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 16
-        Transparent = False
-        OnClick = BStopClick
-        ShowHint = True
-        ParentFont = False
-        ParentShowHint = False
-      end
-      object B_ShutDown: TSpeedButton
-        AnchorSideLeft.Control = BStop
-        AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = PanelFx1
-        AnchorSideTop.Side = asrCenter
-        AnchorSideBottom.Control = PanelFx1
-        AnchorSideBottom.Side = asrBottom
-        Cursor = crHandPoint
-        Left = 258
-        Height = 25
-        Hint = 'Stop all sounds, and turn off all lights'
-        Top = 8
-        Width = 76
-        AutoSize = True
-        BorderSpacing.Left = 2
-        Constraints.MinHeight = 25
-        Constraints.MinWidth = 76
-        Caption = 'SHUTDOWN'
-        Color = 13553358
-        Flat = True
-        Font.Color = clBlack
-        Font.Height = 12
-        Font.Style = [fsBold]
-        Images = DataModule1.ImageList1
-        ImageIndex = 20
         Spacing = 0
         Transparent = False
-        OnClick = B_ShutDownClick
+        OnClick = BStopPreviewClick
         ShowHint = True
         ParentFont = False
         ParentShowHint = False
@@ -649,6 +609,33 @@ object FormSequenceEdition: TFormSequenceEdition
         ParentFont = False
         ParentShowHint = False
       end
+      object BShutdownPopup: TSpeedButton
+        AnchorSideLeft.Control = BStopPreview
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PanelFx1
+        AnchorSideTop.Side = asrCenter
+        AnchorSideBottom.Control = PanelFx1
+        AnchorSideBottom.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 281
+        Height = 25
+        Top = 8
+        Width = 20
+        AutoSize = True
+        Constraints.MinHeight = 25
+        Color = 13553358
+        Flat = True
+        Font.Color = 1513239
+        Font.Height = 12
+        Font.Style = [fsBold]
+        Images = DataModule1.ImageList1
+        ImageIndex = 47
+        Transparent = False
+        OnClick = BStopPreviewClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
     end
   end
   object Splitter2: TSplitter
@@ -663,5 +650,23 @@ object FormSequenceEdition: TFormSequenceEdition
     ParentColor = False
     ResizeAnchor = akTop
     ResizeStyle = rsLine
+  end
+  object PopShutdown: TPopupMenu
+    Left = 909
+    Top = 262
+    object MIStopOnlyAudio: TMenuItem
+      Caption = 'Audio off'
+      OnClick = BStopPreviewClick
+    end
+    object MIOnlyBlackout: TMenuItem
+      Tag = 1
+      Caption = 'Lights off'
+      OnClick = BStopPreviewClick
+    end
+    object MIStopAudioAndLight: TMenuItem
+      Tag = 2
+      Caption = 'Audio and lights off'
+      OnClick = BStopPreviewClick
+    end
   end
 end

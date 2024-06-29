@@ -975,23 +975,21 @@ msgstr "Sélectionnez les canaux virtuels existants"
 msgid "Keep origin visible"
 msgstr "Garde l'origine visible"
 
-#: tformsequenceedition.bpreview.hint
-msgid "Start the sequence preview"
-msgstr "Démarre la prévisualisation de la séquence"
+#: tformsequenceedition.bstartpreview.hint
+msgctxt "tformsequenceedition.bstartpreview.hint"
+msgid ""
+"Start the sequence preview\n"
+"(SPACE)"
+msgstr "Démarre la prévisualisation de la séquence (ESPACE)"
 
-#: tformsequenceedition.bstop.hint
-msgctxt "tformsequenceedition.bstop.hint"
-msgid "Stop the preview"
-msgstr "Stoppe la prévisualisation"
-
-#: tformsequenceedition.b_shutdown.caption
-msgctxt "tformsequenceedition.b_shutdown.caption"
-msgid "SHUTDOWN"
-msgstr "SHUTDOWN"
-
-#: tformsequenceedition.b_shutdown.hint
-msgid "Stop all sounds, and turn off all lights"
-msgstr "Stoppe tous les sons et éteint toutes les lumières"
+#: tformsequenceedition.bstoppreview.hint
+msgctxt "tformsequenceedition.bstoppreview.hint"
+msgid ""
+"Stop the preview\n"
+"(SPACE)"
+msgstr ""
+"Stoppe la prévisualisation\n"
+"(ESPACE)"
 
 #: tformsequenceedition.b_viewall.hint
 msgctxt "tformsequenceedition.b_viewall.hint"
@@ -1006,6 +1004,18 @@ msgstr "Zoomer sur la sélection"
 #: tformsequenceedition.caption
 msgid "Sequence edition"
 msgstr "Édition de séquence"
+
+#: tformsequenceedition.mionlyblackout.caption
+msgid "Lights off"
+msgstr "Lumières off"
+
+#: tformsequenceedition.mistopaudioandlight.caption
+msgid "Audio and lights off"
+msgstr "Audio et lumières off"
+
+#: tformsequenceedition.mistoponlyaudio.caption
+msgid "Audio off"
+msgstr "Audio off"
 
 #: tformsequenceedition.speedbutton2.caption
 msgctxt "tformsequenceedition.speedbutton2.caption"
@@ -1088,8 +1098,8 @@ msgstr "Cliquez sur l'alignement désiré"
 
 #: tframeaudiocapture.baddfx.hint
 msgctxt "tframeaudiocapture.baddfx.hint"
-msgid "Apply audio effects"
-msgstr "Appliquer des effets audio"
+msgid "Apply effects"
+msgstr "Appliquer des effets"
 
 #: tframeaudiocapture.bonoff.hint
 msgctxt "tframeaudiocapture.bonoff.hint"
@@ -1102,8 +1112,8 @@ msgstr ""
 
 #: tframeaudiocapture.bremovefx.hint
 msgctxt "tframeaudiocapture.bremovefx.hint"
-msgid "Remove all audio effects"
-msgstr "Retirer tous les effets audio"
+msgid "Remove effects"
+msgstr "Retirer tous les effets"
 
 #: tframeaudiocapture.image1.hint
 msgid "Audio input not found"
@@ -1541,6 +1551,29 @@ msgctxt "tframemainaddfixture.od1.title"
 msgid "Load a DMX configuration from another project"
 msgstr "Importer la configuration DMX d'un autre projet"
 
+#: tframemainaudio.baddaudio.hint
+msgctxt "tframemainaudio.baddaudio.hint"
+msgid "Import an audio file to the project"
+msgstr "Importe un fichier audio au projet"
+
+#: tframemainaudio.bremovefxs.hint
+msgctxt "tframemainaudio.bremovefxs.hint"
+msgid "Remove effects on all audio"
+msgstr "Supprime les effets sur tous les sons"
+
+#: tframemainaudio.bresetpans.hint
+msgid "Sets pan to center on all audio"
+msgstr "Règle le panoramique au centre sur tous les sons"
+
+#: tframemainaudio.bresetpitchs.hint
+msgid "Sets pitch to normal on all audio"
+msgstr "Règle le pitch sur normal sur tous les sons"
+
+#: tframemainaudio.bstopall.hint
+msgctxt "tframemainaudio.bstopall.hint"
+msgid "Stop all audio"
+msgstr "Stoppe tous les sons"
+
 #: tframemainaudio.label5.caption
 msgctxt "tframemainaudio.label5.caption"
 msgid "importing audio files..."
@@ -1570,16 +1603,6 @@ msgstr "Fondu entrant sur les sons sélectionnés"
 msgctxt "tframemainaudio.sb_fadeout1s.hint"
 msgid "Fadeout the selected sounds"
 msgstr "Effectue un fondu sortant sur les sons sélectionnés"
-
-#: tframemainaudio.speedbutton1.hint
-msgctxt "tframemainaudio.speedbutton1.hint"
-msgid "Import a copy of an audio file to the project"
-msgstr "Importer une copie d'un fichier audio au projet"
-
-#: tframemainaudio.speedbutton2.hint
-msgctxt "tframemainaudio.speedbutton2.hint"
-msgid "Stop all audio and all effects."
-msgstr "Stoppe tout l'audio et tous les effets."
 
 #: tframemainsequence.label9.caption
 msgctxt "tframemainsequence.label9.caption"
@@ -2998,6 +3021,10 @@ msgstr "de"
 msgid "Functionality"
 msgstr "Fonctionalité"
 
+#: u_resource_string.sfx
+msgid "FX"
+msgstr "FX"
+
 #: u_resource_string.sgain
 msgctxt "u_resource_string.sgain"
 msgid "Gain"
@@ -4018,4 +4045,3 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
-
