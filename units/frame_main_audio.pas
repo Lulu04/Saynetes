@@ -18,6 +18,9 @@ type
   TFrameMainAudio = class(TFrame)
     BPanCenter: TSpeedButton;
     BPitchNormal: TSpeedButton;
+    BRemoveFXs: TSpeedButton;
+    BResetPans: TSpeedButton;
+    BResetPitchs: TSpeedButton;
     Label20: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -41,11 +44,9 @@ type
     Panel8: TPanel;
     Panel9: TPanel;
     PopupMenu1: TPopupMenu;
-    SB_fadein10s: TSpeedButton;
     SB_fadein1s: TSpeedButton;
     SB_fadein4s: TSpeedButton;
     SB_fadein7s: TSpeedButton;
-    SB_fadeout10s: TSpeedButton;
     SB_fadeout1s: TSpeedButton;
     SB_fadeout4s: TSpeedButton;
     SB_fadeout7s: TSpeedButton;
@@ -54,19 +55,20 @@ type
     Shape2: TShape;
     Shape3: TShape;
     Shape4: TShape;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
+    BAddAudio: TSpeedButton;
+    BStopAll: TSpeedButton;
     Timer1: TTimer;
     procedure BPanCenterClick(Sender: TObject);
     procedure BPitchNormalClick(Sender: TObject);
+    procedure BResetPansClick(Sender: TObject);
     procedure MILoopClick(Sender: TObject);
     procedure MIRemoveEffectClick(Sender: TObject);
     procedure MI_DeleteClick(Sender: TObject);
     procedure Panel5Resize(Sender: TObject);
     procedure SB_fadein1sClick(Sender: TObject);
     procedure SB_fadeout1sClick(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
-    procedure SpeedButton2Click(Sender: TObject);
+    procedure BAddAudioClick(Sender: TObject);
+    procedure BStopAllClick(Sender: TObject);
     procedure TBPanChange(Sender: TObject);
     procedure TBPitchChange(Sender: TObject);
     procedure TBVolumeChange(Sender: TObject);
@@ -128,6 +130,15 @@ begin
    FrameTBPitch.Value := ALS_PITCH_NORMAL;
 end;
 
+procedure TFrameMainAudio.BResetPansClick(Sender: TObject);
+begin
+  if Sender = BResetPans then SoundManager.ResetPanOnAllSounds(False);
+
+  if Sender = BResetPitchs then SoundManager.ResetPitchOnAllSounds(False);
+
+  if Sender = BRemoveFXs then SoundManager.DeleteEffectsOnAllSounds(False);
+end;
+
 procedure TFrameMainAudio.MILoopClick(Sender: TObject);
 begin
   if FrameViewAudioList1.SelectedCount = 0 then
@@ -185,7 +196,7 @@ begin
     then snd.FadeOut(b.Tag, ALS_StartFastEndSlow);
 end;
 
-procedure TFrameMainAudio.SpeedButton1Click(Sender: TObject);
+procedure TFrameMainAudio.BAddAudioClick(Sender: TObject);
 var i, j: integer;
  snd: TALSSound;
  s, source, target, newPath: string;
@@ -240,10 +251,9 @@ begin
  FrameViewAudioList1.LB.SetFocus;
 end;
 
-procedure TFrameMainAudio.SpeedButton2Click(Sender: TObject);
+procedure TFrameMainAudio.BStopAllClick(Sender: TObject);
 begin
- SoundManager.StopAllSound(False);
- SoundManager.DeleteAllEffects(False);
+  SoundManager.StopAllSound(False);
 end;
 
 procedure TFrameMainAudio.TBPanChange(Sender: TObject);
@@ -459,11 +469,8 @@ begin
 
   SB_fadein4s.Hint := SB_fadein1s.Hint;
   SB_fadein7s.Hint := SB_fadein1s.Hint;
-  SB_fadein10s.Hint := SB_fadein1s.Hint;
-
   SB_fadeout4s.Hint := SB_fadeout1s.Hint;
   SB_fadeout7s.Hint := SB_fadeout1s.Hint;
-  SB_fadeout10s.Hint := SB_fadeout1s.Hint;
 
   // show cursor's values
   TBVolumeChange(NIL);
@@ -480,7 +487,7 @@ begin
   // FrameViewAudioList1.MouseCanMoveItem := Project.Prefs.EditMode;
    FrameViewAudioList1.MultiSelect := Project.Options.EditMode;
 
-   SpeedButton1.Visible := Project.Options.EditMode;
+   BAddAudio.Visible := Project.Options.EditMode;
 end;
 
 procedure TFrameMainAudio.UpdateLayout;
@@ -501,6 +508,9 @@ begin
   Label20.Caption := SPitch;
   BPanCenter.Hint := SCenter_;
   BPitchNormal.Hint := SNormal_;
+  BResetPans.Caption := SPan;
+  BResetPitchs.Caption := SPitch;
+  BRemoveFXs.Caption := SFX;
 
   MI_Delete.Caption := SDelete;
   MILoop.Caption := SLoop;
