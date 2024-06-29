@@ -138,8 +138,6 @@ type
   private
     procedure ProcessPlayerTimeElapsed(Sender: TObject);
     procedure ProcessPlayerEnd(Sender: TObject);
-  private
-   // procedure ProcessOnAddCmdFromViewProjector(Sender: TObject);
   public
     procedure Notify( const aSteps: ArrayOfCustomSequencerStep; aAction: TSequencerNotification;
         const aDescription: string); override;
@@ -148,13 +146,11 @@ type
     procedure ProcessKey(var Key: word; Shift: TShiftState);
 
     procedure Clear; override;
-//    procedure SaveSequences( t: TStrings );
-//    procedure LoadSequences( t: TStrings );
 
-    // converti chaque étape en étape contenant une seule commande
-    // les étapes contenant plusieurs commandes ou des pauses sont converties en plusieurs étapes
-    // d'une seule commande et distribuées au bon endroit sur la chronologie.
-    // les effets sont également calculés et transformés en étapes simple.
+    // Convert each step in step with a single action
+    // Steps that have several actions scattered over time are splitted to several steps with single actions
+    // and distributed in the right place on the timeline.
+    // This function returns a list of single action separated by 'wait' action.
     function ToCmdListOfSingleCmd: TCmdList;
 
     function SaveToSequencerInfoList: TSequencerInfoList;
@@ -162,7 +158,9 @@ type
 
     // play the sequence from the begin of the view
     procedure Play;
-    // stop playing the sequence
+    // play the sequence from the specified time position
+    procedure PlayFrom(aTimePos: single);
+    // stop the sequence
     procedure Stop;
 
     procedure DoUnDoRedo( ItsUndo: boolean );
@@ -389,23 +387,8 @@ begin
 end;
 
 procedure TFrameSequencer.MISBStartFromHereClick(Sender: TObject);
-var step: TCustomSequencerStep;
 begin
-  if StepList.Count = 0 then exit;
-  if FClickedTimePos = 0 then begin
-    Play;
-    exit;
-  end;
-
-  step := GetLastStep;
-  if step = NIL then exit;
-  if FClickedTimePos >= step.TimePos+step.Duration then exit;
-
-  SeqPlayer.StopPreview;
-  SeqPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
-  SeqPlayer.OnEndPreview := @ProcessPlayerEnd;
-  SeqPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList, FClickedTimePos);
-  PlayCursorVisible(TRUE);
+  PlayFrom(FClickedTimePos);
 end;
 
 procedure TFrameSequencer.MISBAddDMXActionClick(Sender: TObject);
@@ -820,22 +803,6 @@ begin
   ClipBoard_Clear;
 end;
 
-{procedure TFrameSequencer.SaveSequences(t: TStrings);
-begin
-  t.Add('[SEQUENCER]');
-  SequencerToTStrings(Self, t);
-end;  }
-
-{procedure TFrameSequencer.LoadSequences(t: TStrings);
-var k: integer;
-begin
-  k := t.IndexOf('[SEQUENCER]');
-  if k <> -1 then
-    TStringsToSequencer(t, k+1, Self);
-  NeedStepsWidthUpdate;
-  View_All;
-end; }
-
 function TFrameSequencer.ToCmdListOfSingleCmd: TCmdList;
 begin
   Result := StepList.ToCmdListOfSingleCmd;
@@ -883,6 +850,27 @@ begin
   SeqPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
   SeqPlayer.OnEndPreview := @ProcessPlayerEnd;
   SeqPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList);
+  PlayCursorVisible(TRUE);
+end;
+
+procedure TFrameSequencer.PlayFrom(aTimePos: single);
+var step: TCustomSequencerStep;
+begin   // FClickedTimePos
+  if StepList.Count = 0 then exit;
+  if aTimePos = 0 then begin
+    Play;
+    exit;
+  end;
+
+  step := GetLastStep;
+  if step = NIL then exit;
+  if aTimePos >= step.TimePos+step.Duration then exit;
+//  if aTimePos > step.TimePos then exit;
+
+  SeqPlayer.StopPreview;
+  SeqPlayer.OnTimeElapsed := @ProcessPlayerTimeElapsed;
+  SeqPlayer.OnEndPreview := @ProcessPlayerEnd;
+  SeqPlayer.PreviewSequencerInfoList(SaveToSequencerInfoList, aTimePos);
   PlayCursorVisible(TRUE);
 end;
 

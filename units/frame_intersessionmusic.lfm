@@ -55,7 +55,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Height = 181
       Hint = 'This is the list of intersession musics'
       Top = 52
-      Width = 334
+      Width = 335
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 3
       BorderSpacing.Right = 10
@@ -122,7 +122,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
-      Left = 347
+      Left = 348
       Height = 233
       Top = 42
       Width = 27
@@ -137,7 +137,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Label1
       AnchorSideTop.Side = asrBottom
-      Left = 338
+      Left = 339
       Height = 15
       Top = 27
       Width = 45
@@ -265,10 +265,10 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Shape2
       AnchorSideBottom.Side = asrBottom
-      Left = 349
+      Left = 350
       Height = 225
       Top = 46
-      Width = 23
+      Width = 22
       Anchors = [akTop, akRight, akBottom]
       BorderSpacing.Top = 4
       BorderSpacing.Right = 20

@@ -205,6 +205,7 @@ begin
   AddImageToImageList('ModifyTime.svg', ImageList1);
   AddImageToImageList('DeleteTime.svg', ImageList1);  // 45
   AddImageToImageList('SetToDefault.svg', ImageList1);
+  AddImageToImageList('DownGreenArrowForPopup.svg', ImageList1);
   ImageList1.EndUpdate;
 end;
 

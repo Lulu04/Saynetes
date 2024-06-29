@@ -917,21 +917,18 @@ msgstr ""
 msgid "Keep origin visible"
 msgstr ""
 
-#: tformsequenceedition.bpreview.hint
-msgid "Start the sequence preview"
+#: tformsequenceedition.bstartpreview.hint
+msgctxt "tformsequenceedition.bstartpreview.hint"
+msgid ""
+"Start the sequence preview\n"
+"(SPACE)"
 msgstr ""
 
-#: tformsequenceedition.bstop.hint
-msgctxt "tformsequenceedition.bstop.hint"
-msgid "Stop the preview"
-msgstr ""
-
-#: tformsequenceedition.b_shutdown.caption
-msgid "SHUTDOWN"
-msgstr ""
-
-#: tformsequenceedition.b_shutdown.hint
-msgid "Stop all sounds, and turn off all lights"
+#: tformsequenceedition.bstoppreview.hint
+msgctxt "tformsequenceedition.bstoppreview.hint"
+msgid ""
+"Stop the preview\n"
+"(SPACE)"
 msgstr ""
 
 #: tformsequenceedition.b_viewall.hint
@@ -946,6 +943,18 @@ msgstr ""
 
 #: tformsequenceedition.caption
 msgid "Sequence edition"
+msgstr ""
+
+#: tformsequenceedition.mionlyblackout.caption
+msgid "Lights off"
+msgstr ""
+
+#: tformsequenceedition.mistopaudioandlight.caption
+msgid "Audio and lights off"
+msgstr ""
+
+#: tformsequenceedition.mistoponlyaudio.caption
+msgid "Audio off"
 msgstr ""
 
 #: tformsequenceedition.speedbutton2.caption
@@ -1027,7 +1036,7 @@ msgstr ""
 
 #: tframeaudiocapture.baddfx.hint
 msgctxt "tframeaudiocapture.baddfx.hint"
-msgid "Apply audio effects"
+msgid "Apply effects"
 msgstr ""
 
 #: tframeaudiocapture.bonoff.hint
@@ -1039,7 +1048,7 @@ msgstr ""
 
 #: tframeaudiocapture.bremovefx.hint
 msgctxt "tframeaudiocapture.bremovefx.hint"
-msgid "Remove all audio effects"
+msgid "Remove effects"
 msgstr ""
 
 #: tframeaudiocapture.image1.hint
@@ -1472,6 +1481,29 @@ msgctxt "tframemainaddfixture.od1.title"
 msgid "Load a DMX configuration from another project"
 msgstr ""
 
+#: tframemainaudio.baddaudio.hint
+msgctxt "tframemainaudio.baddaudio.hint"
+msgid "Import an audio file to the project"
+msgstr ""
+
+#: tframemainaudio.bremovefxs.hint
+msgctxt "tframemainaudio.bremovefxs.hint"
+msgid "Remove effects on all audio"
+msgstr ""
+
+#: tframemainaudio.bresetpans.hint
+msgid "Sets pan to center on all audio"
+msgstr ""
+
+#: tframemainaudio.bresetpitchs.hint
+msgid "Sets pitch to normal on all audio"
+msgstr ""
+
+#: tframemainaudio.bstopall.hint
+msgctxt "tframemainaudio.bstopall.hint"
+msgid "Stop all audio"
+msgstr ""
+
 #: tframemainaudio.label5.caption
 msgctxt "tframemainaudio.label5.caption"
 msgid "importing audio files..."
@@ -1500,16 +1532,6 @@ msgstr ""
 #: tframemainaudio.sb_fadeout1s.hint
 msgctxt "tframemainaudio.sb_fadeout1s.hint"
 msgid "Fadeout the selected sounds"
-msgstr ""
-
-#: tframemainaudio.speedbutton1.hint
-msgctxt "tframemainaudio.speedbutton1.hint"
-msgid "Import a copy of an audio file to the project"
-msgstr ""
-
-#: tframemainaudio.speedbutton2.hint
-msgctxt "tframemainaudio.speedbutton2.hint"
-msgid "Stop all audio and all effects."
 msgstr ""
 
 #: tframemainsequence.label9.caption
@@ -2898,6 +2920,10 @@ msgstr ""
 
 #: u_resource_string.sfunctionality
 msgid "Functionality"
+msgstr ""
+
+#: u_resource_string.sfx
+msgid "FX"
 msgstr ""
 
 #: u_resource_string.sgain

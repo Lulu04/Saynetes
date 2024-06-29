@@ -19,9 +19,11 @@
 {"hash":5404860,"name":"tformsequenceedition.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":264856556,"name":"tformsequenceedition.b_viewall.hint","sourcebytes":[86,105,101,119,32,97,108,108],"value":"View all"},
 {"hash":100381710,"name":"tformsequenceedition.b_viewselection.hint","sourcebytes":[90,111,111,109,32,111,110,32,115,101,108,101,99,116,105,111,110],"value":"Zoom on selection"},
-{"hash":148284983,"name":"tformsequenceedition.bpreview.hint","sourcebytes":[83,116,97,114,116,32,116,104,101,32,115,101,113,117,101,110,99,101,32,112,114,101,118,105,101,119],"value":"Start the sequence preview"},
-{"hash":99845079,"name":"tformsequenceedition.bstop.hint","sourcebytes":[83,116,111,112,32,116,104,101,32,112,114,101,118,105,101,119],"value":"Stop the preview"},
-{"hash":67162675,"name":"tformsequenceedition.b_shutdown.hint","sourcebytes":[83,116,111,112,32,97,108,108,32,115,111,117,110,100,115,44,32,97,110,100,32,116,117,114,110,32,111,102,102,32,97,108,108,32,108,105,103,104,116,115],"value":"Stop all sounds, and turn off all lights"},
-{"hash":229151182,"name":"tformsequenceedition.b_shutdown.caption","sourcebytes":[83,72,85,84,68,79,87,78],"value":"SHUTDOWN"},
-{"hash":105390181,"name":"tformsequenceedition.bkeep0visible.hint","sourcebytes":[75,101,101,112,32,111,114,105,103,105,110,32,118,105,115,105,98,108,101],"value":"Keep origin visible"}
+{"hash":132622297,"name":"tformsequenceedition.bstartpreview.hint","sourcebytes":[83,116,97,114,116,32,116,104,101,32,115,101,113,117,101,110,99,101,32,112,114,101,118,105,101,119,13,10,40,83,80,65,67,69,41],"value":"Start the sequence preview\r\n(SPACE)"},
+{"hash":96040329,"name":"tformsequenceedition.bstoppreview.hint","sourcebytes":[83,116,111,112,32,116,104,101,32,112,114,101,118,105,101,119,13,10,40,83,80,65,67,69,41],"value":"Stop the preview\r\n(SPACE)"},
+{"hash":5404860,"name":"tformsequenceedition.bstoppreview.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":105390181,"name":"tformsequenceedition.bkeep0visible.hint","sourcebytes":[75,101,101,112,32,111,114,105,103,105,110,32,118,105,115,105,98,108,101],"value":"Keep origin visible"},
+{"hash":184630646,"name":"tformsequenceedition.mistoponlyaudio.caption","sourcebytes":[65,117,100,105,111,32,111,102,102],"value":"Audio off"},
+{"hash":263215638,"name":"tformsequenceedition.mionlyblackout.caption","sourcebytes":[76,105,103,104,116,115,32,111,102,102],"value":"Lights off"},
+{"hash":6449430,"name":"tformsequenceedition.mistopaudioandlight.caption","sourcebytes":[65,117,100,105,111,32,97,110,100,32,108,105,103,104,116,115,32,111,102,102],"value":"Audio and lights off"}
 ]}

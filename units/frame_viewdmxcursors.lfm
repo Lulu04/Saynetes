@@ -33,7 +33,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
     BevelOuter = bvNone
     ClientHeight = 35
     ClientWidth = 665
-    Color = 7303023
+    Color = 3684408
     ParentColor = False
     TabOrder = 1
     OnResize = Panel1Resize

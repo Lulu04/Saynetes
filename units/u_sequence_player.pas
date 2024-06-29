@@ -418,7 +418,7 @@ end;
 
 procedure TSequencePlayer.PreviewSequencerInfoList(aSequencerInfoList: TSequencerInfoList; aFromTimePos: single);
 var delta: single;
-  timePosReached: Boolean;
+  timePosReached, flagEndOfplay: Boolean;
   timePlayOrigin: array of single;
   i: integer;
   snd: TALSSound;
@@ -446,6 +446,7 @@ begin
 
   FPreview.RunAsSequencerInfoList; // put sequence in play mode
   timePosReached := False;
+  flagEndOfplay := False;
   repeat
     if FPreview.WaitSec > 0.0 then begin
       if FPreview.Clock + FPreview.WaitSec < aFromTimePos then _Update(FPreview.WaitSec)
@@ -455,6 +456,8 @@ begin
           timePosReached := True;
         end;
     end else begin
+      if FPreview.EndOfPlay and flagEndOfplay then break; // avoid infinite loop
+      flagEndOfplay := FPreview.EndOfPlay;
       _Update(0.001);
     end;
 

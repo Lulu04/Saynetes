@@ -1730,10 +1730,10 @@ begin
   FToogleSpeedButtonManager.Add(BAll, FALSE);
   FToogleSpeedButtonManager.Add(BOnlySelected, FALSE);
 
-  FColorBackground := RGBToColor(51,51,51);
-  FColorFixtureBackground := RGBToColor(97,90,78);
-  FColorChannelNameBackGround := PercentColor(FColorFixtureBackground, -0.2);
-  FColorBackgroundAdressDMX := PercentColor(FColorFixtureBackground, -0.5);
+  FColorBackground := RGBToColor(21,21,21); //RGBToColor(51,51,51);
+  FColorFixtureBackground := RGBToColor(57,55,53); // RGBToColor(97,90,78);
+  FColorChannelNameBackGround := u_utils.PercentColor(FColorFixtureBackground, -0.4);
+  FColorBackgroundAdressDMX := u_utils.PercentColor(FColorFixtureBackground, -0.5);
   FColorDMXAdress := RGBToColor(255,255,200);
   FColorFixtureName := $00C0C0C0;
   FColorDescription := $00EAEAEA;
@@ -1741,7 +1741,7 @@ begin
   FColorValue := clWhite;
   FColorChannelName := $006FBDE3;//  BGRA(80,50,25);
   FColorChannelRange := $002D9FD7;//  BGRA(70,40,20);
-  FColorChannelText := FColorFixtureName;//BGRA(220,200,200);
+  FColorChannelText := $00EAEAEA; // FColorFixtureName;
 
   FTextStyleForTextRect.SingleLine := FALSE;
   FTextStyleForTextRect.Alignment := taCenter;

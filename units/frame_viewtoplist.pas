@@ -400,7 +400,7 @@ end;
 procedure TFrameViewTopList.MIInsertSequenceClick(Sender: TObject);
 begin
  SoundManager.StopAllSound(False);
- SoundManager.DeleteAllEffects(False);
+ SoundManager.DeleteEffectsOnAllSounds(False);
  Sequences.StopAll;
 
  FormSequenceEdition := TFormSequenceEdition.Create(Self);
@@ -425,7 +425,7 @@ var seq: TSequence;
 begin
  // keep the capture ON
   SoundManager.StopAllSound(False);
-  SoundManager.DeleteAllEffects(False);
+  SoundManager.DeleteEffectsOnAllSounds(False);
 
   Sequences.StopAll;
 

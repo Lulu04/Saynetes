@@ -416,7 +416,7 @@ end;
 procedure TFrameCmdAudio.ProcessSourceChangeEvent(Sender: TObject);
 begin
   SoundManager.StopAllSound(True);
-  SoundManager.DeleteAllEffects(True);
+  SoundManager.DeleteEffectsOnAllSounds(True);
 
   if not TargetIsFile then
   begin
@@ -572,7 +572,7 @@ end;
 procedure TFrameCmdAudio.BStopAllClick(Sender: TObject);
 begin
  SoundManager.StopAllSound(True);
- SoundManager.DeleteAllEffects(True);
+ SoundManager.DeleteEffectsOnAllSounds(True);
 end;
 
 procedure TFrameCmdAudio.BAddClick(Sender: TObject);
@@ -606,7 +606,7 @@ begin
   end;
 
   SoundManager.StopAllSound(True);
-  SoundManager.DeleteAllEffects(True);
+  SoundManager.DeleteEffectsOnAllSounds(True);
   DoOnAddCmd;
 end;
 
