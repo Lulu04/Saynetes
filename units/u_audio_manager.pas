@@ -38,7 +38,7 @@ type
     // add and chain the effect
     procedure AddEffect(const aEffect: TALSEffect; const aEffectName, aPresetName: string);
     procedure SetDryWet(AValue: single);
-    procedure DeleteAllEffects;
+    procedure DeleteEffects;
     procedure FreeEffectsList;
   end;
   PSoundItem = ^TSoundItem;
@@ -97,7 +97,9 @@ type
     procedure DeleteSoundByID(aID: TSoundID);
 
     procedure StopAllSound(aStopAlsoCapturePlayback: boolean);
-    procedure DeleteAllEffects(aDeleteAlsoCaptureEffect: boolean);
+    procedure DeleteEffectsOnAllSounds(aDeleteAlsoCaptureEffect: boolean);
+    procedure ResetPanOnAllSounds(aAlsoOnCapturePlayback: boolean);
+    procedure ResetPitchOnAllSounds(aAlsoOnCapturePlayback: boolean);
     procedure DeleteAllSounds(aDeleteAlsoCaptureSound: boolean);
 
     function AutoWahPresetList: TStringArray;
@@ -286,7 +288,7 @@ begin
     snd.SetEffectDryWetVolume(PALSEffect(Effects.Items[0])^, AValue);
 end;
 
-procedure TSoundItem.DeleteAllEffects;
+procedure TSoundItem.DeleteEffects;
 var snd: TALSSound;
 begin
   snd := Parent.GetSoundByID(SoundID);
@@ -304,7 +306,7 @@ end;
 
 procedure TSoundItem.FreeEffectsList;
 begin
-  DeleteAllEffects;
+  DeleteEffects;
   FreeAndNil(Effects);
 end;
 
@@ -419,7 +421,7 @@ begin
       if snd <> NIL then
         snd.RemoveAllEffects;
 
-      item^.DeleteAllEffects;
+      item^.DeleteEffects;
       exit;
     end;
   end;
@@ -507,7 +509,7 @@ var c: integer;
 begin
   Log.Info('Destroying Sound Manager');
 
-  DeleteAllEffects(True);
+  DeleteEffectsOnAllSounds(True);
   StopCaptureToPlayback;
   StopAllSound(True);
 
@@ -526,7 +528,7 @@ end;
 
 procedure TSoundManager.Clear;
 begin
-  DeleteAllEffects(False);
+  DeleteEffectsOnAllSounds(False);
   DeleteAllSounds(False);
 end;
 
@@ -658,7 +660,7 @@ begin
     end;
 end;
 
-procedure TSoundManager.DeleteAllEffects(aDeleteAlsoCaptureEffect: boolean);
+procedure TSoundManager.DeleteEffectsOnAllSounds(aDeleteAlsoCaptureEffect: boolean);
 var i: integer;
   sndItem: PSoundItem;
 begin
@@ -666,7 +668,37 @@ begin
     sndItem := PSoundItem(FSoundItems.Items[i]);
     if ((sndItem^.SoundID = CAPTURE_IDAUDIO) and aDeleteAlsoCaptureEffect) or
        (sndItem^.SoundID <> CAPTURE_IDAUDIO) then
-      sndItem^.DeleteAllEffects;
+      sndItem^.DeleteEffects;
+  end;
+end;
+
+procedure TSoundManager.ResetPanOnAllSounds(aAlsoOnCapturePlayback: boolean);
+var i: integer;
+  sndItem: PSoundItem;
+  snd: TALSSound;
+begin
+  for i:=0 to FSoundItems.Count-1 do begin
+    sndItem := PSoundItem(FSoundItems.Items[i]);
+    if ((sndItem^.SoundID = CAPTURE_IDAUDIO) and aAlsoOnCapturePlayback) or
+       (sndItem^.SoundID <> CAPTURE_IDAUDIO) then begin
+      snd := GetSoundByID(sndItem^.SoundID);
+      if snd <> NIL then snd.Pan.Value := ALSound.ALS_PAN_CENTER;
+    end;
+  end;
+end;
+
+procedure TSoundManager.ResetPitchOnAllSounds(aAlsoOnCapturePlayback: boolean);
+var i: integer;
+  sndItem: PSoundItem;
+  snd: TALSSound;
+begin
+  for i:=0 to FSoundItems.Count-1 do begin
+    sndItem := PSoundItem(FSoundItems.Items[i]);
+    if ((sndItem^.SoundID = CAPTURE_IDAUDIO) and aAlsoOnCapturePlayback) or
+       (sndItem^.SoundID <> CAPTURE_IDAUDIO) then begin
+      snd := GetSoundByID(sndItem^.SoundID);
+      if snd <> NIL then snd.Pitch.Value := ALSound.ALS_PITCH_NORMAL;
+    end;
   end;
 end;
 
@@ -1085,7 +1117,7 @@ end;
 procedure TSoundManager.ResetState;
 begin
   StopAllSound(True);
-  DeleteAllEffects(True);
+  DeleteEffectsOnAllSounds(True);
   StopCaptureToPlayback;
 end;
 
