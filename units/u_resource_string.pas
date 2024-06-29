@@ -296,6 +296,7 @@ resourcestring
   SPreAmp='Pre-amp';
   SAudioCapture_='AUDIO CAPTURE';
   SFiles_='FILES';
+  SFX='FX';
 
   SUnknownEffect='!! UNKNOWN EFFECT !!';
   SUnknownPreset='!! UNKNOWN PRESET !!';
