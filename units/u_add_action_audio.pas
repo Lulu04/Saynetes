@@ -91,7 +91,7 @@ begin
   FrameCmdAudio1.FrameViewAudioList1.StopTimer;
 
   SoundManager.StopAllSound(True);
-  SoundManager.DeleteAllEffects(True);
+  SoundManager.DeleteEffectsOnAllSounds(True);
 end;
 
 procedure TFormAudioAction.FormKeyUp(Sender: TObject; var Key: Word;
@@ -145,7 +145,7 @@ end;
 procedure TFormAudioAction.ProcessPageSelectionChange(Sender: TObject);
 begin
   SoundManager.StopAllSound(True);
-  SoundManager.DeleteAllEffects(True);
+  SoundManager.DeleteEffectsOnAllSounds(True);
 end;
 
 procedure TFormAudioAction.FillAudioList;
