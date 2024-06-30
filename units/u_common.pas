@@ -103,8 +103,11 @@ const
    PLAYLIST_FOLDER = 'Playlists';
    PLAYLIST_FILE_EXTENSION = '.playlist';
 
-   PRESET_FOLDER = 'Presets';
+   FACTORY_PRESETS_FOLDER = 'FactoryPresets';
+   USER_PRESETS_FOLDER = 'Presets';
    PRESET_FILE_EXTENSION = '.preset';
+
+   PROJECT_EXAMPLE_FOLDER = 'Examples';
 
 const
    NameOfAudioFXName: array[0..11] of string=(

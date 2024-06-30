@@ -304,7 +304,7 @@ begin
   // load audio presets in combobox
   CBFX.Clear;
   try
-    CBFX.Items.LoadFromFile(GetAppAudioPresetsFile);
+    CBFX.Items.LoadFromFile(GetFileUserAudioPresets);
   except
   end;
 end;

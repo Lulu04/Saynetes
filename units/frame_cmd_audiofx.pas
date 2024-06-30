@@ -673,7 +673,7 @@ begin
   FrameViewAudioList1.OnSelectionChange:=@ProcessFileSelectionChange;
 
   FAudioFXPresetManager := TPresetManager.Create(Self);
-  FAudioFXPresetManager.Init1(SAudioFXPresets, BPreset, GetAppAudioPresetsFile);
+  FAudioFXPresetManager.Init1(SAudioFXPresets, BPreset, GetFileUserAudioPresets);
   FAudioFXPresetManager.Init2(@PresetToAudioFX, @AudioFXToPreset);
 
   FNoteBookManager := TNoteBookManager.Create(Notebook1);
