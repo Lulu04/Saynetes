@@ -1,11 +1,11 @@
 object FormStartUpWizard: TFormStartUpWizard
-  Left = 410
-  Height = 324
-  Top = 355
+  Left = 464
+  Height = 369
+  Top = 241
   Width = 433
   BorderIcons = [biSystemMenu]
   Caption = 'StartUp Wizard'
-  ClientHeight = 324
+  ClientHeight = 369
   ClientWidth = 433
   Color = 2434341
   KeyPreview = True
@@ -15,24 +15,27 @@ object FormStartUpWizard: TFormStartUpWizard
   LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
-    Height = 324
+    Height = 369
     Top = 0
     Width = 433
     Align = alClient
     Brush.Style = bsClear
     Pen.Color = 247036
   end
-  object SpeedButton1: TSpeedButton
+  object BCreateNew: TSpeedButton
     AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Cursor = crHandPoint
     Left = 20
     Height = 30
-    Top = 107
+    Top = 90
     Width = 393
-    Anchors = [akLeft, akRight]
+    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 20
+    BorderSpacing.Top = 30
     BorderSpacing.Right = 20
     Constraints.MaxHeight = 30
     Constraints.MinHeight = 30
@@ -43,18 +46,18 @@ object FormStartUpWizard: TFormStartUpWizard
     Font.Style = [fsBold]
     ImageIndex = 6
     Transparent = False
-    OnClick = SpeedButton1Click
+    OnClick = BCreateNewClick
     ParentFont = False
   end
   object Panel1: TPanel
-    AnchorSideLeft.Control = SpeedButton1
+    AnchorSideLeft.Control = BCreateNew
     AnchorSideTop.Control = Label1
     AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = SpeedButton1
+    AnchorSideRight.Control = BCreateNew
     AnchorSideRight.Side = asrBottom
     Left = 20
     Height = 36
-    Top = 172
+    Top = 155
     Width = 393
     Anchors = [akTop, akLeft, akRight]
     ClientHeight = 36
@@ -82,13 +85,13 @@ object FormStartUpWizard: TFormStartUpWizard
     end
   end
   object Label1: TLabel
-    AnchorSideLeft.Control = SpeedButton1
+    AnchorSideLeft.Control = BCreateNew
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = SpeedButton1
+    AnchorSideTop.Control = BCreateNew
     AnchorSideTop.Side = asrBottom
     Left = 160
     Height = 15
-    Top = 157
+    Top = 140
     Width = 113
     BorderSpacing.Top = 20
     Caption = 'Open a recent project'
@@ -97,16 +100,16 @@ object FormStartUpWizard: TFormStartUpWizard
     ParentColor = False
     ParentFont = False
   end
-  object SpeedButton2: TSpeedButton
-    AnchorSideLeft.Control = SpeedButton1
+  object BOpenProject: TSpeedButton
+    AnchorSideLeft.Control = BCreateNew
     AnchorSideTop.Control = Panel1
     AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = SpeedButton1
+    AnchorSideRight.Control = BCreateNew
     AnchorSideRight.Side = asrBottom
     Cursor = crHandPoint
     Left = 20
     Height = 30
-    Top = 228
+    Top = 211
     Width = 393
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Top = 20
@@ -119,19 +122,19 @@ object FormStartUpWizard: TFormStartUpWizard
     Font.Style = [fsBold]
     ImageIndex = 12
     Transparent = False
-    OnClick = SpeedButton2Click
+    OnClick = BOpenProjectClick
     ParentFont = False
   end
-  object SpeedButton3: TSpeedButton
-    AnchorSideLeft.Control = SpeedButton1
-    AnchorSideTop.Control = SpeedButton2
+  object BQuit: TSpeedButton
+    AnchorSideLeft.Control = BCreateNew
+    AnchorSideTop.Control = BOpenExample
     AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = SpeedButton1
+    AnchorSideRight.Control = BCreateNew
     AnchorSideRight.Side = asrBottom
     Cursor = crHandPoint
     Left = 20
     Height = 30
-    Top = 278
+    Top = 311
     Width = 393
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Top = 20
@@ -144,7 +147,7 @@ object FormStartUpWizard: TFormStartUpWizard
     Font.Style = [fsBold]
     ImageIndex = 30
     Transparent = False
-    OnClick = SpeedButton3Click
+    OnClick = BQuitClick
     ParentFont = False
   end
   object Label2: TLabel
@@ -480,5 +483,30 @@ object FormStartUpWizard: TFormStartUpWizard
       0049454E44AE426082
     }
     Stretch = True
+  end
+  object BOpenExample: TSpeedButton
+    AnchorSideLeft.Control = BCreateNew
+    AnchorSideTop.Control = BOpenProject
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BCreateNew
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 20
+    Height = 30
+    Top = 261
+    Width = 393
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 20
+    Constraints.MaxHeight = 30
+    Constraints.MinHeight = 30
+    Caption = 'Open a demo project'
+    Color = 4737096
+    Flat = True
+    Font.Color = 15395562
+    Font.Style = [fsBold]
+    ImageIndex = 12
+    Transparent = False
+    OnClick = BOpenExampleClick
+    ParentFont = False
   end
 end

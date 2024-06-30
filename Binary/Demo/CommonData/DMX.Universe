@@ -1,0 +1,21 @@
+[UNIVERSE]
+CurrentUniverseID|1|CurrentFixtureID|33|Count|1
+[UNIVERSE 0]
+ID|1|Name|Univers 1|Color|588518655|First|1|Last|512|Device|_no_device_|Serial||Port|-1|Optimized|yes|FixtureCount|17
+FixtureLocation|SubFolder~american-dj~Filename~encore-profile-1000-ww.dmx~Mode~3-channel|ID|11|Adress|1|Description|Profile|ScreenPosX|-25.817|ScreenPosY|548.341|Angle|0.000|Zoom|0.695|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|12|Adress|4|Description||ScreenPosX|-291.869|ScreenPosY|-194.661|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|13|Adress|11|Description||ScreenPosX|-74.882|ScreenPosY|-194.587|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|14|Adress|18|Description||ScreenPosX|141.399|ScreenPosY|-191.735|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|16|Adress|25|Description|Left 1|ScreenPosX|-537.885|ScreenPosY|-215.107|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|17|Adress|31|Description|Left 2|ScreenPosX|-597.934|ScreenPosY|-132.280|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|18|Adress|37|Description|Left 3|ScreenPosX|-529.602|ScreenPosY|-68.090|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|19|Adress|43|Description|Right 1|ScreenPosX|489.236|ScreenPosY|-213.036|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|20|Adress|49|Description|Right 2|ScreenPosX|565.850|ScreenPosY|-132.280|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|21|Adress|55|Description|Right 3|ScreenPosX|491.307|ScreenPosY|-76.372|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~cameo~Filename~zenit-z120.dmx~Mode~3-channel|ID|22|Adress|61|Description|Curtain left|ScreenPosX|-311.329|ScreenPosY|160.613|Angle|0.000|Zoom|0.831|FlipH|true|FlipV|true|Locked2|true|LockValue2|164|Locked3|true|LockValue3|99
+FixtureLocation|SubFolder~cameo~Filename~zenit-z120.dmx~Mode~3-channel|ID|23|Adress|64|Description|Curtain right|ScreenPosX|226.130|ScreenPosY|162.683|Angle|0.000|Zoom|0.831|FlipH|false|FlipV|true|Locked2|true|LockValue2|164|Locked3|true|LockValue3|99
+FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|28|Adress|67|Description|Right Face 1|ScreenPosX|467.282|ScreenPosY|205.762|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|true
+FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|29|Adress|72|Description|Right Face 2|ScreenPosX|404.915|ScreenPosY|288.918|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|true
+FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|30|Adress|77|Description|Left Face 2|ScreenPosX|-497.323|ScreenPosY|280.602|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|true
+FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|31|Adress|82|Description|Left Face 1|ScreenPosX|-563.848|ScreenPosY|211.999|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|true
+FixtureLocation|SubFolder~nicols~Filename~dp-405.dmx~Mode~4-channel|ID|33|Adress|87|Description||ScreenPosX|-634.965|ScreenPosY|651.211|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false|Name1|HALL (2x halogen)

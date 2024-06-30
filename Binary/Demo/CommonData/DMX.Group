@@ -1,0 +1,8 @@
+[CHANNELS GROUP]
+2
+Curtain;1 22 0;1 23 0
+Master dimmer;1 16 0;1 17 0;1 18 0;1 19 0;1 20 0;1 21 0;1 28 0;1 29 0;1 30 0;1 31 0
+[RGB GROUP]
+2
+Left side;1 16;1 17;1 18
+Right side;1 19;1 20;1 21

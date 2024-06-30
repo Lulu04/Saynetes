@@ -367,6 +367,7 @@ end;   }
 
 procedure TFormMain.MainGuiMessageHandler(var Message: TLMessage);
 var F: TFormStartUpWizard;
+  s: string;
 begin
   case Message.lParam of
    MESS_MainGui_StartupWizard: begin
@@ -376,6 +377,10 @@ begin
          if F.NewProject then MIProjectNewClick(NIL);
          if F.OpenRecent<>'' then Project.Load(F.OpenRecent);
          if F.OpenProject then MIProjectOpenClick(NIL);
+         if F.OpenDemo then begin
+           s := GetDemoProjectFile;
+           if s <> '' then Project.Load(s);
+         end;
          if F.Quit then MIProjectQuitClick(NIL);
        end;
      finally

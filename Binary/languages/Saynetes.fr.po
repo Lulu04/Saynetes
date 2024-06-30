@@ -1026,6 +1026,25 @@ msgstr "Ajouter cette séquence"
 msgid "Please wait"
 msgstr "Veuillez patienter"
 
+#: tformstartupwizard.bcreatenew.caption
+msgctxt "tformstartupwizard.bcreatenew.caption"
+msgid "Create a new project"
+msgstr "Créer un nouveau projet"
+
+#: tformstartupwizard.bopenexample.caption
+msgid "Open a demo project"
+msgstr "Ouvrir un projet de démonstration"
+
+#: tformstartupwizard.bopenproject.caption
+msgctxt "tformstartupwizard.bopenproject.caption"
+msgid "Open a  project"
+msgstr "Ouvrir un projet"
+
+#: tformstartupwizard.bquit.caption
+msgctxt "tformstartupwizard.bquit.caption"
+msgid "Quit"
+msgstr "Quitter"
+
 #: tformstartupwizard.caption
 msgid "StartUp Wizard"
 msgstr "Assistant de démarrage"
@@ -1041,19 +1060,6 @@ msgid ""
 msgstr ""
 "Bienvenu !\n"
 "Par quoi voulez-vous commencer ?"
-
-#: tformstartupwizard.speedbutton1.caption
-msgid "Create a new project"
-msgstr "Créer un nouveau projet"
-
-#: tformstartupwizard.speedbutton2.caption
-msgid "Open a  project"
-msgstr "Ouvrir un projet"
-
-#: tformstartupwizard.speedbutton3.caption
-msgctxt "tformstartupwizard.speedbutton3.caption"
-msgid "Quit"
-msgstr "Quitter"
 
 #: tform_changesteplength.label1.caption
 msgid "Step Name"
