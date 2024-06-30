@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
-  StdCtrls, Spin, ComCtrls, LCLTranslator, frame_velocity, u_notebook_util,
+  StdCtrls, Spin, ComCtrls, LCLTranslator, frame_velocity, lcl_utils,
   u_list_dmxuniverse, frame_fx_channelchaser, u_common,
   frame_viewchannelslist, u_presetmanager, frame_viewprojectors,
   frame_trackbar, frame_trackbar_customized;

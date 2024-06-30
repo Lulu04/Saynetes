@@ -55,7 +55,7 @@ object FormEditSingleAction: TFormEditSingleAction
     Height = 381
     Top = 27
     Width = 517
-    PageIndex = 2
+    PageIndex = 5
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 2
     BorderSpacing.Top = 2
@@ -2055,6 +2055,7 @@ object FormEditSingleAction: TFormEditSingleAction
           end
         end
         object RadioButton7: TRadioButton
+          Cursor = crHandPoint
           Left = 8
           Height = 19
           Top = 8

@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, ExtCtrls,
   StdCtrls, Spin, ComCtrls,
   u_common, frame_velocity, frame_color_palette, frame_trackbar, frame_trackbar_customized,
-  u_notebook_util;
+  lcl_utils;
 
 type
 

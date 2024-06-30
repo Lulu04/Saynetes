@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   LCLTranslator, Buttons, StdCtrls, ComCtrls, Spin, DividerBevel,
-  u_notebook_util, u_common;
+  lcl_utils, u_common;
 
 type
 
@@ -171,7 +171,7 @@ uses LCLType, ALSound, u_project_manager, u_logfile, PropertyUtils,
 
 constructor TProgramOptions.Create;
 begin
-  FSaveFolder := GetAppConfigFolder;
+  FSaveFolder := GetUserConfigFolder;
   FSaveFileName := ConcatPaths([FSaveFolder, APP_CONFIG_FILENAME]);
   if not FileExists(FSaveFileName) then begin
     InitByDefault;

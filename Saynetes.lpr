@@ -14,7 +14,7 @@ uses
   frame_viewfixturechannels, u_editfixturewizard, u_dmxlib_inputrange,
   u_user_askconfirmation, u_user_showmessage, u_user_inputstring, u_userdialogs,
   frame_editstring, frame_viewdmxcursors, u_dmxtools_channels,
-  u_notebook_util, u_dmxtools_rgb, frame_viewuniverselist,
+  u_dmxtools_rgb, frame_viewuniverselist,
   frame_viewchannelslist, u_dmxtools_group, u_edit_otheraction,
   frame_fx_channelchaser, u_helper, u_add_action_audio, u_devicemanager_form,
   u_ftdi_based, ftd2xx, u_startupwizard, u_program_options, u_createplaylist,
@@ -47,7 +47,7 @@ begin
   // exists. if not, try to create it.
   CheckAppConfigFolder;
 
-  Log := TLog.Create(GetAppConfigFolder + 'saynetes.log');
+  Log := TLog.Create(GetUserConfigFolder + 'saynetes.log');
   Log.DeleteLogFile;
   Log.Info('Saynète: Starting application', 0, True);
   ProgramOptions := TProgramOptions.Create;

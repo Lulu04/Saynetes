@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
-  StdCtrls, Grids, Spin, u_notebook_util,
+  StdCtrls, Grids, Spin, lcl_utils,
   u_dmxdevice_manager, u_list_dmxuniverse, u_common;
 
 type

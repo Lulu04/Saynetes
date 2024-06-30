@@ -11,7 +11,7 @@ uses
   BGRABitmap, BGRABitmapTypes, BGLVirtualScreen, BGRAOpenGL, BGRAOpenGLType,
   BGRAFontGL,
   u_list_dmxuniverse, u_dmx_util, u_common,
-  frame_viewdmxcursors, frame_velocity, u_notebook_util, frame_viewfixtureinfo;
+  frame_viewdmxcursors, frame_velocity, frame_viewfixtureinfo, lcl_utils;
 
 
 const

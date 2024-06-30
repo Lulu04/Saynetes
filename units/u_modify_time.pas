@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, Spin,
   StdCtrls, ExtCtrls, Buttons, LCLTranslator,
-  u_notebook_util;
+  lcl_utils;
 
 type
 

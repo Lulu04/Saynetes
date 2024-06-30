@@ -9,7 +9,7 @@ uses
   LCLTranslator, StdCtrls, Buttons, ComCtrls, Menus,
   frame_bglvirtualscreen_sequencer, frame_sequencer, frame_viewcmdlist,
   u_common, frame_editstring, u_audio_manager, u_list_dmxuniverse,
-  u_notebook_util;
+  lcl_utils;
 
 type
 

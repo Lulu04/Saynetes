@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Buttons, ComCtrls,
   LCLTranslator,
   ALSound, u_audio_manager, frame_viewaudiolist, u_common, u_presetmanager,
-  u_notebook_util, frame_led, frame_buttononoff, frame_trackbar,
+  lcl_utils, frame_led, frame_buttononoff, frame_trackbar,
   frame_trackbar_customized;
 
 type
