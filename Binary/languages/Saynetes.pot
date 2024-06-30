@@ -966,6 +966,25 @@ msgstr ""
 msgid "Please wait"
 msgstr ""
 
+#: tformstartupwizard.bcreatenew.caption
+msgctxt "tformstartupwizard.bcreatenew.caption"
+msgid "Create a new project"
+msgstr ""
+
+#: tformstartupwizard.bopenexample.caption
+msgid "Open a demo project"
+msgstr ""
+
+#: tformstartupwizard.bopenproject.caption
+msgctxt "tformstartupwizard.bopenproject.caption"
+msgid "Open a  project"
+msgstr ""
+
+#: tformstartupwizard.bquit.caption
+msgctxt "tformstartupwizard.bquit.caption"
+msgid "Quit"
+msgstr ""
+
 #: tformstartupwizard.caption
 msgid "StartUp Wizard"
 msgstr ""
@@ -978,19 +997,6 @@ msgstr ""
 msgid ""
 "Welcome !\n"
 "What would you like to do ?"
-msgstr ""
-
-#: tformstartupwizard.speedbutton1.caption
-msgid "Create a new project"
-msgstr ""
-
-#: tformstartupwizard.speedbutton2.caption
-msgid "Open a  project"
-msgstr ""
-
-#: tformstartupwizard.speedbutton3.caption
-msgctxt "tformstartupwizard.speedbutton3.caption"
-msgid "Quit"
 msgstr ""
 
 #: tform_changesteplength.label1.caption

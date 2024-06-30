@@ -1,8 +1,9 @@
 {"version":1,"strings":[
 {"hash":258642180,"name":"tformstartupwizard.caption","sourcebytes":[83,116,97,114,116,85,112,32,87,105,122,97,114,100],"value":"StartUp Wizard"},
-{"hash":209346836,"name":"tformstartupwizard.speedbutton1.caption","sourcebytes":[67,114,101,97,116,101,32,97,32,110,101,119,32,112,114,111,106,101,99,116],"value":"Create a new project"},
+{"hash":209346836,"name":"tformstartupwizard.bcreatenew.caption","sourcebytes":[67,114,101,97,116,101,32,97,32,110,101,119,32,112,114,111,106,101,99,116],"value":"Create a new project"},
 {"hash":2898996,"name":"tformstartupwizard.label1.caption","sourcebytes":[79,112,101,110,32,97,32,114,101,99,101,110,116,32,112,114,111,106,101,99,116],"value":"Open a recent project"},
-{"hash":194277300,"name":"tformstartupwizard.speedbutton2.caption","sourcebytes":[79,112,101,110,32,97,32,32,112,114,111,106,101,99,116],"value":"Open a  project"},
-{"hash":363524,"name":"tformstartupwizard.speedbutton3.caption","sourcebytes":[81,117,105,116],"value":"Quit"},
-{"hash":168762943,"name":"tformstartupwizard.label2.caption","sourcebytes":[87,101,108,99,111,109,101,32,33,13,10,87,104,97,116,32,119,111,117,108,100,32,121,111,117,32,108,105,107,101,32,116,111,32,100,111,32,63],"value":"Welcome !\r\nWhat would you like to do ?"}
+{"hash":194277300,"name":"tformstartupwizard.bopenproject.caption","sourcebytes":[79,112,101,110,32,97,32,32,112,114,111,106,101,99,116],"value":"Open a  project"},
+{"hash":363524,"name":"tformstartupwizard.bquit.caption","sourcebytes":[81,117,105,116],"value":"Quit"},
+{"hash":168762943,"name":"tformstartupwizard.label2.caption","sourcebytes":[87,101,108,99,111,109,101,32,33,13,10,87,104,97,116,32,119,111,117,108,100,32,121,111,117,32,108,105,107,101,32,116,111,32,100,111,32,63],"value":"Welcome !\r\nWhat would you like to do ?"},
+{"hash":123620532,"name":"tformstartupwizard.bopenexample.caption","sourcebytes":[79,112,101,110,32,97,32,100,101,109,111,32,112,114,111,106,101,99,116],"value":"Open a demo project"}
 ]}
