@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
   StdCtrls, Spin,
-  u_notebook_util, u_common, u_list_dmxuniverse, frame_cb_channeltype,
+  lcl_utils, u_common, u_list_dmxuniverse, frame_cb_channeltype,
   frame_viewfixturechannels, u_presetmanager;
 
 type

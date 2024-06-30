@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   ComCtrls, Menus, LMessages, LCLTranslator, Buttons,
-  u_common, u_notebook_util,
+  u_common, lcl_utils, u_apputils,
   frame_main_audio, frame_viewprojectors, frame_main_sequence,
   frame_main_addfixture;
 
@@ -156,6 +156,9 @@ begin
   LoadCursorImages(ScaleDesignToForm(25), ScaleDesignToForm(35));
   FormSplash.TextLoad := SLoadingDmxEffectsImage;
   LoadDmxEffectsImages(ScaleDesignToForm(14), -1);
+
+  // customize hint window
+  CustomizeHintWindow;
 
   Project := TSaynetesProject.Create;
 

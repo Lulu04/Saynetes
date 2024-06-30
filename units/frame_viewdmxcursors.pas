@@ -10,7 +10,7 @@ uses
   ExtCtrls, Buttons, Types, Math, LCLTranslator, ComCtrls,
   BGRABitmap, BGRABitmapTypes,
   u_list_dmxuniverse, u_common, u_utils,
-  u_resource_string, u_userdialogs, u_project_manager, u_notebook_util,
+  u_resource_string, u_userdialogs, u_project_manager, lcl_utils,
   u_dmx_util;
 
 type

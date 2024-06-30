@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, ExtCtrls,
-  frame_cmd_audio, frame_cmd_audiofx, u_notebook_util, u_common;
+  frame_cmd_audio, frame_cmd_audiofx, lcl_utils, u_common;
 
 type
 

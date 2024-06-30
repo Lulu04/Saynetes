@@ -187,7 +187,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Height = 298
     Top = 186
     Width = 263
-    PageIndex = 0
+    PageIndex = 6
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Right = 3
@@ -817,6 +817,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         ParentFont = False
       end
       object RadioButton1: TRadioButton
+        Cursor = crHandPoint
         Left = 8
         Height = 19
         Top = 17
@@ -847,6 +848,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         AnchorSideLeft.Control = RadioButton1
         AnchorSideTop.Control = RadioButton1
         AnchorSideTop.Side = asrBottom
+        Cursor = crHandPoint
         Left = 8
         Height = 19
         Top = 41
