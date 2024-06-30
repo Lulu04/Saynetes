@@ -27,9 +27,9 @@ procedure CheckAppConfigFolder;
 function GetUserConfigFolder: string;
 function GetPlaylistsFolder: string;
 function GetPresetsFolder: string;
-
 function GetFileUserAudioPresets: string;
 
+function GetDemoProjectFile: string;
 
 implementation
 uses Forms, u_common, project_util, utilitaire_fichier, Graphics;
@@ -128,6 +128,29 @@ end;
 function GetFileUserAudioPresets: string;
 begin
   Result := ConcatPaths([GetPresetsFolder, 'AudioEffect'+PRESET_FILE_EXTENSION]);
+end;
+
+function GetDemoProjectFile: string;
+const demoFile = 'Demo'+DirectorySeparator+'ProjectExample.say';
+var f: string;
+begin
+  Result := '';
+  {$ifdef Windows}
+  // try in ProgramData\Saynetes\   <= app installed with innosetup
+  f := GetUserConfigFolder + demoFile;
+  if FichierExistant(f) then begin
+    Result := f;
+    exit;
+  end;
+
+  // try in executable location     <= portable version of the application (zip)
+  f := Application.Location + demoFile;
+  if FichierExistant(f) then
+    Result := f;
+  {$endif}
+  {$ifdef Linux}
+   raise exception.create('to do');
+  {$endif}
 end;
 
 end.
