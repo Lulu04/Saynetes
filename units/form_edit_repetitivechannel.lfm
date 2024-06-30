@@ -83,6 +83,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
       ParentFont = False
     end
     object CheckBox1: TCheckBox
+      Cursor = crHandPoint
       Left = 48
       Height = 19
       Top = 295
@@ -102,6 +103,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
       ParentFont = False
     end
     object CheckBox2: TCheckBox
+      Cursor = crHandPoint
       Left = 288
       Height = 19
       Top = 294
@@ -225,6 +227,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         Value = 1
       end
       object RB1: TRadioButton
+        Cursor = crHandPoint
         Left = 144
         Height = 19
         Top = 64
@@ -249,6 +252,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         ParentFont = False
       end
       object RB2: TRadioButton
+        Cursor = crHandPoint
         Left = 144
         Height = 19
         Top = 89
@@ -275,6 +279,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         ParentFont = False
       end
       object RB6: TRadioButton
+        Cursor = crHandPoint
         Left = 144
         Height = 19
         Top = 184
@@ -299,6 +304,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         ParentFont = False
       end
       object RB7: TRadioButton
+        Cursor = crHandPoint
         Left = 144
         Height = 19
         Top = 121
@@ -323,6 +329,7 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         ParentFont = False
       end
       object RB8: TRadioButton
+        Cursor = crHandPoint
         Left = 144
         Height = 19
         Top = 149
