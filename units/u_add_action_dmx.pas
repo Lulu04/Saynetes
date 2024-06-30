@@ -29,7 +29,7 @@ var
 implementation
 
 uses u_common, u_global_var, u_mainform, u_list_dmxuniverse,
-  u_dmxtools_channels, u_dmxtools_rgb;
+  u_dmxtools_channels, u_dmxtools_rgb, u_dmxtools_group;
 
 {$R *.lfm}
 
@@ -37,9 +37,9 @@ uses u_common, u_global_var, u_mainform, u_list_dmxuniverse,
 
 procedure TFormAddDMXAction.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-
   FormDMXChannelsTools.ClearSelectedChannels;
   FormDMXRGBTools.ClearSelectedFixtures;
+  FrameViewProjector1.HideToolsWindows;
 
   UniverseManager.StopThread;
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;

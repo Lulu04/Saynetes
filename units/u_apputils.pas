@@ -7,9 +7,11 @@ interface
 uses
   Classes, SysUtils;
 
+// The following (sub)folders are located in the application binary folder
 function GetAppDataFolder: string;
 function GetAppDMXLibraryFolder: string;
 function GetAppImagesFolder: string;
+function GetAppFactoryPresetsFolder: string;
 function GetAppStageImagesFolder: string;
 function GetAppFixtureImagesFolder: string;
 function GetAppCursorImagesFolder: string;
@@ -17,16 +19,20 @@ function GetAppChannelImagesFolder: string;
 function GetAppIconImagesFolder: string;
 function GetAppDMXEffectImagesFolder: string;
 
+
 procedure CheckAppConfigFolder;
-function GetAppConfigFolder: string;
+// The following (sub)folder are located in:
+//   for Windows platform: ProgramData\Saynètes
+//   for Linux platform: ~/.config
+function GetUserConfigFolder: string;
 function GetPlaylistsFolder: string;
 function GetPresetsFolder: string;
 
-function GetAppAudioPresetsFile: string;
+function GetFileUserAudioPresets: string;
 
 
 implementation
-uses Forms, u_common, u_project_manager, project_util, utilitaire_fichier;
+uses Forms, u_common, project_util, utilitaire_fichier, Graphics;
 
 var
   FAppConfigFolder: string='';
@@ -44,6 +50,11 @@ end;
 function GetAppDMXLibraryFolder: string;
 begin
   Result := GetAppDataFolder+'DMXLibrary'+DirectorySeparator;
+end;
+
+function GetAppFactoryPresetsFolder: string;
+begin
+  Result := GetAppDataFolder+FACTORY_PRESETS_FOLDER+DirectorySeparator;
 end;
 
 function GetAppStageImagesFolder: string;
@@ -83,12 +94,14 @@ begin
 
   if RepertoireExistant(FAppConfigFolder) then begin
     // check if preset folder exists
-    folder := ConcatPaths([FAppConfigFolder, PRESET_FOLDER]);
+    folder := ConcatPaths([FAppConfigFolder, USER_PRESETS_FOLDER]);
     if not RepertoireExistant(folder) then begin
       // copy the factory preset
-      source := IncludeTrailingPathDelimiter(ConcatPaths([Application.Location, PRESET_FOLDER]));
-      if RepertoireExistant(source) then
-          CopieRepertoire(source, FAppConfigFolder, True, False);
+      source := GetAppFactoryPresetsFolder;
+      if RepertoireExistant(source) then begin
+        CopieRepertoire(source, FAppConfigFolder, True, False);
+        RenommerRepertoire(FAppConfigFolder+FACTORY_PRESETS_FOLDER, FAppConfigFolder+USER_PRESETS_FOLDER);
+      end;
     end;
 
     // check if playlists folder exists
@@ -97,22 +110,22 @@ begin
   end else FAppConfigFolder:='';
 end;
 
-function GetAppConfigFolder: string;
+function GetUserConfigFolder: string;
 begin
-  Result := IncludeTrailingPathDelimiter(FAppConfigFolder);
+  Result := FAppConfigFolder;
 end;
 
 function GetPlaylistsFolder: string;
 begin
-  Result := GetAppConfigFolder+PLAYLIST_FOLDER+DirectorySeparator;
+  Result := GetUserConfigFolder+PLAYLIST_FOLDER+DirectorySeparator;
 end;
 
 function GetPresetsFolder: string;
 begin
-  Result := GetAppConfigFolder+PRESET_FOLDER+DirectorySeparator;
+  Result := GetUserConfigFolder+USER_PRESETS_FOLDER+DirectorySeparator;
 end;
 
-function GetAppAudioPresetsFile: string;
+function GetFileUserAudioPresets: string;
 begin
   Result := ConcatPaths([GetPresetsFolder, 'AudioEffect'+PRESET_FILE_EXTENSION]);
 end;

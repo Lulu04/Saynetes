@@ -158,7 +158,7 @@ begin
   LoadDmxEffectsImages(ScaleDesignToForm(14), -1);
 
   // customize hint window
-  CustomizeHintWindow;
+  SetAppHintAttributes(RGBToColor(255,255,0), clBlack);
 
   Project := TSaynetesProject.Create;
 

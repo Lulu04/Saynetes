@@ -123,7 +123,7 @@ begin
         else begin
           if not FSeq.MouseIsOverSequencer then FSeq.Play
             else begin
-              t := FSeq.AbscissaToTimePos(FSeq.BGLVirtualScreen1.ScreenToClient(Mouse.CursorPos).x);
+              t := FSeq.View_BeginTime + FSeq.AbscissaToTimePos(FSeq.BGLVirtualScreen1.ScreenToClient(Mouse.CursorPos).x);
               FSeq.PlayFrom(t);
             end;
         end;
