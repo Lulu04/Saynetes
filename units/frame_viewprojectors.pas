@@ -196,10 +196,11 @@ type
     FGUIMode: TGUIMode;
     procedure SetGUIMode(AValue: TGUIMode);
   public
-    FShowLevel,
-    FShowRGBSymbol,
-    FShowDMXAdress,
-    FShowFixtureInfo: boolean;
+    class var FShowLevel, FShowRGBSymbol, FShowDMXAdress, FShowFixtureInfo: boolean;
+    class var FSplitter1Top: integer;
+    procedure SaveProjectOptionsTo(t: TStringList);
+    procedure LoadProjectOptionsFrom(t: TStringList);
+    procedure ReloadWidgetStateFromClassVar;
   public
     FrameFixtureInfo1: TFrameFixtureInfo;
     FrameViewDMXCursors1: TFrameViewDMXCursors;
@@ -244,9 +245,6 @@ type
     procedure HidePanelFixtureInfo;
 
     function ChannelsLevelAreVisible: boolean;
-
-    procedure SaveProjectOptionsTo(t: TStringList);
-    procedure LoadProjectOptionsFrom(t: TStringList);
 
     property Zoom: single read FZoom write SetZoom;
 
@@ -589,7 +587,7 @@ begin
   prop.Add('ShowRGBSymbol', FShowRGBSymbol);
   prop.Add('ShowAdress', FShowDMXAdress);
   prop.Add('ShowFixtureInfo', FShowFixtureInfo);
-  prop.Add('SplitterTop', Splitter1.Top);
+  prop.Add('SplitterTop', FSplitter1Top);
   t.Add(OPTION_PROJECTOR_VIEW_HEADER);
   t.Add(prop.PackedProperty);
 end;
@@ -624,6 +622,7 @@ begin
 
   prop.IntegerValueOf('SplitterTop', k, Round(Height*0.6));
   Splitter1.Top := k;
+  FSplitter1Top := k;
 end;
 
 procedure TFrameViewProjector.RegisterCmd(const aCmd: TSingleCmd;
@@ -1339,6 +1338,7 @@ end;
 
 procedure TFrameViewProjector.Splitter1Moved(Sender: TObject);
 begin
+  FSplitter1Top := Splitter1.Top;
   Project.Options.Save;
 end;
 
@@ -1972,6 +1972,15 @@ begin
        BAddDMX.Enabled := FALSE;
       end;
   end;
+end;
+
+procedure TFrameViewProjector.ReloadWidgetStateFromClassVar;
+begin
+  FToogleSpeedButtonManager.SetState(BShowLevels, FShowLevel);
+  FToogleSpeedButtonManager.SetState(BShowRGBSymbol, FShowRGBSymbol);
+  FToogleSpeedButtonManager.SetState(BShowDMXAdress, FShowDMXAdress);
+  FToogleSpeedButtonManager.SetState(BShowInfo, FShowFixtureInfo);
+  Splitter1.Top := FSplitter1Top;
 end;
 
 end.

@@ -42,6 +42,7 @@ begin
   FrameViewProjector1.HideToolsWindows;
 
   UniverseManager.StopThread;
+  FormMain.FrameViewProjector1.ReloadWidgetStateFromClassVar;
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;
   UniverseManager.StartThread;
 end;
