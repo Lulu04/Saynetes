@@ -1,6 +1,5 @@
 @echo off
 
-
 set "EXENAME=Saynetes.exe"
 set "BINARYFOLDER=C:\Pascal\Saynetes\Binary\"
 set "BINARYFILE=%BINARYFOLDER%%EXENAME%"
@@ -16,6 +15,12 @@ rem delete dbg file
 if exist "C:\Pascal\Saynetes\Binary\Saynetes.dbg" (
   del /q "C:\Pascal\Saynetes\Binary\Saynetes.dbg"
 )
+
+rem delete linux exe file
+if exist "C:\Pascal\Saynetes\Binary\Saynetes" (
+  del /q "C:\Pascal\Saynetes\Binary\Saynetes"
+)
+
 
 rem compile lazarus project
 echo Compiling %EXENAME% for x86_64
@@ -36,19 +41,19 @@ rem "C:\Program Files (x86)\Inno Setup 6\iscc.exe" /Qp "C:\Pascal\Saynetes\Relea
 echo.
 
 echo constructing zip portable version
-rem copy the demo folder into Binary folder
-xcopy %DEMO_FOLDER% "%BINARYFOLDER%Demo" /s /e /i /q
+rem copy Binary folder to a temp Saynetes folder
+xcopy %BINARYFOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes" /s /e /i /q
+rem copy the demo folder into this Saynetes folder
+xcopy %DEMO_FOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes\Demo" /s /e /i /q
+rem delete unecessary folder
+rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes\i386-linux"
+rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes\i386-win32"
+rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes\x86_64-linux"
 
 rem compress
-pushd ..\..
-rename Binary Saynetes
-tar.exe -a -c -f C:\Pascal\Saynetes\release_tools\Saynetes_win64.zip Saynetes
-rename Saynetes Binary
-popd
+tar.exe -a -c -f "..\Saynetes_win64.zip" Saynetes
 
-rem delete demo sub-folder from binary folder
-rmdir /s /q "%BINARYFOLDER%Demo"
+rem delete temporary Saynetes folder
+rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes"
 
-
-exit /b
-pause
+echo done

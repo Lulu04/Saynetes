@@ -19,17 +19,30 @@ function GetAppChannelImagesFolder: string;
 function GetAppIconImagesFolder: string;
 function GetAppDMXEffectImagesFolder: string;
 
+{ For Windows, we have two mode: application can be portable or installable (with InnoSetup)
+  - Portable mode: the Demo folder is located in the executable folder. This is done by the batch script.
 
+
+}
+
+var
+  ApplicationIsPortable: boolean = False;
+
+procedure CheckIfAppIsPortable;
 procedure CheckAppConfigFolder;
+
 // The following (sub)folder are located in:
-//   for Windows platform: ProgramData\Saynètes
-//   for Linux platform: ~/.config
+//   for Windows platform: its depend if application is installed or portable
+//                          - installed: ProgramData\Saynètes
+//                          - portable: into the executable folder
+//   for Linux platform: into the executable folder (application is not installed)
 function GetUserConfigFolder: string;
 function GetPlaylistsFolder: string;
 function GetPresetsFolder: string;
 function GetFileUserAudioPresets: string;
 
 function GetDemoProjectFile: string;
+
 
 implementation
 uses Forms, u_common, project_util, utilitaire_fichier, Graphics;
@@ -87,10 +100,23 @@ begin
   Result := GetAppImagesFolder+'DmxEffects'+DirectorySeparator;
 end;
 
+procedure CheckIfAppIsPortable;
+begin
+  {$if defined(Windows)}
+  // application is in portable mode if the Demo folder is located in the executable folder
+  ApplicationIsPortable := RepertoireExistant(Application.Location + 'Demo');
+  {$elseif defined(Linux)}
+  ApplicationIsPortable := True;
+  {$else}
+  {$error This platform is not supported}
+  {$endif}
+end;
+
 procedure CheckAppConfigFolder;
 var folder, source: string;
 begin
-  FAppConfigFolder := CreateAppFolder(APP_CONFIG_FOLDER);
+  if ApplicationIsPortable then FAppConfigFolder := Application.Location
+    else FAppConfigFolder := CreateAppFolder(APP_CONFIG_FOLDER);
 
   if RepertoireExistant(FAppConfigFolder) then begin
     // check if preset folder exists
@@ -127,7 +153,7 @@ end;
 
 function GetFileUserAudioPresets: string;
 begin
-  Result := ConcatPaths([GetPresetsFolder, 'AudioEffect'+PRESET_FILE_EXTENSION]);
+  Result := GetPresetsFolder+'AudioEffect'+PRESET_FILE_EXTENSION;
 end;
 
 function GetDemoProjectFile: string;
