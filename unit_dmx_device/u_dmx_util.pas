@@ -89,7 +89,7 @@ uses LazFileUtils, u_helper, u_apputils, u_logfile,
 
 function PathRelativeToDMXLibrary(const aFullFileName: string): string;
 begin
-  Result:=ExtractRelativePath(GetAppDMXLibraryFolder, aFullFileName);
+  Result:=ExtractRelativePath(GetDMXLibraryFolder, aFullFileName);
 end;
 
 function AdjustDirectorySeparator(const aPath: string): string;
