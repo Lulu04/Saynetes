@@ -52,8 +52,8 @@ begin
 
   Log := TLog.Create(GetUserConfigFolder + 'saynetes.log');
   Log.DeleteLogFile;
-  if ApplicationIsPortable then Log.Info('Saynètes run in portable mode')
-    else Log.Info('Saynètes is installed on this computer');
+  if ApplicationIsPortable then Log.Info('Saynètes '+APP_VERSION+' run in portable mode')
+    else Log.Info('Saynètes '+APP_VERSION+' is installed on this computer');
   Log.Info('Starting application', 0, True);
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;

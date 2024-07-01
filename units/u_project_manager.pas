@@ -252,9 +252,8 @@ begin
      // Checks header
      badFile := t.IndexOf(APPNAME_HEADER) = -1;
      badFile := badFile or (t.IndexOf(APP_NAME) = -1);
-     badFile := badFile or (t.IndexOf(APPVERSION_HEADER) = -1);
-     k := t.IndexOf(APP_VERSION);
-     badFile := badFile or (k = -1);
+     k := t.indexOf(APPVERSION_HEADER);
+     badFile := badFile or (k = -1) or (k = t.Count-1);
      if badFile then
      begin
        Showmess(SFileIsNotAProject+' '+lineending+aFilename, SOk, mtError);
@@ -262,8 +261,9 @@ begin
      end
      else
      begin
+       inc(k);
        fileVersion := t.Strings[k];
-       Log.Info('project''s file version: '+fileVersion, 1);
+       Log.Info('project made with Saynètes version: '+fileVersion, 1);
 
        projectfolder := ExtractFileName(aFilename);
        projectfolder := ChangeFileExt(projectfolder, '');
