@@ -410,7 +410,7 @@ begin
   Self := NIL;
   t := TStringList.Create;
   try
-    t.LoadFromFile(GetAppDMXLibraryFolder + MANUFACTURER_LIST);
+    t.LoadFromFile(GetDMXLibraryFolder + MANUFACTURER_LIST);
     SetLength(Self, t.Count);
     j := 0;
     for i:=0 to t.Count-1 do begin
@@ -455,7 +455,7 @@ begin
   for i:=0 to High(Self) do
     t.Add('Folder|'+Self[i].Folder+'|Name|'+Self[i].Name+'|Web|'+Self[i].WebSite);
   try
-    t.SaveToFile(GetAppDMXLibraryFolder + MANUFACTURER_LIST);
+    t.SaveToFile(GetDMXLibraryFolder + MANUFACTURER_LIST);
   finally
     t.Free;
   end;

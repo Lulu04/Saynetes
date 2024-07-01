@@ -109,7 +109,7 @@ begin
 
  SourcePath := AbsolutePathForNode(TV.Selected);
  if ItsTheRoot( TargetNode ) then
-   TargetPath := GetAppDMXLibraryFolder
+   TargetPath := GetDMXLibraryFolder
  else if ItsAFolder( TargetNode ) then
         TargetPath := AbsolutePathForNode( TargetNode )
       else
@@ -153,7 +153,7 @@ begin
   if UserInputFileName(SNameOfTheNewFolder, SOk, SCancel, fol, mtConfirmation) <> mrOk then
     exit;
 
-  new := ConcatPaths([GetAppDMXLibraryFolder, fol]);
+  new := ConcatPaths([GetDMXLibraryFolder, fol]);
   if TV.Selected <> nil then
   begin
     if ItsAFolder( TV.Selected ) then
@@ -450,7 +450,7 @@ begin
     ImageIndex := 0;
     SelectedIndex := 0;
    end;
- ScanFolder(GetAppDMXLibraryFolder, TV.Items.GetFirstNode);
+ ScanFolder(GetDMXLibraryFolder, TV.Items.GetFirstNode);
  TV.Items.GetFirstNode.Text := SDMXLibrary+' - '+c.ToString+' '+SFixtures;
  TV.EndUpdate;
 end;
@@ -481,7 +481,7 @@ begin
  if aNode = NIL then
    Result := ''
  else begin
-   Result := ConcatPaths([GetAppDMXLibraryFolder, RelativePathForNode( aNode )]);
+   Result := ConcatPaths([GetDMXLibraryFolder, RelativePathForNode( aNode )]);
    if ItsAFolder( aNode ) then
      Result := IncludeTrailingPathDelimiter(Result);
  end;
@@ -578,9 +578,9 @@ begin
     on E: Exception do
     begin
       Log.Error('TFrameViewDMXLibrary.Fill - An exception occurs: '+E.Message);
-      Log.Error('Path: '+GetAppDMXLibraryFolder, 1);
+      Log.Error('Path: '+GetDMXLibraryFolder, 1);
       ShowMess('Error while reading the fixture library'+LineEnding+
-                GetAppDMXLibraryFolder+LineEnding+E.Message, SClose, mtError);
+                GetDMXLibraryFolder+LineEnding+E.Message, SClose, mtError);
     end;
   end;
 end;
