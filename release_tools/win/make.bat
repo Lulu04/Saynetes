@@ -35,8 +35,8 @@ if not exist "C:\Pascal\Saynetes\Binary\Saynetes.exe" (
 echo success
 
 rem invoke InnoSetup
-rem echo constructing installable version with InnoSetup
-rem "C:\Program Files (x86)\Inno Setup 6\iscc.exe" /Qp "C:\Pascal\Saynetes\ReleaseTools\win\ScriptForWin64.iss"
+echo constructing installable version with InnoSetup
+"C:\Program Files (x86)\Inno Setup 6\iscc.exe" /Qp "C:\Pascal\Saynetes\release_tools\win\Win64_InnoScript.iss"
 
 echo.
 
