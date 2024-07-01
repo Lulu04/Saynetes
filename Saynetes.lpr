@@ -43,13 +43,18 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
 
+  // check if the application is portable.
+  // This change the location of the config file, log file, user presets...
+  CheckIfAppIsPortable;
   // check if the folder to save application configuration file, log file, etc...
   // exists. if not, try to create it.
   CheckAppConfigFolder;
 
   Log := TLog.Create(GetUserConfigFolder + 'saynetes.log');
   Log.DeleteLogFile;
-  Log.Info('Saynète: Starting application', 0, True);
+  if ApplicationIsPortable then Log.Info('Saynètes run in portable mode')
+    else Log.Info('Saynètes is installed on this computer');
+  Log.Info('Starting application', 0, True);
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
 
