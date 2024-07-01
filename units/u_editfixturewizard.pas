@@ -633,7 +633,7 @@ end;
 
 function TFormFixtureWizard.GetOutputFilename: string;
 begin
-  Result := ConcatPaths([GetAppDMXLibraryFolder,
+  Result := ConcatPaths([GetDMXLibraryFolder,
                     FManufacturers[CBManufacturers.ItemIndex].Folder,
                     ChangeFileExt(FormatFixtureNameToFilename(Edit7.Text), DMX_LIBRARY_FILE_EXTENSION)]);
 end;

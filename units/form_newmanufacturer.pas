@@ -97,7 +97,7 @@ begin
 
   // create the new folder
   try
-    if not CreerRepertoire(GetAppDMXLibraryFolder+FFolderName) then begin
+    if not CreerRepertoire(GetDMXLibraryFolder+FFolderName) then begin
       ShowMess(SUnableToCreateManufacturerFolder, SOk, mtError);
       exit;
     end;

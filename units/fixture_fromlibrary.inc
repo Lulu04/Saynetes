@@ -514,7 +514,7 @@ end;
 
 function TFixtureLibraryLocation.AbsolutPath: string;
 begin
-  Result := ConcatPaths([GetAppDMXLibraryFolder, RelativePathInLibrary]);
+  Result := ConcatPaths([GetDMXLibraryFolder, RelativePathInLibrary]);
 end;
 
 function TFixtureLibraryLocation.HaveFixtureOk: boolean;
@@ -617,7 +617,7 @@ var f, virtualName: string;
     subChannels: TStringArray;
     i, k, m, n: integer;
 begin
-  f := ConcatPaths([GetAppDMXLibraryFolder + aLibraryLocation.RelativePathInLibrary]);
+  f := ConcatPaths([GetDMXLibraryFolder + aLibraryLocation.RelativePathInLibrary]);
   f := aLibraryLocation.AbsolutPath;
   Result := LoadFromFile(f);
   if not Result then exit;

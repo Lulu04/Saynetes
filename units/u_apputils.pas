@@ -9,7 +9,6 @@ uses
 
 // The following (sub)folders are located in the application binary folder
 function GetAppDataFolder: string;
-function GetAppDMXLibraryFolder: string;
 function GetAppImagesFolder: string;
 function GetAppFactoryPresetsFolder: string;
 function GetAppStageImagesFolder: string;
@@ -37,6 +36,7 @@ procedure CheckAppConfigFolder;
 //                          - portable: into the executable folder
 //   for Linux platform: into the executable folder (application is not installed)
 function GetUserConfigFolder: string;
+function GetDMXLibraryFolder: string;
 function GetPlaylistsFolder: string;
 function GetPresetsFolder: string;
 function GetFileUserAudioPresets: string;
@@ -60,9 +60,14 @@ begin
   Result := GetAppDataFolder+'Images'+DirectorySeparator;
 end;
 
-function GetAppDMXLibraryFolder: string;
+function GetDMXLibraryFolder: string;
+var f: string;
 begin
-  Result := GetAppDataFolder+'DMXLibrary'+DirectorySeparator;
+  f := Application.Location + 'DMXLibrary';
+  if DirectoryExists(f) then Result := f + DirectorySeparator
+    else Result := GetUserConfigFolder + 'DMXLibrary' + DirectorySeparator;
+
+//  Result := GetAppDataFolder+'DMXLibrary'+DirectorySeparator;
 end;
 
 function GetAppFactoryPresetsFolder: string;
