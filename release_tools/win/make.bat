@@ -6,6 +6,12 @@ set "BINARYFILE=%BINARYFOLDER%%EXENAME%"
 set "LAZARUS_PROJECT=C:\Pascal\Saynetes\Saynetes.lpi"
 set "DEMO_FOLDER=C:\Pascal\Saynetes\DEMO\"
 
+rem retrieves the app version
+pushd ..\..
+set /p VERSION=<version.txt
+popd
+
+
 rem delete binary file
 if exist "C:\Pascal\Saynetes\Binary\Saynetes.exe" (
   del /q "C:\Pascal\Saynetes\Binary\Saynetes.exe"
@@ -23,7 +29,7 @@ if exist "C:\Pascal\Saynetes\Binary\Saynetes" (
 
 
 rem compile lazarus project
-echo Compiling %EXENAME% for x86_64
+echo Compiling %EXENAME% version %VERSION% for x86_64
 "C:\lazarus\lazbuild.exe" --build-all --quiet --widgetset=win32 --cpu=x86_64 --build-mode=Win64_Release --no-write-project %LAZARUS_PROJECT% >NUL 2>NUL
 
 rem check if binary was build
@@ -51,7 +57,7 @@ rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes\i386-win32"
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes\x86_64-linux"
 
 rem compress
-tar.exe -a -c -f "..\Saynetes_win64.zip" Saynetes
+tar.exe -a -c -f "..\Saynetes_%VERSION%_Windows64_Portable.zip" Saynetes
 
 rem delete temporary Saynetes folder
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes"
