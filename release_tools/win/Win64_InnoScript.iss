@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Saynètes"
-#define MyAppVersion "3.1.0"
+#define MyAppVersion "0.5.0"
 #define MyAppExeName "Saynetes.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".say"
@@ -22,7 +22,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\Pascal\Saynetes\release_tools
-OutputBaseFilename=Saynètes_Win64_Setup
+OutputBaseFilename=Saynètes_{#MyAppVersion}_Windows64_Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
