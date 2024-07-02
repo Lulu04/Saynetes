@@ -65,6 +65,8 @@ end;
 
 // dmx channel
 
+TFrameTBDmxLevel = class(TCustomFrameTB);
+
 // Value: 0.05 to 2.0
 TFrameTBDmxFlameWait = class(TCustomFrameTB)
 private
@@ -83,7 +85,7 @@ private
 end;
 
 // Value: 0.0 to 1.0
-TFrameTBDmxAudioFollowerBrightness = class(TCustomFrameTB);
+TFrameTBDmxAudioFollowerBrightness = class(TFrameTBDmxLevel);
 
 // Value: 0.1 to 1.0
 TFrameTBDmxAudioFollowerSoften = class(TCustomFrameTB)

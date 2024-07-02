@@ -1,7 +1,7 @@
 object FormDMXChannelsTools: TFormDMXChannelsTools
-  Left = 470
+  Left = 486
   Height = 426
-  Top = 199
+  Top = 224
   Width = 359
   BorderIcons = [biSystemMenu]
   BorderWidth = 2
@@ -63,7 +63,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Height = 393
         Top = 24
         Width = 249
-        PageIndex = 1
+        PageIndex = 0
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabOrder = 0
         object PageSimpleDimmer: TPage
@@ -250,7 +250,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
             Color = 4276545
             Font.Color = 15395562
             Font.Style = [fsBold]
-            Increment = 0.5
+            Increment = 0.1
             MaxValue = 1000
             ParentFont = False
             TabOrder = 1
@@ -366,7 +366,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
             Color = 4276545
             Font.Color = 15395562
             Font.Style = [fsBold]
-            Increment = 0.5
+            Increment = 0.1
             MaxValue = 1000
             ParentFont = False
             TabOrder = 4
@@ -419,6 +419,34 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
             OnClick = BDimmerWavePreviewClick
             ShowHint = True
             ParentShowHint = False
+          end
+          object Label35: TLabel
+            AnchorSideLeft.Control = Label24
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Label24
+            Left = 47
+            Height = 15
+            Top = 16
+            Width = 28
+            BorderSpacing.Left = 10
+            Caption = 'Label'
+            Font.Color = 15395562
+            ParentColor = False
+            ParentFont = False
+          end
+          object Label36: TLabel
+            AnchorSideLeft.Control = Label27
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Label27
+            Left = 47
+            Height = 15
+            Top = 160
+            Width = 28
+            BorderSpacing.Left = 10
+            Caption = 'Label'
+            Font.Color = 15395562
+            ParentColor = False
+            ParentFont = False
           end
         end
       end

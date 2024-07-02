@@ -212,7 +212,7 @@ type
     FrameTBFlameLevels: TFrameTrackBar;
     FrameTBFlameWait: TFrameTBDmxFlameWait;
     FrameTBFlameSoften: TFrameTBDmxFlameSoften;
-    FrameTBDimmer: TFrameTrackBar;
+    FrameTBDimmer: TFrameTBDmxLevel;
     FrameTBDmxFlameRGBWait: TFrameTBDmxFlameRGBWait;
     FrameTBDmxFlameRGBAmplitude: TFrameTBDmxFlameRGBAmplitude;
     FrameTBDmxFlameRGBSoften: TFrameTBDmxFlameRGBSoften;
@@ -343,7 +343,7 @@ begin
   Label7.Caption := SValue;
   LabelCurve1.Caption := SCurve;
   Label8.Caption := SDurationInSecond;
-  FrameTBDimmer := TFrameTrackBar.Create(Self, Panel20);
+  FrameTBDimmer := TFrameTBDmxLevel.Create(Self, Panel20);
   FrameTBDimmer.Init(trHorizontal, False, False, False);
   FrameTBDimmer.OnChange := @TrackBar1Change;
   // dmx flame
@@ -696,7 +696,7 @@ procedure TFormEditSingleAction.TrackBar1Change(Sender: TObject);
 var v: single;
 begin
   // dimmer
-  v := FrameTBDimmer.PercentValue;
+  v := FrameTBDimmer.Value;
   Label7.Caption := SValue+' '+Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
   // flame
   Label14.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
@@ -721,7 +721,7 @@ begin
 
   case FCmd of
    CMD_DMX_DIMMER: begin  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
-     FParams[4] := FormatFloatWithDot('0.00', FrameTBDimmer.PercentValue);
+     FParams[4] := FormatFloatWithDot('0.00', FrameTBDimmer.Value);
      FParams[5] := FormatFloatWithDot('0.00', FSE5.Value);
      FParams[6] := FrameVelocity3.SelectedCurveID.ToString;
    end;
@@ -988,7 +988,7 @@ begin
        AdjustFormHeight(PanelDimmer);
        NB.PageIndex := NB.IndexOf(PageDMXChannel);
        Label2.Caption := SDMXDimmer;
-       FrameTBDimmer.PercentValue := StringToSingle(FParams[4]);
+       FrameTBDimmer.Value := StringToSingle(FParams[4]);
        FSE5.Value := StringToSingle(FParams[5]);
        FrameVelocity3.SelectedCurveID := FParams[6].ToInteger;
        TrackBar1Change(NIL);

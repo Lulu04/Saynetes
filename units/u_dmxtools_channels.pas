@@ -57,6 +57,8 @@ type
     Label32: TLabel;
     Label33: TLabel;
     Label34: TLabel;
+    Label35: TLabel;
+    Label36: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
@@ -134,6 +136,7 @@ type
     procedure StopAll;
     procedure ProcessPageSelectionChange(Sender: TObject);
     procedure ProcessSourceCopySelectionChange(Sender: TObject);
+    procedure ProcessFrameTBWaveLevelChange(Sender: TObject);
     procedure UpdateWidgets;
     procedure GenerateCmdForDimmer;
     procedure GenerateCmdForDimmerWave;
@@ -333,6 +336,11 @@ begin
   end;
 end;
 
+procedure TFormDMXChannelsTools.ProcessFrameTBWaveLevelChange(Sender: TObject);
+begin
+  UpdateWidgets;
+end;
+
 procedure TFormDMXChannelsTools.UpdateWidgets;
 var v: single;
 begin
@@ -348,6 +356,11 @@ begin
   Label15.Caption := FormatFloat('0.0', FrameTBFlameSoften.Value*100)+'%';
   // flash
   FloatSpinEdit3.Enabled := RadioButton4.Checked;
+  // dimmer wave
+  v := FrameTBWaveLevel1.Value;
+  Label35.Caption := Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
+  v := FrameTBWaveLevel2.Value;
+  Label36.Caption := Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
 end;
 
 procedure TFormDMXChannelsTools.GenerateCmdForDimmer;
@@ -818,12 +831,12 @@ begin
   FrameTBWaveLevel1 := TFrameTBDmxLevel.Create(Self, Panel13);
   FrameTBWaveLevel1.Init(trHorizontal, False, False, False);
   FrameTBWaveLevel1.PercentValue := 0.0;
-  //FrameTBWaveLevel1.OnChange :=;
+  FrameTBWaveLevel1.OnChange := @ProcessFrameTBWaveLevelChange;
 
   FrameTBWaveLevel2 := TFrameTBDmxLevel.Create(Self, Panel15);
   FrameTBWaveLevel2.Init(trHorizontal, False, False, False);
   FrameTBWaveLevel2.PercentValue := 1.0;
-  //FrameTBWaveLevel2.OnChange :=;
+  FrameTBWaveLevel2.OnChange := @ProcessFrameTBWaveLevelChange;
   FrameVelocity2 := TFrame_Velocity.Create(Self);
   FrameVelocity2.Name := 'FrameVelocity2';
   FrameVelocity2.Parent := Panel12;

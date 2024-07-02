@@ -59,7 +59,7 @@ type
     procedure SetPercentValue(AValue: single);
     procedure SetPercentMin(AValue: single);
   public
-    constructor Create(TheOwner: TComponent; aParent: TWinControl);
+    constructor Create(TheOwner: TComponent; aParent: TWinControl); overload;
     destructor Destroy; override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
@@ -68,6 +68,8 @@ type
 
     // sets the cursor colors used for each new instance created
     class procedure SetGlobalCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
+    // Sets the color for this instance only
+    procedure SetInstanceCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
 
     // The percentage value when the interval mode is not activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentMax
@@ -526,6 +528,14 @@ begin
   FGlobalCursorFillColor := aFillColor;
   FGlobalCursorOutlineColor := aOutlineColor;
   inc(FInstanceCount);
+end;
+
+procedure TFrameTrackBar.SetInstanceCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
+begin
+  FCursorFillColor := aFillColor;
+  FCursorOutlineColor := aOutlineColor;
+  UpdateCursorsImage;
+  PB.Invalidate;
 end;
 
 end.
