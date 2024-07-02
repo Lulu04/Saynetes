@@ -76,7 +76,7 @@ type
   public
     FrameViewChannelsList1: TFrameViewChannelsList;
     Frame_Velocity1: TFrame_Velocity;
-    FrameTBMinMax: TFRameTrackBar;
+    FrameTBMinMax: TFrameTrackBar;
     procedure UpdateWidgets;
   public
 //    FTargetViewProjector: TFrameViewProjector;
@@ -461,7 +461,7 @@ begin
   FrameViewChannelsList1.Align := alClient;
   FrameViewChannelsList1.MultiSelect := TRUE;
 
-  FrameTBMinMax := TFRameTrackBar.Create(Self, Panel5);
+  FrameTBMinMax := TFrameTrackBar.Create(Self, Panel5);
   FrameTBMinMax.Init(trHorizontal, False, True, True);
   FrameTBMinMax.PercentMin := 0.25;
   FrameTBMinMax.PercentMax := 0.75;
