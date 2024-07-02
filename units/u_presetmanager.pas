@@ -21,9 +21,9 @@ type
     MIManager: TMenuItem;
     MIAdd: TMenuItem;
     PopupMenu1: TPopupMenu;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
+    BUpdate: TSpeedButton;
+    BDelete: TSpeedButton;
+    BRename: TSpeedButton;
     UpDown1: TUpDown;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -32,9 +32,9 @@ type
     procedure LBSelectionChange(Sender: TObject; {%H-}User: boolean);
     procedure MIAddClick(Sender: TObject);
     procedure MIManagerClick(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
-    procedure SpeedButton2Click(Sender: TObject);
-    procedure SpeedButton3Click(Sender: TObject);
+    procedure BUpdateClick(Sender: TObject);
+    procedure BDeleteClick(Sender: TObject);
+    procedure BRenameClick(Sender: TObject);
     procedure UpDown1Click(Sender: TObject; Button: TUDBtnType);
   private
     FList: TStringList;
@@ -59,7 +59,7 @@ type
 
 implementation
 
-uses u_userdialogs, u_common, u_resource_string, LCLType, LCLHelper;
+uses u_userdialogs, u_common, u_resource_string, u_logfile, LCLType, LCLHelper;
 
 {$R *.lfm}
 
@@ -72,9 +72,15 @@ var m: TMenuItem;
 begin
   m := Sender as TMenuItem;
   i := PopupMenu1.items.IndexOf(m);
-  A := FList.Strings[i-3].Split([PRESET_SEPARATOR]);
-  Delete(A, 0, 1); // delete the name of the preset
-  FPresetToWidget(A);
+  try
+    A := FList.Strings[i-3].Split([PRESET_SEPARATOR]);
+    Delete(A, 0, 1); // delete the name of the preset
+    FPresetToWidget(A);
+  except
+    On E :Exception do begin
+      log.Error('Preset "'+m.Caption+'" from "'+ExtractFilename(FFilename)+'" raise exception "'+E.Message+'"');
+    end;
+  end;
 end;
 
 procedure TPresetManager.Clear;
@@ -97,10 +103,10 @@ end;
 
 procedure TPresetManager.UpdateWidgets;
 begin
-  SpeedButton1.Enabled := LB.ItemIndex > -1;
-  SpeedButton2.Enabled := SpeedButton1.Enabled;
-  SpeedButton3.Enabled := SpeedButton1.Enabled;
-  UpDown1.Enabled := SpeedButton1.Enabled;
+  BUpdate.Enabled := LB.ItemIndex > -1;
+  BDelete.Enabled := BUpdate.Enabled;
+  BRename.Enabled := BUpdate.Enabled;
+  UpDown1.Enabled := BUpdate.Enabled;
 end;
 
 procedure TPresetManager.MIManagerClick(Sender: TObject);
@@ -108,7 +114,7 @@ begin
   ShowModal;
 end;
 
-procedure TPresetManager.SpeedButton1Click(Sender: TObject);
+procedure TPresetManager.BUpdateClick(Sender: TObject);
 var i: integer;
   A: TStringArray;
 begin
@@ -121,7 +127,7 @@ begin
   end;
 end;
 
-procedure TPresetManager.SpeedButton2Click(Sender: TObject);
+procedure TPresetManager.BDeleteClick(Sender: TObject);
 var i: integer;
 begin
   i := LB.ItemIndex;
@@ -134,7 +140,7 @@ begin
   end;
 end;
 
-procedure TPresetManager.SpeedButton3Click(Sender: TObject);
+procedure TPresetManager.BRenameClick(Sender: TObject);
 var i: Integer;
   n: string;
   men: TMenuItem;
@@ -184,7 +190,7 @@ begin
   if UserInputNoSpecialChar('Name for the new preset:', SOk, SCancel, n, mtCustom, FALSE) <> mrOk then exit;
   FList.Add(n + PRESET_SEPARATOR + FWidgetToPreset());
   LB.Items.Add(n);
-  men:=TMenuItem.Create(Self);
+  men := TMenuItem.Create(Self);
   men.Caption := n;
   men.OnClick := @ProcessPresetClic;
   PopupMenu1.Items.Add(men);
@@ -270,9 +276,8 @@ end;
 
 procedure TPresetManager.UpdateStringAfterLanguageChange;
 begin
-  SpeedButton1.Caption := SUpdate;
-  SpeedButton2.Caption := SDelete;
-  SpeedButton3.Caption := SRename;
+  BUpdate.Caption := SUpdate;
+  BRename.Caption := SRename;
   MIAdd.Caption := SAdd;
 end;
 
