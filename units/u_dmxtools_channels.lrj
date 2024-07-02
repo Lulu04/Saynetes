@@ -13,6 +13,8 @@
 {"hash":204863609,"name":"tformdmxchannelstools.label32.caption","sourcebytes":[115,86,101,108,111,99,105,116,121],"value":"sVelocity"},
 {"hash":494003,"name":"tformdmxchannelstools.label33.caption","sourcebytes":[115,83,101,99],"value":"sSec"},
 {"hash":210295278,"name":"tformdmxchannelstools.label34.caption","sourcebytes":[115,68,117,114,97,116,105,111,110],"value":"sDuration"},
+{"hash":5404860,"name":"tformdmxchannelstools.label35.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5404860,"name":"tformdmxchannelstools.label36.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":144721749,"name":"tformdmxchannelstools.bdimmersimple.caption","sourcebytes":[115,83,105,109,112,108,101],"value":"sSimple"},
 {"hash":7919813,"name":"tformdmxchannelstools.bdimmerwave.caption","sourcebytes":[115,87,97,118,101],"value":"sWave"},
 {"hash":6300597,"name":"tformdmxchannelstools.label3.caption","sourcebytes":[115,87,97,105,116,32,116,105,109,101],"value":"sWait time"},
