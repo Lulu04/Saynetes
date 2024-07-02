@@ -229,6 +229,7 @@ type
     destructor Destroy; override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
+    procedure ForceRepaint;
     procedure RedrawAll;
     procedure RedrawVisibleFixtures;
     procedure RedrawVisibleCursors;
@@ -1765,6 +1766,11 @@ begin
 //do nothing here
 end;
 
+procedure TFrameViewDMXCursors.ForceRepaint;
+begin
+  PB.Repaint;
+end;
+
 procedure TFrameViewDMXCursors.RedrawAll;
 begin
   if not FInvalidateAlreadySent then
@@ -1785,7 +1791,8 @@ begin
       FView[i].DrawDynamicPartOn(FImage.Canvas, True);
    end;
   end;
-  RedrawAll;
+  PB.Repaint;
+  //RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.RedrawVisibleCursors;
@@ -1794,7 +1801,8 @@ begin
   if (Length(FView) > 0) and (FViewFirstIndex <> -1) then
    for i:=FViewFirstIndex to FViewLastIndex do
      FView[i].DrawDynamicPartOn(FImage.Canvas, True);
-  RedrawAll;
+  PB.Repaint;
+  //RedrawAll;
 end;
 
 procedure TFrameViewDMXCursors.Clear;

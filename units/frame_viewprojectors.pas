@@ -216,6 +216,7 @@ type
 
     procedure EraseBackground({%H-}DC: HDC); override;
     procedure Redraw;
+    procedure ForceRepaint;
 
     procedure ForceReconstructOpenGLObjects;
     procedure FreeOpenGLTextures;
@@ -399,6 +400,11 @@ begin
     BGLVirtualScreen1.Invalidate;
     FInvalidateAlreadySent := TRUE;
   end;
+end;
+
+procedure TFrameViewProjector.ForceRepaint;
+begin
+  BGLVirtualScreen1.Repaint;
 end;
 
 procedure TFrameViewProjector.ForceReconstructOpenGLObjects;

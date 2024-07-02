@@ -1,10 +1,9 @@
 {"version":1,"strings":[
-{"hash":188364723,"name":"tpresetmanager.speedbutton1.hint","sourcebytes":[85,112,100,97,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116,32,119,105,116,104,32,116,104,101,32,99,117,114,114,101,110,116,32,115,101,116,116,105,110,103,115],"value":"Update the selected preset with the current settings"},
-{"hash":147237077,"name":"tpresetmanager.speedbutton1.caption","sourcebytes":[115,85,112,100,97,116,101],"value":"sUpdate"},
-{"hash":50968788,"name":"tpresetmanager.speedbutton2.hint","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116],"value":"Delete the selected preset"},
-{"hash":128724181,"name":"tpresetmanager.speedbutton2.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
-{"hash":57485812,"name":"tpresetmanager.speedbutton3.hint","sourcebytes":[82,101,110,97,109,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116],"value":"Rename the selected preset"},
-{"hash":143411269,"name":"tpresetmanager.speedbutton3.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
+{"hash":188364723,"name":"tpresetmanager.bupdate.hint","sourcebytes":[85,112,100,97,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116,32,119,105,116,104,32,116,104,101,32,99,117,114,114,101,110,116,32,115,101,116,116,105,110,103,115],"value":"Update the selected preset with the current settings"},
+{"hash":147237077,"name":"tpresetmanager.bupdate.caption","sourcebytes":[115,85,112,100,97,116,101],"value":"sUpdate"},
+{"hash":50968788,"name":"tpresetmanager.bdelete.hint","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116],"value":"Delete the selected preset"},
+{"hash":57485812,"name":"tpresetmanager.brename.hint","sourcebytes":[82,101,110,97,109,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,112,114,101,115,101,116],"value":"Rename the selected preset"},
+{"hash":143411269,"name":"tpresetmanager.brename.caption","sourcebytes":[115,82,101,110,97,109,101],"value":"sRename"},
 {"hash":489380,"name":"tpresetmanager.miadd.caption","sourcebytes":[115,65,100,100],"value":"sAdd"},
 {"hash":200216030,"name":"tpresetmanager.mimanager.caption","sourcebytes":[80,114,101,115,101,116,32,109,97,110,97,103,101,114,46,46,46],"value":"Preset manager..."}
 ]}
