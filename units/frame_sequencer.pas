@@ -51,6 +51,7 @@ type
     procedure DeserializeA( const A: TStepDataArray; var k: integer );
     //  ';' is the separator between a command and another
     //  ' ' is the separator between command parameters
+    // setting this property checks if there are errors and initialize if user can change the step duration
     property CmdList: TCmdList read FCmdList write SetCmdList;
   public
     // check the cmd list and
@@ -216,6 +217,9 @@ begin
   // check if cmd is single with Audio-Play
   if FCmdList.IsAudioPlay(audioID) then FAudioCurve := SoundManager.GetAudioCurve(audioID)
     else FAudioCurve := NIL;
+
+  // check error and initialize if user can change duration
+  CheckCmdError;
 end;
 
 procedure TSequenceStep.DrawErrorSymbol(aParentFrame: TFrameBGLSequencer);
