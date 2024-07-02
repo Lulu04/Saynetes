@@ -26,6 +26,8 @@ type
     FloatSpinEdit3: TFloatSpinEdit;
     FloatSpinEdit4: TFloatSpinEdit;
     FloatSpinEdit5: TFloatSpinEdit;
+    FloatSpinEdit6: TFloatSpinEdit;
+    FloatSpinEdit7: TFloatSpinEdit;
     FSE1: TFloatSpinEdit;
     FSE2: TFloatSpinEdit;
     FSE3: TFloatSpinEdit;
@@ -38,6 +40,7 @@ type
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
+    Label13: TLabel;
     Label14: TLabel;
     Label16: TLabel;
     Label17: TLabel;
@@ -73,10 +76,15 @@ type
     Label44: TLabel;
     Label45: TLabel;
     Label46: TLabel;
+    Label47: TLabel;
+    Label48: TLabel;
+    Label49: TLabel;
     Label5: TLabel;
+    Label50: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
+    Label9: TLabel;
     LabelCurve: TLabel;
     LabelCurve1: TLabel;
     LabelCurve2: TLabel;
@@ -129,6 +137,9 @@ type
     Panel28: TPanel;
     Panel29: TPanel;
     Panel3: TPanel;
+    PanelWaveRGB: TPanel;
+    Panel31: TPanel;
+    Panel32: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
@@ -162,6 +173,8 @@ type
     RadioButton7: TRadioButton;
     RadioButton8: TRadioButton;
     Shape1: TShape;
+    Shape3: TShape;
+    Shape4: TShape;
     SpeedButton5: TSpeedButton;
     procedure BOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -169,6 +182,8 @@ type
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure FSE8Change(Sender: TObject);
+    procedure Shape3MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
     procedure TB1Change(Sender: TObject);
     procedure TBVolCapChange(Sender: TObject);
     procedure TBVolChange(Sender: TObject);
@@ -181,7 +196,8 @@ type
     procedure SetCmd(AValue: TSingleCmd);
     procedure AdjustFormHeight(aBottomPanel: TPanel);
   private
-    FrameVelocity1, FrameVelocity2, FrameVelocity3, FrameVelocity4, FrameVelocity5: TFrame_Velocity;
+    FrameVelocity1, FrameVelocity2, FrameVelocity3, FrameVelocity4, FrameVelocity5,
+    FrameVelocity6, FrameVelocity7: TFrame_Velocity;
     FrameTBSequenceStretchSpeed: TFrameTBSequenceStretchSpeed;
     FrameTBVol: TFrameTBAudioVolume;
     FrameTBPan: TFrameTBAudioPan;
@@ -426,6 +442,29 @@ begin
   Label43.Caption := SRandomDurationBetween;
   Label44.Caption := SSeconds_;
 
+  // dmx wave rgb
+  FrameVelocity6 := TFrame_Velocity.Create(Self);
+  FrameVelocity6.Name := 'FrameVelocity6';
+  FrameVelocity6.Parent := Panel31;
+  FrameVelocity6.Align := alClient;
+  FrameVelocity6.UpdateList;
+  FrameVelocity6.OnChange := @FSE8Change;
+  FrameVelocity7 := TFrame_Velocity.Create(Self);
+  FrameVelocity7.Name := 'FrameVelocity7';
+  FrameVelocity7.Parent := Panel32;
+  FrameVelocity7.Align := alClient;
+  FrameVelocity7.UpdateList;
+  FrameVelocity7.OnChange := @FSE8Change;
+  Label13.Caption := SColor + ' 1';
+  Label48.Caption := SColor + ' 2';
+  Label9.Caption := SDuration + ' 1';
+  Label50.Caption := SDuration + ' 2';
+  Label47.Caption := SVelocity + ' 1';
+  Label49.Caption := SVelocity + ' 2';
+  Shape3.Hint := SClickToCaptureCurrentColor;
+  Shape4.Hint := SClickToCaptureCurrentColor;
+
+
   CheckedLabelManager := TCheckedLabelManager.Create;
   CheckedLabelManager.CaptureLabelClick(Label45);
   CheckedLabelManager.CaptureLabelClick(Label46);
@@ -527,7 +566,23 @@ begin
       if RadioButton5.Checked then FParams[7] := FParams[6]
         else FParams[7] := FormatFloatWithDot('0.00', FloatSpinEdit5.Value);
     end;
+    TITLECMD_DMX_WAVERGB: begin // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+      FParams[1] := integer(Shape3.Brush.Color).ToString;
+      FParams[2] := FormatFloatWithDot('0.00', FloatSpinEdit6.Value);
+      FParams[3] := FrameVelocity6.SelectedCurveID.ToString;
+      FParams[4] := integer(Shape4.Brush.Color).ToString;
+      FParams[5] := FormatFloatWithDot('0.00', FloatSpinEdit7.Value);
+      FParams[6] := FrameVelocity7.SelectedCurveID.ToString;
+    end;
   end;//case
+end;
+
+procedure TFormEditSingleAction.Shape3MouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+  if Sender = Shape3 then Shape3.Brush.Color := FrameColorPalette1.SelectedColor;
+  if Sender = Shape4 then Shape4.Brush.Color := FrameColorPalette1.SelectedColor;
+  FSE8Change(NIL);
 end;
 
 procedure TFormEditSingleAction.TB1Change(Sender: TObject);
@@ -1159,6 +1214,23 @@ begin
        FloatSpinEdit5.Value := StringToSingle(FParams[7]);
        FSE8Change(NIL);
      end;
+
+     TITLECMD_DMX_WAVERGB: begin   // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+       PanelPalette.Visible := True;
+       PanelWaveRGB.Visible := True;
+       PanelWaveRGB.Left := (ClientWidth - PanelWaveRGB.Width) div 2;
+       PanelWaveRGB.Top := PanelPalette.Top + PanelPalette.Height + ScaleDesignToForm(8);
+       AdjustFormHeight(PanelWaveRGB);
+       NB.PageIndex := NB.IndexOf(PageDMXRGB);
+       Label2.Caption := SDMXWaveRGB;
+       FrameColorPalette1.SelectedColor := TColor(FParams[1].ToInteger);
+       Shape3.Brush.Color := TColor(FParams[1].ToInteger);
+       Shape4.Brush.Color := TColor(FParams[4].ToInteger);
+       FloatSpinEdit6.Value := StringToSingle(FParams[2]);
+       FloatSpinEdit7.Value := StringToSingle(FParams[5]);
+       FrameVelocity6.SelectedCurveID := FParams[3].ToInteger;
+       FrameVelocity7.SelectedCurveID := FParams[6].ToInteger;
+     end
 
      else begin
        NB.PageIndex := NB.IndexOf(PageNotEditable);

@@ -396,9 +396,14 @@ resourcestring
   SDMXChaserRGB='DMX - CHASER RGB';
   SDMXCopyRGB='DMX - COPY RGB';
   SDMXFlashRGB='DMX - FLASH RGB';
+  SDMXWaveRGB='DMX - WAVE RGB';
   SCrackling='Crackling';
   SDimmerRGB='Dimmer RGB';
   SRGBColorFrom='RGB color from';
+  SSimple='Simple';
+  SWave='Wave';
+  SThen='then';
+  SClickToCaptureCurrentColor='Click to capture the current color';
   SFollow='Follow';
   SGain='Gain';
   SBrightnessMax='Brightness max';

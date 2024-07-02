@@ -218,10 +218,20 @@ const
    TITLECMD_DMX_FLASHRGB = 1213; // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
    CMD_DMX_FLASHRGB      =  213; // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
 
-   CMD_INTERNALDMXWAVE   =  214; //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
-                                 //                Percent1 Duration1 CurveID1
-                                 //                KeepTime
-                                 //                Percent2 Duration2 CurveID2
+   CMD_INTERNALDMXWAVE   =  214; // INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
+                                 //                 Percent1 Duration1 CurveID1
+                                 //                 KeepTime
+                                 //                 Percent2 Duration2 CurveID2
+
+   TITLECMD_DMX_WAVERGB  =1215; // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1
+                                //                      Color2 Duration2 CurveID2
+   CMD_DMX_WAVERGB  = 215; // CMD_DMX_WAVERGB IDuniverse IDFixture
+                           //                 Color1 Duration1 CurveID1
+                           //                 Color2 Duration2 CurveID2
+
+   TITLECMD_DMX_WAVE = 1216; // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+   CMD_DMX_WAVE = 216; // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex
+                       //              Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
 
    // Image on external screen
 

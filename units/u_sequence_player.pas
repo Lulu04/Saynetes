@@ -226,6 +226,13 @@ begin
          chan.StartDimmer(StringToSingle(A[4]), StringToSingle(A[5]), A[6].ToInteger);
      end;
 
+     CMD_DMX_WAVE: begin  // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex
+                          //              Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+       if UniverseManager.RetrieveChannel(A[1].ToInteger, A[2].ToInteger, A[3].ToInteger, uni, fix, chan) then
+         chan.StartInternalWave(StringToSingle(A[4]), StringToSingle(A[5]), A[6].ToInteger, 0.0,
+                                StringToSingle(A[7]), StringToSingle(A[8]), A[9].ToInteger);
+     end;
+
      CMD_DMX_FLAME: begin  // DMXFLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
        if UniverseManager.RetrieveChannel(A[1].ToInteger, A[2].ToInteger,
                                           A[3].ToInteger, uni, fix, chan) then
@@ -302,6 +309,12 @@ begin
                                           uni, fix) then
          fix.StartFlashRGB(TColor(A[3].ToInteger), StringToSingle(A[4]), StringToSingle(A[5]),
                             StringToSingle(A[6]), StringToSingle(A[7]));
+     end;
+
+     CMD_DMX_WAVERGB: begin  // CMD_DMX_WAVERGB IDuniverse IDFixture Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+       if UniverseManager.RetrieveFixture(A[1].ToInteger, A[2].ToInteger, uni, fix) then
+         fix.StartWaveRGB(TColor(A[3].ToInteger), StringToSingle(A[4]), A[5].ToInteger,
+                          TColor(A[6].ToInteger), StringToSingle(A[7]), A[8].ToInteger);
      end;
 
     end;//case
