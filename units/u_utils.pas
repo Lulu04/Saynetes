@@ -106,6 +106,17 @@ function CmdDMXFlashRGB(aIDUni, aIDFix: cardinal; aColor: TColor; apcMin, apcMax
 function CmdTitleDMXCopyRGB(aIDSourceUni, aIDSourceFix: cardinal): TSingleCmd;
 function CmdDMXCopyRGB(aIDSourceUni, aIDSourceFix, aIDTargetUni, aIDTargetFix: cardinal): TSingleCmd;
 
+function CmdTitleDMXWaveRGB(aColor1: TColor; aDuration1: single; aCurveID1: word;
+                            aColor2: TColor; aDuration2: single; aCurveID2: word): TSingleCmd;
+function CmdDMXWaveRGB(aIDUni, aIDFix: cardinal;
+                       aColor1: TColor; aDuration1: single; aCurveID1: word;
+                       aColor2: TColor; aDuration2: single; aCurveID2: word): TSingleCmd;
+
+function CmdTitleDMXWave(aLevel1, aDuration1: single; aCurveID1: word;
+                         aLevel2, aDuration2: single; aCurveID2: word): TSingleCmd;
+function CmdDMXWave(aIDUni, aIDFix: cardinal; aChanIndex: integer;
+                    aLevel1, aDuration1: single; aCurveID1: word;
+                    aLevel2, aDuration2: single; aCurveID2: word): TSingleCmd;
 
 // Return the color:  c + c*percent   with percent]-1..1[
 function PercentColor( c: Tcolor; percent: single ): Tcolor;
@@ -963,6 +974,61 @@ begin
          aIDSourceFix.ToString+PARAM_SEPARATOR+
          aIDTargetUni.ToString+PARAM_SEPARATOR+
          aIDTargetFix.ToString;
+end;
+
+function CmdTitleDMXWaveRGB(aColor1: TColor; aDuration1: single;
+  aCurveID1: word; aColor2: TColor; aDuration2: single; aCurveID2: word): TSingleCmd;
+begin
+  Result := TITLECMD_DMX_WAVERGB.ToString+PARAM_SEPARATOR+
+            IntToStr(aColor1)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration1)+PARAM_SEPARATOR+
+            aCurveID1.ToString+PARAM_SEPARATOR+
+            IntToStr(aColor2)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration2)+PARAM_SEPARATOR+
+            aCurveID2.ToString;
+end;
+
+function CmdDMXWaveRGB(aIDUni, aIDFix: cardinal; aColor1: TColor;
+  aDuration1: single; aCurveID1: word; aColor2: TColor; aDuration2: single;
+  aCurveID2: word): TSingleCmd;
+begin
+  Result := CMD_DMX_WAVERGB.ToString+PARAM_SEPARATOR+
+            aIDUni.ToString+PARAM_SEPARATOR+
+            aIDFix.ToString+PARAM_SEPARATOR+
+            IntToStr(aColor1)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration1)+PARAM_SEPARATOR+
+            aCurveID1.ToString+PARAM_SEPARATOR+
+            IntToStr(aColor2)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration2)+PARAM_SEPARATOR+
+            aCurveID2.ToString;
+end;
+
+function CmdTitleDMXWave(aLevel1, aDuration1: single; aCurveID1: word; aLevel2,
+  aDuration2: single; aCurveID2: word): TSingleCmd;
+begin
+  Result := TITLECMD_DMX_WAVE.ToString+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aLevel1)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration1)+PARAM_SEPARATOR+
+            aCurveID1.ToString+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aLevel2)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration2)+PARAM_SEPARATOR+
+            aCurveID2.ToString;
+end;
+
+function CmdDMXWave(aIDUni, aIDFix: cardinal; aChanIndex: integer; aLevel1,
+  aDuration1: single; aCurveID1: word; aLevel2, aDuration2: single;
+  aCurveID2: word): TSingleCmd;
+begin
+  Result := CMD_DMX_WAVE.ToString+PARAM_SEPARATOR+
+            aIDUni.ToString+PARAM_SEPARATOR+
+            aIDFix.ToString+PARAM_SEPARATOR+
+            aChanIndex.ToString+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aLevel1)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration1)+PARAM_SEPARATOR+
+            aCurveID1.ToString+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aLevel2)+PARAM_SEPARATOR+
+            FormatFloatWithDot('0.000', aDuration2)+PARAM_SEPARATOR+
+            aCurveID2.ToString;
 end;
 
 function PercentColor(c: Tcolor; percent: single): Tcolor;

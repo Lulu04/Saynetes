@@ -269,31 +269,37 @@ aColor:=RGBToColor(220,220,220);
        cb := Brush.Color;
        cp := Pen.Color;
        Brush.Color := c;
-       Pen.Color := PercentColorRelative(c, 0.5);  //clGray;
+       Pen.Color := clWhite;
+       Pen.Style := psDot;
        Brush.Style := bsSolid;
        Rectangle(ax, arect.Top+1, ax+ScaleDesignToForm(20), arect.Bottom-1);
        Pen.Color := cp;
        Brush.Color := cb;
+       Pen.Style := psSolid;
        Result := ax+ScaleDesignToForm(30);
      end else begin
        Result := RenderCmdText(Format('(%d,%d,%d) ', [Red(c), Green(c), Blue(c)]), ax, RGBToColor(192,182,172));
     end;
    end;
 
-   procedure RenderCurve(ax, ay: integer; strIDCourbure: string);
+   function RenderCurve(ax, ay: integer; strIDCourbure: string): integer;
    var id: word;
     ima: TBGRABitmap;
+    s: string;
    begin
     id := strtoint(strIDCourbure);
     if VelocityCurveList.ValidCurveID(id) then
     begin
       ima := VelocityCurveList.GetCurveByID(id).GetBGRABitmapImage(LB.Font.Height*2, LB.Font.Height, True);
       ima.Draw(LB.Canvas, ax, ay, True);
+      Result := ax + ima.Width;
     end
     else
     begin
       LB.Canvas.Font.Color := clWhite;
-      LB.Canvas.TextOut(ax, ay, ' ??'+SCurve+'?? ');
+      s := ' ??'+SCurve+'?? ';
+      LB.Canvas.TextOut(ax, ay, s);
+      Result := ax + LB.Canvas.TextWidth(s);
     end;
    end;
 
@@ -497,16 +503,33 @@ begin
 
     TITLECMD_DMX_DIMMER: begin  // TITLECMD_DMX_DIMMER  duration IDcurve
         RenderBackground;
-        txt:=SIn+' '+DurationValue(A[1])+'  ';
-        x:=RenderTitle(SDMXDimmer, txt, coul_action_dmx);
+        txt := SIn+' '+DurationValue(A[1])+'  ';
+        x := RenderTitle(SDMXDimmer, txt, coul_action_dmx);
         RenderCurve(x, arect.Top, A[2]);
     end;
 
     CMD_DMX_DIMMER: begin  // CMD_DMX_DIMMER IDuniverse IDFixture dmxadress percent duration IDcurve
-        RenderBackground;
-        Font.Height:=Font.Height-1;
-        txt:=FormatDmxTrack(A[1], A[2], A[3])+' '+STo+' '+DMXPercent(A[4]);
-        x:=RenderCmdText(txt, x, coul_action_dmx);
+      RenderBackground;
+      Font.Height := Font.Height-1;
+      txt := FormatDmxTrack(A[1], A[2], A[3])+' '+STo+' '+DMXPercent(A[4]);
+      x := RenderCmdText(txt, x, coul_action_dmx);
+    end;
+
+    TITLECMD_DMX_WAVE: begin // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+      RenderBackground;
+      txt := DMXPercent(A[1])+' '+SIn+' '+DurationValue(A[2])+' ';
+      x := RenderTitle(SDMXWave, txt, coul_action_dmx);
+      x := RenderCurve(x, arect.Top, A[3]);
+      txt := ' '+SThen+' '+DMXPercent(A[4])+' '+SIn+' '+DurationValue(A[5])+' ';
+      x := RenderCmdText(txt, x, coul_action_dmx);
+      x := RenderCurve(x, arect.Top, A[6]);
+    end;
+
+    CMD_DMX_WAVE: begin // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+      RenderBackground;
+      Font.Height := Font.Height-1;
+      txt := FormatDmxTrack(A[1], A[2], A[3]);
+      x := RenderCmdText(txt, x, coul_action_dmx);
     end;
 
     CMD_INTERNALDMXWAVE: begin// CMD_INTERNALDMXWAVE IDuniverse IDFixture dmxadress percent1 duration1 IDcurve1 percent2 duration2 IDcurve2
@@ -656,9 +679,27 @@ begin
        else txt := SFixedIntensity+' '+DMXPercent(A[2]);
      if A[4] <> A[5] then txt := txt+SRandomDuration+' '+DurationValue(A[4])+' - '+DurationValue(A[5])
        else txt := txt+SIn+' '+DurationValue(A[4]);
-     x:=RenderCmdText(txt, x, coul_action_dmx);
+     x := RenderCmdText(txt, x, coul_action_dmx);
     end;
     CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
+      RenderBackground;
+      Font.Height := Font.Height-1;
+      RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);
+    end;
+
+    TITLECMD_DMX_WAVERGB: begin // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+      RenderBackground;
+      x := RenderTitle(SDMXWaveRGB+' ', '', coul_action_dmx);
+      x := RenderColor(x, A[1]);
+      x := RenderCmdText(SIn+' '+DurationValue(A[2]), x, coul_action_dmx);
+      x := RenderCurve(x, arect.Top+1, A[3]);
+      x := RenderCmdText(' '+SThen+' ', x, coul_action_dmx);
+      x := RenderColor(x, A[4]);
+      x := RenderCmdText(SIn+' '+DurationValue(A[5]), x, coul_action_dmx);
+      x := RenderCurve(x, arect.Top+1, A[6]);
+    end;
+
+    CMD_DMX_WAVERGB: begin // CMD_DMX_WAVERGB IDuniverse IDFixture Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
       RenderBackground;
       Font.Height := Font.Height-1;
       RenderCmdText(FormatFixtureName(A[1], A[2]), x, coul_action_dmx);

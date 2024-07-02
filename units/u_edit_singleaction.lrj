@@ -62,6 +62,12 @@
 {"hash":5404860,"name":"tformeditsingleaction.label44.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":68457449,"name":"tformeditsingleaction.label45.caption","sourcebytes":[115,70,105,120,101,100,32,105,110,116,101,110,115,105,116,121],"value":"sFixed intensity"},
 {"hash":172192126,"name":"tformeditsingleaction.label46.caption","sourcebytes":[115,82,97,110,100,111,109,32,105,110,116,101,110,115,105,116,121,32,98,101,116,119,101,101,110],"value":"sRandom intensity between"},
+{"hash":210295278,"name":"tformeditsingleaction.label9.caption","sourcebytes":[115,68,117,114,97,116,105,111,110],"value":"sDuration"},
+{"hash":125461346,"name":"tformeditsingleaction.label13.caption","sourcebytes":[115,67,111,108,111,114],"value":"sColor"},
+{"hash":204863609,"name":"tformeditsingleaction.label47.caption","sourcebytes":[115,86,101,108,111,99,105,116,121],"value":"sVelocity"},
+{"hash":125461346,"name":"tformeditsingleaction.label48.caption","sourcebytes":[115,67,111,108,111,114],"value":"sColor"},
+{"hash":204863609,"name":"tformeditsingleaction.label49.caption","sourcebytes":[115,86,101,108,111,99,105,116,121],"value":"sVelocity"},
+{"hash":210295278,"name":"tformeditsingleaction.label50.caption","sourcebytes":[115,68,117,114,97,116,105,111,110],"value":"sDuration"},
 {"hash":103882814,"name":"tformeditsingleaction.label1.caption","sourcebytes":[69,100,105,116,32,97,99,116,105,111,110],"value":"Edit action"},
 {"hash":5404860,"name":"tformeditsingleaction.label2.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
 ]}

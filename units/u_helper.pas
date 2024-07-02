@@ -1350,6 +1350,54 @@ begin
       haveDuration := True;
     end;
 
+    TITLECMD_DMX_WAVERGB: begin // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+      if ErrorOnParamCount(7, SDMXWaveRGB) then exit(True);
+      if ErrorOnColor(Self[1], SDMXWaveRGB) then exit(True);
+      if ErrorOnDuration(Self[2], SDMXWaveRGB) then exit(True);
+      if ErrorOnCurve(Self[3], SDMXWaveRGB) then exit(True);
+      if ErrorOnColor(Self[4], SDMXWaveRGB) then exit(True);
+      if ErrorOnDuration(Self[5], SDMXWaveRGB) then exit(True);
+      if ErrorOnCurve(Self[6], SDMXWaveRGB) then exit(True);
+      haveDuration := True;
+    end;
+
+    CMD_DMX_WAVERGB: begin // CMD_DMX_WAVERGB IDuniverse IDFixture
+                            //                Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+      if ErrorOnParamCount(9, SDMXWaveRGB) then exit(True);
+      if ErrorOnDmxAdress(Self[1], Self[2], SDMXWaveRGB) then exit(True);
+      if ErrorOnColor(Self[3], SDMXWaveRGB) then exit(True);
+      if ErrorOnDuration(Self[4], SDMXWaveRGB) then exit(True);
+      if ErrorOnCurve(Self[5], SDMXWaveRGB) then exit(True);
+      if ErrorOnColor(Self[6], SDMXWaveRGB) then exit(True);
+      if ErrorOnDuration(Self[7], SDMXWaveRGB) then exit(True);
+      if ErrorOnCurve(Self[8], SDMXWaveRGB) then exit(True);
+      haveDuration := True;
+    end;
+
+    TITLECMD_DMX_WAVE: begin // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+      if ErrorOnParamCount(7, SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[1], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[2], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[3], SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[4], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[5], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[6], SDMXWave) then exit(True);
+      haveDuration := True;
+    end;
+
+    CMD_DMX_WAVE: begin // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex
+                        //              Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+      if ErrorOnParamCount(10, SDMXWave) then exit(True);
+      if ErrorOnDmxAdress(Self[1], Self[2], Self[3], SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[4], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[5], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[6], SDMXWave) then exit(True);
+      if ErrorOnSingleRange(Self[7], 0.0, 1.0, SDMXWave, SBadPercentValue) then exit(True);
+      if ErrorOnDuration(Self[8], SDMXWave) then exit(True);
+      if ErrorOnCurve(Self[9], SDMXWave) then exit(True);
+      haveDuration := True;
+    end;
+
     CMD_INTERNALDMXWAVE: begin //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
                                //                Percent1 Duration1 CurveID1
                                //                KeepTime
@@ -1560,6 +1608,27 @@ begin
         A[6] := B[4];
         A[7] := B[5];
       end;
+
+      TITLECMD_DMX_WAVERGB: begin // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+                                  // CMD_DMX_WAVERGB IDuniverse IDFixture Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+        A[3] := B[1];
+        A[4] := B[2];
+        A[5] := B[3];
+        A[6] := B[4];
+        A[7] := B[5];
+        A[8] := B[6];
+      end;
+
+      TITLECMD_DMX_WAVE: begin // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+                               // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+        A[4] := B[1];
+        A[5] := B[2];
+        A[6] := B[3];
+        A[7] := B[4];
+        A[8] := B[5];
+        A[9] := B[6];
+      end;
+
     end;
   Self := A.PackToCmd;
 end;

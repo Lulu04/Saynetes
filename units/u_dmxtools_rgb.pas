@@ -22,22 +22,31 @@ type
     BAdd4: TSpeedButton;
     BAdd5: TSpeedButton;
     BAdd6: TSpeedButton;
+    BAdd7: TSpeedButton;
     CB: TComboBox;
     ComboBox1: TComboBox;
     FloatSpinEdit1: TFloatSpinEdit;
     FloatSpinEdit2: TFloatSpinEdit;
     FloatSpinEdit3: TFloatSpinEdit;
+    FloatSpinEdit4: TFloatSpinEdit;
+    FloatSpinEdit5: TFloatSpinEdit;
     Label1: TLabel;
     Label10: TLabel;
+    Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
     Label18: TLabel;
     Label19: TLabel;
     Label2: TLabel;
     Label20: TLabel;
+    Label21: TLabel;
     Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
     Label28: TLabel;
     Label29: TLabel;
     Label3: TLabel;
@@ -48,7 +57,11 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
+    Label9: TLabel;
     Notebook1: TNotebook;
+    Notebook2: TNotebook;
+    PageWaveDimmer: TPage;
+    PageSimpleDimmer: TPage;
     PageFlash: TPage;
     PageChaser: TPage;
     PageAudioFollower: TPage;
@@ -59,6 +72,8 @@ type
     Panel1: TPanel;
     Panel10: TPanel;
     Panel11: TPanel;
+    Panel12: TPanel;
+    Panel13: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -73,8 +88,13 @@ type
     RadioButton4: TRadioButton;
     Shape1: TShape;
     Shape2: TShape;
+    Shape3: TShape;
+    Shape4: TShape;
     SpeedButton1: TSpeedButton;
+    SpeedButton10: TSpeedButton;
     SpeedButton11: TSpeedButton;
+    SpeedButton12: TSpeedButton;
+    SpeedButton13: TSpeedButton;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
@@ -90,12 +110,15 @@ type
     procedure FormShow(Sender: TObject);
     procedure ProcessColorChangeEvent(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
+    procedure Shape3MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure SpeedButton13Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
   private
     FFirstShown: boolean;
-    Frame_Velocity1: TFrame_Velocity;
+    Frame_Velocity1, Frame_Velocity2, Frame_Velocity3: TFrame_Velocity;
     FrameViewFixturesList1: TFrameViewFixturesList;
-    FNoteBookManager: TNoteBookManager;
+    FNoteBookManager, FNoteBookManager2: TNoteBookManager;
     FCheckedLabelManager: TCheckedLabelManager;
     FTargetFixtures: ArrayOfDmxFixtures;
     procedure GetTargetFixtures;
@@ -105,6 +128,7 @@ type
     procedure ProcessCopySelectionChange(Sender: TObject);
     procedure UpdateWidgets;
     procedure GenerateCmdForDimmerRGB;
+    procedure GenerateCmdForDimmerWaveRGB;
     procedure GenerateCmdForFlameRGB;
     procedure GenerateCmdForAudioFollowerRGB;
     procedure GenerateCmdForCopyRGB;
@@ -158,8 +182,19 @@ begin
   Frame_ColorPalette1.OnChange := @ProcessColorChangeEvent;
 
   Frame_Velocity1 := TFrame_Velocity.Create(Self);
+  Frame_Velocity1.Name := 'Frame_Velocity1';
   Frame_Velocity1.Parent := Panel2;
   Frame_Velocity1.Align := alClient;
+
+  Frame_Velocity2 := TFrame_Velocity.Create(Self);
+  Frame_Velocity2.Name := 'Frame_Velocity2';
+  Frame_Velocity2.Parent := Panel12;
+  Frame_Velocity2.Align := alClient;
+
+  Frame_Velocity3 := TFrame_Velocity.Create(Self);
+  Frame_Velocity3.Name := 'Frame_Velocity3';
+  Frame_Velocity3.Parent := Panel13;
+  Frame_Velocity3.Align := alClient;
 
   FrameFXRGBChaser1 := TFrameFXRGBChaser.Create(Self);
   FrameFXRGBChaser1.Parent := Panel3;
@@ -189,6 +224,16 @@ begin
     LinkButtonToPage(SpeedButton8, PageChaser);
     OnSelectionChange := @ProcessPageSelectionChange;
   end;
+
+  FNoteBookManager2 := TNoteBookManager.Create(Notebook2);
+  with FNoteBookManager2 do
+  begin
+    SetActivatedColors($0003C4FC, clBlack);
+    SetDeactivatedColors($00484848, $00EAEAEA);
+    LinkButtonToPage(SpeedButton10, PageSimpleDimmer);
+    LinkButtonToPage(SpeedButton12, PageWaveDimmer);
+  end;
+
 
   FFrameTrackBar1 := TFrameTrackBar.Create(Self, Panel5);
   FFrameTrackBar1.Init(trHorizontal, False, True, True);
@@ -236,7 +281,8 @@ begin
   if length(FTargetFixtures) = 0 then exit;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageDimmer) then
-    GenerateCmdForDimmerRGB;
+    if Notebook2.PageIndex = Notebook2.IndexOf(pageSimpleDimmer) then GenerateCmdForDimmerRGB
+      else GenerateCmdForDimmerWaveRGB;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageFlame) then
     GenerateCmdForFlameRGB;
@@ -283,6 +329,7 @@ end;
 procedure TFormDMXRGBTools.FormDestroy(Sender: TObject);
 begin
   FNoteBookManager.Free;
+  FNoteBookManager2.Free;
   FFrameTrackBar1.Free;
   FreeAndNil(FCheckedLabelManager);
 end;
@@ -300,6 +347,7 @@ begin
   begin
     FFirstShown := False;
     FNoteBookManager.ActivePage(PageDimmer);
+    FNoteBookManager2.ActivePage(PageSimpleDimmer);
   end;
 
   SpeedButton1.Caption := SDimmer;
@@ -314,6 +362,8 @@ begin
 
   Frame_ColorPalette1.UpdateStringAfterLanguageChange;
   Frame_Velocity1.UpdateList;
+  Frame_Velocity2.UpdateList;
+  Frame_Velocity3.UpdateList;
 
   FrameFXRGBChaser1.Fill;
 
@@ -336,6 +386,22 @@ procedure TFormDMXRGBTools.RadioButton1Change(Sender: TObject);
 begin
 
   UpdateWidgets;
+end;
+
+procedure TFormDMXRGBTools.Shape3MouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+  if Sender = Shape3 then Shape3.Brush.Color := Frame_ColorPalette1.SelectedColor;
+  if Sender = Shape4 then Shape4.Brush.Color := Frame_ColorPalette1.SelectedColor;
+end;
+
+procedure TFormDMXRGBTools.SpeedButton13Click(Sender: TObject);
+var i: integer;
+begin
+  GetTargetFixtures;
+  for i:=0 to High(FTargetFixtures) do
+    FTargetFixtures[i].StartWaveRGB(Shape3.Brush.Color, FloatSpinEdit4.Value, Frame_Velocity2.SelectedCurveID,
+                                    Shape4.Brush.Color, FloatSpinEdit5.Value, Frame_Velocity3.SelectedCurveID);
 end;
 
 procedure TFormDMXRGBTools.SpeedButton7Click(Sender: TObject);
@@ -446,6 +512,31 @@ begin
   else if fix.Description <> '' then FShortReadable := FShortReadable + fix.Description
          else FShortReadable := FShortReadable + fix.Name;
   FDuration := FloatSpinEdit1.Value;
+end;
+
+procedure TFormDMXRGBTools.GenerateCmdForDimmerWaveRGB;
+var i: integer;
+  fix: TDMXFixture;
+begin
+  FCmd := CmdTitleDMXWaveRGB(Shape3.Brush.Color, FloatSpinEdit4.Value, Frame_Velocity2.SelectedCurveID,
+                             Shape4.Brush.Color, FloatSpinEdit5.Value, Frame_Velocity3.SelectedCurveID);
+  for i:=0 to High(FTargetFixtures) do
+  begin
+    fix := FTargetFixtures[i];
+    if fix.HasRGBChannel then
+      FCmd.ConcatCmd(CmdDMXWaveRGB(fix.Universe.ID,
+                                   fix.ID,
+                                   Shape3.Brush.Color, FloatSpinEdit4.Value, Frame_Velocity2.SelectedCurveID,
+                                   Shape4.Brush.Color, FloatSpinEdit5.Value, Frame_Velocity3.SelectedCurveID));
+  end;
+
+  FShortReadable := SDMXWaveRGB+' '+SOn_+' ';
+  if Length(FTargetFixtures) > 1 then
+    FShortReadable := FShortReadable + SMultiple
+  else if fix.Description <> '' then FShortReadable := FShortReadable + fix.Description
+         else FShortReadable := FShortReadable + fix.Name;
+
+  FDuration := FloatSpinEdit4.Value + FloatSpinEdit5.Value;
 end;
 
 procedure TFormDMXRGBTools.GenerateCmdForFlameRGB;
@@ -608,6 +699,7 @@ begin
         BAdd4.Caption := SCreateSequence;
         BAdd5.Caption := SCreateSequence;
         BAdd6.Caption := SCreateSequence;
+        BAdd7.Caption := SCreateSequence;
         FTargetViewProjector := FormMain.FrameViewProjector1;
         FrameViewFixturesList1.FTargetViewProjector := FTargetViewProjector;
       end;
@@ -620,12 +712,14 @@ begin
         BAdd4.Caption := SAdd;
         BAdd5.Caption := SAdd;
         BAdd6.Caption := SAdd;
+        BAdd7.Caption := SAdd;
         FTargetViewProjector := FormAddDMXAction.FrameViewProjector1;
         FrameViewFixturesList1.FTargetViewProjector := FTargetViewProjector;
       end;
   end;
 
-  Label1.Caption := SDurationInSecond;
+  Label1.Caption := SDuration;
+  Label17.Caption := SVelocity;
   Label3.Caption := SWaitTime;
   Label4.Caption := SAmplitude;
   Label14.Caption := SSoften;
@@ -636,6 +730,18 @@ begin
   Label22.Caption := SFixedDuration;
   Label30.Caption := SRandomDurationBetween;
   Label31.Caption := SSeconds_;
+  SpeedButton11.Hint := SPreview;
+  SpeedButton10.Caption := SSimple;
+  SpeedButton12.Caption := SWave;
+  Label11.Caption := SColor+' 1';
+  Label9.Caption := SDuration;
+  Label16.Caption := SVelocity;
+  Label21.Caption := SColor+' 2';
+  Label24.Caption := SDuration;
+  Label23.Caption := SVelocity;
+  SpeedButton13.Hint := SPreview;
+  Shape3.Hint := SClickToCaptureCurrentColor;
+  Shape4.Hint := SClickToCaptureCurrentColor;
 end;
 
 procedure TFormDMXRGBTools.UpdateEditMode;
@@ -683,17 +789,16 @@ begin
   GetTargetFixtures;
   if length(FTargetFixtures) = 0 then exit;
 
-  if Notebook1.PageIndex=Notebook1.IndexOf(PageDimmer) then
+  if Notebook1.PageIndex = Notebook1.IndexOf(PageDimmer) then
   begin
-    for i:=0 to High(FTargetFixtures) do
-    begin
+    for i:=0 to High(FTargetFixtures) do begin
       FTargetFixtures[i].RGBColor := Frame_ColorPalette1.SelectedColor;
 
       if FTargetFixtures[i].IsVisibleOnViewCursor then
         FTargetViewProjector.FrameViewDMXCursors1.RedrawRGBChannelsOnFixture(FTargetFixtures[i]);
     end;
-    if FTargetViewProjector.FShowLevel then
-      FTargetViewProjector.Redraw;
+    FTargetViewProjector.FrameViewDMXCursors1.ForceRepaint;
+    if FTargetViewProjector.FShowLevel then FTargetViewProjector.ForceRepaint; //.Redraw;
   end;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageFlame) then

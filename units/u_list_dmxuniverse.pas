@@ -194,9 +194,9 @@ type
     procedure StartAudioFollower(aIDAudio: TSoundID; aGain, aMaxPercent, aSoftenTime: single);
     procedure StartFlash(aLevelMin, aLevelMax, aDurationMin, aDurationMax: single);
     procedure StartCopy(aSourceChannel: TDMXChannel);
-    procedure StartInternalWave( aPercent1, aDuration1: single; aCurveID1: word;
-                                 aKeepTime: single;
-                                 aPercent2, aDuration2: single; aCurveID2: word);
+    procedure StartInternalWave(aPercent1, aDuration1: single; aCurveID1: word;
+                                aKeepTime: single;
+                                aPercent2, aDuration2: single; aCurveID2: word);
     procedure StopEffect;
 
     property Index: integer read GetIndex; // channel's index in the fixture
@@ -291,6 +291,7 @@ type
      procedure Update(const aElapsedTime: single);
 
      procedure StartDimmerRGB(aColor: TColor; aDuration: single; aCurveID: word);
+     procedure StartWaveRGB(aColor1: TColor; aDuration1: single; aCurveID1: word; aColor2: TColor; aDuration2: single; aCurveID2: word);
      procedure StartFlameRGB(aColor: TColor; aSpeed, aAmplitude, aSoften: single);
      procedure StartAudioFollowerRGB( aIDAudio: TSoundID; aColor: TColor; aGain, aSoftenTime: single);
      procedure StartCopyRGB(aSourceFixture: TDMXFixture);
@@ -653,7 +654,7 @@ end;
 
 procedure TDMXChannel.StartDimmer(aPercent, aDuration: single; aCurveID: word);
 begin
-  if (aPercent=PercentValue) or (HandledByUser) then
+  if (aPercent = PercentValue) or (HandledByUser) then
     exit;
 
   CreateDimmer;
@@ -666,6 +667,7 @@ begin
     FDimmer.Value := aPercent;
     Universe.NeedToBeRedraw := TRUE;
     FNeedToRepaintWholeChannel := True;
+    CurrentEffect := deNOEFFECT;
   end
   else
   begin
@@ -677,8 +679,7 @@ end;
 
 procedure TDMXChannel.StartFlame(aLevelMin, aLevelMax, aSpeed, aSoften: single);
 begin
-  if HandledByUser then
-    exit;
+  if HandledByUser then exit;
 
   CreateDimmer;
   FWaveActivated := FALSE;
@@ -749,10 +750,22 @@ procedure TDMXChannel.StartInternalWave(aPercent1, aDuration1: single;
   aCurveID1: word; aKeepTime: single; aPercent2, aDuration2: single;
   aCurveID2: word);
 begin
-  CreateDimmer;
+  if HandledByUser then exit;
+  if (aDuration1 < 0.01) and (aDuration2 < 0.01) then begin
+    StopEffect;
+    exit;
+  end;
+
+  StartDimmer(aPercent1, aDuration1, aCurveID1);
+  if CurrentEffect = deNOEFFECT then begin
+    StartDimmer(aPercent2, aDuration2, aCurveID2);
+    exit;
+  end;
+
+{  CreateDimmer;
   FDimmer.Value := PercentValue;
   FDimmer.ChangeTo(aPercent1, aDuration1, aCurveID1);
-  CurrentEffect := deDimmer;
+  CurrentEffect := deDimmer; }
 
   FWaveActivated := TRUE;
   FWaveKeepTime := aKeepTime;
@@ -777,6 +790,7 @@ var b: byte;
   pp: PChannelRange;
   i, j, k: integer;
 begin
+  AValue := EnsureRange(AValue, 0.0, 1.0);
   FPercentValue := AValue;
 
   // process switch channel
@@ -1355,6 +1369,19 @@ begin
   FChannels[FRedChannelIndex].StartDimmer(Red(aColor)/255, aDuration, aCurveID);
   FChannels[FGreenChannelIndex].StartDimmer(Green(aColor)/255, aDuration, aCurveID);
   FChannels[FBlueChannelIndex].StartDimmer(Blue(aColor)/255, aDuration, aCurveID);
+end;
+
+procedure TDMXFixture.StartWaveRGB(aColor1: TColor; aDuration1: single;
+  aCurveID1: word; aColor2: TColor; aDuration2: single; aCurveID2: word);
+begin
+  if not HasRGBChannel then exit;
+
+  FChannels[FRedChannelIndex].StartInternalWave(Red(aColor1)/255, aDuration1, aCurveID1, 0,
+                                                Red(aColor2)/255, aDuration2, aCurveID2);
+  FChannels[FGreenChannelIndex].StartInternalWave(Green(aColor1)/255, aDuration1, aCurveID1, 0,
+                                                  Green(aColor2)/255, aDuration2, aCurveID2);
+  FChannels[FBlueChannelIndex].StartInternalWave(Blue(aColor1)/255, aDuration1, aCurveID1, 0,
+                                                 Blue(aColor2)/255, aDuration2, aCurveID2);
 end;
 
 procedure TDMXFixture.StartFlameRGB(aColor: TColor; aSpeed, aAmplitude, aSoften: single);
@@ -2458,8 +2485,8 @@ begin
 
   // query refresh projectors
   if flagredraw and FProjectorViewToRefreshForThreadUniverse.ChannelsLevelAreVisible then begin
-    FProjectorViewToRefreshForThreadUniverse.Redraw;
-    FProjectorViewToRefreshForThreadUniverse.FrameViewDMXCursors1.RedrawAll;
+    FProjectorViewToRefreshForThreadUniverse.ForceRepaint; //.Redraw;
+    FProjectorViewToRefreshForThreadUniverse.FrameViewDMXCursors1.ForceRepaint; //.RedrawAll;
   end;
 
 end;

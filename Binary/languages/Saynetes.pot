@@ -297,11 +297,6 @@ msgctxt "tformdmxrgbtools.speedbutton1.hint"
 msgid "Gradually changes the color on the selected fixtures, over a given time"
 msgstr ""
 
-#: tformdmxrgbtools.speedbutton11.hint
-msgctxt "tformdmxrgbtools.speedbutton11.hint"
-msgid "Preview"
-msgstr ""
-
 #: tformdmxrgbtools.speedbutton2.hint
 msgctxt "tformdmxrgbtools.speedbutton2.hint"
 msgid "Simulates a colored flame effect on the selected fixtures"
@@ -1968,20 +1963,23 @@ msgstr ""
 msgid "Use the velocity curves if you want a movement other than linear."
 msgstr ""
 
-#: tpresetmanager.mimanager.caption
-msgid "Preset manager..."
-msgstr ""
-
-#: tpresetmanager.speedbutton1.hint
-msgid "Update the selected preset with the current settings"
-msgstr ""
-
-#: tpresetmanager.speedbutton2.hint
+#: tpresetmanager.bdelete.hint
+msgctxt "tpresetmanager.bdelete.hint"
 msgid "Delete the selected preset"
 msgstr ""
 
-#: tpresetmanager.speedbutton3.hint
+#: tpresetmanager.brename.hint
+msgctxt "tpresetmanager.brename.hint"
 msgid "Rename the selected preset"
+msgstr ""
+
+#: tpresetmanager.bupdate.hint
+msgctxt "tpresetmanager.bupdate.hint"
+msgid "Update the selected preset with the current settings"
+msgstr ""
+
+#: tpresetmanager.mimanager.caption
+msgid "Preset manager..."
 msgstr ""
 
 #: u_resource_string.saction
@@ -2442,6 +2440,10 @@ msgctxt "u_resource_string.schaser"
 msgid "Chaser"
 msgstr ""
 
+#: u_resource_string.sclicktocapturecurrentcolor
+msgid "Click to capture the current color"
+msgstr ""
+
 #: u_resource_string.sclose
 msgctxt "u_resource_string.sclose"
 msgid "Close"
@@ -2692,6 +2694,10 @@ msgstr ""
 
 #: u_resource_string.sdmxwave
 msgid "DMX - WAVE"
+msgstr ""
+
+#: u_resource_string.sdmxwavergb
+msgid "DMX - WAVE RGB"
 msgstr ""
 
 #: u_resource_string.sduration
@@ -3654,6 +3660,10 @@ msgstr ""
 msgid "SHOW MODE"
 msgstr ""
 
+#: u_resource_string.ssimple
+msgid "Simple"
+msgstr ""
+
 #: u_resource_string.sslower
 msgid "slower"
 msgstr ""
@@ -3755,6 +3765,10 @@ msgstr ""
 
 #: u_resource_string.sthefixturewascreatedsuccessfully
 msgid "The fixture was created successfully !"
+msgstr ""
+
+#: u_resource_string.sthen
+msgid "then"
 msgstr ""
 
 #: u_resource_string.stheswitcherinrange
@@ -3904,6 +3918,10 @@ msgstr ""
 #: u_resource_string.swatt
 msgctxt "u_resource_string.swatt"
 msgid "Watt"
+msgstr ""
+
+#: u_resource_string.swave
+msgid "Wave"
 msgstr ""
 
 #: u_resource_string.sweblinks

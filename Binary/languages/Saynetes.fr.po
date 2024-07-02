@@ -334,11 +334,6 @@ msgctxt "tformdmxrgbtools.speedbutton1.hint"
 msgid "Gradually changes the color on the selected fixtures, over a given time"
 msgstr "Change graduellement la couleur des appareils sélectionnés, sur une durée  définie"
 
-#: tformdmxrgbtools.speedbutton11.hint
-msgctxt "tformdmxrgbtools.speedbutton11.hint"
-msgid "Preview"
-msgstr "Prévisualisation"
-
 #: tformdmxrgbtools.speedbutton2.hint
 msgctxt "tformdmxrgbtools.speedbutton2.hint"
 msgid "Simulates a colored flame effect on the selected fixtures"
@@ -2059,21 +2054,24 @@ msgstr "Cliquez pour saisir une couleur web"
 msgid "Use the velocity curves if you want a movement other than linear."
 msgstr "Utilisez les courbes de vélocité si vous voulez un mouvement autre que linéaire."
 
+#: tpresetmanager.bdelete.hint
+msgctxt "tpresetmanager.bdelete.hint"
+msgid "Delete the selected preset"
+msgstr "Supprimer le prédéfini sélectionné"
+
+#: tpresetmanager.brename.hint
+msgctxt "tpresetmanager.brename.hint"
+msgid "Rename the selected preset"
+msgstr "Renommer le prédéfini sélectionné"
+
+#: tpresetmanager.bupdate.hint
+msgctxt "tpresetmanager.bupdate.hint"
+msgid "Update the selected preset with the current settings"
+msgstr "Mettre à jour le prédéfini avec les réglages actuels"
+
 #: tpresetmanager.mimanager.caption
 msgid "Preset manager..."
 msgstr "Gestionnaire de prédéfini..."
-
-#: tpresetmanager.speedbutton1.hint
-msgid "Update the selected preset with the current settings"
-msgstr "Met à jour ce prédéfini avec les réglages actuels"
-
-#: tpresetmanager.speedbutton2.hint
-msgid "Delete the selected preset"
-msgstr "Supprime la sélection"
-
-#: tpresetmanager.speedbutton3.hint
-msgid "Rename the selected preset"
-msgstr "Modifier le nom du prédéfini sélectionné"
 
 #: u_resource_string.saction
 msgctxt "u_resource_string.saction"
@@ -2537,6 +2535,10 @@ msgctxt "u_resource_string.schaser"
 msgid "Chaser"
 msgstr "Chaser"
 
+#: u_resource_string.sclicktocapturecurrentcolor
+msgid "Click to capture the current color"
+msgstr "Cliquez pour capturer la couleur courante"
+
 #: u_resource_string.sclose
 msgctxt "u_resource_string.sclose"
 msgid "Close"
@@ -2791,6 +2793,10 @@ msgstr "DMX - STOPPE EFFET RVB"
 #: u_resource_string.sdmxwave
 msgid "DMX - WAVE"
 msgstr "DMX - ONDE"
+
+#: u_resource_string.sdmxwavergb
+msgid "DMX - WAVE RGB"
+msgstr "DMX - VAGUE RVB"
 
 #: u_resource_string.sduration
 msgctxt "u_resource_string.sduration"
@@ -3759,6 +3765,10 @@ msgstr "Montrer les effets"
 msgid "SHOW MODE"
 msgstr "MODE SPECTACLE"
 
+#: u_resource_string.ssimple
+msgid "Simple"
+msgstr "Simple"
+
 #: u_resource_string.sslower
 msgid "slower"
 msgstr "plus lent"
@@ -3861,6 +3871,10 @@ msgstr "Le fichier est corrompu..."
 #: u_resource_string.sthefixturewascreatedsuccessfully
 msgid "The fixture was created successfully !"
 msgstr "L'appareil a été créé avec succès !"
+
+#: u_resource_string.sthen
+msgid "then"
+msgstr "puis"
 
 #: u_resource_string.stheswitcherinrange
 msgid "the switcher in range"
@@ -4011,6 +4025,10 @@ msgctxt "u_resource_string.swatt"
 msgid "Watt"
 msgstr "Watt"
 
+#: u_resource_string.swave
+msgid "Wave"
+msgstr "Vague"
+
 #: u_resource_string.sweblinks
 msgid "Web links"
 msgstr "Liens internet"
@@ -4051,3 +4069,4 @@ msgstr "VOUS ALLEZ PERDRE TOUT LE CONTENU DU DOSSIER"
 msgctxt "u_resource_string.szoom"
 msgid "Zoom"
 msgstr "Zoom"
+

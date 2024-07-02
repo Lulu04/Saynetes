@@ -21,30 +21,42 @@ type
     BAdd3: TSpeedButton;
     BAdd4: TSpeedButton;
     BAdd6: TSpeedButton;
+    BAdd7: TSpeedButton;
     ButtonAudioFollowerPreset: TSpeedButton;
     ComboBox1: TComboBox;
     FloatSpinEdit1: TFloatSpinEdit;
     FloatSpinEdit2: TFloatSpinEdit;
     FloatSpinEdit3: TFloatSpinEdit;
+    FloatSpinEdit4: TFloatSpinEdit;
+    FloatSpinEdit5: TFloatSpinEdit;
     Label1: TLabel;
     Label10: TLabel;
+    Label11: TLabel;
     Label12: TLabel;
+    Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
     Label19: TLabel;
+    Label2: TLabel;
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
     Label23: TLabel;
+    Label24: TLabel;
     Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
     Label28: TLabel;
     Label29: TLabel;
     Label3: TLabel;
     Label30: TLabel;
     Label31: TLabel;
+    Label32: TLabel;
+    Label33: TLabel;
+    Label34: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
@@ -52,6 +64,9 @@ type
     Label8: TLabel;
     Label9: TLabel;
     Notebook1: TNotebook;
+    Notebook2: TNotebook;
+    PageWaveDimmer: TPage;
+    PageSimpleDimmer: TPage;
     PageFlash: TPage;
     PageChaser: TPage;
     PageStop: TPage;
@@ -62,6 +77,10 @@ type
     Panel1: TPanel;
     Panel10: TPanel;
     Panel11: TPanel;
+    Panel12: TPanel;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    Panel15: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -79,6 +98,7 @@ type
     SpeedButton1: TSpeedButton;
     SpeedButton10: TSpeedButton;
     BFlashPreview: TSpeedButton;
+    BDimmerWavePreview: TSpeedButton;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
     SpeedButton4: TSpeedButton;
@@ -86,9 +106,12 @@ type
     BAdd5: TSpeedButton;
     BAudioPlay: TSpeedButton;
     BAudioStop: TSpeedButton;
+    BDimmerSimple: TSpeedButton;
+    BDimmerWave: TSpeedButton;
     SpeedButton8: TSpeedButton;
     ButtonFlamePreset: TSpeedButton;
     procedure BAdd1Click(Sender: TObject);
+    procedure BDimmerWavePreviewClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
@@ -103,7 +126,7 @@ type
     FFirstShown: boolean;
     Frame_Velocity1: TFrame_Velocity;
     FrameViewChannelsList1: TFrameViewChannelsList;
-    FNoteBookManager: TNoteBookManager;
+    FNoteBookManager, FNoteBookManager2: TNoteBookManager;
     FCheckedLabelManager: TCheckedLabelManager;
     FTargetChannels: ArrayOfDmxChannels;
     FSourceChannelForCopy: TDMXChannel;
@@ -113,6 +136,7 @@ type
     procedure ProcessSourceCopySelectionChange(Sender: TObject);
     procedure UpdateWidgets;
     procedure GenerateCmdForDimmer;
+    procedure GenerateCmdForDimmerWave;
     procedure GenerateCmdForFlame;
     procedure GenerateCmdForAudioFollower;
     procedure GenerateCmdForFlash;
@@ -137,6 +161,8 @@ type
     FrameTBFollowGain: TFrameTBDmxAudioFollowerGain;
     FrameTBFollowBrightness: TFrameTBDmxAudioFollowerBrightness;
     FrameTBFollowSoften: TFrameTBDmxAudioFollowerSoften;
+    FrameTBWaveLevel1, FrameTBWaveLevel2: TFrameTBDmxLevel;
+    FrameVelocity2, FrameVelocity3: TFrame_Velocity;
   private
     FTargetViewProjector: TFrameViewProjector;
     FGUIMode: TGUIMode;
@@ -331,8 +357,7 @@ begin
   FCmd := CmdTitleDMXDimmer(FloatSpinEdit1.Value, Frame_Velocity1.SelectedCurveID);
 
   GetTargetChannels;
-  for i:=0 to High(FTargetChannels) do
-  begin
+  for i:=0 to High(FTargetChannels) do begin
     chan := FTargetChannels[i];
     FCmd.ConcatCmd(CmdDMXDimmer( chan.Universe.ID,
                                  chan.Fixture.ID,
@@ -352,6 +377,31 @@ begin
   end;
 
   FDuration := FloatSpinEdit1.Value
+end;
+
+procedure TFormDMXChannelsTools.GenerateCmdForDimmerWave;
+var i: integer;
+  chan: TDMXChannel;
+begin
+  FCmd := CmdTitleDMXWave(FrameTBWaveLevel1.Value, FloatSpinEdit4.Value, FrameVelocity2.SelectedCurveID,
+                          FrameTBWaveLevel2.Value, FloatSpinEdit5.Value, FrameVelocity3.SelectedCurveID);
+  GetTargetChannels;
+  for i:=0 to High(FTargetChannels) do begin
+    chan := FTargetChannels[i];
+    FCmd.ConcatCmd(CmdDMXWave(chan.Universe.ID, chan.Fixture.ID, chan.Index,
+                              FrameTBWaveLevel1.Value, FloatSpinEdit4.Value, FrameVelocity2.SelectedCurveID,
+                              FrameTBWaveLevel2.Value, FloatSpinEdit5.Value, FrameVelocity3.SelectedCurveID));
+  end;
+
+  FShortReadable := SDMXWave;
+  if Length(FTargetChannels) > 1 then
+    FShortReadable := FShortReadable + ' '+SMultiple
+  else begin
+    if chan.Fixture.Description <> '' then FShortReadable := FShortReadable + ' '+chan.Fixture.Description;
+    if FTargetChannels[0].Fixture.ChannelsCount > 1 then FShortReadable := FShortReadable + ' '+chan.Name;
+  end;
+
+  FDuration := FloatSpinEdit4.Value + FloatSpinEdit5.Value;
 end;
 
 procedure TFormDMXChannelsTools.GenerateCmdForFlame;
@@ -636,6 +686,7 @@ begin
         BAdd4.Caption := SCreateSequence;
         BAdd5.Caption := SCreateSequence;
         BAdd6.Caption := SCreateSequence;
+        BAdd7.Caption := SCreateSequence;
         FTargetViewProjector := FormMain.FrameViewProjector1;
         FrameViewChannelsList1.FTargetViewProjector := FTargetViewProjector;
       end;
@@ -648,6 +699,7 @@ begin
         BAdd4.Caption := SAdd;
         BAdd5.Caption := SAdd;
         BAdd6.Caption := SAdd;
+        BAdd7.Caption := SAdd;
         FTargetViewProjector := FormAddDMXAction.FrameViewProjector1;
         FrameViewChannelsList1.FTargetViewProjector := FTargetViewProjector;
       end;
@@ -666,7 +718,8 @@ end;
 
 procedure TFormDMXChannelsTools.UpdateStringAfterLanguageChange;
 begin
-  Label1.Caption := SDurationInSecond;
+  Label1.Caption := SDuration;
+  Label2.Caption := SSec;
   Label25.Caption := SVelocity;
   Label4.Caption := SLevels;
   Label3.Caption := SWaitTime;
@@ -679,6 +732,17 @@ begin
   Label29.Caption := SRandomValueBetween;
   Label22.Caption := SFixedDuration;
   Label30.Caption := SRandomDurationBetween;
+  BDimmerSimple.Caption := SSimple;
+  BDimmerWave.Caption := SWave;
+  Label24.Caption := SLevel + ' 1';
+  Label27.Caption := SLevel + ' 2';
+  Label13.Caption := SDuration + ' 1';
+  Label34.Caption := SDuration + ' 2';
+  Label11.Caption := SSec;
+  Label33.Caption := SSec;
+  Label26.Caption := SVelocity + ' 1';
+  Label32.Caption := SVelocity + ' 2';
+  BDimmerWavePreview.Hint := SPreview;
 
   FFlamePresetManager.UpdateStringAfterLanguageChange;
   FAudioFollowerPresetManager.UpdateStringAfterLanguageChange;
@@ -736,11 +800,41 @@ begin
   FNoteBookManager.LinkButtonToPage(SpeedButton10, PageFlash);
   FNoteBookManager.OnSelectionChange := @ProcessPageSelectionChange;
 
+  FNoteBookManager2 := TNoteBookManager.Create(Notebook2);
+  with FNoteBookManager2 do begin
+    SetActivatedColors($0003C4FC, clBlack);
+    SetDeactivatedColors($00484848, $00EAEAEA);
+    LinkButtonToPage(BDimmerSimple, PageSimpleDimmer);
+    LinkButtonToPage(BDimmerWave, PageWaveDimmer);
+    ActivePage(PageSimpleDimmer);
+  end;
+
   FCheckedLabelManager := TCheckedLabelManager.Create;
   FCheckedLabelManager.CaptureLabelClick(Label28);
   FCheckedLabelManager.CaptureLabelClick(Label29);
   FCheckedLabelManager.CaptureLabelClick(Label22);
   FCheckedLabelManager.CaptureLabelClick(Label30);
+
+  FrameTBWaveLevel1 := TFrameTBDmxLevel.Create(Self, Panel13);
+  FrameTBWaveLevel1.Init(trHorizontal, False, False, False);
+  FrameTBWaveLevel1.PercentValue := 0.0;
+  //FrameTBWaveLevel1.OnChange :=;
+
+  FrameTBWaveLevel2 := TFrameTBDmxLevel.Create(Self, Panel15);
+  FrameTBWaveLevel2.Init(trHorizontal, False, False, False);
+  FrameTBWaveLevel2.PercentValue := 1.0;
+  //FrameTBWaveLevel2.OnChange :=;
+  FrameVelocity2 := TFrame_Velocity.Create(Self);
+  FrameVelocity2.Name := 'FrameVelocity2';
+  FrameVelocity2.Parent := Panel12;
+  FrameVelocity2.Align := alClient;
+  FrameVelocity2.UpdateList;
+  FrameVelocity3 := TFrame_Velocity.Create(Self);
+  FrameVelocity3.Name := 'FrameVelocity3';
+  FrameVelocity3.Parent := Panel14;
+  FrameVelocity3.Align := alClient;
+  FrameVelocity3.UpdateList;
+
 
   FrameTrackBar1 := TFrameTrackBar.Create(Self, Panel5);
   FrameTrackBar1.Init(trHorizontal, False, False, True);
@@ -797,7 +891,8 @@ begin
   if length(FTargetChannels) = 0 then exit;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageDimmer) then
-    GenerateCmdForDimmer;
+    if Notebook2.PageIndex = Notebook2.IndexOf(PageSimpleDimmer) then GenerateCmdForDimmer
+      else GenerateCmdForDimmerWave;
 
   if Notebook1.PageIndex = Notebook1.IndexOf(PageFlame) then
     GenerateCmdForFlame;
@@ -841,9 +936,20 @@ begin
   Hide;
 end;
 
+procedure TFormDMXChannelsTools.BDimmerWavePreviewClick(Sender: TObject);
+var i: integer;
+begin
+  GetTargetChannels;
+  for i:=0 to High(FTargetChannels) do
+    FTargetChannels[i].StartInternalWave(FrameTBWaveLevel1.Value, FloatSpinEdit4.Value, FrameVelocity2.SelectedCurveID,
+                                         0.0,
+                                         FrameTBWaveLevel2.Value, FloatSpinEdit5.Value, FrameVelocity3.SelectedCurveID);
+end;
+
 procedure TFormDMXChannelsTools.FormDestroy(Sender: TObject);
 begin
   FNoteBookManager.Free;
+  FNoteBookManager2.free;
   FCheckedLabelManager.Free;
   FFlamePresetManager.Free;
   FAudioFollowerPresetManager.Free;
