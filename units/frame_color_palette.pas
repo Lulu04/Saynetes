@@ -55,6 +55,7 @@ type
 
    procedure InitOnShow;
    procedure UpdateStringAfterLanguageChange;
+   procedure ReloadPresets;
 
    property SelectedColor: TColor read GetSelectedColor write SetSelectedColor;
    // gives the base color and the percentage applyed on by the cursor of color chart
@@ -191,6 +192,11 @@ begin
   Label2.Caption := SGreen;
   Label3.Caption := SBlue;
   FPresetManager.UpdateStringAfterLanguageChange;
+end;
+
+procedure TFrame_ColorPalette.ReloadPresets;
+begin
+  FPresetManager.Load;
 end;
 
 initialization

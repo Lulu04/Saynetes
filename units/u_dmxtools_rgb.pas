@@ -361,6 +361,7 @@ begin
   Label6.Caption := SpeedButton5.Hint;
 
   Frame_ColorPalette1.UpdateStringAfterLanguageChange;
+  Frame_ColorPalette1.ReloadPresets;
   Frame_Velocity1.UpdateList;
   Frame_Velocity2.UpdateList;
   Frame_Velocity3.UpdateList;
