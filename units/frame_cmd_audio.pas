@@ -367,17 +367,17 @@ end;
 
 procedure TFrameCmdAudio.UpdateVolumeLabel;
 begin
-  LabelVolume.Caption := SVolume + ' ' + VolumeToStringPercent(FrameTBVol.Value);
+  LabelVolume.Caption := SVolume + ' ' + FrameTBVol.GetLegend;
 end;
 
 procedure TFrameCmdAudio.UpdatePanLabel;
 begin
-  LabelPan.Caption := SPan + ' ' + PanToStringPercent(FrameTBPan.Value);
+  LabelPan.Caption := SPan + ' ' + FrameTBPan.GetLegend;
 end;
 
 procedure TFrameCmdAudio.UpdatePitchLabel;
 begin
-  LabelPitch.Caption := SPitch + ' ' + PitchToString(FrameTBPitch.Value);
+  LabelPitch.Caption := SPitch + ' ' + FrameTBPitch.GetLegend;
 end;
 
 procedure TFrameCmdAudio.UpdatePanels;

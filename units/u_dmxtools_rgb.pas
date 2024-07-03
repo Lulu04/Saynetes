@@ -468,17 +468,14 @@ begin
 end;
 
 procedure TFormDMXRGBTools.UpdateWidgets;
-var v: single;
 begin
   // audio follower
-  v := FrameTBFollowGain.Value;
-  Label8.Caption := FormatFloat('0.00', v);
-  if v > 0 then Label8.Caption := '+' + Label8.Caption;
-  Label10.Caption := FormatFloat('0.00', FrameTBFollowSoften.Value)+SSec;
+  Label8.Caption := FrameTBFollowGain.GetLegend;
+  Label10.Caption := FrameTBFollowSoften.GetLegend;
   // flame
-  Label12.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
-  Label13.Caption := FormatFloat('0.0', FrameTBFlameAmplitude.Value*100)+'%';
-  Label15.Caption := FormatFloat('0.0', FrameTBFlameSoften.Value*100)+'%';
+  Label12.Caption := FrameTBFlameWait.GetLegend;
+  Label13.Caption := FrameTBFlameAmplitude.GetLegend;
+  Label15.Caption := FrameTBFlameSoften.GetLegend;
   // flash
   FFrameTrackBar1.Enabled := RadioButton2.Checked;
   FloatSpinEdit3.Enabled := RadioButton4.Checked;

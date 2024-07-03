@@ -258,45 +258,39 @@ end;
 
 procedure TFrameMainAudio.TBPanChange(Sender: TObject);
 var snd: TALSSound;
- v: single;
 begin
-  v := FrameTBPan.Value;
-  lbl_pan.Caption := PanToStringPercent(v);
+  lbl_pan.Caption := FrameTBPan.GetLegend;
 
   if Sender = FrameTBPan then
   begin
     snd := SelectedSound;
     if snd <> NIL then
-      snd.Pan.Value := v;
+      snd.Pan.Value := FrameTBPan.Value;
   end;
 end;
 
 procedure TFrameMainAudio.TBPitchChange(Sender: TObject);
 var snd: TALSSound;
- v: single;
 begin
-  v := FrameTBPitch.Value;
-  lbl_freq.Caption := PitchToString(v);
+  lbl_freq.Caption := FrameTBPitch.GetLegend;
 
   if Sender = FrameTBPitch then
   begin
     snd := SelectedSound;
     if snd <> NIL then
-      snd.Pitch.Value := v;
+      snd.Pitch.Value := FrameTBPitch.Value;
   end;
 end;
 
 procedure TFrameMainAudio.TBVolumeChange(Sender: TObject);
 var snd: TALSSound;
- v: single;
 begin
-  v := FrameTBVolume.Value;
-  lbl_volume.Caption := VolumeToStringPercent(v);
+  lbl_volume.Caption := FrameTBVolume.GetLegend;
 
   if Sender = FrameTBVolume then begin
     snd := SelectedSound;
     if snd <> NIL then
-      snd.Volume.Value := v;
+      snd.Volume.Value := FrameTBVolume.Value;
   end;
 end;
 

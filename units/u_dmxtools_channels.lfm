@@ -63,7 +63,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Height = 393
         Top = 24
         Width = 249
-        PageIndex = 0
+        PageIndex = 1
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabOrder = 0
         object PageSimpleDimmer: TPage
