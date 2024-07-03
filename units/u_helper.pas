@@ -779,63 +779,80 @@ var i, index1, index2, index3: integer;
      A[aIndex] := FormatFloatWithDot('0.000', dur * aCoef);
    end;
 begin
-  for i:=0 to Length(Self)-1 do begin
-    index1 := -1;
-    index2 := -1;
-    index3 := -1;
-    A := Self[i].SplitToParamArray;
-    case A[0].ToInteger of
-      CMD_WAIT,  // CMD_WAIT DurationF
-      TITLECMD_DMX_DIMMER:  // TITLECMD_DMX_DIMMER Duration CurveID
-        index1 := 1;
+  try
+    for i:=0 to Length(Self)-1 do begin
+      index1 := -1;
+      index2 := -1;
+      index3 := -1;
+      A := Self[i].SplitToParamArray;
+      case A[0].ToInteger of
+        CMD_WAIT,  // CMD_WAIT DurationF
+        TITLECMD_DMX_DIMMER:  // TITLECMD_DMX_DIMMER Duration CurveID
+          index1 := 1;
 
-      CMD_AUDIO_FADEOUT,  // AUDIOFADEOUT IDaudio duration IDcurve
-      CMD_AUDIO_CAPTURE_SETVOLUME, // CMD_AUDIO_CAPTURE_SETVOLUME volume duration IDcurve
-      CMD_AUDIO_CAPTURE_SETPAN, // CMD_AUDIO_CAPTURE_SETPAN  panning duration IDcurve
-      TITLECMD_DMX_DIMMERRGB:  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
-        index1 := 2;
+        CMD_AUDIO_FADEOUT,  // AUDIOFADEOUT IDaudio duration IDcurve
+        CMD_AUDIO_CAPTURE_SETVOLUME, // CMD_AUDIO_CAPTURE_SETVOLUME volume duration IDcurve
+        CMD_AUDIO_CAPTURE_SETPAN, // CMD_AUDIO_CAPTURE_SETPAN  panning duration IDcurve
+        TITLECMD_DMX_DIMMERRGB:  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
+          index1 := 2;
 
-      CMD_AUDIO_FADEIN,    // AUDIOFADEIN IDaudio volume duration IDcurve
-      CMD_AUDIO_SETVOLUME, // AUDIOFIXEVOLUME IDaudio volume duration IDcurve
-      CMD_AUDIO_SETPAN,  // AUDIOFIXEPAN IDaudio panning duration IDcurve
-      CMD_AUDIO_SETPITCH,  // AUDIOFIXEFREQ IDaudio frequence duration IDcurve
-      CMD_SEQUENCESTRETCHTIME:  // CMD_SEQUENCESTRETCHTIME IDSeq StretchValueF DurationF CurveID
-         index1 := 3;
+        CMD_AUDIO_FADEIN,    // AUDIOFADEIN IDaudio volume duration IDcurve
+        CMD_AUDIO_SETVOLUME, // AUDIOFIXEVOLUME IDaudio volume duration IDcurve
+        CMD_AUDIO_SETPAN,  // AUDIOFIXEPAN IDaudio panning duration IDcurve
+        CMD_AUDIO_SETPITCH,  // AUDIOFIXEFREQ IDaudio frequence duration IDcurve
+        CMD_SEQUENCESTRETCHTIME:  // CMD_SEQUENCESTRETCHTIME IDSeq StretchValueF DurationF CurveID
+           index1 := 3;
 
-      CMD_DMX_DIMMERRGB:  // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
-         index1 := 4;
+        CMD_DMX_DIMMERRGB:  // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
+           index1 := 4;
 
-      CMD_DMX_DIMMER:  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
-         index1 := 5;
+        CMD_DMX_DIMMER:  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
+           index1 := 5;
 
-      TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
-        index1 := 3;
-        index2 := 4;
-      end;
+        TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
+          index1 := 3;
+          index2 := 4;
+        end;
 
-      TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
-        index1 := 4;
-        index2 := 5;
-      end;
-      CMD_DMX_FLASHRGB,
-      CMD_DMX_FLASH: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
-        index1 := 6;
-        index2 := 7;
-      end;
-      CMD_INTERNALDMXWAVE: begin //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
-                                    //                Percent1 Duration1 CurveID1
-                                    //                KeepTime
-                                    //                Percent2 Duration2 CurveID2
-        index1 := 5;
-        index2 := 7;
-        index3 := 9;
-      end;
-    end;//case
+        TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
+          index1 := 4;
+          index2 := 5;
+        end;
+        CMD_DMX_FLASHRGB,
+        CMD_DMX_FLASH: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
+          index1 := 6;
+          index2 := 7;
+        end;
+        TITLECMD_DMX_WAVERGB,     // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
+        TITLECMD_DMX_WAVE: begin  // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+          index1 := 2;
+          index2 := 5;
+        end;
+        CMD_DMX_WAVERGB: begin // CMD_DMX_WAVERGB IDuniverse IDFixture
+          index1 := 4;         //                 Color1 Duration1 CurveID1
+          index2 := 7;         //                 Color2 Duration2 CurveID2
+        end;
+        CMD_DMX_WAVE: begin // CMD_DMX_WAVE IDuniverse IDFixture ChanIndex
+          index1 := 5;      //              Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+          index2 := 8;
+        end;
 
-    ProcessIndex(index1);
-    ProcessIndex(index2);
-    ProcessIndex(index3);
-    Self[i] := A.PackToCmd;
+        CMD_INTERNALDMXWAVE: begin //INTERNALDMXWAVE IDuniverse IDFixture ChanIndex
+                                      //                Percent1 Duration1 CurveID1
+                                      //                KeepTime
+                                      //                Percent2 Duration2 CurveID2
+          index1 := 5;
+          index2 := 7;
+          index3 := 9;
+        end;
+      end;//case
+
+      ProcessIndex(index1);
+      ProcessIndex(index2);
+      ProcessIndex(index3);
+      Self[i] := A.PackToCmd;
+    end;
+  except
   end;
 end;
 
