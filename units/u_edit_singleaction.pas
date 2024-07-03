@@ -28,6 +28,8 @@ type
     FloatSpinEdit5: TFloatSpinEdit;
     FloatSpinEdit6: TFloatSpinEdit;
     FloatSpinEdit7: TFloatSpinEdit;
+    FloatSpinEdit8: TFloatSpinEdit;
+    FloatSpinEdit9: TFloatSpinEdit;
     FSE1: TFloatSpinEdit;
     FSE2: TFloatSpinEdit;
     FSE3: TFloatSpinEdit;
@@ -42,6 +44,7 @@ type
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
+    Label15: TLabel;
     Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
@@ -81,7 +84,18 @@ type
     Label49: TLabel;
     Label5: TLabel;
     Label50: TLabel;
+    Label51: TLabel;
+    Label52: TLabel;
+    Label53: TLabel;
+    Label54: TLabel;
+    Label55: TLabel;
+    Label56: TLabel;
+    Label57: TLabel;
+    Label58: TLabel;
+    Label59: TLabel;
     Label6: TLabel;
+    Label60: TLabel;
+    Label61: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
@@ -137,6 +151,10 @@ type
     Panel28: TPanel;
     Panel29: TPanel;
     Panel3: TPanel;
+    Panel30: TPanel;
+    Panel33: TPanel;
+    Panel34: TPanel;
+    Panel35: TPanel;
     PanelWaveRGB: TPanel;
     Panel31: TPanel;
     Panel32: TPanel;
@@ -164,6 +182,7 @@ type
     PanelRGBDuration: TPanel;
     PanelVolumeCap: TPanel;
     PanelDryWetCap: TPanel;
+    PanelWave: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -197,7 +216,7 @@ type
     procedure AdjustFormHeight(aBottomPanel: TPanel);
   private
     FrameVelocity1, FrameVelocity2, FrameVelocity3, FrameVelocity4, FrameVelocity5,
-    FrameVelocity6, FrameVelocity7: TFrame_Velocity;
+    FrameVelocity6, FrameVelocity7, FrameVelocity8, FrameVelocity9: TFrame_Velocity;
     FrameTBSequenceStretchSpeed: TFrameTBSequenceStretchSpeed;
     FrameTBVol: TFrameTBAudioVolume;
     FrameTBPan: TFrameTBAudioPan;
@@ -216,6 +235,7 @@ type
     FrameTBDmxFlameRGBWait: TFrameTBDmxFlameRGBWait;
     FrameTBDmxFlameRGBAmplitude: TFrameTBDmxFlameRGBAmplitude;
     FrameTBDmxFlameRGBSoften: TFrameTBDmxFlameRGBSoften;
+    FrameTBDmxWaveLevel1, FrameTBDmxWaveLevel2: TFrameTBDmxLevel;
     FrameColorPalette1: TFrame_ColorPalette;
     CheckedLabelManager: TCheckedLabelManager;
     function GetCmdIsEditable: boolean;
@@ -389,6 +409,33 @@ begin
   Label26.Caption := SFixedDuration;
   Label30.Caption := SRandomDurationBetween;
   Label31.Caption := SSeconds_;
+  //dmx wave
+  FrameTBDmxWaveLevel1 := TFrameTBDmxLevel.Create(Self, Panel30);
+  FrameTBDmxWaveLevel1.Init(trHorizontal, False, False, False);
+  FrameTBDmxWaveLevel1.OnChange := @TrackBar1Change;
+  FrameTBDmxWaveLevel2 := TFrameTBDmxLevel.Create(Self, Panel35);
+  FrameTBDmxWaveLevel2.Init(trHorizontal, False, False, False);
+  FrameTBDmxWaveLevel2.OnChange := @TrackBar1Change;
+  FrameVelocity8 := TFrame_Velocity.Create(Self);
+  FrameVelocity8.Name := 'FrameVelocity8';
+  FrameVelocity8.Parent := Panel33;
+  FrameVelocity8.Align := alClient;
+  FrameVelocity8.UpdateList;
+  FrameVelocity8.OnChange := @TrackBar1Change;
+  FrameVelocity9 := TFrame_Velocity.Create(Self);
+  FrameVelocity9.Name := 'FrameVelocity9';
+  FrameVelocity9.Parent := Panel34;
+  FrameVelocity9.Align := alClient;
+  FrameVelocity9.UpdateList;
+  FrameVelocity9.OnChange := @TrackBar1Change;
+  Label51.Caption := SLevel + ' 1';
+  Label53.Caption := SLevel + ' 2';
+  Label15.Caption := SDuration + ' 1';
+  Label55.Caption := SDuration + ' 2';
+  Label52.Caption := SVelocity + ' 1';
+  Label54.Caption := SVelocity + ' 2';
+  Label56.Caption := SSec;
+  Label57.Caption := SSec;
 
   // dmx rgb
   FrameColorPalette1 := TFrame_ColorPalette.Create(Self);
@@ -461,6 +508,8 @@ begin
   Label50.Caption := SDuration + ' 2';
   Label47.Caption := SVelocity + ' 1';
   Label49.Caption := SVelocity + ' 2';
+  Label58.Caption := SSec;
+  Label59.Caption := SSec;
   Shape3.Hint := SClickToCaptureCurrentColor;
   Shape4.Hint := SClickToCaptureCurrentColor;
 
@@ -492,17 +541,14 @@ begin
 end;
 
 procedure TFormEditSingleAction.FSE8Change(Sender: TObject);
-var v: single;
 begin
   // flame
-  Label33.Caption := FormatFloat('0.00', FrameTBDmxFlameRGBWait.Value)+SSec;
-  Label35.Caption := FormatFloat('0.0', FrameTBDmxFlameRGBAmplitude.Value*100)+'%';
-  Label37.Caption := FormatFloat('0.0', FrameTBDmxFlameRGBSoften.Value*100)+'%';
+  Label33.Caption := FrameTBDmxFlameRGBWait.GetLegend;
+  Label35.Caption := FrameTBDmxFlameRGBAmplitude.GetLegend;
+  Label37.Caption := FrameTBDmxFlameRGBSoften.GetLegend;
   // follower
-  v := FrameTBFollowerRGBGain.Value;
-  Label39.Caption := FormatFloat('0.00', v);
-  if v > 0 then Label39.Caption := '+' + Label39.Caption;
-  Label41.Caption := FormatFloat('0.00', FrameTBFollowerRGBSoften.Value)+SSec;
+  Label39.Caption := FrameTBFollowerRGBGain.GetLegend;
+  Label41.Caption := FrameTBFollowerRGBSoften.GetLegend;
   // flash
   if Sender = RadioButton7 then
     FrameTBDmxFlashRGBIntensity.Init(trHorizontal, False, RadioButton8.Checked, True);
@@ -511,7 +557,6 @@ begin
   if Sender = FloatSpinEdit5 then
     if FloatSpinEdit4.Value > FloatSpinEdit5.Value then FloatSpinEdit4.Value := FloatSpinEdit5.Value;
   FloatSpinEdit5.Enabled := RadioButton6.Checked;
-
 
   if FInitializing then exit;
 
@@ -693,21 +738,16 @@ begin
 end;
 
 procedure TFormEditSingleAction.TrackBar1Change(Sender: TObject);
-var v: single;
 begin
   // dimmer
-  v := FrameTBDimmer.Value;
-  Label7.Caption := SValue+' '+Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
+  Label7.Caption := FrameTBDimmer.GetLegend;
   // flame
-  Label14.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
-  Label17.Caption := FormatFloat('0.0', FrameTBFlameSoften.PercentValue*100)+'%';
+  Label14.Caption := FrameTBFlameWait.GetLegend;
+  Label17.Caption := FrameTBFlameSoften.GetLegend;
   // audio follower
-  v := FrameTBFollowerGain.Value;
-  if v < 0 then Label19.Caption := FormatFloat('0.0', v)
-    else Label19.Caption := '+'+FormatFloat('0.0', v);
-  v := FrameTBFollowerMax.Value;
-  Label21.Caption := Round(v*255).ToString+' ('+FormatFloat('0.0', v)+'%)';
-  Label23.Caption := FormatFloat('0.00', FrameTBFollowerSoften.Value)+SSec;
+  Label19.Caption := FrameTBFollowerGain.GetLegend;
+  Label21.Caption := FrameTBFollowerMax.GetLegend;
+  Label23.Caption := FrameTBFollowerSoften.GetLegend;
   // flash
   if Sender = RadioButton1 then
     FrameTBDmxFlashLevels.Init(trHorizontal, False, RadioButton2.Checked, True);
@@ -716,6 +756,10 @@ begin
   if Sender = FloatSpinEdit3 then
     if FloatSpinEdit2.Value > FloatSpinEdit3.Value then FloatSpinEdit2.Value := FloatSpinEdit3.Value;
   FloatSpinEdit3.Enabled := RadioButton4.Checked;
+  // wave
+  Label60.Caption := FrameTBDmxWaveLevel1.GetLegend;
+  Label61.Caption := FrameTBDmxWaveLevel2.GetLegend;
+
 
   if FInitializing then exit;
 
@@ -766,6 +810,14 @@ begin
      FParams[3] := FormatFloatWithDot('0.00', FloatSpinEdit2.Value);
      if RadioButton3.Checked then FParams[4] := FParams[3]
        else FParams[4] := FormatFloatWithDot('0.00', FloatSpinEdit3.Value);
+   end;
+   TITLECMD_DMX_WAVE: begin // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+     FParams[1] := FormatFloatWithDot('0.00', FrameTBDmxWaveLevel1.Value);
+     FParams[2] := FormatFloatWithDot('0.00', FloatSpinEdit8.Value);
+     FParams[3] := FrameVelocity8.SelectedCurveID.ToString;
+     FParams[4] := FormatFloatWithDot('0.00', FrameTBDmxWaveLevel2.Value);
+     FParams[5] := FormatFloatWithDot('0.00', FloatSpinEdit9.Value);
+     FParams[6] := FrameVelocity9.SelectedCurveID.ToString;
    end;
   end;
 end;
@@ -1008,6 +1060,22 @@ begin
        FrameVelocity3.SelectedCurveID := FParams[2].ToInteger;
        TrackBar1Change(NIL);
      end;
+     TITLECMD_DMX_WAVE: begin // TITLECMD_DMX_WAVE Level1 Duration1 CurveID1 Level2 Duration2 CurveID2
+       PanelWave.Visible := True;
+       PanelWave.Left := (ClientWidth - PanelWave.Width) div 2;
+       PanelWave.Top := ScaleDesignToForm(8);
+       AdjustFormHeight(PanelWave);
+       NB.PageIndex := NB.IndexOf(PageDMXChannel);
+       Label2.Caption := SDMXWave;
+       FrameTBDmxWaveLevel1.Value := StringToSingle(FParams[1]);
+       FloatSpinEdit8.Value := StringToSingle(FParams[2]);
+       FrameVelocity8.SelectedCurveID := FParams[3].ToInteger;
+       FrameTBDmxWaveLevel2.Value := StringToSingle(FParams[4]);
+       FloatSpinEdit9.Value := StringToSingle(FParams[5]);
+       FrameVelocity9.SelectedCurveID := FParams[6].ToInteger;
+       TrackBar1Change(NIL);
+     end;
+
 
      CMD_DMX_FLAME: begin  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
        PanelFlame.Visible := True;
