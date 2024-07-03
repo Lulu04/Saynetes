@@ -71,6 +71,9 @@ type
     // Sets the color for this instance only
     procedure SetInstanceCursorColors(aFillColor, aOutlineColor: TBGRAPixel);
 
+    function GetLegend: string; virtual;
+    function GetLegendMin: string; virtual;
+
     // The percentage value when the interval mode is not activated. Range is [0..1]
     // If interval mode is not activated, this property refer to PercentMax
     property PercentValue: single read GetPercentValue write SetPercentValue;
@@ -203,7 +206,7 @@ begin
     if Enabled then Font.Color := Self.Font.Color
       else Font.Color := clGrayText;
 
-    txt := FormatFloat('0.0', PercentValue*100)+'%';
+    txt := GetLegend;
     if FOrientation = trHorizontal then
     begin
       x := GetTextWidth(txt);
@@ -223,7 +226,7 @@ begin
     end;
 
     if FIntervalMode then begin
-      txt := FormatFloat('0.0', PercentMin*100)+'%';
+      txt := GetLegendMin; //FormatFloat('0.0', PercentMin*100)+'%';
 
       if FOrientation = trHorizontal then
       begin
@@ -536,6 +539,16 @@ begin
   FCursorOutlineColor := aOutlineColor;
   UpdateCursorsImage;
   PB.Invalidate;
+end;
+
+function TFrameTrackBar.GetLegend: string;
+begin
+  Result := FormatFloat('0.0', PercentValue*100)+'%';
+end;
+
+function TFrameTrackBar.GetLegendMin: string;
+begin
+  Result := FormatFloat('0.0', PercentMin*100)+'%';
 end;
 
 end.

@@ -26,25 +26,26 @@ end;
 
 { TFrameTBAudioVolume }
 
-TFrameTBAudioVolume = class(TCustomFrameTB)
-{private
-  function GetSquaredVolume: single;
-  procedure SetSquaredVolume(AValue: single);
-public
-  // we send this squarred volume to ALSound, but user see normal value in the trackbar.
-  property SquaredVolume: single read GetSquaredVolume write SetSquaredVolume; }
-end;
+TFrameTBAudioVolume = class(TCustomFrameTB);
+
+{ TFrameTBAudioPan }
 
 TFrameTBAudioPan = class(TCustomFrameTB)
 private
   function GetValue: single; override;
   procedure SetValue(AValue: single); override;
+public
+  function GetLegend: string; override;
 end;
+
+{ TFrameTBAudioPitch }
 
 TFrameTBAudioPitch = class(TCustomFrameTB)
 private
   function GetValue: single; override;
   procedure SetValue(AValue: single); override;
+public
+  function GetLegend: string; override;
 end;
 
 TFrameTBAudioCapturePreAmp = class(TCustomFrameTB)
@@ -65,33 +66,55 @@ end;
 
 // dmx channel
 
-TFrameTBDmxLevel = class(TCustomFrameTB);
+{ TFrameTBDmxLevel }
+// Value: 0.0 to 1.0
+TFrameTBDmxLevel = class(TCustomFrameTB)
+  function GetLegend: string; override;
+end;
 
+
+
+{ TFrameTBDmxFlameWait }
 // Value: 0.05 to 2.0
 TFrameTBDmxFlameWait = class(TCustomFrameTB)
 private
   function GetValue: single; override;
   procedure SetValue(AValue: single); override;
+public
+  function GetLegend: string; override;
 end;
 
-// Value: 0.0 to 1.0
-TFrameTBDmxFlameSoften = class(TCustomFrameTB);
 
+{ TFrameTBDmxFlameSoften }
+// Value: 0.0 to 1.0
+TFrameTBDmxFlameSoften = class(TCustomFrameTB)
+  function GetLegend: string; override;
+end;
+
+
+{ TFrameTBDmxAudioFollowerGain }
 // Value: -1.0 to 3.0
 TFrameTBDmxAudioFollowerGain = class(TCustomFrameTB)
 private
   function GetValue: single; override;
   procedure SetValue(AValue: single); override;
+public
+  function GetLegend: string; override;
 end;
 
 // Value: 0.0 to 1.0
 TFrameTBDmxAudioFollowerBrightness = class(TFrameTBDmxLevel);
 
 // Value: 0.1 to 1.0
+
+{ TFrameTBDmxAudioFollowerSoften }
+
 TFrameTBDmxAudioFollowerSoften = class(TCustomFrameTB)
 private
   function GetValue: single; override;
   procedure SetValue(AValue: single); override;
+public
+  function GetLegend: string; override;
 end;
 
 
@@ -101,26 +124,44 @@ end;
 TFrameTBDmxFlameRGBWait = class(TFrameTBDmxFlameWait);
 
 // Value: 0.0 to 1.0
-TFrameTBDmxFlameRGBAmplitude = class(TCustomFrameTB);
+
+{ TFrameTBDmxFlameRGBAmplitude }
+
+TFrameTBDmxFlameRGBAmplitude = class(TCustomFrameTB)
+  function GetLegend: string; override;
+end;
 
 // Value: 0.0 to 1.0
-TFrameTBDmxFlameRGBSoften = class(TCustomFrameTB);
+TFrameTBDmxFlameRGBSoften = class(TFrameTBDmxFlameSoften);
 
 
 
 implementation
 
-{ TFrameTBAudioVolume }
+uses u_resource_string, u_utils;
 
-{function TFrameTBAudioVolume.GetSquaredVolume: single;
+{ TFrameTBDmxFlameRGBAmplitude }
+
+function TFrameTBDmxFlameRGBAmplitude.GetLegend: string;
 begin
-  Result := PercentValue * PercentValue;
+  Result := FormatFloat('0.0', Value*100)+'%';
 end;
 
-procedure TFrameTBAudioVolume.SetSquaredVolume(AValue: single);
+{ TFrameTBDmxFlameSoften }
+
+function TFrameTBDmxFlameSoften.GetLegend: string;
 begin
-  PercentValue := Sqrt(AValue);
-end;    }
+  Result := FormatFloat('0.0', Value*100)+'%';
+end;
+
+{ TFrameTBDmxLevel }
+
+function TFrameTBDmxLevel.GetLegend: string;
+var v: single;
+begin
+  v := Value;
+  Result := Round(v*255).ToString+'  ('+FormatFloat('0.0', v*100)+'%)';
+end;
 
 { TFrameTBSequenceStretchSpeed }
 
@@ -158,6 +199,11 @@ begin
   PercentValue := (AValue - 0.1) / 0.9;
 end;
 
+function TFrameTBDmxAudioFollowerSoften.GetLegend: string;
+begin
+  Result := FormatFloat('0.00', Value) + ' '+SSec;
+end;
+
 { TFrameTBDmxAudioFollowerGain }
 
 function TFrameTBDmxAudioFollowerGain.GetValue: single;
@@ -169,6 +215,14 @@ end;
 procedure TFrameTBDmxAudioFollowerGain.SetValue(AValue: single);
 begin
   PercentValue := (AValue + 1.0) * 0.25;
+end;
+
+function TFrameTBDmxAudioFollowerGain.GetLegend: string;
+var v: single;
+begin
+  v := Value;
+  Result := FormatFloat('0.00', v);
+  if v > 0 then Result := '+' + Result;
 end;
 
 { TFrameTBAudioCapturePreAmp }
@@ -195,6 +249,11 @@ begin
   PercentValue := (AValue - 0.05) / 1.95;
 end;
 
+function TFrameTBDmxFlameWait.GetLegend: string;
+begin
+  Result := FormatFloat('0.00', Value)+' '+SSec;
+end;
+
 { TFrameTBAudioPitch }
 
 function TFrameTBAudioPitch.GetValue: single;
@@ -205,6 +264,11 @@ end;
 procedure TFrameTBAudioPitch.SetValue(AValue: single);
 begin
   PercentValue := (AValue - 0.1) / 3.9;
+end;
+
+function TFrameTBAudioPitch.GetLegend: string;
+begin
+  Result := PitchToString(Value);
 end;
 
 { TFrameTBAudioPan }
@@ -218,6 +282,11 @@ end;
 procedure TFrameTBAudioPan.SetValue(AValue: single);
 begin
   PercentValue := (AValue + 1.0) * 0.5;
+end;
+
+function TFrameTBAudioPan.GetLegend: string;
+begin
+  Result := PanToStringPercent(Value);
 end;
 
 end.

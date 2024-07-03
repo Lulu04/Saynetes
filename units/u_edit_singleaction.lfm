@@ -55,7 +55,7 @@ object FormEditSingleAction: TFormEditSingleAction
     Height = 381
     Top = 27
     Width = 517
-    PageIndex = 5
+    PageIndex = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 2
     BorderSpacing.Top = 2
@@ -635,9 +635,9 @@ object FormEditSingleAction: TFormEditSingleAction
     end
     object PageDMXChannel: TPage
       object PanelDimmer: TPanel
-        Left = 8
+        Left = -448
         Height = 96
-        Top = 144
+        Top = 208
         Width = 500
         BevelOuter = bvNone
         ClientHeight = 96
@@ -731,9 +731,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelFlame: TPanel
-        Left = 232
+        Left = 376
         Height = 120
-        Top = 8
+        Top = -72
         Width = 500
         BevelOuter = bvNone
         ClientHeight = 120
@@ -1003,9 +1003,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelFlash: TPanel
-        Left = 120
+        Left = 168
         Height = 208
-        Top = 256
+        Top = 320
         Width = 500
         BevelOuter = bvNone
         ClientHeight = 208
@@ -1220,6 +1220,254 @@ object FormEditSingleAction: TFormEditSingleAction
             ParentColor = False
             ParentFont = False
           end
+        end
+      end
+      object PanelWave: TPanel
+        Left = 80
+        Height = 256
+        Top = 40
+        Width = 355
+        BevelOuter = bvNone
+        ClientHeight = 256
+        ClientWidth = 355
+        Color = 4740951
+        ParentColor = False
+        TabOrder = 4
+        Visible = False
+        object Label15: TLabel
+          AnchorSideLeft.Control = PanelWave
+          AnchorSideTop.Control = Panel30
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Side = asrBottom
+          Left = 30
+          Height = 15
+          Top = 52
+          Width = 51
+          BorderSpacing.Left = 30
+          BorderSpacing.Top = 5
+          Caption = 'sDuration'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object FloatSpinEdit8: TFloatSpinEdit
+          AnchorSideLeft.Control = Label15
+          AnchorSideTop.Control = Label15
+          AnchorSideTop.Side = asrBottom
+          Left = 30
+          Height = 23
+          Top = 67
+          Width = 67
+          Color = 4276545
+          Font.Color = 15395562
+          Font.Style = [fsBold]
+          Increment = 0.5
+          MaxValue = 1000
+          OnChange = FSE8Change
+          ParentFont = False
+          TabOrder = 0
+          Value = 1
+        end
+        object Panel33: TPanel
+          AnchorSideLeft.Control = Label52
+          AnchorSideTop.Control = Label52
+          AnchorSideTop.Side = asrBottom
+          Left = 208
+          Height = 57
+          Top = 67
+          Width = 93
+          TabOrder = 1
+        end
+        object Label51: TLabel
+          AnchorSideLeft.Control = PanelWave
+          AnchorSideTop.Control = PanelWave
+          Left = 5
+          Height = 15
+          Top = 5
+          Width = 32
+          BorderSpacing.Left = 5
+          BorderSpacing.Top = 5
+          Caption = 'sLevel'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label52: TLabel
+          AnchorSideTop.Control = Label15
+          Left = 208
+          Height = 15
+          Top = 52
+          Width = 46
+          Caption = 'sVelocity'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Panel34: TPanel
+          AnchorSideLeft.Control = Label54
+          AnchorSideTop.Control = Label54
+          AnchorSideTop.Side = asrBottom
+          Left = 208
+          Height = 57
+          Top = 190
+          Width = 93
+          TabOrder = 2
+        end
+        object Label53: TLabel
+          AnchorSideLeft.Control = PanelWave
+          Left = 5
+          Height = 15
+          Top = 128
+          Width = 32
+          BorderSpacing.Left = 5
+          Caption = 'sLevel'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label54: TLabel
+          AnchorSideTop.Control = Label55
+          Left = 208
+          Height = 15
+          Top = 175
+          Width = 46
+          Caption = 'sVelocity'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object FloatSpinEdit9: TFloatSpinEdit
+          AnchorSideLeft.Control = Label55
+          AnchorSideTop.Control = Label55
+          AnchorSideTop.Side = asrBottom
+          Left = 30
+          Height = 23
+          Top = 190
+          Width = 67
+          Color = 4276545
+          Font.Color = 15395562
+          Font.Style = [fsBold]
+          Increment = 0.5
+          MaxValue = 1000
+          OnChange = FSE8Change
+          ParentFont = False
+          TabOrder = 3
+          Value = 1
+        end
+        object Label55: TLabel
+          AnchorSideLeft.Control = PanelWave
+          AnchorSideTop.Control = Panel35
+          AnchorSideTop.Side = asrBottom
+          Left = 30
+          Height = 15
+          Top = 175
+          Width = 51
+          BorderSpacing.Left = 30
+          BorderSpacing.Top = 5
+          Caption = 'sDuration'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label56: TLabel
+          AnchorSideLeft.Control = FloatSpinEdit8
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = FloatSpinEdit8
+          AnchorSideBottom.Side = asrBottom
+          Left = 100
+          Height = 15
+          Top = 75
+          Width = 23
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 3
+          Caption = 'sSec'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label57: TLabel
+          AnchorSideLeft.Control = FloatSpinEdit9
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = FloatSpinEdit9
+          AnchorSideBottom.Side = asrBottom
+          Left = 100
+          Height = 15
+          Top = 198
+          Width = 23
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 3
+          Caption = 'sSec'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Panel30: TPanel
+          AnchorSideLeft.Control = PanelWave
+          AnchorSideTop.Control = Label51
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelWave
+          AnchorSideRight.Side = asrBottom
+          Left = 10
+          Height = 22
+          Top = 25
+          Width = 335
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 10
+          TabOrder = 4
+        end
+        object Panel35: TPanel
+          AnchorSideLeft.Control = PanelWave
+          AnchorSideTop.Control = Label53
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelWave
+          AnchorSideRight.Side = asrBottom
+          Left = 10
+          Height = 22
+          Top = 148
+          Width = 335
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 10
+          TabOrder = 5
+        end
+        object Label60: TLabel
+          AnchorSideLeft.Control = Label51
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = Label51
+          AnchorSideBottom.Side = asrBottom
+          Left = 47
+          Height = 15
+          Top = 5
+          Width = 28
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 10
+          Caption = 'Label'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label61: TLabel
+          AnchorSideLeft.Control = Label53
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = Label53
+          AnchorSideBottom.Side = asrBottom
+          Left = 47
+          Height = 15
+          Top = 128
+          Width = 28
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 10
+          Caption = 'Label'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
         end
       end
     end
@@ -2289,6 +2537,40 @@ object FormEditSingleAction: TFormEditSingleAction
           Width = 51
           BorderSpacing.Top = 5
           Caption = 'sDuration'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label58: TLabel
+          AnchorSideLeft.Control = FloatSpinEdit6
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = FloatSpinEdit6
+          AnchorSideBottom.Side = asrBottom
+          Left = 102
+          Height = 15
+          Top = 88
+          Width = 23
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 3
+          Caption = 'sSec'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label59: TLabel
+          AnchorSideLeft.Control = FloatSpinEdit7
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = FloatSpinEdit7
+          AnchorSideBottom.Side = asrBottom
+          Left = 270
+          Height = 15
+          Top = 88
+          Width = 23
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 3
+          Caption = 'sSec'
           Font.Color = 15395562
           ParentColor = False
           ParentFont = False

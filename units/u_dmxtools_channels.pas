@@ -342,25 +342,19 @@ begin
 end;
 
 procedure TFormDMXChannelsTools.UpdateWidgets;
-var v: single;
 begin
   // audio follower
-  v := FrameTBFollowGain.Value;
-  Label8.Caption := FormatFloat('0.00', v);
-  if v > 0.0 then Label8.Caption := '+' + Label8.Caption;
-  Label9.Caption := Round(FrameTBFollowBrightness.Value*255).ToString+' ('+
-                    FormatFloat('0.0', FrameTBFollowBrightness.Value*100)+'%)';
-  Label10.Caption := FormatFloat('0.00', FrameTBFollowSoften.Value)+SSec;
+  Label8.Caption := FrameTBFollowGain.GetLegend;
+  Label9.Caption := FrameTBFollowBrightness.GetLegend;
+  Label10.Caption := FrameTBFollowSoften.GetLegend;
   // flame
-  Label12.Caption := FormatFloat('0.00', FrameTBFlameWait.Value)+SSec;
+  Label12.Caption := FrameTBFlameWait.GetLegend;
   Label15.Caption := FormatFloat('0.0', FrameTBFlameSoften.Value*100)+'%';
   // flash
   FloatSpinEdit3.Enabled := RadioButton4.Checked;
   // dimmer wave
-  v := FrameTBWaveLevel1.Value;
-  Label35.Caption := Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
-  v := FrameTBWaveLevel2.Value;
-  Label36.Caption := Round(v*255).ToString+' ('+FormatFloat('0.0', v*100)+'%)';
+  Label35.Caption := FrameTBWaveLevel1.GetLegend;
+  Label36.Caption := FrameTBWaveLevel2.GetLegend;
 end;
 
 procedure TFormDMXChannelsTools.GenerateCmdForDimmer;
