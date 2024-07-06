@@ -9,7 +9,7 @@ uses
   Buttons, LCLTranslator, LCLType,
   frame_viewtoplist,
   frame_viewprojectfolder,
-  frame_intersessionmusic,
+  frame_intermissionmusic,
   u_common;
 
 type
@@ -27,11 +27,10 @@ type
     procedure Splitter1Moved(Sender: TObject);
   private
     FRedocking: boolean;
-    FWantedTopSplitter1, FWantedTopSplitter2: Integer;
     procedure RedockPanels;
   public
     FrameViewTopList1: TFrameViewTopList;
-    FrameIntersessionMusic1: TFrameIntersessionMusic;
+    FrameIntermissionMusic1: TFrameIntermissionMusic;
     FrameViewProjectFolder1: TFrameViewProjectFolder;
 
     constructor Create(aOwner: TComponent); override;
@@ -94,9 +93,10 @@ begin
   FrameViewProjectFolder1.Parent := Panel3;
   FrameViewProjectFolder1.Align := alClient;
 
-  FrameIntersessionMusic1 := TFrameIntersessionMusic.Create(Self);
-  FrameIntersessionMusic1.Parent := Panel4;
-  FrameIntersessionMusic1.Align := alClient;
+  FrameIntermissionMusic1 := TFrameIntermissionMusic.Create(Self);
+  FrameIntermissionMusic1.Parent := Panel4;
+  FrameIntermissionMusic1.Align := alClient;
+
 
   FWantedTopSplitter1 := Panel1.Height;
   FWantedTopSplitter2 := Panel3.Height;
