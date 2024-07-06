@@ -14,7 +14,9 @@ type
   { TFrameViewAudioList }
 
   TFrameViewAudioList = class(TFrame)
+    Label1: TLabel;
     LB: TListBox;
+    Panel1: TPanel;
     Timer1: TTimer;
     procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
     procedure LBKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
@@ -408,6 +410,7 @@ end;
 procedure TFrameViewAudioList.Timer1Timer(Sender: TObject);
 begin
   Timer1.Enabled := FALSE;
+  Panel1.Visible := SoundManager.Count = 0;
   inc(FFlashCounter);
   if FFlashCounter >= 3 then
   begin
