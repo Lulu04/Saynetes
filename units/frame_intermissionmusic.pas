@@ -353,7 +353,7 @@ begin
   Label2.Caption := SPlaylist;
   Label7.Caption := SVolume;
 
-  FrameTBVol.Value := ProgramOptions.IntersessionMusicVolume;
+  FrameTBVol.Value := ProgramOptions.IntermissionMusicVolume;
 
   FItemIndexUnderMouse := -1;
 end;

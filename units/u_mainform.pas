@@ -201,7 +201,7 @@ begin
     Log.AddEmptyLine;
     Log.info('Saynètes: Application Shut down', 0, True);
     Log.Info('Save program''s options', 1);
-    ProgramOptions.IntersessionMusicVolume := self.FrameMainSequence1.FrameIntersessionMusic1.Volume;
+    ProgramOptions.IntermissionMusicVolume := self.FrameMainSequence1.FrameIntermissionMusic1.Volume;
     ProgramOptions.Save;
     Log.Info('Stop thread universe manager', 1);
     UniverseManager.StopThread;
@@ -315,6 +315,7 @@ begin
 
   FrameMainAudio1.UpdateEditMode;
   FrameViewProjector1.UpdateEditMode;
+  FrameMainSequence1.UpdateEditMode;
 end;
 
 procedure TFormMain.BAudioClick(Sender: TObject);
