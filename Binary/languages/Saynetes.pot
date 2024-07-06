@@ -2238,12 +2238,57 @@ msgid ""
 "Just click one of the hatched rectangle to perform the alignment."
 msgstr ""
 
+#: u_resource_string.helpsequencercmdaudio
+msgid ""
+"This is the list of actions you can perform on audio file or on the Capture Module.\n"
+"1 - First choose the target: it can be a file or the Capture Module.\n"
+"2 - Choose the action you want to perform on the target.\n"
+"3 - If any, sets the parameters as you want.\n"
+"4 - Click Add button to add the step to the sequence.\n"
+"\n"
+"NOTES:\n"
+"  - If a sound is paused, you can resume it with PAUSE or PLAY.\n"
+"  - FadeOut lower the volume until 0% then stop the sound."
+msgstr ""
+
 #: u_resource_string.helpsequencercmdlist
 msgid ""
 "A step is made of actions and this panel displays them.\n"
 "You can modify the action: right click on the action to show pop-up menu:\n"
 "  - Edit: to edit the parameters of this action. Not all actions are editable.\n"
 "  - Delete to delete the selected actions."
+msgstr ""
+
+#: u_resource_string.helpsequencerotherloop
+msgid ""
+"This action force the sequence to re-start from the beginning: the sequence is looped.\n"
+"All steps after this one on the time line will be ignored.\n"
+"Just click Add to create the step in the sequence."
+msgstr ""
+
+#: u_resource_string.helpsequencerotherstart
+msgid ""
+"This action run another sequence.\n"
+"The calling sequence is not stopped: both sequences run in parallel.\n"
+"Choose the sequence to start, then click Add."
+msgstr ""
+
+#: u_resource_string.helpsequencerotherstop
+msgid ""
+"This action stops the execution of another sequence.\n"
+"Choose the sequence to stop, then click Add\n"
+"NOTE: stops a sequence that is not running have no effect."
+msgstr ""
+
+#: u_resource_string.helpsequencerotherstretch
+msgid ""
+"This action speeds up or slows down the execution of another sequence.\n"
+"This feature is experimental...\n"
+"- Select the sequence to stretch.\n"
+"- Sets the wanted speed.\n"
+"- Sets the duration to reach this speed.\n"
+"- Select the velocity curve to use.\n"
+"- Click Add button to create the step in the sequence."
 msgstr ""
 
 #: u_resource_string.helpsoundcontrol
@@ -4310,5 +4355,20 @@ msgid ""
 "LEVELS: controls the flickering range.\n"
 "WAIT TIME: controls the effect speed.\n"
 "SOFTEN: controls the smoothness of the effect."
+msgstr ""
+
+#: u_resource_string._helpsequencercmdaudiofx
+msgid ""
+"Here you can apply nice effects to your sounds or to the Capture Module.\n"
+"1 - First choose the target: it can be a file or the Capture Module.\n"
+"2 - Choose the action:\n"
+"     .CONNECT: to apply effects to the target.\n"
+"     .DISCONNECT: to remove current effects that you have previously applyed to the target.\n"
+"3 - Activate up to 3 ALS-fx (module effect) simultaneously.\n"
+"4 - On each ALS-fx module activated, select the type of effect then a preset.\n"
+"5 - Sets the Dry/Wet: it adjusts the proportion of original sound with the transformed one.\n"
+"\n"
+"NOTE: effects connected on a sound will be removed only when an action Disconnect will be performed on this sound.\n"
+"      You can also remove effects manually from the audio panel on the main view."
 msgstr ""
 

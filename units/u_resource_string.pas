@@ -787,8 +787,55 @@ resourcestring
                'Just click one of the hatched rectangle to perform the alignment.';
 
 
+   HelpSequencerCmdAudio='This is the list of actions you can perform on audio file or on the Capture Module.'+LineEnding+
+               '1 - First choose the target: it can be a file or the Capture Module.'+LineEnding+
+               '2 - Choose the action you want to perform on the target.'+LineEnding+
+               '3 - If any, sets the parameters as you want.'+LineEnding+
+               '4 - Click Add button to add the step to the sequence.'+LineEnding+
+               LineEnding+
+               'NOTES:'+LineEnding+
+               '  - If a sound is paused, you can resume it with PAUSE or PLAY.'+LineEnding+
+               '  - FadeOut lower the volume until 0% then stop the sound.';
+
+
+   _HelpSequencerCmdAudioFX='Here you can apply nice effects to your sounds or to the Capture Module.'+LineEnding+
+               '1 - First choose the target: it can be a file or the Capture Module.'+LineEnding+
+               '2 - Choose the action:'+LineEnding+
+               '     .CONNECT: to apply effects to the target.'+LineEnding+
+               '     .DISCONNECT: to remove current effects that you have previously applyed to the target.'+LineEnding+
+               '3 - Activate up to 3 ALS-fx (module effect) simultaneously.'+LineEnding+
+               '4 - On each ALS-fx module activated, select the type of effect then a preset.'+LineEnding+
+               '5 - Sets the Dry/Wet: it adjusts the proportion of original sound with the transformed one.'+LineEnding+
+               LineEnding+
+               'NOTE: effects connected on a sound will be removed only when an action Disconnect will be performed on this sound.'+LineEnding+
+               '      You can also remove effects manually from the audio panel on the main view.';
+
+
+   HelpSequencerOtherStart='This action run another sequence.'+LineEnding+
+               'The calling sequence is not stopped: both sequences run in parallel.'+LineEnding+
+               'Choose the sequence to start, then click Add.';
+
+   HelpSequencerOtherStop='This action stops the execution of another sequence.'+LineEnding+
+               'Choose the sequence to stop, then click Add'+LineEnding+
+               'NOTE: stops a sequence that is not running have no effect.';
+
+   HelpSequencerOtherLoop='This action force the sequence to re-start from the beginning: the sequence is looped.'+LineEnding+
+                          'All steps after this one on the time line will be ignored.'+LineEnding+
+                          'Just click Add to create the step in the sequence.';
+
+   HelpSequencerOtherStretch='This action speeds up or slows down the execution of another sequence.'+LineEnding+
+                          'This feature is experimental...'+LineEnding+
+                          '- Select the sequence to stretch.'+LineEnding+
+                          '- Sets the wanted speed.'+LineEnding+
+                          '- Sets the duration to reach this speed.'+LineEnding+
+                          '- Select the velocity curve to use.'+LineEnding+
+                          '- Click Add button to create the step in the sequence.';
+
+
+
   function HelpChannelFlame: string;
   function HelpChannelAudioFollower: string;
+  function HelpSequencerCmdAudioFX: string;
 
 implementation
 
@@ -803,6 +850,12 @@ function HelpChannelAudioFollower: string;
 begin
   Result := _HelpChannelAudioFollower + LineEnding + LineEnding +
             HelpContinuousEffect + LineEnding + LineEnding +
+            HelpPreset;
+end;
+
+function HelpSequencerCmdAudioFX: string;
+begin
+  Result := _HelpSequencerCmdAudioFX + LineEnding + LineEnding +
             HelpPreset;
 end;
 

@@ -17,6 +17,7 @@ type
 
   TFrameCmdAudio = class(TFrame)
     BAdd: TBitBtn;
+    BHelp: TSpeedButton;
     BPanNormal: TSpeedButton;
     BPitchNormal: TSpeedButton;
     FSE1: TFloatSpinEdit;
@@ -69,6 +70,7 @@ type
     SpeedButton7: TSpeedButton;
     SpeedButton8: TSpeedButton;
     SpeedButton9: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure BListenClick(Sender: TObject);
     procedure BPanNormalClick(Sender: TObject);
     procedure BStopAllClick(Sender: TObject);
@@ -136,7 +138,7 @@ type
 
 implementation
 
-uses u_resource_string, u_utils, u_helper, ALSound, Graphics,
+uses u_resource_string, u_utils, u_helper, form_help, ALSound, Graphics,
   frame_bglvirtualscreen_sequencer;
 
 {$R *.lfm}
@@ -560,6 +562,11 @@ end;
 procedure TFrameCmdAudio.BListenClick(Sender: TObject);
 begin
   StartPlayback(True);
+end;
+
+procedure TFrameCmdAudio.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpSequencerCmdAudio, BHelp);
 end;
 
 procedure TFrameCmdAudio.BPanNormalClick(Sender: TObject);

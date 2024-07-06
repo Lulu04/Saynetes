@@ -18,6 +18,10 @@ type
     BAdd2: TSpeedButton;
     BAdd3: TSpeedButton;
     BAdd4: TSpeedButton;
+    BHelpStretch: TSpeedButton;
+    BHelpStart: TSpeedButton;
+    BHelpStop: TSpeedButton;
+    BHelpLoop: TSpeedButton;
     FSE1: TFloatSpinEdit;
     Label1: TLabel;
     Label11: TLabel;
@@ -44,6 +48,7 @@ type
     SpeedButton4: TSpeedButton;
     SpeedButton5: TSpeedButton;
     procedure BAdd1Click(Sender: TObject);
+    procedure BHelpStartClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
@@ -72,7 +77,8 @@ var
 
 implementation
 
-uses u_list_sequence, u_utils, u_resource_string, u_edit_sequence, LCLType;
+uses u_list_sequence, u_utils, u_resource_string, u_edit_sequence, form_help,
+  LCLType;
 
 {$R *.lfm}
 
@@ -198,6 +204,14 @@ begin
   end;
 
   ModalResult := mrOk;
+end;
+
+procedure TFormOtherAction.BHelpStartClick(Sender: TObject);
+begin
+  if Sender = BHelpStart then _ShowHelp(HelpSequencerOtherStart, BHelpStart);
+  if Sender = BHelpStop then _ShowHelp(HelpSequencerOtherStop, BHelpStart);
+  if Sender = BHelpLoop then _ShowHelp(HelpSequencerOtherLoop, BHelpStart);
+  if Sender = BHelpStretch then _ShowHelp(HelpSequencerOtherStretch, BHelpStretch);
 end;
 
 procedure TFormOtherAction.Fill;
