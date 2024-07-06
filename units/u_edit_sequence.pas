@@ -16,6 +16,8 @@ type
   { TFormSequenceEdition }
 
   TFormSequenceEdition = class(TForm)
+    BHelpCmdlist: TSpeedButton;
+    BHelpSequencer: TSpeedButton;
     BKeep0Visible: TSpeedButton;
     BShutdownPopup: TSpeedButton;
     B_Redo: TSpeedButton;
@@ -55,6 +57,7 @@ type
     SpeedButton2: TSpeedButton;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
+    procedure BHelpSequencerClick(Sender: TObject);
     procedure BKeep0VisibleClick(Sender: TObject);
     procedure B_ActionClick(Sender: TObject);
     procedure B_RedoClick(Sender: TObject);
@@ -109,7 +112,7 @@ var
   FormSequenceEdition: TFormSequenceEdition;
 
 implementation
-uses u_resource_string, u_program_options, LCLType;
+uses u_resource_string, u_program_options, form_help, LCLType;
 
 {$R *.lfm}
 
@@ -378,6 +381,12 @@ begin
   FSeq.SetOptions([bglsKeepTimeOriginVisible], b);
 
   ProgramOptions.KeepOriginVisible := b;
+end;
+
+procedure TFormSequenceEdition.BHelpSequencerClick(Sender: TObject);
+begin
+  if Sender = BHelpSequencer then _ShowHelp(HelpSequencer, BHelpSequencer);
+  if Sender = BHelpCmdList then _ShowHelp(HelpSequencerCmdList, BHelpSequencer);
 end;
 
 procedure TFormSequenceEdition.B_RedoClick(Sender: TObject);

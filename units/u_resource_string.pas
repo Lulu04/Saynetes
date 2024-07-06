@@ -728,6 +728,64 @@ resourcestring
   HelpRGBStop='Stops the current RGB effect on selected fixtures.'+LineEnding+
               'Don''t stop an RGB chaser because a chaser is not an effect but a sequence.';
 
+  HelpSequencer='The sequencer is the heart of Saynètes: this is where you define the sequences to build your show.'+LineEnding+
+              'A sequence is made up of steps. Steps have a title to describe them and are displayed on the time line.'+LineEnding+
+              'Steps are made up of actions of type audio, DMX or other. Actions contained in one step are displayed in the panel at top left of the screen.'+LineEnding+
+              'Place steps on the time line to construct the sequence.'+LineEnding+
+              LineEnding+
+              'THE VIEW'+LineEnding+
+              '  - ZOOM with mouse wheel.'+LineEnding+
+              '  - MOVE it with'+LineEnding+
+              '      . The scroll bar at the bottom.'+LineEnding+
+              '      . Holds the middle mouse button pressed and move the mouse to the left/right.'+LineEnding+
+              LineEnding+
+              'ADD STEP with right click on empty area of the time line and choose its type.'+LineEnding+
+              LineEnding+
+              'SELECTION'+LineEnding+
+              '  - LEFT CLICK on a step to select it.'+LineEnding+
+              '  - SHIFT + LEFT CLICK to add a step to the current selection.'+LineEnding+
+              '  - LEFT CLICK on an empty area and drag the mouse to the right or left to select an area: all steps in this area will be selected.'+LineEnding+
+              LineEnding+
+              'MOVE STEP'+LineEnding+
+              '  - HOLDS LEFT CLICK on the selected steps and drag them where you want on the time line.'+LineEnding+
+              '  - UP/DOWN keys moves the selection vertically.'+LineEnding+
+              '  - ALIGN: right click on one selected step and click Align in the pop-up menu.'+LineEnding+
+              LineEnding+
+              'KEYBOARD SHORTCUT'+LineEnding+
+              '  - UP: moves the selection up one line.'+LineEnding+
+              '  - DOWN: moves the selection down one line.'+LineEnding+
+              '  - ALT A: zoom the view to see all steps.'+LineEnding+
+              '  - ALT S: zoom on the selection area (in blue).'+LineEnding+
+              '  - CTRL A: select all steps in the sequence.'+LineEnding+
+              '  - DELETE: delete the selected steps.'+LineEnding+
+              '  - CTRL G: group the selected steps.'+LineEnding+
+              '  - CTRL U: ungroup the selected group of steps.'+LineEnding+
+              '  - CTRL R: rename a step.'+LineEnding+
+              '  - CTRL X: cut the selected steps in the clipboard.'+LineEnding+
+              '  - CTRL C: copy the selected steps in the clipboard.'+LineEnding+
+              '  - CTRL V: paste the clipboard content at the mouse cursor position.'+LineEnding+
+              '  - CTRL Z: undo.'+LineEnding+
+              '  - CTRL SHIFT Z: redo.'+LineEnding+
+              '  - SPACE: start the sequence preview from the mouse cursor position. If the mouse is outside the time line the sequence starts from the beginning.'+LineEnding+
+              LineEnding+
+              'CHANGING THE DURATION OF A STEP'+LineEnding+
+              '  - right click on the selected steps, in the pop-up click Change duration.'+LineEnding+
+              '  - Select one or several steps, then holds ALT key pressed and drag one step to the right to increase the duration, to the left to decrease it. Durations are changed proportionnaly to their initial values.'+LineEnding+
+              LineEnding+
+              'CHANGING TIME BETWEEN TWO STEPS'+LineEnding+
+              'At the bottom of the time line where the time legend is displayed, right click on the interval between two steps: this interval is selected and a pop-up menu appears.';
+
+   HelpSequencerCmdList='A step is made of actions and this panel displays them.'+LineEnding+
+               'You can modify the action: right click on the action to show pop-up menu:'+LineEnding+
+               '  - Edit: to edit the parameters of this action. Not all actions are editable.'+LineEnding+
+               '  - Delete to delete the selected actions.';
+
+   HelpSequencerAlignSteps='Align several steps with one click.'+LineEnding+
+               'The step you right-clicked becomes the reference step. It is shown at the top.'+LineEnding+
+               'The hatched rectangles show where the other steps will be moved.'+LineEnding+
+               'Just click one of the hatched rectangle to perform the alignment.';
+
+
   function HelpChannelFlame: string;
   function HelpChannelAudioFollower: string;
 

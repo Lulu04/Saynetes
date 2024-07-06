@@ -12,7 +12,7 @@ object Form_MoveStep: TForm_MoveStep
   OnKeyPress = FormKeyPress
   OnShow = FormShow
   Position = poWorkAreaCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
     Height = 170
@@ -171,5 +171,23 @@ object Form_MoveStep: TForm_MoveStep
     Images = DataModule1.ImageList1
     ImageIndex = 2
     OnClick = BCancelClick
+  end
+  object BHelp: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHelp
+    Left = 451
+    Height = 20
+    Top = 3
+    Width = 20
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 3
+    BorderSpacing.Right = 3
+    Flat = True
+    Images = DataModule1.ImageList1
+    ImageIndex = 48
+    OnClick = BHelpClick
   end
 end
