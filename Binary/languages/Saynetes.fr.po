@@ -1610,6 +1610,10 @@ msgstr "Effectue un fondu sortant sur les sons sélectionnés"
 msgid "Add a sequence"
 msgstr "Ajouter une séquence"
 
+#: tframemainsequence.bstopsequences.hint
+msgid "Stop all sequences"
+msgstr "Stoppe l'exécution de toutes les séquences"
+
 #: tframemainsequence.label9.caption
 msgctxt "tframemainsequence.label9.caption"
 msgid "SEQUENCES"
@@ -3552,7 +3556,7 @@ msgstr "chargement des icones du programme"
 
 #: u_resource_string.sloop
 msgid "Loop"
-msgstr "Loop"
+msgstr "En boucle"
 
 #: u_resource_string.sloopbackward
 msgid "LOOP BACKWARD"

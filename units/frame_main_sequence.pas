@@ -17,6 +17,7 @@ type
   { TFrameMainSequence }
 
   TFrameMainSequence = class(TFrame)
+    BStopSequences: TSpeedButton;
     BHelp: TSpeedButton;
     Label9: TLabel;
     Panel1: TPanel;
@@ -28,6 +29,7 @@ type
     Splitter2: TSplitter;
     procedure BAddSequenceClick(Sender: TObject);
     procedure BHelpClick(Sender: TObject);
+    procedure BStopSequencesClick(Sender: TObject);
     procedure Splitter1Moved(Sender: TObject);
   private
     FRedocking: boolean;
@@ -82,6 +84,11 @@ end;
 procedure TFrameMainSequence.BHelpClick(Sender: TObject);
 begin
   _ShowHelp(HelpSequenceList, BHelp);
+end;
+
+procedure TFrameMainSequence.BStopSequencesClick(Sender: TObject);
+begin
+  Sequences.StopAll;
 end;
 
 procedure TFrameMainSequence.BAddSequenceClick(Sender: TObject);

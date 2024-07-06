@@ -1540,6 +1540,10 @@ msgstr ""
 msgid "Add a sequence"
 msgstr ""
 
+#: tframemainsequence.bstopsequences.hint
+msgid "Stop all sequences"
+msgstr ""
+
 #: tframemainsequence.label9.caption
 msgctxt "tframemainsequence.label9.caption"
 msgid "SEQUENCES"
