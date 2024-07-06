@@ -2,9 +2,9 @@
 true
 [OPTIONS PROJECTOR VIEW]
 ShowLevel|true|ShowRGBSymbol|false|ShowAdress|false|ShowFixtureInfo|false|SplitterTop|513
-[FRAME_SEQUENCER]
-HeightPanelProjectList|742|HeightPanelSequenceList|562
+[MAIN_VIEW_SEQUENCE_LIST]
+SplitterIntermission|549|SplitterProjectList|720
 [VIEW ACTION LIST]
 ShowDMXAdress|false|ShowFixtureName|false|ShowFixtureDescription|true|ShowChannelName|true|ShowColorAsRectangleColor|true
 [MAIN VIEW PANEL TO SHOW]
-ShowAudioPanel|true|ShowDMXPanel|true|WidthPanelAudio|273|WidthPanelSequence|280|ShowAudioControlPanel|true|ShowAudioCapturePanel|true
+ShowAudioPanel|true|ShowDMXPanel|true|WidthPanelAudio|273|WidthPanelSequence|294|ShowAudioControlPanel|true|ShowAudioCapturePanel|true
