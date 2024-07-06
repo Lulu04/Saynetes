@@ -14,8 +14,7 @@ type
 
   TFrameViewFixturesList = class(TFrame)
     LB: TListBox;
-    procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect;
-      State: TOwnerDrawState);
+    procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
     procedure LBKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
@@ -69,28 +68,28 @@ var fix: TDMXFixture;
 begin
   fix := TDMXFixture(LB.Items.Objects[Index]);
 
-  with LB.Canvas do
-  begin
-    txt := fix.Universe.ShortName+':'+fix.Adress.ToString+' - '+
-        fix.Description+' - '+fix.Name;
+  txt := '';
+  if UniverseManager.Count > 1 then txt := fix.Universe.ShortName+':'+fix.Adress.ToString+' - ';
+  txt := txt + fix.Description+' - '+fix.Name;
+  with LB.Canvas do begin
 
-    if State >= [odSelected] then
-      Brush.Color := clHighLight // ligne sélectionnée
-    else
-      Brush.Color := LB.Color;
-    if Index=FItemIndexUnderMouse then
-    begin
-       // render dot rectangle if mouse is over item
-       Pen.Style := psDot;
-       Pen.Color := RGBToColor(200,200,150);
-       Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
-     end
-    else
-    begin
-       //Pen.Style:=psClear;
-       FillRect(ARect);
-     end;
+    Brush.Color := LB.Color;
+    FillRect(ARect);
     Brush.Style := bsClear;
+    if State >= [odSelected] then begin
+    // render rectangle if selected
+      Pen.Style := psSolid;
+      Pen.Color := RGBToColor(255,80,255);
+      Rectangle(ARect.Left, ARect.Top, ARect.Right, ARect.Bottom);
+    end
+    else
+    if Index = FItemIndexUnderMouse then begin
+      // render dot rectangle if mouse is over item
+      Pen.Style := psDot;
+      Pen.Color := RGBToColor(200,200,150);
+      Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
+     end;
+
     Font.Color := $00EAEAEA;
     TextOut(ARect.Left+3, ARect.Top, txt);
   end;

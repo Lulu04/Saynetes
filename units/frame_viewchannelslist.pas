@@ -70,28 +70,28 @@ var chan: TDMXChannel;
 begin
   chan := TDMXChannel(LB.Items.Objects[Index]);
 
+  txt := '';
+  if UniverseManager.Count > 1 then txt := chan.Universe.ShortName+':'+chan.Adress.ToString+' - ';
+  txt := txt + chan.Fixture.Description+' - '+chan.Name;
   with LB.Canvas do begin
-    txt := chan.Universe.ShortName+':'+chan.Adress.ToString+' - '+
-        chan.Fixture.Description+' - '+chan.Name;
 
-    if State >= [odSelected] then
-      Brush.Color := clHighLight // ligne sélectionnée
+    Brush.Color := LB.Color;
+    FillRect(ARect);
+    Brush.Style := bsClear;
+    if State >= [odSelected] then begin
+      // render rectangle if selected
+      Pen.Style := psSolid;
+      Pen.Color := RGBToColor(255,80,255);
+      Rectangle(ARect.Left, ARect.Top, ARect.Right, ARect.Bottom);
+    end
     else
-      Brush.Color := LB.Color;
-
-    if Index = FItemIndexUnderMouse then
-    begin
+    if Index = FItemIndexUnderMouse then begin
        // render dot rectangle if mouse is over item
        Pen.Style := psDot;
        Pen.Color := RGBToColor(200,200,150);
        Rectangle(ARect.Left-1, ARect.Top, ARect.Right+1, ARect.Bottom);
-    end
-    else
-    begin
-       //Pen.Style:=psClear;
-       FillRect(ARect);
     end;
-    Brush.Style := bsClear;
+
     Font.Color := $00EAEAEA;
     TextOut(ARect.Left+3, ARect.Top, txt);
   end;
