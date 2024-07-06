@@ -597,8 +597,8 @@ resourcestring
 
   HelpSoundList='This is the list of audio files used by your project.'+LineEnding+
                 'Audio can be played/stopped by a sequence.'+LineEnding+
-                'SPACE to start/stop the selected audio: mouse must be over the audio list.'+LineEnding+
-                'Button ''+'' to add audio to your project. A window appear to select an audio from your disk. Saynètes make a copy of the original audio file and insert it in the project.'+LineEnding+
+                'SPACE to manually start/stop the selected audio: mouse must be over the audio list.'+LineEnding+
+                'Button ''+'' to add audio to your project. A window appear to select a file on the disk. Saynètes make a copy of the original audio file and insert it in the project.'+LineEnding+
                 'Right click on an existing audio to show pop-up menu.';
 
   HelpSequenceList='This is the list of the sequences.'+LineEnding+
