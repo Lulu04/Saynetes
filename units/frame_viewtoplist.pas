@@ -85,6 +85,7 @@ type
     procedure ProcessKeyUp(var Key: Word; {%H-}Shift: TShiftState);
 
     procedure Fill;
+    procedure UpdateStringAfterLanguageChange;
 
     procedure Add(aID: cardinal);
     procedure Insert(aID: cardinal);
@@ -103,8 +104,8 @@ type
 implementation
 
 uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
-  u_audio_manager, u_mainform, u_common, u_apputils, u_utils, Graphics,
-  Dialogs, LCLHelper, Math, utilitaire_bgrabitmap;
+  u_audio_manager, u_mainform, u_common, u_apputils, u_utils, u_datamodule,
+  Graphics, Dialogs, LCLHelper, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -181,10 +182,10 @@ begin
      y := aRect.Bottom - FInfoFontHeight;
      Font.Height := FInfoFontHeight;
      Font.Color := $00EAEAEA;
-     // render looped state
-     w := Font.GetTextWidth(SLoop);
+
+     // render loop symbol
      if seq.IsLooped then
-       Textout(aRect.Right-w-Round(10*SF), y, SLoop);
+       DataModule1.ImageList1.Draw(LB.Canvas, ARect.Right-DataModule1.ImageList1.Width, ARect.Bottom-DataModule1.ImageList1.Height, 18);
 
      // Render Running state
      if seq.Running then
@@ -660,6 +661,7 @@ begin
 
   MIDelete.Caption := SDelete;
   MIStop.Caption := SStop;
+  LB.Invalidate;
 end;
 
 procedure TFrameViewTopList.Add(aID: cardinal);
