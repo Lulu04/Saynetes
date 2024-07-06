@@ -54,7 +54,7 @@ begin
   Log.DeleteLogFile;
   if ApplicationIsPortable then Log.Info('Saynètes '+APP_VERSION+' run in portable mode')
     else Log.Info('Saynètes '+APP_VERSION+' is installed on this computer');
-  Log.Info('Starting application '+AppBitness+' on '+OSNameAndBitness, 0, True);
+  Log.Info('Running '+AppBitness+' application on '+OSName, 0, True);
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
 
