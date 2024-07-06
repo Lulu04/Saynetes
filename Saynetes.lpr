@@ -58,7 +58,6 @@ begin
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
 
-  //TFrameTrackBar.SetGlobalCursorColors(BGRA(0,160,255), BGRA(0,160,255,128));
   TFrameTrackBar.SetGlobalCursorColors(BGRA(167,202,253), BGRA(167,202,253,128));
 
   // create splash window
