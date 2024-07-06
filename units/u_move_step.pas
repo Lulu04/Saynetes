@@ -16,6 +16,7 @@ type
   { TForm_MoveStep }
 
   TForm_MoveStep = class(TForm)
+    BHelp: TSpeedButton;
     Label1: TLabel;
     Label2: TLabel;
     S1: TShape;
@@ -27,6 +28,7 @@ type
     Shape2: TShape;
     Shape3: TShape;
     BCancel: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
     procedure FormShow(Sender: TObject);
     procedure S4MouseUp(Sender: TObject; {%H-}Button: TMouseButton;
@@ -42,7 +44,7 @@ type
 
 implementation
 
-uses u_resource_string;
+uses u_resource_string, form_help;
 
 { TForm_MoveStep }
 
@@ -50,6 +52,11 @@ procedure TForm_MoveStep.FormKeyPress(Sender: TObject; var Key: char);
 begin
   if Key = chr(27) then
     ModalResult := mrCancel;
+end;
+
+procedure TForm_MoveStep.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpSequencerAlignSteps, BHelp);
 end;
 
 procedure TForm_MoveStep.FormShow(Sender: TObject);
