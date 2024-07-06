@@ -20,6 +20,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     NB1: TNotebook;
     PageFinish: TPage;
     PageProjectName: TPage;
@@ -50,7 +51,7 @@ var
 
 implementation
 
-uses u_resource_string, u_common, u_utils, LazFileUtils,
+uses u_resource_string, u_common, u_utils, u_program_options, LazFileUtils,
   LCLType;
 
 {$R *.lfm}
@@ -59,25 +60,25 @@ uses u_resource_string, u_common, u_utils, LazFileUtils,
 
 procedure TFormProjectWizard.B_NextClick(Sender: TObject);
 begin
-  if NB1.PageIndex=NB1.PageCount-1 then begin
+  if NB1.PageIndex = NB1.PageCount-1 then begin
     ModalResult := mrOk;
     exit;
   end else begin
-    NB1.PageIndex:=NB1.PageIndex+1;
+    NB1.PageIndex := NB1.PageIndex+1;
     UpdateButton;
   end;
 end;
 
 procedure TFormProjectWizard.B_PreviousClick(Sender: TObject);
 begin
-  if NB1.PageIndex>0
-    then NB1.PageIndex:=NB1.PageIndex-1;
+  if NB1.PageIndex > 0
+    then NB1.PageIndex := NB1.PageIndex - 1;
   UpdateButton;
 end;
 
 procedure TFormProjectWizard.B_CancelClick(Sender: TObject);
 begin
-  ModalResult:=mrCancel;
+  ModalResult := mrCancel;
 end;
 
 procedure TFormProjectWizard.DirectoryEdit1Change(Sender: TObject);
@@ -87,58 +88,72 @@ end;
 
 procedure TFormProjectWizard.FormCreate(Sender: TObject);
 begin
-  FrameEditString1:=TFrameEditString.Create(Self);
-  FrameEditString1.Parent:=Panel1;
-  FrameEditString1.Align:=alClient;
-  FrameEditString1.OnTextChange:=@ProcessTextChange;
+  FrameEditString1 := TFrameEditString.Create(Self);
+  FrameEditString1.Parent := Panel1;
+  FrameEditString1.Align := alClient;
+  FrameEditString1.OnTextChange := @ProcessTextChange;
   FrameEditString1.ModeFileName;
-  FrameEditString1.Title:=SProjectName;
+  FrameEditString1.Title := SProjectName;
 end;
 
 procedure TFormProjectWizard.FormKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if Key=VK_ESCAPE then ModalResult:=mrCancel;
+  if Key = VK_ESCAPE then ModalResult := mrCancel;
 end;
 
 procedure TFormProjectWizard.FormShow(Sender: TObject);
 begin
-  NB1.PageIndex:=0;
-  FrameEditString1.Text:='';
+  NB1.PageIndex := 0;
+  FrameEditString1.Text := '';
   UpdateButton;
 
   B_Cancel.Caption := SCancel;
   B_Next.Caption := SNext;
   B_Previous.Caption := SPrevious;
+  Label4.Caption := SThisFilenamAlreadyExists;
+
+  if FileExists(ProgramOptions.LastProjectFileNameUsed) then
+    DirectoryEdit1.Directory := ExtractFilePath(ProgramOptions.LastProjectFileNameUsed);
 end;
 
 function TFormProjectWizard.GetProjectName: string;
 begin
-  Result:=FrameEditString1.Text;
+  Result := ChangeFileExt(Trim(FrameEditString1.Text), '');
 end;
 
 function TFormProjectWizard.GetProjectPath: string;
 begin
-  Result:=DirectoryEdit1.Directory;
+  Result := DirectoryEdit1.Directory;
 end;
 
 procedure TFormProjectWizard.UpdateButton;
 begin
-  B_Previous.Enabled := NB1.PageIndex>0;
-  if NB1.PageIndex=(NB1.PageCount-1)
-    then B_Next.Caption:=SFinish
-    else B_Next.Caption:=SNext;
+  B_Previous.Enabled := NB1.PageIndex > 0;
+  if NB1.PageIndex = (NB1.PageCount - 1)
+    then B_Next.Caption := SFinish
+    else B_Next.Caption := SNext;
 
   case NB1.PageIndex of
-   0: B_Next.Enabled:=TRUE;
-   1: B_Next.Enabled:=ProjectNameIsValid and DirectoryExistsUTF8(DirectoryEdit1.Directory);
+   0: B_Next.Enabled := TRUE;
+   1: B_Next.Enabled := ProjectNameIsValid and DirectoryExistsUTF8(DirectoryEdit1.Directory);
    2: ModalResult := mrOk;
   end;
 end;
 
 function TFormProjectWizard.ProjectNameIsValid: boolean;
+var f: string;
 begin
-  Result:=(FrameEditString1.Text<>'') and StringIsValid(FrameEditString1.Text);
+  Label4.Visible := False;
+  Result := (GetProjectName <> '') and StringIsValid(FrameEditString1.Text);
+  // check if the project already exists
+  if Result then begin
+    f := IncludeTrailingPathDelimiter(DirectoryEdit1.Directory)+GetProjectName+PROJECT_FILE_EXTENSION;
+    if FileExists(f) then begin
+      Result := False;
+      Label4.Visible := True;
+    end;
+  end;
 end;
 
 procedure TFormProjectWizard.ProcessTextChange(Sender: TObject);

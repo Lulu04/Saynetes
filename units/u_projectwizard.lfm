@@ -1,12 +1,12 @@
 object FormProjectWizard: TFormProjectWizard
   Left = 385
-  Height = 232
+  Height = 245
   Top = 306
   Width = 574
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'New project wizard'
-  ClientHeight = 232
+  ClientHeight = 245
   ClientWidth = 574
   Color = 3552822
   Font.Color = 13948116
@@ -15,14 +15,14 @@ object FormProjectWizard: TFormProjectWizard
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object B_Previous: TSpeedButton
     AnchorSideLeft.Control = NB1
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 10
     Height = 26
-    Top = 196
+    Top = 209
     Width = 120
     Anchors = [akLeft, akBottom]
     AutoSize = True
@@ -77,7 +77,7 @@ object FormProjectWizard: TFormProjectWizard
     AnchorSideBottom.Side = asrBottom
     Left = 227
     Height = 26
-    Top = 196
+    Top = 209
     Width = 120
     Anchors = [akLeft, akBottom]
     AutoSize = True
@@ -133,7 +133,7 @@ object FormProjectWizard: TFormProjectWizard
     AnchorSideBottom.Side = asrBottom
     Left = 444
     Height = 26
-    Top = 196
+    Top = 209
     Width = 120
     Anchors = [akRight, akBottom]
     AutoSize = True
@@ -186,21 +186,23 @@ object FormProjectWizard: TFormProjectWizard
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = B_Next
     Left = 10
-    Height = 176
+    Height = 189
     Top = 10
     Width = 554
-    PageIndex = 0
-    Anchors = [akTop, akLeft, akRight]
+    PageIndex = 1
+    Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 10
     BorderSpacing.Top = 10
     BorderSpacing.Right = 10
+    BorderSpacing.Bottom = 10
     Color = 1710618
     TabOrder = 0
     object PageWelcome: TPage
       object StaticText1: TStaticText
         Left = 0
-        Height = 176
+        Height = 189
         Top = 0
         Width = 554
         Align = alClient
@@ -218,8 +220,8 @@ object FormProjectWizard: TFormProjectWizard
         AnchorSideTop.Control = Label3
         AnchorSideTop.Side = asrBottom
         Left = 10
-        Height = 33
-        Top = 129
+        Height = 28
+        Top = 126
         Width = 534
         DialogTitle = 'Select a directory for the project'
         DialogOptions = [ofPathMustExist, ofEnableSizing, ofViewDetail]
@@ -240,9 +242,9 @@ object FormProjectWizard: TFormProjectWizard
         AnchorSideLeft.Control = PageProjectName
         AnchorSideTop.Side = asrBottom
         Left = 10
-        Height = 23
+        Height = 20
         Top = 104
-        Width = 368
+        Width = 267
         BorderSpacing.Left = 10
         BorderSpacing.Top = 50
         Caption = 'Select a folder where to save the project'
@@ -268,6 +270,24 @@ object FormProjectWizard: TFormProjectWizard
         Color = 1710618
         ParentColor = False
         TabOrder = 1
+      end
+      object Label4: TLabel
+        AnchorSideLeft.Control = DirectoryEdit1
+        AnchorSideTop.Control = DirectoryEdit1
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = DirectoryEdit1
+        AnchorSideRight.Side = asrBottom
+        Left = 10
+        Height = 15
+        Top = 154
+        Width = 534
+        Anchors = [akTop, akLeft, akRight]
+        Caption = 'Label'
+        Font.Color = 9934847
+        ParentColor = False
+        ParentFont = False
+        Visible = False
+        WordWrap = True
       end
     end
     object PageFinish: TPage
