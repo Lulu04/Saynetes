@@ -78,9 +78,8 @@ object FrameAudioCapture: TFrameAudioCapture
     object Label1: TLabel
       AnchorSideLeft.Control = Panel2
       AnchorSideTop.Control = Panel2
-      AnchorSideRight.Control = Panel2
-      AnchorSideRight.Side = asrBottom
-      Left = 237
+      AnchorSideRight.Control = BHelp
+      Left = 217
       Height = 17
       Top = 3
       Width = 58
@@ -428,6 +427,22 @@ object FrameAudioCapture: TFrameAudioCapture
       Color = 3815994
       ParentColor = False
       TabOrder = 5
+    end
+    object BHelp: TSpeedButton
+      AnchorSideTop.Control = Panel2
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 278
+      Height = 20
+      Top = 0
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
   object Timer1: TTimer

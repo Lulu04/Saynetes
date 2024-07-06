@@ -20,6 +20,7 @@ type
     BAddUniverse: TSpeedButton;
     BDeleteUniverse: TSpeedButton;
     BDeviceManager: TSpeedButton;
+    BHelp: TSpeedButton;
     BLoadFrom: TSpeedButton;
     BOk: TSpeedButton;
     Image1: TImage;
@@ -38,6 +39,7 @@ type
     procedure BAddUniverseClick(Sender: TObject);
     procedure BDeleteUniverseClick(Sender: TObject);
     procedure BDeviceManagerClick(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure BLoadFromClick(Sender: TObject);
     procedure BOkClick(Sender: TObject);
   private
@@ -60,7 +62,7 @@ type
   end;
 
 implementation
-uses u_mainform, u_devicemanager_form;
+uses u_mainform, u_devicemanager_form, form_help;
 
 {$R *.lfm}
 
@@ -101,6 +103,11 @@ procedure TFrameMainAddFixture.BDeviceManagerClick(Sender: TObject);
 begin
   FormDeviceManager.ShowModal;
   FrameViewUniverseList1.Fill;
+end;
+
+procedure TFrameMainAddFixture.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpEditionDMX, BHelp);
 end;
 
 procedure TFrameMainAddFixture.BLoadFromClick(Sender: TObject);

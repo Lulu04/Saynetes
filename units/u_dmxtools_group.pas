@@ -25,6 +25,7 @@ type
   { TFormDMXGroup }
 
   TFormDMXGroup = class(TForm)
+    BHelp: TSpeedButton;
     BLoadFrom: TSpeedButton;
     LBChannels: TListBox;
     LBRGB: TListBox;
@@ -43,6 +44,7 @@ type
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
     SpeedButton3: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure BLoadFromClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
@@ -91,7 +93,7 @@ var
 implementation
 
 uses u_userdialogs, u_resource_string, u_project_manager, u_helper, u_mainform,
-  u_add_action_dmx, u_logfile, u_dmx_util, LCLType;
+  u_add_action_dmx, u_logfile, form_help, u_dmx_util, LCLType;
 
 {$R *.lfm}
 
@@ -135,6 +137,11 @@ begin
       ShowMess(SErrorWhileImportingDMXGroups+Lineending+OD1.FileName, SOk, mtError);
     end;
   end;
+end;
+
+procedure TFormDMXGroup.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpDMXGroup, BHelp);
 end;
 
 procedure TFormDMXGroup.FormDestroy(Sender: TObject);
@@ -319,6 +326,8 @@ end;
 
 procedure TFormDMXGroup.SpeedButton3Click(Sender: TObject);
 begin
+  LBChannels.ItemIndex := -1;
+  LBRGB.ItemIndex := -1;
   FTargetViewProjector.Sel_None;
   FTargetViewProjector.Redraw;
 end;

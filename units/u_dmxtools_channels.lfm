@@ -1,7 +1,7 @@
 object FormDMXChannelsTools: TFormDMXChannelsTools
-  Left = 486
+  Left = 546
   Height = 426
-  Top = 224
+  Top = 226
   Width = 359
   BorderIcons = [biSystemMenu]
   BorderWidth = 2
@@ -41,7 +41,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Height = 417
     Top = 5
     Width = 249
-    PageIndex = 0
+    PageIndex = 3
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Top = 3
@@ -63,7 +63,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Height = 393
         Top = 24
         Width = 249
-        PageIndex = 1
+        PageIndex = 0
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabOrder = 0
         object PageSimpleDimmer: TPage
@@ -167,6 +167,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
             Font.Color = 15395562
             ParentColor = False
             ParentFont = False
+          end
+          object BHelpSimpleDimmer: TSpeedButton
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Label1
+            AnchorSideRight.Control = PageSimpleDimmer
+            AnchorSideRight.Side = asrBottom
+            Cursor = crHelp
+            Left = 227
+            Height = 20
+            Top = 40
+            Width = 20
+            Anchors = [akTop, akRight]
+            AutoSize = True
+            BorderSpacing.Left = 10
+            BorderSpacing.Right = 2
+            Flat = True
+            Images = DataModule1.ImageList1
+            ImageIndex = 48
+            OnClick = BHelpSimpleDimmerClick
           end
         end
         object PageWaveDimmer: TPage
@@ -448,6 +467,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
             ParentColor = False
             ParentFont = False
           end
+          object BHelpWaveDimmer: TSpeedButton
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Label24
+            AnchorSideRight.Control = PageWaveDimmer
+            AnchorSideRight.Side = asrBottom
+            Cursor = crHelp
+            Left = 227
+            Height = 20
+            Top = 16
+            Width = 20
+            Anchors = [akTop, akRight]
+            AutoSize = True
+            BorderSpacing.Left = 10
+            BorderSpacing.Right = 2
+            Flat = True
+            Images = DataModule1.ImageList1
+            ImageIndex = 48
+            OnClick = BHelpSimpleDimmerClick
+          end
         end
       end
       object BDimmerSimple: TSpeedButton
@@ -596,19 +634,18 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
       object ButtonFlamePreset: TSpeedButton
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = PageFlame
-        AnchorSideRight.Control = PageFlame
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = BHelpFlame
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 212
+        Left = 188
         Height = 16
         Top = 3
-        Width = 34
+        Width = 33
         Anchors = [akTop, akRight]
         AutoSize = True
         BorderSpacing.Top = 3
-        BorderSpacing.Right = 3
-        Caption = 'PRESET'
+        BorderSpacing.Right = 5
+        Caption = 'sPreset'
         Color = 8421631
         Font.Height = 12
         Transparent = False
@@ -666,6 +703,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BorderSpacing.Right = 5
         BevelOuter = bvNone
         TabOrder = 2
+      end
+      object BHelpFlame: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageFlame
+        AnchorSideRight.Control = PageFlame
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 226
+        Height = 20
+        Top = 3
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 3
+        BorderSpacing.Right = 3
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageAudioFollower: TPage
@@ -853,19 +909,18 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
       object ButtonAudioFollowerPreset: TSpeedButton
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = PageAudioFollower
-        AnchorSideRight.Control = PageAudioFollower
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = BHelpAudioFollower
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 212
+        Left = 189
         Height = 16
         Top = 3
-        Width = 34
+        Width = 33
         Anchors = [akTop, akRight]
         AutoSize = True
         BorderSpacing.Top = 3
-        BorderSpacing.Right = 3
-        Caption = 'PRESET'
+        BorderSpacing.Right = 5
+        Caption = 'sPreset'
         Color = 8421631
         Font.Height = 12
         Transparent = False
@@ -931,6 +986,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BorderSpacing.Right = 5
         BevelOuter = bvNone
         TabOrder = 3
+      end
+      object BHelpAudioFollower: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageAudioFollower
+        AnchorSideRight.Control = PageAudioFollower
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 227
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageCopy: TPage
@@ -1031,14 +1105,17 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         WordWrap = True
       end
       object Panel2: TPanel
+        AnchorSideTop.Control = Label16
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageCopy
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Label18
         Left = 5
-        Height = 255
-        Top = 24
+        Height = 257
+        Top = 22
         Width = 239
         Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Top = 2
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
         TabOrder = 0
@@ -1046,12 +1123,11 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
       object Label16: TLabel
         AnchorSideLeft.Control = PageCopy
         AnchorSideTop.Control = PageCopy
-        AnchorSideRight.Control = PageCopy
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = BHelpCopy
         Left = 5
         Height = 15
         Top = 5
-        Width = 239
+        Width = 217
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
@@ -1061,6 +1137,26 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         Font.Height = 15
         ParentColor = False
         ParentFont = False
+        WordWrap = True
+      end
+      object BHelpCopy: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageCopy
+        AnchorSideRight.Control = PageCopy
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 227
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageStop: TPage
@@ -1112,6 +1208,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         ParentColor = False
         ParentFont = False
         WordWrap = True
+      end
+      object BHelpStop: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageStop
+        AnchorSideRight.Control = PageStop
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 227
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageChaser: TPage
@@ -1392,6 +1507,25 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
         BevelOuter = bvNone
         TabOrder = 3
       end
+      object BHelpFlash: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageFlash
+        AnchorSideRight.Control = PageFlash
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 227
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
+      end
     end
   end
   object SpeedButton1: TSpeedButton
@@ -1401,11 +1535,11 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Gradually changes the value of a channel over a given time'
-    Top = 9
+    Top = 7
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
-    BorderSpacing.Top = 7
+    BorderSpacing.Top = 5
     Constraints.MaxHeight = 30
     Constraints.MaxWidth = 90
     Constraints.MinHeight = 30
@@ -1428,7 +1562,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Simulates a flame effect on the selected channels'
-    Top = 41
+    Top = 39
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
@@ -1455,7 +1589,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Sets the intensity of a channel according to the level of a playing sound.'#13#10'The louder the sound, the higher the intensity and vice versa.'
-    Top = 106
+    Top = 104
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
@@ -1482,7 +1616,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Copies the value of a dmx channel (the source) to one or more others'
-    Top = 172
+    Top = 170
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
@@ -1509,7 +1643,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Stops an effect on a channel.'#13#10'The last value calculated by the effect is kept.'
-    Top = 205
+    Top = 203
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
@@ -1551,7 +1685,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Chaser effect. Choose at least 2 channels to apply this effect.'
-    Top = 73
+    Top = 71
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5
@@ -1578,7 +1712,7 @@ object FormDMXChannelsTools: TFormDMXChannelsTools
     Left = 7
     Height = 30
     Hint = 'Sets the intensity of a channel for a short time, then resets to the previous value.'#13#10'This effect can be combined with another.'
-    Top = 139
+    Top = 137
     Width = 90
     AutoSize = True
     BorderSpacing.Left = 5

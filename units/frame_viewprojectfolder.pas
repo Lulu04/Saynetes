@@ -13,6 +13,7 @@ type
   { TFrameViewProjectFolder }
 
   TFrameViewProjectFolder = class(TFrame)
+    BHelp: TSpeedButton;
     ButtonOpenProject: TSpeedButton;
     FLBProjects: TFileListBox;
     Label1: TLabel;
@@ -22,6 +23,7 @@ type
     Panel3: TPanel;
     SDD1: TSelectDirectoryDialog;
     BSearchProjectFolder: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure ButtonOpenProjectClick(Sender: TObject);
     procedure DirectoryEdit1AcceptDirectory(Sender: TObject; var Value: String);
     procedure FLBProjectsDblClick(Sender: TObject);
@@ -37,9 +39,8 @@ type
   end;
 
 implementation
-uses u_common, u_project_manager,
-  VelocityCurve, u_utils, u_program_options, Graphics,
-  LazFileUtils, LCLType;
+uses u_common, u_project_manager, VelocityCurve, u_utils, u_program_options,
+  form_help, u_resource_string, Graphics, LazFileUtils, LCLType;
 
 {$R *.lfm}
 
@@ -77,6 +78,11 @@ begin
 
    // FLBProjects.ItemIndex := i;
   end;
+end;
+
+procedure TFrameViewProjectFolder.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpProjectList, BHelp);
 end;
 
 procedure TFrameViewProjectFolder.FLBProjectsDblClick(Sender: TObject);

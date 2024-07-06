@@ -14,6 +14,7 @@ type
   { TFrameAudioCapture }
 
   TFrameAudioCapture = class(TFrame)
+    BHelp: TSpeedButton;
     CBFX: TComboBox;
     Image1: TImage;
     Label1: TLabel;
@@ -38,6 +39,7 @@ type
     BOnOff: TSpeedButton;
     SpeedButton4: TSpeedButton;
     Timer1: TTimer;
+    procedure BHelpClick(Sender: TObject);
     procedure BRemoveFXClick(Sender: TObject);
     procedure BAddFXClick(Sender: TObject);
     procedure CBFXCloseUp(Sender: TObject);
@@ -74,7 +76,7 @@ type
 
 implementation
 uses u_resource_string, u_common, u_utils, u_audio_manager, u_apputils,
-  BGRABitmap, utilitaire_bgrabitmap, Graphics;
+  form_help, BGRABitmap, utilitaire_bgrabitmap, Graphics;
 {$R *.lfm}
 
 { TFrameAudioCapture }
@@ -99,6 +101,11 @@ end;
 procedure TFrameAudioCapture.BRemoveFXClick(Sender: TObject);
 begin
   DoRemoveEffect;
+end;
+
+procedure TFrameAudioCapture.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpAudioCapture, BHelp);
 end;
 
 procedure TFrameAudioCapture.BAddFXClick(Sender: TObject);

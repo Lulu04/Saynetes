@@ -42,7 +42,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       AnchorSideTop.Control = Panel1
       AnchorSideTop.Side = asrCenter
       Cursor = crHandPoint
-      Left = 470
+      Left = 448
       Height = 20
       Hint = 'Show/Hide the groups window'
       Top = 7
@@ -68,7 +68,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       AnchorSideTop.Control = BGroup
       AnchorSideTop.Side = asrCenter
       Cursor = crHandPoint
-      Left = 531
+      Left = 509
       Height = 20
       Hint = 'Show/hide the channels tools'
       Top = 7
@@ -94,7 +94,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Side = asrBottom
       Cursor = crHandPoint
-      Left = 608
+      Left = 586
       Height = 20
       Hint = 'Show/hide the RGB tools'
       Top = 7
@@ -245,6 +245,23 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       ParentFont = False
       ParentShowHint = False
     end
+    object BHelp: TSpeedButton
+      AnchorSideLeft.Control = BRGBTools
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BRGBTools
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 637
+      Height = 20
+      Top = 7
+      Width = 20
+      AutoSize = True
+      BorderSpacing.Left = 5
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
+    end
   end
   object PB: TPaintBox
     Left = 0
@@ -298,7 +315,7 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       Caption = '-'
     end
     object MICreateGroup: TMenuItem
-      Caption = 'Create a group'
+      Caption = 'Create channels group'
       ImageIndex = 36
       OnClick = MICreateGroupClick
     end

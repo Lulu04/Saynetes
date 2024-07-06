@@ -87,10 +87,10 @@ object FrameViewProjector: TFrameViewProjector
       object ComboBox1: TComboBox
         AnchorSideLeft.Control = BZoomAll
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 551
+        Left = 527
         Height = 20
         Hint = 'Select the universe(s) to show'
         Top = 7
@@ -111,11 +111,11 @@ object FrameViewProjector: TFrameViewProjector
       object BZoomAll: TSpeedButton
         AnchorSideLeft.Control = BShowInfo
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 512
+        Left = 488
         Height = 24
         Hint = 'View all'
         Top = 5
@@ -136,10 +136,10 @@ object FrameViewProjector: TFrameViewProjector
       object BShowDMXAdress: TSpeedButton
         AnchorSideLeft.Control = BShowRGBSymbol
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 434
+        Left = 410
         Height = 16
         Hint = 'Show/hide DMX adress'
         Top = 9
@@ -163,11 +163,11 @@ object FrameViewProjector: TFrameViewProjector
       object BShowRGBSymbol: TSpeedButton
         AnchorSideLeft.Control = BShowLevels
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 409
+        Left = 385
         Height = 20
         Hint = 'Show/hide a RGB symbol on fixtures that have RGB channels'
         Top = 7
@@ -192,12 +192,12 @@ object FrameViewProjector: TFrameViewProjector
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 384
+        Left = 360
         Height = 20
         Hint = 'Show/hide the channels levels'
         Top = 7
         Width = 20
-        Anchors = [akTop]
+        Anchors = []
         AutoSize = True
         Color = 4545375
         Flat = True
@@ -215,12 +215,12 @@ object FrameViewProjector: TFrameViewProjector
       object BAddDMX: TSpeedButton
         AnchorSideLeft.Control = ComboBox1
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 695
+        Left = 671
         Height = 24
         Hint = 'Modify your DMX universes and fixtures.'
         Top = 5
@@ -252,6 +252,7 @@ object FrameViewProjector: TFrameViewProjector
         Hint = 'Shutdown all lights.'
         Top = 7
         Width = 20
+        Anchors = [akLeft]
         AutoSize = True
         BorderSpacing.Left = 10
         Color = clBlack
@@ -268,11 +269,11 @@ object FrameViewProjector: TFrameViewProjector
       object BShowInfo: TSpeedButton
         AnchorSideLeft.Control = BShowDMXAdress
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Control = BShowLevels
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 477
+        Left = 453
         Height = 20
         Hint = 'Show/hide the fixture information panel.'
         Top = 7
@@ -290,6 +291,24 @@ object FrameViewProjector: TFrameViewProjector
         ShowHint = True
         ParentFont = False
         ParentShowHint = False
+      end
+      object BHelp: TSpeedButton
+        AnchorSideLeft.Control = BAddDMX
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = BShowLevels
+        AnchorSideRight.Control = Panel1
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 717
+        Height = 20
+        Top = 7
+        Width = 20
+        AutoSize = True
+        BorderSpacing.Left = 10
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpClick
       end
     end
     object BGLVirtualScreen1: TBGLVirtualScreen

@@ -23,6 +23,12 @@ type
     BAdd5: TSpeedButton;
     BAdd6: TSpeedButton;
     BAdd7: TSpeedButton;
+    BHelpAudioFollower: TSpeedButton;
+    BHelpCopy: TSpeedButton;
+    BHelpSimpleDimmer: TSpeedButton;
+    BHelpStop: TSpeedButton;
+    BHelpWaveDimmer: TSpeedButton;
+    BHelpFlame: TSpeedButton;
     CB: TComboBox;
     ComboBox1: TComboBox;
     FloatSpinEdit1: TFloatSpinEdit;
@@ -104,6 +110,7 @@ type
     SpeedButton8: TSpeedButton;
     SpeedButton9: TSpeedButton;
     procedure BAdd1Click(Sender: TObject);
+    procedure BHelpSimpleDimmerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
@@ -167,7 +174,7 @@ var
 implementation
 
 uses u_utils, u_resource_string, u_audio_manager, u_project_manager,
-  u_helper, u_sequence_player, ALSound, u_add_action_dmx, u_mainform,
+  u_helper, u_sequence_player, ALSound, u_add_action_dmx, u_mainform, form_help,
   BGRABitmapTypes;
 
 {$R *.lfm}
@@ -324,6 +331,16 @@ begin
 
 //  ModalResult := mrOk;
   Hide;
+end;
+
+procedure TFormDMXRGBTools.BHelpSimpleDimmerClick(Sender: TObject);
+begin
+  if Sender = BHelpSimpleDimmer then _ShowHelp(HelpRGBSimpleDimmer, BHelpSimpleDimmer);
+  if Sender = BHelpWaveDimmer then _ShowHelp(HelpRGBWaveDimmer, BHelpWaveDimmer);
+  if Sender = BHelpFlame then _ShowHelp(HelpRGBFlame, BHelpFlame);
+  if Sender = BHelpAudioFollower then _ShowHelp(HelpRGBAudioFollower, BHelpAudioFollower);
+  if Sender = BHelpCopy then _ShowHelp(HelpRGBCopy, BHelpCopy);
+  if Sender = BHelpStop then _ShowHelp(HelpRGBStop, BHelpStop);
 end;
 
 procedure TFormDMXRGBTools.FormDestroy(Sender: TObject);

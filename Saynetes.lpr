@@ -21,7 +21,7 @@ uses
   frame_viewcolorlist, frame_fx_rgbchaser, frame_viewfixtureslist,
   u_presetmanager, frame_viewfixtureinfo, u_askifshiftadress, u_project_manager,
   frame_viewdmxdipswitchs, u_logfile, frame_cmd_audiofx, frame_trackbar,
-  u_datamodule, frame_audiolevels, frame_intersessionmusic, frame_audiocapture,
+  u_datamodule, frame_audiolevels, frame_intermissionmusic, frame_audiocapture,
   frame_viewprojectfolder, frame_led, frame_buttononoff, u_add_action_dmx,
   frame_viewprojectors, u_global_var, frame_main_audio, frame_main_sequence,
   frame_main_addfixture, u_project_options, project_util, form_about,
@@ -32,7 +32,7 @@ form_editweblink, frame_viewmodeitem, form_defineswitchingchannel,
 form_selectexistingswitchingchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
 form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
-form_newmanufacturer, BGRABitmapTypes, frame_trackbar_customized;
+form_newmanufacturer, BGRABitmapTypes, frame_trackbar_customized, form_help;
 
 {$R *.res}
 
@@ -54,7 +54,7 @@ begin
   Log.DeleteLogFile;
   if ApplicationIsPortable then Log.Info('Saynètes '+APP_VERSION+' run in portable mode')
     else Log.Info('Saynètes '+APP_VERSION+' is installed on this computer');
-  Log.Info('Starting application', 0, True);
+  Log.Info('Starting application '+AppBitness+' on '+OSNameAndBitness, 0, True);
   ProgramOptions := TProgramOptions.Create;
   ProgramOptions.Load;
 

@@ -19,7 +19,7 @@
 {"hash":81372467,"name":"tframeviewdmxcursors.mionlyonall.caption","sourcebytes":[79,110,108,121,32,116,104,105,115,32,99,104,97,110,110,101,108,32,111,110,32,97,108,108,32,102,105,120,116,117,114,101,115],"value":"Only this channel on all fixtures"},
 {"hash":135749043,"name":"tframeviewdmxcursors.miallonall.caption","sourcebytes":[65,108,108,32,99,104,97,110,110,101,108,115,32,111,110,32,97,108,108,32,102,105,120,116,117,114,101,115],"value":"All channels on all fixtures"},
 {"hash":206935619,"name":"tframeviewdmxcursors.miselectonall.caption","sourcebytes":[83,101,108,101,99,116,115,32,111,110,32,97,108,108,32,102,105,120,116,117,114,101,115],"value":"Selects on all fixtures"},
-{"hash":198587648,"name":"tframeviewdmxcursors.micreategroup.caption","sourcebytes":[67,114,101,97,116,101,32,97,32,103,114,111,117,112],"value":"Create a group"},
+{"hash":56757984,"name":"tframeviewdmxcursors.micreategroup.caption","sourcebytes":[67,114,101,97,116,101,32,99,104,97,110,110,101,108,115,32,103,114,111,117,112],"value":"Create channels group"},
 {"hash":341403,"name":"tframeviewdmxcursors.milockchannel.caption","sourcebytes":[76,111,99,107],"value":"Lock"},
 {"hash":96810395,"name":"tframeviewdmxcursors.miunlockchannel.caption","sourcebytes":[85,110,108,111,99,107],"value":"Unlock"}
 ]}
