@@ -1,0 +1,53 @@
+object FormHelp: TFormHelp
+  Left = 561
+  Height = 197
+  Top = 242
+  Width = 455
+  BorderIcons = [biSystemMenu]
+  Caption = 'sHelp'
+  ClientHeight = 197
+  ClientWidth = 455
+  Color = 3947580
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnClose = FormClose
+  OnDeactivate = FormDeactivate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.6.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 197
+    Top = 0
+    Width = 455
+    Align = alClient
+    Brush.Style = bsClear
+    Pen.Color = 247036
+  end
+  object Memo1: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 2
+    Height = 193
+    Top = 2
+    Width = 451
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 2
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 2
+    BorderSpacing.Bottom = 2
+    BorderStyle = bsNone
+    Color = 3947580
+    Font.Color = 15395562
+    ParentBidiMode = False
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+end

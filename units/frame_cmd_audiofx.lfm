@@ -254,10 +254,10 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
           Left = 3
           Height = 15
           Top = 75
-          Width = 33
+          Width = 38
           BorderSpacing.Left = 2
           BorderSpacing.Top = 8
-          Caption = 'Preset'
+          Caption = 'sPreset'
           Font.Color = 15395562
           Font.Height = 16
           Font.Style = [fsItalic]
@@ -578,10 +578,10 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
           Left = 3
           Height = 15
           Top = 76
-          Width = 33
+          Width = 38
           BorderSpacing.Left = 2
           BorderSpacing.Top = 8
-          Caption = 'Preset'
+          Caption = 'sPreset'
           Font.Color = 15395562
           Font.Height = 16
           Font.Style = [fsItalic]
@@ -904,10 +904,10 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
           Left = 3
           Height = 15
           Top = 76
-          Width = 33
+          Width = 38
           BorderSpacing.Left = 2
           BorderSpacing.Top = 8
-          Caption = 'Preset'
+          Caption = 'sPreset'
           Font.Color = 15395562
           Font.Height = 16
           Font.Style = [fsItalic]
@@ -1497,7 +1497,7 @@ object FrameCmdAudioFX: TFrameCmdAudioFX
       BorderSpacing.Right = 3
       Constraints.MinHeight = 20
       Constraints.MinWidth = 50
-      Caption = 'PRESET'
+      Caption = 'sPreset'
       Color = 8421631
       Font.Height = 12
       Transparent = False

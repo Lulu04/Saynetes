@@ -18,6 +18,7 @@ type
 
   TFrameFXRGBChaser = class(TFrame)
     BAdd6: TSpeedButton;
+    BHelp: TSpeedButton;
     CBMove: TComboBox;
     CheckBox1: TCheckBox;
     ColorButton1: TColorButton;
@@ -43,11 +44,12 @@ type
     SpeedButton1: TSpeedButton;
     SpeedButton10: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
+    BColorsPreset: TSpeedButton;
     SpeedButton9: TSpeedButton;
     UpDown1: TUpDown;
     UpDown2: TUpDown;
     procedure BAdd6Click(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure FSE1Change(Sender: TObject);
     procedure Label3Click(Sender: TObject);
     procedure Panel4Resize(Sender: TObject);
@@ -114,7 +116,7 @@ type
 implementation
 
 uses Math, u_resource_string, u_project_manager, u_helper, u_dmxtools_rgb,
-  frame_sequencer, u_mainform, u_add_action_dmx, u_apputils;
+  frame_sequencer, u_mainform, u_add_action_dmx, u_apputils, form_help;
 
 {$R *.lfm}
 
@@ -147,6 +149,11 @@ begin
   FormDMXRGBTools.FShortReadable := FShortReadableString;
   FormDMXRGBTools.FDuration := FCmdDuration;
   FormDMXRGBTools.BAdd1Click(NIL);
+end;
+
+procedure TFrameFXRGBChaser.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpRGBChaser, BHelp);
 end;
 
 procedure TFrameFXRGBChaser.FSE1Change(Sender: TObject);
@@ -438,7 +445,7 @@ begin
   FrameViewColorList1.Parent:=Panel1;
   FrameViewColorList1.Align:=alClient;
   FrameViewColorList1.PresetManager.Init1(SColorPresets,
-                  SpeedButton3,
+                  BColorsPreset,
                   ConcatPaths([GetPresetsFolder, 'ChaserColorList'+PRESET_FILE_EXTENSION]));
 
   FrameViewFixturesList1:=TFrameViewFixturesList.Create(Self);
@@ -497,15 +504,16 @@ end;
 
 procedure TFrameFXRGBChaser.UpdateEditMode;
 begin
-  BAdd6.Visible:=Project.Options.EditMode;
+  BAdd6.Visible := Project.Options.EditMode;
 end;
 
 procedure TFrameFXRGBChaser.UpdateStringAfterLanguageChange;
 begin
-  CBMove.Items.Strings[0]:=SOneShoot;
-  CBMove.Items.Strings[1]:=SLoopForward;
-  CBMove.Items.Strings[2]:=SLoopBackWard;
-  CBMove.Items.Strings[3]:=SPingPong;
+  CBMove.Items.Strings[0] := SOneShoot;
+  CBMove.Items.Strings[1] := SLoopForward;
+  CBMove.Items.Strings[2] := SLoopBackWard;
+  CBMove.Items.Strings[3] := SPingPong;
+  BColorsPreset.Caption := SPreset_;
   FrameViewColorList1.UpdateStringAfterLanguageChange;
 end;
 

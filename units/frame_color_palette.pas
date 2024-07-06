@@ -191,6 +191,7 @@ begin
   Label1.Caption := SRed;
   Label2.Caption := SGreen;
   Label3.Caption := SBlue;
+  BPreset.Caption := SPreset_;
   FPresetManager.UpdateStringAfterLanguageChange;
 end;
 

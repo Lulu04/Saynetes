@@ -2,9 +2,9 @@ object FrameViewAudioList: TFrameViewAudioList
   Left = 0
   Height = 121
   Top = 0
-  Width = 177
+  Width = 258
   ClientHeight = 121
-  ClientWidth = 177
+  ClientWidth = 258
   TabOrder = 0
   DesignLeft = 496
   DesignTop = 245
@@ -18,7 +18,7 @@ object FrameViewAudioList: TFrameViewAudioList
     Left = 0
     Height = 121
     Top = 0
-    Width = 177
+    Width = 258
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderStyle = bsNone
     ClickOnSelChange = False
@@ -41,6 +41,43 @@ object FrameViewAudioList: TFrameViewAudioList
     ParentFont = False
     Style = lbOwnerDrawFixed
     TabOrder = 0
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 41
+    Height = 63
+    Top = 29
+    Width = 176
+    BevelOuter = bvNone
+    ClientHeight = 63
+    ClientWidth = 176
+    Color = 4473924
+    ParentColor = False
+    TabOrder = 1
+    Visible = False
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 50
+      Top = 6
+      Width = 176
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Add audio file to your project'
+      Font.Color = 9604959
+      Font.Height = 25
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
   end
   object Timer1: TTimer
     Enabled = False

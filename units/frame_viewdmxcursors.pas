@@ -96,6 +96,7 @@ type
   { TFrameViewDMXCursors }
 
   TFrameViewDMXCursors = class(TFrame)
+    BHelp: TSpeedButton;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
@@ -122,6 +123,7 @@ type
     BChannelTools: TSpeedButton;
     BGroup: TSpeedButton;
     BSelectNone: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure Panel1Resize(Sender: TObject);
     procedure PBMouseDown(Sender: TObject; Button: TMouseButton; {%H-}Shift: TShiftState; X, Y: Integer);
     procedure PBMouseLeave(Sender: TObject);
@@ -279,9 +281,8 @@ type
   end;
 
 implementation
-uses u_dmxtools_channels, u_dmxtools_rgb,
-  u_dmxtools_group, u_sequence_player, frame_viewprojectors, u_apputils,
-  utilitaire_bgrabitmap;
+uses u_dmxtools_channels, u_dmxtools_rgb, u_dmxtools_group, u_sequence_player,
+  frame_viewprojectors, u_apputils, form_help, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -788,7 +789,7 @@ procedure TFrameViewDMXCursors.Panel1Resize(Sender: TObject);
   end;
   function RightToolsWidth: integer;
   begin
-    Result := BRGBTools.Left+BRGBTools.Width-BGroup.Left;
+    Result := BHelp.Left+BHelp.Width-BGroup.Left;
   end;
 
 begin
@@ -812,8 +813,13 @@ begin
    BZero.Left := ScaleDesignToForm(15);
 
    BGroup.Top := ScaleDesignToForm(7);
-   BGroup.Left := Panel1.ClientWidth-RightToolsWidth-ScaleDesignToForm(15);
+   BGroup.Left := Panel1.ClientWidth-RightToolsWidth;
   end;
+end;
+
+procedure TFrameViewDMXCursors.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpViewCursor, BHelp);
 end;
 
 procedure TFrameViewDMXCursors.PBMouseLeave(Sender: TObject);

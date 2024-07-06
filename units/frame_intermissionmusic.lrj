@@ -1,0 +1,12 @@
+{"version":1,"strings":[
+{"hash":89743235,"name":"tframeintermissionmusic.label1.caption","sourcebytes":[73,78,84,69,82,77,73,83,83,73,79,78,32,77,85,83,73,67],"value":"INTERMISSION MUSIC"},
+{"hash":124298355,"name":"tframeintermissionmusic.flbplaylist.hint","sourcebytes":[84,104,105,115,32,105,115,32,116,104,101,32,108,105,115,116,32,111,102,32,105,110,116,101,114,109,105,115,115,105,111,110,32,109,117,115,105,99,115],"value":"This is the list of intermission musics"},
+{"hash":5404860,"name":"tframeintermissionmusic.label10.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":5404860,"name":"tframeintermissionmusic.label11.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":148257861,"name":"tframeintermissionmusic.label7.caption","sourcebytes":[115,86,111,108,117,109,101],"value":"sVolume"},
+{"hash":131765518,"name":"tframeintermissionmusic.speedbutton3.hint","sourcebytes":[83,116,97,114,116,47,80,97,117,115,101,32,116,104,101,32,105,110,116,101,114,109,105,115,115,105,111,110,32,109,117,115,105,99,46],"value":"Start/Pause the intermission music."},
+{"hash":43018452,"name":"tframeintermissionmusic.label2.caption","sourcebytes":[115,80,108,97,121,108,105,115,116],"value":"sPlaylist"},
+{"hash":130336724,"name":"tframeintermissionmusic.minewplaylist.caption","sourcebytes":[78,101,119,32,112,108,97,121,108,105,115,116],"value":"New playlist"},
+{"hash":24951348,"name":"tframeintermissionmusic.mimodifyplaylist.caption","sourcebytes":[77,111,100,105,102,121,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Modify the playlist"},
+{"hash":266644932,"name":"tframeintermissionmusic.mideleteplaylist.caption","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,112,108,97,121,108,105,115,116],"value":"Delete the playlist"}
+]}

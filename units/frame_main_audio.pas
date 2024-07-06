@@ -16,6 +16,8 @@ type
   { TFrameMainAudio }
 
   TFrameMainAudio = class(TFrame)
+    BHelp: TSpeedButton;
+    BHelp1: TSpeedButton;
     BPanCenter: TSpeedButton;
     BPitchNormal: TSpeedButton;
     BRemoveFXs: TSpeedButton;
@@ -58,6 +60,7 @@ type
     BAddAudio: TSpeedButton;
     BStopAll: TSpeedButton;
     Timer1: TTimer;
+    procedure BHelpClick(Sender: TObject);
     procedure BPanCenterClick(Sender: TObject);
     procedure BPitchNormalClick(Sender: TObject);
     procedure BResetPansClick(Sender: TObject);
@@ -104,7 +107,7 @@ type
 
 implementation
 uses u_utils, u_resource_string, u_project_manager, u_common, u_userdialogs,
-  u_mainform, VelocityCurve, Math;
+  u_mainform, form_help, VelocityCurve, Math;
 
 {$R *.lfm}
 
@@ -118,6 +121,12 @@ begin
    snd.Pan.Value := ALS_PAN_CENTER
  else
    FrameTBPan.Value := ALS_PAN_CENTER;
+end;
+
+procedure TFrameMainAudio.BHelpClick(Sender: TObject);
+begin
+  if Sender = BHelp then _ShowHelp(HelpSoundControl, BHelp);
+  if Sender = BHelp1 then _ShowHelp(HelpSoundList, BHelp1);
 end;
 
 procedure TFrameMainAudio.BPitchNormalClick(Sender: TObject);

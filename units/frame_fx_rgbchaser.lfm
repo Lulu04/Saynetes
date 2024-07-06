@@ -376,9 +376,10 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Cursor = crHandPoint
       Left = 332
       Height = 63
-      Top = 21
+      Top = 26
       Width = 13
       Anchors = [akTop, akRight]
+      BorderSpacing.Top = 5
       BorderSpacing.Right = 3
       Min = 0
       OnClick = UpDown2Click
@@ -467,7 +468,7 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       AnchorSideLeft.Control = Panel5
       AnchorSideTop.Control = SpeedButton1
       AnchorSideTop.Side = asrBottom
-      AnchorSideBottom.Control = SpeedButton3
+      AnchorSideBottom.Control = BColorsPreset
       Left = 4
       Height = 324
       Hint = 'This is the list of colors for the chaser'
@@ -484,21 +485,21 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       ShowHint = True
       TabOrder = 8
     end
-    object SpeedButton3: TSpeedButton
+    object BColorsPreset: TSpeedButton
       AnchorSideLeft.Control = Panel1
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Panel5
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 21
+      Left = 22
       Height = 16
       Top = 371
-      Width = 34
+      Width = 33
       Anchors = [akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Bottom = 10
-      Caption = 'PRESET'
+      Caption = 'sPreset'
       Color = 8421631
       Font.Height = 12
       Transparent = False
@@ -546,6 +547,25 @@ object FrameFXRGBChaser: TFrameFXRGBChaser
       Font.Color = 15395562
       ParentColor = False
       ParentFont = False
+    end
+    object BHelp: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel5
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 326
+      Height = 20
+      Top = 3
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
 end

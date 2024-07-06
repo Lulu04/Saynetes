@@ -565,105 +565,182 @@ resourcestring
   SBarMediumColoredLed='Medium bar colored LED';
   SBarx2MediumColoredLed='Medium bar with multiple rows and colored LED';
 
+
+  SHelp='Help';
+  HelpIntermissionMusic='This module allow you to control the intermission music.'+LineEnding+
+                        'Left click on the list to select a playlist.'+LineEnding+
+                        'Click ON/OFF button to start/pause the selected playlist.'+LineEnding+
+                        'Use green arrow to jump to the previous/next music in the playlist.'+LineEnding+
+                        'Right click on the list to show pop-up menu.';
+
+  HelpProjectList='This is the list of projects found in the selected working folder.'+LineEnding+
+                  'Projects saved in a same folder share the same DMX configuration, and loading a project from here don''t affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other.';
+
+  HelpAudioCapture='This module allow you to playback audio captured from a microphone or line-in.'+LineEnding+
+                   'Click ON/OFF button to start/stop the module.'+LineEnding+
+                   'Pre-amp is the pre-amplification to adjust the input level.'+LineEnding+
+                   'Sets the pan with the pan cursor.'+LineEnding+
+                   'Sets the output volume with the volume cursor.'+LineEnding+
+                   'Use FX button to add audio effect to the captured audio.';
+
+  HelpSoundControl='This module allow you to show and control parameters for the selected audio file.'+LineEnding+
+                   'Select an audio in the list to see its parameters.'+LineEnding+
+                   'Parameters can be modified by a sequence or manually with the mouse.';
+
+  HelpSoundList='This is the list of audio files used by your project.'+LineEnding+
+                'Audio can be played/stopped by a sequence.'+LineEnding+
+                'SPACE to start/stop the selected audio: mouse must be over the audio list.'+LineEnding+
+                'Button ''+'' to add audio to your project. A window appear to select an audio from your disk. Saynètes make a copy of the original audio file and insert it in the project.'+LineEnding+
+                'Right click on an existing audio to show pop-up menu.';
+
+  HelpSequenceList='This is the list of the sequences.'+LineEnding+
+                   'SELECT a sequence with left click.'+LineEnding+
+                   'SPACE to start the selected sequence: mouse must be over the sequence list.'+LineEnding+
+                   'Right click to show pop-up menu.'+LineEnding+
+                   'You can drag a sequence up or down to change its position in the list.';
+
+
+  HelpViewProjector='This is the projector view: it represents the stage, the seats for the spectators and the dmx fixtures used in you project. The Stage and seats shape can be changed from the program option window.'+LineEnding+
+                    'MOVE THE VIEW with right click on empty area and move the mouse.'+LineEnding+
+                    'ZOOM with mouse  wheel.'+LineEnding+
+                    'EDIT the dmx fixtures by clicking on the button at the top right.'+LineEnding+
+                    'SELECT a fixture with left click.'+LineEnding+
+                    'SELECT SEVERAL FIXTURES at once by dragging a rectangle around them.'+LineEnding+
+                    'Right click on a fixture to show pop-up menu.'+LineEnding+
+                    '    - Create rgb group: groups created with this, can be quickly re-selected from the group tool window.'+LineEnding+
+                    '    - Lock: the fixture channels can not be changed.'+LineEnding+
+                    '    - Unlock: the fixture channels can be changed.';
+
+  HelpViewCursor='This is the channel view: it represents the channels of the selected fixtures in the projector view.'+LineEnding+
+                 'ZOOM the view with mouse wheel.'+LineEnding+
+                 'MOVE the view:'+LineEnding+
+                 '    - with the scroll bar at the bottom.'+LineEnding+
+                 '    - keep the middle mouse button pressed and move the mouse to the left or right.'+LineEnding+
+                 'MOVE CURSOR by dragging them. NOTE: moving manually a cursor cancel the current effect.'+LineEnding+
+                 'SELECT/UNSELECT a channel by clicking on the panel name at the bottom.'+LineEnding+
+                 'Right click on the panel name to show pop-up menu:'+LineEnding+
+                 '    - Several tools to select channels.'+LineEnding+
+                 '    - Create channels group: groups created with this, can be quickly re-selected from the group tool window.'+LineEnding+
+                 '    - Lock: the selected channels can not be changed.'+LineEnding+
+                 '    - Unlock: the selected channels can be changed.';
+
+  HelpEditionDMX='You are in the DMX editing mode.'+LineEnding+
+                 'EXIT this mode by clicking the ''Done'' button.'+LineEnding+
+                 'At the top you have the list of DMX universes and tools for:'+LineEnding+
+                 '    - add a new universe.'+LineEnding+
+                 '    - delete an universe.'+LineEnding+
+                 '    - connect an universe to a device.'+LineEnding+
+                 '    - you can also load the DMX configuration from another project.'+LineEnding+
+                 'At the middle, there is the DMX fixtures library: retrieve your fixture by selecting a manufacturer, the fixture name, then select a mode name.'+LineEnding+
+                 'ADD a fixture to your project: when you have selected a fixture name and a mode name, drag this mode name into the projector view and release the mouse button. You can now add as many time as you want the fixture around the stage with mouse left click.'+LineEnding+
+                 'DELETE a fixture: right click to show the pop-up menu, then Delete.'+LineEnding+
+                 'SELECT a fixture with left click.'+LineEnding+
+                 'MOVE a fixture: select it then drag it where you want.'+LineEnding+
+                 'Right click on a fixture to show pop-up menu:'+LineEnding+
+                 '    - Rotation to change its direction.'+LineEnding+
+                 '    - Zoom to change its size.'+LineEnding+
+                 '    - Horizontal flip.'+LineEnding+
+                 '    - Vertical flip.';
+
+  HelpDMXGroup='Retrieve here the groups (channels and RGB) you have previously defined.'+LineEnding+
+               'CHOOSE the type of group you want to recall by clicking Channels or RGB button, then select an item in the list.'+LineEnding+
+               'ADD a group to the current selection by holding down the SHIFT key.'+LineEnding+
+               'Right click on item of the list to:'+LineEnding+
+               '    - RENAME the selected group.'+LineEnding+
+               '    - DELETE the selected group.';
+
+  HelpChannelSimpleDimmer='This is a basic dimmer effect applyed to the selected channels.'+LineEnding+
+                          'Used in a sequence, this effect change the current value of a channel to the new one with respect of the duration and the velocity curve.'+LineEnding+
+                          'Final values of the dimmer are those that you sets on the channels view.'+LineEnding+
+                          'Duration can be equal to zero, in that case the dimmer will jump immediatly to the value.'+LineEnding+
+                          'This effect have no effect in live and should only be used when creating a sequence.';
+
+  HelpChannelWaveDimmer='A double dimmer effect.'+LineEnding+
+                        'This effect change the values of the selected channels (in the channel view) to a first level 1, with respect of the duration 1 and velocity curve 1, then change them to level 2 with respect of the duration 2 and velocity curve 2.'+LineEnding+
+                        'Duration can be equal to zero, in that case the dimmer will jump immediatly to the value.';
+
+  _HelpChannelFlame='This effect simulates the flickering of a flame on the selected channels.'+LineEnding+
+                   'LEVELS: random brightness value are calculated within this interval'+LineEnding+
+                   'WAIT TIME: this is the time between two LEVELS calculations (in fact, a random value is calculated based on the wait time).'+LineEnding+
+                   'SOFTEN: controls the smoothness of the effect.';
+
+
+  HelpContinuousEffect='This effect is continuous, it stops only when you move the channel cursor manually or if a sequence apply another effect on the channel.';
+  HelpPreset='You can save the setting in a preset: click the PRESET button, click Add, enter a name for the setting.'+LineEnding+
+             'To recall a preset, click on the PRESET button then click on its name.';
+
+  _HelpChannelAudioFollower='This effect sets the intensity of the selected channels proportionally to an audio level.'+LineEnding+
+                   'In the list, select the audio to follow.'+LineEnding+
+                   'Clic Play to start the playback'+LineEnding+
+                   'GAIN: this is the amplification applyed to the audio levels before to send it to the channels. Zero means equal, negative value means attenuation, positive value means amplification.'+LineEnding+
+                   'BRIGHTNESS MAX: here you define the maximum value not to be exceeded.'+LineEnding+
+                   'SOFTEN: controls the smoothness of variations.';
+
+  HelpChannelCopy='This effect copies the value of one channel to one or more other channels.'+LineEnding+
+                  'In the channels list, select the source.';
+
+  HelpChannelFlash='Flash briefly applies a value to the channels, holds it for a while and then restores the previous values.'+LineEnding+
+                   'This effect can be used at the same time as another.'+LineEnding+
+                   'FIXED VALUE: sets the value to apply briefly.'+LineEnding+
+                   'RANDOM VALUE: select an interval, a random value will be calculated between.'+LineEnding+
+                   'FIXED DURATION: holding time is always the same.'+LineEnding+
+                   'RANDOM DURATION: holding time is calculated randomly between the two values.'+LineEnding+
+                   'Clic the preview button to see the result.';
+
+  HelpChannelStop='Stops the current effect on selected channels.'+LineEnding+
+                  'Don''t stop a chaser because a chaser is not an effect but a sequence.';
+
+  HelpChannelChaser='This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser.';
+
+  HelpRGBSimpleDimmer='A simple dimmer to apply RGB color to a fixture.'+LineEnding+
+         'Used in a sequence, this effect change the current RGB fixture color to the new one with respect of the duration and the velocity curve.'+LineEnding+
+         'Duration can be equal to zero, in that case the dimmer will jump immediatly to the color.'+LineEnding+
+         'This effect should only be used when creating a sequence.';
+
+  HelpRGBWaveDimmer='A double RGB dimmer effect.'+LineEnding+
+                    'This effect change the current color of the selected fixtures to color 1, with respect of the duration 1 and velocity curve 1, then change them to color 2 with respect of the duration 2 and velocity curve 2.'+LineEnding+
+                    'Duration can be equal to zero, in that case the dimmer will jump immediatly to the color.';
+
+  HelpRGBFlame='This effect simulates the flickering of a flame on the selected fixture.'+LineEnding+
+               'LEVELS: random brightness value are calculated within this interval'+LineEnding+
+               'WAIT TIME: this is the time between two calculations (in fact, a random value is calculated based on the wait time).'+LineEnding+
+               'AMPLITUDE: controls the amplitude of the flickering.'+LineEnding+
+               'SOFTEN: controls the smoothness of the effect.';
+
+  HelpRGBAudioFollower='This effect sets the intensity of a RGB color on the selected fixtures proportionally to an audio level.'+LineEnding+
+         'Select a color.'+LineEnding+
+         'In the list, select the audio to follow.'+LineEnding+
+         'Clic Play to start the playback'+LineEnding+
+         'GAIN: this is the amplification applyed to the audio levels before calculating the color. Zero means equal, negative value means attenuation, positive value means amplification.'+LineEnding+
+         'SOFTEN: controls the smoothness of variations.';
+
+  HelpRGBCopy='This effect copies the RGB color of one fixture to one or more other fixtures (that have RGB channel of course).'+LineEnding+
+              'In the fixture list, select the source.';
+
+  HelpRGBChaser='This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser.';
+
+  HelpRGBStop='Stops the current RGB effect on selected channels.'+LineEnding+
+              'Don''t stop an RGB chaser because a chaser is not an effect but a sequence.';
+
+  function HelpChannelFlame: string;
+  function HelpChannelAudioFollower: string;
+
 implementation
-// exclusion i18n
-{
-TForm_ChangeStepLength.Label4.Caption
-TForm_MoveStep.Label2.Caption
-TFormTopEdition.Label1.Caption
-TFormTopEdition.Label10.Caption
-TFormTopEdition.Label11.Caption
-TFormTopEdition.Label12.Caption
-TFormTopEdition.Label16.Caption
-TFormTopEdition.Label17.Caption
-TFormTopEdition.Label6.Caption
-FrameCmdAudio.lblVol.Caption
-FrameCmdAudio.lblPan.Caption
-FrameCmdAudio.lblPitch.Caption
-TFormEditFixture.E1.Text
-TFormEditFixture.Label11.Caption
-TFormEditFixture.Label2.Caption
-TFormFixtureWizard.E1.Text
-TFormFixtureWizard.E2.Text
-TFormFixtureWizard.E3.Text
-TFormFixtureWizard.E4.Text
-TFormFixtureWizard.Label2.Caption
-TFormFixtureWizard.Label3.Caption
-TFormFixtureWizard.Label15.Caption
-TFormFixtureWizard.Label16.Caption
-TFormFixtureWizard.Label9.Caption
-TFormFixtureWizard.Label14.Caption
-TFormOtherAction.Label11.Caption
-TFormSequenceEdition.Label1.Caption
-TFormSequenceEdition.Label2.Caption
-TFormSequenceEdition.Label6.Caption
-TFormSequenceEdition.Label10.Caption
-TFormSequenceEdition.Label11.Caption
-TFormSequenceEdition.Label12.Caption
-TFormSequenceEdition.Label16.Caption
-TFormSequenceEdition.Label17.Caption
-TFormSequenceEdition.Label21.Caption
-TFormUserConfirmation.Label1.Caption
-TFormUserConfirmation.Caption
-TFormUserInput.Caption
-TFormUserInput.Edit1.Text
-TFormUserInput.Label1.Caption
-TFormUserMessage.Label1.Caption
-TFormUserMessage.Caption
-TFrameCmdAudio.lblfrequency.Caption
-TFrameCmdAudio.lblpan.Caption
-TFrameCmdAudio.lblvol.Caption
-TFrameMainEntracte.Label1.Caption
-TFrameMainEntracte.Label8.Caption
-TFrameMainEntracte.Label9.Caption
-TFrameFixtureInfo.Label1.Caption
-TFrameFixtureInfo.Label2.Caption
-TFrameFixtureInfo.Label3.Caption
-TFrameFixtureInfo.Label4.Caption
-TFrameFixtureInfo.Label5.Caption
-TFrameFixtureInfo.Edit1.Text
-TFrameFixtureInfo.Edit2.Text
-TFrameFXChannelChaser.Label11.Caption
-TFrameFXChannelChaser.Label13.Caption
-TFrameMainAudio.lbl_pan.Caption
-TFrameMainAudio.lbl_volume.Caption
-TFrameMainAudio.lbl
-TFrameViewDipSwitch.Label1.Caption
-TFrameViewDipSwitchs.Label17.Caption
-TFormDMXLibrary.lblfixturepower.Caption
-TFormDMXLibrary.lblfixturename.Caption
-TFormDMXChannelsTools.Label8.Caption
-TFormDMXChannelsTools.Label9.Caption
-TFormDMXChannelsTools.Label10.Caption
-TFormDMXChannelsTools.Label11.Caption
-TFormDMXChannelsTools.Label12.Caption
-TFormDMXChannelsTools.Label13.Caption
-TFormDMXChannelsTools.Label15.Caption
-TFormDMXChannelsTools.Label19.Caption
-TFormDMXChannelsTools.Label20.Caption
-TFormDMXChannelsTools.Label21.Caption
-TFormDMXRGBTools.Label8.Caption
-TFormDMXRGBTools.Label10.Caption
-TFormDMXRGBTools.Label12.Caption
-TFormDMXRGBTools.Label13.Caption
-TFormDMXRGBTools.Label15.Caption
-TFormDMXRGBTools.Label19.Caption
-TFormDMXRGBTools.Label20.Caption
-TFormToolFixtureInfo.Caption
-TFormToolFixtureInfo.Label1.Caption
-TFormToolFixtureInfo.Label2.Caption
-TFormToolFixtureInfo.Label3.Caption
-TFormToolFixtureInfo.Label4.Caption
-TFormToolFixtureInfo.Label5.Caption
-TFormToolFixtureInfo.Edit1.Text
-TFormToolFixtureInfo.Edit2.Text
-TFormInputDMXRange.Caption
-TFormPrepaAudio.Label6.Caption
-TFormAskIfShiftAdress.Caption
-TFormAskIfShiftAdress.Label1.Caption
-TFormAskIfShiftAdress.SpeedButton1.Caption
-TFormAskIfShiftAdress.SpeedButton2.Caption
-}
+
+function HelpChannelFlame: string;
+begin
+  Result := _HelpChannelFlame + LineEnding + LineEnding +
+            HelpContinuousEffect + LineEnding + LineEnding +
+            HelpPreset;
+end;
+
+function HelpChannelAudioFollower: string;
+begin
+  Result := _HelpChannelAudioFollower + LineEnding + LineEnding +
+            HelpContinuousEffect + LineEnding + LineEnding +
+            HelpPreset;
+end;
+
 
 end.
 

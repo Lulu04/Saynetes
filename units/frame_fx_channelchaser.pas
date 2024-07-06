@@ -17,6 +17,7 @@ type
 
   TFrameFXChannelChaser = class(TFrame)
     BAdd6: TSpeedButton;
+    BHelp: TSpeedButton;
     CBMove: TComboBox;
     CBMode: TComboBox;
     FSE1: TFloatSpinEdit;
@@ -40,6 +41,7 @@ type
     SpeedButton9: TSpeedButton;
     UpDown1: TUpDown;
     procedure BAdd6Click(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure Panel4Resize(Sender: TObject);
     procedure Shape5MouseDown(Sender: TObject; {%H-}Button: TMouseButton;
       {%H-}Shift: TShiftState; {%H-}X, {%H-}Y: Integer);
@@ -97,8 +99,8 @@ type
 
 implementation
 
-uses u_project_manager, u_resource_string, u_helper,
-  u_dmxtools_channels, frame_sequencer, u_mainform, u_add_action_dmx, Math,
+uses u_project_manager, u_resource_string, u_helper, u_dmxtools_channels,
+  frame_sequencer, u_mainform, u_add_action_dmx, form_help, Math,
   BGRABitmapTypes;
 
 {$R *.lfm}
@@ -199,6 +201,11 @@ begin
   FormDMXChannelsTools.FShortReadable := FShortReadableString;
   FormDMXChannelsTools.FDuration := FCmdDuration;
   FormDMXChannelsTools.BAdd1Click(NIL);
+end;
+
+procedure TFrameFXChannelChaser.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpChannelChaser, BHelp);
 end;
 
 procedure TFrameFXChannelChaser.GenerateForwardMode1(var tp: single);

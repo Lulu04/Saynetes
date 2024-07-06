@@ -193,9 +193,8 @@ object FrameMainAudio: TFrameMainAudio
       end
       object Label8: TLabel
         AnchorSideTop.Control = Panel1
-        AnchorSideRight.Control = Panel1
-        AnchorSideRight.Side = asrBottom
-        Left = 260
+        AnchorSideRight.Control = BHelp
+        Left = 240
         Height = 17
         Top = 4
         Width = 111
@@ -269,12 +268,11 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideTop.Control = SB_fadeout1s
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 86
+        Left = 71
         Height = 18
         Top = 26
         Width = 35
         AutoSize = True
-        BorderSpacing.Left = 5
         Constraints.MaxHeight = 18
         Constraints.MaxWidth = 35
         Constraints.MinHeight = 18
@@ -301,12 +299,11 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideTop.Control = SB_fadeout1s
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 46
+        Left = 36
         Height = 18
         Top = 26
         Width = 35
         AutoSize = True
-        BorderSpacing.Left = 5
         Constraints.MaxHeight = 18
         Constraints.MaxWidth = 35
         Constraints.MinHeight = 18
@@ -333,7 +330,7 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Cursor = crHandPoint
-        Left = 6
+        Left = 1
         Height = 18
         Hint = 'Fadeout the selected sounds'
         Top = 26
@@ -366,13 +363,12 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideTop.Control = Panel1
         AnchorSideRight.Control = SB_fadein4s
         Cursor = crHandPoint
-        Left = 6
+        Left = 1
         Height = 18
         Hint = 'Fadein the selected sounds'
         Top = 5
         Width = 35
         AutoSize = True
-        BorderSpacing.Left = 5
         BorderSpacing.Top = 4
         Constraints.MaxHeight = 18
         Constraints.MaxWidth = 35
@@ -399,12 +395,11 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = SB_fadein1s
         Cursor = crHandPoint
-        Left = 46
+        Left = 36
         Height = 18
         Top = 5
         Width = 35
         AutoSize = True
-        BorderSpacing.Left = 5
         Constraints.MaxHeight = 18
         Constraints.MaxWidth = 35
         Constraints.MinHeight = 18
@@ -430,12 +425,11 @@ object FrameMainAudio: TFrameMainAudio
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = SB_fadein1s
         Cursor = crHandPoint
-        Left = 86
+        Left = 71
         Height = 18
         Top = 5
         Width = 35
         AutoSize = True
-        BorderSpacing.Left = 5
         Constraints.MaxHeight = 18
         Constraints.MaxWidth = 35
         Constraints.MinHeight = 18
@@ -454,6 +448,22 @@ object FrameMainAudio: TFrameMainAudio
         ShowHint = True
         ParentFont = False
         ParentShowHint = False
+      end
+      object BHelp: TSpeedButton
+        AnchorSideTop.Control = Panel1
+        AnchorSideRight.Control = Panel1
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 354
+        Height = 20
+        Top = 1
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpClick
       end
     end
   end
@@ -517,7 +527,7 @@ object FrameMainAudio: TFrameMainAudio
       AnchorSideRight.Control = BResetPans
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 592
+      Left = 579
       Height = 20
       Hint = 'Stop all audio'
       Top = 10
@@ -534,22 +544,19 @@ object FrameMainAudio: TFrameMainAudio
       ParentShowHint = False
     end
     object BRemoveFXs: TSpeedButton
-      AnchorSideLeft.Control = BResetPitchs
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel4
       AnchorSideTop.Side = asrCenter
-      AnchorSideRight.Control = Panel4
-      AnchorSideRight.Side = asrBottom
+      AnchorSideRight.Control = BHelp1
       Cursor = crHandPoint
-      Left = 731
+      Left = 718
       Height = 20
       Hint = 'Remove effects on all audio'
       Top = 10
       Width = 39
       Anchors = [akTop, akRight]
       AutoSize = True
-      BorderSpacing.Left = 5
-      BorderSpacing.Right = 10
+      BorderSpacing.Right = 3
       Caption = 'sFX'
       Flat = True
       Font.Color = 15395562
@@ -567,7 +574,7 @@ object FrameMainAudio: TFrameMainAudio
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = BResetPitchs
       Cursor = crHandPoint
-      Left = 622
+      Left = 609
       Height = 20
       Hint = 'Sets pan to center on all audio'
       Top = 10
@@ -592,7 +599,7 @@ object FrameMainAudio: TFrameMainAudio
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = BRemoveFXs
       Cursor = crHandPoint
-      Left = 673
+      Left = 660
       Height = 20
       Hint = 'Sets pitch to normal on all audio'
       Top = 10
@@ -610,6 +617,22 @@ object FrameMainAudio: TFrameMainAudio
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+    end
+    object BHelp1: TSpeedButton
+      AnchorSideTop.Control = Panel4
+      AnchorSideRight.Control = Panel4
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 760
+      Height = 20
+      Top = 1
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
   object Panel6: TPanel

@@ -1,10 +1,10 @@
 object FrameViewTopList: TFrameViewTopList
   Left = 0
-  Height = 104
+  Height = 124
   Top = 0
-  Width = 218
-  ClientHeight = 104
-  ClientWidth = 218
+  Width = 284
+  ClientHeight = 124
+  ClientWidth = 284
   TabOrder = 0
   DesignLeft = 446
   DesignTop = 265
@@ -16,9 +16,9 @@ object FrameViewTopList: TFrameViewTopList
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 0
-    Height = 104
+    Height = 124
     Top = 0
-    Width = 218
+    Width = 284
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderStyle = bsNone
     ClickOnSelChange = False
@@ -50,6 +50,43 @@ object FrameViewTopList: TFrameViewTopList
     Style = lbOwnerDrawFixed
     TabOrder = 0
     TabStop = False
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 54
+    Height = 89
+    Top = 18
+    Width = 176
+    BevelOuter = bvNone
+    ClientHeight = 89
+    ClientWidth = 176
+    Color = 4473924
+    ParentColor = False
+    TabOrder = 1
+    Visible = False
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 50
+      Top = 19
+      Width = 176
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Add sequence to your project'
+      Font.Color = 9604959
+      Font.Height = 25
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
   end
   object Timer1: TTimer
     Interval = 200

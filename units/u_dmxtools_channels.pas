@@ -22,6 +22,13 @@ type
     BAdd4: TSpeedButton;
     BAdd6: TSpeedButton;
     BAdd7: TSpeedButton;
+    BHelpFlash: TSpeedButton;
+    BHelpCopy: TSpeedButton;
+    BHelpStop: TSpeedButton;
+    BHelpSimpleDimmer: TSpeedButton;
+    BHelpAudioFollower: TSpeedButton;
+    BHelpWaveDimmer: TSpeedButton;
+    BHelpFlame: TSpeedButton;
     ButtonAudioFollowerPreset: TSpeedButton;
     ComboBox1: TComboBox;
     FloatSpinEdit1: TFloatSpinEdit;
@@ -114,6 +121,7 @@ type
     ButtonFlamePreset: TSpeedButton;
     procedure BAdd1Click(Sender: TObject);
     procedure BDimmerWavePreviewClick(Sender: TObject);
+    procedure BHelpSimpleDimmerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
@@ -193,7 +201,7 @@ implementation
 
 uses LCLType, ALSound, u_resource_string, u_utils,
   u_audio_manager, u_project_manager, u_helper, u_sequence_player,
-  u_add_action_dmx, u_mainform, u_apputils, BGRABitmapTypes;
+  u_add_action_dmx, u_mainform, u_apputils, form_help, BGRABitmapTypes;
 
 {$R *.lfm}
 
@@ -751,6 +759,7 @@ begin
   Label32.Caption := SVelocity + ' 2';
   BDimmerWavePreview.Hint := SPreview;
 
+
   FFlamePresetManager.UpdateStringAfterLanguageChange;
   FAudioFollowerPresetManager.UpdateStringAfterLanguageChange;
 end;
@@ -951,6 +960,17 @@ begin
     FTargetChannels[i].StartInternalWave(FrameTBWaveLevel1.Value, FloatSpinEdit4.Value, FrameVelocity2.SelectedCurveID,
                                          0.0,
                                          FrameTBWaveLevel2.Value, FloatSpinEdit5.Value, FrameVelocity3.SelectedCurveID);
+end;
+
+procedure TFormDMXChannelsTools.BHelpSimpleDimmerClick(Sender: TObject);
+begin
+  if Sender = BHelpSimpleDimmer then _ShowHelp(HelpChannelSimpleDimmer, BHelpSimpleDimmer);
+  if Sender = BHelpWaveDimmer then _ShowHelp(HelpChannelWaveDimmer, BHelpWaveDimmer);
+  if Sender = BHelpFlame then _ShowHelp(HelpChannelFlame, BHelpFlame);
+  if Sender = BHelpAudioFollower then _ShowHelp(HelpChannelAudioFollower, BHelpAudioFollower);
+  if Sender = BHelpCopy then _ShowHelp(HelpChannelCopy, BHelpCopy);
+  if Sender = BHelpFlash then _ShowHelp(HelpChannelFlash, BHelpFlash);
+  if Sender = BHelpStop then _ShowHelp(HelpChannelStop, BHelpStop);
 end;
 
 procedure TFormDMXChannelsTools.FormDestroy(Sender: TObject);

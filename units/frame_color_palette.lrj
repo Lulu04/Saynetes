@@ -2,7 +2,7 @@
 {"hash":5404860,"name":"tframe_colorpalette.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframe_colorpalette.label2.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tframe_colorpalette.label3.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
-{"hash":89565092,"name":"tframe_colorpalette.bpreset.caption","sourcebytes":[80,82,69,83,69,84],"value":"PRESET"},
+{"hash":142133684,"name":"tframe_colorpalette.bpreset.caption","sourcebytes":[115,80,114,101,115,101,116],"value":"sPreset"},
 {"hash":230673746,"name":"tframe_colorpalette.speedbutton2.hint","sourcebytes":[67,108,105,99,107,32,116,111,32,101,110,116,101,114,32,119,101,98,32,99,111,108,111,114],"value":"Click to enter web color"},
 {"hash":35,"name":"tframe_colorpalette.speedbutton2.caption","sourcebytes":[35],"value":"#"},
 {"hash":180916681,"name":"tframe_colorpalette.label4.caption","sourcebytes":[69,110,116,101,114,32,119,101,98,32,99,111,108,111,114,13,10,40,35,32,43,32,104,101,120,32,116,114,105,112,108,101,116,41],"value":"Enter web color\r\n(# + hex triplet)"}

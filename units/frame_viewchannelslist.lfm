@@ -14,6 +14,7 @@ object FrameViewChannelsList: TFrameViewChannelsList
     Top = 0
     Width = 167
     Align = alClient
+    BorderStyle = bsNone
     Color = 3355443
     Font.Color = 11318976
     Font.Height = 13

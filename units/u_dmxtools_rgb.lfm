@@ -1,7 +1,7 @@
 object FormDMXRGBTools: TFormDMXRGBTools
-  Left = 843
+  Left = 784
   Height = 486
-  Top = 194
+  Top = 200
   Width = 371
   BorderIcons = [biSystemMenu]
   Caption = 'RGB Tools'
@@ -187,7 +187,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Height = 298
     Top = 186
     Width = 263
-    PageIndex = 0
+    PageIndex = 4
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Right = 3
@@ -208,7 +208,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         Height = 274
         Top = 24
         Width = 263
-        PageIndex = 0
+        PageIndex = 1
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabOrder = 0
         object PageSimpleDimmer: TPage
@@ -294,6 +294,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
             Font.Color = 15395562
             ParentColor = False
             ParentFont = False
+          end
+          object BHelpSimpleDimmer: TSpeedButton
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = PageSimpleDimmer
+            AnchorSideRight.Control = PageSimpleDimmer
+            AnchorSideRight.Side = asrBottom
+            Cursor = crHelp
+            Left = 241
+            Height = 20
+            Top = 2
+            Width = 20
+            Anchors = [akTop, akRight]
+            AutoSize = True
+            BorderSpacing.Top = 2
+            BorderSpacing.Right = 2
+            Flat = True
+            Images = DataModule1.ImageList1
+            ImageIndex = 48
+            OnClick = BHelpSimpleDimmerClick
           end
         end
         object PageWaveDimmer: TPage
@@ -504,6 +523,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
             OnClick = SpeedButton13Click
             ShowHint = True
             ParentShowHint = False
+          end
+          object BHelpWaveDimmer: TSpeedButton
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = PageWaveDimmer
+            AnchorSideRight.Control = PageWaveDimmer
+            AnchorSideRight.Side = asrBottom
+            Cursor = crHelp
+            Left = 241
+            Height = 20
+            Top = 2
+            Width = 20
+            Anchors = [akTop, akRight]
+            AutoSize = True
+            BorderSpacing.Top = 2
+            BorderSpacing.Right = 2
+            Flat = True
+            Images = DataModule1.ImageList1
+            ImageIndex = 48
+            OnClick = BHelpSimpleDimmerClick
           end
         end
       end
@@ -717,6 +755,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
         BevelOuter = bvNone
         TabOrder = 2
       end
+      object BHelpFlame: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageFlame
+        AnchorSideRight.Control = PageFlame
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 241
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
+      end
     end
     object PageAudioFollower: TPage
       object Label5: TLabel
@@ -779,14 +836,14 @@ object FormDMXRGBTools: TFormDMXRGBTools
       object ComboBox1: TComboBox
         AnchorSideLeft.Control = PageAudioFollower
         AnchorSideTop.Control = PageAudioFollower
-        AnchorSideRight.Control = PageAudioFollower
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = BHelpAudioFollower
         Left = 0
         Height = 23
         Top = 3
-        Width = 263
+        Width = 238
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 3
+        BorderSpacing.Right = 3
         Color = 2565927
         ItemHeight = 15
         Style = csDropDownList
@@ -904,6 +961,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
         BevelOuter = bvNone
         TabOrder = 2
       end
+      object BHelpAudioFollower: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageAudioFollower
+        AnchorSideRight.Control = PageAudioFollower
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 241
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
+      end
     end
     object PageCopy: TPage
       object BAdd4: TSpeedButton
@@ -999,12 +1075,11 @@ object FormDMXRGBTools: TFormDMXRGBTools
       object Label2: TLabel
         AnchorSideLeft.Control = PageCopy
         AnchorSideTop.Control = PageCopy
-        AnchorSideRight.Control = PageCopy
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = BHelpCopy
         Left = 5
         Height = 15
         Top = 5
-        Width = 253
+        Width = 231
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
@@ -1015,6 +1090,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
         ParentColor = False
         ParentFont = False
         WordWrap = True
+      end
+      object BHelpCopy: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageCopy
+        AnchorSideRight.Control = PageCopy
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 241
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageStop: TPage
@@ -1066,6 +1160,25 @@ object FormDMXRGBTools: TFormDMXRGBTools
         ParentColor = False
         ParentFont = False
         WordWrap = True
+      end
+      object BHelpStop: TSpeedButton
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = PageStop
+        AnchorSideRight.Control = PageStop
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHelp
+        Left = 241
+        Height = 20
+        Top = 2
+        Width = 20
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 2
+        Flat = True
+        Images = DataModule1.ImageList1
+        ImageIndex = 48
+        OnClick = BHelpSimpleDimmerClick
       end
     end
     object PageChaser: TPage

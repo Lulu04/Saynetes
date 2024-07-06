@@ -53,6 +53,7 @@ type
   TFrameViewProjector = class(TFrame)
     BAddDMX: TSpeedButton;
     BGLVirtualScreen1: TBGLVirtualScreen;
+    BHelp: TSpeedButton;
     BShowDMXAdress: TSpeedButton;
     BShowInfo: TSpeedButton;
     BShowLevels: TSpeedButton;
@@ -94,6 +95,7 @@ type
     procedure BGLVirtualScreen1Redraw(Sender: TObject; BGLContext: TBGLContext);
     procedure BGLVirtualScreen1Resize(Sender: TObject);
     procedure BGLVirtualScreen1UnloadTextures(Sender: TObject; {%H-}BGLContext: TBGLContext);
+    procedure BHelpClick(Sender: TObject);
     procedure BShowDMXAdressClick(Sender: TObject);
     procedure BZoomAllClick(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
@@ -273,7 +275,7 @@ type
 implementation
 uses u_project_manager, u_userdialogs, u_resource_string, u_dmxtools_group,
   u_list_sequence, u_sequence_player, u_dmxtools_rgb, u_askifshiftadress,
-  u_mainform, u_logfile, u_program_options, u_apputils, Math,
+  u_mainform, u_logfile, u_program_options, u_apputils, form_help, Math,
   ComCtrls, Dialogs, BGRATransform, utilitaire_bgrabitmap, PropertyUtils;
 
 
@@ -614,15 +616,15 @@ begin
   FToogleSpeedButtonManager.SetState(BShowLevels, bv);
   FShowLevel := bv;
 
-  prop.BooleanValueOf('ShowRGBSymbol', bv, True);
+  prop.BooleanValueOf('ShowRGBSymbol', bv, False);
   FToogleSpeedButtonManager.SetState(BShowRGBSymbol, bv);
   FShowRGBSymbol := bv;
 
-  prop.BooleanValueOf('ShowAdress', bv, True);
+  prop.BooleanValueOf('ShowAdress', bv, False);
   FToogleSpeedButtonManager.SetState(BShowDMXAdress, bv);
   FShowDMXAdress := bv;
 
-  prop.BooleanValueOf('ShowFixtureInfo', bv, True);
+  prop.BooleanValueOf('ShowFixtureInfo', bv, False);
   FToogleSpeedButtonManager.SetState(BShowInfo, bv);
   FShowFixtureInfo := bv;
 
@@ -1150,6 +1152,11 @@ begin
   DeleteOpenGLObjects;
 end;
 
+procedure TFrameViewProjector.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpViewProjector, BHelp);
+end;
+
 procedure TFrameViewProjector.BShowDMXAdressClick(Sender: TObject);
 begin
   FShowDMXAdress := FToogleSpeedButtonManager.Checked[BShowDMXAdress];
@@ -1308,7 +1315,7 @@ procedure TFrameViewProjector.Panel1Resize(Sender: TObject);
  end;
  function RightToolsWidth: integer;
  begin
-   Result := BAddDMX.Left+BAddDMX.Width-BShowLevels.Left;
+   Result := BHelp.Left+BHelp.Width-BShowLevels.Left; // BAddDMX.Left+BAddDMX.Width-BShowLevels.Left;
  end;
 begin
   // rearrange the tools on 1 or 2 lines
@@ -1316,6 +1323,7 @@ begin
   begin  // 2 lines
     Panel1.Height := ScaleDesignToForm(7+20+4+20+8);
 
+    Speedbutton5.Top := ScaleDesignToForm(7);
     BShowLevels.Top := Panel1.ClientHeight-ScaleDesignToForm(20+7);
     BShowLevels.Left := (Panel1.ClientWidth-RightToolsWidth) div 2;
   end;
@@ -1324,8 +1332,9 @@ begin
   begin // 1 line
    Panel1.Height := ScaleDesignToForm(7+20+8);
 
+   Speedbutton5.Top := ScaleDesignToForm(7);
    BShowLevels.Top := ScaleDesignToForm(7);
-   BShowLevels.Left := Panel1.ClientWidth-RightToolsWidth-ScaleDesignToForm(15);
+   BShowLevels.Left := Panel1.ClientWidth-RightToolsWidth{-ScaleDesignToForm(15)};
   end;
 end;
 

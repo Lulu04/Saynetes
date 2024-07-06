@@ -15,6 +15,7 @@ type
   { TFrameViewTopList }
 
   TFrameViewTopList = class(TFrame)
+    Label1: TLabel;
     LB: TListBox;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
@@ -29,6 +30,7 @@ type
     MIDuplicate: TMenuItem;
     MIEdit: TMenuItem;
     MINewSequence: TMenuItem;
+    Panel1: TPanel;
     PopupMenu1: TPopupMenu;
     Timer1: TTimer;
     procedure LBDragDrop(Sender, Source: TObject; X, Y: Integer);
@@ -525,6 +527,7 @@ end;
 
 procedure TFrameViewTopList.Timer1Timer(Sender: TObject);
 begin
+  Panel1.Visible := Sequences.Count = 0;
  if FDraggedItemIndex = -1 then
    LB.Invalidate;
 end;

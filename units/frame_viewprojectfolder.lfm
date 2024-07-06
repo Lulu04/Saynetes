@@ -95,9 +95,8 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
     end
     object Label8: TLabel
       AnchorSideTop.Control = Panel3
-      AnchorSideRight.Control = Panel3
-      AnchorSideRight.Side = asrBottom
-      Left = 279
+      AnchorSideRight.Control = BHelp
+      Left = 259
       Height = 17
       Top = 2
       Width = 63
@@ -171,6 +170,22 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       OnClick = BSearchProjectFolderClick
       ShowHint = True
       ParentShowHint = False
+    end
+    object BHelp: TSpeedButton
+      AnchorSideTop.Control = Panel3
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 325
+      Height = 20
+      Top = 0
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
   object SDD1: TSelectDirectoryDialog
