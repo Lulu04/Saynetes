@@ -122,11 +122,11 @@ object FrameIntermissionMusic: TFrameIntermissionMusic
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 348
-      Height = 233
+      Height = 230
       Top = 42
       Width = 27
       Anchors = [akTop, akLeft, akBottom]
-      BorderSpacing.Bottom = 2
+      BorderSpacing.Bottom = 5
       Brush.Color = 3815994
       Pen.Color = 3552822
       Shape = stRoundRect
@@ -265,7 +265,7 @@ object FrameIntermissionMusic: TFrameIntermissionMusic
       AnchorSideBottom.Control = Shape2
       AnchorSideBottom.Side = asrBottom
       Left = 350
-      Height = 225
+      Height = 222
       Top = 46
       Width = 22
       Anchors = [akTop, akRight, akBottom]

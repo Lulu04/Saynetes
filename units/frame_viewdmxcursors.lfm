@@ -235,11 +235,11 @@ object FrameViewDMXCursors: TFrameViewDMXCursors
       AutoSize = True
       BorderSpacing.Left = 15
       Color = clBlack
+      Flat = True
       Font.Height = 12
       Font.Style = [fsBold]
       Images = DataModule1.ImageList1
       ImageIndex = 7
-      Transparent = False
       OnClick = BSelectNoneClick
       ShowHint = True
       ParentFont = False
