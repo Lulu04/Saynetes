@@ -3552,7 +3552,7 @@ msgstr "chargement des icones du programme"
 
 #: u_resource_string.sloop
 msgid "Loop"
-msgstr "Loop"
+msgstr "En boucle"
 
 #: u_resource_string.sloopbackward
 msgid "LOOP BACKWARD"
