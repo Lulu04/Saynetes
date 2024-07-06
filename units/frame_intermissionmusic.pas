@@ -1,4 +1,4 @@
-unit frame_intersessionmusic;
+unit frame_intermissionmusic;
 
 {$mode ObjFPC}{$H+}
 
@@ -11,9 +11,9 @@ uses
 
 type
 
-  { TFrameIntersessionMusic }
+  { TFrameIntermissionMusic }
 
-  TFrameIntersessionMusic = class(TFrame)
+  TFrameIntermissionMusic = class(TFrame)
     FLBPlaylist: TFileListBox;
     Label10: TLabel;
     Label11: TLabel;
@@ -32,8 +32,10 @@ type
     Shape3: TShape;
     BPrevious: TSpeedButton;
     BNext: TSpeedButton;
+    BHelp: TSpeedButton;
     SpeedButton3: TSpeedButton;
     Timer1: TTimer;
+    procedure BHelpClick(Sender: TObject);
     procedure BPreviousMouseEnter(Sender: TObject);
     procedure FLBPlaylistDrawItem({%H-}Control: TWinControl; Index: Integer; ARect: TRect; State: TOwnerDrawState);
     procedure FLBPlaylistMouseLeave(Sender: TObject);
@@ -67,16 +69,15 @@ type
   end;
 
 implementation
-uses ALSound, u_audio_manager, LCLType, Graphics,
-  u_common, u_createplaylist, u_userdialogs,
-  u_resource_string, u_utils, u_apputils, u_program_options, VelocityCurve,
-  System.UITypes, LazFileUtils, BGRABitmapTypes;
+uses ALSound, u_audio_manager, LCLType, Graphics, u_common, u_createplaylist,
+  u_userdialogs, u_resource_string, u_utils, u_apputils, u_program_options,
+  form_help, VelocityCurve, System.UITypes, LazFileUtils, BGRABitmapTypes;
 
 {$R *.lfm}
 
-{ TFrameIntersessionMusic }
+{ TFrameIntermissionMusic }
 
-procedure TFrameIntersessionMusic.FLBPlaylistSelectionChange(Sender: TObject; User: boolean);
+procedure TFrameIntermissionMusic.FLBPlaylistSelectionChange(Sender: TObject; User: boolean);
 var s: string;
 begin
   if FLBPlaylist.ItemIndex <> -1 then
@@ -92,7 +93,7 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.FLBPlaylistDrawItem(Control: TWinControl;
+procedure TFrameIntermissionMusic.FLBPlaylistDrawItem(Control: TWinControl;
   Index: Integer; ARect: TRect; State: TOwnerDrawState);
 begin
   with FLBPlaylist.Canvas do
@@ -123,19 +124,24 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.FLBPlaylistMouseLeave(Sender: TObject);
+procedure TFrameIntermissionMusic.FLBPlaylistMouseLeave(Sender: TObject);
 begin
   FItemIndexUnderMouse := -1;
   FLBPlaylist.Invalidate;
 end;
 
-procedure TFrameIntersessionMusic.BPreviousMouseEnter(Sender: TObject);
+procedure TFrameIntermissionMusic.BPreviousMouseEnter(Sender: TObject);
 begin
   BNext.Hint := SNext;
   BPrevious.Hint := SPrevious;
 end;
 
-procedure TFrameIntersessionMusic.FLBPlaylistMouseMove(Sender: TObject;
+procedure TFrameIntermissionMusic.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpIntermissionMusic, BHelp);
+end;
+
+procedure TFrameIntermissionMusic.FLBPlaylistMouseMove(Sender: TObject;
   Shift: TShiftState; X, Y: Integer);
 var
   i: Integer;
@@ -153,7 +159,7 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.MIDeletePlaylistClick(Sender: TObject);
+procedure TFrameIntermissionMusic.MIDeletePlaylistClick(Sender: TObject);
 var f: string;
 begin
   if FLBPlaylist.ItemIndex = -1 then exit;
@@ -167,7 +173,7 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.MIModifyPlaylistClick(Sender: TObject);
+procedure TFrameIntermissionMusic.MIModifyPlaylistClick(Sender: TObject);
 var F: TFormCreatePlaylist;
   s: string;
   i: integer;
@@ -197,7 +203,7 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.MINewPlaylistClick(Sender: TObject);
+procedure TFrameIntermissionMusic.MINewPlaylistClick(Sender: TObject);
 var F: TFormCreatePlaylist;
   i: Integer;
 begin
@@ -215,13 +221,13 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.PopupPlaylistPopup(Sender: TObject);
+procedure TFrameIntermissionMusic.PopupPlaylistPopup(Sender: TObject);
 begin
   MIModifyPlaylist.Enabled := FLBPlaylist.ItemIndex <> -1;
   MIDeletePlaylist.Enabled := FLBPlaylist.ItemIndex <> -1;
 end;
 
-procedure TFrameIntersessionMusic.BPreviousClick(Sender: TObject);
+procedure TFrameIntermissionMusic.BPreviousClick(Sender: TObject);
 begin
   if Sender = BNext then
     SoundManager.PlayList.Next(1)
@@ -229,7 +235,7 @@ begin
     SoundManager.PlayList.Previous(1);
 end;
 
-procedure TFrameIntersessionMusic.SpeedButton3Click(Sender: TObject);
+procedure TFrameIntermissionMusic.SpeedButton3Click(Sender: TObject);
 begin
   case SoundManager.PlayList.State of
     ALS_STOPPED, ALS_PAUSED:
@@ -260,7 +266,7 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.Timer1Timer(Sender: TObject);
+procedure TFrameIntermissionMusic.Timer1Timer(Sender: TObject);
 begin
   Timer1.Enabled := FALSE;
   if PlaylistIsPlaying then
@@ -268,13 +274,13 @@ begin
   Timer1.Enabled := TRUE;
 end;
 
-procedure TFrameIntersessionMusic.ProcessVolumeChange(Sender: TObject);
+procedure TFrameIntermissionMusic.ProcessVolumeChange(Sender: TObject);
 begin
   SoundManager.Playlist.Volume := FrameTBVol.Value;
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.LoadPlaylist(const aFilename: string);
+procedure TFrameIntermissionMusic.LoadPlaylist(const aFilename: string);
 var t: TStringList;
   i: integer;
   flagOn: boolean;
@@ -297,12 +303,12 @@ begin
   end;
 end;
 
-function TFrameIntersessionMusic.PlaylistIsPlaying: boolean;
+function TFrameIntermissionMusic.PlaylistIsPlaying: boolean;
 begin
   Result := SoundManager.Playlist.State = ALS_PLAYING;
 end;
 
-procedure TFrameIntersessionMusic.UpdateWidgets;
+procedure TFrameIntermissionMusic.UpdateWidgets;
 begin
   Label7.Caption := SVolume+LineEnding+FormatFloat('0.0', FrameTBVol.Value*100)+'%';
 
@@ -335,7 +341,7 @@ begin
   end;
 end;
 
-procedure TFrameIntersessionMusic.Fill;
+procedure TFrameIntermissionMusic.Fill;
 begin
   FLBPlaylist.Mask := '*'+PLAYLIST_FILE_EXTENSION;
 
@@ -352,7 +358,7 @@ begin
   FItemIndexUnderMouse := -1;
 end;
 
-constructor TFrameIntersessionMusic.Create(TheOwner: TComponent);
+constructor TFrameIntermissionMusic.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
 
@@ -369,7 +375,7 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.StopPlaylist;
+procedure TFrameIntermissionMusic.StopPlaylist;
 begin
   Timer1.Enabled := FALSE;
   SoundManager.Playlist.Stop(0);
@@ -377,13 +383,13 @@ begin
   UpdateWidgets;
 end;
 
-procedure TFrameIntersessionMusic.UpdateStringAfterLanguageChange;
+procedure TFrameIntermissionMusic.UpdateStringAfterLanguageChange;
 begin
   BNext.Hint := SNext;
   BPrevious.Hint := SPrevious;
 end;
 
-function TFrameIntersessionMusic.Volume: single;
+function TFrameIntermissionMusic.Volume: single;
 begin
   Result := FrameTBVol.Value;
 end;

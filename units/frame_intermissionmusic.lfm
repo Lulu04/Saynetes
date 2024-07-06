@@ -1,4 +1,4 @@
-object FrameIntersessionMusic: TFrameIntersessionMusic
+object FrameIntermissionMusic: TFrameIntermissionMusic
   Left = 0
   Height = 277
   Top = 0
@@ -26,17 +26,16 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       AnchorSideLeft.Control = Panel2
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel1
-      AnchorSideRight.Control = Panel1
-      AnchorSideRight.Side = asrBottom
+      AnchorSideRight.Control = BHelp
       Left = 86
       Height = 17
       Top = 0
-      Width = 303
+      Width = 283
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 20
       BorderSpacing.Right = 3
-      Caption = 'INTERSESSION MUSIC'
+      Caption = 'INTERMISSION MUSIC'
       Font.Color = 247036
       Font.Height = 18
       Font.Style = [fsBold, fsItalic]
@@ -53,7 +52,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Cursor = crHandPoint
       Left = 3
       Height = 181
-      Hint = 'This is the list of intersession musics'
+      Hint = 'This is the list of intermission musics'
       Top = 52
       Width = 335
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -174,7 +173,7 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Cursor = crHandPoint
       Left = 6
       Height = 31
-      Hint = 'Start/Pause the intersession music.'
+      Hint = 'Start/Pause the intermission music.'
       Top = 3
       Width = 31
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -277,6 +276,22 @@ object FrameIntersessionMusic: TFrameIntersessionMusic
       Color = 3815994
       ParentColor = False
       TabOrder = 2
+    end
+    object BHelp: TSpeedButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 372
+      Height = 20
+      Top = 0
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
   object PopupPlaylist: TPopupMenu
