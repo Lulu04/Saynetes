@@ -50,9 +50,8 @@ object FrameMainSequence: TFrameMainSequence
     end
     object Label9: TLabel
       AnchorSideTop.Control = Panel1
-      AnchorSideRight.Control = Panel1
-      AnchorSideRight.Side = asrBottom
-      Left = 219
+      AnchorSideRight.Control = BHelp
+      Left = 199
       Height = 17
       Top = 4
       Width = 73
@@ -65,6 +64,40 @@ object FrameMainSequence: TFrameMainSequence
       Font.Style = [fsBold, fsItalic]
       ParentColor = False
       ParentFont = False
+    end
+    object BHelp: TSpeedButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 275
+      Height = 20
+      Top = 1
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
+    end
+    object BAddSequence: TSpeedButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Cursor = crHandPoint
+      Left = 16
+      Height = 20
+      Hint = 'Add a sequence'
+      Top = 1
+      Width = 20
+      AutoSize = True
+      BorderSpacing.Left = 15
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 0
+      OnClick = BAddSequenceClick
+      ShowHint = True
+      ParentShowHint = False
     end
   end
   object Panel3: TPanel

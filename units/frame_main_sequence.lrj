@@ -1,3 +1,4 @@
 {"version":1,"strings":[
-{"hash":110784515,"name":"tframemainsequence.label9.caption","sourcebytes":[83,69,81,85,69,78,67,69,83],"value":"SEQUENCES"}
+{"hash":110784515,"name":"tframemainsequence.label9.caption","sourcebytes":[83,69,81,85,69,78,67,69,83],"value":"SEQUENCES"},
+{"hash":116234101,"name":"tframemainsequence.baddsequence.hint","sourcebytes":[65,100,100,32,97,32,115,101,113,117,101,110,99,101],"value":"Add a sequence"}
 ]}
