@@ -573,6 +573,13 @@ resourcestring
                         'Use green arrow to jump to the previous/next music in the playlist.'+LineEnding+
                         'Right click on the list to show pop-up menu.';
 
+  HelpIntermissionCreatePlaylist='Here you can create or modify a playlist for the intermission music.'+LineEnding+
+               'NOTE: playlist are only a list of path to musics on the disk, musics are not copied.'+LineEnding+
+               'Use Add buttons for add an item to the playlist.'+LineEnding+
+               'Delete to delete an item.'+LineEnding+
+               'Arrow to move up or down an item.'+LineEnding+
+               'When the playlist is done, enter its name then click Save.';
+
   HelpProjectList='This is the list of projects found in the selected working folder.'+LineEnding+
                   'Projects saved in a same folder share the same DMX configuration, and loading a project from here don''t affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other.';
 
@@ -660,8 +667,8 @@ resourcestring
                         'Duration can be equal to zero, in that case the dimmer will jump immediatly to the value.';
 
   _HelpChannelFlame='This effect simulates the flickering of a flame on the selected channels.'+LineEnding+
-                   'LEVELS: random brightness value are calculated within this interval'+LineEnding+
-                   'WAIT TIME: this is the time between two LEVELS calculations (in fact, a random value is calculated based on the wait time).'+LineEnding+
+                   'LEVELS: controls the flickering range.'+LineEnding+
+                   'WAIT TIME: controls the effect speed.'+LineEnding+
                    'SOFTEN: controls the smoothness of the effect.';
 
 
@@ -672,8 +679,8 @@ resourcestring
   _HelpChannelAudioFollower='This effect sets the intensity of the selected channels proportionally to an audio level.'+LineEnding+
                    'In the list, select the audio to follow.'+LineEnding+
                    'Clic Play to start the playback'+LineEnding+
-                   'GAIN: this is the amplification applyed to the audio levels before to send it to the channels. Zero means equal, negative value means attenuation, positive value means amplification.'+LineEnding+
-                   'BRIGHTNESS MAX: here you define the maximum value not to be exceeded.'+LineEnding+
+                   'GAIN: controls the amplitude of variations.'+LineEnding+
+                   'BRIGHTNESS MAX: define the maximum value not to be exceeded.'+LineEnding+
                    'SOFTEN: controls the smoothness of variations.';
 
   HelpChannelCopy='This effect copies the value of one channel to one or more other channels.'+LineEnding+
@@ -682,15 +689,15 @@ resourcestring
   HelpChannelFlash='Flash briefly applies a value to the channels, holds it for a while and then restores the previous values.'+LineEnding+
                    'This effect can be used at the same time as another.'+LineEnding+
                    'FIXED VALUE: sets the value to apply briefly.'+LineEnding+
-                   'RANDOM VALUE: select an interval, a random value will be calculated between.'+LineEnding+
-                   'FIXED DURATION: holding time is always the same.'+LineEnding+
-                   'RANDOM DURATION: holding time is calculated randomly between the two values.'+LineEnding+
+                   'RANDOM VALUE: define an interval for the calculation of the random values.'+LineEnding+
+                   'FIXED DURATION: controls holding time, here always the same.'+LineEnding+
+                   'RANDOM DURATION: define an interval of time for the calculation of the random duration.'+LineEnding+
                    'Clic the preview button to see the result.';
 
   HelpChannelStop='Stops the current effect on selected channels.'+LineEnding+
                   'Don''t stop a chaser because a chaser is not an effect but a sequence.';
 
-  HelpChannelChaser='This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser.';
+  HelpChannelChaser='This effect is not really an effect, because it creates a sequence containing the required actions.';
 
   HelpRGBSimpleDimmer='A simple dimmer to apply RGB color to a fixture.'+LineEnding+
          'Used in a sequence, this effect change the current RGB fixture color to the new one with respect of the duration and the velocity curve.'+LineEnding+
@@ -702,8 +709,7 @@ resourcestring
                     'Duration can be equal to zero, in that case the dimmer will jump immediatly to the color.';
 
   HelpRGBFlame='This effect simulates the flickering of a flame on the selected fixture.'+LineEnding+
-               'LEVELS: random brightness value are calculated within this interval'+LineEnding+
-               'WAIT TIME: this is the time between two calculations (in fact, a random value is calculated based on the wait time).'+LineEnding+
+               'WAIT TIME: controls the effect speed.'+LineEnding+
                'AMPLITUDE: controls the amplitude of the flickering.'+LineEnding+
                'SOFTEN: controls the smoothness of the effect.';
 
@@ -711,15 +717,15 @@ resourcestring
          'Select a color.'+LineEnding+
          'In the list, select the audio to follow.'+LineEnding+
          'Clic Play to start the playback'+LineEnding+
-         'GAIN: this is the amplification applyed to the audio levels before calculating the color. Zero means equal, negative value means attenuation, positive value means amplification.'+LineEnding+
+         'GAIN: controls the amplitude of variations.'+LineEnding+
          'SOFTEN: controls the smoothness of variations.';
 
   HelpRGBCopy='This effect copies the RGB color of one fixture to one or more other fixtures (that have RGB channel of course).'+LineEnding+
               'In the fixture list, select the source.';
 
-  HelpRGBChaser='This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser.';
+  HelpRGBChaser='This effect is not really an effect, because it creates a sequence containing the required actions.';
 
-  HelpRGBStop='Stops the current RGB effect on selected channels.'+LineEnding+
+  HelpRGBStop='Stops the current RGB effect on selected fixtures.'+LineEnding+
               'Don''t stop an RGB chaser because a chaser is not an effect but a sequence.';
 
   function HelpChannelFlame: string;

@@ -14,6 +14,7 @@ type
   { TFormCreatePlaylist }
 
   TFormCreatePlaylist = class(TForm)
+    BHelp: TSpeedButton;
     LB: TListBox;
     OD1: TOpenDialog;
     Panel1: TPanel;
@@ -24,6 +25,7 @@ type
     BCancel: TSpeedButton;
     UpDown1: TUpDown;
     procedure BCancelClick(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure BSaveClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
@@ -54,7 +56,7 @@ var
 implementation
 
 uses LCLHelper, LazFileUtils, u_common,
-  u_userdialogs, u_resource_string, u_apputils;
+  u_userdialogs, u_resource_string, u_apputils, form_help;
 
 {$R *.lfm}
 
@@ -78,6 +80,11 @@ procedure TFormCreatePlaylist.BCancelClick(Sender: TObject);
 begin
   StopMusic;
   ModalResult := mrCancel;
+end;
+
+procedure TFormCreatePlaylist.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpIntermissionCreatePlaylist, BHelp);
 end;
 
 procedure TFormCreatePlaylist.BSaveClick(Sender: TObject);

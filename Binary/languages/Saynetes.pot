@@ -2007,7 +2007,7 @@ msgstr ""
 
 #: u_resource_string.helpchannelchaser
 msgctxt "u_resource_string.helpchannelchaser"
-msgid "This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser."
+msgid "This effect is not really an effect, because it creates a sequence containing the required actions."
 msgstr ""
 
 #: u_resource_string.helpchannelcopy
@@ -2021,9 +2021,9 @@ msgid ""
 "Flash briefly applies a value to the channels, holds it for a while and then restores the previous values.\n"
 "This effect can be used at the same time as another.\n"
 "FIXED VALUE: sets the value to apply briefly.\n"
-"RANDOM VALUE: select an interval, a random value will be calculated between.\n"
-"FIXED DURATION: holding time is always the same.\n"
-"RANDOM DURATION: holding time is calculated randomly between the two values.\n"
+"RANDOM VALUE: define an interval for the calculation of the random values.\n"
+"FIXED DURATION: controls holding time, here always the same.\n"
+"RANDOM DURATION: define an interval of time for the calculation of the random duration.\n"
 "Clic the preview button to see the result."
 msgstr ""
 
@@ -2085,6 +2085,16 @@ msgid ""
 "    - Vertical flip."
 msgstr ""
 
+#: u_resource_string.helpintermissioncreateplaylist
+msgid ""
+"Here you can create or modify a playlist for the intermission music.\n"
+"NOTE: playlist are only a list of path to musics on the disk, musics are not copied.\n"
+"Use Add buttons for add an item to the playlist.\n"
+"Delete to delete an item.\n"
+"Arrow to move up or down an item.\n"
+"When the playlist is done, enter its name then click Save."
+msgstr ""
+
 #: u_resource_string.helpintermissionmusic
 msgid ""
 "This module allow you to control the intermission music.\n"
@@ -2112,13 +2122,13 @@ msgid ""
 "Select a color.\n"
 "In the list, select the audio to follow.\n"
 "Clic Play to start the playback\n"
-"GAIN: this is the amplification applyed to the audio levels before calculating the color. Zero means equal, negative value means attenuation, positive value means amplification.\n"
+"GAIN: controls the amplitude of variations.\n"
 "SOFTEN: controls the smoothness of variations."
 msgstr ""
 
 #: u_resource_string.helprgbchaser
 msgctxt "u_resource_string.helprgbchaser"
-msgid "This effect is not really an effect, because it creates a sequence containing the actions required by the Chaser."
+msgid "This effect is not really an effect, because it creates a sequence containing the required actions."
 msgstr ""
 
 #: u_resource_string.helprgbcopy
@@ -2130,8 +2140,7 @@ msgstr ""
 #: u_resource_string.helprgbflame
 msgid ""
 "This effect simulates the flickering of a flame on the selected fixture.\n"
-"LEVELS: random brightness value are calculated within this interval\n"
-"WAIT TIME: this is the time between two calculations (in fact, a random value is calculated based on the wait time).\n"
+"WAIT TIME: controls the effect speed.\n"
 "AMPLITUDE: controls the amplitude of the flickering.\n"
 "SOFTEN: controls the smoothness of the effect."
 msgstr ""
@@ -2147,7 +2156,7 @@ msgstr ""
 #: u_resource_string.helprgbstop
 msgctxt "u_resource_string.helprgbstop"
 msgid ""
-"Stops the current RGB effect on selected channels.\n"
+"Stops the current RGB effect on selected fixtures.\n"
 "Don't stop an RGB chaser because a chaser is not an effect but a sequence."
 msgstr ""
 
@@ -4216,16 +4225,16 @@ msgid ""
 "This effect sets the intensity of the selected channels proportionally to an audio level.\n"
 "In the list, select the audio to follow.\n"
 "Clic Play to start the playback\n"
-"GAIN: this is the amplification applyed to the audio levels before to send it to the channels. Zero means equal, negative value means attenuation, positive value means amplification.\n"
-"BRIGHTNESS MAX: here you define the maximum value not to be exceeded.\n"
+"GAIN: controls the amplitude of variations.\n"
+"BRIGHTNESS MAX: define the maximum value not to be exceeded.\n"
 "SOFTEN: controls the smoothness of variations."
 msgstr ""
 
 #: u_resource_string._helpchannelflame
 msgid ""
 "This effect simulates the flickering of a flame on the selected channels.\n"
-"LEVELS: random brightness value are calculated within this interval\n"
-"WAIT TIME: this is the time between two LEVELS calculations (in fact, a random value is calculated based on the wait time).\n"
+"LEVELS: controls the flickering range.\n"
+"WAIT TIME: controls the effect speed.\n"
 "SOFTEN: controls the smoothness of the effect."
 msgstr ""
 
