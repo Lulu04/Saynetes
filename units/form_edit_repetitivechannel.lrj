@@ -12,5 +12,5 @@
 {"hash":186401112,"name":"tformeditrepetitivechannel.label14.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,97,102,116,101,114,32,115,117,102,102,105,120],"value":"index is after suffix"},
 {"hash":57136824,"name":"tformeditrepetitivechannel.label15.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,98,101,102,111,114,101,32,112,114,101,102,105,120],"value":"index is before prefix"},
 {"hash":109817054,"name":"tformeditrepetitivechannel.label9.caption","sourcebytes":[80,97,116,116,101,114,110],"value":"Pattern"},
-{"hash":89565092,"name":"tformeditrepetitivechannel.bpreset.caption","sourcebytes":[80,82,69,83,69,84],"value":"PRESET"}
+{"hash":142133684,"name":"tformeditrepetitivechannel.bpreset.caption","sourcebytes":[115,80,114,101,115,101,116],"value":"sPreset"}
 ]}

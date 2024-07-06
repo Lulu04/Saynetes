@@ -116,6 +116,7 @@ begin
   BRangesGenerator.Caption := sRangesGenerator;
   BSetAliasOf.Caption := SAliasOf_;
   Label12.Caption := SAliasOf;
+  Label3.Caption := SPreset;
 
 
   Label7.Caption := SMin;

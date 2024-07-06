@@ -1,7 +1,7 @@
 {"version":1,"strings":[
 {"hash":5404860,"name":"tformdefinenewchannel.label1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":7882805,"name":"tformdefinenewchannel.label2.caption","sourcebytes":[115,78,97,109,101],"value":"sName"},
-{"hash":91802052,"name":"tformdefinenewchannel.label3.caption","sourcebytes":[80,114,101,115,101,116],"value":"Preset"},
+{"hash":142133684,"name":"tformdefinenewchannel.label3.caption","sourcebytes":[115,80,114,101,115,101,116],"value":"sPreset"},
 {"hash":213979077,"name":"tformdefinenewchannel.label4.caption","sourcebytes":[68,101,102,97,117,108,116,32,118,97,108,117,101],"value":"Default value"},
 {"hash":30811,"name":"tformdefinenewchannel.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
 {"hash":127420876,"name":"tformdefinenewchannel.bcancel.caption","sourcebytes":[115,67,97,110,99,101,108],"value":"sCancel"},
