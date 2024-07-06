@@ -7,6 +7,9 @@ interface
 uses
   Classes, SysUtils;
 
+function AppBitness: string;
+function OSName: string;
+
 // The following (sub)folders are located in the application binary folder
 function GetAppDataFolder: string;
 function GetAppImagesFolder: string;
@@ -49,6 +52,28 @@ uses Forms, u_common, project_util, utilitaire_fichier, Graphics;
 
 var
   FAppConfigFolder: string='';
+
+function AppBitness: string;
+begin
+  Result := '';
+  {$if defined(CPUX86_64)}
+  Result := '64b';
+  {$endif}
+  {$if defined(CPUi386)}
+  Result := '32b';
+  {$endif}
+end;
+
+function OSName: string;
+begin
+  Result := 'Platform unknow';
+  {$if defined(WINDOWS)}
+  Result := 'Windows';
+  {$endif}
+  {$if defined(Linux)}
+  Result := 'Linux';
+  {$endif}
+end;
 
 function GetAppDataFolder: string;
 begin
