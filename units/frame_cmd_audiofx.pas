@@ -17,6 +17,7 @@ type
   { TFrameCmdAudioFX }
 
   TFrameCmdAudioFX = class(TFrame)
+    BHelp: TSpeedButton;
     BListen: TSpeedButton;
     BStopAll: TSpeedButton;
     BAddCmd: TBitBtn;
@@ -123,6 +124,7 @@ type
     SpeedButton6: TSpeedButton;
     SpeedButton7: TSpeedButton;
     Timer1: TTimer;
+    procedure BHelpClick(Sender: TObject);
     procedure BListenClick(Sender: TObject);
     procedure BStopAllClick(Sender: TObject);
     procedure BAddCmdClick(Sender: TObject);
@@ -186,7 +188,7 @@ private
 
 implementation
 uses u_logfile, u_resource_string, u_utils, u_helper, Graphics,
-  u_apputils, Dialogs;
+  u_apputils, form_help, Dialogs;
 
 {$R *.lfm}
 
@@ -199,6 +201,11 @@ begin
 
   ReconstructEffectChain;
   StartPlayback(True);
+end;
+
+procedure TFrameCmdAudioFX.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpSequencerCmdAudioFX, BHelp);
 end;
 
 procedure TFrameCmdAudioFX.BStopAllClick(Sender: TObject);
