@@ -659,6 +659,11 @@ begin
   LB.UnlockSelectionChange;
   FDraggedItemIndex := -1;
 
+  UpdateStringAfterLanguageChange;
+end;
+
+procedure TFrameViewTopList.UpdateStringAfterLanguageChange;
+begin
   MIDelete.Caption := SDelete;
   MIStop.Caption := SStop;
   LB.Invalidate;
