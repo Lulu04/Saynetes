@@ -473,7 +473,7 @@
         <ResourceBaseClass Value="Form"/>
       </Unit11>
       <Unit12>
-        <Filename Value="units\u_move_step.pas"/>
+        <Filename Value="units\form_align_step.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_MoveStep"/>
         <HasResources Value="True"/>

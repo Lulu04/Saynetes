@@ -178,7 +178,7 @@ type
   end;
 
 implementation
-uses u_modify_time, u_move_step, u_change_complex_step_length,
+uses u_modify_time, form_align_step, u_change_complex_step_length,
   u_resource_string, u_sequence_player, u_userdialogs, u_edit_otheraction,
   u_helper, u_add_action_audio, lclintf, LCLType, VelocityCurve,
   u_edit_sequence, u_add_action_dmx, u_logfile, u_apputils, u_audio_manager,

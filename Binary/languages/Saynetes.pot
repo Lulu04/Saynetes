@@ -2351,6 +2351,10 @@ msgstr ""
 msgid "Set as an alias of..."
 msgstr ""
 
+#: u_resource_string.salign
+msgid "Align"
+msgstr ""
+
 #: u_resource_string.sall
 msgid "all"
 msgstr ""

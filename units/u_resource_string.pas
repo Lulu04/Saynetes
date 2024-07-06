@@ -238,6 +238,7 @@ resourcestring
   SPreview='Preview';
   SDuration='Duration';
   SModifyDuration='Modify duration';
+  SAlign='Align';
   SSecond='second';
   SSeconds='seconds';
   SSeconds_='second(s)';

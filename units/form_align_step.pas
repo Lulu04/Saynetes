@@ -1,4 +1,4 @@
-unit u_move_step;
+unit form_align_step;
 
 {$mode objfpc}{$H+}
 
@@ -70,7 +70,7 @@ var S: TShape;
   step: TCustomSequencerStep;
   delta: single;
 begin
-  FSeq.Notify(FSeq.Selected, snChanged, 'Déplacer' );
+  FSeq.Notify(FSeq.Selected, snChanged, SAlign);
 
   S := Sender as TShape;
   if S = S4 then
@@ -131,7 +131,7 @@ begin
 end;
 
 initialization
-  {$I u_move_step.lrs}
+  {$I form_align_step.lrs}
 
 end.
 

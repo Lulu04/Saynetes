@@ -2615,6 +2615,10 @@ msgstr "Alias de"
 msgid "Set as an alias of..."
 msgstr "Définir comme un alias de..."
 
+#: u_resource_string.salign
+msgid "Align"
+msgstr "Aligner"
+
 #: u_resource_string.sall
 msgid "all"
 msgstr "tous"
