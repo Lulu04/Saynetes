@@ -775,7 +775,10 @@ resourcestring
               '  - Select one or several steps, then holds ALT key pressed and drag one step to the right to increase the duration, to the left to decrease it. Durations are changed proportionnaly to their initial values.'+LineEnding+
               LineEnding+
               'CHANGING TIME BETWEEN TWO STEPS'+LineEnding+
-              'At the bottom of the time line where the time legend is displayed, right click on the interval between two steps: this interval is selected and a pop-up menu appears.';
+              'At the bottom of the time line where the time legend is displayed, right click on the interval between two steps: this interval is selected and a pop-up menu appears.'+LineEnding+
+              LineEnding+
+              'DUPLICATE THE SELECTED STEPS'+LineEnding+
+              'Keep CTRL pressed and drag one of the selected steps.';
 
    HelpSequencerCmdList='A step is made of actions and this panel displays them.'+LineEnding+
                'You can modify the action: right click on the action to show pop-up menu:'+LineEnding+
