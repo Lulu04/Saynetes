@@ -156,6 +156,8 @@ begin
   FToogleSpeedButtonManager.Checked[BKeep0Visible] := ProgramOptions.KeepOriginVisible;
   FSeq.SetOptions([bglsKeepTimeOriginVisible], ProgramOptions.KeepOriginVisible);
 
+  FSeq.RetrieveClipboardContent;
+
 //  B_Undo.Caption := SUndo;
 //  B_Redo.Caption := SRedo;
 
@@ -446,6 +448,7 @@ end;
 procedure TFormSequenceEdition.FormCloseQuery(Sender: TObject; var CanClose: boolean );
 begin
   FSeq.Stop; // remove callbacks for preview
+  FSeq.SaveClipboardContent; // save the content of clipboard to allow copy/paste from a sequence to another
 end;
 
 procedure TFormSequenceEdition.FormDestroy(Sender: TObject);
