@@ -479,6 +479,7 @@ resourcestring
   SAskToOverwriteFixtureFilename='A fixture with this filename already exists, do you want to overwrite it ?'+
                                  '(its content will be lost)';
   SThisFilenamAlreadyExists='this filename already exists !';
+  SThisFilenameIsUsedBySaynetes='this filename is used by Saynètes !';
   SSaveTheChangeBeforeQuit='Save the change before quit?';
   SUnableToLoadFixtureData='Unable to load fixture data...';
   SOr='or';

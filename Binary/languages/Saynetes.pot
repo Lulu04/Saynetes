@@ -4153,6 +4153,10 @@ msgctxt "u_resource_string.sthisfilenamalreadyexists"
 msgid "this filename already exists !"
 msgstr ""
 
+#: u_resource_string.sthisfilenameisusedbysaynetes
+msgid "this filename is used by Saynètes !"
+msgstr ""
+
 #: u_resource_string.sthismodeisempty
 msgid "This mode is empty or have only virtual channel"
 msgstr ""

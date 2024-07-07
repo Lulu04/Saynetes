@@ -111,7 +111,6 @@ begin
   B_Cancel.Caption := SCancel;
   B_Next.Caption := SNext;
   B_Previous.Caption := SPrevious;
-  Label4.Caption := SThisFilenamAlreadyExists;
 
   if FileExists(ProgramOptions.LastProjectFileNameUsed) then
     DirectoryEdit1.Directory := ExtractFilePath(ProgramOptions.LastProjectFileNameUsed);
@@ -146,13 +145,22 @@ var f: string;
 begin
   Label4.Visible := False;
   Result := (GetProjectName <> '') and StringIsValid(FrameEditString1.Text);
+
   // check if the project already exists
   if Result then begin
     f := IncludeTrailingPathDelimiter(DirectoryEdit1.Directory)+GetProjectName+PROJECT_FILE_EXTENSION;
     if FileExists(f) then begin
       Result := False;
+      Label4.Caption := SThisFilenamAlreadyExists;
       Label4.Visible := True;
     end;
+  end;
+
+  // check if the project filename is 'Common'
+  if Lowercase(GetProjectName) = 'common' then begin
+    Result := False;
+    Label4.Caption := SThisFilenameIsUsedBySaynetes;
+    Label4.Visible := True;
   end;
 end;
 
