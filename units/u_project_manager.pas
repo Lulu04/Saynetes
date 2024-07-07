@@ -161,7 +161,7 @@ end;
 
 function TSaynetesProject.DoNew: boolean;
 var F: TFormProjectWizard;
-  path: string;
+  path, fi: string;
 begin
  Result := FALSE;
  InitProjectByDefault;
@@ -190,6 +190,11 @@ begin
     FImageStorage.AbsoluteBaseFolder := path;  // image
     // project options path
     Options.FSaveFolder := path;
+
+    // before saving the project we try to load the eventually existing DMX.Group file
+    // its necessary to not erase it by an empty one!
+    fi := GetFolderCommonData+COMMON_PROJECT_DMX_GROUP_FILENAME;
+    if FileExists(fi) then FormDMXGroup.LoadFrom(fi);
 
     // save the project
     Project.SaveAs( Project.Filename );
