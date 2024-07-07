@@ -175,11 +175,12 @@ begin
     Project.Filename := path;
     UniverseManager.Load;
 
-    // create a directory with the same name as the project
-    path := IncludeTrailingPathDelimiter(path);
+    // create a directory with the same name as the project+Data
+    path := ExcludeTrailingPathDelimiter(path)+'Data'+DirectorySeparator;
     if not CreerRepertoire(path) then
     begin
       ShowMess(SFailToCreateDirectoryNeededByTheProject, SOk, mtError);
+      Log.Error('Fail to create the project data folder "'+path+'"');
       exit;
     end;
 
@@ -266,11 +267,11 @@ begin
        Log.Info('project made with Saynètes version: '+fileVersion, 1);
 
        projectfolder := ExtractFileName(aFilename);
-       projectfolder := ChangeFileExt(projectfolder, '');
+       projectfolder := ChangeFileExt(projectfolder, '')+'Data';
        path := ConcatPaths([ExtractFilePath(aFilename), projectfolder]);
        FAudioStorage.AbsoluteBaseFolder := path;
        FImageStorage.AbsoluteBaseFolder := path;
-       Log.Info('project storage: "'+path+'"', 1);
+       Log.Info('folder for project data: "'+path+'"', 1);
 
        Result := TRUE;
        SoundManager.Load(t, FAudioStorage.AbsoluteStorageFolder);
