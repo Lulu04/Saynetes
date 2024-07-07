@@ -1078,7 +1078,6 @@ begin
   for i:=0 to High(FView) do
    FView[i].Fixture.SetAllChannelsToZero;
   RedrawVisibleFixtures;
-  RedrawAll;
   UpdateLevelOnViewProjector;
 end;
 
