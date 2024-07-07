@@ -175,6 +175,10 @@ type
 
     // gives the time position clicked by the user
     property ClickedTimePos: single read FClickedTimePos;
+
+  public // we keep track of the clipboard to be able to copy/paste between two sequences
+    procedure SaveClipboardContent;
+    procedure RetrieveClipboardContent;
   end;
 
 implementation
@@ -183,8 +187,10 @@ uses u_modify_time, form_align_step, u_change_complex_step_length,
   u_helper, u_add_action_audio, lclintf, LCLType, VelocityCurve,
   u_edit_sequence, u_add_action_dmx, u_logfile, u_apputils, u_audio_manager,
   utilitaire_bgrabitmap, PropertyUtils;
+
 var
   FWorkingStep: TSequenceStep;
+  FSavedClipboard: TStepList;
 
 function CreateUndoRedoItem(const aName, aData: string;
   aNotification: TSequencerNotification): TUndoRedoItem;
@@ -979,10 +985,46 @@ begin
   MI_SBPaste.Caption := sPaste;
 end;
 
+procedure TFrameSequencer.SaveClipboardContent;
+var i: integer;
+  s: TCustomSequencerStep;
+begin
+  if ClipBoard.Count > 0 then begin
+    // clear the saved clipboard
+    while FSavedClipboard.Count > 0 do
+      FSavedClipboard.ExtractIndex(0).Free;
+    // duplicate the content of the original clipboard and push it into the saved clipboard
+    for i:=0 to ClipBoard.Count-1 do begin
+      s := DoDuplicateStepEvent(ClipBoard.Items[i]);
+      FSavedClipboard.Add(s);
+    end;
+  end;
+end;
+
+procedure TFrameSequencer.RetrieveClipboardContent;
+var i: integer;
+  s: TCustomSequencerStep;
+begin
+  ClipBoard_Clear;
+  if FSavedClipboard.Count > 0 then begin
+    // duplicate the content of the saved clipboard and push it into the original clipboard
+    for i:=0 to FSavedClipboard.Count-1 do begin
+      s := DoDuplicateStepEvent(FSavedClipboard.Items[i]);
+      Clipboard.Add(s);
+    end;
+  end;
+end;
+
 
 
 initialization
   {$I frame_sequencer.lrs}
+FSavedClipboard := TStepList.Create;
+
+Finalization
+FSavedClipboard.FreeSteps;
+FSavedClipboard.Free;
+FSavedClipboard := NIL;
 
 end.
 
