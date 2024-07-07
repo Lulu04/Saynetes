@@ -286,7 +286,7 @@ object FormSequenceEdition: TFormSequenceEdition
     ClientHeight = 216
     ClientWidth = 1170
     Constraints.MaxHeight = 500
-    Constraints.MinHeight = 160
+    Constraints.MinHeight = 180
     TabOrder = 3
     OnClick = Panel7Click
     object SpeedButton1: TSpeedButton

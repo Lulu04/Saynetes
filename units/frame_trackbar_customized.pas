@@ -276,7 +276,7 @@ end;
 function TFrameTBAudioPan.GetValue: single;
 begin
   Result := PercentValue * 2 - 1.0;
-
+  Result := Round(Result * 100) * 0.01;
 end;
 
 procedure TFrameTBAudioPan.SetValue(AValue: single);
