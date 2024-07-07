@@ -256,11 +256,11 @@ object FrameViewProjector: TFrameViewProjector
         AutoSize = True
         BorderSpacing.Left = 10
         Color = clBlack
+        Flat = True
         Font.Height = 12
         Font.Style = [fsBold]
         Images = DataModule1.ImageList1
         ImageIndex = 29
-        Transparent = False
         OnClick = SpeedButton5Click
         ShowHint = True
         ParentFont = False
