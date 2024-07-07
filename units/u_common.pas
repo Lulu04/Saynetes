@@ -18,9 +18,9 @@ const
   // all projects in the working directory
   COMMON_PROJECT_FOLDER_NAME = 'CommonData';
 
-  // The DMX universes saving file is common for all projects in the working directory.
+  // The DMX universes are shared by all projects in the working directory.
   COMMON_PROJECT_DMX_FILENAME = 'DMX.Universe';
-  // The DMX groups are common for all projects in the working directory
+  // The DMX groups are shared by all projects in the working directory
   COMMON_PROJECT_DMX_GROUP_FILENAME = 'DMX.Group';
 
   // The name of the file where project's options are saved. This file is located
