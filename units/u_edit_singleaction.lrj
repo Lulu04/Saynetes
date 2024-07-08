@@ -46,6 +46,9 @@
 {"hash":494003,"name":"tformeditsingleaction.label57.caption","sourcebytes":[115,83,101,99],"value":"sSec"},
 {"hash":5404860,"name":"tformeditsingleaction.label60.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tformeditsingleaction.label61.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
+{"hash":84717909,"name":"tformeditsingleaction.label62.caption","sourcebytes":[115,85,110,105,118,101,114,115,101],"value":"sUniverse"},
+{"hash":219134965,"name":"tformeditsingleaction.label63.caption","sourcebytes":[115,70,105,120,116,117,114,101],"value":"sFixture"},
+{"hash":166220748,"name":"tformeditsingleaction.label64.caption","sourcebytes":[115,67,104,97,110,110,101,108],"value":"sChannel"},
 {"hash":167188949,"name":"tformeditsingleaction.label27.caption","sourcebytes":[65,99,116,105,111,110,32,110,111,116,32,101,100,105,116,97,98,108,101],"value":"Action not editable"},
 {"hash":5404860,"name":"tformeditsingleaction.labelvolume1.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":5404860,"name":"tformeditsingleaction.lblvol2.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
@@ -80,6 +83,8 @@
 {"hash":210295278,"name":"tformeditsingleaction.label50.caption","sourcebytes":[115,68,117,114,97,116,105,111,110],"value":"sDuration"},
 {"hash":494003,"name":"tformeditsingleaction.label58.caption","sourcebytes":[115,83,101,99],"value":"sSec"},
 {"hash":494003,"name":"tformeditsingleaction.label59.caption","sourcebytes":[115,83,101,99],"value":"sSec"},
+{"hash":84717909,"name":"tformeditsingleaction.label65.caption","sourcebytes":[115,85,110,105,118,101,114,115,101],"value":"sUniverse"},
+{"hash":219134965,"name":"tformeditsingleaction.label66.caption","sourcebytes":[115,70,105,120,116,117,114,101],"value":"sFixture"},
 {"hash":103882814,"name":"tformeditsingleaction.label1.caption","sourcebytes":[69,100,105,116,32,97,99,116,105,111,110],"value":"Edit action"},
 {"hash":5404860,"name":"tformeditsingleaction.label2.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
 ]}

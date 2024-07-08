@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, ExtCtrls,
   StdCtrls, Spin, ComCtrls,
   u_common, frame_velocity, frame_color_palette, frame_trackbar, frame_trackbar_customized,
-  lcl_utils;
+  lcl_utils, frame_viewfixtureslist;
 
 type
 
@@ -22,6 +22,8 @@ type
     CBSequence: TComboBox;
     CBAudio2: TComboBox;
     CBAudio3: TComboBox;
+    CBUni1: TComboBox;
+    CBUni2: TComboBox;
     FloatSpinEdit2: TFloatSpinEdit;
     FloatSpinEdit3: TFloatSpinEdit;
     FloatSpinEdit4: TFloatSpinEdit;
@@ -96,6 +98,11 @@ type
     Label6: TLabel;
     Label60: TLabel;
     Label61: TLabel;
+    Label62: TLabel;
+    Label63: TLabel;
+    Label64: TLabel;
+    Label65: TLabel;
+    Label66: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
@@ -109,6 +116,7 @@ type
     LabelVolume: TLabel;
     LabelVolume1: TLabel;
     LabelDryWetCap: TLabel;
+    LBChannel1: TListBox;
     lblattendre10: TLabel;
     lblattendre11: TLabel;
     lblattendre12: TLabel;
@@ -120,6 +128,7 @@ type
     lblVol4: TLabel;
     lblVol5: TLabel;
     lblVol6: TLabel;
+    LBFixture1: TListBox;
     NB: TNotebook;
     BOk: TSpeedButton;
     PageDMXRGB: TPage;
@@ -155,6 +164,9 @@ type
     Panel33: TPanel;
     Panel34: TPanel;
     Panel35: TPanel;
+    Panel36: TPanel;
+    PanelChooseChannel: TPanel;
+    PanelChooseFixture: TPanel;
     PanelWaveRGB: TPanel;
     Panel31: TPanel;
     Panel32: TPanel;
@@ -198,11 +210,11 @@ type
     procedure BOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure FSE8Change(Sender: TObject);
-    procedure Shape3MouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+    procedure Shape3MouseDown(Sender: TObject; {%H-}Button: TMouseButton;
+      {%H-}Shift: TShiftState; {%H-}X, {%H-}Y: Integer);
     procedure TB1Change(Sender: TObject);
     procedure TBVolCapChange(Sender: TObject);
     procedure TBVolChange(Sender: TObject);
@@ -214,6 +226,8 @@ type
     function GetCmd: TSingleCmd;
     procedure SetCmd(AValue: TSingleCmd);
     procedure AdjustFormHeight(aBottomPanel: TPanel);
+    procedure FillLBFixture(aUniID: integer; aLB: TListBox; aFixtureID: integer=-1);
+    procedure FillLBChannel(aUniID, aFixtureID: integer; aLB: TListBox; aChanIndex: integer=-1);
   private
     FrameVelocity1, FrameVelocity2, FrameVelocity3, FrameVelocity4, FrameVelocity5,
     FrameVelocity6, FrameVelocity7, FrameVelocity8, FrameVelocity9: TFrame_Velocity;
@@ -238,6 +252,7 @@ type
     FrameTBDmxWaveLevel1, FrameTBDmxWaveLevel2: TFrameTBDmxLevel;
     FrameColorPalette1: TFrame_ColorPalette;
     CheckedLabelManager: TCheckedLabelManager;
+    FrameViewFixtureListRGB: TFrameViewFixturesList;
     function GetCmdIsEditable: boolean;
     procedure UpdateVolumeLabel;
     procedure UpdatePanLabel;
@@ -251,7 +266,7 @@ type
 
 implementation
 uses LCLType, u_helper, u_list_sequence, u_audio_manager,
-  u_resource_string, u_utils, u_logfile;
+  u_resource_string, u_utils, u_logfile, u_list_dmxuniverse;
 
 {$R *.lfm}
 
@@ -436,6 +451,27 @@ begin
   Label54.Caption := SVelocity + ' 2';
   Label56.Caption := SSec;
   Label57.Caption := SSec;
+  // dmx channel
+  Label62.Caption := SUniverse;
+  Label63.Caption := SFixture;
+  Label64.Caption := SChannel;
+  FInitializing := True;
+  CBUni1.Clear;
+  for i:=0 to UniverseManager.Count-1 do
+    CBUni1.Items.Add(UniverseManager.Universes[i].Name);
+
+  // dmx rgb
+  Label65.Caption := SUniverse;
+  Label66.Caption := SFixture;
+  FInitializing := True;
+  CBUni2.Clear;
+  for i:=0 to UniverseManager.Count-1 do
+    CBUni2.Items.Add(UniverseManager.Universes[i].Name);
+  FrameViewFixtureListRGB := TFrameViewFixturesList.Create(Self);
+  FrameViewFixtureListRGB.Name := 'FrameViewFixtureListRGB';
+  FrameViewFixtureListRGB.Parent := Panel36;
+  FrameViewFixtureListRGB.Align := alClient;
+  FrameViewFixtureListRGB.OnSelectionChange := @FSE8Change;
 
   // dmx rgb
   FrameColorPalette1 := TFrame_ColorPalette.Create(Self);
@@ -541,7 +577,21 @@ begin
 end;
 
 procedure TFormEditSingleAction.FSE8Change(Sender: TObject);
+var uni: TDMXUniverse;
+  fix: TDMXFixture;
+  i: integer;
+  A: ArrayOfDmxFixtures;
 begin
+  if CBUni2.ItemIndex <> -1 then uni := UniverseManager.Universes[CBUni2.ItemIndex]
+    else uni := NIL;
+
+  if Sender = CBUni2 then
+    FrameViewFixtureListRGB.FillWithRGBFixture(uni);
+
+  A := FrameViewFixtureListRGB.Selected;
+  if Length(A) <> 0 then fix := A[0]
+    else fix := NIL;
+
   // flame
   Label33.Caption := FrameTBDmxFlameRGBWait.GetLegend;
   Label35.Caption := FrameTBDmxFlameRGBAmplitude.GetLegend;
@@ -561,40 +611,39 @@ begin
   if FInitializing then exit;
 
   case FCmd of
-    CMD_DMX_DIMMERRGB: begin // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
-      FParams[3] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[4] := FormatFloatWithDot('0.00', FSE8.Value);
-      FParams[5] := FrameVelocity5.SelectedCurveID.ToString;
+    CMD_DMX_DIMMERRGB,      // CMD_DMX_xxxRGB IDuniverse IDFixture ...
+    CMD_DMX_FLAMERGB,
+    CMD_DMX_AUDIOFOLLOWERRGB,
+    CMD_DMX_FLASHRGB,
+    TITLECMD_DMX_COPYRGB,
+    CMD_DMX_COPYRGB: begin
+      if (uni = NIL) or (fix = NIL) then exit;
+      if FCmd = CMD_DMX_COPYRGB then i := 3
+        else i := 1;
+      FParams[i] := uni.ID.ToString;
+      FParams[i+1] := fix.ID.ToString;
     end;
+
     TITLECMD_DMX_DIMMERRGB: begin  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
       FParams[1] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
       FParams[2] := FormatFloatWithDot('0.00', FSE8.Value);
       FParams[3] := FrameVelocity5.SelectedCurveID.ToString;
     end;
-    CMD_DMX_FLAMERGB: begin // CMD_DMX_FLAMERGB IDuniverse IDFixture Color WaitTime Amplitude Soften
-      FParams[3] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[4] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBWait.Value);
-      FParams[5] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBAmplitude.Value);
-      FParams[6] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBSoften.Value);
-    end;
+
     TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color WaitTime Amplitude Soften
       FParams[1] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
       FParams[2] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBWait.Value);
       FParams[3] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBAmplitude.Value);
       FParams[4] := FormatFloatWithDot('0.00', FrameTBDmxFlameRGBSoften.Value);
     end;
-    CMD_DMX_AUDIOFOLLOWERRGB: begin // CMD_DMX_AUDIOFOLLOWERRGB IDuniverse IDFixture IDaudio Color Gain SoftenTime
-      FParams[3] := SoundManager.GetSoundByIndex(CBAudio3.ItemIndex).Tag.ToString;
-      FParams[4] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[5] := FormatFloatWithDot('0.00', FrameTBFollowerRGBGain.Value);
-      FParams[6] := FormatFloatWithDot('0.00', FrameTBFollowerRGBSoften.Value);
-    end;
+
     TITLECMD_DMX_AUDIOFOLLOWERRGB: begin // TITLECMD_DMX_AUDIOFOLLOWERRGB IDaudio Color Gain SoftenTime
       FParams[1] := SoundManager.GetSoundByIndex(CBAudio3.ItemIndex).Tag.ToString;
       FParams[2] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
       FParams[3] := FormatFloatWithDot('0.00', FrameTBFollowerRGBGain.Value);
       FParams[4] := FormatFloatWithDot('0.00', FrameTBFollowerRGBSoften.Value);
     end;
+
     TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
       FParams[1] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
       FParams[2] := FormatFloatWithDot('0.00', FrameTBDmxFlashRGBIntensity.PercentMin);
@@ -603,14 +652,7 @@ begin
       if RadioButton5.Checked then FParams[5] := FParams[4]
         else FParams[5] := FormatFloatWithDot('0.00', FloatSpinEdit5.Value);
     end;
-    CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
-      FParams[3] := integer(FrameColorPalette1.ShapeColor.ToColor).ToString;
-      FParams[4] := FormatFloatWithDot('0.00', FrameTBDmxFlashRGBIntensity.PercentMin);
-      FParams[5] := FormatFloatWithDot('0.00', FrameTBDmxFlashRGBIntensity.PercentMax);
-      FParams[6] := FormatFloatWithDot('0.00', FloatSpinEdit4.Value);
-      if RadioButton5.Checked then FParams[7] := FParams[6]
-        else FParams[7] := FormatFloatWithDot('0.00', FloatSpinEdit5.Value);
-    end;
+
     TITLECMD_DMX_WAVERGB: begin // TITLECMD_DMX_WAVERGB Color1 Duration1 CurveID1 Color2 Duration2 CurveID2
       FParams[1] := integer(Shape3.Brush.Color).ToString;
       FParams[2] := FormatFloatWithDot('0.00', FloatSpinEdit6.Value);
@@ -738,7 +780,28 @@ begin
 end;
 
 procedure TFormEditSingleAction.TrackBar1Change(Sender: TObject);
+var uni: TDMXUniverse;
+  fix: TDMXFixture;
+  chan, i: integer;
 begin
+  if CBUni1.ItemIndex <> -1 then uni := UniverseManager.Universes[CBUni1.ItemIndex]
+    else uni := NIL;
+
+  if Sender = CBUni1 then begin
+    if uni <> NIL then FillLBFixture(uni.ID, LBFixture1)
+      else LBFixture1.Clear;
+    LBChannel1.Clear;
+  end;
+
+  if (LBFixture1.ItemIndex <> -1) and (uni <> NIL) then fix := uni.Fixtures[LBFixture1.ItemIndex]
+    else fix := NIL;
+
+  if (Sender = LBFixture1) and (CBUni1.ItemIndex <> -1) then
+    if (uni <> NIL) and (fix <> NIL) then FillLBChannel(uni.ID, fix.ID, LBChannel1)
+      else LBChannel1.Clear;
+
+  chan := LBChannel1.ItemIndex;
+
   // dimmer
   Label7.Caption := FrameTBDimmer.GetLegend;
   // flame
@@ -764,20 +827,24 @@ begin
   if FInitializing then exit;
 
   case FCmd of
-   CMD_DMX_DIMMER: begin  // CMD_DMX_DIMMER IDuniverse IDFixture ChanIndex PercentF DurationF CurveID
-     FParams[4] := FormatFloatWithDot('0.00', FrameTBDimmer.Value);
-     FParams[5] := FormatFloatWithDot('0.00', FSE5.Value);
-     FParams[6] := FrameVelocity3.SelectedCurveID.ToString;
+   CMD_DMX_DIMMER,    // CMD_xxx IDuniverse IDFixture ChanIndex ...
+   CMD_DMX_FLAME,
+   CMD_DMX_AUDIOFOLLOWER,
+   CMD_DMX_FLASH,
+   TITLECMD_DMX_COPYCHANNEL,
+   CMD_DMX_COPYCHANNEL: begin
+     if (uni = NIL) or (fix = NIL) or (chan = -1) then exit;
+     if FCmd = CMD_DMX_COPYCHANNEL then i := 4
+       else i := 1;
+     FParams[i] := uni.ID.ToString;
+     FParams[i+1] := fix.ID.ToString;
+     FParams[i+2] := chan.ToString;
+     if FCmd = CMD_DMX_DIMMER then
+       FParams[4] := FormatFloatWithDot('0.00', FrameTBDimmer.Value);
    end;
    TITLECMD_DMX_DIMMER: begin // TITLECMD_DMX_DIMMER Duration CurveID
      FParams[1] := FormatFloatWithDot('0.00', FSE5.Value);
      FParams[2] := FrameVelocity3.SelectedCurveID.ToString;
-   end;
-   CMD_DMX_FLAME: begin // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
-     FParams[4] := FormatFloatWithDot('0.00', FrameTBFlameLevels.PercentMin);
-     FParams[5] := FormatFloatWithDot('0.00', FrameTBFlameLevels.PercentMax);
-     FParams[6] := FormatFloatWithDot('0.00', FrameTBFlameWait.Value);
-     FParams[7] := FormatFloatWithDot('0.00', FrameTBFlameSoften.PercentValue);
    end;
    TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME  LevelMin LevelMax Speed Soften
      FParams[1] := FormatFloatWithDot('0.00', FrameTBFlameLevels.PercentMin);
@@ -785,25 +852,14 @@ begin
      FParams[3] := FormatFloatWithDot('0.00', FrameTBFlameWait.Value);
      FParams[4] := FormatFloatWithDot('0.00', FrameTBFlameSoften.PercentValue);
    end;
-   CMD_DMX_AUDIOFOLLOWER: begin // CMD_DMX_AUDIOFOLLOWER IDuniverse IDFixture ChanIndex IDaudio Gain MaxPercent SoftenTime
-     FParams[4] := SoundManager.IndexToID(CBAudio2.ItemIndex).ToString;
-     FParams[5] := FormatFloatWithDot('0.00', FrameTBFollowerGain.Value);
-     FParams[6] := FormatFloatWithDot('0.00', FrameTBFollowerMax.Value);
-     FParams[7] := FormatFloatWithDot('0.00', FrameTBFollowerSoften.Value);
-   end;
+
    TITLECMD_DMX_AUDIOFOLLOWER: begin // TITLECMD_DMX_AUDIOFOLLOWER IDaudio Gain MaxPercent SoftenTime
      FParams[1] := SoundManager.IndexToID(CBAudio2.ItemIndex).ToString;
      FParams[2] := FormatFloatWithDot('0.00', FrameTBFollowerGain.Value);
      FParams[3] := FormatFloatWithDot('0.00', FrameTBFollowerMax.Value);
      FParams[4] := FormatFloatWithDot('0.00', FrameTBFollowerSoften.Value);
    end;
-   CMD_DMX_FLASH: begin // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
-     FParams[4] := FormatFloatWithDot('0.00', FrameTBDmxFlashLevels.PercentMin);
-     FParams[5] := FormatFloatWithDot('0.00', FrameTBDmxFlashLevels.PercentMax);
-     FParams[6] := FormatFloatWithDot('0.00', FloatSpinEdit2.Value);
-     if RadioButton3.Checked then FParams[7] := FParams[6]
-       else FParams[7] := FormatFloatWithDot('0.00', FloatSpinEdit3.Value);
-   end;
+
    TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
      FParams[1] := FormatFloatWithDot('0.00', FrameTBDmxFlashLevels.PercentMin);
      FParams[2] := FormatFloatWithDot('0.00', FrameTBDmxFlashLevels.PercentMax);
@@ -828,6 +884,36 @@ begin
 end;
 
 procedure TFormEditSingleAction.SetCmd(AValue: TSingleCmd);
+  procedure ShowPanelChooseChannel(IndexOfIDUniverse: integer; const aTitle: string);
+  begin
+    PanelChooseChannel.Visible := True;
+    PanelChooseChannel.Left := ScaleDesignToForm(8);
+    PanelChooseChannel.Top := ScaleDesignToForm(8);
+    PanelChooseChannel.Height := ScaleDesignToForm(400);
+    AdjustFormHeight(PanelChooseChannel);
+    NB.PageIndex := NB.IndexOf(PageDMXChannel);
+    Label2.Caption := aTitle;
+    CBUni1.ItemIndex :=  UniverseManager.IDToIndex(FParams[IndexOfIDUniverse].ToInteger);
+    FillLBFixture(FParams[IndexOfIDUniverse].ToInteger, LBFixture1, FParams[IndexOfIDUniverse+1].ToInteger);
+    FillLBChannel(FParams[IndexOfIDUniverse].ToInteger, FParams[IndexOfIDUniverse+1].ToInteger, LBChannel1, FParams[IndexOfIDUniverse+2].ToInteger);
+    TrackBar1Change(NIL);
+  end;
+  procedure ShowPanelChooseFixtureRGB(IndexOfParamIDUniverse: integer; const aTitle: string);
+  var uni: TDMXUniverse;
+  begin
+    PanelChooseFixture.Visible := True;
+    PanelChooseFixture.Top := ScaleDesignToForm(8);
+    PanelChooseFixture.Height := ScaleDesignToForm(400);
+    AdjustFormHeight(PanelChooseFixture);
+    NB.PageIndex := NB.IndexOf(PageDMXRGB);
+    Label2.Caption := aTitle;
+    CBUni2.ItemIndex :=  UniverseManager.IDToIndex(FParams[IndexOfParamIDUniverse].ToInteger);
+    uni := UniverseManager.GetUniverseByID(FParams[IndexOfParamIDUniverse].ToInteger);
+    FrameViewFixtureListRGB.FillWithRGBFixture(uni);
+    FrameViewFixtureListRGB.SelectFixture(FParams[IndexOfParamIDUniverse].ToInteger);
+    FSE8Change(NIL);
+  end;
+
 begin
   FParams := AValue.SplitToParamArray;
   if (Length(FParams)= 0) or
@@ -1037,15 +1123,25 @@ begin
        PanelDimmer.Visible := True;
        PanelDimmer.Left := ScaleDesignToForm(8);
        PanelDimmer.Top := ScaleDesignToForm(8);
-       AdjustFormHeight(PanelDimmer);
-       NB.PageIndex := NB.IndexOf(PageDMXChannel);
-       Label2.Caption := SDMXDimmer;
+       PanelDimmer.Height := Panel20.Top + Panel20.Height + ScaleDesignToForm(8);
+       Label8.Visible := False;
+       FSE5.Visible := False;
+       FrameVelocity3.Visible := False;
+       LabelCurve1.Visible := False;
        FrameTBDimmer.Value := StringToSingle(FParams[4]);
-       FSE5.Value := StringToSingle(FParams[5]);
-       FrameVelocity3.SelectedCurveID := FParams[6].ToInteger;
-       TrackBar1Change(NIL);
-       PanelFlame.Visible := False;
+
+       ShowPanelChooseChannel(1, SDMXDimmer);
+       PanelChooseChannel.Top := PanelDimmer.Top + PanelDimmer.Height + ScaleDesignToForm(8);
+       PanelChooseChannel.Height := ScaleDesignToForm(400);
+       AdjustFormHeight(PanelChooseChannel);
      end;
+     CMD_DMX_FLAME: ShowPanelChooseChannel(1, SDMXFlame);
+     CMD_DMX_AUDIOFOLLOWER: ShowPanelChooseChannel(1, SDMXAudioFollower);
+     CMD_DMX_FLASH: ShowPanelChooseChannel(1, SDMXFlash);
+     TITLECMD_DMX_COPYCHANNEL: ShowPanelChooseChannel(1, SDMXCopy);
+     CMD_DMX_COPYCHANNEL:ShowPanelChooseChannel(4, SDMXCopy);
+
+
      TITLECMD_DMX_DIMMER: begin  // TITLECMD_DMX_DIMMER Duration CurveID
        PanelDimmer.Visible := True;
        PanelDimmer.Left := ScaleDesignToForm(8);
@@ -1076,20 +1172,6 @@ begin
        TrackBar1Change(NIL);
      end;
 
-
-     CMD_DMX_FLAME: begin  // CMD_DMX_FLAME IDuniverse IDFixture ChanIndex LevelMin LevelMax Speed Soften
-       PanelFlame.Visible := True;
-       PanelFlame.Left := ScaleDesignToForm(8);
-       PanelFlame.Top := ScaleDesignToForm(8);
-       AdjustFormHeight(PanelFlame);
-       NB.PageIndex := NB.IndexOf(PageDMXChannel);
-       Label2.Caption := SDMXFlame;
-       FrameTBFlameLevels.PercentMin := StringToSingle(FParams[4]);
-       FrameTBFlameLevels.PercentMax := StringToSingle(FParams[5]);
-       FrameTBFlameWait.Value := StringToSingle(FParams[6]);
-       FrameTBFlameSoften.PercentValue := StringToSingle(FParams[7]);
-       TrackBar1Change(NIL);
-     end;
      TITLECMD_DMX_FLAME: begin  // TITLECMD_DMX_FLAME  LevelMin LevelMax Speed Soften
        PanelFlame.Visible := True;
        PanelFlame.Left := ScaleDesignToForm(8);
@@ -1101,19 +1183,6 @@ begin
        FrameTBFlameLevels.PercentMax := StringToSingle(FParams[2]);
        FrameTBFlameWait.Value := StringToSingle(FParams[3]);
        FrameTBFlameSoften.PercentValue := StringToSingle(FParams[4]);
-       TrackBar1Change(NIL);
-     end;
-     CMD_DMX_AUDIOFOLLOWER: begin // CMD_DMX_AUDIOFOLLOWER IDuniverse IDFixture ChanIndex IDaudio Gain MaxPercent SoftenTime
-       PanelAudioFollower.Visible := True;
-       PanelAudioFollower.Top := ScaleDesignToForm(8);
-       PanelAudioFollower.Left := ScaleDesignToForm(8);
-       AdjustFormHeight(PanelAudioFollower);
-       NB.PageIndex := NB.IndexOf(PageDMXChannel);
-       Label2.Caption := SDMXAudioFollower;
-       CBAudio2.ItemIndex := SoundManager.IDToIndex(FParams[4].ToInteger);
-       FrameTBFollowerGain.Value := StringToSingle(FParams[5]);
-       FrameTBFollowerMax.Value := StringToSingle(FParams[6]);
-       FrameTBFollowerSoften.Value := StringToSingle(FParams[7]);
        TrackBar1Change(NIL);
      end;
      TITLECMD_DMX_AUDIOFOLLOWER: begin // TITLECMD_DMX_AUDIOFOLLOWER IDaudio Gain MaxPercent SoftenTime
@@ -1128,21 +1197,6 @@ begin
        FrameTBFollowerMax.Value := StringToSingle(FParams[3]);
        FrameTBFollowerSoften.Value := StringToSingle(FParams[4]);
        TrackBar1Change(NIL);
-     end;
-     CMD_DMX_FLASH: begin // CMD_DMX_FLASH IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
-       PanelFlash.Visible := True;
-       PanelFlash.Top := ScaleDesignToForm(8);
-       PanelFlash.Left := ScaleDesignToForm(8);
-       AdjustFormHeight(PanelFlash);
-       NB.PageIndex := NB.IndexOf(PageDMXChannel);
-       Label2.Caption := SDMXFlash;
-       if FParams[4] = FParams[5] then RadioButton1.Checked := True else RadioButton2.Checked := True;
-       if FParams[6] = FParams[7] then RadioButton3.Checked := True else RadioButton4.Checked := True;
-       FrameTBDmxFlashLevels.Init(trHorizontal, False, RadioButton2.Checked, True);
-       FrameTBDmxFlashLevels.PercentMin := StringToSingle(FParams[4]);
-       FrameTBDmxFlashLevels.PercentMax := StringToSingle(FParams[5]);
-       FloatSpinEdit2.Value := StringToSingle(FParams[6]);
-       FloatSpinEdit3.Value := StringToSingle(FParams[7]);
      end;
      TITLECMD_DMX_FLASH: begin // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
        PanelFlash.Visible := True;
@@ -1160,21 +1214,13 @@ begin
        FloatSpinEdit3.Value := StringToSingle(FParams[4]);
      end;
 
-     CMD_DMX_DIMMERRGB: begin  // CMD_DMX_DIMMERRGB IDuniverse IDFixture Color Duration CurveID
-       PanelPalette.Visible := True;
-       PanelRGBDuration.Visible := True;
-       PanelRGBDuration.Left := ScaleDesignToForm(8);
-       PanelRGBDuration.Top := PanelPalette.Top+PanelPalette.Height+ScaleDesignToForm(8);
-       PanelCurveDMXRGB.Visible := True;
-       PanelCurveDMXRGB.Left := ScaleDesignToForm(8);
-       PanelCurveDMXRGB.Top := PanelRGBDuration.Top+PanelRGBDuration.Height+ScaleDesignToForm(8);
-       AdjustFormHeight(PanelCurveDMXRGB);
-       NB.PageIndex := NB.IndexOf(PageDMXRGB);
-       Label2.Caption := SDMXDimmerRGB;
-       FrameColorPalette1.SelectedColor := TColor(FParams[3].ToInteger);
-       FSE8.Value := StringToSingle(FParams[4]);
-       FrameVelocity5.SelectedCurveID := FParams[5].ToInteger;
-     end;
+     CMD_DMX_DIMMERRGB: ShowPanelChooseFixtureRGB(1, SDMXDimmerRGB);
+     CMD_DMX_FLAMERGB: ShowPanelChooseFixtureRGB(1, SDMXFlameRGB);
+     CMD_DMX_AUDIOFOLLOWERRGB: ShowPanelChooseFixtureRGB(1,SDMXAudioFollowerRGB);
+     CMD_DMX_FLASHRGB: ShowPanelChooseFixtureRGB(1,SDMXFlashRGB);
+     TITLECMD_DMX_COPYRGB: ShowPanelChooseFixtureRGB(1, SDMXCopyRGB);
+     CMD_DMX_COPYRGB: ShowPanelChooseFixtureRGB(4, SDMXCopyRGB);
+
      TITLECMD_DMX_DIMMERRGB: begin  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
        PanelPalette.Visible := True;
        PanelRGBDuration.Visible := True;
@@ -1190,20 +1236,7 @@ begin
        FSE8.Value := StringToSingle(FParams[2]);
        FrameVelocity5.SelectedCurveID := FParams[3].ToInteger;
      end;
-     CMD_DMX_FLAMERGB: begin // CMD_DMX_FLAMERGB IDuniverse IDFixture Color Speed Amplitude Soften
-       PanelPalette.Visible := True;
-       PanelRGBFlame.Visible := True;
-       PanelRGBFlame.Left := ScaleDesignToForm(8);
-       PanelRGBFlame.Top := PanelPalette.Top+PanelPalette.Height+ScaleDesignToForm(8);
-       AdjustFormHeight(PanelRGBFlame);
-       NB.PageIndex := NB.IndexOf(PageDMXRGB);
-       Label2.Caption := SDMXFlameRGB;
-       FrameColorPalette1.SelectedColor := TColor(FParams[3].ToInteger);
-       FrameTBDmxFlameRGBWait.Value := StringToSingle(FParams[4]);
-       FrameTBDmxFlameRGBAmplitude.Value := StringToSingle(FParams[5]);
-       FrameTBDmxFlameRGBSoften.Value := StringToSingle(FParams[6]);
-       FSE8Change(NIL);
-     end;
+
      TITLECMD_DMX_FLAMERGB: begin // TITLECMD_DMX_FLAMERGB Color Speed Amplitude Soften
        PanelPalette.Visible := True;
        PanelRGBFlame.Visible := True;
@@ -1218,20 +1251,7 @@ begin
        FrameTBDmxFlameRGBSoften.Value := StringToSingle(FParams[4]);
        FSE8Change(NIL);
      end;
-     CMD_DMX_AUDIOFOLLOWERRGB: begin // CMD_DMX_AUDIOFOLLOWERRGB IDuniverse IDFixture IDaudio Color Gain SoftenTime
-       PanelPalette.Visible := True;
-       PanelRGBFollower.Visible := True;
-       PanelRGBFollower.Left := ScaleDesignToForm(8);
-       PanelRGBFollower.Top := PanelPalette.Top+PanelPalette.Height+ScaleDesignToForm(8);
-       AdjustFormHeight(PanelRGBFollower);
-       NB.PageIndex := NB.IndexOf(PageDMXRGB);
-       Label2.Caption := SDMXAudioFollowerRGB;
-       CBAudio3.ItemIndex := SoundManager.IDToIndex(FParams[3].ToInteger);
-       FrameColorPalette1.SelectedColor := TColor(FParams[4].ToInteger);
-       FrameTBFollowerRGBGain.Value := StringToSingle(FParams[5]);
-       FrameTBFollowerRGBSoften.Value := StringToSingle(FParams[6]);
-       FSE8Change(NIL);
-     end;
+
      TITLECMD_DMX_AUDIOFOLLOWERRGB: begin // TITLECMD_DMX_AUDIOFOLLOWERRGB IDaudio Color Gain SoftenTime
        PanelPalette.Visible := True;
        PanelRGBFollower.Visible := True;
@@ -1246,6 +1266,7 @@ begin
        FrameTBFollowerRGBSoften.Value := StringToSingle(FParams[4]);
        FSE8Change(NIL);
      end;
+
      TITLECMD_DMX_FLASHRGB: begin // TITLECMD_DMX_FLASHRGB Color pcMin pcMax DurationMin DurationMax
        PanelPalette.Visible := True;
        PanelRGBFlash.Visible := True;
@@ -1262,24 +1283,6 @@ begin
        FrameTBDmxFlashRGBIntensity.PercentMax := StringToSingle(FParams[3]);
        FloatSpinEdit4.Value := StringToSingle(FParams[4]);
        FloatSpinEdit5.Value := StringToSingle(FParams[5]);
-       FSE8Change(NIL);
-     end;
-     CMD_DMX_FLASHRGB: begin // CMD_DMX_FLASHRGB IDuniverse IDFixture Color pcMin pcMax DurationMin DurationMax
-       PanelPalette.Visible := True;
-       PanelRGBFlash.Visible := True;
-       PanelRGBFlash.Left := ScaleDesignToForm(8);
-       PanelRGBFlash.Top := PanelPalette.Top+PanelPalette.Height+ScaleDesignToForm(8);
-       AdjustFormHeight(PanelRGBFlash);
-       NB.PageIndex := NB.IndexOf(PageDMXRGB);
-       Label2.Caption := SDMXFlashRGB;
-       FrameColorPalette1.SelectedColor := TColor(FParams[3].ToInteger);
-       if FParams[4] = FParams[5] then RadioButton7.Checked := True else RadioButton8.Checked := True;
-       if FParams[6] = FParams[7] then RadioButton5.Checked := True else RadioButton6.Checked := True;
-       FrameTBDmxFlashRGBIntensity.Init(trHorizontal, False, RadioButton8.Checked, True);
-       FrameTBDmxFlashRGBIntensity.PercentMin := StringToSingle(FParams[4]);
-       FrameTBDmxFlashRGBIntensity.PercentMax := StringToSingle(FParams[5]);
-       FloatSpinEdit4.Value := StringToSingle(FParams[6]);
-       FloatSpinEdit5.Value := StringToSingle(FParams[7]);
        FSE8Change(NIL);
      end;
 
@@ -1326,6 +1329,41 @@ begin
   ClientHeight := p.y;
 end;
 
+procedure TFormEditSingleAction.FillLBFixture(aUniID: integer; aLB: TListBox; aFixtureID: integer);
+var uni: TDMXUniverse;
+  i: integer;
+begin
+  aLB.Clear;
+  uni := UniverseManager.GetUniverseByID(aUniID);
+  if uni = NIL then exit;
+
+  for i:=0 to uni.FixturesCount-1 do
+    aLB.Items.Add(uni.Fixtures[i].Name+' - '+uni.Fixtures[i].Description);
+
+  // sets the right item index
+  if aFixtureID > -1 then
+    aLB.Itemindex := uni.FixtureIDToIndex(aFixtureID);
+end;
+
+procedure TFormEditSingleAction.FillLBChannel(aUniID, aFixtureID: integer; aLB: TListBox; aChanIndex: integer);
+var uni: TDMXUniverse;
+  fix: TDMXFixture;
+  i: integer;
+begin
+  aLB.Clear;
+  uni := UniverseManager.GetUniverseByID(aUniID);
+  if uni = NIL then exit;
+  fix := uni.Fixture_GetByID(aFixtureID);
+  if fix = NIL then exit;
+
+  for i:=0 to fix.ChannelsCount-1 do
+    aLB.Items.Add(fix.Channels[i].Name);
+
+  // sets the right item index
+  if aChanIndex > -1 then
+    aLB.Itemindex := aChanIndex;
+end;
+
 function TFormEditSingleAction.GetCmdIsEditable: boolean;
 begin
   Result := (FCmd <> CMD_AUDIO_REMOVEFX) and
@@ -1335,8 +1373,6 @@ begin
             (FCmd <> CMD_INTERNALDMXWAVE) and
             (FCmd <> CMD_DMX_STOPEFFECT) and
             (FCmd <> TITLECMD_DMX_STOPEFFECT) and
-            (FCmd <> CMD_DMX_COPYCHANNEL) and
-            (FCmd <> TITLECMD_DMX_COPYCHANNEL) and
             (FCmd <> CMD_DMX_STOPEFFECTRGB) and
             (FCmd <> TITLECMD_DMX_STOPEFFECTRGB) and
             (FCmd <> TITLECMD_DMX_COPYRGB) and

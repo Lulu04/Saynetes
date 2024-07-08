@@ -4705,3 +4705,4 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
+

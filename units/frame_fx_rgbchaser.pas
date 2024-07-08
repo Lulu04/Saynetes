@@ -482,7 +482,7 @@ end;
 
 procedure TFrameFXRGBChaser.Fill;
 begin
-  FrameViewFixturesList1.Fill;
+  FrameViewFixturesList1.FillWithSelected;
   Frame_Velocity1.UpdateList;
   UpdateStringAfterLanguageChange;
 end;

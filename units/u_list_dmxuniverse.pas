@@ -369,6 +369,7 @@ type
 
      function Fixture_GetByID(aID: cardinal): TDmxFixture;
      function GetFixtureByStrID(const aStrID: string): TDmxFixture;
+     function FixtureIDToIndex(aFixtureID: cardinal): integer;
      function Fixture_WhichContainsThisAdress(aAdress: TDMXAdress): TDMXFixture;
 
      function  Fixture_GetByAdress(aAdress: TDMXAdress): TDmxFixture;
@@ -447,6 +448,7 @@ TUniverseManager = class
      function Add(const aName: string): TDmxUniverse;
      procedure Delete(aIndex: integer);
      function ValidIndex(aIndex: integer): boolean;
+     function IDToIndex(aID: cardinal): integer;
 
      function Save: boolean;
      procedure SaveTo(t: TStringList);
@@ -465,7 +467,7 @@ TUniverseManager = class
      procedure Sel_All;
      procedure GetSelectedFixtures(var A: ArrayOfDmxFixtures);
 
-     // set all dmx channels to 0, stop all effects
+     // set all dmx channels to their default value, stop all effects
      procedure BlackOut;
 
      // compute effects
@@ -1583,6 +1585,17 @@ begin
     else Result := NIL;
 end;
 
+function TDmxUniverse.FixtureIDToIndex(aFixtureID: cardinal): integer;
+var i: integer;
+begin
+  for i:=0 to FixturesCount-1 do
+    if Fixtures[i].ID = aFixtureID then begin
+      Result := i;
+      exit;
+    end;
+  Result := -1;
+end;
+
 function TDmxUniverse.Fixture_WhichContainsThisAdress(aAdress: TDMXAdress ): TDMXFixture;
 var fix: TDMXFixture;
 begin
@@ -2076,6 +2089,17 @@ end;
 function TUniverseManager.ValidIndex(aIndex: integer): boolean;
 begin
   Result := (aIndex >= 0) and (aIndex < FUniverses.Count);
+end;
+
+function TUniverseManager.IDToIndex(aID: cardinal): integer;
+var i: integer;
+begin
+  for i:=0 to Count-1 do
+   if Universes[i].ID = aID then begin
+     Result := i;
+     exit;
+   end;
+  Result := -1;
 end;
 
 function TUniverseManager.GetUniverse(index: integer): TDmxUniverse;

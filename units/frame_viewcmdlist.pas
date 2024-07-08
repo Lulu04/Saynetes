@@ -29,10 +29,10 @@ type
     PopupMenu1: TPopupMenu;
     procedure LBDrawItem({%H-}Control: TWinControl; Index: Integer;
       ARect: TRect; State: TOwnerDrawState);
-    procedure LBKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure LBKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure LBMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
+      {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseLeave(Sender: TObject);
     procedure LBMouseMove(Sender: TObject; {%H-}Shift: TShiftState; {%H-}X, Y: Integer);
     procedure LBMouseUp(Sender: TObject; {%H-}Button: TMouseButton;
@@ -182,6 +182,7 @@ var txt, txt2: string;
        Result := Result+fix.Description;  // fixture description
        f := TRUE;
      end;
+     if Result = '' then Result := fix.Name;
    end;
 
    function FormatDmxTrack(StrIDUni, StrIDFix, StrAdr: string): string;
@@ -223,6 +224,7 @@ var txt, txt2: string;
         Result := Result+' - ';
       Result := Result+chan.Name; // nom du canal
     end;
+    if Result = '' then Result := fix.Name;
    end;
 
    function RenderTitle(const aTitle, aParamTitle: string; aColor: TColor): integer;

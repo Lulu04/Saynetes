@@ -385,7 +385,7 @@ begin
 
   FrameFXRGBChaser1.Fill;
 
-  FrameViewFixturesList1.Fill;
+  FrameViewFixturesList1.FillWithSelected;
 
   ComboBox1.Clear;
   for i:=0 to SoundManager.Count-1 do
