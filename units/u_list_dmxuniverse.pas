@@ -467,7 +467,7 @@ TUniverseManager = class
      procedure Sel_All;
      procedure GetSelectedFixtures(var A: ArrayOfDmxFixtures);
 
-     // set all dmx channels to 0, stop all effects
+     // set all dmx channels to their default value, stop all effects
      procedure BlackOut;
 
      // compute effects
