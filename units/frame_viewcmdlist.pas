@@ -182,6 +182,7 @@ var txt, txt2: string;
        Result := Result+fix.Description;  // fixture description
        f := TRUE;
      end;
+     if Result = '' then Result := fix.Name;
    end;
 
    function FormatDmxTrack(StrIDUni, StrIDFix, StrAdr: string): string;
@@ -223,6 +224,7 @@ var txt, txt2: string;
         Result := Result+' - ';
       Result := Result+chan.Name; // nom du canal
     end;
+    if Result = '' then Result := fix.Name;
    end;
 
    function RenderTitle(const aTitle, aParamTitle: string; aColor: TColor): integer;
