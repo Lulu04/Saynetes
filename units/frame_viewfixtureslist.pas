@@ -37,7 +37,10 @@ type
     constructor Create(TheOwner: TComponent); override;
     procedure EraseBackground({%H-}DC: HDC); override;
 
-    procedure Fill;
+    procedure FillWithSelected;
+
+    procedure FillWithRGBFixture(aUni: TDMXUniverse);
+    procedure SelectFixture(aFixtureID: integer);
 
     procedure Clear;
     procedure AddFixture(aFix: TDMXFixture);
@@ -124,7 +127,8 @@ procedure TFrameViewFixturesList.LBMouseLeave(Sender: TObject);
 begin
   FItemIndexUnderMouse := -1;
   LB.Invalidate;
-  FTargetViewProjector.ProcessViewDMXCursorsMouseOverFixtureEvent(Self, NIL);
+  if FTargetViewProjector <> NIL then
+    FTargetViewProjector.ProcessViewDMXCursorsMouseOverFixtureEvent(Self, NIL);
 end;
 
 procedure TFrameViewFixturesList.LBMouseMove(Sender: TObject;
@@ -143,7 +147,8 @@ begin
     fix := TDMXFixture(LB.Items.Objects[i])
   else
     fix := NIL;
-  FTargetViewProjector.ProcessViewDMXCursorsMouseOverFixtureEvent(Self, fix);
+  if FTargetViewProjector <> NIL then
+    FTargetViewProjector.ProcessViewDMXCursorsMouseOverFixtureEvent(Self, fix);
 end;
 
 procedure TFrameViewFixturesList.LBSelectionChange(Sender: TObject; User: boolean);
@@ -207,7 +212,7 @@ begin
   inherited EraseBackground(DC);
 end;
 
-procedure TFrameViewFixturesList.Fill;
+procedure TFrameViewFixturesList.FillWithSelected;
 var A: arrayOfDMXFixtures;
     i: integer;
 begin
@@ -217,6 +222,28 @@ begin
   for i:=0 to High(A) do
     LB.Items.AddObject('', A[i]);
   LB.UnlockSelectionChange;
+end;
+
+procedure TFrameViewFixturesList.FillWithRGBFixture(aUni: TDMXUniverse);
+var i: integer;
+begin
+  LB.Clear;
+  if aUni = NIL then exit;
+
+  LB.LockSelectionChange;
+  for i:=0 to aUni.FixturesCount-1 do
+    if aUni.Fixtures[i].HasRGBChannel then LB.Items.AddObject('', aUni.Fixtures[i]);
+  LB.UnlockSelectionChange;
+end;
+
+procedure TFrameViewFixturesList.SelectFixture(aFixtureID: integer);
+var i: integer;
+begin
+  for i:=0 to LB.Count-1 do
+    if TDMXFixture(LB.Items.Objects[i]).ID = aFixtureID then begin
+      LB.ItemIndex := i;
+      exit;
+    end;
 end;
 
 procedure TFrameViewFixturesList.Clear;

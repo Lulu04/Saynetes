@@ -635,9 +635,9 @@ object FormEditSingleAction: TFormEditSingleAction
     end
     object PageDMXChannel: TPage
       object PanelDimmer: TPanel
-        Left = -448
+        Left = -432
         Height = 96
-        Top = 208
+        Top = 184
         Width = 500
         BevelOuter = bvNone
         ClientHeight = 96
@@ -1223,9 +1223,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelWave: TPanel
-        Left = 80
+        Left = -240
         Height = 256
-        Top = 40
+        Top = -80
         Width = 355
         BevelOuter = bvNone
         ClientHeight = 256
@@ -1468,6 +1468,127 @@ object FormEditSingleAction: TFormEditSingleAction
           Font.Color = 15395562
           ParentColor = False
           ParentFont = False
+        end
+      end
+      object PanelChooseChannel: TPanel
+        Left = 96
+        Height = 216
+        Top = 88
+        Width = 504
+        BevelOuter = bvNone
+        ClientHeight = 216
+        ClientWidth = 504
+        Color = 4740951
+        ParentColor = False
+        TabOrder = 5
+        Visible = False
+        object Label62: TLabel
+          AnchorSideLeft.Control = PanelChooseChannel
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = CBUni1
+          AnchorSideBottom.Side = asrBottom
+          Left = 10
+          Height = 15
+          Top = 13
+          Width = 50
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 10
+          Caption = 'sUniverse'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object CBUni1: TComboBox
+          AnchorSideLeft.Control = Label62
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = PanelChooseChannel
+          Left = 70
+          Height = 23
+          Top = 5
+          Width = 218
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 5
+          Color = 3355443
+          Font.Color = 15395562
+          ItemHeight = 15
+          OnSelect = TrackBar1Change
+          ParentFont = False
+          Style = csDropDownList
+          TabOrder = 0
+        end
+        object Label63: TLabel
+          AnchorSideLeft.Control = PanelChooseChannel
+          AnchorSideTop.Control = Label62
+          AnchorSideTop.Side = asrBottom
+          Left = 10
+          Height = 15
+          Top = 38
+          Width = 41
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 10
+          Caption = 'sFixture'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label64: TLabel
+          AnchorSideTop.Control = Label63
+          Left = 288
+          Height = 15
+          Top = 38
+          Width = 49
+          Caption = 'sChannel'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object LBFixture1: TListBox
+          AnchorSideLeft.Control = PanelChooseChannel
+          AnchorSideTop.Control = Label63
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = PanelChooseChannel
+          AnchorSideBottom.Side = asrBottom
+          Left = 5
+          Height = 158
+          Top = 53
+          Width = 251
+          Anchors = [akTop, akLeft, akBottom]
+          BorderSpacing.Left = 5
+          BorderSpacing.Bottom = 5
+          BorderStyle = bsNone
+          Color = 3355443
+          ExtendedSelect = False
+          Font.Color = 15395562
+          ItemHeight = 0
+          OnClick = TrackBar1Change
+          ParentFont = False
+          TabOrder = 1
+        end
+        object LBChannel1: TListBox
+          AnchorSideLeft.Control = LBFixture1
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Label64
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = PanelChooseChannel
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = PanelChooseChannel
+          AnchorSideBottom.Side = asrBottom
+          Left = 266
+          Height = 158
+          Top = 53
+          Width = 233
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 10
+          BorderSpacing.Right = 5
+          BorderSpacing.Bottom = 5
+          BorderStyle = bsNone
+          Color = 3355443
+          ExtendedSelect = False
+          Font.Color = 15395562
+          ItemHeight = 0
+          OnClick = TrackBar1Change
+          ParentFont = False
+          TabOrder = 2
         end
       end
     end
@@ -2045,9 +2166,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelRGBFollower: TPanel
-        Left = 432
+        Left = 488
         Height = 147
-        Top = 200
+        Top = 61
         Width = 312
         BevelOuter = bvNone
         ClientHeight = 147
@@ -2369,9 +2490,9 @@ object FormEditSingleAction: TFormEditSingleAction
         end
       end
       object PanelWaveRGB: TPanel
-        Left = 60
+        Left = 464
         Height = 192
-        Top = 177
+        Top = 312
         Width = 355
         BevelOuter = bvNone
         ClientHeight = 192
@@ -2574,6 +2695,88 @@ object FormEditSingleAction: TFormEditSingleAction
           Font.Color = 15395562
           ParentColor = False
           ParentFont = False
+        end
+      end
+      object PanelChooseFixture: TPanel
+        Left = 13
+        Height = 216
+        Top = 88
+        Width = 504
+        BevelOuter = bvNone
+        ClientHeight = 216
+        ClientWidth = 504
+        Color = 4740951
+        ParentColor = False
+        TabOrder = 7
+        Visible = False
+        object Label65: TLabel
+          AnchorSideLeft.Control = PanelChooseFixture
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = CBUni2
+          AnchorSideBottom.Side = asrBottom
+          Left = 10
+          Height = 15
+          Top = 13
+          Width = 50
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 10
+          Caption = 'sUniverse'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object CBUni2: TComboBox
+          AnchorSideLeft.Control = Label65
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = PanelChooseFixture
+          Left = 70
+          Height = 23
+          Top = 5
+          Width = 218
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 5
+          Color = 3355443
+          Font.Color = 15395562
+          ItemHeight = 15
+          OnSelect = FSE8Change
+          ParentFont = False
+          Style = csDropDownList
+          TabOrder = 0
+        end
+        object Label66: TLabel
+          AnchorSideLeft.Control = PanelChooseFixture
+          AnchorSideTop.Control = Label65
+          AnchorSideTop.Side = asrBottom
+          Left = 10
+          Height = 15
+          Top = 38
+          Width = 41
+          BorderSpacing.Left = 10
+          BorderSpacing.Top = 10
+          Caption = 'sFixture'
+          Font.Color = 15395562
+          ParentColor = False
+          ParentFont = False
+        end
+        object Panel36: TPanel
+          AnchorSideLeft.Control = PanelChooseFixture
+          AnchorSideTop.Control = Label66
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = PanelChooseFixture
+          AnchorSideBottom.Side = asrBottom
+          Left = 5
+          Height = 158
+          Top = 53
+          Width = 491
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Left = 5
+          BorderSpacing.Right = 5
+          BorderSpacing.Bottom = 5
+          BevelOuter = bvNone
+          Color = 3355443
+          ParentColor = False
+          TabOrder = 1
         end
       end
     end

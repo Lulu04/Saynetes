@@ -187,7 +187,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
     Height = 298
     Top = 186
     Width = 263
-    PageIndex = 4
+    PageIndex = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 3
     BorderSpacing.Right = 3
@@ -208,7 +208,7 @@ object FormDMXRGBTools: TFormDMXRGBTools
         Height = 274
         Top = 24
         Width = 263
-        PageIndex = 1
+        PageIndex = 0
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabOrder = 0
         object PageSimpleDimmer: TPage
