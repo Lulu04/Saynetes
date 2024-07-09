@@ -58,7 +58,7 @@ type
   end;
 
 implementation
-uses Graphics, LCLHelper;
+uses Graphics, LCLHelper, u_helper;
 
 {$R *.lfm}
 
@@ -68,14 +68,16 @@ procedure TFrameViewFixturesList.LBDrawItem(Control: TWinControl;
   Index: Integer; ARect: TRect; State: TOwnerDrawState);
 var fix: TDMXFixture;
   txt: string;
+const SEP=' - ';
 begin
   fix := TDMXFixture(LB.Items.Objects[Index]);
 
   txt := '';
-  if UniverseManager.Count > 1 then txt := fix.Universe.ShortName+':'+fix.Adress.ToString+' - ';
-  txt := txt + fix.Description+' - '+fix.Name;
-  with LB.Canvas do begin
+  if UniverseManager.Count > 1 then txt := fix.Universe.ShortName+':'+fix.Adress.ToString;
+  txt.Concat(fix.Name, SEP);
+  txt.Concat(fix.Description, SEP);
 
+  with LB.Canvas do begin
     Brush.Color := LB.Color;
     FillRect(ARect);
     Brush.Style := bsClear;
@@ -172,15 +174,21 @@ begin
 end;
 
 function TFrameViewFixturesList.GetSelCount: integer;
+var i: integer;
 begin
-  Result := LB.SelCount;
+  Result := 0;
+  for i:=0 to LB.Count-1 do
+    if LB.Selected[i] then inc(Result);
 end;
 
 function TFrameViewFixturesList.GetSelected: ArrayOfDmxFixtures;
 var i, k: integer;
 begin
   Result := NIL;
-  SetLength(Result, LB.SelCount);
+  i := SelCount;
+  if i = 0 then exit;
+
+  SetLength(Result, i);
   k := 0;
   for i:=0 to LB.Count-1 do
     if LB.Selected[i] then

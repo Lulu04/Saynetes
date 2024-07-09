@@ -57,7 +57,7 @@ type
 
 implementation
 
-uses Graphics, LCLHelper;
+uses Graphics, LCLHelper, u_helper;
 
 {$R *.lfm}
 
@@ -67,12 +67,15 @@ procedure TFrameViewChannelsList.LBDrawItem(Control: TWinControl;
   Index: Integer; ARect: TRect; State: TOwnerDrawState);
 var chan: TDMXChannel;
   txt: string;
+const SEP=' - ';
 begin
   chan := TDMXChannel(LB.Items.Objects[Index]);
 
   txt := '';
-  if UniverseManager.Count > 1 then txt := chan.Universe.ShortName+':'+chan.Adress.ToString+' - ';
-  txt := txt + chan.Fixture.Description+' - '+chan.Name;
+  if UniverseManager.Count > 1 then txt := chan.Universe.ShortName+':'+chan.Adress.ToString;
+  txt.Concat(chan.Fixture.Description, SEP);
+  txt.Concat(chan.Name, SEP);
+
   with LB.Canvas do begin
 
     Brush.Color := LB.Color;
