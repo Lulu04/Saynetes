@@ -1361,10 +1361,10 @@ begin
       if ErrorOnParamCount(8, SDMXFlashRGB) then exit(True);
       if ErrorOnDmxAdress(Self[1], Self[2], SDMXFlashRGB) then exit(True);
       if ErrorOnColor(Self[3], SDMXFlashRGB) then exit(True);
-      if ErrorOnSingleRange(Self[2], 0.0, 1.0, SDMXFlashRGB, SBadLevelMin) then exit(True);
-      if ErrorOnSingleRange(Self[3], 0.0, 1.0, SDMXFlashRGB, SBadLevelMax) then exit(True);
-      if ErrorOnSingleRange(Self[4], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMin) then exit(True);
-      if ErrorOnSingleRange(Self[5], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMax) then exit(True);
+      if ErrorOnSingleRange(Self[4], 0.0, 1.0, SDMXFlashRGB, SBadLevelMin) then exit(True);
+      if ErrorOnSingleRange(Self[5], 0.0, 1.0, SDMXFlashRGB, SBadLevelMax) then exit(True);
+      if ErrorOnSingleRange(Self[6], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMin) then exit(True);
+      if ErrorOnSingleRange(Self[7], 0.1, 1000.0, SDMXFlashRGB, SBadDurationMax) then exit(True);
       haveDuration := True;
     end;
 
