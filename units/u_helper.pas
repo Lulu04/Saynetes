@@ -24,6 +24,7 @@ public
   function IsAudioPlay(out aAudioID: integer): boolean; // title + action
   procedure ChangeParamFromTitleParam(const aTitleCmd: TSingleCmd);
   function SplitToParamArray: TParamArray;
+  procedure Concat(const s: string; aSeparator: string);
   procedure ConcatCmd(aCmd: TSingleCmd);
   procedure ConcatCmdList(aCmdList: TCmdList);
   // scan the single command or the group of several commands and return True if an error is found,
@@ -1653,6 +1654,13 @@ end;
 function TCmdListHelper.SplitToParamArray: TParamArray;
 begin
  Result := Self.SplitToArray( PARAM_SEPARATOR );
+end;
+
+procedure TCmdListHelper.Concat(const s: string; aSeparator: string);
+begin
+  if s.Length = 0 then exit;
+  if Self.Length = 0 then Self := s
+    else Self := Self + aSeparator + s;
 end;
 
 procedure TCmdListHelper.ConcatCmd(aCmd: TSingleCmd);
