@@ -87,7 +87,7 @@ begin
 {$if defined(LCLGTK2) or defined(LCLCOCOA)}
   Memo1.Font.Name := 'Arial';
   Memo1.Font.Style := [fsBold];
-  Memo1.Font.Height := ScaleDesignToForm(FDesignFontHeight-2);
+  Memo1.Font.Height := ScaleDesignToForm(15-2);
 {$endif}
 {$if defined(Windows)}
   Memo1.Font.Name := 'Arial';
