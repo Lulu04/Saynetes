@@ -8,6 +8,7 @@ object DataModule1: TDataModule1
   object ApplicationProperties1: TApplicationProperties
     HintColor = 6225919
     OnException = ApplicationProperties1Exception
+    OnQueryEndSession = ApplicationProperties1QueryEndSession
     Left = 56
     Top = 80
   end

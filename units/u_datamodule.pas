@@ -20,6 +20,7 @@ type
     ImageList3: TImageList;
     ImageListAudio: TImageList;
     procedure ApplicationProperties1Exception(Sender: TObject; E: Exception);
+    procedure ApplicationProperties1QueryEndSession(var Cancel: Boolean);
     procedure DataModuleCreate(Sender: TObject);
   private
     FPath: string;
@@ -46,6 +47,11 @@ procedure TDataModule1.ApplicationProperties1Exception(Sender: TObject;
   E: Exception);
 begin
   Log.Error(E.Message);
+end;
+
+procedure TDataModule1.ApplicationProperties1QueryEndSession(var Cancel: Boolean);
+begin
+  Cancel := True;
 end;
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
