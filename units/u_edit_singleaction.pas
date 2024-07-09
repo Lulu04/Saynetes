@@ -616,7 +616,8 @@ begin
     CMD_DMX_AUDIOFOLLOWERRGB,
     CMD_DMX_FLASHRGB,
     TITLECMD_DMX_COPYRGB,
-    CMD_DMX_COPYRGB: begin
+    CMD_DMX_COPYRGB,
+    CMD_DMX_WAVERGB: begin
       if (uni = NIL) or (fix = NIL) then exit;
       if FCmd = CMD_DMX_COPYRGB then i := 3
         else i := 1;
@@ -832,7 +833,8 @@ begin
    CMD_DMX_AUDIOFOLLOWER,
    CMD_DMX_FLASH,
    TITLECMD_DMX_COPYCHANNEL,
-   CMD_DMX_COPYCHANNEL: begin
+   CMD_DMX_COPYCHANNEL,
+   CMD_DMX_WAVE: begin
      if (uni = NIL) or (fix = NIL) or (chan = -1) then exit;
      if FCmd = CMD_DMX_COPYCHANNEL then i := 4
        else i := 1;
@@ -910,7 +912,7 @@ procedure TFormEditSingleAction.SetCmd(AValue: TSingleCmd);
     CBUni2.ItemIndex :=  UniverseManager.IDToIndex(FParams[IndexOfParamIDUniverse].ToInteger);
     uni := UniverseManager.GetUniverseByID(FParams[IndexOfParamIDUniverse].ToInteger);
     FrameViewFixtureListRGB.FillWithRGBFixture(uni);
-    FrameViewFixtureListRGB.SelectFixture(FParams[IndexOfParamIDUniverse].ToInteger);
+    FrameViewFixtureListRGB.SelectFixture(FParams[IndexOfParamIDUniverse+1].ToInteger);
     FSE8Change(NIL);
   end;
 
@@ -1139,7 +1141,8 @@ begin
      CMD_DMX_AUDIOFOLLOWER: ShowPanelChooseChannel(1, SDMXAudioFollower);
      CMD_DMX_FLASH: ShowPanelChooseChannel(1, SDMXFlash);
      TITLECMD_DMX_COPYCHANNEL: ShowPanelChooseChannel(1, SDMXCopy);
-     CMD_DMX_COPYCHANNEL:ShowPanelChooseChannel(4, SDMXCopy);
+     CMD_DMX_COPYCHANNEL: ShowPanelChooseChannel(4, SDMXCopy);
+     CMD_DMX_WAVE: ShowPanelChooseChannel(1, SDMXWave);
 
 
      TITLECMD_DMX_DIMMER: begin  // TITLECMD_DMX_DIMMER Duration CurveID
@@ -1220,6 +1223,7 @@ begin
      CMD_DMX_FLASHRGB: ShowPanelChooseFixtureRGB(1,SDMXFlashRGB);
      TITLECMD_DMX_COPYRGB: ShowPanelChooseFixtureRGB(1, SDMXCopyRGB);
      CMD_DMX_COPYRGB: ShowPanelChooseFixtureRGB(4, SDMXCopyRGB);
+     CMD_DMX_WAVERGB: ShowPanelChooseFixtureRGB(1, SDMXWaveRGB);
 
      TITLECMD_DMX_DIMMERRGB: begin  // TITLECMD_DMX_DIMMERRGB Color Duration CurveID
        PanelPalette.Visible := True;
