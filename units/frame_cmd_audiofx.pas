@@ -154,8 +154,8 @@ private
     function GetEffectCount: integer;
     function AutoPlay: boolean;
     procedure ProcessFileSelectionChange(Sender: TObject);
-    procedure GenerateCmdForApply;
-    procedure GenerateCmdForRemove;
+    procedure GenerateCmdForConnect;
+    procedure GenerateCmdForDisconnect;
     procedure DoOnAddCmd;
 
     procedure StartPlayback(aFromBegining: boolean);
@@ -229,8 +229,8 @@ begin
   FSelectedSounds := FrameViewAudioList1.GetSelected;
 
   if FToogleSpeedButtonManager.Checked[SpeedButton6] then
-    GenerateCmdForApply
-  else GenerateCmdForRemove;
+    GenerateCmdForConnect
+  else GenerateCmdForDisconnect;
 end;
 
 procedure TFrameCmdAudioFX.ComboBox5Select(Sender: TObject);
@@ -472,7 +472,7 @@ begin
     ReconstructEffectChain;
 end;
 
-procedure TFrameCmdAudioFX.GenerateCmdForApply;
+procedure TFrameCmdAudioFX.GenerateCmdForConnect;
 var i: integer;
   snd: TALSSound;
   wetdry: single;
@@ -540,7 +540,7 @@ begin
   DoOnAddCmd;
 end;
 
-procedure TFrameCmdAudioFX.GenerateCmdForRemove;
+procedure TFrameCmdAudioFX.GenerateCmdForDisconnect;
 var i: integer;
   snd: TALSSound;
 begin
