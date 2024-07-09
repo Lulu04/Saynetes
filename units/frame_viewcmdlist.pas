@@ -543,8 +543,8 @@ begin
 
     TITLECMD_DMX_FLASH: begin  // TITLECMD_DMX_FLASH LevelMin LevelMax DurationMin DurationMax
      RenderBackground;
-     if A[1] <> A[2] then txt := SRandomValue+' '+FormatFloat1Decimal(A[1])+' - '+FormatFloat1Decimal(A[2])+' '
-       else txt := STo+' '+FormatFloat1Decimal(A[1])+' ';
+     if A[1] <> A[2] then txt := SRandomValue+' '+DMXPercent(A[1])+' - '+DMXPercent(A[2])+' '
+       else txt := STo+' '+DMXPercent(A[1])+' ';
      if A[3] <> A[4] then txt := txt+SRandomDuration+' '+DurationValue(A[3])+' - '+DurationValue(A[4])
        else txt := txt+SIn+' '+DurationValue(A[3]);
      RenderTitle( SDMXFlash, txt, coul_action_dmx );
