@@ -1,5 +1,5 @@
 object FormSelectChannel: TFormSelectChannel
-  Left = 419
+  Left = 425
   Height = 257
   Top = 343
   Width = 333

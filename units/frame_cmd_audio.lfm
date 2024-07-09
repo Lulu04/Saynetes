@@ -49,11 +49,11 @@ object FrameCmdAudio: TFrameCmdAudio
       AnchorSideTop.Control = BStopAll
       AnchorSideRight.Control = BStopAll
       Cursor = crHandPoint
-      Left = 411
-      Height = 19
+      Left = 436
+      Height = 20
       Hint = 'Play selected audio file'
       Top = 373
-      Width = 45
+      Width = 20
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 15
       Color = 13816530
