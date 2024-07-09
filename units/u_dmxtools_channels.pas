@@ -507,8 +507,8 @@ begin
                                 vmin, vmax, dmin, dmax));
   end;
   // DMXFlash IDuniverse IDFixture ChanIndex LevelMin LevelMax DurationMin DurationMax
-  FShortReadable := SDMXFlash+' ';
-  if RadioButton2.Checked then
+  FShortReadable := SDMXFlash{+' '};
+{  if RadioButton2.Checked then
     FShortReadable := FShortReadable+SRandomValue+' '+
        DMXPercentToString(vmin)+' - '+DMXPercentToString(vmax)+' '
   else
@@ -516,7 +516,7 @@ begin
   if RadioButton4.Checked then
     FShortReadable := FShortReadable+SRandomDuration+' '+DurationToString(dmin)+' - '+DurationToString(dmax)
   else
-    FShortReadable := FShortReadable+SIn+' '+DurationToString(dmax);
+    FShortReadable := FShortReadable+SIn+' '+DurationToString(dmax);  }
 
   if Length(FTargetChannels) > 1 then
     FShortReadable := FShortReadable+' '+SOn+' '+SMultiple
