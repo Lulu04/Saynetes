@@ -1647,6 +1647,7 @@ begin
         A[9] := B[6];
       end;
 
+      else raise exception.Create('forgot to implement !');
     end;
   Self := A.PackToCmd;
 end;
