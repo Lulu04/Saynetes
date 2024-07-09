@@ -2519,7 +2519,7 @@ msgid "AUDIO CAPTURE"
 msgstr ""
 
 #: u_resource_string.saudioconnecteffect
-msgid "AUDIO - CONNECT EFFECT"
+msgid "AUDIO - CONNECT"
 msgstr ""
 
 #: u_resource_string.saudiodisconnecteffect
