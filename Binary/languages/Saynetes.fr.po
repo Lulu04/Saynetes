@@ -2812,8 +2812,8 @@ msgid "AUDIO CAPTURE"
 msgstr "CAPTURE AUDIO"
 
 #: u_resource_string.saudioconnecteffect
-msgid "AUDIO - CONNECT EFFECT"
-msgstr "AUDIO - CONNECTE L'EFFET"
+msgid "AUDIO - CONNECT"
+msgstr "AUDIO - CONNECTE"
 
 #: u_resource_string.saudiodisconnecteffect
 msgid "AUDIO - DISCONNECT EFFECT"
@@ -4705,4 +4705,3 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
-

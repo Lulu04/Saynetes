@@ -280,7 +280,7 @@ resourcestring
   SAudioSetVolume='AUDIO - SET VOLUME';
   SAudioSetPan='AUDIO - SET PAN';
   SAudioSetFreq='AUDIO - SET PITCH';
-  SAudioConnectEffect='AUDIO - CONNECT EFFECT';
+  SAudioConnectEffect='AUDIO - CONNECT';
   SAudioDisconnectEffect='AUDIO - DISCONNECT EFFECT';
   SAudioCaptureStart='AUDIO CAPTURE - START';
   SAudioCaptureStop='AUDIO CAPTURE - STOP';
