@@ -7,6 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   Buttons, LCLTranslator, Spin, ComCtrls, Menus, LMessages, LCLType,
+  BGRABitmap, BGRABitmapTypes,
   u_common, frame_viewdmxdipswitchs, frame_viewfixtureimage, lcl_utils,
   u_list_dmxuniverse, frame_editmode;
 
@@ -37,8 +38,6 @@ type
     FSE2: TFloatSpinEdit;
     FSE3: TFloatSpinEdit;
     Image1: TImage;
-    Image13: TImage;
-    Image14: TImage;
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
@@ -87,6 +86,8 @@ type
     PageModes: TPage;
     PageGeneral: TPage;
     PagePhysical: TPage;
+    PB1: TPaintBox;
+    PB2: TPaintBox;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel5: TPanel;
@@ -119,6 +120,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure LBWebLinkDblClick(Sender: TObject);
+    procedure PB1Paint(Sender: TObject);
     procedure RadioButton2Change(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
@@ -127,10 +129,12 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure UpDown1Click(Sender: TObject; Button: TUDBtnType);
   private
+    FImage: TBGRABitmap;
     //FrameViewDMXFixtureChannels1: TFrameViewDMXFixtureChannels;
     //FrameEditString1: TFrameEditString;
     FFrameFixtureImages: array[TFixtureType] of TFrameFixtureImage;
     FFixtureType: TFixtureType;
+    procedure ShowSelectedFixtureImageInPaintBox;
     procedure UpdateFixtureImages;
     procedure ProcessFrameFixtureImageChange(Sender: TFrameFixtureImage);
     procedure ProcessPageChangeEvent(Sender: TObject);
@@ -245,6 +249,13 @@ begin
   end;
 end;
 
+procedure TFormFixtureWizard.PB1Paint(Sender: TObject);
+var pb: TPaintBox;
+begin
+  pb := Sender as TPaintBox;
+  if FImage <> NIL then FImage.Draw(pb.Canvas, 0, 0, False);
+end;
+
 procedure TFormFixtureWizard.RadioButton2Change(Sender: TObject);
 begin
   PanelDipSwitch.Visible := RadioButton2.Checked;
@@ -328,6 +339,18 @@ begin
   Modified := True;
 end;
 
+procedure TFormFixtureWizard.ShowSelectedFixtureImageInPaintBox;
+begin
+  if FImage <> NIL then FImage.Free;
+  try
+    FImage := SVGFileToBGRABitmap(FixtureSVGFileFor(FFixtureType), PB1.ClientWidth, PB1.ClientHeight);
+  except
+    FImage := TBGRABitmap.Create(PB1.ClientWidth, PB1.ClientHeight, BGRAPixelTransparent);
+  end;
+  PB1.Invalidate;
+  PB2.Invalidate;
+end;
+
 procedure TFormFixtureWizard.UpdateFixtureImages;
 var i: TFixtureType;
   xx, yy, c: integer;
@@ -375,14 +398,14 @@ begin
     GeneralDataAreOK;
   end else
   if NB1.PageIndex = NB1.IndexOf(PagePhysical) then begin
-    ShowFixtureImage(Image13, FFixtureType);
+    ShowSelectedFixtureImageInPaintBox;
     PhysicalDataAreOK;
   end else
   if NB1.PageIndex = NB1.IndexOf(PageModes) then begin
     ModesAndChannelsDataAreOK;
   end else
   if NB1.PageIndex = NB1.IndexOf(PageFinish) then begin
-    ShowFixtureImage(Image14, FFixtureType);
+    ShowSelectedFixtureImageInPaintBox;
 
     Image1.Width := DataModule1.ImageList1.Width;
     Image1.Height := DataModule1.ImageList1.Height;
@@ -956,6 +979,7 @@ procedure TFormFixtureWizard.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(CheckedLabelManager);
   FreeAndNil(NoteBookManager);
+  FreeAndNil(FImage);
 end;
 
 end.

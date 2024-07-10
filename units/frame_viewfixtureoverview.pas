@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, LCLTranslator, ExtCtrls, StdCtrls,
-  u_list_dmxuniverse;
+  BGRABitmap, BGRABitmapTypes,
+  u_list_dmxuniverse, u_common;
 
 type
   // here we show only GENERAL and PHYSICAL data of the fixture
@@ -14,7 +15,6 @@ type
   { TFrameFixtureOverview }
 
   TFrameFixtureOverview = class(TFrame)
-    Image1: TImage;
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
@@ -42,14 +42,19 @@ type
     LBLFixturePower6: TLabel;
     LBLFixturePower7: TLabel;
     LBLManufacturer: TLabel;
+    PB: TPaintBox;
     Panel3: TPanel;
     SBLinks: TScrollBox;
+    procedure PBPaint(Sender: TObject);
   private
+    FImage: TBGRABitmap;
     FWebLinks: TWebLinks;
     FWebLabels: array of TLabel;
     procedure ProcessWebLabelClick(Sender: TObject);
+    procedure UpdateFixtureimageInPaintBox(aFixtureType: TFixtureType);
   public
     constructor Create(TheOwner: TComponent); override;
+    destructor Destroy; override;
 
     procedure ShowFixture(const aFixtureLocation: TFixtureLibraryLocation);
 
@@ -57,11 +62,16 @@ type
 
 implementation
 
-uses u_resource_string, u_helper, u_dmx_util, LCLIntf;
+uses u_resource_string, u_helper, u_dmx_util, LCLIntf, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
 { TFrameFixtureOverview }
+
+procedure TFrameFixtureOverview.PBPaint(Sender: TObject);
+begin
+  if FImage <> NIL then FImage.Draw(PB.Canvas, 0, 0, False);
+end;
 
 procedure TFrameFixtureOverview.ProcessWebLabelClick(Sender: TObject);
 begin
@@ -69,6 +79,17 @@ begin
     OpenURL(FWebLinks[TLabel(Sender).Tag].Url);
   except
   end;
+end;
+
+procedure TFrameFixtureOverview.UpdateFixtureimageInPaintBox(aFixtureType: TFixtureType);
+begin
+  if FImage <> NIL then FImage.Free;
+  try
+    FImage := SVGFileToBGRABitmap(FixtureSVGFileFor(aFixtureType), PB.ClientWidth, PB.ClientHeight);
+  except
+    FImage := TBGRABitmap.Create(PB.ClientWidth, PB.ClientHeight, BGRAPixelTransparent);
+  end;
+  PB.Invalidate;
 end;
 
 constructor TFrameFixtureOverview.Create(TheOwner: TComponent);
@@ -88,6 +109,12 @@ begin
   Label16.Caption := SWebLinks;
   Label17.Caption := SWatt;
   Label18.Caption := SAuthors+':';
+end;
+
+destructor TFrameFixtureOverview.Destroy;
+begin
+  FreeAndNil(FImage);
+  inherited Destroy;
 end;
 
 procedure TFrameFixtureOverview.ShowFixture(const aFixtureLocation: TFixtureLibraryLocation);
@@ -120,7 +147,8 @@ begin
       LBLFixturePower4.Caption := physical.Lens;
       LBLFixturePower5.Caption := FormatFloat('0.0', physical.LensMinDegree);
       LBLFixturePower6.Caption := FormatFloat('0.0', physical.LensMaxDegree);
-      ShowFixtureImage(Image1, general.FixtureType);
+
+      UpdateFixtureimageInPaintBox(general.FixtureType);
 
       // delete the previous web labels
       for i:=0 to High(FWebLabels) do FWebLabels[i].Free;
