@@ -128,6 +128,7 @@ resourcestring
   SBlue='Blue';
   sRepeatChannels='Repeat channels';
 
+  SFixtureEdition='Fixture edition';
   SManufacturer='Manufacturer';
   SAuthors='Authors';
   SDimensions='Dimensions';

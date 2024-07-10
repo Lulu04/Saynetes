@@ -206,6 +206,7 @@ begin
 
   if FEditingExistingFixture then begin
     LoadFixtureToEdit;
+    Caption := SFixtureEdition;
   end else begin
     FFrameFixtureImages[Low(TFixturetype)].Checked := True;
     FFixtureType := ftOther;
