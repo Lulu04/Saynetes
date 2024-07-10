@@ -350,7 +350,7 @@ type
      destructor Destroy; override;
 
    public  // adressing
-     // return the number of dmx adress occupied, taking any gap into acount
+     // return the number of dmx adress occupied, without counting gap
      function NumberOfAdressOccupied: integer;
      // return the last adress occupied by a fixture
      function LastUsedAdress: TDMXAdress;
