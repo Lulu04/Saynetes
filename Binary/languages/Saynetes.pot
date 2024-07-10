@@ -105,10 +105,6 @@ msgstr ""
 msgid "Target sub-channel"
 msgstr ""
 
-#: tformdevicemanager.bartnet.caption
-msgid "Art-Net"
-msgstr ""
-
 #: tformdevicemanager.bdmxdevices.caption
 msgid "DMX devices"
 msgstr ""
@@ -124,7 +120,7 @@ msgid ""
 msgstr ""
 
 #: tformdevicemanager.bviewinputdmx.caption
-msgid "DMX Input"
+msgid "Monitoring"
 msgstr ""
 
 #: tformdevicemanager.caption
@@ -134,6 +130,18 @@ msgstr ""
 #: tformdevicemanager.label1.caption
 msgctxt "tformdevicemanager.label1.caption"
 msgid "View"
+msgstr ""
+
+#: tformdevicemanager.label2.caption
+msgid "Devices found"
+msgstr ""
+
+#: tformdevicemanager.label3.caption
+msgid "Connect your universes"
+msgstr ""
+
+#: tformdevicemanager.label4.caption
+msgid "Search for:"
 msgstr ""
 
 #: tformdevicemanager.sg1.columns[0].title.caption
@@ -146,7 +154,7 @@ msgid "Target device"
 msgstr ""
 
 #: tformdevicemanager.sg1.columns[2].title.caption
-msgid "Channels used"
+msgid "Channels occupied"
 msgstr ""
 
 #: tformdevicemanager.sg1.columns[3].title.caption
@@ -3237,6 +3245,10 @@ msgstr ""
 
 #: u_resource_string.sfixture
 msgid "Fixture"
+msgstr ""
+
+#: u_resource_string.sfixtureedition
+msgid "Fixture edition"
 msgstr ""
 
 #: u_resource_string.sfixturefilealreadyexists

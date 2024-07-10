@@ -119,10 +119,6 @@ msgstr "Canal virtuel à commuter"
 msgid "Target sub-channel"
 msgstr "Sous-canal cible"
 
-#: tformdevicemanager.bartnet.caption
-msgid "Art-Net"
-msgstr "Art-Net"
-
 #: tformdevicemanager.bdmxdevices.caption
 msgid "DMX devices"
 msgstr "Interfaces DMX"
@@ -142,8 +138,8 @@ msgstr ""
 "Notez que les univers seront dissociés de leur interface."
 
 #: tformdevicemanager.bviewinputdmx.caption
-msgid "DMX Input"
-msgstr "Entrée DMX"
+msgid "Monitoring"
+msgstr "Monitoring"
 
 #: tformdevicemanager.caption
 msgid "DEVICE MANAGER"
@@ -153,6 +149,18 @@ msgstr "GESTIONNAIRE D'INTERFACES"
 msgctxt "tformdevicemanager.label1.caption"
 msgid "View"
 msgstr "Vue"
+
+#: tformdevicemanager.label2.caption
+msgid "Devices found"
+msgstr "Interfaces trouvées"
+
+#: tformdevicemanager.label3.caption
+msgid "Connect your universes"
+msgstr "Connectez vos univers"
+
+#: tformdevicemanager.label4.caption
+msgid "Search for:"
+msgstr "Rechercher:"
 
 #: tformdevicemanager.sg1.columns[0].title.caption
 msgctxt "tformdevicemanager.sg1.columns[0].title.caption"
@@ -166,8 +174,8 @@ msgstr "Interface cible"
 
 #: tformdevicemanager.sg1.columns[2].title.caption
 msgctxt "tformdevicemanager.sg1.columns[2].title.caption"
-msgid "Channels used"
-msgstr "Nombre de canaux"
+msgid "Channels occupied"
+msgstr "Canaux occupés"
 
 #: tformdevicemanager.sg1.columns[3].title.caption
 msgctxt "tformdevicemanager.sg1.columns[3].title.caption"
@@ -3538,6 +3546,10 @@ msgstr "Valeur fixe"
 #: u_resource_string.sfixture
 msgid "Fixture"
 msgstr "Appareil"
+
+#: u_resource_string.sfixtureedition
+msgid "Fixture edition"
+msgstr "Édition d'appareil"
 
 #: u_resource_string.sfixturefilealreadyexists
 msgid "There is already a fixture with the same name. The new one is renamed as"

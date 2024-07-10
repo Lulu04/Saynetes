@@ -5,19 +5,23 @@ unit form_splash;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
+  BGRABitmap, BGRABitmapTypes;
 
 type
 
   { TFormSplash }
 
   TFormSplash = class(TForm)
-    Image1: TImage;
     Label1: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    PB: TPaintBox;
+    procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure PBPaint(Sender: TObject);
   private
+    FImage: TBGRABitmap;
     procedure SetTextLoad(AValue: string);
 
   public
@@ -28,29 +32,36 @@ var
   FormSplash: TFormSplash;
 
 implementation
-uses u_apputils, BGRABitmap, BGRABitmapTypes, utilitaire_bgrabitmap;
+uses u_apputils, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
 { TFormSplash }
 
 procedure TFormSplash.FormShow(Sender: TObject);
-var ima: TBGRABitmap;
 begin
- try
-   ima := SVGFileToBGRABitmap(GetAppImagesFolder+'SplashImage.svg', Image1.Width, Image1.Height);
- except
-   ima := TBGRABitmap.Create(Image1.Width, Image1.Height, BGRAPixelTransparent);
- end;
-
  {$ifdef Windows}
   Label1.Font.Name := 'Verdana';         //default
  {$endif}
 
-  ima.AssignToBitmap(Image1.Picture.Bitmap);
-  ima.Free;
-
   TextLoad := ' ';
+end;
+
+procedure TFormSplash.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FImage);
+end;
+
+procedure TFormSplash.PBPaint(Sender: TObject);
+begin
+  if FImage = NIL then
+    try
+      FImage := SVGFileToBGRABitmap(GetAppImagesFolder+'SplashImage.svg', PB.ClientWidth, PB.ClientHeight);
+    except
+      FImage := TBGRABitmap.Create(PB.ClientWidth, PB.ClientHeight, BGRAPixelTransparent);
+    end;
+
+  FImage.Draw(PB.Canvas, 0, 0, False);
 end;
 
 procedure TFormSplash.SetTextLoad(AValue: string);

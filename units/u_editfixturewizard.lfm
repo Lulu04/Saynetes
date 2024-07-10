@@ -386,7 +386,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrCenter
         Left = 456
         Height = 27
-        Top = 181
+        Top = 188
         Width = 98
         Brush.Style = bsClear
         Pen.Color = clRed
@@ -400,19 +400,12 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrCenter
         Left = 214
         Height = 27
-        Top = 301
+        Top = 308
         Width = 172
         Brush.Style = bsClear
         Pen.Color = clRed
         Pen.Width = 2
         Visible = False
-      end
-      object Image13: TImage
-        AnchorSideRight.Side = asrBottom
-        Left = 648
-        Height = 130
-        Top = 96
-        Width = 130
       end
       object RadioButton1: TRadioButton
         AnchorSideLeft.Control = Label14
@@ -420,10 +413,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = RadioButton2
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 256
-        Height = 19
-        Top = 449
-        Width = 20
+        Left = 267
+        Height = 23
+        Top = 451
+        Width = 23
         BorderSpacing.Left = 40
         Checked = True
         TabOrder = 1
@@ -435,10 +428,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = RadioButton1
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 276
-        Height = 15
-        Top = 451
-        Width = 21
+        Left = 290
+        Height = 17
+        Top = 454
+        Width = 27
         Caption = 'sNo'
         Font.Color = 15395562
         ParentColor = False
@@ -448,9 +441,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label10: TLabel
         AnchorSideTop.Side = asrBottom
         Left = 144
-        Height = 15
+        Height = 17
         Top = 424
-        Width = 317
+        Width = 407
         BorderSpacing.Top = 50
         Caption = 'Does the fixture have dip switchs to set the dmx adress ?'
         Font.Color = 15395562
@@ -465,9 +458,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         Cursor = crHandPoint
         Left = 174
-        Height = 19
-        Top = 449
-        Width = 20
+        Height = 23
+        Top = 451
+        Width = 23
         BorderSpacing.Left = 30
         BorderSpacing.Top = 10
         OnChange = RadioButton2Change
@@ -479,10 +472,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = RadioButton2
         AnchorSideTop.Side = asrCenter
         Cursor = crHandPoint
-        Left = 194
-        Height = 15
-        Top = 451
-        Width = 22
+        Left = 197
+        Height = 17
+        Top = 454
+        Width = 30
         Caption = 'sYes'
         Font.Color = 15395562
         ParentColor = False
@@ -496,7 +489,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         Left = 260
         Height = 170
-        Top = 478
+        Top = 484
         Width = 484
         BorderSpacing.Top = 10
         BevelOuter = bvNone
@@ -552,10 +545,10 @@ object FormFixtureWizard: TFormFixtureWizard
           AnchorSideLeft.Control = SpeedButton5
           AnchorSideLeft.Side = asrCenter
           AnchorSideTop.Control = Panel5
-          Left = 455
-          Height = 15
+          Left = 451
+          Height = 17
           Top = 27
-          Width = 23
+          Width = 30
           Caption = 'sON'
           Font.Color = 15395562
           Font.Height = 15
@@ -567,10 +560,10 @@ object FormFixtureWizard: TFormFixtureWizard
           AnchorSideLeft.Control = SpeedButton5
           AnchorSideLeft.Side = asrCenter
           AnchorSideBottom.Side = asrBottom
-          Left = 453
-          Height = 15
-          Top = 127
-          Width = 26
+          Left = 448
+          Height = 17
+          Top = 125
+          Width = 37
           Anchors = [akLeft, akBottom]
           Caption = 'sOFF'
           Font.Color = 15395562
@@ -634,9 +627,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label23: TLabel
         AnchorSideRight.Side = asrBottom
         Left = 216
-        Height = 15
+        Height = 17
         Top = 96
-        Width = 69
+        Width = 89
         Caption = 'sDimensions'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -647,9 +640,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label28: TLabel
         AnchorSideLeft.Control = Label23
         Left = 216
-        Height = 15
+        Height = 17
         Top = 168
-        Width = 46
+        Width = 58
         Caption = 'sWeight'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -664,9 +657,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Control = Edit4
         AnchorSideBottom.Side = asrBottom
         Left = 320
-        Height = 15
-        Top = 191
-        Width = 13
+        Height = 17
+        Top = 201
+        Width = 15
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
         Caption = 'kg'
@@ -680,9 +673,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Edit1
         AnchorSideTop.Side = asrBottom
         Left = 216
-        Height = 15
-        Top = 134
-        Width = 28
+        Height = 17
+        Top = 146
+        Width = 37
         Caption = 'Label'
         Font.Color = 11842740
         ParentColor = False
@@ -695,8 +688,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Left = 216
-        Height = 23
-        Top = 111
+        Height = 33
+        Top = 113
         Width = 94
         NumbersOnly = True
         OnChange = CBConnectorChange
@@ -707,9 +700,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Edit1
         AnchorSideBottom.Side = asrBottom
-        Left = 337
-        Height = 23
-        Top = 111
+        Left = 340
+        Height = 33
+        Top = 113
         Width = 94
         BorderSpacing.Left = 10
         NumbersOnly = True
@@ -721,9 +714,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Edit1
         AnchorSideBottom.Side = asrBottom
-        Left = 458
-        Height = 23
-        Top = 111
+        Left = 464
+        Height = 33
+        Top = 113
         Width = 94
         BorderSpacing.Left = 10
         NumbersOnly = True
@@ -736,10 +729,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Edit1
         AnchorSideBottom.Side = asrBottom
-        Left = 562
-        Height = 20
-        Top = 114
-        Width = 26
+        Left = 568
+        Height = 23
+        Top = 123
+        Width = 34
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
         Caption = 'mm'
@@ -755,10 +748,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = Edit1
         AnchorSideBottom.Side = asrBottom
-        Left = 441
-        Height = 20
-        Top = 114
-        Width = 7
+        Left = 444
+        Height = 23
+        Top = 123
+        Width = 10
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
         Caption = 'x'
@@ -775,9 +768,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Control = Edit1
         AnchorSideBottom.Side = asrBottom
         Left = 320
-        Height = 20
-        Top = 114
-        Width = 7
+        Height = 23
+        Top = 123
+        Width = 10
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
         Caption = 'x'
@@ -789,9 +782,9 @@ object FormFixtureWizard: TFormFixtureWizard
       end
       object Label31: TLabel
         Left = 458
-        Height = 15
+        Height = 17
         Top = 168
-        Width = 41
+        Width = 51
         Caption = 'sPower'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -805,8 +798,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Left = 458
-        Height = 23
-        Top = 183
+        Height = 33
+        Top = 185
         Width = 94
         NumbersOnly = True
         OnChange = CBConnectorChange
@@ -819,9 +812,9 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Control = Edit5
         AnchorSideBottom.Side = asrBottom
         Left = 562
-        Height = 15
-        Top = 191
-        Width = 30
+        Height = 17
+        Top = 201
+        Width = 40
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
         Caption = 'sWatt'
@@ -833,9 +826,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label33: TLabel
         AnchorSideLeft.Control = Label34
         Left = 216
-        Height = 15
+        Height = 17
         Top = 288
-        Width = 63
+        Width = 80
         Caption = 'sConnector'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -846,9 +839,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label34: TLabel
         AnchorSideLeft.Control = Label28
         Left = 216
-        Height = 15
+        Height = 17
         Top = 232
-        Width = 30
+        Width = 40
         Caption = 'sBulb'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -858,9 +851,9 @@ object FormFixtureWizard: TFormFixtureWizard
       end
       object Label37: TLabel
         Left = 458
-        Height = 15
+        Height = 17
         Top = 232
-        Width = 48
+        Width = 62
         Caption = 'sLumens'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -874,8 +867,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Left = 458
-        Height = 23
-        Top = 247
+        Height = 33
+        Top = 249
         Width = 94
         NumbersOnly = True
         OnChange = CBConnectorChange
@@ -883,9 +876,9 @@ object FormFixtureWizard: TFormFixtureWizard
       end
       object Label38: TLabel
         Left = 431
-        Height = 15
+        Height = 17
         Top = 288
-        Width = 30
+        Width = 40
         Caption = 'sLens'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -898,10 +891,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Label38
         AnchorSideTop.Side = asrBottom
         Left = 431
-        Height = 23
-        Top = 303
+        Height = 33
+        Top = 305
         Width = 144
-        ItemHeight = 15
+        ItemHeight = 0
         Items.Strings = (
           'PC'
           'Fresnel'
@@ -915,10 +908,10 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Label33
         AnchorSideTop.Side = asrBottom
         Left = 216
-        Height = 23
-        Top = 303
+        Height = 33
+        Top = 305
         Width = 168
-        ItemHeight = 15
+        ItemHeight = 0
         Items.Strings = (
           '3-pin'
           '3-pin (swapped +/-)'
@@ -937,9 +930,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label39: TLabel
         AnchorSideRight.Side = asrBottom
         Left = 599
-        Height = 15
+        Height = 17
         Top = 288
-        Width = 69
+        Width = 88
         Caption = 'sMin degree'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -950,9 +943,9 @@ object FormFixtureWizard: TFormFixtureWizard
       object Label40: TLabel
         AnchorSideRight.Side = asrBottom
         Left = 695
-        Height = 15
+        Height = 17
         Top = 288
-        Width = 72
+        Width = 91
         Caption = 'sMax degree'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -965,8 +958,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Label34
         AnchorSideTop.Side = asrBottom
         Left = 216
-        Height = 23
-        Top = 247
+        Height = 33
+        Top = 249
         Width = 223
         OnChange = CBConnectorChange
         TabOrder = 10
@@ -976,8 +969,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Label39
         AnchorSideTop.Side = asrBottom
         Left = 599
-        Height = 23
-        Top = 303
+        Height = 33
+        Top = 305
         Width = 72
         DecimalPlaces = 1
         Increment = 0.1
@@ -991,8 +984,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Control = Label40
         AnchorSideTop.Side = asrBottom
         Left = 695
-        Height = 23
-        Top = 303
+        Height = 33
+        Top = 305
         Width = 72
         DecimalPlaces = 1
         Increment = 0.1
@@ -1007,11 +1000,18 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Side = asrBottom
         Left = 216
-        Height = 23
-        Top = 183
+        Height = 33
+        Top = 185
         Width = 94
         OnChange = CBConnectorChange
         TabOrder = 13
+      end
+      object PB1: TPaintBox
+        Left = 648
+        Height = 130
+        Top = 96
+        Width = 130
+        OnPaint = PB1Paint
       end
     end
     object PageModes: TPage
@@ -1080,13 +1080,6 @@ object FormFixtureWizard: TFormFixtureWizard
       end
     end
     object PageFinish: TPage
-      object Image14: TImage
-        AnchorSideRight.Side = asrBottom
-        Left = 648
-        Height = 130
-        Top = 96
-        Width = 130
-      end
       object Label1: TLabel
         AnchorSideTop.Control = BSave
         AnchorSideTop.Side = asrBottom
@@ -1306,12 +1299,12 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideLeft.Control = Image3
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label12
-        AnchorSideRight.Control = Image14
+        AnchorSideRight.Control = PB2
         AnchorSideBottom.Side = asrBottom
         Left = 370
         Height = 15
         Top = 211
-        Width = 273
+        Width = 257
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 5
         BorderSpacing.Right = 5
@@ -1322,6 +1315,13 @@ object FormFixtureWizard: TFormFixtureWizard
         ParentFont = False
         Visible = False
         WordWrap = True
+      end
+      object PB2: TPaintBox
+        Left = 632
+        Height = 130
+        Top = 96
+        Width = 130
+        OnPaint = PB1Paint
       end
     end
   end

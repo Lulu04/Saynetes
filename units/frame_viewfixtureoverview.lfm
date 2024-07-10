@@ -21,19 +21,6 @@ object FrameFixtureOverview: TFrameFixtureOverview
     Color = 3552822
     ParentColor = False
     TabOrder = 0
-    object Image1: TImage
-      AnchorSideTop.Control = Panel3
-      AnchorSideRight.Control = Panel3
-      AnchorSideRight.Side = asrBottom
-      Left = 380
-      Height = 77
-      Top = 0
-      Width = 77
-      Anchors = [akTop, akRight]
-      Center = True
-      Proportional = True
-      Stretch = True
-    end
     object Label2: TLabel
       AnchorSideLeft.Control = LBLFixtureName
       AnchorSideTop.Control = LBLFixtureName
@@ -472,6 +459,17 @@ object FrameFixtureOverview: TFrameFixtureOverview
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
+    end
+    object PB: TPaintBox
+      AnchorSideTop.Control = Panel3
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Left = 380
+      Height = 77
+      Top = 0
+      Width = 77
+      Anchors = [akTop, akRight]
+      OnPaint = PBPaint
     end
   end
 end

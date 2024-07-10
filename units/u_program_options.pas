@@ -104,6 +104,11 @@ private
   // Sequencer
   FKeepOriginVisible: boolean;
 
+  // DMX Devices
+  FLookForEnttecOpenDmx: boolean;
+  FLookForEnttecUSBDMXPRO: boolean;
+  FLookForVellemanK8062: boolean;
+
   FSaveFolder,
   FSaveFileName: string;
   FWorkingProject,
@@ -114,6 +119,9 @@ private
   procedure SetKeepOriginVisible(AValue: boolean);
   procedure SetLanguage(AValue: string);
   procedure SetLastProject(AValue: string);
+  procedure SetLookForEnttecOpenDmx(AValue: boolean);
+  procedure SetLookForEnttecUSBDMXPRO(AValue: boolean);
+  procedure SetLookForVellemanK8062(AValue: boolean);
   procedure SetMaxRecentProjectFile(AValue: integer);
   procedure SetSeatType(AValue: TSeatType);
   procedure SetStageType(AValue: TStageType);
@@ -153,6 +161,11 @@ public
 
   // Sequencer
   property KeepOriginVisible: boolean read FKeepOriginVisible write SetKeepOriginVisible;
+
+  // DMX DEVICE
+  property LookForVellemanK8062: boolean read FLookForVellemanK8062 write SetLookForVellemanK8062;
+  property LookForEnttecUSBDMXPRO: boolean read FLookForEnttecUSBDMXPRO write SetLookForEnttecUSBDMXPRO;
+  property LookForEnttecOpenDmx: boolean read FLookForEnttecOpenDmx write SetLookForEnttecOpenDmx;
 
 end;
 
@@ -199,6 +212,11 @@ begin
   // DMX
   FStageType := stRectangle;
   FSeatType := seatType1;
+
+  // DMX DEVICE
+  FLookForVellemanK8062 := False;
+  FLookForEnttecUSBDMXPRO := False;
+  FLookForEnttecOpenDmx := False;
 end;
 
 procedure TProgramOptions.SetKeepOriginVisible(AValue: boolean);
@@ -255,6 +273,27 @@ begin
   Save;
 end;
 
+procedure TProgramOptions.SetLookForEnttecOpenDmx(AValue: boolean);
+begin
+  if FLookForEnttecOpenDmx = AValue then Exit;
+  FLookForEnttecOpenDmx := AValue;
+  Save;
+end;
+
+procedure TProgramOptions.SetLookForEnttecUSBDMXPRO(AValue: boolean);
+begin
+  if FLookForEnttecUSBDMXPRO = AValue then Exit;
+  FLookForEnttecUSBDMXPRO := AValue;
+  Save;
+end;
+
+procedure TProgramOptions.SetLookForVellemanK8062(AValue: boolean);
+begin
+  if FLookForVellemanK8062 = AValue then Exit;
+  FLookForVellemanK8062 := AValue;
+  Save;
+end;
+
 procedure TProgramOptions.SetMaxRecentProjectFile(AValue: integer);
 begin
   if FMaxRecentProjectFile = AValue then Exit;
@@ -294,6 +333,7 @@ const
   APP_GENERAL_HEADER = '[APPLICATION GENERAL]';
   AUDIO_HEADER = '[AUDIO]';
   DMX_HEADER = '[DMX]';
+  DMX_DEVICE_HEADER = '[DMX DEVICES]';
   SEQUENCER_HEADER = '[SEQUENCER]';
 
 procedure TProgramOptions.Save;
@@ -335,6 +375,15 @@ begin
    prop.Add('Seat', Ord(FSeatType));
    t.Add(DMX_HEADER);
    t.Add(prop.PackedProperty);
+
+   // DMX Device
+   prop.Init('|');
+   prop.Add('LookForEnttecOpenDmx', FLookForEnttecOpenDmx);
+   prop.Add('LookForEnttecUSBDMXPRO', FLookForEnttecUSBDMXPRO);
+   prop.Add('LookForVellemanK8062', FLookForVellemanK8062);
+   t.Add(DMX_DEVICE_HEADER);
+   t.Add(prop.PackedProperty);
+
 
    // Sequencer
    prop.Init('|');
@@ -420,6 +469,14 @@ begin
     FStageType := TStageType(EnsureRange(i, 0, Ord(High(TStageType))));
     prop.integerValueOf('Seat', i, 1);
     FSeatType := TSeatType(EnsureRange(i, 0, Ord(High(TSeatType))));
+
+    // DMX Devices
+    k := t.IndexOf(DMX_DEVICE_HEADER);
+    if (k > -1) and (k < t.Count) then prop.Split(t.Strings[k+1], '|')
+      else prop.SetEmpty;
+    prop.BooleanValueOf('LookForEnttecOpenDmx', FLookForEnttecOpenDmx, FLookForEnttecOpenDmx);
+    prop.BooleanValueOf('LookForEnttecUSBDMXPRO', FLookForEnttecUSBDMXPRO, FLookForEnttecUSBDMXPRO);
+    prop.BooleanValueOf('LookForVellemanK8062', FLookForVellemanK8062, FLookForVellemanK8062);
 
     // Sequencer
     k := t.IndexOf(SEQUENCER_HEADER);

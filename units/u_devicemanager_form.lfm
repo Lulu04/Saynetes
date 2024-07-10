@@ -1,14 +1,14 @@
 object FormDeviceManager: TFormDeviceManager
-  Left = 239
-  Height = 477
-  Top = 127
-  Width = 1013
+  Left = 304
+  Height = 579
+  Top = 115
+  Width = 1024
   BorderIcons = [biSystemMenu]
   Caption = 'DEVICE MANAGER'
-  ClientHeight = 477
-  ClientWidth = 1013
-  Color = 2700349
-  Font.Color = 11318976
+  ClientHeight = 579
+  ClientWidth = 1024
+  Color = 2700340
+  Font.Color = 15395562
   KeyPreview = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -24,30 +24,29 @@ object FormDeviceManager: TFormDeviceManager
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = SpeedButton1
     Left = 0
-    Height = 388
+    Height = 490
     Top = 29
-    Width = 1013
-    PageIndex = 0
+    Width = 1024
+    PageIndex = 1
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Bottom = 20
     TabOrder = 0
     object PageDMXDevices: TPage
-      Color = 2700349
+      Color = 2700340
       object SG1: TStringGrid
         AnchorSideLeft.Control = PageDMXDevices
-        AnchorSideTop.Control = PageDMXDevices
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageDMXDevices
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = Panel3
         Left = 5
-        Height = 335
-        Top = 20
-        Width = 588
+        Height = 357
+        Top = 23
+        Width = 611
         AlternateColor = 5131854
-        Anchors = [akTop, akLeft, akBottom]
         AutoFillColumns = True
         BorderSpacing.Left = 5
-        BorderSpacing.Top = 20
+        BorderSpacing.Top = 3
         BorderSpacing.Right = 20
         BorderStyle = bsNone
         Color = 4473924
@@ -58,9 +57,9 @@ object FormDeviceManager: TFormDeviceManager
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
+            Title.MultiLine = True
             Title.Caption = 'Universe'
-            Width = 194
+            Width = 205
           end        
           item
             MinSize = 100
@@ -68,37 +67,38 @@ object FormDeviceManager: TFormDeviceManager
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
+            Title.MultiLine = True
             Title.Caption = 'Target device'
-            Width = 194
+            Width = 205
           end        
           item
-            MinSize = 100
-            MaxSize = 100
+            Alignment = taCenter
+            MinSize = 120
+            MaxSize = 150
             ReadOnly = True
             SizePriority = 0
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
-            Title.Caption = 'Channels used'
-            Width = 100
+            Title.MultiLine = True
+            Title.Caption = 'Channels occupied'
+            Width = 120
           end        
           item
             Alignment = taCenter
             ButtonStyle = cbsCheckboxColumn
-            MinSize = 100
-            MaxSize = 150
+            MinSize = 80
+            MaxSize = 100
             SizePriority = 0
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
+            Title.MultiLine = True
             Title.Caption = 'Optimized'
-            Width = 100
+            Width = 80
           end>
         FixedCols = 0
-        Font.Color = 11318976
+        Font.Color = 15395562
         Font.Height = 15
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing, goAutoAddRows, goAlwaysShowEditor, goSmoothScroll, goAutoAddRowsSkipContentCheck, goRowHighlight]
         ParentFont = False
@@ -109,43 +109,27 @@ object FormDeviceManager: TFormDeviceManager
         OnCheckboxToggled = SG1CheckboxToggled
         OnSelectEditor = SG1SelectEditor
         ColWidths = (
-          194
-          194
-          100
-          100
+          205
+          205
+          120
+          80
         )
-      end
-      object Panel3: TPanel
-        AnchorSideLeft.Control = SG1
-        AnchorSideRight.Control = SG1
-        AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = PageDMXDevices
-        AnchorSideBottom.Side = asrBottom
-        Left = 5
-        Height = 33
-        Top = 355
-        Width = 588
-        Anchors = [akLeft, akRight, akBottom]
-        BevelOuter = bvNone
-        Color = 2700349
-        ParentColor = False
-        TabOrder = 1
       end
       object SG2: TStringGrid
         AnchorSideLeft.Control = PageDMXDevices
-        AnchorSideTop.Control = PageDMXDevices
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = PageDMXDevices
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = Panel3
-        Left = 631
-        Height = 335
-        Top = 20
+        Left = 642
+        Height = 357
+        Top = 23
         Width = 377
         AlternateColor = 5131854
-        Anchors = [akTop, akRight, akBottom]
+        Anchors = [akTop, akRight]
         AutoFillColumns = True
         BorderSpacing.Left = 20
-        BorderSpacing.Top = 20
+        BorderSpacing.Top = 3
         BorderSpacing.Right = 5
         BorderStyle = bsNone
         Color = 4473924
@@ -158,7 +142,6 @@ object FormDeviceManager: TFormDeviceManager
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
             Title.Caption = 'Devices'
             Width = 217
           end        
@@ -171,7 +154,6 @@ object FormDeviceManager: TFormDeviceManager
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
             Title.Caption = 'Direction'
             Width = 80
           end        
@@ -183,17 +165,16 @@ object FormDeviceManager: TFormDeviceManager
             Title.Alignment = taCenter
             Title.Color = 11978183
             Title.Font.Color = 724239
-            Title.Font.Height = 14
             Title.Caption = 'State'
             Width = 80
           end>
         FixedCols = 0
-        Font.Color = 11318976
+        Font.Color = 15395562
         Font.Height = 15
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing, goAutoAddRows, goAlwaysShowEditor, goSmoothScroll, goAutoAddRowsSkipContentCheck, goRowHighlight]
         ParentFont = False
         RowCount = 1
-        TabOrder = 2
+        TabOrder = 1
         TitleFont.Color = 12305612
         TitleFont.Height = 14
         OnSelectEditor = SG2SelectEditor
@@ -211,36 +192,33 @@ object FormDeviceManager: TFormDeviceManager
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = PageDMXDevices
         AnchorSideBottom.Side = asrBottom
-        Left = 631
-        Height = 33
-        Top = 355
+        Left = 642
+        Height = 110
+        Top = 380
         Width = 377
         Anchors = [akTop, akLeft, akRight, akBottom]
         BevelOuter = bvNone
-        ClientHeight = 33
+        ClientHeight = 110
         ClientWidth = 377
-        TabOrder = 3
+        TabOrder = 2
         object BSearch: TSpeedButton
-          AnchorSideLeft.Control = Panel2
           AnchorSideTop.Control = Panel2
-          AnchorSideTop.Side = asrCenter
-          AnchorSideBottom.Control = Panel3
+          AnchorSideRight.Control = Panel2
+          AnchorSideRight.Side = asrBottom
           AnchorSideBottom.Side = asrBottom
           Cursor = crHandPoint
-          Left = 30
+          Left = 276
           Height = 20
           Hint = 'Searches for connected USB to DMX devices.'#13#10'Note that if you use it, universes will be dissociated from their devices.'
-          Top = 6
+          Top = 4
           Width = 60
+          Anchors = [akTop, akRight]
           AutoSize = True
-          BorderSpacing.Left = 30
-          BorderSpacing.Right = 10
-          BorderSpacing.Bottom = 4
+          BorderSpacing.Top = 4
+          BorderSpacing.Right = 41
           Constraints.MinWidth = 60
           Caption = 'Search'
           Color = 247036
-          Font.Height = 12
-          Font.Style = [fsBold]
           Images = DataModule1.ImageList1
           ImageIndex = 19
           Spacing = 0
@@ -250,31 +228,154 @@ object FormDeviceManager: TFormDeviceManager
           ParentFont = False
           ParentShowHint = False
         end
+        object Label4: TLabel
+          AnchorSideLeft.Control = Panel2
+          AnchorSideTop.Control = Panel2
+          Left = 0
+          Height = 15
+          Top = 0
+          Width = 55
+          Caption = 'Search for:'
+          Font.Color = 15395562
+          Font.Style = [fsItalic]
+          ParentColor = False
+          ParentFont = False
+        end
+        object CB1: TCheckBox
+          AnchorSideLeft.Control = Panel2
+          Cursor = crHandPoint
+          Left = 20
+          Height = 19
+          Top = 16
+          Width = 20
+          BorderSpacing.Left = 20
+          Checked = True
+          OnChange = CB1Change
+          State = cbChecked
+          TabOrder = 0
+        end
+        object Label5: TLabel
+          AnchorSideLeft.Control = CB1
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrCenter
+          AnchorSideBottom.Control = CB1
+          AnchorSideBottom.Side = asrBottom
+          Left = 40
+          Height = 15
+          Top = 19
+          Width = 82
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Bottom = 1
+          Caption = 'Velleman K8062'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          AnchorSideLeft.Control = CB2
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrCenter
+          AnchorSideBottom.Control = CB2
+          AnchorSideBottom.Side = asrBottom
+          Left = 40
+          Height = 15
+          Top = 43
+          Width = 112
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Bottom = 1
+          Caption = 'Enttec USB DMX PRO'
+          ParentColor = False
+        end
+        object CB2: TCheckBox
+          AnchorSideLeft.Control = Panel2
+          Cursor = crHandPoint
+          Left = 20
+          Height = 19
+          Top = 40
+          Width = 20
+          BorderSpacing.Left = 20
+          Checked = True
+          OnChange = CB1Change
+          State = cbChecked
+          TabOrder = 1
+        end
+        object CB3: TCheckBox
+          AnchorSideLeft.Control = Panel2
+          Cursor = crHandPoint
+          Left = 20
+          Height = 19
+          Top = 64
+          Width = 20
+          BorderSpacing.Left = 20
+          Checked = True
+          OnChange = CB1Change
+          State = cbChecked
+          TabOrder = 2
+        end
+        object Label7: TLabel
+          AnchorSideLeft.Control = CB3
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrCenter
+          AnchorSideBottom.Control = CB3
+          AnchorSideBottom.Side = asrBottom
+          Left = 40
+          Height = 15
+          Top = 67
+          Width = 120
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Bottom = 1
+          Caption = 'Enttec OPEN USB DMX'
+          ParentColor = False
+        end
       end
-    end
-    object PageArtNet: TPage
-      Color = 2239539
+      object Label2: TLabel
+        AnchorSideLeft.Control = SG2
+        AnchorSideTop.Control = PageDMXDevices
+        Left = 642
+        Height = 15
+        Top = 5
+        Width = 74
+        BorderSpacing.Top = 5
+        Caption = 'Devices found'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        AnchorSideLeft.Control = SG1
+        AnchorSideTop.Control = PageDMXDevices
+        Left = 5
+        Height = 15
+        Top = 5
+        Width = 121
+        BorderSpacing.Top = 5
+        Caption = 'Connect your universes'
+        Font.Color = 15395562
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
     end
     object PageDMXInput: TPage
       object SG3: TStringGrid
         AnchorSideLeft.Control = PageDMXInput
         AnchorSideLeft.Side = asrCenter
-        AnchorSideBottom.Control = PageDMXInput
-        AnchorSideBottom.Side = asrBottom
-        Left = 80
-        Height = 323
-        Top = 65
-        Width = 853
-        Anchors = [akLeft, akBottom]
+        AnchorSideTop.Control = ComboBox1
+        AnchorSideTop.Side = asrBottom
+        Left = 94
+        Height = 324
+        Top = 53
+        Width = 836
         AutoEdit = False
+        BorderSpacing.Top = 10
+        Color = 2697513
         ColCount = 32
         DefaultColWidth = 26
         DefaultRowHeight = 20
         FixedCols = 0
         FixedRows = 0
-        Font.Color = clBlack
+        Font.Color = 15395562
         Font.Height = 15
-        GridLineWidth = 2
+        GridLineColor = 4276545
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goSmoothScroll, goCellHints]
         ParentFont = False
         ParentShowHint = False
@@ -287,16 +388,14 @@ object FormDeviceManager: TFormDeviceManager
       object ComboBox1: TComboBox
         AnchorSideLeft.Control = Label1
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Label1
-        AnchorSideTop.Side = asrCenter
-        AnchorSideBottom.Control = Label1
+        AnchorSideTop.Control = PageDMXInput
         AnchorSideBottom.Side = asrBottom
-        Left = 110
+        Left = 124
         Height = 23
-        Top = 37
+        Top = 20
         Width = 318
-        Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
+        BorderSpacing.Top = 20
         Color = 6908265
         ItemHeight = 15
         OnSelect = ComboBox1Select
@@ -305,13 +404,13 @@ object FormDeviceManager: TFormDeviceManager
       end
       object Label1: TLabel
         AnchorSideLeft.Control = SG3
-        AnchorSideBottom.Control = SG3
-        Left = 80
+        AnchorSideBottom.Control = ComboBox1
+        AnchorSideBottom.Side = asrBottom
+        Left = 94
         Height = 15
-        Top = 45
+        Top = 28
         Width = 25
         Anchors = [akLeft, akBottom]
-        BorderSpacing.Bottom = 5
         Caption = 'View'
         ParentColor = False
       end
@@ -325,11 +424,11 @@ object FormDeviceManager: TFormDeviceManager
     Left = 0
     Height = 29
     Top = 0
-    Width = 1013
+    Width = 1024
     Anchors = [akTop, akLeft, akRight]
     BevelOuter = bvNone
     ClientHeight = 29
-    ClientWidth = 1013
+    ClientWidth = 1024
     Color = 2700349
     Font.Color = 11318976
     ParentColor = False
@@ -343,68 +442,72 @@ object FormDeviceManager: TFormDeviceManager
       Left = 1
       Height = 25
       Top = 2
-      Width = 80
+      Width = 100
       AutoSize = True
       BorderSpacing.Left = 1
       Constraints.MinHeight = 25
-      Constraints.MinWidth = 80
+      Constraints.MinWidth = 100
       Caption = 'DMX devices'
       Color = 4605510
       Flat = True
-      Font.Color = 11318976
+      Font.Color = 15395562
       Transparent = False
       ParentFont = False
-    end
-    object BArtNet: TSpeedButton
-      AnchorSideLeft.Control = BDMXDevices
-      AnchorSideLeft.Side = asrBottom
-      AnchorSideTop.Control = Panel1
-      AnchorSideTop.Side = asrCenter
-      Cursor = crHandPoint
-      Left = 82
-      Height = 25
-      Top = 2
-      Width = 80
-      AutoSize = True
-      BorderSpacing.Left = 1
-      Constraints.MinHeight = 25
-      Constraints.MinWidth = 80
-      Caption = 'Art-Net'
-      Color = 4605510
-      Flat = True
-      Transparent = False
     end
     object SE1: TSpinEdit
       Left = 293
       Height = 23
       Top = 5
       Width = 50
-      Color = 6908265
+      Color = 3421236
+      Font.Color = 15395562
       MaxValue = 512
       MinValue = 1
       OnEditingDone = SE1EditingDone
+      ParentFont = False
       TabOrder = 0
       Value = 1
       Visible = False
     end
     object BViewInputDMX: TSpeedButton
-      AnchorSideLeft.Control = BArtNet
+      AnchorSideLeft.Control = BDMXDevices
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel1
       AnchorSideTop.Side = asrCenter
       Cursor = crHandPoint
-      Left = 163
+      Left = 106
       Height = 25
       Top = 2
-      Width = 80
+      Width = 100
       AutoSize = True
-      BorderSpacing.Left = 1
+      BorderSpacing.Left = 5
       Constraints.MinHeight = 25
-      Constraints.MinWidth = 80
-      Caption = 'DMX Input'
+      Constraints.MinWidth = 100
+      Caption = 'Monitoring'
       Color = 4605510
       Flat = True
+      Font.Color = 15395562
       Transparent = False
+      ParentFont = False
+    end
+    object BHelp: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 999
+      Height = 20
+      Top = 2
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 5
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
   object SpeedButton1: TSpeedButton
@@ -413,9 +516,9 @@ object FormDeviceManager: TFormDeviceManager
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Cursor = crHandPoint
-    Left = 446
+    Left = 452
     Height = 20
-    Top = 437
+    Top = 539
     Width = 120
     Anchors = [akLeft, akBottom]
     AutoSize = True
@@ -439,9 +542,11 @@ object FormDeviceManager: TFormDeviceManager
     AutoDropDown = True
     AutoSelect = False
     AutoSize = False
-    Color = 6908265
+    Color = 3421236
+    Font.Color = 15395562
     ItemHeight = 15
     OnSelect = CBDeviceListSelect
+    ParentFont = False
     Style = csDropDownList
     TabOrder = 2
     Visible = False
@@ -454,9 +559,11 @@ object FormDeviceManager: TFormDeviceManager
     AutoDropDown = True
     AutoSelect = False
     AutoSize = False
-    Color = 6908265
+    Color = 3421236
+    Font.Color = 15395562
     ItemHeight = 15
     OnSelect = CBDeviceDirectionSelect
+    ParentFont = False
     Style = csDropDownList
     TabOrder = 3
     Visible = False
@@ -464,7 +571,6 @@ object FormDeviceManager: TFormDeviceManager
   object Timer1: TTimer
     Interval = 200
     OnTimer = Timer1Timer
-    Left = 504
-    Top = 48
+    Left = 720
   end
 end
