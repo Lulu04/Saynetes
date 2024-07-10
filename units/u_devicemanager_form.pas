@@ -14,20 +14,27 @@ type
   { TFormDeviceManager }
 
   TFormDeviceManager = class(TForm)
+    BHelp: TSpeedButton;
     BViewInputDMX: TSpeedButton;
     BDMXDevices: TSpeedButton;
-    BArtNet: TSpeedButton;
+    CB2: TCheckBox;
+    CB3: TCheckBox;
     CBDeviceList: TComboBox;
     CBDeviceDirection: TComboBox;
+    CB1: TCheckBox;
     ComboBox1: TComboBox;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
     NB1: TNotebook;
     PageDMXInput: TPage;
     PageDMXDevices: TPage;
-    PageArtNet: TPage;
     Panel1: TPanel;
     Panel2: TPanel;
-    Panel3: TPanel;
     SG2: TStringGrid;
     SpeedButton1: TSpeedButton;
     SG1: TStringGrid;
@@ -35,7 +42,9 @@ type
     SE1: TSpinEdit;
     SG3: TStringGrid;
     Timer1: TTimer;
+    procedure BHelpClick(Sender: TObject);
     procedure BSearchClick(Sender: TObject);
+    procedure CB1Change(Sender: TObject);
     procedure CBDeviceDirectionSelect(Sender: TObject);
     procedure CBDeviceListSelect(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
@@ -44,18 +53,16 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure SE1EditingDone(Sender: TObject);
-    procedure SG1CheckboxToggled({%H-}sender: TObject; aCol, aRow: Integer;
-      {%H-}aState: TCheckboxState);
-    procedure SG1SelectEditor(Sender: TObject; aCol, aRow: Integer;
-      var Editor: TWinControl);
-    procedure SG2SelectEditor(Sender: TObject; aCol, aRow: Integer;
-      var Editor: TWinControl);
-    procedure SG3GetCellHint(Sender: TObject; ACol, ARow: Integer;
-      var HintText: String);
+    procedure SG1CheckboxToggled({%H-}sender: TObject; aCol, aRow: Integer; {%H-}aState: TCheckboxState);
+    procedure SG1SelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
+    procedure SG2SelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
+    procedure SG3GetCellHint(Sender: TObject; ACol, ARow: Integer; var HintText: String);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
     FNoteBookManager: TNoteBookManager;
+    CheckedLabelManager1: TCheckedLabelManager;
+    FInitializing: boolean;
     function ValidRow(aRow: integer): boolean;
     function SelectedUniverse: TDMXUniverse;
     procedure FillCBDeviceList;
@@ -73,8 +80,8 @@ var
   FormDeviceManager: TFormDeviceManager;
 
 implementation
-uses LCLType, u_project_manager, u_resource_string, u_userdialogs,
-  u_dmx_util;
+uses LCLType, u_project_manager, u_resource_string, u_userdialogs, form_help,
+  u_program_options, u_dmx_util;
 
 {$R *.lfm}
 
@@ -88,8 +95,13 @@ begin
 end;
 
 procedure TFormDeviceManager.FormShow(Sender: TObject);
-
 begin
+  FInitializing := True;
+  CB1.Checked := ProgramOptions.LookForVellemanK8062;
+  CB2.Checked := ProgramOptions.LookForEnttecUSBDMXPRO;
+  CB3.Checked := ProgramOptions.LookForEnttecOpenDmx;
+  FInitializing := False;
+
   FillDevicegrid;
   FillUniverseGrid;
 
@@ -134,11 +146,9 @@ end;
 procedure TFormDeviceManager.SG1SelectEditor(Sender: TObject; aCol,
   aRow: Integer; var Editor: TWinControl);
 var uni: TDmxUniverse;
-    dev: TBaseDMXDevice;
 begin
   if not ValidRow(aRow) then exit;
   uni := SelectedUniverse;
-  dev := DeviceManager.GetDeviceByPath(uni.DevicePath);
   case aCol of
     1:
       begin
@@ -218,6 +228,8 @@ var i, idev, iport: integer;
   uni: TDMXUniverse;
   dev: TBaseDMXDevice;
 begin
+  FInitializing := True;
+
   // fill the device combobox
   FillCBDeviceList;
 
@@ -244,6 +256,7 @@ begin
     else
       SG1.Cells[3,i+1] := '0';
   end;
+  FInitializing := False;
 end;
 
 procedure TFormDeviceManager.FillDevicegrid;
@@ -254,7 +267,7 @@ begin
   // fill the rows
   SG2.Clean([gzNormal]);
   SG2.RowCount := DeviceManager.PortCount+1;
-  D := DeviceManager.GetDevicesPath(FALSE);
+  D := DeviceManager.GetDevicesPath(False);
 
   for i:=0 to High(D) do
   begin
@@ -329,9 +342,13 @@ procedure TFormDeviceManager.FormCreate(Sender: TObject);
 begin
   FNoteBookManager := TNoteBookManager.Create(NB1);
   FNoteBookManager.LinkButtonToPage(BDMXDevices, PageDMXDevices);
-  FNoteBookManager.LinkButtonToPage(BArtNet, PageArtNet);
   FNoteBookManager.LinkButtonToPage(BViewInputDMX, PageDMXInput);
   FNoteBookManager.ActivePage(PageDMXDevices);
+
+  CheckedLabelManager1 := TCheckedLabelManager.Create;
+  CheckedLabelManager1.CaptureLabelClick(Label5);
+  CheckedLabelManager1.CaptureLabelClick(Label6);
+  CheckedLabelManager1.CaptureLabelClick(Label7);
 
   CBDeviceDirection.Items.Add(SDevicePortIn);
   CBDeviceDirection.Items.Add(SDevicePortOut);
@@ -341,7 +358,6 @@ procedure TFormDeviceManager.CBDeviceListSelect(Sender: TObject);
 var uni: TDMXUniverse;
   i: integer;
   idev, iport: integer;
-  dev: TBaseDMXDevice;
   D: TArrayOfDevicePath;
 begin
   i := CBDeviceList.ItemIndex;
@@ -351,7 +367,6 @@ begin
   uni := UniverseManager.Universes[SG1.Row-1];
   idev := D[i].DeviceIndex;
   iport := D[i].PortIndex;
-  dev := DeviceManager.Device[idev];
 
   // same choice -> do nothing
   if (uni.DevicePath.DeviceIndex = idev) and
@@ -379,10 +394,11 @@ begin
 
   // update on view: channels used + optimized
   SG1.Cells[2,SG1.Row] := uni.UsedChannelCount.ToString;
-  if uni.OptimizeUsedChannels then
+  if uni.OptimizeUsedChannels then begin
     SG1.Cells[3,SG1.Row] := '1'
-  else
+  end else begin
     SG1.Cells[3,SG1.Row] := '0';
+  end;
 
   Project.SetModified;
 end;
@@ -450,9 +466,23 @@ begin
   FillDevicegrid;
 end;
 
+procedure TFormDeviceManager.CB1Change(Sender: TObject);
+begin
+  if FInitializing then exit;
+  if Sender = CB1 then ProgramOptions.LookForVellemanK8062 := CB1.Checked;
+  if Sender = CB2 then ProgramOptions.LookForEnttecUSBDMXPRO := CB2.Checked;
+  if Sender = CB3 then ProgramOptions.LookForEnttecOpenDmx := CB3.Checked;
+end;
+
+procedure TFormDeviceManager.BHelpClick(Sender: TObject);
+begin
+ // _ShowHelp(HelpDeviceManager, BHelp);
+end;
+
 procedure TFormDeviceManager.FormDestroy(Sender: TObject);
 begin
   FNoteBookManager.Free;
+  CheckedLabelManager1.free;
 end;
 
 end.

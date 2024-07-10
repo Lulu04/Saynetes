@@ -33,7 +33,7 @@ type
 
 { TDMXDevicePort }
 
-TDMXDevicePort=record
+TDMXDevicePort = record
   IsOpen: boolean;
   DMXBuffer: TDMXBuffer;
   BufferChanged: boolean;
@@ -52,7 +52,7 @@ TArrayOfDMXDevicePort=array of TDMXDevicePort;
      Each port have a direction IN or OUT. This direction can be changed or not, according to the device specifications
      Because a device can have more than one port, a port index is specified
 }
-TDMXDeviceAbstract=class abstract
+TDMXDeviceAbstract = class abstract
 protected
   // In this method, for each port of the device, we have to initialize value for:
   //    - MinUsedChannel                <- the minimum channel count to use
@@ -244,7 +244,7 @@ var
 
 implementation
 uses u_vellemank8062d, // VELLEMAN K8062D
-     u_ftdi_based, u_resource_string, u_logfile, Math;
+     u_ftdi_based, u_resource_string, u_logfile, u_program_options, Math;
 
 var
     FK8062Manager: TK8062Manager;
@@ -759,7 +759,7 @@ begin
   FK8062Manager := TK8062Manager.Create;
 
   // fill the device list with all Velleman 8062 detected
-  Log.Debug('    Start looking for K8062 ...');
+  Log.Info('Search for Velleman K8062...', 1);
   FK8062Manager.LookForDevice;
 end;
 
@@ -767,7 +767,7 @@ procedure TDeviceManager.LookForFTDIBasedDevice;
 begin
   if FTDIManager = NIL then
     FTDIManager := TFTDIManager.Create;
-  Log.Debug('    Start looking for FTDI based device...');
+  Log.Info('Search for FTDI based device...', 1);
   FTDIManager.LookForDevice;
 end;
 
@@ -809,9 +809,9 @@ end;
 procedure TDeviceManager.LookForAvailableDevices;
 var fake: TFakeDeviceMultiPort;
 begin
-  Log.Debug('    Clear list of device');
+  Log.Info('Clear list of device', 1);
   ClearList;
-  LookForVellemanK8062;
+  if programOptions.LookForVellemanK8062 then LookForVellemanK8062;
   LookForFTDIBasedDevice;
 
   fake := TFakeDeviceMultiPort.Create;
@@ -879,7 +879,7 @@ end;
 procedure TDeviceManager.RegisterDevice(aDevice: TBaseDMXDevice);
 begin
   FListDeviceFound.Add(aDevice);
-  Log.Info('    Found '+aDevice.Name+' - Serial '+aDevice.SerialNumber);
+  Log.Info('Found '+aDevice.Name+' - Serial "'+aDevice.SerialNumber+'"', 1);
 end;
 
 end.

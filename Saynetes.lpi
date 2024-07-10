@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="122">
+      <ExcludedOriginals Count="125">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -145,6 +145,9 @@
         <Item120 Value="5s"/>
         <Item121 Value="10s"/>
         <Item122 Value="15s"/>
+        <Item123 Value="Velleman K8062"/>
+        <Item124 Value="Enttec USB DMX PRO"/>
+        <Item125 Value="Enttec OPEN USB DMX"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>

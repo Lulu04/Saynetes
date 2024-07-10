@@ -166,7 +166,7 @@ type
 
 implementation
 
-uses u_resource_string, u_logfile, Forms, ftd2xx{$ifdef LINUX}, Process, Unix{$endif};
+uses u_resource_string, u_logfile, u_program_options, Forms, ftd2xx{$ifdef LINUX}, Process, Unix{$endif};
 
 { TEnttec_UsbDmxPro }
 
@@ -649,8 +649,8 @@ var des: string;
     if FT_GetDeviceInfoDetail(i, @Flags, @_Type, @ID, @LocId, @SerialNumber[0], @Description[0], @ftHandleTemp)=FT_OK then begin
       des := Description;
       case des of
-        'DMX USB PRO': RegisterENTTEC_DMXUSBPRO(i);
-        'OPEN DMX': RegisterENTTEC_OPENDMX(i);
+        'DMX USB PRO': if ProgramOptions.LookForEnttecUSBDMXPRO then RegisterENTTEC_DMXUSBPRO(i);
+        'OPEN DMX': if ProgramOptions.LookForEnttecOpenDmx then RegisterENTTEC_OPENDMX(i);
       end;//case
     end;
   end;

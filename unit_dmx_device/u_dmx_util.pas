@@ -357,6 +357,7 @@ var ima: TBGRABitmap;
 begin
   ima := SVGFileToBGRABitmap(FixtureSVGFileFor(aFT), aImage.ClientWidth, aImage.ClientHeight);
   bmp := TBitmap.Create;
+  bmp.PixelFormat := pf32bit;
   ima.AssignToBitmap(bmp);
   aImage.Picture.Assign(bmp);
   ima.Free;
@@ -536,9 +537,10 @@ function TDevicePathHelper.DeviceNameSerialPort: string;
 var dev: TBaseDMXDevice;
 begin
   dev := DeviceManager.Device[DeviceIndex];
-  Result := dev.Name+' - '+dev.SerialNumber;
+  Result := dev.Name;
+  if dev.SerialNumber <> '' then Result := Result + ' - ' + dev.SerialNumber;
   if dev.PortCount > 1 then
-    Result := Result+' - '+SDevicePort+' '+PortIndex.ToString;
+    Result := Result + ' - ' + SDevicePort + ' ' + PortIndex.ToString;
 end;
 
 function TDevicePathHelper.IsAssignedToDevice: boolean;
