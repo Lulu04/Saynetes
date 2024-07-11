@@ -134,8 +134,10 @@ object FrameEditMode: TFrameEditMode
       AnchorSideTop.Control = Panel1
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
       Left = 465
       Height = 24
+      Hint = 'Remove this mode'
       Top = 6
       Width = 24
       Anchors = [akTop, akRight]
@@ -144,6 +146,8 @@ object FrameEditMode: TFrameEditMode
       Images = DataModule1.ImageList1
       ImageIndex = 2
       OnClick = BDeleteModeClick
+      ShowHint = True
+      ParentShowHint = False
     end
     object Label5: TLabel
       AnchorSideLeft.Control = Label1
@@ -300,7 +304,7 @@ object FrameEditMode: TFrameEditMode
       ParentFont = False
       ParentShowHint = False
     end
-    object BAddRepetitiveChannel: TSpeedButton
+    object BAddMultiple: TSpeedButton
       AnchorSideLeft.Control = BAddSwitchingChannel
       AnchorSideLeft.Side = asrBottom
       AnchorSideBottom.Control = BAddChannel
@@ -309,11 +313,11 @@ object FrameEditMode: TFrameEditMode
       Left = 271
       Height = 20
       Top = 148
-      Width = 118
+      Width = 97
       Anchors = [akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 20
-      Caption = 'sRepeatChannels'
+      Caption = 'sAddMultiple'
       Color = 16433669
       Flat = True
       Font.Color = clWhite
@@ -321,7 +325,7 @@ object FrameEditMode: TFrameEditMode
       Images = DataModule1.ImageList1
       ImageIndex = 0
       Transparent = False
-      OnClick = BAddRepetitiveChannelClick
+      OnClick = BAddMultipleClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
