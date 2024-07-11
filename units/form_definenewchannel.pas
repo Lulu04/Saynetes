@@ -16,6 +16,7 @@ type
   { TFormDefineNewChannel }
 
   TFormDefineNewChannel = class(TForm)
+    BHelp: TSpeedButton;
     BRangesGenerator: TSpeedButton;
     BOK: TSpeedButton;
     BCancel: TSpeedButton;
@@ -55,6 +56,7 @@ type
     BImportRanges: TSpeedButton;
     BRemoveAlias: TSpeedButton;
     Splitter1: TSplitter;
+    procedure BHelpClick(Sender: TObject);
     procedure BRangesGeneratorClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure BRemoveAliasClick(Sender: TObject);
@@ -99,7 +101,7 @@ type
 implementation
 
 uses u_resource_string, form_selectsourcechannel, form_rangesgenerator,
-  u_helper, Math;
+  u_helper, form_help, Math;
 
 {$R *.lfm}
 
@@ -568,6 +570,11 @@ begin
   finally
     F.Free;
   end;
+end;
+
+procedure TFormDefineNewChannel.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpDefineNewChannel, BHelp);
 end;
 
 end.

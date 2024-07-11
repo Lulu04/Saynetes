@@ -15,6 +15,7 @@ type
 
   TFormDeviceManager = class(TForm)
     BHelp: TSpeedButton;
+    BHelpMonitoring: TSpeedButton;
     BViewInputDMX: TSpeedButton;
     BDMXDevices: TSpeedButton;
     CB2: TCheckBox;
@@ -31,7 +32,7 @@ type
     Label6: TLabel;
     Label7: TLabel;
     NB1: TNotebook;
-    PageDMXInput: TPage;
+    PageMonitoring: TPage;
     PageDMXDevices: TPage;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -342,7 +343,7 @@ procedure TFormDeviceManager.FormCreate(Sender: TObject);
 begin
   FNoteBookManager := TNoteBookManager.Create(NB1);
   FNoteBookManager.LinkButtonToPage(BDMXDevices, PageDMXDevices);
-  FNoteBookManager.LinkButtonToPage(BViewInputDMX, PageDMXInput);
+  FNoteBookManager.LinkButtonToPage(BViewInputDMX, PageMonitoring);
   FNoteBookManager.ActivePage(PageDMXDevices);
 
   CheckedLabelManager1 := TCheckedLabelManager.Create;
@@ -476,7 +477,8 @@ end;
 
 procedure TFormDeviceManager.BHelpClick(Sender: TObject);
 begin
- // _ShowHelp(HelpDeviceManager, BHelp);
+  if Sender = BHelp then _ShowHelp(HelpDeviceManagerDevice, BHelp);
+  if Sender = BHelpMonitoring then _ShowHelp(HelpDeviceManagerMonitoring, BHelpMonitoring);
 end;
 
 procedure TFormDeviceManager.FormDestroy(Sender: TObject);

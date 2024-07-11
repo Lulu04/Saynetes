@@ -19,6 +19,11 @@ type
     BAddManufacturer: TSpeedButton;
     BAddWebLink: TSpeedButton;
     BDeleteWebLink: TSpeedButton;
+    BHelpGeneral: TSpeedButton;
+    BHelpDipSwitch: TSpeedButton;
+    BHelpSave: TSpeedButton;
+    BHelpPhysical: TSpeedButton;
+    BHelpMode: TSpeedButton;
     BSave: TSpeedButton;
     BCheckAndSave: TSpeedButton;
     BPhysical: TSpeedButton;
@@ -111,6 +116,7 @@ type
     Timer1: TTimer;
     UpDown1: TUpDown;
     procedure BAddManufacturerClick(Sender: TObject);
+    procedure BHelpGeneralClick(Sender: TObject);
     procedure BSaveClick(Sender: TObject);
     procedure CBConnectorChange(Sender: TObject);
     procedure CBManufacturersChange(Sender: TObject);
@@ -185,8 +191,8 @@ type
 implementation
 
 uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
-  u_datamodule, form_editweblink, form_newmanufacturer, u_dmx_util, LazUTF8,
-  Math, utilitaire_bgrabitmap;
+  u_datamodule, form_editweblink, form_newmanufacturer, form_help, u_dmx_util,
+  LazUTF8, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -876,6 +882,15 @@ begin
     LBWebLink.Items.Delete(LBWebLink.ItemIndex);
     Modified := True;
   end;
+end;
+
+procedure TFormFixtureWizard.BHelpGeneralClick(Sender: TObject);
+begin
+  if Sender = BHelpGeneral then _ShowHelp(HelpFixtureWizardGeneral, BHelpGeneral);
+  if Sender = BHelpPhysical then _ShowHelp(HelpFixtureWizardPhysical, BHelpGeneral);
+  if Sender = BHelpMode then _ShowHelp(HelpFixtureWizardMode, BHelpGeneral);
+  if Sender = BHelpSave then _ShowHelp(HelpFixtureWizardSave, BHelpGeneral);
+  if Sender = BHelpDipSwitch then _ShowHelp(HelpFixtureWizardDipSwitch, BHelpDipSwitch);
 end;
 
 procedure TFormFixtureWizard.CBManufacturersChange(Sender: TObject);

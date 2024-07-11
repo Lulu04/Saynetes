@@ -58,8 +58,8 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
       Left = 8
       Height = 20
       Top = 8
-      Width = 119
-      Caption = 'sRepeatChannels'
+      Width = 128
+      Caption = 'sMultipleChannels'
       Font.Color = 15395562
       Font.Height = 20
       Font.Style = [fsBold]
@@ -405,11 +405,14 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         Cursor = crHandPoint
         Left = 353
         Height = 25
+        Hint = 'Add this channel type to the pattern'
         Top = 16
         Width = 30
         Images = DataModule1.ImageList1
         ImageIndex = 0
         OnClick = BAddClick
+        ShowHint = True
+        ParentShowHint = False
       end
       object Panel5: TPanel
         Left = 24
@@ -443,12 +446,32 @@ object FormEditRepetitiveChannel: TFormEditRepetitiveChannel
         Cursor = crHandPoint
         Left = 353
         Height = 25
+        Hint = 'Clear the pattern'
         Top = 48
         Width = 30
         Images = DataModule1.ImageList1
         ImageIndex = 7
         OnClick = BClearClick
       end
+    end
+    object BHelp: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 527
+      Height = 20
+      Top = 5
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
     end
   end
 end

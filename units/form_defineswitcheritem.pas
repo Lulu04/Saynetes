@@ -14,6 +14,7 @@ type
 
   TFormDefineSwitcher = class(TForm)
     BCancel: TSpeedButton;
+    BHelp: TSpeedButton;
     BOK: TSpeedButton;
     Image1: TImage;
     Label4: TLabel;
@@ -21,6 +22,7 @@ type
     LBVirtual: TListBox;
     LBSub: TListBox;
     Shape1: TShape;
+    procedure BHelpClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure LBVirtualSelectionChange(Sender: TObject; User: boolean);
@@ -40,7 +42,7 @@ var
 
 implementation
 
-uses u_utils, u_apputils, u_resource_string, utilitaire_bgrabitmap;
+uses u_utils, u_apputils, u_resource_string, form_help, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -117,6 +119,11 @@ begin
   if Sender = BCancel then begin
     ModalResult := mrCancel;
   end;
+end;
+
+procedure TFormDefineSwitcher.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpDefineSwitcherItem, BHelp);
 end;
 
 end.

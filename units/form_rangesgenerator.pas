@@ -13,6 +13,7 @@ type
   { TFormRangesGenerator }
 
   TFormRangesGenerator = class(TForm)
+    BHelp: TSpeedButton;
     BOK: TSpeedButton;
     Edit1: TEdit;
     Label1: TLabel;
@@ -22,12 +23,14 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     LB: TListBox;
     Panel1: TPanel;
     SpinEdit1: TSpinEdit;
     SpinEdit2: TSpinEdit;
     SpinEdit3: TSpinEdit;
     SpinEdit4: TSpinEdit;
+    procedure BHelpClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -50,7 +53,7 @@ var
 
 implementation
 
-uses u_resource_string, LCLType;
+uses u_resource_string, form_help, LCLType;
 
 {$R *.lfm}
 
@@ -72,6 +75,11 @@ begin
   if Sender = BOk then begin
     ModalResult := mrOk;
   end;
+end;
+
+procedure TFormRangesGenerator.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpRangesGenerator, BHelp);
 end;
 
 procedure TFormRangesGenerator.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -121,7 +129,7 @@ function TFormRangesGenerator.GetFunctionality(aIndex: integer): string;
 begin
   Result := Trim(Edit1.Text);
   if Result = '' then exit;
-  Result := Result.Replace('#', (aIndex+SpinEdit4.Value).ToString, [rfReplaceAll]);
+  Result := Result.Replace('#', (aIndex+SpinEdit4.Value-1).ToString, [rfReplaceAll]);
 end;
 
 end.

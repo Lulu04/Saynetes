@@ -126,7 +126,8 @@ resourcestring
   SRed='Red';
   SGreen='Green';
   SBlue='Blue';
-  sRepeatChannels='Repeat channels';
+  SAddMultiple='Add multiple';
+  SMultipleChannels='Multiple channels';
 
   SFixtureEdition='Fixture edition';
   SManufacturer='Manufacturer';
@@ -837,10 +838,162 @@ resourcestring
                           '- Click Add button to create the step in the sequence.';
 
 
+   HelpDeviceManagerDevice='In this window you can connect the universes to dmx devices.'+LineEnding+
+            '- At the bottom right:'+LineEnding+
+            '   . Check which device you want to search then click the Search button.'+LineEnding+
+            '   . Saynètes try to retrieve the available supported devices.'+LineEnding+
+            '- At top right:'+LineEnding+
+            '   . The list display the devices found.'+LineEnding+
+            '   . A device can have multiple ports.'+LineEnding+
+            '   . If the device allow it, you can set a port direction (IN or OUT).'+LineEnding+
+            '- At the top left:'+LineEnding+
+            '   . Click into ''Connected to'' column to connect an universe to a device.'+LineEnding+
+            '   . Connection can be optimized: e.g. in an universe, only adresses from 1 to 120 are occupied. Checking ''Optimized'' will send only the 120 channel values to the device. Unchecking it will send the whole 512 channel values. NOTE: not all devices support this feature.';
+
+   HelpDeviceManagerMonitoring='Here you can visualize the channel values sent or recieved by a device port.'+LineEnding+
+            'Just select the device and its port in the list.'+LineEnding+
+            'Move the mouse over the grid cells to show infos.';
+
+
+   HelpFixtureWizardGeneral='Here, define the general characteristics of the fixture.'+LineEnding+
+            '- Choose a manufacturer in the list.'+LineEnding+
+            '- Enter the name of the fixture.'+LineEnding+
+            '- Enter your name or pseudo (optionnal).'+LineEnding+
+            '- Choose a graphic representation for the fixture.'+LineEnding+
+            '- Its recommended to add at least a web link for the manual of the fixture: click on the ''+'' button at top right.';
+
+
+   HelpFixtureWizardPhysical='Enter here the technical specifications of the fixture.'+LineEnding+
+            'Power and Connector must be defined.'+LineEnding+
+            'If the fixture have dip switch to select its DMX adress, check ''yes''.';
+
+
+   HelpFixtureWizardDipSwitch='Dip switch definition:'+LineEnding+
+            '- Click ''+'' to add a switch.'+LineEnding+
+            '- Click ''-'' to remove a switch.'+LineEnding+
+            '- Reverse the bit order or the ON/OFF position to match what you see on the fixture.'+LineEnding+
+            '- Right click on a switch show a pop-up menu:'+LineEnding+
+            '   . Used for adress: select it if the switch is intended to define the adress.'+LineEnding+
+            '   . Must be ON: select it if this switch must be ON.'+LineEnding+
+            '   . Must be OFF: select it if this switch must be OFF.';
+
+   _HelpFixtureWizardMode='Define here the modes as they are defined in the fixture manual.'+LineEnding+
+            '- Add a mode by clicking on ADD MODE button.'+LineEnding+
+            '- Delete a mode by clicking on the red cross at the top right of the mode panel.'+LineEnding+
+            LineEnding+
+            '- Enter the mode name.'+LineEnding+
+            '- Enter a short name for this mode (optionnal).'+LineEnding+
+            '- Click on button:'+LineEnding+
+            '   . Add channel: to add a new channel or a channel already defined in another mode.'+LineEnding+
+            '   . Add virtual channel: to add a new virtual channel or a virtual channel already defined in another mode (see below).'+LineEnding+
+            '   . Add multiple: to add several channels at once.';
+
+   HelpVirtualChannel='VIRTUAL CHANNEL, SUB-CHANNEL and SWITCHER'+LineEnding+
+            'Virtual channel is a channel whose the definition change according to the value of another channel (the switcher).'+LineEnding+
+            'Example: a fixture have a channel A named Program and a channel B whose the name can be:'+LineEnding+
+            '     - Program Speed if channel A value is between 1..127.'+LineEnding+
+            '     - Sound Sensitivity if channel A value is between 128..255.'+LineEnding+
+            'To define this kind of complex channels in Saynètes, we have to define:'+LineEnding+
+            '   - a virtual channel named ''ProgramSpeed/SoundSensitivity'' that contains:'+LineEnding+
+            '     . a sub-channel named ''Program Speed''.'+LineEnding+
+            '     . a sub-channel named ''Sound Sensitivity''.'+LineEnding+
+            '   - switchers in the channel A definition like:'+LineEnding+
+            '     . range 0..127: a switcher that switch the virtual channel ''ProgramSpeed/SoundSensitivity'' to the sub-channel ''Program Speed''.'+LineEnding+
+            '     . range 128..255: a switcher that switch the virtual channel ''ProgramSpeed/SoundSensitivity'' to the sub-channel ''Sound Sensitivity''.'+LineEnding+
+            'NOTE:'+LineEnding+
+            '  . The name of a virtual channel is never displayed on the main dmx view, only its sub-channels names are.'+LineEnding+
+            '  . A simple example with one single switching channel: American DJ - Dotz Par - mode 9 channel.'+LineEnding+
+            '  . A complex example with several switching channels: American DJ - Flat Par QA12 - mode 8 channel.';
+
+   HelpFixtureWizardSave='Here you can check for errors in the fixture definition.'+LineEnding+
+            'Saynètes will show messages to help you find them.'+LineEnding+
+            'Click on Save button to save the definition in the library and close the window.';
+
+   _HelpEditVirtualChannel='To create a new virtual channel:'+LineEnding+
+            '- Enter its name (try to be explicit).'+LineEnding+
+            '- Check its sub-channels in the list.'+LineEnding+
+            '- If the sub-channels have not yet been defined, click on the button Create new.'+LineEnding+
+            '- When all sub-channels are checked, click Ok.';
+
+   _HelpDefineSwitcherItem='To add a switcher:'+LineEnding+
+            '- At the left, select the virtual channel to switch. If it doesn''t appear its because you have to define it first.'+LineEnding+
+            '- At the right, select the sub-channel to switch to.'+LineEnding+
+            'NOTE: first you have to define a virtual channel before adding the switchers into the dmx range.';
+
+   HelpRangesGenerator='Use the range generator to define a series of ranges separated by the same offset.'+LineEnding+
+            'e.g. 0..9 Program 1, 10..19 Program 2, 20..29 program 3.'+LineEnding+
+            'Begin value: this is the value to start from (in our example: 0).'+LineEnding+
+            'Range width: this is the value that separates each range (in our example: 10).'+LineEnding+
+            'Count: the range count to generate (in our example: 3).'+LineEnding+
+            'Name: the description to generate for each range, # to insert the index.'+LineEnding+
+            'Start index: sets the start index value (in our example: 1).'+LineEnding+
+            'Check the preview and adjust if necessary.'+LineEnding+
+            'Click Ok to generate the ranges.';
+
+   HelpSelectSourceChannel='Select the channel from which you wish to import ranges, or the source channel to define the alias.';
+
+   HelpSelectExistingChannel='Select an existing channel in the list.'+LineEnding+
+            'If the channel is not yet defined, click Create new button.';
+
+   HelpEditMultipleChannel='This tool help you to define quickly redundant channels. It use presets to save and retrieve the channel pattern.'+LineEnding+
+            'PATTERN'+LineEnding+
+            '  - Recall a preset by clicking on the Preset button.'+LineEnding+
+            '  - If no preset match your need:'+LineEnding+
+            '     . Select in the list the type of the channel you want to add to the pattern.'+LineEnding+
+            '     . Click ''+'' button to add the selected.'+LineEnding+
+            '     . Right click on the added item to rename it or to define it as an alias of another channel. This last function avoids repeating the same channel definition several times under different names.'+LineEnding+
+            '  - Check Use prefix if you need a prefix to be inserted before the channel names.'+LineEnding+
+            '  - Check Use suffix if you need to add a suffix after the channel names.'+LineEnding+
+            '  - Sets the start and end index.'+LineEnding+
+            '  - Choose an index option that fit your need.'+LineEnding+
+            '  - Check the preview.'+LineEnding+
+            '  - Click Ok to generate the channels.'+LineEnding+
+            LineEnding+
+            'TIP'+LineEnding+
+            'It is common to define Red, Green and Blue channels, for example. instead to define them one by one, use this tool:'+LineEnding+
+            '  - recall the preset RGB.'+LineEnding+
+            '  - uncheck use prefix and suffix.'+LineEnding+
+            '  - Check ''do not use index''.'+LineEnding+
+            '  - Click Ok.';
+
+   _HelpSelectExistingSwitchingChannel='Select an existing virtual channel.'+LineEnding+
+            'if it hasn''t yet been defined, click on the button Create new.';
+
+   _HelpDefineNewChannel='This window allow you to define a new channel.'+LineEnding+
+            LineEnding+
+            '- You want this channel to be an alias of another one:'+LineEnding+
+            '   . Enter the name for this channel.'+LineEnding+
+            '   . Click the Sets as an alias of... button.'+LineEnding+
+            '   . Select a channel in the list.'+LineEnding+
+            LineEnding+
+            '- This new channel is not an alias:'+LineEnding+
+            '   . Select a preset to quickly sets the channel parameters.'+LineEnding+
+            '   . Or enter the channel name, and choose an icon.'+LineEnding+
+            '   . Enter the default value of the channel.'+LineEnding+
+            LineEnding+
+            'RANGES'+LineEnding+
+            'To define the ranges of the channel you can:'+LineEnding+
+            '- Enter each range manually: sets the begin and the end of the range, enter a description, extra contain value like color in hexadecimal format #rrggbb.'+LineEnding+
+            '- Use the ranges generator to help you to define repetitive items.'+LineEnding+
+            '- Import the ranges from another channel by clicking Import ranges from another channel...'+LineEnding+
+            LineEnding+
+            'SWITCHERS'+LineEnding+
+            'Define the switchers for this channel by clicking on:'+LineEnding+
+            '  - ''+'' to add new switcher.'+LineEnding+
+            '  - ''down arrow'' to copy the switcher on the previous range.'+LineEnding+
+            'A switcher can be:'+LineEnding+
+            '  - Removed: move the mouse over the switcher and click the red cross button at its right.'+LineEnding+
+            '  - Modified: move the mouse over the switcher and click the pen button at its right.';
+
 
   function HelpChannelFlame: string;
   function HelpChannelAudioFollower: string;
   function HelpSequencerCmdAudioFX: string;
+  function HelpFixtureWizardMode: string;
+  function HelpEditVirtualChannel: string;
+  function HelpDefineSwitcherItem: string;
+  function HelpSelectExistingSwitchingChannel: string;
+  function HelpDefineNewChannel: string;
 
 implementation
 
@@ -862,6 +1015,36 @@ function HelpSequencerCmdAudioFX: string;
 begin
   Result := _HelpSequencerCmdAudioFX + LineEnding + LineEnding +
             HelpPreset;
+end;
+
+function HelpFixtureWizardMode: string;
+begin
+  Result := _HelpFixtureWizardMode + LineEnding + LineEnding +
+            HelpVirtualChannel;
+end;
+
+function HelpEditVirtualChannel: string;
+begin
+  Result := _HelpEditVirtualChannel + LineEnding + LineEnding +
+            HelpVirtualChannel;
+end;
+
+function HelpDefineSwitcherItem: string;
+begin
+  Result := _HelpDefineSwitcherItem + LineEnding + LineEnding +
+            HelpVirtualChannel;
+end;
+
+function HelpSelectExistingSwitchingChannel: string;
+begin
+  Result := _HelpSelectExistingSwitchingChannel + LineEnding + LineEnding +
+            HelpVirtualChannel;
+end;
+
+function HelpDefineNewChannel: string;
+begin
+  Result := _HelpDefineNewChannel + LineEnding + LineEnding +
+            HelpVirtualChannel;
 end;
 
 

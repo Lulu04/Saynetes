@@ -14,6 +14,7 @@ type
   { TFormEditSwitchingChannel }
 
   TFormEditSwitchingChannel = class(TForm)
+    BHelp: TSpeedButton;
     BOk: TSpeedButton;
     BNew: TSpeedButton;
     Edit1: TEdit;
@@ -25,6 +26,7 @@ type
     Label7: TLabel;
     LB: TCheckListBox;
     Panel1: TPanel;
+    procedure BHelpClick(Sender: TObject);
     procedure BNewClick(Sender: TObject);
     procedure BOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -51,7 +53,7 @@ type
 
 implementation
 
-uses u_resource_string, form_definenewchannel, u_utils;
+uses u_resource_string, form_definenewchannel, u_utils, form_help;
 
 {$R *.lfm}
 
@@ -102,6 +104,11 @@ begin
     TargetModeFrame.DoAddChannelFrame(chanName[i]); }
 
   TargetModeFrame.Modified := True;
+end;
+
+procedure TFormEditSwitchingChannel.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpEditVirtualChannel, BHelp);
 end;
 
 procedure TFormEditSwitchingChannel.BOkClick(Sender: TObject);
