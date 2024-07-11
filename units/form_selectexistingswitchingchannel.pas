@@ -15,12 +15,14 @@ type
   TFormSelectExistingSwitchingChannel = class(TForm)
     BAddExisting: TSpeedButton;
     BCreateNew: TSpeedButton;
+    BHelp: TSpeedButton;
     Label1: TLabel;
     Label2: TLabel;
     Label5: TLabel;
     LB: TListBox;
     Panel1: TPanel;
     procedure BAddExistingClick(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure LBSelectionChange(Sender: TObject; User: boolean);
@@ -38,7 +40,7 @@ type
 
 
 implementation
-uses LCLType, u_resource_string, u_list_dmxuniverse, u_helper;
+uses LCLType, u_resource_string, u_list_dmxuniverse, u_helper, form_help;
 
 {$R *.lfm}
 
@@ -71,6 +73,11 @@ begin
   if Sender = BCreateNew then begin
     ModalResult := mrIgnore;
   end;
+end;
+
+procedure TFormSelectExistingSwitchingChannel.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpSelectExistingSwitchingChannel, BHelp);
 end;
 
 procedure TFormSelectExistingSwitchingChannel.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);

@@ -18,6 +18,7 @@ type
 
   TFormEditRepetitiveChannel = class(TForm)
     BClear: TSpeedButton;
+    BHelp: TSpeedButton;
     BOK: TSpeedButton;
     BPreset: TSpeedButton;
     CheckBox1: TCheckBox;
@@ -52,6 +53,7 @@ type
     BAdd: TSpeedButton;
     procedure BAddClick(Sender: TObject);
     procedure BClearClick(Sender: TObject);
+    procedure BHelpClick(Sender: TObject);
     procedure BOKClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -86,7 +88,7 @@ type
 
 implementation
 uses LCLType, u_resource_string, form_selectsourcechannel,
-  u_apputils;
+  u_apputils, form_help;
 
 {$R *.lfm}
 
@@ -215,7 +217,7 @@ begin
 
   // manual translation
   BOK.Caption := SOk;
-  Label1.Caption := sRepeatChannels;
+  Label1.Caption := SMultipleChannels;
   BPreset.Caption := SPreset_;
 end;
 
@@ -310,6 +312,11 @@ begin
   FChannels := NIL;
   FrameViewDMXFixtureChannels.Clear;
   CheckBox1Change(NIL);
+end;
+
+procedure TFormEditRepetitiveChannel.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpEditMultipleChannel, BHelp);
 end;
 
 end.

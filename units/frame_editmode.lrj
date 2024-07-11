@@ -4,6 +4,7 @@
 {"hash":7882805,"name":"tframeeditmode.label2.caption","sourcebytes":[115,78,97,109,101],"value":"sName"},
 {"hash":157604181,"name":"tframeeditmode.label3.caption","sourcebytes":[83,104,111,114,116,32,110,97,109,101],"value":"Short name"},
 {"hash":184020643,"name":"tframeeditmode.label4.caption","sourcebytes":[68,77,88,32,99,104,97,110,110,101,108,115],"value":"DMX channels"},
+{"hash":110482197,"name":"tframeeditmode.bdeletemode.hint","sourcebytes":[82,101,109,111,118,101,32,116,104,105,115,32,109,111,100,101],"value":"Remove this mode"},
 {"hash":5404860,"name":"tframeeditmode.label5.caption","sourcebytes":[76,97,98,101,108],"value":"Label"},
 {"hash":206154396,"name":"tframeeditmode.beditchannel.hint","sourcebytes":[77,111,100,105,102,121,32,99,104,97,110,110,101,108],"value":"Modify channel"},
 {"hash":97318780,"name":"tframeeditmode.bdeletechannel.hint","sourcebytes":[68,101,108,101,116,101,32,99,104,97,110,110,101,108],"value":"Delete channel"},
@@ -12,5 +13,5 @@
 {"hash":70088068,"name":"tframeeditmode.label6.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
 {"hash":70088068,"name":"tframeeditmode.label7.caption","sourcebytes":[83,78,97,109,101,65,108,114,101,97,100,121,85,115,101,100],"value":"SNameAlreadyUsed"},
 {"hash":133912476,"name":"tframeeditmode.baddswitchingchannel.caption","sourcebytes":[65,100,100,32,118,105,114,116,117,97,108,32,99,104,97,110,110,101,108],"value":"Add virtual channel"},
-{"hash":36748323,"name":"tframeeditmode.baddrepetitivechannel.caption","sourcebytes":[115,82,101,112,101,97,116,67,104,97,110,110,101,108,115],"value":"sRepeatChannels"}
+{"hash":223260773,"name":"tframeeditmode.baddmultiple.caption","sourcebytes":[115,65,100,100,77,117,108,116,105,112,108,101],"value":"sAddMultiple"}
 ]}

@@ -14,10 +14,12 @@ type
   { TFormSelectChannel }
 
   TFormSelectChannel = class(TForm)
+    BHelp: TSpeedButton;
     BOk: TSpeedButton;
     Label2: TLabel;
     LB: TListBox;
     Panel1: TPanel;
+    procedure BHelpClick(Sender: TObject);
     procedure BOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -33,7 +35,7 @@ type
 
 
 implementation
-uses LCLType, u_resource_string;
+uses LCLType, u_resource_string, form_help;
 
 {$R *.lfm}
 
@@ -43,6 +45,11 @@ procedure TFormSelectChannel.BOkClick(Sender: TObject);
 begin
   if LB.ItemIndex = -1 then exit;
   ModalResult := mrOk;
+end;
+
+procedure TFormSelectChannel.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpSelectSourceChannel, BHelp);
 end;
 
 procedure TFormSelectChannel.FormCreate(Sender: TObject);

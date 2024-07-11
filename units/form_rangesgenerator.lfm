@@ -9,7 +9,7 @@ object FormRangesGenerator: TFormRangesGenerator
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
   Position = poOwnerFormCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 0
     Height = 593
@@ -25,9 +25,9 @@ object FormRangesGenerator: TFormRangesGenerator
     TabOrder = 0
     object Label1: TLabel
       Left = 8
-      Height = 23
+      Height = 20
       Top = 8
-      Width = 177
+      Width = 129
       Caption = 'sRangesGenerator'
       Font.Color = 15395562
       Font.Height = 20
@@ -37,9 +37,9 @@ object FormRangesGenerator: TFormRangesGenerator
     end
     object Label2: TLabel
       Left = 12
-      Height = 23
+      Height = 20
       Top = 45
-      Width = 107
+      Width = 78
       Caption = 'Begin Value'
       Font.Color = 15395562
       Font.Height = 20
@@ -80,8 +80,8 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 33
-      Top = 68
+      Height = 23
+      Top = 65
       Width = 71
       MaxValue = 255
       OnChange = SpinEdit1Change
@@ -89,9 +89,9 @@ object FormRangesGenerator: TFormRangesGenerator
     end
     object Label3: TLabel
       Left = 168
-      Height = 23
+      Height = 20
       Top = 45
-      Width = 114
+      Width = 83
       Caption = 'Range width'
       Font.Color = 15395562
       Font.Height = 20
@@ -104,8 +104,8 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Left = 168
-      Height = 33
-      Top = 68
+      Height = 23
+      Top = 65
       Width = 71
       MaxValue = 255
       MinValue = 1
@@ -119,8 +119,8 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Left = 12
-      Height = 33
-      Top = 127
+      Height = 23
+      Top = 124
       Width = 71
       MaxValue = 255
       OnChange = SpinEdit1Change
@@ -129,9 +129,9 @@ object FormRangesGenerator: TFormRangesGenerator
     end
     object Label4: TLabel
       Left = 12
-      Height = 23
+      Height = 20
       Top = 104
-      Width = 63
+      Width = 45
       Caption = 'sCount'
       Font.Color = 15395562
       Font.Height = 20
@@ -146,8 +146,8 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = BOK
       Left = 12
-      Height = 298
-      Top = 247
+      Height = 301
+      Top = 244
       Width = 311
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Right = 10
@@ -157,14 +157,13 @@ object FormRangesGenerator: TFormRangesGenerator
       ItemHeight = 0
       ParentFont = False
       TabOrder = 3
-      TopIndex = -1
     end
     object Label5: TLabel
       AnchorSideLeft.Control = Panel1
       Left = 12
-      Height = 23
+      Height = 20
       Top = 224
-      Width = 82
+      Width = 57
       BorderSpacing.Left = 10
       Caption = 'sPreview'
       Font.Color = 15395562
@@ -175,9 +174,9 @@ object FormRangesGenerator: TFormRangesGenerator
     object Label6: TLabel
       AnchorSideLeft.Control = Panel1
       Left = 12
-      Height = 23
+      Height = 20
       Top = 168
-      Width = 62
+      Width = 46
       BorderSpacing.Left = 10
       Caption = 'sName'
       Font.Color = 15395562
@@ -192,8 +191,8 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideRight.Control = LB
       AnchorSideRight.Side = asrBottom
       Left = 12
-      Height = 33
-      Top = 191
+      Height = 23
+      Top = 188
       Width = 311
       Anchors = [akTop, akLeft, akRight]
       OnChange = SpinEdit1Change
@@ -201,10 +200,10 @@ object FormRangesGenerator: TFormRangesGenerator
     end
     object Label7: TLabel
       Left = 168
-      Height = 23
+      Height = 20
       Top = 104
-      Width = 126
-      Caption = 'Display offset'
+      Width = 71
+      Caption = 'Start index'
       Font.Color = 15395562
       Font.Height = 20
       ParentColor = False
@@ -216,12 +215,47 @@ object FormRangesGenerator: TFormRangesGenerator
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Side = asrBottom
       Left = 168
-      Height = 33
-      Top = 127
+      Height = 23
+      Top = 124
       Width = 71
       MaxValue = 255
       OnChange = SpinEdit1Change
       TabOrder = 5
+      Value = 1
+    end
+    object BHelp: TSpeedButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHelp
+      Left = 310
+      Height = 20
+      Top = 5
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 48
+      OnClick = BHelpClick
+    end
+    object Label8: TLabel
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Edit1
+      Left = 222
+      Height = 15
+      Top = 173
+      Width = 101
+      Anchors = [akRight, akBottom]
+      Caption = '# to insert an index'
+      Font.Color = 15395562
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
     end
   end
 end

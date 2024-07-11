@@ -1,7 +1,7 @@
 {"version":1,"strings":[
 {"hash":202319986,"name":"tformdevicemanager.caption","sourcebytes":[68,69,86,73,67,69,32,77,65,78,65,71,69,82],"value":"DEVICE MANAGER"},
 {"hash":84724821,"name":"tformdevicemanager.sg1.columns[0].title.caption","sourcebytes":[85,110,105,118,101,114,115,101],"value":"Universe"},
-{"hash":203690917,"name":"tformdevicemanager.sg1.columns[1].title.caption","sourcebytes":[84,97,114,103,101,116,32,100,101,118,105,99,101],"value":"Target device"},
+{"hash":235746079,"name":"tformdevicemanager.sg1.columns[1].title.caption","sourcebytes":[67,111,110,110,101,99,116,101,100,32,116,111],"value":"Connected to"},
 {"hash":212258996,"name":"tformdevicemanager.sg1.columns[2].title.caption","sourcebytes":[67,104,97,110,110,101,108,115,32,111,99,99,117,112,105,101,100],"value":"Channels occupied"},
 {"hash":184837828,"name":"tformdevicemanager.sg1.columns[3].title.caption","sourcebytes":[79,112,116,105,109,105,122,101,100],"value":"Optimized"},
 {"hash":181205379,"name":"tformdevicemanager.sg2.columns[0].title.caption","sourcebytes":[68,101,118,105,99,101,115],"value":"Devices"},

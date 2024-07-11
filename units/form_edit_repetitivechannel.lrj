@@ -1,6 +1,6 @@
 {"version":1,"strings":[
 {"hash":30811,"name":"tformeditrepetitivechannel.bok.caption","sourcebytes":[115,79,107],"value":"sOk"},
-{"hash":36748323,"name":"tformeditrepetitivechannel.label1.caption","sourcebytes":[115,82,101,112,101,97,116,67,104,97,110,110,101,108,115],"value":"sRepeatChannels"},
+{"hash":85733267,"name":"tformeditrepetitivechannel.label1.caption","sourcebytes":[115,77,117,108,116,105,112,108,101,67,104,97,110,110,101,108,115],"value":"sMultipleChannels"},
 {"hash":125662840,"name":"tformeditrepetitivechannel.label2.caption","sourcebytes":[85,115,101,32,112,114,101,102,105,120],"value":"Use prefix"},
 {"hash":126668727,"name":"tformeditrepetitivechannel.label3.caption","sourcebytes":[112,114,101,118,105,101,119],"value":"preview"},
 {"hash":128845432,"name":"tformeditrepetitivechannel.label4.caption","sourcebytes":[85,115,101,32,115,117,102,102,105,120],"value":"Use suffix"},
@@ -12,5 +12,7 @@
 {"hash":186401112,"name":"tformeditrepetitivechannel.label14.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,97,102,116,101,114,32,115,117,102,102,105,120],"value":"index is after suffix"},
 {"hash":57136824,"name":"tformeditrepetitivechannel.label15.caption","sourcebytes":[105,110,100,101,120,32,105,115,32,98,101,102,111,114,101,32,112,114,101,102,105,120],"value":"index is before prefix"},
 {"hash":109817054,"name":"tformeditrepetitivechannel.label9.caption","sourcebytes":[80,97,116,116,101,114,110],"value":"Pattern"},
-{"hash":142133684,"name":"tformeditrepetitivechannel.bpreset.caption","sourcebytes":[115,80,114,101,115,101,116],"value":"sPreset"}
+{"hash":12356702,"name":"tformeditrepetitivechannel.badd.hint","sourcebytes":[65,100,100,32,116,104,105,115,32,99,104,97,110,110,101,108,32,116,121,112,101,32,116,111,32,116,104,101,32,112,97,116,116,101,114,110],"value":"Add this channel type to the pattern"},
+{"hash":142133684,"name":"tformeditrepetitivechannel.bpreset.caption","sourcebytes":[115,80,114,101,115,101,116],"value":"sPreset"},
+{"hash":45834366,"name":"tformeditrepetitivechannel.bclear.hint","sourcebytes":[67,108,101,97,114,32,116,104,101,32,112,97,116,116,101,114,110],"value":"Clear the pattern"}
 ]}

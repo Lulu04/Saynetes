@@ -15,7 +15,7 @@ type
 
   TFrameEditMode = class(TFrame)
     BAddSwitchingChannel: TSpeedButton;
-    BAddRepetitiveChannel: TSpeedButton;
+    BAddMultiple: TSpeedButton;
     BUp: TSpeedButton;
     BDown: TSpeedButton;
     Edit1: TEdit;
@@ -34,7 +34,7 @@ type
     BEditChannel: TSpeedButton;
     BDeleteChannel: TSpeedButton;
     Shape1: TShape;
-    procedure BAddRepetitiveChannelClick(Sender: TObject);
+    procedure BAddMultipleClick(Sender: TObject);
     procedure BAddSwitchingChannelClick(Sender: TObject);
     procedure BDeleteModeClick(Sender: TObject);
     procedure BAddChannelClick(Sender: TObject);
@@ -171,7 +171,7 @@ begin
   Modified := True;
 end;
 
-procedure TFrameEditMode.BAddRepetitiveChannelClick(Sender: TObject);
+procedure TFrameEditMode.BAddMultipleClick(Sender: TObject);
 var F: TFormEditRepetitiveChannel;
 begin
   if HaveErrorOnNameOrShortName then exit;
@@ -443,7 +443,7 @@ begin
   Label6.Caption := SNameAlreadyUsed;
   Label7.Caption := SNameAlreadyUsed;
   Label2.Caption := SName;
-  BAddRepetitiveChannel.Caption := sRepeatChannels;
+  BAddMultiple.Caption := SAddMultiple;
 
   BAddSwitchingChannel.ImageIndex := Ord(High(TChannelType))+1;
   BAddSwitchingChannel.ImageWidth := DataModule1.ImageList1.Width;
