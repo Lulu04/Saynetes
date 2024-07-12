@@ -542,9 +542,9 @@
         <ResourceBaseClass Value="Form"/>
       </Unit23>
       <Unit24>
-        <Filename Value="units\frame_viewtoplist.pas"/>
+        <Filename Value="units\frame_viewsequencelist.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="FrameViewTopList"/>
+        <ComponentName Value="FrameViewSequenceList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
       </Unit24>

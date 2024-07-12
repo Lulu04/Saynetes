@@ -451,7 +451,7 @@ end;
 procedure TFormMain.CheckSequenceError;
 begin
   if Sequences.CheckErrorInSequences then
-    FrameMainSequence1.FrameViewTopList1.LB.Invalidate;
+    FrameMainSequence1.FrameViewSequenceList1.LB.Invalidate;
 end;
 
 

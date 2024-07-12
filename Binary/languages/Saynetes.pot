@@ -1955,45 +1955,53 @@ msgctxt "tframeviewprojector.speedbutton5.hint"
 msgid "Shutdown all lights."
 msgstr ""
 
-#: tframeviewswitcheritems.bcopyprevious.hint
-msgid "Copy previous Switcher"
+#: tframeviewsequencelist.label1.caption
+msgctxt "tframeviewsequencelist.label1.caption"
+msgid "Add sequences to your project"
 msgstr ""
 
-#: tframeviewtoplist.label1.caption
-msgid "Add sequence to your project"
-msgstr ""
-
-#: tframeviewtoplist.miduplicate.caption
+#: tframeviewsequencelist.miduplicate.caption
+msgctxt "tframeviewsequencelist.miduplicate.caption"
 msgid "Duplicate"
 msgstr ""
 
-#: tframeviewtoplist.miedit.caption
-msgctxt "tframeviewtoplist.miedit.caption"
+#: tframeviewsequencelist.miedit.caption
+msgctxt "tframeviewsequencelist.miedit.caption"
 msgid "Edit..."
 msgstr ""
 
-#: tframeviewtoplist.miinsertsequence.caption
+#: tframeviewsequencelist.miinsertsequence.caption
+msgctxt "tframeviewsequencelist.miinsertsequence.caption"
 msgid "Insert sequence..."
 msgstr ""
 
-#: tframeviewtoplist.miloadfromanotherproject.caption
+#: tframeviewsequencelist.miloadfromanotherproject.caption
+msgctxt "tframeviewsequencelist.miloadfromanotherproject.caption"
 msgid "Load sequences from another project..."
 msgstr ""
 
-#: tframeviewtoplist.mimerge.caption
+#: tframeviewsequencelist.mimerge.caption
+msgctxt "tframeviewsequencelist.mimerge.caption"
 msgid "Merge"
 msgstr ""
 
-#: tframeviewtoplist.minewsequence.caption
+#: tframeviewsequencelist.minewsequence.caption
+msgctxt "tframeviewsequencelist.minewsequence.caption"
 msgid "Add sequence..."
 msgstr ""
 
-#: tframeviewtoplist.mirename.caption
+#: tframeviewsequencelist.mirename.caption
+msgctxt "tframeviewsequencelist.mirename.caption"
 msgid "Rename..."
 msgstr ""
 
-#: tframeviewtoplist.miresetspeed.caption
+#: tframeviewsequencelist.miresetspeed.caption
+msgctxt "tframeviewsequencelist.miresetspeed.caption"
 msgid "Normal speed"
+msgstr ""
+
+#: tframeviewswitcheritems.bcopyprevious.hint
+msgid "Copy previous Switcher"
 msgstr ""
 
 #: tframe_colorpalette.label4.caption
