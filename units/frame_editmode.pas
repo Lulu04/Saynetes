@@ -98,7 +98,7 @@ implementation
 uses Math, form_selectexistingchannel, form_definenewchannel, LCLIntf,
   u_editfixturewizard, u_resource_string, u_helper, u_common,
   u_datamodule, form_definesvirtualchannel,
-  form_selectexistingswitchingchannel, form_edit_repetitivechannel, Graphics;
+  form_selectexistingvirtualchannel, form_edit_repetitivechannel, Graphics;
 
 {$R *.lfm}
 
@@ -115,7 +115,7 @@ end;
 { TFrameEditMode }
 
 procedure TFrameEditMode.BAddSwitchingChannelClick(Sender: TObject);
-var FormExisting: TFormSelectExistingSwitchingChannel;
+var FormExisting: TFormSelectExistingVirtualChannel;
   FormNew: TFormEditVirtualChannel;
   chanName, A: TStringArray;
   i: SizeInt;
@@ -126,7 +126,7 @@ begin
 
   // first ask the user to choose existing virtual channel(s) (if any)
   if (Length(FVirtualChannelInMode) <> 0) and (Length(FVirtualChannelInMode) > Length(VirtualChannelUsed)) then begin
-    FormExisting := TFormSelectExistingSwitchingChannel.Create(Self.Parent);
+    FormExisting := TFormSelectExistingVirtualChannel.Create(Self.Parent);
     try
       FormExisting.ModeName := Edit1.Text;
       FormExisting.FillWith(VirtualChannelUsed);

@@ -982,14 +982,15 @@ msgstr "Ajouter un canal au mode"
 msgid "Select an existing channel"
 msgstr "Sélectionnez un canal existant"
 
-#: tformselectexistingswitchingchannel.baddexisting.caption
-msgctxt "tformselectexistingswitchingchannel.baddexisting.caption"
+#: tformselectexistingvirtualchannel.baddexisting.caption
+msgctxt "tformselectexistingvirtualchannel.baddexisting.caption"
 msgid "Add existing"
 msgstr "Ajouter existant"
 
-#: tformselectexistingswitchingchannel.label2.caption
-msgid "Select existing virtual channels"
-msgstr "Sélectionnez les canaux virtuels existants"
+#: tformselectexistingvirtualchannel.label2.caption
+msgctxt "tformselectexistingvirtualchannel.label2.caption"
+msgid "Select an existing virtual channel"
+msgstr "Sélectionnez un canal virtuel existant"
 
 #: tformsequenceedition.bkeep0visible.hint
 msgid "Keep origin visible"
