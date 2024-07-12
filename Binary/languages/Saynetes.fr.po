@@ -2368,7 +2368,7 @@ msgstr ""
 "- Entrez le nom de l'appareil.\n"
 "- Entrez votre nom ou pseudo (optionnel).\n"
 "- Choisissez une représentation graphique de l'appareil.\n"
-"- il est recommandé d'ajouter au moins un lien internet vers la manuel de l'appareil: cliquez sur le bouton '+' en haut à droite."
+"- il est recommandé d'ajouter au moins un lien internet vers le manuel de l'appareil: cliquez sur le bouton '+' en haut à droite."
 
 #: u_resource_string.helpfixturewizardphysical
 msgid ""
