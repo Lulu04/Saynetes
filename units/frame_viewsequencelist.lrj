@@ -1,5 +1,5 @@
 {"version":1,"strings":[
-{"hash":43860772,"name":"tframeviewsequencelist.label1.caption","sourcebytes":[65,100,100,32,115,101,113,117,101,110,99,101,32,116,111,32,121,111,117,114,32,112,114,111,106,101,99,116],"value":"Add sequence to your project"},
+{"hash":5942004,"name":"tframeviewsequencelist.label1.caption","sourcebytes":[65,100,100,32,115,101,113,117,101,110,99,101,115,32,116,111,32,121,111,117,114,32,112,114,111,106,101,99,116],"value":"Add sequences to your project"},
 {"hash":238096414,"name":"tframeviewsequencelist.minewsequence.caption","sourcebytes":[65,100,100,32,115,101,113,117,101,110,99,101,46,46,46],"value":"Add sequence..."},
 {"hash":154481966,"name":"tframeviewsequencelist.miinsertsequence.caption","sourcebytes":[73,110,115,101,114,116,32,115,101,113,117,101,110,99,101,46,46,46],"value":"Insert sequence..."},
 {"hash":196112718,"name":"tframeviewsequencelist.miedit.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},

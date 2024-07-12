@@ -10,7 +10,7 @@ uses
   Forms, SysUtils, u_mainform, u_audio_manager, u_edit_sequence, u_dmx_library,
   frame_sequencer, u_common, lazcontrols, frame_viewcmdlist, u_resource_string,
   u_list_sequence, frame_cmd_audio, frame_viewaudiolist, u_projectwizard,
-  frame_viewtoplist, u_sequence_player, frame_viewdmxlibrary,
+  frame_viewsequencelist, u_sequence_player, frame_viewdmxlibrary,
   frame_viewfixturechannels, u_editfixturewizard, u_dmxlib_inputrange,
   u_user_askconfirmation, u_user_showmessage, u_user_inputstring, u_userdialogs,
   frame_editstring, frame_viewdmxcursors, u_dmxtools_channels,

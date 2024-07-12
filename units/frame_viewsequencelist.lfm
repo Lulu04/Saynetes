@@ -1,4 +1,4 @@
-object FrameViewTopList: TFrameViewTopList
+object FrameViewSequenceList: TFrameViewSequenceList
   Left = 0
   Height = 124
   Top = 0
@@ -79,7 +79,7 @@ object FrameViewTopList: TFrameViewTopList
       Width = 176
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
-      Caption = 'Add sequence to your project'
+      Caption = 'Add sequences to your project'
       Font.Color = 9604959
       Font.Height = 25
       Font.Style = [fsBold]

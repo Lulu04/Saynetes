@@ -2044,46 +2044,54 @@ msgctxt "tframeviewprojector.speedbutton5.hint"
 msgid "Shutdown all lights."
 msgstr "Éteint toutes les lumières."
 
-#: tframeviewswitcheritems.bcopyprevious.hint
-msgid "Copy previous Switcher"
-msgstr "Copier le commutateur précédent"
-
-#: tframeviewtoplist.label1.caption
-msgid "Add sequence to your project"
+#: tframeviewsequencelist.label1.caption
+msgctxt "tframeviewsequencelist.label1.caption"
+msgid "Add sequences to your project"
 msgstr "Ajoutez des séquences à votre projet"
 
-#: tframeviewtoplist.miduplicate.caption
+#: tframeviewsequencelist.miduplicate.caption
+msgctxt "tframeviewsequencelist.miduplicate.caption"
 msgid "Duplicate"
 msgstr "Dupliquer"
 
-#: tframeviewtoplist.miedit.caption
-msgctxt "tframeviewtoplist.miedit.caption"
+#: tframeviewsequencelist.miedit.caption
+msgctxt "tframeviewsequencelist.miedit.caption"
 msgid "Edit..."
 msgstr "Éditer..."
 
-#: tframeviewtoplist.miinsertsequence.caption
+#: tframeviewsequencelist.miinsertsequence.caption
+msgctxt "tframeviewsequencelist.miinsertsequence.caption"
 msgid "Insert sequence..."
 msgstr "Insérer une séquence..."
 
-#: tframeviewtoplist.miloadfromanotherproject.caption
+#: tframeviewsequencelist.miloadfromanotherproject.caption
+msgctxt "tframeviewsequencelist.miloadfromanotherproject.caption"
 msgid "Load sequences from another project..."
 msgstr "Importer des séquences d'un autre projet..."
 
-#: tframeviewtoplist.mimerge.caption
+#: tframeviewsequencelist.mimerge.caption
+msgctxt "tframeviewsequencelist.mimerge.caption"
 msgid "Merge"
 msgstr "Fusionner"
 
-#: tframeviewtoplist.minewsequence.caption
+#: tframeviewsequencelist.minewsequence.caption
+msgctxt "tframeviewsequencelist.minewsequence.caption"
 msgid "Add sequence..."
 msgstr "Ajouter une séquence..."
 
-#: tframeviewtoplist.mirename.caption
+#: tframeviewsequencelist.mirename.caption
+msgctxt "tframeviewsequencelist.mirename.caption"
 msgid "Rename..."
 msgstr "Renommer..."
 
-#: tframeviewtoplist.miresetspeed.caption
+#: tframeviewsequencelist.miresetspeed.caption
+msgctxt "tframeviewsequencelist.miresetspeed.caption"
 msgid "Normal speed"
 msgstr "Vitesse normale"
+
+#: tframeviewswitcheritems.bcopyprevious.hint
+msgid "Copy previous Switcher"
+msgstr "Copier le commutateur précédent"
 
 #: tframe_colorpalette.label4.caption
 msgid ""

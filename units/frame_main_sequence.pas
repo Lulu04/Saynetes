@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
   Buttons, LCLTranslator, LCLType,
-  frame_viewtoplist,
+  frame_viewsequencelist,
   frame_viewprojectfolder,
   frame_intermissionmusic,
   u_common;
@@ -35,7 +35,7 @@ type
     FRedocking: boolean;
     procedure RedockPanels;
   public
-    FrameViewTopList1: TFrameViewTopList;
+    FrameViewSequenceList1: TFrameViewSequenceList;
     FrameIntermissionMusic1: TFrameIntermissionMusic;
     FrameViewProjectFolder1: TFrameViewProjectFolder;
 
@@ -93,7 +93,7 @@ end;
 
 procedure TFrameMainSequence.BAddSequenceClick(Sender: TObject);
 begin
-  FrameViewTopList1.MINewSequenceClick(NIL);
+  FrameViewSequenceList1.MINewSequenceClick(NIL);
 end;
 
 procedure TFrameMainSequence.RedockPanels;
@@ -107,10 +107,10 @@ constructor TFrameMainSequence.Create(aOwner: TComponent);
 begin
   inherited Create(aOwner);
 
-  FrameViewTopList1 := TFrameViewTopList.Create(Self);
-  FrameViewTopList1.Parent := Panel2;
-  FrameViewTopList1.Align := alClient;
-  FrameViewTopList1.ItemHeight := 30;
+  FrameViewSequenceList1 := TFrameViewSequenceList.Create(Self);
+  FrameViewSequenceList1.Parent := Panel2;
+  FrameViewSequenceList1.Align := alClient;
+  FrameViewSequenceList1.ItemHeight := 30;
 
   FrameViewProjectFolder1 := TFrameViewProjectFolder.Create(Self);
   FrameViewProjectFolder1.Parent := Panel3;
@@ -132,24 +132,24 @@ end;
 procedure TFrameMainSequence.Fill;
 begin
   Panel1.Enabled := Project.IsReady;
-  FrameViewTopList1.Fill;
+  FrameViewSequenceList1.Fill;
   FrameViewProjectFolder1.Fill;
-  FrameViewTopList1.MouseCanMoveItem := Project.Options.EditMode;
+  FrameViewSequenceList1.MouseCanMoveItem := Project.Options.EditMode;
 end;
 
 function TFrameMainSequence.MouseIsOver: boolean;
 begin
-  Result := FrameViewTopList1.MouseIsOver;
+  Result := FrameViewSequenceList1.MouseIsOver;
 end;
 
 procedure TFrameMainSequence.ProcessKeyDown(Key: Word; Shift: TShiftState);
 begin
-  FrameViewTopList1.ProcessKeyDown(Key, Shift);
+  FrameViewSequenceList1.ProcessKeyDown(Key, Shift);
 end;
 
 procedure TFrameMainSequence.ProcessKeyUp(Key: Word; Shift: TShiftState);
 begin
-  FrameViewTopList1.ProcessKeyUp(Key, Shift);
+  FrameViewSequenceList1.ProcessKeyUp(Key, Shift);
 end;
 
 procedure TFrameMainSequence.AddDMXSequenceFromProjectorView(Sender: TObject;
@@ -157,7 +157,7 @@ procedure TFrameMainSequence.AddDMXSequenceFromProjectorView(Sender: TObject;
 begin
   with Sequences.AddSequence(aShortReadable,
               ConstructTSequencerInfoList(aCmd, aShortReadable, aDuration)) do
-     FrameViewTopList1.Add(ID);
+     FrameViewSequenceList1.Add(ID);
 
   Project.SetModified;
 end;

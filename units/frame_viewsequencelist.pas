@@ -1,4 +1,4 @@
-unit frame_viewtoplist;
+unit frame_viewsequencelist;
 
 {$mode objfpc}{$H+}
 
@@ -12,9 +12,9 @@ uses
 
 type
 
-  { TFrameViewTopList }
+  { TFrameViewSequenceList }
 
-  TFrameViewTopList = class(TFrame)
+  TFrameViewSequenceList = class(TFrame)
     Label1: TLabel;
     LB: TListBox;
     MenuItem1: TMenuItem;
@@ -109,9 +109,9 @@ uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
 
 {$R *.lfm}
 
-{ TFrameViewTopList }
+{ TFrameViewSequenceList }
 
-procedure TFrameViewTopList.LBDrawItem(Control: TWinControl; Index: Integer;
+procedure TFrameViewSequenceList.LBDrawItem(Control: TWinControl; Index: Integer;
   ARect: TRect; State: TOwnerDrawState);
 var seq: TSequence;
   i, y, w, xx, offset: integer;
@@ -201,7 +201,7 @@ begin
  end;
 end;
 
-procedure TFrameViewTopList.LBDragOver(Sender, Source: TObject; X, Y: Integer;
+procedure TFrameViewSequenceList.LBDragOver(Sender, Source: TObject; X, Y: Integer;
   State: TDragState; var Accept: Boolean);
 var i: integer;
 begin
@@ -217,7 +217,7 @@ begin
   end;
 end;
 
-procedure TFrameViewTopList.LBDragDrop(Sender, Source: TObject; X, Y: Integer);
+procedure TFrameViewSequenceList.LBDragDrop(Sender, Source: TObject; X, Y: Integer);
 var i, offset: integer;
 begin
   if FDraggedItemIndex = -1 then exit;
@@ -233,21 +233,21 @@ begin
   FDraggedItemIndex := -1;
 end;
 
-procedure TFrameViewTopList.LBKeyDown(Sender: TObject; var Key: Word;
+procedure TFrameViewSequenceList.LBKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key = VK_SPACE then
     Key := VK_UNKNOWN;
 end;
 
-procedure TFrameViewTopList.LBKeyUp(Sender: TObject; var Key: Word;
+procedure TFrameViewSequenceList.LBKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key = VK_SPACE then
     Key := VK_UNKNOWN;
 end;
 
-procedure TFrameViewTopList.LBMouseDown(Sender: TObject; Button: TMouseButton;
+procedure TFrameViewSequenceList.LBMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 var i: integer;
 begin
@@ -269,13 +269,13 @@ begin
     LB.ItemIndex := i;
 end;
 
-procedure TFrameViewTopList.LBMouseEnter(Sender: TObject);
+procedure TFrameViewSequenceList.LBMouseEnter(Sender: TObject);
 begin
  FMouseIsOver := TRUE;
  LB.Invalidate;
 end;
 
-procedure TFrameViewTopList.LBMouseLeave(Sender: TObject);
+procedure TFrameViewSequenceList.LBMouseLeave(Sender: TObject);
 begin
  if FDraggedItemIndex <> -1 then
    exit;
@@ -287,7 +287,7 @@ begin
  LB.Invalidate;
 end;
 
-procedure TFrameViewTopList.LBMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+procedure TFrameViewSequenceList.LBMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
 var i: integer;
 begin
   // dragging an item
@@ -310,7 +310,7 @@ begin
   end;
 end;
 
-procedure TFrameViewTopList.LBMouseUp(Sender: TObject; Button: TMouseButton;
+procedure TFrameViewSequenceList.LBMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 var i: integer;
 begin
@@ -330,19 +330,19 @@ begin
   FDraggedItemIndex := -1;
 end;
 
-procedure TFrameViewTopList.LBSelectionChange(Sender: TObject; User: boolean);
+procedure TFrameViewSequenceList.LBSelectionChange(Sender: TObject; User: boolean);
 begin
   if LB.ItemIndex = -1 then exit;
   SetErrorHint(LB.ItemIndex);
 end;
 
-procedure TFrameViewTopList.LBStartDrag(Sender: TObject; var DragObject: TDragObject);
+procedure TFrameViewSequenceList.LBStartDrag(Sender: TObject; var DragObject: TDragObject);
 begin
   FDraggedItemIndex := LB.ItemIndex;
   FYDragOriginInClientArea := LB.ScreenToClient(Mouse.CursorPos).y;
 end;
 
-procedure TFrameViewTopList.MIDeleteClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIDeleteClick(Sender: TObject);
 var t: TSequence;
 begin
   t := SelectedTop;
@@ -356,7 +356,7 @@ begin
   Project.SetModified;
 end;
 
-procedure TFrameViewTopList.MIDuplicateClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIDuplicateClick(Sender: TObject);
 var t: TSequence;
 begin
   t := SelectedTop;
@@ -370,7 +370,7 @@ begin
   Project.SetModified;
 end;
 
-procedure TFrameViewTopList.MIEditClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIEditClick(Sender: TObject);
 var seq: TSequence;
   flagError: Boolean;
 begin
@@ -400,7 +400,7 @@ begin
   FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
 end;
 
-procedure TFrameViewTopList.MIInsertSequenceClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIInsertSequenceClick(Sender: TObject);
 begin
  SoundManager.StopAllSound(False);
  SoundManager.DeleteEffectsOnAllSounds(False);
@@ -423,7 +423,7 @@ begin
  FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
 end;
 
-procedure TFrameViewTopList.MINewSequenceClick(Sender: TObject);
+procedure TFrameViewSequenceList.MINewSequenceClick(Sender: TObject);
 var seq: TSequence;
 begin
  // keep the capture ON
@@ -449,7 +449,7 @@ begin
   FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
 end;
 
-procedure TFrameViewTopList.MIResetSpeedClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIResetSpeedClick(Sender: TObject);
 var t: TSequence;
 begin
   t := GetSelectedTop;
@@ -458,7 +458,7 @@ begin
   t.TimeStretchFactor.Value := 1.0;
 end;
 
-procedure TFrameViewTopList.MIRenameClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIRenameClick(Sender: TObject);
 var t: TSequence;
   n: string;
 begin
@@ -475,7 +475,7 @@ begin
   end;
 end;
 
-procedure TFrameViewTopList.MIStopClick(Sender: TObject);
+procedure TFrameViewSequenceList.MIStopClick(Sender: TObject);
 var t: TSequence;
 begin
   t := GetSelectedTop;
@@ -485,12 +485,12 @@ begin
     then t.Stop;
 end;
 
-procedure TFrameViewTopList.PopupMenu1Close(Sender: TObject);
+procedure TFrameViewSequenceList.PopupMenu1Close(Sender: TObject);
 begin
   FPopupIsVisible := False;
 end;
 
-procedure TFrameViewTopList.PopupMenu1Popup(Sender: TObject);
+procedure TFrameViewSequenceList.PopupMenu1Popup(Sender: TObject);
 var seq: TSequence;
 begin
   FPopupIsVisible := True;
@@ -526,19 +526,19 @@ begin
   MILoadFromAnotherProject.Enabled := Project.IsReady and Project.Options.EditMode;
 end;
 
-procedure TFrameViewTopList.Timer1Timer(Sender: TObject);
+procedure TFrameViewSequenceList.Timer1Timer(Sender: TObject);
 begin
   Panel1.Visible := Sequences.Count = 0;
  if FDraggedItemIndex = -1 then
    LB.Invalidate;
 end;
 
-function TFrameViewTopList.GetSelCount: integer;
+function TFrameViewSequenceList.GetSelCount: integer;
 begin
   Result := LB.SelCount;
 end;
 
-function TFrameViewTopList.GetSelectedTop: TSequence;
+function TFrameViewSequenceList.GetSelectedTop: TSequence;
 begin
   if LB.SelCount <> 1 then
     Result := NIL
@@ -546,12 +546,12 @@ begin
     Result := Sequences.GetSequenceByIndex(LB.ItemIndex);
 end;
 
-procedure TFrameViewTopList.RemoveErrorHint;
+procedure TFrameViewSequenceList.RemoveErrorHint;
 begin
   LB.Hint := '';
 end;
 
-procedure TFrameViewTopList.SetErrorHint(aItemIndex: integer);
+procedure TFrameViewSequenceList.SetErrorHint(aItemIndex: integer);
 var i: integer;
   seq: TSequence;
 begin
@@ -564,12 +564,12 @@ begin
   if seq.HaveError then LB.Hint := seq.ErrorMessage;
 end;
 
-function TFrameViewTopList.GetItemHeight: integer;
+function TFrameViewSequenceList.GetItemHeight: integer;
 begin
   Result := LB.ItemHeight;
 end;
 
-procedure TFrameViewTopList.SetItemHeight(AValue: integer);
+procedure TFrameViewSequenceList.SetItemHeight(AValue: integer);
 begin
   LB.ItemHeight := EnsureRange(AValue, 20, 50);
   LB.Font.Height := LB.ItemHeight;
@@ -577,7 +577,7 @@ begin
   FInfoFontHeight := Round(LB.ItemHeight/2.5);
 end;
 
-constructor TFrameViewTopList.Create(TheOwner: TComponent);
+constructor TFrameViewSequenceList.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   ItemHeight := 25;
@@ -587,13 +587,13 @@ begin
   FErrorImage := SVGFileToBGRABitmap(GetAppIconImagesFolder+'SequenceErrorSymbol.svg', -1, ScaleDesignToForm(16));
 end;
 
-destructor TFrameViewTopList.Destroy;
+destructor TFrameViewSequenceList.Destroy;
 begin
   FreeAndNil(FErrorImage);
   inherited Destroy;
 end;
 
-procedure TFrameViewTopList.ProcessKeyDown(var Key: Word; Shift: TShiftState);
+procedure TFrameViewSequenceList.ProcessKeyDown(var Key: Word; Shift: TShiftState);
 var i, id: integer;
   pt: TSequence;
 begin
@@ -633,7 +633,7 @@ begin
   end;// case
 end;
 
-procedure TFrameViewTopList.ProcessKeyUp(var Key: Word; Shift: TShiftState);
+procedure TFrameViewSequenceList.ProcessKeyUp(var Key: Word; Shift: TShiftState);
 begin
   if not FMouseIsOver then
     exit;
@@ -642,12 +642,12 @@ begin
     FSpacePressed := FALSE;
 end;
 
-procedure TFrameViewTopList.EraseBackground(DC: HDC);
+procedure TFrameViewSequenceList.EraseBackground(DC: HDC);
 begin
 // do nothing
 end;
 
-procedure TFrameViewTopList.Fill;
+procedure TFrameViewSequenceList.Fill;
 var i: Integer;
 begin
   LB.LockSelectionChange;
@@ -662,19 +662,19 @@ begin
   UpdateStringAfterLanguageChange;
 end;
 
-procedure TFrameViewTopList.UpdateStringAfterLanguageChange;
+procedure TFrameViewSequenceList.UpdateStringAfterLanguageChange;
 begin
   MIDelete.Caption := SDelete;
   MIStop.Caption := SStop;
   LB.Invalidate;
 end;
 
-procedure TFrameViewTopList.Add(aID: cardinal);
+procedure TFrameViewSequenceList.Add(aID: cardinal);
 begin
   LB.ItemIndex := LB.Items.Add( aID.ToString );
 end;
 
-procedure TFrameViewTopList.Insert(aID: cardinal);
+procedure TFrameViewSequenceList.Insert(aID: cardinal);
 var i: integer;
 begin
   i := LB.ItemIndex;
@@ -682,7 +682,7 @@ begin
   LB.ItemIndex := i;
 end;
 
-procedure TFrameViewTopList.DeleteSelection;
+procedure TFrameViewSequenceList.DeleteSelection;
 var i: Integer;
   flag: boolean;
 begin
@@ -700,7 +700,7 @@ begin
     Project.SetModified;
 end;
 
-function TFrameViewTopList.MoveSelection(aOffset: integer): boolean;
+function TFrameViewSequenceList.MoveSelection(aOffset: integer): boolean;
 var i, index, newindex: integer;
 begin
   Result := FALSE;

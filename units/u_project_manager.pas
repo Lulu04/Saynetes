@@ -344,7 +344,7 @@ end;
 procedure TSaynetesProject.UpdateStringAfterLanguageChange;
 begin
   FormMain.FrameMainAudio1.UpdateStringAfterLanguageChange;
-  FormMain.FrameMainSequence1.FrameViewTopList1.UpdateStringAfterLanguageChange;
+  FormMain.FrameMainSequence1.FrameViewSequenceList1.UpdateStringAfterLanguageChange;
   FormMain.FrameMainSequence1.FrameIntermissionMusic1.UpdateStringAfterLanguageChange;
   FormMain.FrameViewProjector1.FillComboBoxUniverseToShow;
   FormMain.FrameViewProjector1.FrameViewDMXCursors1.UpdateStringAfterLanguageChange;
