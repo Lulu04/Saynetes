@@ -1,4 +1,4 @@
-unit form_defineswitchingchannel;
+unit form_definesvirtualchannel;
 
 {$mode ObjFPC}{$H+}
 
@@ -11,9 +11,9 @@ uses
 
 type
 
-  { TFormEditSwitchingChannel }
+  { TFormEditVirtualChannel }
 
-  TFormEditSwitchingChannel = class(TForm)
+  TFormEditVirtualChannel = class(TForm)
     BHelp: TSpeedButton;
     BOk: TSpeedButton;
     BNew: TSpeedButton;
@@ -57,9 +57,9 @@ uses u_resource_string, form_definenewchannel, u_utils, form_help;
 
 {$R *.lfm}
 
-{ TFormEditSwitchingChannel }
+{ TFormEditVirtualChannel }
 
-procedure TFormEditSwitchingChannel.FormCreate(Sender: TObject);
+procedure TFormEditVirtualChannel.FormCreate(Sender: TObject);
 begin
   // manual translations
   BOk.Caption := SOk;
@@ -68,12 +68,12 @@ begin
   Label1.Caption := SAddVirtualChannelToMode;
 end;
 
-procedure TFormEditSwitchingChannel.LBSelectionChange(Sender: TObject; User: boolean);
+procedure TFormEditVirtualChannel.LBSelectionChange(Sender: TObject; User: boolean);
 begin
   Label7.Visible := False;
 end;
 
-procedure TFormEditSwitchingChannel.BNewClick(Sender: TObject);
+procedure TFormEditVirtualChannel.BNewClick(Sender: TObject);
 var FormNew: TFormDefineNewChannel;
   chanName: TStringArray;
   i: integer;
@@ -106,12 +106,12 @@ begin
   TargetModeFrame.Modified := True;
 end;
 
-procedure TFormEditSwitchingChannel.BHelpClick(Sender: TObject);
+procedure TFormEditVirtualChannel.BHelpClick(Sender: TObject);
 begin
   _ShowHelp(HelpEditVirtualChannel, BHelp);
 end;
 
-procedure TFormEditSwitchingChannel.BOkClick(Sender: TObject);
+procedure TFormEditVirtualChannel.BOkClick(Sender: TObject);
 var i, c: integer;
 begin
   if (Trim(Edit1.Text) = '') or Label6.Visible then begin
@@ -141,7 +141,7 @@ begin
   ModalResult := mrOk;
 end;
 
-function TFormEditSwitchingChannel.GetPackedVirtualNameAndSubChannelNames: string;
+function TFormEditVirtualChannel.GetPackedVirtualNameAndSubChannelNames: string;
 var
   A: TStringArray;
   i: Integer;
@@ -154,7 +154,7 @@ begin
   end;
 end;
 
-function TFormEditSwitchingChannel.GetSubChannelNames: TStringArray;
+function TFormEditVirtualChannel.GetSubChannelNames: TStringArray;
 var i, j: integer;
 begin
   Result := NIL;
@@ -166,17 +166,17 @@ begin
     end;
 end;
 
-function TFormEditSwitchingChannel.GetVirtualName: string;
+function TFormEditVirtualChannel.GetVirtualName: string;
 begin
   Result := Trim(Edit1.Text);
 end;
 
-procedure TFormEditSwitchingChannel.SetModeName(AValue: string);
+procedure TFormEditVirtualChannel.SetModeName(AValue: string);
 begin
   Label5.Caption := AValue;
 end;
 
-procedure TFormEditSwitchingChannel.EditExistingChannel(p: PVirtualChannelForSwitch);
+procedure TFormEditVirtualChannel.EditExistingChannel(p: PVirtualChannelForSwitch);
 var i, j: integer;
 begin
   FEditingChannel := True;
@@ -189,7 +189,7 @@ begin
   end;
 end;
 
-procedure TFormEditSwitchingChannel.FillWith(p: PFixLibAvailableChannels);
+procedure TFormEditVirtualChannel.FillWith(p: PFixLibAvailableChannels);
 var i: Integer;
 begin
   LB.Clear;

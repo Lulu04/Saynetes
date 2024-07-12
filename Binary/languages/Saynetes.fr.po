@@ -466,21 +466,24 @@ msgctxt "tformeditsingleaction.label5.caption"
 msgid "Speed"
 msgstr "Vitesse"
 
-#: tformeditswitchingchannel.caption
-msgid "Switching channel"
-msgstr "Canal commuté"
+#: tformeditvirtualchannel.caption
+msgctxt "tformeditvirtualchannel.caption"
+msgid "Virtual channel"
+msgstr "Canal virtuel"
 
-#: tformeditswitchingchannel.label2.caption
+#: tformeditvirtualchannel.label2.caption
+msgctxt "tformeditvirtualchannel.label2.caption"
 msgid "Select the sub-channels"
 msgstr "Sélectionnez les sous-canaux"
 
-#: tformeditswitchingchannel.label3.caption
+#: tformeditvirtualchannel.label3.caption
+msgctxt "tformeditvirtualchannel.label3.caption"
 msgid "Virtual name:"
 msgstr "Nom virtuel:"
 
-#: tformeditswitchingchannel.label7.caption
-msgid "a switching channel must have at least 2 sub-channels"
-msgstr "un canal commuté doit avoir au moins 2 sous-canaux"
+#: tformeditvirtualchannel.label7.caption
+msgid "a virtual channel must have at least 2 sub-channels"
+msgstr "un canal virtuel doit comporter au moins 2 sous-canaux"
 
 #: tformeditweblink.label18.caption
 msgid "Type of link"
@@ -4822,6 +4825,7 @@ msgid "View"
 msgstr "Vue"
 
 #: u_resource_string.svirtualchannel
+msgctxt "u_resource_string.svirtualchannel"
 msgid "Virtual channel"
 msgstr "Canal virtuel"
 

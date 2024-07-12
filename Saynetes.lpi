@@ -973,9 +973,9 @@
         <ResourceBaseClass Value="Frame"/>
       </Unit88>
       <Unit89>
-        <Filename Value="units\form_defineswitchingchannel.pas"/>
+        <Filename Value="units\form_definesvirtualchannel.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="FormEditSwitchingChannel"/>
+        <ComponentName Value="FormEditVirtualChannel"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit89>
