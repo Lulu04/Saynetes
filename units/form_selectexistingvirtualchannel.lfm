@@ -1,4 +1,4 @@
-object FormSelectExistingSwitchingChannel: TFormSelectExistingSwitchingChannel
+object FormSelectExistingVirtualChannel: TFormSelectExistingVirtualChannel
   Left = 456
   Height = 240
   Top = 221
@@ -53,8 +53,8 @@ object FormSelectExistingSwitchingChannel: TFormSelectExistingSwitchingChannel
       Left = 8
       Height = 20
       Top = 36
-      Width = 201
-      Caption = 'Select existing virtual channels'
+      Width = 215
+      Caption = 'Select an existing virtual channel'
       Font.Color = 15395562
       Font.Height = 20
       ParentColor = False

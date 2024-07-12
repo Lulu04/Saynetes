@@ -29,7 +29,7 @@ u_apputils, frame_viewfixtureimage, form_changefixtureimage,
 u_edit_singleaction, frame_viewfixtureoverview, frame_editmode,
 form_selectexistingchannel, form_definenewchannel, frame_cb_channeltype,
 form_editweblink, frame_viewmodeitem, form_definesvirtualchannel,
-form_selectexistingswitchingchannel, form_defineswitcheritem,
+form_selectexistingvirtualchannel, form_defineswitcheritem,
 frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
 form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
 form_newmanufacturer, BGRABitmapTypes, frame_trackbar_customized, form_help;

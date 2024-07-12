@@ -1,4 +1,4 @@
-unit form_selectexistingswitchingchannel;
+unit form_selectexistingvirtualchannel;
 
 {$mode ObjFPC}{$H+}
 
@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TFormSelectExistingSwitchingChannel }
+  { TFormSelectExistingVirtualChannel }
 
-  TFormSelectExistingSwitchingChannel = class(TForm)
+  TFormSelectExistingVirtualChannel = class(TForm)
     BAddExisting: TSpeedButton;
     BCreateNew: TSpeedButton;
     BHelp: TSpeedButton;
@@ -44,16 +44,16 @@ uses LCLType, u_resource_string, u_list_dmxuniverse, u_helper, form_help;
 
 {$R *.lfm}
 
-{ TFormSelectExistingSwitchingChannel }
+{ TFormSelectExistingVirtualChannel }
 
-procedure TFormSelectExistingSwitchingChannel.FormCreate(Sender: TObject);
+procedure TFormSelectExistingVirtualChannel.FormCreate(Sender: TObject);
 begin
   // manual translation
   BCreateNew.Caption := SCreateNew;
   Label1.Caption := SAddVirtualChannelToMode;
 end;
 
-procedure TFormSelectExistingSwitchingChannel.BAddExistingClick(Sender: TObject);
+procedure TFormSelectExistingVirtualChannel.BAddExistingClick(Sender: TObject);
 var i, j, k: integer;
 begin
   if Sender = BAddExisting then begin
@@ -75,27 +75,27 @@ begin
   end;
 end;
 
-procedure TFormSelectExistingSwitchingChannel.BHelpClick(Sender: TObject);
+procedure TFormSelectExistingVirtualChannel.BHelpClick(Sender: TObject);
 begin
   _ShowHelp(HelpSelectExistingSwitchingChannel, BHelp);
 end;
 
-procedure TFormSelectExistingSwitchingChannel.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+procedure TFormSelectExistingVirtualChannel.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   if Key = VK_ESCAPE then ModalResult := mrCancel;
 end;
 
-procedure TFormSelectExistingSwitchingChannel.LBSelectionChange(Sender: TObject; User: boolean);
+procedure TFormSelectExistingVirtualChannel.LBSelectionChange(Sender: TObject; User: boolean);
 begin
   BAddExisting.Enabled := LB.ItemIndex <> -1;
 end;
 
-procedure TFormSelectExistingSwitchingChannel.SetModeName(AValue: string);
+procedure TFormSelectExistingVirtualChannel.SetModeName(AValue: string);
 begin
   Label5.Caption := '"'+AValue+'"';
 end;
 
-procedure TFormSelectExistingSwitchingChannel.FillWith(const aVirtualNamesAlreadyUsedByMode: TStringArray);
+procedure TFormSelectExistingVirtualChannel.FillWith(const aVirtualNamesAlreadyUsedByMode: TStringArray);
 var i, j: integer;
   flagAlreadyUsed: boolean;
 begin

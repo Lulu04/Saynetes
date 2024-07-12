@@ -924,13 +924,14 @@ msgstr ""
 msgid "Select an existing channel"
 msgstr ""
 
-#: tformselectexistingswitchingchannel.baddexisting.caption
-msgctxt "tformselectexistingswitchingchannel.baddexisting.caption"
+#: tformselectexistingvirtualchannel.baddexisting.caption
+msgctxt "tformselectexistingvirtualchannel.baddexisting.caption"
 msgid "Add existing"
 msgstr ""
 
-#: tformselectexistingswitchingchannel.label2.caption
-msgid "Select existing virtual channels"
+#: tformselectexistingvirtualchannel.label2.caption
+msgctxt "tformselectexistingvirtualchannel.label2.caption"
+msgid "Select an existing virtual channel"
 msgstr ""
 
 #: tformsequenceedition.bkeep0visible.hint

@@ -980,9 +980,9 @@
         <ResourceBaseClass Value="Form"/>
       </Unit89>
       <Unit90>
-        <Filename Value="units\form_selectexistingswitchingchannel.pas"/>
+        <Filename Value="units\form_selectexistingvirtualchannel.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="FormSelectExistingSwitchingChannel"/>
+        <ComponentName Value="FormSelectExistingVirtualChannel"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit90>
