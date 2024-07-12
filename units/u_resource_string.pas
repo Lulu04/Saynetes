@@ -617,6 +617,7 @@ resourcestring
                     'EDIT the dmx fixtures by clicking on the button at the top right.'+LineEnding+
                     'SELECT a fixture with left click.'+LineEnding+
                     'SELECT SEVERAL FIXTURES at once by dragging a rectangle around them.'+LineEnding+
+                    'ADD a DESCRIPTION to your fixtures: activate the button ''Show/Hide the fixture information panel'' and select a fixture. In the panel that appears, enter the description.'+LineEnding+
                     'Right click on a fixture to show pop-up menu.'+LineEnding+
                     '    - Create rgb group: groups created with this, can be quickly re-selected from the group tool window.'+LineEnding+
                     '    - Lock: the fixture channels can not be changed.'+LineEnding+
