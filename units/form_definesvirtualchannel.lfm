@@ -1,10 +1,10 @@
-object FormEditSwitchingChannel: TFormEditSwitchingChannel
+object FormEditVirtualChannel: TFormEditVirtualChannel
   Left = 600
   Height = 343
   Top = 175
   Width = 579
   BorderIcons = [biSystemMenu]
-  Caption = 'Switching channel'
+  Caption = 'Virtual channel'
   ClientHeight = 343
   ClientWidth = 579
   OnCreate = FormCreate
@@ -190,10 +190,10 @@ object FormEditSwitchingChannel: TFormEditSwitchingChannel
       Left = 12
       Height = 15
       Top = 291
-      Width = 286
+      Width = 268
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 5
-      Caption = 'a switching channel must have at least 2 sub-channels'
+      Caption = 'a virtual channel must have at least 2 sub-channels'
       Font.Color = 6974207
       ParentColor = False
       ParentFont = False

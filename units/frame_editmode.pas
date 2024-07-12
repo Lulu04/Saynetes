@@ -97,7 +97,7 @@ type
 implementation
 uses Math, form_selectexistingchannel, form_definenewchannel, LCLIntf,
   u_editfixturewizard, u_resource_string, u_helper, u_common,
-  u_datamodule, form_defineswitchingchannel,
+  u_datamodule, form_definesvirtualchannel,
   form_selectexistingswitchingchannel, form_edit_repetitivechannel, Graphics;
 
 {$R *.lfm}
@@ -116,7 +116,7 @@ end;
 
 procedure TFrameEditMode.BAddSwitchingChannelClick(Sender: TObject);
 var FormExisting: TFormSelectExistingSwitchingChannel;
-  FormNew: TFormEditSwitchingChannel;
+  FormNew: TFormEditVirtualChannel;
   chanName, A: TStringArray;
   i: SizeInt;
 begin
@@ -141,7 +141,7 @@ begin
   end;
 
   if chanName = NIL then begin
-    FormNew := TFormEditSwitchingChannel.Create(NIL);
+    FormNew := TFormEditVirtualChannel.Create(NIL);
     FormNew.ModeName := Edit1.Text;
     FormNew.FillWith(FExistingChannels);
     FormNew.TargetModeFrame := Self;
@@ -255,7 +255,7 @@ end;
 
 procedure TFrameEditMode.DoEditChannelFrame(aIndex: integer);
 var FormNew: TFormDefineNewChannel;
-  FormEditSwitching: TFormEditSwitchingChannel;
+  FormEditSwitching: TFormEditVirtualChannel;
   i: integer;
   oldName, packedName: string;
 begin
@@ -266,7 +266,7 @@ begin
     i := FVirtualChannelInMode.IndexOfVirtualName(oldName);
     if i = -1 then exit;
 
-    FormEditSwitching := TFormEditSwitchingChannel.Create(NIL);
+    FormEditSwitching := TFormEditVirtualChannel.Create(NIL);
     try
       FormEditSwitching.FillWith(FExistingChannels);
       FormEditSwitching.TargetModeFrame := Self;
