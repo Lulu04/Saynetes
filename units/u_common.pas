@@ -1,6 +1,7 @@
 unit u_common;
 
 {$mode objfpc}{$H+}
+{$MODESWITCH ADVANCEDRECORDS}
 
 interface
 
@@ -73,9 +74,12 @@ type
     IDFix: cardinal;
   end;
 
+  { TDevicePath }
+
   TDevicePath = record
     DeviceIndex,
     PortIndex: integer;
+    class operator =(a,b: TDevicePath): boolean;
   end;
   TArrayOfDevicePath = array of TDevicePath;
 
@@ -542,6 +546,13 @@ type
 
 implementation
 
+
+{ TDevicePath }
+
+class operator TDevicePath.=(a, b: TDevicePath): boolean;
+begin
+  Result := (a.DeviceIndex = b.DeviceIndex) and (a.PortIndex = b.PortIndex);
+end;
 
 end.
 

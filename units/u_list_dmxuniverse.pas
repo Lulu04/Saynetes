@@ -373,6 +373,7 @@ type
      function Fixture_WhichContainsThisAdress(aAdress: TDMXAdress): TDMXFixture;
 
      function  Fixture_GetByAdress(aAdress: TDMXAdress): TDmxFixture;
+     function GetFixtureThatContainAdress(aAdress: TDMXAdress): TDmxFixture;
      procedure Fixture_DeleteByIndex(Index: integer; ShiftOtherAdress: boolean=TRUE);
      procedure Fixture_DeleteByID(aID: cardinal; ShiftOtherAdress: boolean=TRUE);
 
@@ -431,6 +432,8 @@ TUniverseManager = class
      destructor Destroy; override;
      procedure StartThread;
      procedure StopThread;
+
+     function RetrieveUniverseConnectedTo(const aDevicePath: TDevicePath): TDMXUniverse;
 
      function RetrieveFixture(aIDUniverse, aIDFixture: cardinal;
                               out uni: TDMXUniverse;
@@ -1181,7 +1184,8 @@ end;
 
 function TDMXFixture.GetChannel(index: integer): TDMXChannel;
 begin
-  Result := FChannels.Items[index];
+ if (index >= 0) and (index < FChannels.Count) then Result := FChannels.Items[index]
+   else Result := NIL;
 end;
 
 procedure TDMXFixture.SetSelected(AValue: boolean);
@@ -1310,7 +1314,7 @@ end;
 
 function TDMXFixture.GetChannelByIndex(aChanIndex: integer): TDMXChannel;
 begin
-  if (aChanIndex < 0) or (aChanIndex > self.ChannelsCount-1) then
+  if (aChanIndex < 0) or (aChanIndex > ChannelsCount-1) then
     Result := NIL
   else
     Result := Channels[aChanIndex];
@@ -1619,6 +1623,17 @@ begin
        exit;
     end;
 
+  Result := NIL;
+end;
+
+function TDmxUniverse.GetFixtureThatContainAdress(aAdress: TDMXAdress): TDmxFixture;
+var fix: TDMXFixture;
+begin
+  for fix in FFixtures do
+    if (aAdress >= fix.Adress) and (aAdress <= fix.LastAdress) then begin
+      Result := fix;
+      exit;
+    end;
   Result := NIL;
 end;
 
@@ -2125,6 +2140,18 @@ begin
     FThreadAction.Free;
     FThreadAction := NIL;
   end;
+end;
+
+function TUniverseManager.RetrieveUniverseConnectedTo(const aDevicePath: TDevicePath): TDMXUniverse;
+var uni: TDMXUniverse;
+begin
+  for uni in FUniverses do begin
+    if uni.DevicePath = aDevicePath then begin
+      Result := uni;
+      exit;
+    end;
+  end;
+  Result := NIL;
 end;
 
 constructor TUniverseManager.Create;
