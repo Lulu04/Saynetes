@@ -82,7 +82,7 @@ var
 
 implementation
 uses LCLType, u_project_manager, u_resource_string, u_userdialogs, form_help,
-  u_program_options, u_dmx_util;
+  u_program_options, u_helper, u_dmx_util;
 
 {$R *.lfm}
 
@@ -184,9 +184,34 @@ end;
 procedure TFormDeviceManager.SG3GetCellHint(Sender: TObject; ACol,
   ARow: Integer; var HintText: String);
 var adr: integer;
+    s, s1: string;
+    uni: TDMXUniverse;
+    fix: TDMXFixture;
+    chan: TDMXChannel;
+    D: TArrayOfDevicePath;
 begin
   adr := ARow*32+ACol+1;
-  HintText:=SAdress+' '+adr.ToString;
+  s := SAdress + ' ' + adr.ToString;
+
+  if ComboBox1.ItemIndex <> -1 then begin
+    D := DeviceManager.GetDevicesPath(FALSE);
+    uni := UniverseManager.RetrieveUniverseConnectedTo(D[ComboBox1.ItemIndex]);
+    if uni <> NIL then begin
+      fix := uni.GetFixtureThatContainAdress(adr);
+      if fix <> NIL then begin
+        chan := fix.GetChannelByIndex(adr-fix.Adress);
+        if chan <> NIL then begin
+          s1 := '';
+          s1.Concat(fix.Name, ' - ');
+          s1.Concat(fix.Description, ' - ');
+          s1.Concat(chan.Name, ' - ');
+          s := s + LineEnding + s1;
+        end;
+      end;
+    end;
+  end;
+
+  HintText:= s;
 end;
 
 procedure TFormDeviceManager.SpeedButton1Click(Sender: TObject);
@@ -465,6 +490,7 @@ begin
   end;
   FillUniverseGrid;
   FillDevicegrid;
+  FillCBDeviceList;
 end;
 
 procedure TFormDeviceManager.CB1Change(Sender: TObject);

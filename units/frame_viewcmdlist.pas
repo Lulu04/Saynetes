@@ -186,10 +186,10 @@ var txt, txt2: string;
    end;
 
    function FormatDmxTrack(StrIDUni, StrIDFix, StrAdr: string): string;
+   const SEP = ' - ';
    var uni: TDMXUniverse;
     fix: TDMXFixture;
     chan: TDMXChannel;
-    f: boolean;
    begin
     if not UniverseManager.RetrieveChannel(StrIDUni.ToInteger, StrIDFix.ToInteger, StrAdr.ToInteger, uni, fix, chan) then
     begin
@@ -197,34 +197,21 @@ var txt, txt2: string;
                 SAdress+'['+StrAdr+'] '+SNotFound;
       exit;
     end;
-    f := FALSE;
     Result := '';
     if Project.Options.CmdListViewDMXAdress then
-    begin
-      Result := uni.ShortName+':'+StrAdr;  // universe short name + dmx adress
-      f := TRUE;
-    end;
+      Result.Concat(uni.ShortName+':'+StrAdr, SEP);  // universe short name + dmx adress
+
     if Project.Options.CmdListViewDMXFixName then
-    begin
-      if f then
-        Result := Result+' - ';
-      Result := Result+fix.Name; // fixture name
-      f := TRUE;
-    end;
+      Result.Concat(fix.Name, SEP); // fixture name
+
     if Project.Options.CmdListViewDMXFixDescription then
-    begin
-      if f then
-        Result := Result+' - ';
-      Result := Result+fix.Description;  // fixture description
-      f := TRUE;
-    end;
+      if Trim(fix.Description) <> '' then Result.Concat(fix.Description, SEP)  // fixture description
+        else if not Project.Options.CmdListViewDMXFixName then Result.Concat(fix.Name, SEP);
+
     if Project.Options.CmdListViewDMXChannelName then
-    begin
-      if f then
-        Result := Result+' - ';
-      Result := Result+chan.Name; // nom du canal
-    end;
-    if Result = '' then Result := fix.Name;
+      Result.Concat(chan.Name, SEP); // channel name
+
+    if Trim(Result) = '' then Result := fix.Name;
    end;
 
    function RenderTitle(const aTitle, aParamTitle: string; aColor: TColor): integer;
