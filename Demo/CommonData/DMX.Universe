@@ -3,9 +3,9 @@ CurrentUniverseID|1|CurrentFixtureID|33|Count|1
 [UNIVERSE 0]
 ID|1|Name|Univers 1|Color|588518655|First|1|Last|512|Device|FAKE Device Multi port|Serial|5555|Port|0|Optimized|yes|FixtureCount|17
 FixtureLocation|SubFolder~american-dj~Filename~encore-profile-1000-ww.dmx~Mode~3-channel|ID|11|Adress|1|Description|Profile|ScreenPosX|-25.817|ScreenPosY|548.341|Angle|0.000|Zoom|0.695|FlipH|false|FlipV|false
-FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|12|Adress|4|Description||ScreenPosX|-291.869|ScreenPosY|-194.661|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
-FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|13|Adress|11|Description||ScreenPosX|-74.882|ScreenPosY|-194.587|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
-FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|14|Adress|18|Description||ScreenPosX|141.399|ScreenPosY|-191.735|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|12|Adress|4|Description|BG Left|ScreenPosX|-291.869|ScreenPosY|-194.661|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|13|Adress|11|Description|BG Center|ScreenPosX|-74.882|ScreenPosY|-194.587|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
+FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|14|Adress|18|Description|BG Right|ScreenPosX|141.399|ScreenPosY|-191.735|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
 FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|16|Adress|25|Description|Left 1|ScreenPosX|-537.885|ScreenPosY|-215.107|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
 FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|17|Adress|31|Description|Left 2|ScreenPosX|-597.934|ScreenPosY|-132.280|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
 FixtureLocation|SubFolder~cameo~Filename~outdoor-par-tri-12.dmx~Mode~6-channel|ID|18|Adress|37|Description|Left 3|ScreenPosX|-529.602|ScreenPosY|-68.090|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|false
@@ -18,4 +18,4 @@ FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|28|A
 FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|29|Adress|72|Description|Right Face 2|ScreenPosX|404.915|ScreenPosY|288.918|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|true
 FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|30|Adress|77|Description|Left Face 2|ScreenPosX|-497.323|ScreenPosY|280.602|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|true
 FixtureLocation|SubFolder~starway~Filename~tourkolor-ip67.dmx~Mode~Ar2.d|ID|31|Adress|82|Description|Left Face 1|ScreenPosX|-598.857|ScreenPosY|198.871|Angle|0.000|Zoom|1.000|FlipH|true|FlipV|true
-FixtureLocation|SubFolder~nicols~Filename~dp-405.dmx~Mode~4-channel|ID|33|Adress|87|Description||ScreenPosX|-634.965|ScreenPosY|651.211|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false|Name1|HALL (2x halogen)
+FixtureLocation|SubFolder~nicols~Filename~dp-405.dmx~Mode~4-channel|ID|33|Adress|87|Description||ScreenPosX|-634.965|ScreenPosY|648.876|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false|Name1|HALL (2x halogen)
