@@ -608,7 +608,7 @@ resourcestring
 
   HelpSequenceList='This is the list of the sequences.'+LineEnding+
                    'SELECT a sequence with left click.'+LineEnding+
-                   'SPACE to start the selected sequence: mouse must be over the sequence list.'+LineEnding+
+                   'SPACE to start it: mouse must be over the sequence list.'+LineEnding+
                    'Right click to show pop-up menu.'+LineEnding+
                    'You can drag a sequence up or down to change its position in the list.';
 
