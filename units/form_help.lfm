@@ -1,12 +1,12 @@
 object FormHelp: TFormHelp
-  Left = 561
+  Left = 356
   Height = 197
-  Top = 242
-  Width = 455
+  Top = 257
+  Width = 599
   BorderIcons = [biSystemMenu]
   Caption = 'sHelp'
   ClientHeight = 197
-  ClientWidth = 455
+  ClientWidth = 599
   Color = 3947580
   FormStyle = fsStayOnTop
   KeyPreview = True
@@ -15,12 +15,12 @@ object FormHelp: TFormHelp
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
     Height = 197
     Top = 0
-    Width = 455
+    Width = 599
     Align = alClient
     Brush.Style = bsClear
     Pen.Color = 247036
@@ -35,7 +35,7 @@ object FormHelp: TFormHelp
     Left = 2
     Height = 193
     Top = 2
-    Width = 451
+    Width = 595
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 2
     BorderSpacing.Top = 2
