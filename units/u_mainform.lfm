@@ -375,11 +375,6 @@ object FormMain: TFormMain
         ShortCut = 16467
         OnClick = MIProjectSaveClick
       end
-      object MIProjectSaveAs: TMenuItem
-        Caption = 'Save as...'
-        ImageIndex = 13
-        OnClick = MIProjectSaveAsClick
-      end
       object MIProjectClose: TMenuItem
         Caption = 'Close project'
         ImageIndex = 2

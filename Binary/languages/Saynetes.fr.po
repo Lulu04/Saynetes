@@ -696,10 +696,6 @@ msgctxt "tformmain.miprojectsave.caption"
 msgid "Save project"
 msgstr "Enregistrer le projet"
 
-#: tformmain.miprojectsaveas.caption
-msgid "Save as..."
-msgstr "Enregistrer sous..."
-
 #: tformmain.mitooldevicemanager.caption
 msgid "Device manager"
 msgstr "Gestionnaire d'interface"
@@ -5126,3 +5122,4 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
+
