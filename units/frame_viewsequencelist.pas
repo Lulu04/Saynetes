@@ -235,22 +235,14 @@ begin
   FDraggedItemIndex := -1;
 end;
 
-procedure TFrameViewSequenceList.LBKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TFrameViewSequenceList.LBKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
-  if Key = VK_SPACE then
-    Key := VK_UNKNOWN;
-  if Key = VK_UP then Key := VK_UNKNOWN;
-  if Key = VK_DOWN then Key := VK_UNKNOWN;
+  if Key in [VK_SPACE, VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT] then Key := VK_UNKNOWN;
 end;
 
-procedure TFrameViewSequenceList.LBKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TFrameViewSequenceList.LBKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
-  if Key = VK_SPACE then
-    Key := VK_UNKNOWN;
-  if Key = VK_UP then Key := VK_UNKNOWN;
-  if Key = VK_DOWN then Key := VK_UNKNOWN;
+  if Key in [VK_SPACE, VK_UP, VK_DOWN, VK_RIGHT, VK_LEFT] then Key := VK_UNKNOWN;
 end;
 
 procedure TFrameViewSequenceList.LBMouseDown(Sender: TObject; Button: TMouseButton;
