@@ -557,6 +557,18 @@ msgstr ""
 msgid "Remove one switch"
 msgstr ""
 
+#: tformimportsequence.caption
+msgid "Import sequences from another project"
+msgstr ""
+
+#: tformimportsequence.label1.caption
+msgid "Select a project"
+msgstr ""
+
+#: tformimportsequence.label3.caption
+msgid "Checks the sequences you want to import"
+msgstr ""
+
 #: tforminputdmxrange.label1.caption
 msgctxt "tforminputdmxrange.label1.caption"
 msgid "Begin"
@@ -1977,7 +1989,7 @@ msgstr ""
 
 #: tframeviewsequencelist.miloadfromanotherproject.caption
 msgctxt "tframeviewsequencelist.miloadfromanotherproject.caption"
-msgid "Load sequences from another project..."
+msgid "Import sequences from another project..."
 msgstr ""
 
 #: tframeviewsequencelist.mimerge.caption
@@ -2207,6 +2219,17 @@ msgid ""
 "Here you can check for errors in the fixture definition.\n"
 "Saynètes will show messages to help you find them.\n"
 "Click on Save button to save the definition in the library and close the window."
+msgstr ""
+
+#: u_resource_string.helpimportsequence
+msgid ""
+"This tool allow you to import sequences from another project.\n"
+"- Click the button at top left to open the project from which you are going to import.\n"
+"- Checks the sequences you want to import.\n"
+"- Click Import button.\n"
+"WARNING: Because Saynètes reference sequences, sounds and fixtures by ID number and not by their names, import sequence that have action with such reference (start a sequence, play a sound,...) may not work as expected.\n"
+"REMEDY: When you import a sequence from another project, check it.\n"
+"NOTE: Projects located in a same folder, share their dmx configuration. So, there is no problem importing a sequence containing only dmx actions from such a project."
 msgstr ""
 
 #: u_resource_string.helpintermissioncreateplaylist
@@ -2578,6 +2601,10 @@ msgstr ""
 #: u_resource_string.sallfiles
 msgctxt "u_resource_string.sallfiles"
 msgid "All files"
+msgstr ""
+
+#: u_resource_string.sall_
+msgid "All"
 msgstr ""
 
 #: u_resource_string.samplitude
@@ -3532,6 +3559,10 @@ msgstr ""
 
 #: u_resource_string.simage
 msgid "Image"
+msgstr ""
+
+#: u_resource_string.simport
+msgid "Import"
 msgstr ""
 
 #: u_resource_string.sin

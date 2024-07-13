@@ -600,6 +600,18 @@ msgstr "Ajouter un interrupteur"
 msgid "Remove one switch"
 msgstr "Enlever un interrupteur"
 
+#: tformimportsequence.caption
+msgid "Import sequences from another project"
+msgstr "Importer des séquences d'un autre projet"
+
+#: tformimportsequence.label1.caption
+msgid "Select a project"
+msgstr "Sélectionnez un projet"
+
+#: tformimportsequence.label3.caption
+msgid "Checks the sequences you want to import"
+msgstr "Cochez les séquences que vous voulez importer"
+
 #: tforminputdmxrange.label1.caption
 msgctxt "tforminputdmxrange.label1.caption"
 msgid "Begin"
@@ -2066,7 +2078,7 @@ msgstr "Insérer une séquence..."
 
 #: tframeviewsequencelist.miloadfromanotherproject.caption
 msgctxt "tframeviewsequencelist.miloadfromanotherproject.caption"
-msgid "Load sequences from another project..."
+msgid "Import sequences from another project..."
 msgstr "Importer des séquences d'un autre projet..."
 
 #: tframeviewsequencelist.mimerge.caption
@@ -2401,6 +2413,24 @@ msgstr ""
 "Vous pouvez contrôler ici s'il y a des erreurs dans la définition de l'appareil.\n"
 "Saynètes affichera des messages pour vous aider à les trouver.\n"
 "Cliquez sur le bouton Sauver pour sauvegarder la définition dans la librairie et fermer la fenêtre."
+
+#: u_resource_string.helpimportsequence
+msgid ""
+"This tool allow you to import sequences from another project.\n"
+"- Click the button at top left to open the project from which you are going to import.\n"
+"- Checks the sequences you want to import.\n"
+"- Click Import button.\n"
+"WARNING: Because Saynètes reference sequences, sounds and fixtures by ID number and not by their names, import sequence that have action with such reference (start a sequence, play a sound,...) may not work as expected.\n"
+"REMEDY: When you import a sequence from another project, check it.\n"
+"NOTE: Projects located in a same folder, share their dmx configuration. So, there is no problem importing a sequence containing only dmx actions from such a project."
+msgstr ""
+"Cet outil vous permet d'importer des séquences à partir d'un autre projet.\n"
+"- Cliquez sur le bouton en haut à gauche pour ouvrir le projet à partir duquel vous voulez importer.\n"
+"- Cochez les séquences à importer.\n"
+"- Cliquez sur le bouton Importer.\n"
+"ATTENTION:  Parce que Saynètes référence les séquences, les sons et les appareil DMX par un nombre (identificateur) et pas par leur noms, importer une séquence comportant des actions contenant de telles références (Démarrer/Stopper une séquence, Lecture d'un son,...) peut ne pas fonctionner comme prévu.\n"
+"REMÈDE: Lorsque vous importez une séquence, contrôlez son contenu.\n"
+"NOTE: Des projets situés dans un même dossier partagent leur configuration DMX. Il n'y a donc aucun problème pour importer une séquence contenant uniquement des actions dmx à partir d'un tel projet."
 
 #: u_resource_string.helpintermissioncreateplaylist
 msgid ""
@@ -2953,6 +2983,10 @@ msgstr "tous"
 msgctxt "u_resource_string.sallfiles"
 msgid "All files"
 msgstr "Tous les fichiers"
+
+#: u_resource_string.sall_
+msgid "All"
+msgstr "Tous"
 
 #: u_resource_string.samplitude
 msgctxt "u_resource_string.samplitude"
@@ -3915,6 +3949,10 @@ msgstr "Icone du programme par"
 #: u_resource_string.simage
 msgid "Image"
 msgstr "Image"
+
+#: u_resource_string.simport
+msgid "Import"
+msgstr "Importer"
 
 #: u_resource_string.sin
 msgctxt "u_resource_string.sin"

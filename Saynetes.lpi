@@ -22,7 +22,7 @@
     <i18n>
       <EnableI18N Value="True"/>
       <OutDir Value="Binary\languages"/>
-      <ExcludedOriginals Count="126">
+      <ExcludedOriginals Count="127">
         <Item1 Value="CAPTURE"/>
         <Item2 Value="DRY"/>
         <Item3 Value="Dry/Wet"/>
@@ -80,75 +80,76 @@
         <Item55 Value="sGain"/>
         <Item56 Value="sGroup"/>
         <Item57 Value="sHelp"/>
-        <Item58 Value="sLens"/>
-        <Item59 Value="sLevel max"/>
-        <Item60 Value="sLevel min"/>
-        <Item61 Value="sLevel"/>
-        <Item62 Value="sLevels"/>
-        <Item63 Value="sLoop"/>
-        <Item64 Value="sLumens"/>
-        <Item65 Value="sManufacturer"/>
-        <Item66 Value="sMax"/>
-        <Item67 Value="sMax degree"/>
-        <Item68 Value="sMin"/>
-        <Item69 Value="sMin degree"/>
-        <Item70 Value="SModify"/>
-        <Item71 Value="sMultipleChannels"/>
-        <Item72 Value="SNameAlreadyUsed"/>
-        <Item73 Value="sName"/>
-        <Item74 Value="sNext"/>
-        <Item75 Value="sNo"/>
-        <Item76 Value="sOk"/>
-        <Item77 Value="sOFF"/>
-        <Item78 Value="sON"/>
-        <Item79 Value="sPan"/>
-        <Item80 Value="sPaste"/>
-        <Item81 Value="sPitch"/>
-        <Item82 Value="sPlaylist"/>
-        <Item83 Value="sPower"/>
-        <Item84 Value="sPreset"/>
-        <Item85 Value="sPreview"/>
-        <Item86 Value="sPrevious"/>
-        <Item87 Value="sRandom intensity between"/>
-        <Item88 Value="sRandom duration between"/>
-        <Item89 Value="sRandom value between"/>
-        <Item90 Value="sRange"/>
-        <Item91 Value="sRangesGenerator"/>
-        <Item92 Value="sRename"/>
-        <Item93 Value="sReset"/>
-        <Item94 Value="sRGB"/>
-        <Item95 Value="sSave"/>
-        <Item96 Value="sSec"/>
-        <Item97 Value="second(s)"/>
-        <Item98 Value="sSelection"/>
-        <Item99 Value="sSequence"/>
-        <Item100 Value="sSimple"/>
-        <Item101 Value="sSoften"/>
-        <Item102 Value="sSoften on"/>
-        <Item103 Value="sStop"/>
-        <Item104 Value="sSwitchers"/>
-        <Item105 Value="sto"/>
-        <Item106 Value="sUniverse"/>
-        <Item107 Value="sUpdate"/>
-        <Item108 Value="sVelocity"/>
-        <Item109 Value="sView"/>
-        <Item110 Value="sVolume"/>
-        <Item111 Value="sWait time"/>
-        <Item112 Value="sWatt"/>
-        <Item113 Value="sWave"/>
-        <Item114 Value="sWebLinks"/>
-        <Item115 Value="sWeight"/>
-        <Item116 Value="sYes"/>
-        <Item117 Value="_"/>
-        <Item118 Value="#"/>
-        <Item119 Value="1/1"/>
-        <Item120 Value="1s"/>
-        <Item121 Value="5s"/>
-        <Item122 Value="10s"/>
-        <Item123 Value="15s"/>
-        <Item124 Value="Velleman K8062"/>
-        <Item125 Value="Enttec USB DMX PRO"/>
-        <Item126 Value="Enttec OPEN USB DMX"/>
+        <Item58 Value="sImport"/>
+        <Item59 Value="sLens"/>
+        <Item60 Value="sLevel max"/>
+        <Item61 Value="sLevel min"/>
+        <Item62 Value="sLevel"/>
+        <Item63 Value="sLevels"/>
+        <Item64 Value="sLoop"/>
+        <Item65 Value="sLumens"/>
+        <Item66 Value="sManufacturer"/>
+        <Item67 Value="sMax"/>
+        <Item68 Value="sMax degree"/>
+        <Item69 Value="sMin"/>
+        <Item70 Value="sMin degree"/>
+        <Item71 Value="SModify"/>
+        <Item72 Value="sMultipleChannels"/>
+        <Item73 Value="SNameAlreadyUsed"/>
+        <Item74 Value="sName"/>
+        <Item75 Value="sNext"/>
+        <Item76 Value="sNo"/>
+        <Item77 Value="sOk"/>
+        <Item78 Value="sOFF"/>
+        <Item79 Value="sON"/>
+        <Item80 Value="sPan"/>
+        <Item81 Value="sPaste"/>
+        <Item82 Value="sPitch"/>
+        <Item83 Value="sPlaylist"/>
+        <Item84 Value="sPower"/>
+        <Item85 Value="sPreset"/>
+        <Item86 Value="sPreview"/>
+        <Item87 Value="sPrevious"/>
+        <Item88 Value="sRandom intensity between"/>
+        <Item89 Value="sRandom duration between"/>
+        <Item90 Value="sRandom value between"/>
+        <Item91 Value="sRange"/>
+        <Item92 Value="sRangesGenerator"/>
+        <Item93 Value="sRename"/>
+        <Item94 Value="sReset"/>
+        <Item95 Value="sRGB"/>
+        <Item96 Value="sSave"/>
+        <Item97 Value="sSec"/>
+        <Item98 Value="second(s)"/>
+        <Item99 Value="sSelection"/>
+        <Item100 Value="sSequence"/>
+        <Item101 Value="sSimple"/>
+        <Item102 Value="sSoften"/>
+        <Item103 Value="sSoften on"/>
+        <Item104 Value="sStop"/>
+        <Item105 Value="sSwitchers"/>
+        <Item106 Value="sto"/>
+        <Item107 Value="sUniverse"/>
+        <Item108 Value="sUpdate"/>
+        <Item109 Value="sVelocity"/>
+        <Item110 Value="sView"/>
+        <Item111 Value="sVolume"/>
+        <Item112 Value="sWait time"/>
+        <Item113 Value="sWatt"/>
+        <Item114 Value="sWave"/>
+        <Item115 Value="sWebLinks"/>
+        <Item116 Value="sWeight"/>
+        <Item117 Value="sYes"/>
+        <Item118 Value="_"/>
+        <Item119 Value="#"/>
+        <Item120 Value="1/1"/>
+        <Item121 Value="1s"/>
+        <Item122 Value="5s"/>
+        <Item123 Value="10s"/>
+        <Item124 Value="15s"/>
+        <Item125 Value="Velleman K8062"/>
+        <Item126 Value="Enttec USB DMX PRO"/>
+        <Item127 Value="Enttec OPEN USB DMX"/>
       </ExcludedOriginals>
     </i18n>
     <VersionInfo>
@@ -411,7 +412,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="101">
+    <Units Count="102">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1053,6 +1054,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit100>
+      <Unit101>
+        <Filename Value="units\form_importsequence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormImportSequence"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit101>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
