@@ -20,6 +20,7 @@ type
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
+    MIProjectSaveAs: TMenuItem;
     MIProjectOptions: TMenuItem;
     MIProjectClose: TMenuItem;
     MIToolDeviceManager: TMenuItem;
@@ -62,6 +63,7 @@ type
     procedure MIProjectOpenClick(Sender: TObject);
     procedure MIProjectOptionsClick(Sender: TObject);
     procedure MIProjectQuitClick(Sender: TObject);
+    procedure MIProjectSaveAsClick(Sender: TObject);
     procedure MIProjectSaveClick(Sender: TObject);
     procedure MIToolDeviceManagerClick(Sender: TObject);
     procedure MIToolDMXLibraryClick(Sender: TObject);
@@ -267,6 +269,11 @@ end;
 procedure TFormMain.MIProjectQuitClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFormMain.MIProjectSaveAsClick(Sender: TObject);
+begin
+  Project.SaveAs;
 end;
 
 procedure TFormMain.MIProjectSaveClick(Sender: TObject);
