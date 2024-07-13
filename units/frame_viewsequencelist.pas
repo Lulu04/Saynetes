@@ -240,6 +240,8 @@ procedure TFrameViewSequenceList.LBKeyDown(Sender: TObject; var Key: Word;
 begin
   if Key = VK_SPACE then
     Key := VK_UNKNOWN;
+  if Key = VK_UP then Key := VK_UNKNOWN;
+  if Key = VK_DOWN then Key := VK_UNKNOWN;
 end;
 
 procedure TFrameViewSequenceList.LBKeyUp(Sender: TObject; var Key: Word;
@@ -247,6 +249,8 @@ procedure TFrameViewSequenceList.LBKeyUp(Sender: TObject; var Key: Word;
 begin
   if Key = VK_SPACE then
     Key := VK_UNKNOWN;
+  if Key = VK_UP then Key := VK_UNKNOWN;
+  if Key = VK_DOWN then Key := VK_UNKNOWN;
 end;
 
 procedure TFrameViewSequenceList.LBMouseDown(Sender: TObject; Button: TMouseButton;
