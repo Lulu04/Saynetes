@@ -587,7 +587,10 @@ resourcestring
                'When the playlist is done, enter its name then click Save.';
 
   HelpProjectList='This is the list of projects found in the selected working folder.'+LineEnding+
-                  'Projects saved in a same folder share the same DMX configuration, and loading a project from here don''t affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other.';
+                  'Projects saved in a same folder share the same DMX configuration, and loading a project from here don''t affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other.'+LineEnding+
+                   '- Select a folder.'+LineEnding+
+                   '- Select a project then click Open button, or double click on a project to open it.';
+
 
   HelpAudioCapture='This module allow you to playback audio captured from a microphone or line-in.'+LineEnding+
                    'Click ON/OFF button to start/stop the module.'+LineEnding+
@@ -619,7 +622,6 @@ resourcestring
                    'WARNING: Because Saynètes reference sequences, sounds and fixtures by ID number and not by their names, import sequence that have action with such reference (start a sequence, play a sound,...) may not work as expected.'+LineEnding+
                    'REMEDY: When you import a sequence from another project, check it.'+LineEnding+
                    'NOTE: Projects located in a same folder, share their dmx configuration. So, there is no problem importing a sequence containing only dmx actions from such a project.';
-
 
   HelpViewProjector='This is the projector view: it represents the stage, the seats for the spectators and the dmx fixtures used in you project. The Stage and seats shape can be changed from the program option window.'+LineEnding+
                     'MOVE THE VIEW with right click on empty area and move the mouse.'+LineEnding+
