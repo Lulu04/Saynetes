@@ -48,6 +48,7 @@ resourcestring
   SActuallyThereIsNoUniverse='Actually, there is no DMX universe.';
   SWouldYouLikeToCreateOne='Would you like to create one ?';
   SAll='all';
+  SAll_='All';
   SOnly='only ';
 
   SRequireTheProgramToBeRestarted='Requires the program to be restarted.';
@@ -64,6 +65,7 @@ resourcestring
   SModify='Modify';
   SEdit='Edit';
   SRename='Rename';
+  SImport='Import';
   SAliasOf_='Set as an alias of...';
   SAliasOf='Alias of';
   SIsAnAliasOf='is an alias of';
@@ -609,6 +611,14 @@ resourcestring
                    'SPACE to start the selected sequence: mouse must be over the sequence list.'+LineEnding+
                    'Right click to show pop-up menu.'+LineEnding+
                    'You can drag a sequence up or down to change its position in the list.';
+
+  HelpImportSequence='This tool allow you to import sequences from another project.'+LineEnding+
+                   '- Click the button at top left to open the project from which you are going to import.'+LineEnding+
+                   '- Checks the sequences you want to import.'+LineEnding+
+                   '- Click Import button.'+LineEnding+
+                   'WARNING: Because Saynètes reference sequences, sounds and fixtures by ID number and not by their names, import sequence that have action with such reference (start a sequence, play a sound,...) may not work as expected.'+LineEnding+
+                   'REMEDY: When you import a sequence from another project, check it.'+LineEnding+
+                   'NOTE: Projects located in a same folder, share their dmx configuration. So, there is no problem importing a sequence containing only dmx actions from such a project.';
 
 
   HelpViewProjector='This is the projector view: it represents the stage, the seats for the spectators and the dmx fixtures used in you project. The Stage and seats shape can be changed from the program option window.'+LineEnding+

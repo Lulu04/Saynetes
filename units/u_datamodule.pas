@@ -215,6 +215,9 @@ begin
   AddImageToImageList('HelpButton.svg', ImageList1);
   AddImageToImageList('Reverse.svg', ImageList1);
   AddImageToImageList('Clone.svg', ImageList1);   // 50
+  AddImageToImageList('CheckAll.svg', ImageList1);
+  AddImageToImageList('CheckBoxChecked.svg', ImageList1);
+  AddImageToImageList('CheckBoxUnchecked.svg', ImageList1);
   ImageList1.EndUpdate;
 end;
 

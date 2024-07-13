@@ -49,6 +49,7 @@ type
     procedure MIDuplicateClick(Sender: TObject);
     procedure MIEditClick(Sender: TObject);
     procedure MIInsertSequenceClick(Sender: TObject);
+    procedure MILoadFromAnotherProjectClick(Sender: TObject);
     procedure MINewSequenceClick(Sender: TObject);
     procedure MIResetSpeedClick(Sender: TObject);
     procedure MIRenameClick(Sender: TObject);
@@ -105,7 +106,8 @@ implementation
 
 uses u_project_manager, u_resource_string, u_edit_sequence, u_userdialogs,
   u_audio_manager, u_mainform, u_common, u_apputils, u_utils, u_datamodule,
-  Graphics, Dialogs, LCLHelper, Math, utilitaire_bgrabitmap;
+  Graphics, Dialogs, LCLHelper, Math, utilitaire_bgrabitmap,
+  form_importsequence;
 
 {$R *.lfm}
 
@@ -421,6 +423,19 @@ begin
  end;
 
  FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
+end;
+
+procedure TFrameViewSequenceList.MILoadFromAnotherProjectClick(Sender: TObject);
+var F: TFormImportSequence;
+begin
+  F := TFormImportSequence.Create(NIL);
+  try
+    if F.ShowModal = mrOk then begin
+      Fill;
+    end;
+  finally
+    F.Free;
+  end;
 end;
 
 procedure TFrameViewSequenceList.MINewSequenceClick(Sender: TObject);

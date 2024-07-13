@@ -150,8 +150,9 @@ object FrameViewSequenceList: TFrameViewSequenceList
       Caption = '-'
     end
     object MILoadFromAnotherProject: TMenuItem
-      Caption = 'Load sequences from another project...'
+      Caption = 'Import sequences from another project...'
       ImageIndex = 12
+      OnClick = MILoadFromAnotherProjectClick
     end
   end
 end

@@ -73,6 +73,7 @@ type
     function GetSequenceByID(aID: cardinal): TSequence;
     function GetSequenceByStrID(const aStrID: string): TSequence;
     function GetSequenceByIndex(aIndex: integer): TSequence;
+    function GetSequenceByName(const aName: string): TSequence;
 
     function GetNameByID(aID: cardinal): string;
     function IDToIndex(aID: cardinal): integer;
@@ -215,6 +216,9 @@ begin
   Result.Name := Name;
   Result.ID := ID;
   Result.SequencerInfoList := SequencerInfoList;
+  Result.FIsLooped := FIsLooped;
+  Result.FErrorMessage := FErrorMessage;
+  Result.FHaveError := FHaveError;
 end;
 
 function TSequence.CheckError(aParentList: TSequenceList): boolean;
@@ -277,6 +281,17 @@ begin
   if (aindex < 0) or (aindex >= Count)
     then Result := NIL
     else Result := Items[aindex];
+end;
+
+function TSequenceList.GetSequenceByName(const aName: string): TSequence;
+var i: integer;
+begin
+  for i:=0 to self.Count-1 do
+    if TSequence(Items[i]).Name = aName then begin
+      Result := TSequence(Items[i]);
+      exit;
+    end;
+  Result := NIL;
 end;
 
 function TSequenceList.NameAlreadyExists(const aName: string): boolean;
