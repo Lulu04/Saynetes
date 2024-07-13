@@ -649,10 +649,6 @@ msgstr ""
 msgid "Save project"
 msgstr ""
 
-#: tformmain.miprojectsaveas.caption
-msgid "Save as..."
-msgstr ""
-
 #: tformmain.mitooldevicemanager.caption
 msgid "Device manager"
 msgstr ""
