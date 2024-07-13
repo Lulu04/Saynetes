@@ -16,6 +16,7 @@
 {"hash":204287790,"name":"tformmain.miprojectnew.caption","sourcebytes":[78,101,119,32,112,114,111,106,101,99,116,46,46,46],"value":"New project..."},
 {"hash":49597396,"name":"tformmain.miprojectopen.caption","sourcebytes":[79,112,101,110,32,112,114,111,106,101,99,116],"value":"Open project"},
 {"hash":36621524,"name":"tformmain.miprojectsave.caption","sourcebytes":[83,97,118,101,32,112,114,111,106,101,99,116],"value":"Save project"},
+{"hash":124639694,"name":"tformmain.miprojectsaveas.caption","sourcebytes":[83,97,118,101,32,97,115,46,46,46],"value":"Save as..."},
 {"hash":230988948,"name":"tformmain.miprojectclose.caption","sourcebytes":[67,108,111,115,101,32,112,114,111,106,101,99,116],"value":"Close project"},
 {"hash":25520158,"name":"tformmain.miprojectoptions.caption","sourcebytes":[80,114,111,106,101,99,116,32,111,112,116,105,111,110,115,46,46,46],"value":"Project options..."},
 {"hash":363524,"name":"tformmain.miprojectquit.caption","sourcebytes":[81,117,105,116],"value":"Quit"},

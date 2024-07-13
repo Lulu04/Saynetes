@@ -649,6 +649,10 @@ msgstr ""
 msgid "Save project"
 msgstr ""
 
+#: tformmain.miprojectsaveas.caption
+msgid "Save as..."
+msgstr ""
+
 #: tformmain.mitooldevicemanager.caption
 msgid "Device manager"
 msgstr ""
@@ -1852,6 +1856,14 @@ msgstr ""
 msgid "This channel have switcher"
 msgstr ""
 
+#: tframeviewprojectfolder.bdeleteproject.hint
+msgid "Delete the selected project"
+msgstr ""
+
+#: tframeviewprojectfolder.brenameproject.hint
+msgid "Rename the selected project"
+msgstr ""
+
 #: tframeviewprojectfolder.bsearchprojectfolder.hint
 msgid "Search folder"
 msgstr ""
@@ -1875,7 +1887,7 @@ msgstr ""
 
 #: tframeviewprojectfolder.label7.caption
 msgctxt "tframeviewprojectfolder.label7.caption"
-msgid "Projects folder"
+msgid "Working folder"
 msgstr ""
 
 #: tframeviewprojectfolder.label8.caption
@@ -2260,7 +2272,9 @@ msgstr ""
 #: u_resource_string.helpprojectlist
 msgid ""
 "This is the list of projects found in the selected working folder.\n"
-"Projects saved in a same folder share the same DMX configuration, and loading a project from here don't affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other."
+"Projects saved in a same folder share the same DMX configuration, and loading a project from here don't affect the current lighting. It is usefull feature e.g. for festivals where different shows are performed one after the other.\n"
+"- Select a folder.\n"
+"- Select a project then click Open button, or double click on a project to open it."
 msgstr ""
 
 #: u_resource_string.helprangesgenerator
