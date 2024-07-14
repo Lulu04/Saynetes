@@ -200,6 +200,7 @@ end;
 procedure TFrameMainSequence.UpdateEditMode;
 begin
   BAddSequence.Visible := Project.Options.EditMode;
+  FrameViewProjectFolder1.UpdateEditMode;
 end;
 
 end.

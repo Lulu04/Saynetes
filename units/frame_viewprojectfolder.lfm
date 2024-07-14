@@ -27,10 +27,10 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       Left = 5
       Height = 15
       Top = 10
-      Width = 74
+      Width = 78
       BorderSpacing.Left = 5
       BorderSpacing.Top = 10
-      Caption = 'Projects folder'
+      Caption = 'Working folder'
       Font.Color = 15395562
       Font.Style = [fsItalic]
       ParentColor = False
@@ -60,6 +60,8 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       Mask = '*.say'
       OnDblClick = FLBProjectsDblClick
       OnDrawItem = FLBProjectsDrawItem
+      OnKeyDown = FLBProjectsKeyDown
+      OnKeyUp = FLBProjectsKeyUp
       OnMouseLeave = FLBProjectsMouseLeave
       OnMouseMove = FLBProjectsMouseMove
       ParentShowHint = False
@@ -70,18 +72,18 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
     end
     object ButtonOpenProject: TSpeedButton
       AnchorSideLeft.Control = FLBProjects
-      AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Panel3
       AnchorSideBottom.Side = asrBottom
       Cursor = crHandPoint
-      Left = 137
+      Left = 22
       Height = 20
       Hint = 'Open the selected project'
       Top = 252
       Width = 70
       Anchors = [akLeft, akBottom]
       AutoSize = True
+      BorderSpacing.Left = 20
       BorderSpacing.Bottom = 10
       Constraints.MinWidth = 70
       Caption = 'Open'
@@ -187,10 +189,55 @@ object FrameViewProjectFolder: TFrameViewProjectFolder
       ImageIndex = 48
       OnClick = BHelpClick
     end
+    object BDeleteProject: TSpeedButton
+      AnchorSideTop.Control = ButtonOpenProject
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 312
+      Height = 22
+      Hint = 'Delete the selected project'
+      Top = 252
+      Width = 23
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 10
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 41
+      OnClick = BRenameProjectClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object BRenameProject: TSpeedButton
+      AnchorSideTop.Control = ButtonOpenProject
+      AnchorSideRight.Control = BDeleteProject
+      Cursor = crHandPoint
+      Left = 269
+      Height = 22
+      Hint = 'Rename the selected project'
+      Top = 252
+      Width = 23
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 20
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 6
+      OnClick = BRenameProjectClick
+      ShowHint = True
+      ParentShowHint = False
+    end
   end
   object SDD1: TSelectDirectoryDialog
     Options = [ofPathMustExist, ofEnableSizing, ofViewDetail]
-    Left = 48
-    Top = 232
+    Left = 152
+    Top = 200
+  end
+  object PopupProject: TPopupMenu
+    Left = 168
+    Top = 106
+    object MIRename: TMenuItem
+      Caption = 'sRename'
+      OnClick = MIRenameClick
+    end
   end
 end

@@ -51,6 +51,14 @@ msgstr ""
 msgid "Choose fixture image"
 msgstr ""
 
+#: tformconfirmationdeleteproject.label1.caption
+msgid "You are about to delete this project from disk:"
+msgstr ""
+
+#: tformconfirmationdeleteproject.label2.caption
+msgid "If you are sure you want to delete it, enter \"Delete\""
+msgstr ""
+
 #: tformcreateplaylist.caption
 msgid "Create a playlist"
 msgstr ""

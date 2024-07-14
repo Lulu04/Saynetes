@@ -412,7 +412,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="102">
+    <Units Count="103">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1061,6 +1061,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit101>
+      <Unit102>
+        <Filename Value="units\form_confirmdeleteproject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormConfirmationDeleteProject"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit102>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

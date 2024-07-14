@@ -33,7 +33,7 @@ uses
   frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
   form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
   form_newmanufacturer, BGRABitmapTypes, frame_trackbar_customized, form_help,
-  form_importsequence;
+  form_importsequence, form_confirmdeleteproject;
 
 {$R *.res}
 
