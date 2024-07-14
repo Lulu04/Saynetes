@@ -25,18 +25,14 @@ type
     DividerBevel4: TDividerBevel;
     DividerBevel5: TDividerBevel;
     DividerBevel6: TDividerBevel;
-    DividerBevel7: TDividerBevel;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
     Notebook1: TNotebook;
     PageDMX: TPage;
     PageAudioDevice: TPage;
-    PageSequence: TPage;
     PageAppGeneral: TPage;
     PaintBox1: TPaintBox;
     Panel1: TPanel;
@@ -45,8 +41,6 @@ type
     Panel4: TPanel;
     BOk: TSpeedButton;
     BCancel: TSpeedButton;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
     SpinEdit1: TSpinEdit;
     Splitter1: TSplitter;
     TV: TTreeView;
@@ -653,15 +647,11 @@ begin
      begin
        Notebook1.PageIndex := Notebook1.IndexOf(PageAppGeneral);
      end;
-   1: // Sequence
-     begin
-       Notebook1.PageIndex := Notebook1.IndexOf(PageSequence);
-     end;
-   2: // Audio
+   1: // Audio
      begin
        Notebook1.PageIndex := Notebook1.IndexOf(PageAudioDevice);
      end;
-   3: // DMX
+   2: // DMX
      begin
        Notebook1.PageIndex := Notebook1.IndexOf(PageDMX);
      end;
@@ -700,7 +690,6 @@ begin
   TV.BeginUpdate;
   TV.Items.Clear;
   n := TV.Items.AddFirst(NIL, SGeneral);
-  TV.Items.Add(n, SSequence);
   TV.Items.Add(n, SAudio);
   TV.Items.Add(n, SDmx);
   TV.Selected := n;
