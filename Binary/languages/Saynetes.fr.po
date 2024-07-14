@@ -63,6 +63,14 @@ msgstr "Appliquer des effets audio"
 msgid "Choose fixture image"
 msgstr "Choix d'une image pour l'appareil"
 
+#: tformconfirmationdeleteproject.label1.caption
+msgid "You are about to delete this project from disk:"
+msgstr "Vous allez supprimer ce projet du disque:"
+
+#: tformconfirmationdeleteproject.label2.caption
+msgid "If you are sure you want to delete it, enter \"Delete\""
+msgstr "Si vous êtes certain(e) de vouloir le supprimer, entrez \"Supprimer\""
+
 #: tformcreateplaylist.caption
 msgid "Create a playlist"
 msgstr "Créer une playlist"
@@ -5122,4 +5130,3 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
-

@@ -218,6 +218,7 @@ begin
   AddImageToImageList('CheckAll.svg', ImageList1);
   AddImageToImageList('CheckBoxChecked.svg', ImageList1);
   AddImageToImageList('CheckBoxUnchecked.svg', ImageList1);
+  AddImageToImageList('RightBlueArrow.svg ', ImageList1);
   ImageList1.EndUpdate;
 end;
 

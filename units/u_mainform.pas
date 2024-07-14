@@ -90,6 +90,8 @@ type
 
     // called when user delete an audio file, a dmx fixture or an universe
     procedure CheckSequenceError;
+
+    procedure SendMessageToShowStartupWizard;
 end;
 
 var
@@ -131,7 +133,7 @@ begin
   OnProjectModified;
 
   if not FileExists(ProgramOptions.WorkingProject)
-    then PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard)
+    then SendMessageToShowStartupWizard
     else Project.Load(ProgramOptions.WorkingProject);
 end;
 
@@ -230,7 +232,7 @@ procedure TFormMain.MIProjectCloseClick(Sender: TObject);
 begin
   Project.Close;
   ProgramOptions.WorkingProject := '';
-  PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard);
+  SendMessageToShowStartupWizard;
 end;
 
 procedure TFormMain.MIProjectNewClick(Sender: TObject);
@@ -238,7 +240,7 @@ begin
   Project.New;
 
   if not Project.IsReady then
-    PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard);
+    SendMessageToShowStartupWizard;
 end;
 
 procedure TFormMain.MIProjectOpenClick(Sender: TObject);
@@ -247,7 +249,7 @@ begin
   Project.Load;
 
   if not Project.IsReady then
-    PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard)
+    SendMessageToShowStartupWizard
   else // update main form project's folder
     FrameMainSequence1.FrameViewProjectFolder1.Fill;
 end;
@@ -452,6 +454,11 @@ procedure TFormMain.CheckSequenceError;
 begin
   if Sequences.CheckErrorInSequences then
     FrameMainSequence1.FrameViewSequenceList1.LB.Invalidate;
+end;
+
+procedure TFormMain.SendMessageToShowStartupWizard;
+begin
+  PostMessage(Handle, LM_MESSAGE_MainGui, 0, MESS_MainGui_StartupWizard)
 end;
 
 

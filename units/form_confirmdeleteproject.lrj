@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":226986266,"name":"tformconfirmationdeleteproject.label1.caption","sourcebytes":[89,111,117,32,97,114,101,32,97,98,111,117,116,32,116,111,32,100,101,108,101,116,101,32,116,104,105,115,32,112,114,111,106,101,99,116,32,102,114,111,109,32,100,105,115,107,58],"value":"You are about to delete this project from disk:"},
+{"hash":128724181,"name":"tformconfirmationdeleteproject.bok.caption","sourcebytes":[115,68,101,108,101,116,101],"value":"sDelete"},
+{"hash":138399522,"name":"tformconfirmationdeleteproject.label2.caption","sourcebytes":[73,102,32,121,111,117,32,97,114,101,32,115,117,114,101,32,121,111,117,32,119,97,110,116,32,116,111,32,100,101,108,101,116,101,32,105,116,44,32,101,110,116,101,114,32,34,68,101,108,101,116,101,34],"value":"If you are sure you want to delete it, enter \"Delete\""},
+{"hash":5404860,"name":"tformconfirmationdeleteproject.label3.caption","sourcebytes":[76,97,98,101,108],"value":"Label"}
+]}
