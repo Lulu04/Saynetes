@@ -122,8 +122,8 @@ object FrameIntermissionMusic: TFrameIntermissionMusic
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 348
-      Height = 230
-      Top = 42
+      Height = 235
+      Top = 37
       Width = 27
       Anchors = [akTop, akLeft, akBottom]
       BorderSpacing.Bottom = 5
@@ -138,10 +138,10 @@ object FrameIntermissionMusic: TFrameIntermissionMusic
       AnchorSideTop.Side = asrBottom
       Left = 339
       Height = 15
-      Top = 27
+      Top = 22
       Width = 45
       Alignment = taCenter
-      BorderSpacing.Top = 10
+      BorderSpacing.Top = 5
       Caption = 'sVolume'
       Font.Color = 15395562
       Font.Style = [fsItalic]
@@ -265,8 +265,8 @@ object FrameIntermissionMusic: TFrameIntermissionMusic
       AnchorSideBottom.Control = Shape2
       AnchorSideBottom.Side = asrBottom
       Left = 350
-      Height = 222
-      Top = 46
+      Height = 227
+      Top = 41
       Width = 22
       Anchors = [akTop, akRight, akBottom]
       BorderSpacing.Top = 4

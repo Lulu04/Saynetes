@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, ExtCtrls, Buttons, FileCtrl,
-  StdCtrls, LCLTranslator, Dialogs, Menus, Types;
+  StdCtrls, LCLTranslator, Dialogs, Menus, Types,
+  BGRABitmap, BGRABitmapTypes;
 
 type
 
@@ -42,11 +43,14 @@ type
     procedure BSearchProjectFolderClick(Sender: TObject);
     procedure MIRenameClick(Sender: TObject);
   private
+    FArrowImage: TBGRABitmap;
     FItemIndexUnderMouse: integer;
     procedure DoRenameProjectSelected;
     procedure DoDeleteProjectSelected;
+    procedure CheckArrowImage;
   public
     constructor Create(TheOwner: TComponent); override;
+    destructor Destroy; override;
     procedure Fill;
     // call it when user change between EDIT and SHOW mode
     procedure UpdateEditMode;
@@ -54,9 +58,9 @@ type
 
 implementation
 uses u_common, u_project_manager, VelocityCurve, u_utils, u_program_options,
-  form_help, u_resource_string, u_userdialogs, u_datamodule, u_mainform,
-  form_confirmdeleteproject, Graphics, LazFileUtils, LCLType,
-  utilitaire_fichier;
+  form_help, u_resource_string, u_userdialogs, u_mainform,
+  form_confirmdeleteproject, u_apputils, Graphics, LazFileUtils, LCLType,
+  utilitaire_fichier, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -143,11 +147,14 @@ begin
     end
     else FillRect(ARect);
 
-    if FLBProjects.Items.Strings[Index] = ExtractFileName(Project.FileName) then
-      DataModule1.ImageList1.Draw(FLBProjects.Canvas, aRect.Left, aRect.Top+(aRect.Height-DataModule1.ImageList1.Height)div 2, 54);
+    CheckArrowImage;
+    if FLBProjects.Items.Strings[Index] = ExtractFileName(Project.FileName) then begin
+      if FArrowImage <> NIL then
+        FArrowImage.Draw(FLBProjects.Canvas, aRect.Left, aRect.Top+(aRect.Height-FArrowImage.Height)div 2, False);
+    end;
 
     Brush.Style := bsClear;
-    TextOut(ARect.Left+DataModule1.ImageList1.Width+ScaleDesignToForm(3), aRect.Top, FLBProjects.Items.Strings[Index]);
+    TextOut(ARect.Left+FArrowImage.Width+ScaleDesignToForm(3), aRect.Top, FLBProjects.Items.Strings[Index]);
   end;
 end;
 
@@ -262,10 +269,27 @@ begin
   if flagProjectIsOpened then FormMain.SendMessageToShowStartupWizard;
 end;
 
+procedure TFrameViewProjectFolder.CheckArrowImage;
+begin
+  if FArrowImage = NIL then
+    try
+      FArrowImage := SVGFileToBGRABitmap(GetAppIconImagesFolder+'RightBlueArrow.svg', -1, ScaleDesignToForm(20));
+    except
+      FArrowImage := TBGRABitmap.Create(ScaleDesignToForm(20), ScaleDesignToForm(20), BGRAPixelTransparent);
+      FArrowImage.FillEllipseAntialias(FArrowImage.Width*0.5, FArrowImage.Height*0.5, FArrowImage.Width*0.25, FArrowImage.Height*0.25, BGRA(167,202,253));
+    end;
+end;
+
 constructor TFrameViewProjectFolder.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   FItemIndexUnderMouse := -1;
+end;
+
+destructor TFrameViewProjectFolder.Destroy;
+begin
+  FreeAndNil(FArrowImage);
+  inherited Destroy;
 end;
 
 procedure TFrameViewProjectFolder.Fill;
