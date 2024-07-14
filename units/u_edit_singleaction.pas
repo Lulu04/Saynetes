@@ -777,6 +777,10 @@ begin
      FParams[1] := SoundManager.GetSoundByIndex(CBAudio1.ItemIndex).Tag.ToString;
      FParams[2] := FormatFloatWithDot('0.00', FrameTBVol.PercentValue);
    end;
+   CMD_AUDIO_REMOVEFX: begin // CMD_AUDIO_REMOVEFX  IDaudio
+     if CBAudio1.ItemIndex = -1 then exit;
+     FParams[1] := SoundManager.GetSoundByIndex(CBAudio1.ItemIndex).Tag.ToString;
+   end;
   end;
 end;
 
@@ -1084,6 +1088,13 @@ begin
        // to do
      end;
 
+     CMD_AUDIO_REMOVEFX: begin // CMD_AUDIO_REMOVEFX  IDaudio
+       NB.PageIndex := NB.IndexOf(PageAudio);
+       Label2.Caption := SAudioDisconnectEffect;
+       CBAudio1.ItemIndex := SoundManager.IDToIndex(FParams[1].ToInteger);
+       AdjustFormHeight(NIL);
+     end;
+
      CMD_AUDIO_CAPTURE_SETVOLUME: begin // CMD_AUDIO_CAPTURE_SETVOLUME volume duration IDcurve
        NB.PageIndex := NB.IndexOf(PageAudioCapture);
        Label2.Caption := SAudioCaptureSetVolume;
@@ -1370,8 +1381,7 @@ end;
 
 function TFormEditSingleAction.GetCmdIsEditable: boolean;
 begin
-  Result := (FCmd <> CMD_AUDIO_REMOVEFX) and
-            (FCmd <> CMD_AUDIO_CAPTURE_START) and
+  Result := (FCmd <> CMD_AUDIO_CAPTURE_START) and
             (FCmd <> CMD_AUDIO_CAPTURE_STOP) and
             (FCmd <> CMD_AUDIO_CAPTURE_REMOVEFX) and
             (FCmd <> CMD_INTERNALDMXWAVE) and
