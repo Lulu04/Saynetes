@@ -817,24 +817,12 @@ msgstr ""
 msgid "DMX view"
 msgstr ""
 
-#: tformprogramoptions.dividerbevel7.caption
-msgid "Sequence execution"
-msgstr ""
-
 #: tformprogramoptions.label2.caption
 msgid "Shape of the stage"
 msgstr ""
 
 #: tformprogramoptions.label3.caption
 msgid "Seats"
-msgstr ""
-
-#: tformprogramoptions.label6.caption
-msgid "\"SPACE\" key run sequence"
-msgstr ""
-
-#: tformprogramoptions.label7.caption
-msgid "\"SPACE\" key run sequence and select the next"
 msgstr ""
 
 #: tformprojectoptions.caption

@@ -873,10 +873,6 @@ msgstr "Capture audio"
 msgid "DMX view"
 msgstr "Vue DMX"
 
-#: tformprogramoptions.dividerbevel7.caption
-msgid "Sequence execution"
-msgstr "Exécution des séquences"
-
 #: tformprogramoptions.label2.caption
 msgid "Shape of the stage"
 msgstr "Forme de la scène"
@@ -884,14 +880,6 @@ msgstr "Forme de la scène"
 #: tformprogramoptions.label3.caption
 msgid "Seats"
 msgstr "Sièges"
-
-#: tformprogramoptions.label6.caption
-msgid "\"SPACE\" key run sequence"
-msgstr "Touche \"ESPACE\" exécute une séquence"
-
-#: tformprogramoptions.label7.caption
-msgid "\"SPACE\" key run sequence and select the next"
-msgstr "Touche \"ESPACE\" exécute une séquence et sélectionne la prochaine"
 
 #: tformprojectoptions.caption
 msgctxt "tformprojectoptions.caption"
@@ -5130,3 +5118,4 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
+

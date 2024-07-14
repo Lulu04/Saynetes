@@ -125,11 +125,10 @@ object FormProgramOptions: TFormProgramOptions
         OnSelectionChanged = TVSelectionChanged
         Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips]
         Items.Data = {
-          F9FFFFFF020004000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
+          F9FFFFFF020003000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
           0000000700000047656E6572616CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-          000000000000000800000053657175656E6365FFFFFFFFFFFFFFFFFFFFFFFFFF
-          FFFFFF00000000000000000005000000417564696FFFFFFFFFFFFFFFFFFFFFFF
-          FFFFFFFFFF00000000000000000003000000444D58
+          0000000000000005000000417564696FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          00000000000000000003000000444D58
         }
         TreeLinePenStyle = psSolid
       end
@@ -149,7 +148,7 @@ object FormProgramOptions: TFormProgramOptions
         Height = 450
         Top = 1
         Width = 673
-        PageIndex = 0
+        PageIndex = 1
         Align = alClient
         TabOrder = 0
         object PageAppGeneral: TPage
@@ -232,73 +231,6 @@ object FormProgramOptions: TFormProgramOptions
             ParentColor = False
             ParentFont = False
             WordWrap = True
-          end
-        end
-        object PageSequence: TPage
-          object DividerBevel7: TDividerBevel
-            AnchorSideLeft.Control = PageSequence
-            AnchorSideTop.Control = PageSequence
-            AnchorSideRight.Control = PageSequence
-            AnchorSideRight.Side = asrBottom
-            Left = 20
-            Height = 15
-            Top = 20
-            Width = 633
-            Caption = 'Sequence execution'
-            Anchors = [akTop, akLeft, akRight]
-            BorderSpacing.Left = 20
-            BorderSpacing.Top = 20
-            BorderSpacing.Right = 20
-            Font.Color = 15395562
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object RadioButton1: TRadioButton
-            Left = 41
-            Height = 19
-            Top = 42
-            Width = 20
-            Checked = True
-            TabOrder = 1
-            TabStop = True
-          end
-          object Label6: TLabel
-            AnchorSideLeft.Control = RadioButton1
-            AnchorSideLeft.Side = asrBottom
-            AnchorSideTop.Control = RadioButton1
-            AnchorSideTop.Side = asrCenter
-            Left = 61
-            Height = 15
-            Top = 44
-            Width = 139
-            Caption = '"SPACE" key run sequence'
-            Font.Color = 15395562
-            ParentColor = False
-            ParentFont = False
-          end
-          object RadioButton2: TRadioButton
-            AnchorSideLeft.Control = RadioButton1
-            AnchorSideTop.Control = RadioButton1
-            AnchorSideTop.Side = asrBottom
-            Left = 41
-            Height = 19
-            Top = 61
-            Width = 20
-            TabOrder = 0
-          end
-          object Label7: TLabel
-            AnchorSideLeft.Control = RadioButton2
-            AnchorSideLeft.Side = asrBottom
-            AnchorSideTop.Control = RadioButton2
-            AnchorSideTop.Side = asrCenter
-            Left = 61
-            Height = 15
-            Top = 63
-            Width = 241
-            Caption = '"SPACE" key run sequence and select the next'
-            Font.Color = 15395562
-            ParentColor = False
-            ParentFont = False
           end
         end
         object PageAudioDevice: TPage
