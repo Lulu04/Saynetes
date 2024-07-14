@@ -1375,12 +1375,16 @@ begin
   FChannels[FRedChannelIndex].StartDimmer(Red(aColor)/255, aDuration, aCurveID);
   FChannels[FGreenChannelIndex].StartDimmer(Green(aColor)/255, aDuration, aCurveID);
   FChannels[FBlueChannelIndex].StartDimmer(Blue(aColor)/255, aDuration, aCurveID);
+
+  CurrentFixtureEffect := deNOEFFECT;
 end;
 
 procedure TDMXFixture.StartWaveRGB(aColor1: TColor; aDuration1: single;
   aCurveID1: word; aColor2: TColor; aDuration2: single; aCurveID2: word);
 begin
   if not HasRGBChannel then exit;
+
+  CurrentFixtureEffect := deNOEFFECT;
 
   FChannels[FRedChannelIndex].StartInternalWave(Red(aColor1)/255, aDuration1, aCurveID1, 0,
                                                 Red(aColor2)/255, aDuration2, aCurveID2);
@@ -1439,6 +1443,7 @@ begin
   if not aSourceFixture.HasRGBChannel then exit;
   if Self = aSourceFixture then StopEffectRGB
     else begin
+      CurrentFixtureEffect := deNOEFFECT;
       Channels[FRedChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FRedChannelIndex]);
       Channels[FGreenChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FGreenChannelIndex]);
       Channels[FBlueChannelIndex].StartCopy(aSourceFixture.Channels[aSourceFixture.FBlueChannelIndex]);
