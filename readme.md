@@ -28,9 +28,9 @@ You must have Lazarus IDE installed on your system with BGRABitmap package.
 
 The directory structure should be like:  
 |- saynetes  
-	|- ALSound  
-	|- Saynetes (clone version) or Saynetes-main (unziped version)  
-	|- UnitsCommon  
+\ \ \ |- ALSound  
+\ \ \ |- Saynetes (clone version) or Saynetes-main (unziped version)  
+\ \ \ |- UnitsCommon  
   
 Now, you are able to open the Lazarus project in the directory Saynetes or Saynetes-main.  
 
