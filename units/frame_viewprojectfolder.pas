@@ -244,7 +244,7 @@ end;
 
 procedure TFrameViewProjectFolder.DoDeleteProjectSelected;
 var currentFile, currentDataFolder: string;
-  flagProjectIsOpened: Boolean;
+  flagProjectIsOpened, isDeleted: Boolean;
   F: TFormConfirmationDeleteProject;
 begin
   currentFile := FLBProjects.FileName;
@@ -262,8 +262,13 @@ begin
     Project.Close;
   end;
 
-  MoveFilesToTrash([currentFile]);
-  MoveFilesToTrash([currentDataFolder]);
+  isDeleted := MoveFilesToTrash([currentFile, currentDataFolder]); // and MoveFilesToTrash([currentDataFolder]);
+  if not isDeleted then begin
+    isDeleted := True;
+    if FileExists(currentFile) then isDeleted := isDeleted and SupprimeFichier(currentFile);
+    if RepertoireExistant(currentDataFolder) then isDeleted := isDeleted and SupprimeRepertoire(currentDataFolder);
+    if not isDeleted then ShowMess(SUnableToDeleteTheProject, SOk, mtError);
+  end;
 
   Fill;
   if flagProjectIsOpened then FormMain.SendMessageToShowStartupWizard;

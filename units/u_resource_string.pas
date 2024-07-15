@@ -523,6 +523,7 @@ resourcestring
 
   SUnableToCreateManufacturerFolder='Unable to create the manufacturer folder';
   SUnableToSaveTheFixture='Unable to save the fixture...';
+  SUnableToDeleteTheProject='Unable to delete the project...';
 
 // fixture name
   SOther='Other';

@@ -4791,6 +4791,10 @@ msgstr "à DROITE"
 msgid "Unable to create the manufacturer folder"
 msgstr "Impossible de créer le dossier constructeur"
 
+#: u_resource_string.sunabletodeletetheproject
+msgid "Unable to delete the project..."
+msgstr "Impossible de supprimer le projet..."
+
 #: u_resource_string.sunabletoloadfixturedata
 msgid "Unable to load fixture data..."
 msgstr "Impossible de charger les données de l'appareil..."
@@ -5118,4 +5122,3 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
-
