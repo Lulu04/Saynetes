@@ -22,10 +22,12 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\Pascal\Saynetes\release_tools
-OutputBaseFilename=Saynètes_{#MyAppVersion}_Windows64_Setup
+OutputBaseFilename=Saynètes_{#MyAppVersion}_Windows32_Setup
 Compression=lzma
 SolidCompression=yes
+ArchitecturesInstallIn64BitMode=x64
 WizardStyle=modern
+SetupLogging=yes
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -38,8 +40,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "C:\Pascal\Saynetes\Binary\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Pascal\Saynetes\Binary\Data\*"; DestDir: "{app}\Data"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Pascal\Saynetes\Binary\languages\*"; DestDir: "{app}\languages"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Pascal\Saynetes\Binary\x86_64-win64\*"; DestDir: "{app}\x86_64-win64"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Pascal\Saynetes\Demo\*"; DestDir: "{commonappdata}\Saynetes\Demo"; Flags: external recursesubdirs skipifsourcedoesntexist onlyifdoesntexist; Permissions: users-modify
+Source: "C:\Pascal\Saynetes\Binary\i386-win32\*"; DestDir: "{app}\i386-win32"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Pascal\Saynetes\Demo\*"; DestDir: "{commonappdata}\Saynetes\Demo\"; Flags: external recursesubdirs skipifsourcedoesntexist onlyifdoesntexist; Permissions: users-modify
 Source: "C:\Pascal\Saynetes\Binary\DMXLibrary\*"; DestDir: "{commonappdata}\Saynetes\DMXLibrary\"; Flags: external recursesubdirs skipifsourcedoesntexist onlyifdoesntexist uninsneveruninstall; Permissions: users-modify
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
