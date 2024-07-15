@@ -187,7 +187,7 @@ begin
 end;
 
 function GetDemoProjectFile: string;
-const demoFile = 'Demo'+DirectorySeparator+'ProjectExample.say';
+const demoFile = 'Demo'+DirectorySeparator+'01-BeforeTheShow.say';
 var f: string;
 begin
   Result := '';
@@ -205,7 +205,10 @@ begin
     Result := f;
   {$endif}
   {$ifdef Linux}
-   raise exception.create('to do');
+  // try in executable location     <= portable version of the application (zip)
+  f := Application.Location + demoFile;
+  if FichierExistant(f) then
+    Result := f;
   {$endif}
 end;
 

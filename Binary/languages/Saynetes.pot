@@ -4394,6 +4394,10 @@ msgstr ""
 msgid "Unable to create the manufacturer folder"
 msgstr ""
 
+#: u_resource_string.sunabletodeletetheproject
+msgid "Unable to delete the project..."
+msgstr ""
+
 #: u_resource_string.sunabletoloadfixturedata
 msgid "Unable to load fixture data..."
 msgstr ""
