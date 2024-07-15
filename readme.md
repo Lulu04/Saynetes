@@ -6,6 +6,7 @@ Author: Lulu
 
 # Supported platforms
 Windows 64b (tested on Win10)  
+Windows 32b (tested on Win7 32b)  
 Linux 64b - GTK2 - with oversized font height and some wrong colors (tested on Ubuntu 22.04 LTS)  
 
 # Supported DMX Device
