@@ -75,6 +75,7 @@ object FormAbout: TFormAbout
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
+    Cursor = crHandPoint
     Left = 211
     Height = 20
     Top = 237

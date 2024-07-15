@@ -43,7 +43,7 @@ type
 
 implementation
 uses LCLType, u_resource_string, u_editfixturewizard, u_common,
-  u_userdialogs;
+  u_userdialogs, u_mainform;
 
 {$R *.lfm}
 
@@ -81,6 +81,10 @@ begin
   finally
     F.Free;
   end;
+
+  // force window height equal to Main window height
+  Height := Round(FormMain.ClientHeight*0.9);
+  Top := (FormMain.Monitor.WorkAreaRect.Height-Height) div 2;
 end;
 
 procedure TFormDMXLibrary.BEditFixtureClick(Sender: TObject);

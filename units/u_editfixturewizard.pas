@@ -191,8 +191,8 @@ type
 implementation
 
 uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
-  u_datamodule, form_editweblink, form_newmanufacturer, form_help, u_dmx_util,
-  LazUTF8, Math, utilitaire_bgrabitmap;
+  u_datamodule, form_editweblink, form_newmanufacturer, form_help, u_mainform,
+  u_dmx_util, LazUTF8, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -245,6 +245,10 @@ begin
   Label16.Caption := SOff;
 
   Label22.Caption := SWebLinks;
+
+  // force the window height equal to main form height
+  Height := Round(FormMain.ClientHeight*0.9);
+  Top := (FormMain.Monitor.BoundsRect.Height-Height) div 2;
 end;
 
 procedure TFormFixtureWizard.LBWebLinkDblClick(Sender: TObject);

@@ -50,7 +50,7 @@ begin
   Memo1.Lines.Add('');
   Memo1.Lines.Add(SIconAppBy+' Coralie Ambert');
   Memo1.Lines.Add('');
-  Memo1.Lines.Add(SApplicationWrittenWith+' FreePascal/Lazarus');
+  Memo1.Lines.Add(SApplicationWrittenIn+' FreePascal '+SWith+' Lazarus IDE');
   Memo1.Lines.Add('       https://www.lazarus-ide.org/');
   Memo1.Lines.Add('');
   Memo1.Lines.Add('BGRABitmap');
