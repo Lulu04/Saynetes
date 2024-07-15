@@ -14,7 +14,7 @@ object FormDMXLibrary: TFormDMXLibrary
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
   OnShow = FormShow
-  Position = poWorkAreaCenter
+  Position = poMainFormCenter
   LCLVersion = '2.2.6.0'
   object Shape1: TShape
     Left = 0
