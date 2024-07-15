@@ -15,6 +15,7 @@ Enttec USB DMX PRO
 # Screenshots
 The main window
 ![The main window](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/MainScreen.png)
+  
 Create sequences and build your show
 ![The sequencer](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/Sequencer.png)
 
@@ -26,11 +27,11 @@ You must have Lazarus IDE installed on your system with BGRABitmap package.
 - always in the 'saynetes' directory, clone the repository [ALSound library](https://github.com/Lulu04/ALSound). If you choose to download the zip, unzip the file and rename the obtained directory to "ALSound".
 
 The directory structure should be like:  
-|- saynetes 
+|- saynetes  
     |- ALSound  
-    |- Saynetes (clone version) or Saynetes-main (unziped version)
+    |- Saynetes (clone version) or Saynetes-main (unziped version)  
     |- UnitsCommon  
-
+  
 Now, you are able to open the Lazarus project in the directory Saynetes or Saynetes-main.  
 
 # History
