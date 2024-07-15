@@ -33,7 +33,7 @@ type
     procedure Splitter1Moved(Sender: TObject);
   private
     FRedocking: boolean;
-    procedure RedockPanels;
+    procedure AdjustSplittersPosition;
   public
     FrameViewSequenceList1: TFrameViewSequenceList;
     FrameIntermissionMusic1: TFrameIntermissionMusic;
@@ -71,14 +71,7 @@ uses u_project_manager, u_list_sequence, u_utils, u_logfile, form_help,
 procedure TFrameMainSequence.Splitter1Moved(Sender: TObject);
 begin
   if FRedocking then exit;
-
-{  if Sender = Splitter1 then
-    FWantedTopSplitter1 := Splitter1.Top-1;
-  if Sender = Splitter2 then
-    FWantedTopSplitter2 := Splitter2.Top-1;   }
-
   Project.Options.Save;
-  //RedockPanels;
 end;
 
 procedure TFrameMainSequence.BHelpClick(Sender: TObject);
@@ -96,9 +89,17 @@ begin
   FrameViewSequenceList1.MINewSequenceClick(NIL);
 end;
 
-procedure TFrameMainSequence.RedockPanels;
+procedure TFrameMainSequence.AdjustSplittersPosition;
 begin
   FRedocking := True;
+
+  if Splitter2.Top >= ClientHeight then begin
+    Splitter2.Top := ClientHeight - Splitter2.Height;
+  end;
+
+  if Splitter1.Top > Splitter2.Top then begin
+    Splitter1.Top := Splitter2.Top - Splitter1.Height;
+  end;
 
   FRedocking := False;
 end;
@@ -190,11 +191,13 @@ begin
   prop.IntegerValueOf('SplitterIntermission', k, Height*3 div 5);
   k := EnsureRange(k, Height*3 div 5, Splitter2.Top-Splitter1.Height);
   Splitter1.Top := k;
+
+  AdjustSplittersPosition;
 end;
 
 procedure TFrameMainSequence.UpdateLayout;
 begin
-  RedockPanels;
+  AdjustSplittersPosition;
 end;
 
 procedure TFrameMainSequence.UpdateEditMode;
