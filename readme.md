@@ -27,10 +27,10 @@ You must have Lazarus IDE installed on your system with BGRABitmap package.
 - always in the 'saynetes' directory, clone the repository [ALSound library](https://github.com/Lulu04/ALSound). If you choose to download the zip, unzip the file and rename the obtained directory to "ALSound".
 
 The directory structure should be like:  
-|- saynetes  
-\ \ \ |- ALSound  
-\ \ \ |- Saynetes (clone version) or Saynetes-main (unziped version)  
-\ \ \ |- UnitsCommon  
+#### |- saynetes  
+##### |- ALSound  
+##### |- Saynetes (clone version) or Saynetes-main (unziped version)  
+##### |- UnitsCommon  
   
 Now, you are able to open the Lazarus project in the directory Saynetes or Saynetes-main.  
 
