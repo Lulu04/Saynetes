@@ -413,6 +413,7 @@ begin
   vi := 0;
   s1 := '';
   s2 := '';
+  flagError := False;
   ClearAll;
   k := temp.IndexOf(SEQUENCE_HEADER);
   if (k = -1) or (k = temp.Count-1) then
