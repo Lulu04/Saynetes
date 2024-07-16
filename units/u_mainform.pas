@@ -20,6 +20,7 @@ type
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
+    BCheckNewVersion: TMenuItem;
     MIProjectOptions: TMenuItem;
     MIProjectClose: TMenuItem;
     MIToolDeviceManager: TMenuItem;
@@ -50,6 +51,7 @@ type
     SpeedButton7: TSpeedButton;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
+    procedure BCheckNewVersionClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -101,7 +103,8 @@ implementation
 uses LCLType, LCLIntf, u_dmx_library, u_project_manager, u_userdialogs,
   u_resource_string, u_devicemanager_form, u_startupwizard, u_logfile,
   u_program_options, u_audio_manager, u_sequence_player, u_list_sequence,
-  u_list_dmxuniverse, u_project_options, form_about, form_splash, u_dmx_util;
+  u_list_dmxuniverse, u_project_options, form_about, form_splash, u_web,
+  u_dmx_util;
 
 {$R *.lfm}
 
@@ -215,6 +218,24 @@ begin
     SoundManager.ResetState;
 
     FrameViewProjector1.FreeOpenGLTextures;
+  end;
+end;
+
+procedure TFormMain.BCheckNewVersionClick(Sender: TObject);
+var newVersion: string;
+  res: integer;
+begin
+  case CheckForNewVersionOnGitHub(newVersion) of
+   rcovErrorAccessingInternet: ShowMess(SErrorAccessingInternet, SOk, mtError);
+   rcovNoNewVersion: ShowMess(SNoNewVersion, SOk, mtInformation);
+   rcovNewVersionAvailable: begin
+   if AskConfirmation(Format('Saynètes %s %s',[newVersion, SIsAvailable])+LineEnding+
+              SCurrentVersion+' '+APP_VERSION+LineEnding+
+              SDoYouWantToQuitAndOpenURLToDownloadIt, SYes, SNo, mtConfirmation) = mrYes then begin
+       OpenURL(URL_FOR_LATEST_RELEASE_ON_GITHUB);
+       Close;
+     end;
+   end;
   end;
 end;
 

@@ -120,7 +120,7 @@ var i: integer;
 begin
   i := LB.ItemIndex;
   if i = -1 then exit;
-  if AskConfirmation(SReplacePresetData, SYes, SNo, mtConfirmation) = mrOk then begin
+  if AskConfirmation(SReplacePresetData, SYes, SNo, mtConfirmation) = mrYes then begin
     A := FList.Strings[i].Split([PRESET_SEPARATOR]);
     FList.Strings[i] := A[0] + PRESET_SEPARATOR+FWidgetToPreset();
     Save;
@@ -132,7 +132,7 @@ var i: integer;
 begin
   i := LB.ItemIndex;
   if i = -1 then exit;
-  if AskConfirmation(SDeleteThisPreset, SYes, SNo, mtConfirmation) = mrOk then begin
+  if AskConfirmation(SDeleteThisPreset, SYes, SNo, mtConfirmation) = mrYes then begin
     FList.Delete(i);
     PopupMenu1.Items.Delete(i+3);
     LB.Items.Delete(i);

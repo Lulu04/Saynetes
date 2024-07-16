@@ -63,8 +63,7 @@ end;
 
 procedure TFormUserConfirmation.BYesClick(Sender: TObject);
 begin
-  if BNo.Visible then ModalResult := mrYes
-    else ModalResult := mrOk;
+  ModalResult := mrYes;
 end;
 
 procedure TFormUserConfirmation.BNoClick(Sender: TObject);

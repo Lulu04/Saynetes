@@ -14,6 +14,9 @@ const
   APP_CONFIG_FOLDER = 'Saynetes'; // the folder created by app to save program options, log file...
   APP_CONFIG_FILENAME = 'Saynetes.cfg'; // The program's options saving file
 
+  URL_FOR_VERSION_ON_GITHUB = 'https://raw.githubusercontent.com/Lulu04/Saynetes/main/version.txt';
+  URL_FOR_LATEST_RELEASE_ON_GITHUB = 'https://github.com/Lulu04/Saynetes/releases/latest';
+
 
   // sub-folder (located in project folder) where are saved the data common to
   // all projects in the working directory

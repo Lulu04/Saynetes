@@ -44,7 +44,7 @@ procedure TFormAbout.FormShow(Sender: TObject);
 begin
   BCancel.Caption := SClose;
 
-  Memo1.Lines.Add(SProgramVersion+' '+APP_VERSION);
+  Memo1.Lines.Add(SCurrentVersion+' '+APP_VERSION);
   Memo1.Lines.Add(SWrittenBy+' Lulu 2021-2024');
   Memo1.Lines.Add('-- '+SCredits+' --');
   Memo1.Lines.Add('');

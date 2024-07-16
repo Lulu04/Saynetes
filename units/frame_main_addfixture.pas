@@ -87,7 +87,7 @@ begin
   if i = -1 then exit;
 
   if AskConfirmation(SDeleteThisUniverse+lineending+
-          UniverseManager.Universes[i].Name, SYes, SNo, mtWarning) <> mrOk then exit;
+          UniverseManager.Universes[i].Name, SYes, SNo, mtWarning) <> mrYes then exit;
 
   FormMain.FrameViewProjector1.Sel_None;
   FrameViewUniverseList1.RemoveSelected;
@@ -123,7 +123,7 @@ begin
   // ask user confirmation
   if UniverseManager.Count > 0 then
     if AskConfirmation(SOverwriteDMXConf+LineEnding+SContinue+' ?',
-       SContinue, SCancel, mtWarning) <> mrOk then exit;
+       SContinue, SCancel, mtWarning) <> mrYes then exit;
 
   if UniverseManager.LoadFromProject(OD1.FileName) then
   begin
@@ -227,7 +227,7 @@ begin
   if UniverseManager.Count = 0 then
   begin
     if AskConfirmation(SActuallyThereIsNoUniverse+lineending+SWouldYouLikeToCreateOne,
-          SOk, SNo, mtConfirmation) = mrOk then
+          SOk, SNo, mtConfirmation) = mrYes then
       BAddUniverseClick(NIL);
   end;
 

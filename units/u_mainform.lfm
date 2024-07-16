@@ -414,6 +414,11 @@ object FormMain: TFormMain
         ImageIndex = 37
         OnClick = MIProgramOptionsClick
       end
+      object BCheckNewVersion: TMenuItem
+        Caption = 'Check if a new version exists'
+        ImageIndex = 54
+        OnClick = BCheckNewVersionClick
+      end
     end
     object MenuItem6: TMenuItem
       Caption = 'About...'

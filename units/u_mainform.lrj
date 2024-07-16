@@ -23,5 +23,6 @@
 {"hash":265022994,"name":"tformmain.mitooldevicemanager.caption","sourcebytes":[68,101,118,105,99,101,32,109,97,110,97,103,101,114],"value":"Device manager"},
 {"hash":45130473,"name":"tformmain.mitooldmxlibrary.caption","sourcebytes":[68,77,88,32,108,105,98,114,97,114,121],"value":"DMX library"},
 {"hash":59960659,"name":"tformmain.miprogramoptions.caption","sourcebytes":[80,114,111,103,114,97,109,32,111,112,116,105,111,110,115],"value":"Program options"},
+{"hash":104737491,"name":"tformmain.bchecknewversion.caption","sourcebytes":[67,104,101,99,107,32,105,102,32,97,32,110,101,119,32,118,101,114,115,105,111,110,32,101,120,105,115,116,115],"value":"Check if a new version exists"},
 {"hash":158102910,"name":"tformmain.menuitem6.caption","sourcebytes":[65,98,111,117,116,46,46,46],"value":"About..."}
 ]}

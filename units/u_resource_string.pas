@@ -9,12 +9,17 @@ uses
 
 
 resourcestring
-  SProgramVersion='Program version';
+  SErrorAccessingInternet='Error accessing internet';
+  SNoNewVersion='No new version';
+  SCurrentVersion='current version';
+  SIsAvailable='is available';
+  SDoYouWantToQuitAndOpenURLToDownloadIt='Do you want to quit the program and open the website to download the it ?';
   SWrittenBy='Written by';
   SCredits='Credits';
   SIconAppBy='Application icon by';
   SApplicationWrittenIn='Application written in';
   SWith='with';
+
 
   SLoadingFixtureImage='loading DMX fixture images';
   SLoadingCursorImage='loading DMX cursor images';
