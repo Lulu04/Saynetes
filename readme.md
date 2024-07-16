@@ -4,16 +4,21 @@ Sound and lighting control software. Free and open source, written in FreePascal
 License: GPLv3  
 Author: Lulu  
 
-# Supported platforms
+## Supported platforms
 Windows 64b (tested on Win10)  
 Windows 32b (tested on Win7 32b)  
 Linux 64b - GTK2 - with oversized font height and some wrong colors (tested on Ubuntu 22.04 LTS)  
 
-# Supported DMX Device
+## Supported DMX Device
 Velleman K8062  
 Enttec USB DMX PRO  
 
-# Screenshots
+## Contributions
+You can contribute by adding new fixture definitions to Saynètes. If you do, please, send a copy of the definition [here](https://github.com/Lulu04/Saynetes/issues) or by mail at lulutech@gmx.fr  
+The fixtures you submit will be added in the next release.
+If you have ideas for improving Saynètes, please submit them in the [issue channel](https://github.com/Lulu04/Saynetes/issues) in this repository. thanks !  
+
+## Screenshots
 The main window
 ![The main window](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/MainScreen.png)
   
