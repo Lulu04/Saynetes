@@ -26,28 +26,16 @@ type
     MIDeleteFolder: TMenuItem;
     MenuItem4: TMenuItem;
     MIDeleteFixture: TMenuItem;
-    PopupMenu1: TPopupMenu;
     Separator1: TMenuItem;
     TV: TTreeView;
-    procedure MIDevelopClick(Sender: TObject);
-    procedure MINewFolderClick(Sender: TObject);
-    procedure MIDeleteFolderClick(Sender: TObject);
-    procedure MIDeleteFixtureClick(Sender: TObject);
-    procedure MIRenameFixtureClick(Sender: TObject);
-    procedure MIRenameFolderClick(Sender: TObject);
-    procedure PopupMenu1Popup(Sender: TObject);
     procedure TVClick(Sender: TObject);
-    procedure TVDragDrop(Sender, Source: TObject; X, Y: Integer);
-    procedure TVDragOver(Sender, Source: TObject; {%H-}X, {%H-}Y: Integer; {%H-}State: TDragState; var Accept: Boolean);
     procedure TVSelectionChanged(Sender: TObject);
     procedure TVStartDrag(Sender: TObject; var {%H-}DragObject: TDragObject);
   private
     FOnMoveItem: TMoveItemEvent;
     FOnSelectionChange: TSelectionChangeEvent;
     FOnStartDragFixture: TStartDragFixtureEvent;
-    FUserChangeEnabled: boolean;
     function GetSelectedFixtureLocation: TFixtureLibraryLocation;
-    procedure SetUserChangeEnabled(AValue: boolean);
     function SortProc( Node1, Node2: TTreeNode ): integer;
     procedure FillTreeViewWithLibraryContent;
     function RelativePathForNode(aNode: TTreeNode): string;
@@ -75,10 +63,8 @@ type
     // search the fixture in the treeview, select it and make it visible
     procedure SelectFixture(const aFixtureLocation: TFixtureLibraryLocation);
 
-
     // use this property only if function SelectedIsMode return True
     property SelectedFixtureLocation: TFixtureLibraryLocation read GetSelectedFixtureLocation;
-    property UserChangeEnabled: boolean read FUserChangeEnabled write SetUserChangeEnabled;
     property OnSelectionChange: TSelectionChangeEvent read FOnSelectionChange write FOnSelectionChange;
     property OnMoveItem: TMoveItemEvent read FOnMoveItem write FOnMoveItem;
     property OnStartDragFixture: TStartDragFixtureEvent read FOnStartDragFixture write FOnStartDragFixture;
@@ -92,196 +78,6 @@ uses u_resource_string, u_userdialogs, u_logfile, u_apputils,
 {$R *.lfm}
 
 { TFrameViewDMXLibrary }
-
-procedure TFrameViewDMXLibrary.TVDragDrop(Sender, Source: TObject; X, Y: Integer);
-var SourceNode, TargetNode: TTreeNode;
-  SourcePath, TargetPath: string;
-  Accept: boolean;
-begin
- if Sender <> Source then exit; // moves only inside TTreeView
-
- SourceNode := TV.Selected;
- TargetNode := TV.GetNodeAt(x,y);
- if TargetNode = NIL then
-   TargetNode := TV.Items.GetFirstNode;
- if (SourceNode = NIL) or ( TargetNode = NIL) or (SourceNode = TargetNode) then
-   exit;
-
- SourcePath := AbsolutePathForNode(TV.Selected);
- if ItsTheRoot( TargetNode ) then
-   TargetPath := GetDMXLibraryFolder
- else if ItsAFolder( TargetNode ) then
-        TargetPath := AbsolutePathForNode( TargetNode )
-      else
-        TargetPath := ExtractFilePath( AbsolutePathForNode( TargetNode ));
-
- if ExtractFilePath(SourcePath) = ExtractFilePath(TargetPath) then
-   exit; // move in same folder -> do nothing
-
- if ItsAFolder( SourceNode ) then
-   if ParentPath( SourcePath ) = TargetPath then
-     exit;
-
-  if FOnMoveItem = NIL then exit;
-  Accept := TRUE;
-  FOnMoveItem(Self, SourceNode, TargetPath, Accept);
-  if not Accept then exit;
- try
-  if ItsAFile( SourceNode ) then begin
-    // move a file
-    if CopieFichier(SourcePath, TargetPath) then
-      SupprimeFichier(SourcePath);
-    //DeplaceFichier( SourcePath, TargetPath  )  // move a file
-  end else begin
-    // move a folder
-    CopieRepertoire( SourcePath, TargetPath, TRUE, TRUE );
-    SupprimeRepertoire( SourcePath );
-  end;
- except
-  // showmess('erreur');
- end;
- FillTreeViewWithLibraryContent;
- TV.CustomSort( @SortProc );
-end;
-
-procedure TFrameViewDMXLibrary.MINewFolderClick(Sender: TObject);
-var fol: string;
- new: string;
- i: integer;
-begin
-  fol := '';
-  if UserInputFileName(SNameOfTheNewFolder, SOk, SCancel, fol, mtConfirmation) <> mrOk then
-    exit;
-
-  new := ConcatPaths([GetDMXLibraryFolder, fol]);
-  if TV.Selected <> nil then
-  begin
-    if ItsAFolder( TV.Selected ) then
-      new := ConcatPaths([AbsolutePathForNode( TV.Selected ), fol])
-    else
-      new := ConcatPaths([ExtractFilePath( AbsolutePathForNode( TV.Selected )), fol ]);
-  end;
-  if not CreerRepertoire( new ) then
-  begin
-    ShowMess( SEnableToCreateTheNewFolder+lineending+new, SOk, mtCustom );
-    exit;
-  end;
- // on re-scan la bibliothèque
- FillTreeViewWithLibraryContent;
-
- // select the new created folder
- new := UpCase( new );
- for i:=0 to TV.Items.Count-1 do
-  if TV.Items.Item[i].Text = new then
-  begin
-    TV.Items.Item[i].Selected := TRUE;
-    TV.Items.Item[i].MakeVisible;
-  end;
- TV.CustomSort( @SortProc );
-end;
-
-procedure TFrameViewDMXLibrary.MIDevelopClick(Sender: TObject);
-var n: TTreeNode;
-begin
-  if TV.Items.Count = 0 then exit;
-
-  n := TV.Items.GetFirstNode;
-  if Sender = MIDevelop then begin
-    for n in TV.Items do if n.ImageIndex = 1 then n.Expand(False);
-  end else begin
-    for n in TV.Items do if n.ImageIndex = 1 then n.Collapse(True);
-  end;
-end;
-
-procedure TFrameViewDMXLibrary.MIDeleteFolderClick(Sender: TObject);
-var fol: string;
-begin
- if TV.Selected = nil then exit;
- if not ItsAFolder( TV.Selected ) then exit;
- fol := AbsolutePathForNode( TV.Selected );
-
- if AskConfirmation( SYouWillLoseAllTheContentOfTheFolder+' ' + TV.Selected.Text +
-                     lineending, SContinue, SNo, mtWarning) = mrYes then exit;
-
- if not SupprimeRepertoire( fol ) then
- begin
-   ShowMess( SFailedToDeleteTheFolder+lineending+fol, SOk, mtError);
-   exit;
- end;
- // re-scan the library
- FillTreeViewWithLibraryContent;
- TV.CustomSort( @SortProc );
-end;
-
-procedure TFrameViewDMXLibrary.MIDeleteFixtureClick(Sender: TObject);
-var filename: string;
-begin
- if TV.Selected = NIL then exit;
- if not ItsAFile( TV.Selected) then exit;
- if AskConfirmation(SYouAreAboutToDelete+' ' + TV.Selected.Text +
-                 lineending, SContinue, SNo, mtConfirmation)=mrCancel then exit;
-
- filename := AbsolutePathForNode(TV.Selected);
- if not DeleteFile(filename) then// SupprimeFichier( filename ) then
- begin
-   showmess( SFailedToRemoveTheFixture + lineending + TV.Selected.Text, SOk, mtError );
-   exit;
- end;
-
- // re-scan the library
- FillTreeViewWithLibraryContent;
- TV.CustomSort(@SortProc);
-end;
-
-procedure TFrameViewDMXLibrary.MIRenameFixtureClick(Sender: TObject);
-var n, old: string;
- path: string;
-begin
- if TV.Selected = NIL then exit;
- if ItsAFolder( TV.Selected) then exit;
-
-
- old := AbsolutePathForNode(TV.Selected);
- path := ExtractFilePath(old);
-
- n := TV.Selected.Text;
- if UserInputFileName(SNewName, SOk, SCancel, n, mtConfirmation) = mrOk then
- begin
-   n := ChangeFileExt(n, DMX_LIBRARY_FILE_EXTENSION);
-   n := ConcatPaths([path,n]);
-   if not RenommeFichier( old, n) then
-     ShowMess(SFailedToRenameTheFixture+lineending+ExtractFilename(old), SOk, mtError)
-   else
-     TV.Selected.Text := ChangeFileExt(ExtractFilename(n), '');
- end;
-end;
-
-procedure TFrameViewDMXLibrary.MIRenameFolderClick(Sender: TObject);
-var n, old, ne: string;
-begin
- if TV.Selected = NIL then exit;
- if ItsAFile( TV.Selected) then exit;
-
- old := AbsolutePathForNode(TV.Selected);
- n := TV.Selected.Text;
- if UserInputFileName(SNewName, SOk, SCancel, n, mtConfirmation)=mrOk then
- begin
-   ne := ConcatPaths([RepertoireParent(old),n]);
-   if not RenommerRepertoire( old, ne) then
-     ShowMess(SFailedToRenameTheFolder+lineending+old, SOk, mtError)
-   else
-     TV.Selected.Text := n;
- end;
-end;
-
-procedure TFrameViewDMXLibrary.PopupMenu1Popup(Sender: TObject);
-begin
-  MIDeleteFolder.Enabled := ItsAFolder(TV.Selected);
-  MIRenameFolder.Enabled := MIDeleteFolder.Enabled;
-
-  MIDeleteFixture.Enabled := ItsAFile(TV.Selected);
-  MIRenameFixture.Enabled := MIDeleteFixture.Enabled;
-end;
 
 procedure TFrameViewDMXLibrary.TVClick(Sender: TObject);
 var p: TPoint;
@@ -307,11 +103,6 @@ begin
         n.Collapse(False);
     TV.Tag := 0;
   end;
-end;
-
-procedure TFrameViewDMXLibrary.TVDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
-begin
- Accept := ( Sender = TV ) and ( Source = TV ) and FUserChangeEnabled;
 end;
 
 procedure TFrameViewDMXLibrary.TVSelectionChanged(Sender: TObject);
@@ -364,16 +155,6 @@ begin
   if not ItsAMode(TV.Selected) then exit;
 
   Result := TV.Selected.Text;
-end;
-
-procedure TFrameViewDMXLibrary.SetUserChangeEnabled(AValue: boolean);
-begin
-  if FUserChangeEnabled = AValue then Exit;
-  FUserChangeEnabled := AValue;
-  if not FUserChangeEnabled then
-     TV.PopupMenu := NIL
-  else
-    TV.PopupMenu := PopupMenu1;
 end;
 
 function TFrameViewDMXLibrary.GetSelectedFixtureLocation: TFixtureLibraryLocation;

@@ -196,7 +196,6 @@ begin
   FrameViewDMXLibrary1 := TFrameViewDMXLibrary.Create(Self);
   FrameViewDMXLibrary1.Parent := Panel6;
   FrameViewDMXLibrary1.Align := alClient;
-  FrameViewDMXLibrary1.UserChangeEnabled := FALSE;
   FrameViewDMXLibrary1.OnSelectionChange := @ProcessDMXLibrarySelectionChangeEvent;
   FrameViewDMXLibrary1.OnStartDragFixture := @ProcessDMXLibraryStartDragFixtureEvent;
 
