@@ -252,8 +252,11 @@ begin
 
   F := TFormConfirmationDeleteProject.Create(NIL);
   F.SetProjectName(ExtractFileName(currentFile));
-  if F.ShowModal <> mrOk then exit;
-  F.Free;
+  try
+    if F.ShowModal <> mrOk then exit;
+  finally
+    F.Free;
+  end;
 
   // if the project to rename is the current opened, we close it -> stops all audio streams
   flagProjectIsOpened := Project.Filename = currentFile;

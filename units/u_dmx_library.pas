@@ -138,7 +138,6 @@ begin
   FrameViewDMXLibrary1.Align := alClient;
   FrameViewDMXLibrary1.OnSelectionChange := @ProcessViewDMXLibrarySelectionChangeEvent;
   FrameViewDMXLibrary1.OnMoveItem := NIL; //@ProcessViewDMXLibraryMoveItem;
-  FrameViewDMXLibrary1.UserChangeEnabled := False; //TRUE;
 
   FrameFixtureOverview := TFrameFixtureOverview.Create(Self);
   FrameFixtureOverview.Parent := Panel3;

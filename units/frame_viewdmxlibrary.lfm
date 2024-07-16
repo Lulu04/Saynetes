@@ -33,55 +33,9 @@ object FrameViewDMXLibrary: TFrameViewDMXLibrary
     ShowRoot = False
     TabOrder = 0
     OnClick = TVClick
-    OnDragDrop = TVDragDrop
-    OnDragOver = TVDragOver
     OnSelectionChanged = TVSelectionChanged
     OnStartDrag = TVStartDrag
     Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips]
     TreeLinePenStyle = psSolid
-  end
-  object PopupMenu1: TPopupMenu
-    OnPopup = PopupMenu1Popup
-    Left = 48
-    Top = 72
-    object MINewFolder: TMenuItem
-      Caption = 'New folder...'
-      ImageIndex = 0
-      OnClick = MINewFolderClick
-    end
-    object MIRenameFolder: TMenuItem
-      Caption = 'Rename folder'
-      ImageIndex = 6
-      OnClick = MIRenameFolderClick
-    end
-    object MIDeleteFolder: TMenuItem
-      Caption = 'Delete folder...'
-      ImageIndex = 1
-      OnClick = MIDeleteFolderClick
-    end
-    object MenuItem4: TMenuItem
-      Caption = '-'
-    end
-    object MIRenameFixture: TMenuItem
-      Caption = 'Rename fixture...'
-      ImageIndex = 6
-      OnClick = MIRenameFixtureClick
-    end
-    object MIDeleteFixture: TMenuItem
-      Caption = 'Delete fixture...'
-      ImageIndex = 1
-      OnClick = MIDeleteFixtureClick
-    end
-    object Separator1: TMenuItem
-      Caption = '-'
-    end
-    object MIDevelop: TMenuItem
-      Caption = 'Develop folders'
-      OnClick = MIDevelopClick
-    end
-    object MICollapseTree: TMenuItem
-      Caption = 'Collapse folders'
-      OnClick = MIDevelopClick
-    end
   end
 end
