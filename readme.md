@@ -6,16 +6,20 @@ Author: Lulu
 
 ## Supported platforms
 Windows 64b (tested on Win10)  
-Windows 32b (tested on Win7 32b)  
+Windows 32b, 7 and + (tested on Win7 32b)  
 Linux 64b - GTK2 - with oversized font height and some wrong colors (tested on Ubuntu 22.04 LTS)  
 
 ## Supported DMX Device
 Velleman K8062  
 Enttec USB DMX PRO  
 
+## Download
+Last release can be found [here](https://github.com/Lulu04/Saynetes/releases/latest)  
+**Portable version**: no installation, simply unzip the downloaded package.  
+**Installable version**: (only Windows) download and run the setup package.  
+
 ## Contributions
-You can contribute by adding new fixture definitions to Saynètes. If you do, please, send a copy of the definition [here](https://github.com/Lulu04/Saynetes/issues) or by mail at lulutech@gmx.fr  
-The fixtures you submit will be added in the next release.
+You can contribute by adding new fixture definitions to Saynètes. If you do, please, send a copy of the definition [here](https://github.com/Lulu04/Saynetes/issues) or by mail at lulutech@gmx.fr, they will be added in the next release. 
 If you have ideas for improving Saynètes, please submit them in the [issue channel](https://github.com/Lulu04/Saynetes/issues) in this repository. thanks !  
 
 ## Screenshots
