@@ -347,7 +347,7 @@ begin
   if t = NIL then
     exit;
 
-  if AskConfirmation(SAreYouSureToDeleteThisSequence, SYes, SCancel, mtWarning)<>mrOk then
+  if AskConfirmation(SAreYouSureToDeleteThisSequence, SYes, SCancel, mtWarning) <> mrYes then
     exit;
   DeleteSelection;
   RemoveErrorHint;

@@ -554,7 +554,7 @@ begin
   // save
   f := GetOutputFilename;
   if not FEditingExistingFixture and FileExists(f) then
-    if AskConfirmation(SAskToOverwriteFixtureFilename, SYes, SCancel, mtWarning) <> mrOk then exit;
+    if AskConfirmation(SAskToOverwriteFixtureFilename, SYes, SCancel, mtWarning) <> mrYes then exit;
 
   if not libFix.SaveToFile(f) then ShowMess(SUnableToSaveTheFixture, SClose, mtError)
     else begin
@@ -881,7 +881,7 @@ begin
 
   if Sender = BDeleteWebLink then begin
     if LBWebLink.ItemIndex = -1 then exit;
-    if AskConfirmation(SAskDeleteThisLink, SDelete, SCancel, mtConfirmation) <> mrOk then exit;
+    if AskConfirmation(SAskDeleteThisLink, SDelete, SCancel, mtConfirmation) <> mrYes then exit;
     Delete(FWebLinks, LBWebLink.ItemIndex, 1);
     LBWebLink.Items.Delete(LBWebLink.ItemIndex);
     Modified := True;

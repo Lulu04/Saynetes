@@ -201,7 +201,7 @@ begin
  fol := AbsolutePathForNode( TV.Selected );
 
  if AskConfirmation( SYouWillLoseAllTheContentOfTheFolder+' ' + TV.Selected.Text +
-                     lineending, SContinue, SNo, mtWarning)=mrCancel then exit;
+                     lineending, SContinue, SNo, mtWarning) = mrYes then exit;
 
  if not SupprimeRepertoire( fol ) then
  begin

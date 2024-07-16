@@ -10,10 +10,10 @@ uses
 
 procedure ShowMess(const mess, sbutton: string; aMsgType: TMsgDlgType=mtCustom);
 
-// return mrOk or mrCancel
-function AskConfirmation(const mess, syes, sno: string; aMsgType: TMsgDlgType): integer;
+// return mrYes or mrCancel
+function AskConfirmation(const mess, syes, sno: string; aMsgType: TMsgDlgType): integer; overload;
 // return mrYes or mrNo or mrCancel
-function AskConfirmation(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer;
+function AskConfirmation(const mess, syes, sno, scancel: string; aMsgType: TMsgDlgType): integer; overload;
 
 function UserIntegerInput(const mess, sok, scancel: string;
                            var number: integer;

@@ -164,7 +164,7 @@ var f: string;
 begin
   if FLBPlaylist.ItemIndex = -1 then exit;
 
-  if AskConfirmation(SAskDeletePlaylist, SYes, SNo, mtWarning) = mrOk then
+  if AskConfirmation(SAskDeletePlaylist, SYes, SNo, mtWarning) = mrYes then
   begin
     StopPlaylist;
     f := ConcatPaths([FLBPlaylist.Directory, FLBPlaylist.GetSelectedText]);

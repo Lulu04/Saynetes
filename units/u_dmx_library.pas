@@ -128,7 +128,7 @@ begin
   else
     s := lineending+SMoveTheFile;
   s := s+' '+aNode.Text+' '+STo+lineending+aTargetPath+lineending+'?';
-  Accept := AskConfirmation(s, SYes, SNo, mtWarning) = mrOk;
+  Accept := AskConfirmation(s, SYes, SNo, mtWarning) = mrYes;
 end;
 
 procedure TFormDMXLibrary.FormCreate(Sender: TObject);

@@ -172,7 +172,7 @@ begin
 
   if AskConfirmation(SRemoveAudioFileFromProject + lineending +
                   SFileWillBeDeletedFromProjectStorage,
-                  SOk, SCancel, mtWarning) = mrOk then
+                  SOk, SCancel, mtWarning) = mrYes then
   begin
     FrameViewAudioList1.DeleteSelected;
     Project.Save;
