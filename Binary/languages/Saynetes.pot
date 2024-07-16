@@ -289,6 +289,10 @@ msgctxt "tformdmxlibrary.bnewfixture.caption"
 msgid "New fixture"
 msgstr ""
 
+#: tformdmxlibrary.bopeninfileexplorer.hint
+msgid "Open in file explorer"
+msgstr ""
+
 #: tformdmxlibrary.caption
 msgctxt "tformdmxlibrary.caption"
 msgid "DMX library"

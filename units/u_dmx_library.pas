@@ -21,6 +21,8 @@ type
     Shape1: TShape;
     BNewFixture: TSpeedButton;
     BEditFixture: TSpeedButton;
+    BOpenInFileExplorer: TSpeedButton;
+    procedure BOpenInFileExplorerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
@@ -42,8 +44,8 @@ type
 //  FormDMXLibrary: TFormDMXLibrary;
 
 implementation
-uses LCLType, u_resource_string, u_editfixturewizard, u_common,
-  u_userdialogs, u_mainform;
+uses LCLType, LCLintf,  u_resource_string, u_editfixturewizard, u_common,
+  u_userdialogs, u_mainform, u_apputils;
 
 {$R *.lfm}
 
@@ -148,6 +150,11 @@ begin
   FrameViewDMXFixtureChannels1.Parent := Panel2;
   FrameViewDMXFixtureChannels1.Align := alClient;
   FrameViewDMXFixtureChannels1.Visible := False;
+end;
+
+procedure TFormDMXLibrary.BOpenInFileExplorerClick(Sender: TObject);
+begin
+  OpenDocument(GetDMXLibraryFolder);
 end;
 
 end.

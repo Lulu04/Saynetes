@@ -326,6 +326,10 @@ msgctxt "tformdmxlibrary.bnewfixture.caption"
 msgid "New fixture"
 msgstr "Nouveau matériel"
 
+#: tformdmxlibrary.bopeninfileexplorer.hint
+msgid "Open in file explorer"
+msgstr "Ouvrir dans l'explorateur de fichiers"
+
 #: tformdmxlibrary.caption
 msgctxt "tformdmxlibrary.caption"
 msgid "DMX library"
