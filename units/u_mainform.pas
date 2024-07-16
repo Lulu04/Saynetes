@@ -223,7 +223,6 @@ end;
 
 procedure TFormMain.BCheckNewVersionClick(Sender: TObject);
 var newVersion: string;
-  res: integer;
 begin
   case CheckForNewVersionOnGitHub(newVersion) of
    rcovErrorAccessingInternet: ShowMess(SErrorAccessingInternet, SOk, mtError);
