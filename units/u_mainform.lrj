@@ -1,9 +1,9 @@
 {"version":1,"strings":[
 {"hash":246124483,"name":"tformmain.caption","sourcebytes":[83,65,89,78,195,136,84,69,83],"value":"SAYN\u00C8TES"},
 {"hash":97791758,"name":"tformmain.btoogleeditmode.hint","sourcebytes":[83,119,105,116,99,104,32,98,101,116,119,101,101,110,32,69,68,73,84,32,77,79,68,69,32,97,110,100,32,83,72,79,87,32,77,79,68,69,46,13,10,73,110,32,69,68,73,84,32,77,79,68,69,32,121,111,117,32,99,97,110,32,101,100,105,116,32,116,104,101,32,112,114,111,106,101,99,116,46,13,10,73,110,32,83,72,79,87,32,77,79,68,69,44,32,121,111,117,32,99,97,110,32,110,111,116,32,97,112,112,108,121,32,109,111,100,105,102,105,99,97,116,105,111,110,115,32,111,110,32,116,104,101,32,112,114,111,106,101,99,116,46],"value":"Switch between EDIT MODE and SHOW MODE.\r\nIn EDIT MODE you can edit the project.\r\nIn SHOW MODE, you can not apply modifications on the project."},
-{"hash":250834030,"name":"tformmain.blight.hint","sourcebytes":[83,104,111,119,32,116,104,101,32,108,105,103,104,116,105,110,103,115,32,119,105,110,100,111,119,32,40,83,104,111,114,116,107,101,121,32,70,50,41,46],"value":"Show the lightings window (Shortkey F2)."},
+{"hash":31310716,"name":"tformmain.blight.hint","sourcebytes":[83,104,111,119,47,72,105,100,101,32,116,104,101,32,108,105,103,104,116,105,110,103,115,32,112,97,110,101,108],"value":"Show/Hide the lightings panel"},
 {"hash":5299156,"name":"tformmain.blight.caption","sourcebytes":[76,73,71,72,84],"value":"LIGHT"},
-{"hash":68019774,"name":"tformmain.baudio.hint","sourcebytes":[83,104,111,119,32,116,104,101,32,97,117,100,105,111,32,119,105,110,100,111,119,32,40,83,104,111,114,116,107,101,121,32,70,49,41,46],"value":"Show the audio window (Shortkey F1)."},
+{"hash":5187340,"name":"tformmain.baudio.hint","sourcebytes":[83,104,111,119,47,72,105,100,101,32,116,104,101,32,97,117,100,105,111,32,112,97,110,101,108],"value":"Show/Hide the audio panel"},
 {"hash":4626655,"name":"tformmain.baudio.caption","sourcebytes":[65,85,68,73,79],"value":"AUDIO"},
 {"hash":110490857,"name":"tformmain.speedbutton1.hint","sourcebytes":[78,101,119,32,112,114,111,106,101,99,116,32,40,67,116,114,108,43,78,41],"value":"New project (Ctrl+N)"},
 {"hash":208060057,"name":"tformmain.speedbutton2.hint","sourcebytes":[76,111,97,100,32,97,32,112,114,111,106,101,99,116,32,40,67,116,114,108,43,79,41],"value":"Load a project (Ctrl+O)"},
