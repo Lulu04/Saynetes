@@ -41,8 +41,8 @@ Source: "C:\Pascal\Saynetes\Binary\{#MyAppExeName}"; DestDir: "{app}"; Flags: ig
 Source: "C:\Pascal\Saynetes\Binary\Data\*"; DestDir: "{app}\Data"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Pascal\Saynetes\Binary\languages\*"; DestDir: "{app}\languages"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Pascal\Saynetes\Binary\i386-win32\*"; DestDir: "{app}\i386-win32"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Pascal\Saynetes\Demo\*"; DestDir: "{commonappdata}\Saynetes\Demo\"; Flags: external recursesubdirs skipifsourcedoesntexist onlyifdoesntexist; Permissions: users-modify
-Source: "C:\Pascal\Saynetes\Binary\DMXLibrary\*"; DestDir: "{commonappdata}\Saynetes\DMXLibrary\"; Flags: external recursesubdirs skipifsourcedoesntexist onlyifdoesntexist uninsneveruninstall; Permissions: users-modify
+Source: "C:\Pascal\Saynetes\Demo\*"; DestDir: "{commonappdata}\Saynetes\Demo"; Flags: recursesubdirs skipifsourcedoesntexist onlyifdoesntexist; Permissions: users-modify
+Source: "C:\Pascal\Saynetes\Binary\DMXLibrary\*"; DestDir: "{commonappdata}\Saynetes\DMXLibrary"; Flags: recursesubdirs skipifsourcedoesntexist onlyifdoesntexist uninsneveruninstall; Permissions: users-modify
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
