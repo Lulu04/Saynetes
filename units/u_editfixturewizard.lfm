@@ -48,14 +48,14 @@ object FormFixtureWizard: TFormFixtureWizard
     object PageGeneral: TPage
       object Label4: TLabel
         AnchorSideLeft.Control = PageGeneral
-        AnchorSideTop.Control = PageGeneral
+        AnchorSideTop.Control = Label5
+        AnchorSideTop.Side = asrBottom
         Left = 15
         Height = 15
-        Top = 218
+        Top = 213
         Width = 394
-        Anchors = [akLeft]
         BorderSpacing.Left = 15
-        BorderSpacing.Top = 10
+        BorderSpacing.Top = 15
         Caption = 'Choose the type of fixture that is closest to the one you want to create'
         Font.Color = 15395562
         Font.Style = [fsBold]
@@ -72,8 +72,8 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Control = PageGeneral
         AnchorSideBottom.Side = asrBottom
         Left = 15
-        Height = 487
-        Top = 236
+        Height = 492
+        Top = 231
         Width = 974
         HorzScrollBar.Page = 1
         VertScrollBar.Increment = 32
@@ -155,7 +155,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         Left = 112
         Height = 23
-        Top = 101
+        Top = 96
         Width = 279
         Anchors = []
         OnChange = CBManufacturersChange
@@ -182,7 +182,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Side = asrBottom
         Left = 401
         Height = 15
-        Top = 109
+        Top = 104
         Width = 89
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 10
@@ -227,7 +227,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideBottom.Side = asrBottom
         Left = 495
         Height = 15
-        Top = 109
+        Top = 104
         Width = 28
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
@@ -328,7 +328,7 @@ object FormFixtureWizard: TFormFixtureWizard
         AnchorSideTop.Side = asrBottom
         Left = 401
         Height = 28
-        Top = 124
+        Top = 119
         Width = 278
         BevelOuter = bvNone
         ClientHeight = 28

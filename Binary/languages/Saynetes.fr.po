@@ -637,8 +637,8 @@ msgstr "AUDIO"
 
 #: tformmain.baudio.hint
 msgctxt "tformmain.baudio.hint"
-msgid "Show the audio window (Shortkey F1)."
-msgstr "Affiche la fenêtre audio (touche de raccourci F1)."
+msgid "Show/Hide the audio panel"
+msgstr "Montre/Cache le panneau audio"
 
 #: tformmain.blight.caption
 msgctxt "tformmain.blight.caption"
@@ -647,8 +647,8 @@ msgstr "LUMIÈRE"
 
 #: tformmain.blight.hint
 msgctxt "tformmain.blight.hint"
-msgid "Show the lightings window (Shortkey F2)."
-msgstr "Affiche la fenêtre des éclairages (touche de raccourci F2)."
+msgid "Show/Hide the lightings panel"
+msgstr "Montre/Cache le panneau éclairage"
 
 #: tformmain.btoogleeditmode.hint
 msgctxt "tformmain.btoogleeditmode.hint"

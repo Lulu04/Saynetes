@@ -594,7 +594,7 @@ msgstr ""
 
 #: tformmain.baudio.hint
 msgctxt "tformmain.baudio.hint"
-msgid "Show the audio window (Shortkey F1)."
+msgid "Show/Hide the audio panel"
 msgstr ""
 
 #: tformmain.blight.caption
@@ -604,7 +604,7 @@ msgstr ""
 
 #: tformmain.blight.hint
 msgctxt "tformmain.blight.hint"
-msgid "Show the lightings window (Shortkey F2)."
+msgid "Show/Hide the lightings panel"
 msgstr ""
 
 #: tformmain.btoogleeditmode.hint

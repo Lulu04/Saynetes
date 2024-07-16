@@ -123,7 +123,7 @@ object FormMain: TFormMain
       Cursor = crHandPoint
       Left = 829
       Height = 30
-      Hint = 'Show the lightings window (Shortkey F2).'
+      Hint = 'Show/Hide the lightings panel'
       Top = 5
       Width = 70
       Anchors = [akTop, akRight]
@@ -151,7 +151,7 @@ object FormMain: TFormMain
       Cursor = crHandPoint
       Left = 754
       Height = 30
-      Hint = 'Show the audio window (Shortkey F1).'
+      Hint = 'Show/Hide the audio panel'
       Top = 5
       Width = 70
       Anchors = [akTop, akRight]

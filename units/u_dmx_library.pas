@@ -65,6 +65,10 @@ begin
   end;
 
   Label1.Caption := SChannels_;
+
+  // force window height equal to Main window height
+  Height := Round(FormMain.ClientHeight*0.9);
+  Top := (FormMain.Monitor.WorkAreaRect.Height-Height) div 2;
 end;
 
 procedure TFormDMXLibrary.BNewFixtureClick(Sender: TObject);
@@ -81,10 +85,6 @@ begin
   finally
     F.Free;
   end;
-
-  // force window height equal to Main window height
-  Height := Round(FormMain.ClientHeight*0.9);
-  Top := (FormMain.Monitor.WorkAreaRect.Height-Height) div 2;
 end;
 
 procedure TFormDMXLibrary.BEditFixtureClick(Sender: TObject);
