@@ -1218,22 +1218,6 @@ begin
   finally
     F.Free;
   end;
-
-
-{  if GetSelectedCount=1
-   then txt:=SAreYouSureToDeleteThisFixture
-   else txt:=SAreYouSureToDeleteTheseFixtures;
-  if AskConfirmation(txt, SYes, SCancel, mtWarning)<>mrOk then exit;
-
-  for i:=0 to High(FSelected) do begin
-    uni:=FSelected[i].Universe;
-    uni.Fixture_DeleteByID(FSelected[i].ID);
-  end;
-  SetLength(FSelected, 0);
-  Redraw;
-  FrameViewDMXCursors1.Clear;
-  DoDeleteFixtureEvent;
-  Project.SetModified;    }
 end;
 
 procedure TFrameViewProjector.MIHFlipClick(Sender: TObject);
