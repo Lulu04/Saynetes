@@ -597,6 +597,10 @@ msgctxt "tformmain.baudio.hint"
 msgid "Show/Hide the audio panel"
 msgstr ""
 
+#: tformmain.bchecknewversion.caption
+msgid "Check if a new version exists"
+msgstr ""
+
 #: tformmain.blight.caption
 msgctxt "tformmain.blight.caption"
 msgid "LIGHT"
@@ -3066,6 +3070,10 @@ msgstr ""
 msgid "Credits"
 msgstr ""
 
+#: u_resource_string.scurrentversion
+msgid "current version"
+msgstr ""
+
 #: u_resource_string.scurve
 msgid "CURVE"
 msgstr ""
@@ -3263,6 +3271,10 @@ msgstr ""
 msgid "DMX - WAVE RGB"
 msgstr ""
 
+#: u_resource_string.sdoyouwanttoquitandopenurltodownloadit
+msgid "Do you want to quit the program and open the website to download the it ?"
+msgstr ""
+
 #: u_resource_string.sduration
 msgctxt "u_resource_string.sduration"
 msgid "Duration"
@@ -3316,6 +3328,10 @@ msgstr ""
 
 #: u_resource_string.serror
 msgid "Error"
+msgstr ""
+
+#: u_resource_string.serroraccessinginternet
+msgid "Error accessing internet"
 msgstr ""
 
 #: u_resource_string.serrorfoundinprojectsequences
@@ -3588,6 +3604,10 @@ msgstr ""
 msgid "is an alias of"
 msgstr ""
 
+#: u_resource_string.sisavailable
+msgid "is available"
+msgstr ""
+
 #: u_resource_string.sitsnameisreplacedby
 msgid "Its name is replaced by"
 msgstr ""
@@ -3833,6 +3853,10 @@ msgstr ""
 msgid "None"
 msgstr ""
 
+#: u_resource_string.snonewversion
+msgid "No new version"
+msgstr ""
+
 #: u_resource_string.snormal
 msgctxt "u_resource_string.snormal"
 msgid "normal"
@@ -4031,10 +4055,6 @@ msgstr ""
 #: u_resource_string.sprofile
 msgctxt "u_resource_string.sprofile"
 msgid "Profile"
-msgstr ""
-
-#: u_resource_string.sprogramversion
-msgid "Program version"
 msgstr ""
 
 #: u_resource_string.sprojectcreatedwithsuccess
