@@ -22,9 +22,13 @@ function GetAppIconImagesFolder: string;
 function GetAppDMXEffectImagesFolder: string;
 
 { For Windows, we have two mode: application can be portable or installable (with InnoSetup)
-  - Portable mode: the Demo folder is located in the executable folder. This is done by the batch script.
+  - Portable mode: no installation, simply unzip the downloaded package.
+      . the Demo and DMXLibrary folder are located in the executable folder.
+      . DMXLibrary folder, log file and program options are located in the executable folder.
 
-
+  - Installable: only for Windows, using InnoSetup.
+      .the Demo and DMXLibrary folders are located in: C:\ProgramData\Saynetes
+      . DMXLibrary folder, log file and program options are located in C:\ProgramData\Saynetes.
 }
 
 var
