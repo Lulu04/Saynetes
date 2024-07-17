@@ -24,7 +24,7 @@ If you found bugs or have ideas for improving Saynètes, please submit them in t
 
 ## Screenshots
 The main window
-![The main window](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/MainScreen.png)
+![The main window](Screenshots/MainScreen.png)
   
 Create sequences and build your show
 ![The sequencer](Screenshots/Sequencer.png)
@@ -39,7 +39,7 @@ You must have Lazarus IDE installed on your system with BGRABitmap package.
 The directory structure should be like:  
 `|- saynetes`  
 `    |- ALSound`  
-`    |- Saynetes (clone version) or Saynetes-main (unziped version)`  
+`    |- Saynetes (if you clone the repository) or Saynetes-main (if you download ZIP)`  
 `    |- UnitsCommon`  
   
 Now, you are able to open the Lazarus project in the directory Saynetes or Saynetes-main.  
