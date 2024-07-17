@@ -406,13 +406,17 @@ object FormMain: TFormMain
         ImageIndex = 32
         OnClick = MIToolDMXLibraryClick
       end
-      object MenuItem5: TMenuItem
-        Caption = '-'
-      end
       object MIProgramOptions: TMenuItem
         Caption = 'Program options'
         ImageIndex = 37
         OnClick = MIProgramOptionsClick
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object MIViewLog: TMenuItem
+        Caption = 'View Saynètes log file'
+        OnClick = MIViewLogClick
       end
       object BCheckNewVersion: TMenuItem
         Caption = 'Check if a new version exists'

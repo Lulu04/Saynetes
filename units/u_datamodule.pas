@@ -219,6 +219,7 @@ begin
   AddImageToImageList('CheckBoxChecked.svg', ImageList1);
   AddImageToImageList('CheckBoxUnchecked.svg', ImageList1);
   AddImageToImageList('Web.svg', ImageList1);
+  AddImageToImageList('SendMail.svg', ImageList1);   // 55
   ImageList1.EndUpdate;
 end;
 

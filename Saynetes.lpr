@@ -33,7 +33,8 @@ uses
   frame_view_switcheritem, frame_editrange, form_edit_repetitivechannel,
   form_selectsourcechannel, form_rangesgenerator, u_dmx_util, form_splash,
   form_newmanufacturer, BGRABitmapTypes, frame_trackbar_customized, form_help,
-  form_importsequence, form_confirmdeleteproject, u_web;
+  form_importsequence, form_confirmdeleteproject, u_web, utilitaire_fichier,
+  form_viewlog;
 
 {$R *.res}
 
@@ -51,6 +52,10 @@ begin
   // exists. if not, try to create it.
   CheckAppConfigFolder;
 
+  if FileExists(GetUserConfigFolder + 'saynetes.log') then begin
+    SupprimeFichier(GetUserConfigFolder + 'saynetes_previous_session.log');
+    RenommeFichier(GetUserConfigFolder + 'saynetes.log', GetUserConfigFolder + 'saynetes_previous_session.log');
+  end;
   Log := TLog.Create(GetUserConfigFolder + 'saynetes.log');
   Log.DeleteLogFile;
   if ApplicationIsPortable then Log.Info('Saynètes '+APP_VERSION+' run in portable mode')
