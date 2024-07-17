@@ -3,5 +3,6 @@
 {"hash":224097765,"name":"tformdmxlibrary.bnewfixture.caption","sourcebytes":[78,101,119,32,102,105,120,116,117,114,101],"value":"New fixture"},
 {"hash":196112718,"name":"tformdmxlibrary.beditfixture.caption","sourcebytes":[69,100,105,116,46,46,46],"value":"Edit..."},
 {"hash":243613091,"name":"tformdmxlibrary.label1.caption","sourcebytes":[115,67,104,97,110,110,101,108,115],"value":"sChannels"},
-{"hash":242722818,"name":"tformdmxlibrary.bopeninfileexplorer.hint","sourcebytes":[79,112,101,110,32,105,110,32,102,105,108,101,32,101,120,112,108,111,114,101,114],"value":"Open in file explorer"}
+{"hash":242722818,"name":"tformdmxlibrary.bopeninfileexplorer.hint","sourcebytes":[79,112,101,110,32,105,110,32,102,105,108,101,32,101,120,112,108,111,114,101,114],"value":"Open in file explorer"},
+{"hash":119476788,"name":"tformdmxlibrary.brefresh.hint","sourcebytes":[82,101,108,111,97,100,32,116,104,101,32,108,105,98,114,97,114,121,32,99,111,110,116,101,110,116],"value":"Reload the library content"}
 ]}
