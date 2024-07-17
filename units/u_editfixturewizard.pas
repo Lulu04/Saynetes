@@ -564,17 +564,20 @@ begin
 
   // ask user to send the fixture by mail
   if AskConfirmation(SAskUserToSendDefinitionByMail, SYes, SNo, mtConfirmation) = mrYes then begin
+      if itsNewFixture then s := 'New fixture definition '
+        else s := 'Modification of ';
+      s := s + LibFix.General.ManufacturerName+' - '+ LibFix.General.FixtureName;
+      if itsNewFixture then s := s + ' created by '
+        else s := s + ' by ';
+      s := s + LibFix.General.Authors;
     Screen.BeginWaitCursor;
-    if itsNewFixture then s := 'New fixture definition '
-      else s := 'Modification of ';
-    s := s + LibFix.General.ManufacturerName+' - '+ LibFix.General.FixtureName;
-    if itsNewFixture then s := s + ' created by '
-      else s := s + ' by ';
-    s := s + LibFix.General.Authors;
-    res := SendMail(s , [f]);
-    Screen.EndWaitCursor;
-    if res then ShowMess(SFixtureDefinitionSentSuccessfully, SOk, mtInformation)
-      else ShowMess(SFailToSendFixtureDefinition, SOk, mtError);
+    try
+      res := SendMail(s , [f]);
+    finally
+      Screen.EndWaitCursor;
+    end;
+    if res then ShowMess(SMailSentSuccessfully, SOk, mtInformation)
+      else ShowMess(SFailToSendMail, SOk, mtError);
   end;
 
   FIsModified := False;
