@@ -27,7 +27,7 @@ object FormDeviceManager: TFormDeviceManager
     Height = 490
     Top = 29
     Width = 1024
-    PageIndex = 1
+    PageIndex = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Bottom = 20
     TabOrder = 0
@@ -305,9 +305,8 @@ object FormDeviceManager: TFormDeviceManager
           Top = 64
           Width = 20
           BorderSpacing.Left = 20
-          Checked = True
+          Enabled = False
           OnChange = CB1Change
-          State = cbChecked
           TabOrder = 2
         end
         object Label7: TLabel
@@ -323,6 +322,7 @@ object FormDeviceManager: TFormDeviceManager
           Anchors = [akLeft, akBottom]
           BorderSpacing.Bottom = 1
           Caption = 'Enttec OPEN USB DMX'
+          Enabled = False
           ParentColor = False
         end
       end
