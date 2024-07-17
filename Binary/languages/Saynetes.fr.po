@@ -330,6 +330,10 @@ msgstr "Nouveau matériel"
 msgid "Open in file explorer"
 msgstr "Ouvrir dans l'explorateur de fichiers"
 
+#: tformdmxlibrary.brefresh.hint
+msgid "Reload the library content"
+msgstr ""
+
 #: tformdmxlibrary.caption
 msgctxt "tformdmxlibrary.caption"
 msgid "DMX library"
@@ -720,6 +724,10 @@ msgstr "Gestionnaire d'interface"
 msgctxt "tformmain.mitooldmxlibrary.caption"
 msgid "DMX library"
 msgstr "Librairie DMX"
+
+#: tformmain.miviewlog.caption
+msgid "View Saynètes log file"
+msgstr ""
 
 #: tformmain.speedbutton1.hint
 msgid "New project (Ctrl+N)"
@@ -3074,6 +3082,10 @@ msgstr "Êtes-vous sûr de vouloir déplacer cet appareil dans un autre univers 
 msgid "A fixture with this filename already exists, do you want to overwrite it ?(its content will be lost)"
 msgstr "Un appareil avec ce nom de fichier existe déjà, voulez-vous l'écraser ? (son contenu sera perdu)"
 
+#: u_resource_string.saskusertosenddefinitionbymail
+msgid "Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software."
+msgstr ""
+
 #: u_resource_string.sasremindertherangesmustcovertheinterval
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr "Pour rappel, les plages doivent couvrir l'intervalle de 0 à 255"
@@ -3793,6 +3805,10 @@ msgstr "Échec de chargement du projet"
 msgid "Fail to save the project"
 msgstr "Échec de sauvegarde du projet"
 
+#: u_resource_string.sfailtosendfixturedefinition
+msgid "Fail to send Fixture definition"
+msgstr ""
+
 #: u_resource_string.sfailurewhensavingdmxuniverseto
 msgid "Failure when saving DMX universe to"
 msgstr "Échec lors de la sauvegarde des univers DMX vers"
@@ -3850,6 +3866,10 @@ msgstr "Valeur fixe"
 #: u_resource_string.sfixture
 msgid "Fixture"
 msgstr "Appareil"
+
+#: u_resource_string.sfixturedefinitionsentsuccessfully
+msgid "Fixture definition sent successfully"
+msgstr ""
 
 #: u_resource_string.sfixtureedition
 msgid "Fixture edition"
@@ -5150,3 +5170,4 @@ msgstr ""
 "\n"
 "NOTE: les effets connectés à un son ne seront supprimé que lorsqu'une action DÉCONNECTER est exécuté sur ce son.\n"
 "    Vous pouvez supprimer les effets manuellement à partir du panneau audio de l'écran principal."
+

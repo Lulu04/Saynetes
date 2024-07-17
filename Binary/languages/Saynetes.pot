@@ -293,6 +293,10 @@ msgstr ""
 msgid "Open in file explorer"
 msgstr ""
 
+#: tformdmxlibrary.brefresh.hint
+msgid "Reload the library content"
+msgstr ""
+
 #: tformdmxlibrary.caption
 msgctxt "tformdmxlibrary.caption"
 msgid "DMX library"
@@ -672,6 +676,10 @@ msgstr ""
 #: tformmain.mitooldmxlibrary.caption
 msgctxt "tformmain.mitooldmxlibrary.caption"
 msgid "DMX library"
+msgstr ""
+
+#: tformmain.miviewlog.caption
+msgid "View Saynètes log file"
 msgstr ""
 
 #: tformmain.speedbutton1.hint
@@ -2690,6 +2698,10 @@ msgstr ""
 msgid "A fixture with this filename already exists, do you want to overwrite it ?(its content will be lost)"
 msgstr ""
 
+#: u_resource_string.saskusertosenddefinitionbymail
+msgid "Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software."
+msgstr ""
+
 #: u_resource_string.sasremindertherangesmustcovertheinterval
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr ""
@@ -3402,6 +3414,10 @@ msgstr ""
 msgid "Fail to save the project"
 msgstr ""
 
+#: u_resource_string.sfailtosendfixturedefinition
+msgid "Fail to send Fixture definition"
+msgstr ""
+
 #: u_resource_string.sfailurewhensavingdmxuniverseto
 msgid "Failure when saving DMX universe to"
 msgstr ""
@@ -3458,6 +3474,10 @@ msgstr ""
 
 #: u_resource_string.sfixture
 msgid "Fixture"
+msgstr ""
+
+#: u_resource_string.sfixturedefinitionsentsuccessfully
+msgid "Fixture definition sent successfully"
 msgstr ""
 
 #: u_resource_string.sfixtureedition

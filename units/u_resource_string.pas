@@ -19,6 +19,9 @@ resourcestring
   SIconAppBy='Application icon by';
   SApplicationWrittenIn='Application written in';
   SWith='with';
+  SFixtureDefinitionSentSuccessfully='Fixture definition sent successfully';
+  SFailToSendFixtureDefinition='Fail to send Fixture definition';
+  SAskUserToSendDefinitionByMail='Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software.';
 
 
   SLoadingFixtureImage='loading DMX fixture images';

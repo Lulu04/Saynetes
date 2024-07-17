@@ -18,6 +18,10 @@ type
 function CheckForNewVersionOnGitHub(out newVersion: string): TResultCheckOnlineVersion;
 
 
+// https://wiki.lazarus.freepascal.org/Synapse_-_Email_Examples
+function SendMail(const aContent: string; const aFilesToAttach: TStringArray): boolean;
+
+
 implementation
 
 uses u_common, u_logfile,
@@ -25,7 +29,10 @@ uses u_common, u_logfile,
   Process, UTF8Process, u_project, utilitaire_fichier
 {$else}
   fphttpclient, opensslsockets
-{$endif};
+{$endif}
+
+,smtpsend, ssl_openssl, mimemess, mimepart, synautil, synachar
+;
 
 
 {$ifdef Darwin}
@@ -111,6 +118,135 @@ begin
   end;
 end;
 {$endif}
+
+type
+
+{ TMySMTPSend }
+
+TMySMTPSend = class(TSMTPSend)
+private
+  FSendSize: integer;
+protected
+  function SendToRaw(const AFrom, ATo: String; const AMailData: TStrings): boolean;
+public
+  function SendMessage(AFrom, ATo, ASubject: String; AContent, AAttachments: TStrings): boolean;
+
+  property SendSize: Integer read FSendSize write FSendSize;
+end;
+
+function SendMail(const aContent: string; const aFilesToAttach: TStringArray): boolean;
+var SMTP: TMySMTPSend;
+  attach, content: TStringList;
+begin
+  Result := False;
+  SMTP := TMySMTPSend.Create;
+  try
+    SMTP.TargetHost := 'mail.gmx.com';
+    SMTP.TargetPort := '465';
+    SMTP.Username := 'lulutech@gmx.fr';
+    SMTP.Password := '#Saynetes#';
+    SMTP.FullSSL := True;
+   // SMTP.Sock.OnStatus := @Sink.Progress;
+    SMTP.Sock.RaiseExcept := True;
+    try
+      content := TStringList.Create;
+      content.Text := aContent;
+      attach := TStringList.Create;
+      attach.AddStrings(aFilesToAttach);
+      try
+        if SMTP.SendMessage(
+          'lulutech@gmx.fr', // AFrom
+          'lulutech@gmx.fr', // ATo
+          'Saynètes Fixture Definition', // ASubject
+          content,
+          attach)
+        then Result := True;
+      except
+        on E: Exception do begin
+          Log.Error('Sending fixture definition by mail fail: "'+E.Message+'"');
+        end;
+      end;
+    finally
+      attach.Free;
+      content.Free;
+    end;
+
+{    with SMTP do
+    begin
+      WriteLn;
+      WriteLn('  ResultCode: ', ResultCode);
+      WriteLn('ResultString: ', ResultString);
+      WriteLn('  FullResult: ', FullResult.Text);
+      WriteLn('    AuthDone: ', AuthDone) ;
+    end;  }
+  finally
+    SMTP.Free;
+  end;
+end;
+
+{ TMySMTPSend }
+
+function TMySMTPSend.SendToRaw(const AFrom, ATo: String; const AMailData: TStrings): Boolean;
+var
+  S, T: String;
+begin
+  Result := False;
+  if Self.Login then
+  begin
+    FSendSize := Length(AMailData.Text);
+    if Self.MailFrom(GetEmailAddr(AFrom), FSendSize) then
+    begin
+      S := ATo;
+      repeat
+        T := GetEmailAddr(Trim(FetchEx(S, ',', '"')));
+        if T <> '' then
+          Result := Self.MailTo(T);
+        if not Result then
+          Break;
+      until S = '';
+      if Result then
+        Result := Self.MailData(AMailData);
+    end;
+    Self.Logout;
+  end;
+end;
+
+function TMySMTPSend.SendMessage(AFrom, ATo, ASubject: String; AContent, AAttachments: TStrings): Boolean;
+var
+  Mime: TMimeMess;
+  P: TMimePart;
+  I: Integer;
+begin
+  Mime := TMimeMess.Create;
+  try
+    // Set some headers
+    Mime.Header.CharsetCode := UTF_8;
+    Mime.Header.ToList.Text := ATo;
+    Mime.Header.Subject := ASubject;
+    Mime.Header.From := AFrom;
+
+    // Create a MultiPart part
+    P := Mime.AddPartMultipart('mixed', Nil);
+
+    // Add as first part the mail text
+    Mime.AddPartTextEx(AContent, P, UTF_8, True, ME_8BIT);
+
+    // Add all attachments:
+    if Assigned(AAttachments) then
+      for I := 0 to Pred(AAttachments.Count) do
+        Mime.AddPartBinaryFromFile(AAttachments[I], P);
+
+    // Compose message
+    Mime.EncodeMessage;
+
+    // Send using SendToRaw
+    Result := Self.SendToRaw(AFrom, ATo, Mime.Lines);
+
+  finally
+    Mime.Free;
+  end;
+end;
+
 
 end.
 
