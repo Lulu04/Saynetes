@@ -1079,6 +1079,7 @@
         <Filename Value="units\form_viewlog.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormViewLogFile"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit104>
     </Units>

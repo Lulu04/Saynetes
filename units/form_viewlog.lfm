@@ -118,5 +118,24 @@ object FormViewLogFile: TFormViewLogFile
       ImageIndex = 55
       OnClick = BSendLogByMailClick
     end
+    object BOpenLogFolder: TSpeedButton
+      AnchorSideTop.Control = BSendLogByMail
+      AnchorSideRight.Control = BSendLogByMail
+      Cursor = crHandPoint
+      Left = 402
+      Height = 20
+      Hint = 'Open log folder'
+      Top = 80
+      Width = 20
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 20
+      Flat = True
+      Images = DataModule1.ImageList1
+      ImageIndex = 33
+      OnClick = BOpenLogFolderClick
+      ShowHint = True
+      ParentShowHint = False
+    end
   end
 end
