@@ -19,7 +19,7 @@ Last release can be found [here](https://github.com/Lulu04/Saynetes/releases/lat
 **Installable version**: (only Windows) download and run the setup package.  
 
 ## Features
-  - Creates your DMX configuration in an easy to use 2D view. Change the stage and seats shape, add fixtures by drag drop, rotation, zoom... Support multiple universes.
+  - Creates your DMX configuration in an easy to use 2D view. Change the stage and seats shape, add fixtures by drag drop, rotation, zoom. Support multiple universes.
   - DMX library with more than 500 fixture definitions. Tool to create new definition included.
   - Effects for DMX channels and RGB trio: dimmer, wave, flame, chaser, flash, audio follower, copy.
   - Import audio file to your project. Saynètes make a copy of the original files and insert it in the project.
