@@ -30,7 +30,7 @@ Create sequences and build your show
 ![The sequencer](Screenshots/Sequencer.png)
 
 # How to compile
-You must have Lazarus IDE installed on your system with BGRABitmap package.  
+You must have Lazarus IDE installed on your system with BGRABitmap and Synapse packages.  
 - create a directory named saynetes on your disk
 - in 'saynetes' directory clone this repository. You can also download the zip.
 - again in 'saynetes' directory, clone the repository [UnitsCommon](https://github.com/Lulu04/UnitsCommon). If you choose to download the zip, unzip the file and rename the obtained directory to "UnitsCommon".
