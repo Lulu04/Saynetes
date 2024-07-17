@@ -19,9 +19,9 @@ Last release can be found [here](https://github.com/Lulu04/Saynetes/releases/lat
 **Installable version**: (only Windows) download and run the setup package.  
 
 ## Features
-  - Creates your DMX configuration in an easy to use 2D view. Change the stage and seats shape, add fixtures, rotation, zoom...
+  - Creates your DMX configuration in an easy to use 2D view. Change the stage and seats shape, add fixtures by drag drop, rotation, zoom... Support multiple universes.
   - DMX library with more than 500 fixture definitions. Tool to create new definition included.
-  - Tools for DMX channels and RGB trio. Fixtures and channels can be renamed.
+  - Effects for DMX channels and RGB trio: dimmer, wave, flame, chaser, flash, audio follower, copy.
   - Import audio file to your project. Saynètes make a copy of the original files and insert it in the project.
   - Audio capture for voice-overs.
   - Wide range of audio effects: autowah, chorus, echo, flanger, reverb,...
@@ -55,6 +55,6 @@ The directory structure should be like:
 Now, you are able to open the Lazarus project in the directory Saynetes or Saynetes-main.  
 
 # History
-The SAYNÈTES story began around 2011. It was born out of the technical needs felt when setting up amateur live shows.
+The SAYNÈTES story began around 2011. It was born out of the technical needs felt by our team when staging up amateur theater shows.
 At first, the software only managed audio, then the possibility of renting DMX lighting equipment at low cost presented itself, and it evolved to support this protocol, at first in a rudimentary way. Needs guided its evolution.
 This version of Saynètes has been completely rewritten by the author, who is passionate about programming.
