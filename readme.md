@@ -20,7 +20,7 @@ Last release can be found [here](https://github.com/Lulu04/Saynetes/releases/lat
 
 ## Contributions
 You can contribute by adding new fixture definitions to Saynètes. If you do, please, send a copy of the definition [here](https://github.com/Lulu04/Saynetes/issues) or by mail at lulutech@gmx.fr, they will be added in the next release. 
-If you found bugs or have ideas for improving Saynètes, please submit them in the [issue channel](https://github.com/Lulu04/Saynetes/issues) in this repository. thanks !  
+If you found bugs or have ideas for improving Saynètes, please submit them in the [issue channel](https://github.com/Lulu04/Saynetes/issues) in this repository and be patient. thanks !  
 
 ## Screenshots
 The main window
