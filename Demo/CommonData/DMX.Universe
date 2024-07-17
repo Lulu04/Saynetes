@@ -1,7 +1,7 @@
 [UNIVERSE]
 CurrentUniverseID|1|CurrentFixtureID|33|Count|1
 [UNIVERSE 0]
-ID|1|Name|Univers 1|Color|588518655|First|1|Last|512|Device|FAKE Device Multi port|Serial|5555|Port|0|Optimized|yes|FixtureCount|17
+ID|1|Name|Univers 1|Color|588518655|First|1|Last|512|Device|_no_device_|Serial||Port|0|Optimized|yes|FixtureCount|17
 FixtureLocation|SubFolder~american-dj~Filename~encore-profile-1000-ww.dmx~Mode~3-channel|ID|11|Adress|1|Description|Profile|ScreenPosX|-25.817|ScreenPosY|548.341|Angle|0.000|Zoom|0.695|FlipH|false|FlipV|false
 FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|12|Adress|4|Description|BG Left|ScreenPosX|-291.869|ScreenPosY|-194.661|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
 FixtureLocation|SubFolder~american-dj~Filename~mega-bar-rgba.dmx~Mode~Color macro|ID|13|Adress|11|Description|BG Center|ScreenPosX|-74.882|ScreenPosY|-194.587|Angle|0.000|Zoom|1.000|FlipH|false|FlipV|false
