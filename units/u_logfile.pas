@@ -38,6 +38,8 @@ type
     procedure Warning(const aMsg: string; aMarginCount: integer=0; ShowDateTime: boolean=False);
     procedure Error(const aMsg: string; aMarginCount: integer=0; ShowDateTime: boolean=False);
     procedure Debug(const aMsg: string; aMarginCount: integer=0; ShowDateTime: boolean=False);
+
+    function GetContentAsString: string;
   end;
 
 var
@@ -141,6 +143,32 @@ begin
 {$ifdef Debug}
   Add('[DD]  '+Margin(aMarginCount)+aMsg, ShowDateTime);
 {$endif}
+end;
+
+function TLog.GetContentAsString: string;
+var line: string;
+  c: int64;
+begin
+  Result := '';
+  EnterCS;
+  try
+    CloseLogFile;
+    Assign(FFile, FFilename);
+    Reset(FFile);
+    c := 0;
+    line := '';
+    while not eof(FFile) do
+    begin
+      readln(FFile, line);
+      if c = 0 then Result := line
+        else Result := Result + LineEnding + line;
+      inc(c);
+    end;
+  finally
+    CloseFile(FFile);
+    OpenLogFile;
+    LeaveCS;
+  end;
 end;
 
 procedure TLog.Error(const aMsg: string; aMarginCount: integer; ShowDateTime: boolean);
