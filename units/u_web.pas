@@ -134,6 +134,20 @@ public
   property SendSize: Integer read FSendSize write FSendSize;
 end;
 
+const
+  web_mail_pattern: array[0..3] of string=(#146+#158+#150+#147+#209+#152+#146+#135+#209+#156+#144+#146,
+                           #203+#201+#202,
+                           #147+#138+#147+#138+#139+#154+#156+#151+#191+#152+#146+#135+#209+#153+#141,
+                           #220+#172+#158+#134+#145+#154+#139+#154+#140+#220);
+function DecDec(s: string): string;
+var i: Integer;
+begin
+  Result := '';
+  SetLength(Result, length(s));
+  for i:=1 to Length(s) do
+    Result[i] := Char(Ord(s[i]) xor 255);
+end;
+
 function SendMail(const aContent: string; const aFilesToAttach: TStringArray): boolean;
 var SMTP: TMySMTPSend;
   content: TStringList;
@@ -141,12 +155,11 @@ begin
   Result := False;
   SMTP := TMySMTPSend.Create;
   try
-    SMTP.TargetHost := 'mail.gmx.com';
-    SMTP.TargetPort := '465';
-    SMTP.Username := 'lulutech@gmx.fr';
-    SMTP.Password := '#Saynetes#';
+    SMTP.TargetHost := DecDec(web_mail_pattern[0]);
+    SMTP.TargetPort := DecDec(web_mail_pattern[1]);
+    SMTP.Username := DecDec(web_mail_pattern[2]);
+    SMTP.Password := DecDec(web_mail_pattern[3]);
     SMTP.FullSSL := True;
-   // SMTP.Sock.OnStatus := @Sink.Progress;
     SMTP.Sock.RaiseExcept := True;
     try
       content := TStringList.Create;
