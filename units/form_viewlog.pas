@@ -21,6 +21,8 @@ type
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     BSendLogByMail: TSpeedButton;
+    BOpenLogFolder: TSpeedButton;
+    procedure BOpenLogFolderClick(Sender: TObject);
     procedure BSendLogByMailClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -37,7 +39,8 @@ type
 
 
 implementation
-uses LCLType, u_web, u_apputils, u_userdialogs, u_resource_string, u_logfile;
+uses LCLType, u_web, u_apputils, u_userdialogs, u_resource_string, u_logfile,
+  LCLIntf;
 
 {$R *.lfm}
 
@@ -91,6 +94,11 @@ begin
   end;
   if res then ShowMess(SMailSentSuccessfully, SOk, mtInformation)
     else ShowMess(SFailToSendMail, SOk, mtError);
+end;
+
+procedure TFormViewLogFile.BOpenLogFolderClick(Sender: TObject);
+begin
+  OpenDocument(GetUserConfigFolder);
 end;
 
 procedure TFormViewLogFile.FormDestroy(Sender: TObject);

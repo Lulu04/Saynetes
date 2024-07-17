@@ -1044,6 +1044,10 @@ msgid ""
 "What would you like to do ?"
 msgstr ""
 
+#: tformviewlogfile.bopenlogfolder.hint
+msgid "Open log folder"
+msgstr ""
+
 #: tformviewlogfile.bsendlogbymail.caption
 msgid "Send this log to the authors of Saynètes"
 msgstr ""
