@@ -19,8 +19,8 @@ resourcestring
   SIconAppBy='Application icon by';
   SApplicationWrittenIn='Application written in';
   SWith='with';
-  SFixtureDefinitionSentSuccessfully='Fixture definition sent successfully';
-  SFailToSendFixtureDefinition='Fail to send Fixture definition';
+  SMailSentSuccessfully='Mail sent successfully';
+  SFailToSendMail='Fail to send mail';
   SAskUserToSendDefinitionByMail='Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software.';
 
 
