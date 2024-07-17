@@ -23,7 +23,7 @@ You can contribute by adding new fixture definitions to Saynètes. If you do, pl
 If you found bugs or have ideas for improving Saynètes, please submit them in the [issue channel](https://github.com/Lulu04/Saynetes/issues) in this repository and be patient. thanks !  
 
 ## Screenshots
-The main window
+The main window. At left the audio panels, at center the DMX panels, at right the sequence panel.
 ![The main window](Screenshots/MainScreen.png)
   
 Create sequences and build your show
