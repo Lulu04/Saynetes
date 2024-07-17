@@ -192,7 +192,7 @@ implementation
 
 uses u_resource_string, u_userdialogs, u_apputils, u_helper, LCLIntf,
   u_datamodule, form_editweblink, form_newmanufacturer, form_help, u_mainform,
-  u_dmx_util, LazUTF8, Math, utilitaire_bgrabitmap;
+  u_web, u_dmx_util, LazUTF8, Math, utilitaire_bgrabitmap;
 
 {$R *.lfm}
 
@@ -458,8 +458,9 @@ procedure TFormFixtureWizard.DoSave;
 var i, j, v: integer;
   libFix: TLibraryFixture;
   A, chanUsed: TStringArray;
-  f: string;
+  f, s: string;
   p: PFixLibAvailableChannel;
+  itsNewFixture, res: boolean;
   procedure AddExclusiveToA(const na: string);
   var ii: integer;
   begin
@@ -550,20 +551,37 @@ begin
     p^.CopyTo(libFix.AvailableChannels[i]);
   end;
 
-
   // save
   f := GetOutputFilename;
+  itsNewFixture := not FileExists(f);
   if not FEditingExistingFixture and FileExists(f) then
     if AskConfirmation(SAskToOverwriteFixtureFilename, SYes, SCancel, mtWarning) <> mrYes then exit;
 
-  if not libFix.SaveToFile(f) then ShowMess(SUnableToSaveTheFixture, SClose, mtError)
-    else begin
-      FIsModified := False;
-      FSavedFilename.InitDefault;
-      FSavedFilename.SubFolder := FManufacturers[CBManufacturers.ItemIndex].Folder;
-      FSavedFilename.Filename := ChangeFileExt(FormatFixtureNameToFilename(Edit7.Text), DMX_LIBRARY_FILE_EXTENSION);
-      ModalResult := mrOk;
-    end;
+  if not libFix.SaveToFile(f) then begin
+    ShowMess(SUnableToSaveTheFixture, SClose, mtError);
+    exit;
+  end;
+
+  // ask user to send the fixture by mail
+  if AskConfirmation(SAskUserToSendDefinitionByMail, SYes, SNo, mtConfirmation) = mrYes then begin
+    Screen.BeginWaitCursor;
+    if itsNewFixture then s := 'New fixture definition '
+      else s := 'Modification of ';
+    s := s + LibFix.General.ManufacturerName+' - '+ LibFix.General.FixtureName;
+    if itsNewFixture then s := s + ' created by '
+      else s := s + ' by ';
+    s := s + LibFix.General.Authors;
+    res := SendMail(s , [f]);
+    Screen.EndWaitCursor;
+    if res then ShowMess(SFixtureDefinitionSentSuccessfully, SOk, mtInformation)
+      else ShowMess(SFailToSendFixtureDefinition, SOk, mtError);
+  end;
+
+  FIsModified := False;
+  FSavedFilename.InitDefault;
+  FSavedFilename.SubFolder := FManufacturers[CBManufacturers.ItemIndex].Folder;
+  FSavedFilename.Filename := ChangeFileExt(FormatFixtureNameToFilename(Edit7.Text), DMX_LIBRARY_FILE_EXTENSION);
+  ModalResult := mrOk;
 end;
 
 procedure TFormFixtureWizard.DoCreateFrame(aTargetFrameIndex: integer; p: PFixLibMode);

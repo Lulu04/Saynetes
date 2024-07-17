@@ -22,6 +22,7 @@ type
     BNewFixture: TSpeedButton;
     BEditFixture: TSpeedButton;
     BOpenInFileExplorer: TSpeedButton;
+    BRefresh: TSpeedButton;
     procedure BOpenInFileExplorerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
@@ -154,7 +155,10 @@ end;
 
 procedure TFormDMXLibrary.BOpenInFileExplorerClick(Sender: TObject);
 begin
-  OpenDocument(GetDMXLibraryFolder);
+  if Sender = BRefresh then FrameViewDMXLibrary1.Fill;
+
+  if Sender = BOpenInFileExplorer then
+    OpenDocument(GetDMXLibraryFolder);
 end;
 
 end.

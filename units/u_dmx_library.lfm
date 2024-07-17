@@ -136,19 +136,39 @@ object FormDMXLibrary: TFormDMXLibrary
   object BOpenInFileExplorer: TSpeedButton
     AnchorSideTop.Control = BNewFixture
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = BNewFixture
+    AnchorSideRight.Control = BRefresh
     Cursor = crHandPoint
-    Left = 337
+    Left = 287
     Height = 20
     Hint = 'Open in file explorer'
     Top = 22
     Width = 20
     Anchors = [akTop, akRight]
     AutoSize = True
-    BorderSpacing.Right = 20
+    BorderSpacing.Right = 10
     Flat = True
     Images = DataModule1.ImageList1
     ImageIndex = 33
+    OnClick = BOpenInFileExplorerClick
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object BRefresh: TSpeedButton
+    AnchorSideTop.Control = BNewFixture
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BNewFixture
+    Cursor = crHandPoint
+    Left = 317
+    Height = 20
+    Hint = 'Reload the library content'
+    Top = 22
+    Width = 20
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    BorderSpacing.Right = 40
+    Flat = True
+    Images = DataModule1.ImageList1
+    ImageIndex = 49
     OnClick = BOpenInFileExplorerClick
     ShowHint = True
     ParentShowHint = False
