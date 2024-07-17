@@ -156,7 +156,7 @@ end;
 
 
 { TFakeDeviceMultiPort }
-
+{
 TFakeDeviceMultiPort = class(TBaseDMXDevice)
 protected
   procedure DoInit; override;
@@ -171,6 +171,7 @@ protected
   function DoGetName: string; override;
   function DoGetSerialNumber: string; override;
 end;
+}
 
 { TENTTEC_OPENDMX_DMXHardware }
 {
@@ -260,7 +261,7 @@ end;
 
 
 { TFakeDeviceMultiPort }
-
+{
 procedure TFakeDeviceMultiPort.DoInit;
 var i: integer;
 begin
@@ -342,6 +343,7 @@ function TFakeDeviceMultiPort.DoGetSerialNumber: string;
 begin
   Result := '5555';
 end;
+}
 
 { TDMXDevicePort }
 
@@ -807,15 +809,15 @@ begin
 end;
 
 procedure TDeviceManager.LookForAvailableDevices;
-var fake: TFakeDeviceMultiPort;
+//var fake: TFakeDeviceMultiPort;
 begin
   Log.Info('Clear list of device', 1);
   ClearList;
   if programOptions.LookForVellemanK8062 then LookForVellemanK8062;
   LookForFTDIBasedDevice;
 
-  fake := TFakeDeviceMultiPort.Create;
-  RegisterDevice(fake);
+//  fake := TFakeDeviceMultiPort.Create;
+//  RegisterDevice(fake);
 end;
 
 function TDeviceManager.GetDevicesPath(aIncludeNoDevice: boolean): TArrayOfDevicePath;
