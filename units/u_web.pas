@@ -129,14 +129,14 @@ private
 protected
   function SendToRaw(const AFrom, ATo: String; const AMailData: TStrings): boolean;
 public
-  function SendMessage(AFrom, ATo, ASubject: String; AContent, AAttachments: TStrings): boolean;
+  function SendMessage(AFrom, ATo, ASubject: String; AContent: TStrings; aFilesToAttach: TStringArray): boolean;
 
   property SendSize: Integer read FSendSize write FSendSize;
 end;
 
 function SendMail(const aContent: string; const aFilesToAttach: TStringArray): boolean;
 var SMTP: TMySMTPSend;
-  attach, content: TStringList;
+  content: TStringList;
 begin
   Result := False;
   SMTP := TMySMTPSend.Create;
@@ -151,15 +151,12 @@ begin
     try
       content := TStringList.Create;
       content.Text := aContent;
-      attach := TStringList.Create;
-      attach.AddStrings(aFilesToAttach);
       try
         if SMTP.SendMessage(
           'lulutech@gmx.fr', // AFrom
           'lulutech@gmx.fr', // ATo
           'Saynètes Fixture Definition', // ASubject
-          content,
-          attach)
+          content, aFilesToAttach)
         then Result := True;
       except
         on E: Exception do begin
@@ -167,7 +164,6 @@ begin
         end;
       end;
     finally
-      attach.Free;
       content.Free;
     end;
 
@@ -211,7 +207,7 @@ begin
   end;
 end;
 
-function TMySMTPSend.SendMessage(AFrom, ATo, ASubject: String; AContent, AAttachments: TStrings): Boolean;
+function TMySMTPSend.SendMessage(AFrom, ATo, ASubject: String; AContent: TStrings; aFilesToAttach: TStringArray): Boolean;
 var
   Mime: TMimeMess;
   P: TMimePart;
@@ -232,9 +228,9 @@ begin
     Mime.AddPartTextEx(AContent, P, UTF_8, True, ME_8BIT);
 
     // Add all attachments:
-    if Assigned(AAttachments) then
-      for I := 0 to Pred(AAttachments.Count) do
-        Mime.AddPartBinaryFromFile(AAttachments[I], P);
+    if Length(aFilesToAttach) > 0 then
+      for I := 0 to High(aFilesToAttach) do
+        Mime.AddPartBinaryFromFile(aFilesToAttach[I], P);
 
     // Compose message
     Mime.EncodeMessage;

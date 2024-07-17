@@ -1044,6 +1044,22 @@ msgid ""
 "What would you like to do ?"
 msgstr ""
 
+#: tformviewlogfile.bsendlogbymail.caption
+msgid "Send this log to the authors of Saynètes"
+msgstr ""
+
+#: tformviewlogfile.caption
+msgid "Log file"
+msgstr ""
+
+#: tformviewlogfile.label1.caption
+msgid "View the log file for this session"
+msgstr ""
+
+#: tformviewlogfile.label2.caption
+msgid "View the log file for the previous session"
+msgstr ""
+
 #: tform_changesteplength.label1.caption
 msgid "Step Name"
 msgstr ""
@@ -3414,8 +3430,9 @@ msgstr ""
 msgid "Fail to save the project"
 msgstr ""
 
-#: u_resource_string.sfailtosendfixturedefinition
-msgid "Fail to send Fixture definition"
+#: u_resource_string.sfailtosendmail
+msgctxt "u_resource_string.sfailtosendmail"
+msgid "Fail to send mail"
 msgstr ""
 
 #: u_resource_string.sfailurewhensavingdmxuniverseto
@@ -3474,10 +3491,6 @@ msgstr ""
 
 #: u_resource_string.sfixture
 msgid "Fixture"
-msgstr ""
-
-#: u_resource_string.sfixturedefinitionsentsuccessfully
-msgid "Fixture definition sent successfully"
 msgstr ""
 
 #: u_resource_string.sfixtureedition
@@ -3720,6 +3733,11 @@ msgstr ""
 
 #: u_resource_string.slumens
 msgid "Lumens"
+msgstr ""
+
+#: u_resource_string.smailsentsuccessfully
+msgctxt "u_resource_string.smailsentsuccessfully"
+msgid "Mail sent successfully"
 msgstr ""
 
 #: u_resource_string.smainview

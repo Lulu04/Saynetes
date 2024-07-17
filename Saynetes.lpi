@@ -415,7 +415,7 @@
         <PackageName Value="LCL"/>
       </Item5>
     </RequiredPackages>
-    <Units Count="104">
+    <Units Count="105">
       <Unit0>
         <Filename Value="Saynetes.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -1075,6 +1075,12 @@
         <Filename Value="units\u_web.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit103>
+      <Unit104>
+        <Filename Value="units\form_viewlog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormViewLogFile"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit104>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

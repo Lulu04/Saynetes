@@ -21,11 +21,11 @@ type
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
     BCheckNewVersion: TMenuItem;
+    MIViewLog: TMenuItem;
     MIProjectOptions: TMenuItem;
     MIProjectClose: TMenuItem;
     MIToolDeviceManager: TMenuItem;
     MenuItem4: TMenuItem;
-    MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
     MIProgramOptions: TMenuItem;
     MIToolDMXLibrary: TMenuItem;
@@ -41,6 +41,7 @@ type
     BAudio: TSpeedButton;
     BLight: TSpeedButton;
     Panel4: TPanel;
+    Separator1: TMenuItem;
     Shape4: TShape;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
@@ -70,6 +71,7 @@ type
     procedure MIProgramOptionsClick(Sender: TObject);
     procedure BToogleEditModeClick(Sender: TObject);
     procedure BAudioClick(Sender: TObject);
+    procedure MIViewLogClick(Sender: TObject);
     procedure Splitter2Moved(Sender: TObject);
   private
    // procedure PlayerMessageHandler(var Message: TLMessage); message LM_MESSAGE_Player;
@@ -104,7 +106,7 @@ uses LCLType, LCLIntf, u_dmx_library, u_project_manager, u_userdialogs,
   u_resource_string, u_devicemanager_form, u_startupwizard, u_logfile,
   u_program_options, u_audio_manager, u_sequence_player, u_list_sequence,
   u_list_dmxuniverse, u_project_options, form_about, form_splash, u_web,
-  u_dmx_util;
+  form_viewlog, u_dmx_util;
 
 {$R *.lfm}
 
@@ -365,6 +367,17 @@ begin
     PanelAudio.Width := Splitter1.Left div 2;
     Splitter2.Visible := True;
     PanelDMX.Visible := True;
+  end;
+end;
+
+procedure TFormMain.MIViewLogClick(Sender: TObject);
+var F: TFormViewLogFile;
+begin
+  F := TFormViewLogFile.Create(NIL);
+  try
+    F.ShowModal;
+  finally
+    F.Free;
   end;
 end;
 

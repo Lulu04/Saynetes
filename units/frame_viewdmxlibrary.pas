@@ -145,7 +145,8 @@ begin
   if ItsAMode(n) then n := n.Parent;
   if not ItsAFile(n) then exit;
 
-  Result := AbsolutePathForNode(n);
+  Result := ConcatPaths([AbsolutePathForNode(n), n.Text]);
+  Result := ChangeFileExt(Result, DMX_LIBRARY_FILE_EXTENSION);
 end;
 
 function TFrameViewDMXLibrary.GetSelectedFixtureMode: string;
