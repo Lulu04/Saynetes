@@ -27,7 +27,7 @@ The main window
 ![The main window](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/MainScreen.png)
   
 Create sequences and build your show
-![The sequencer](https://github.com/Lulu04/Saynetes/blob/f5aacba1341b4c211a499a8bf532310f63696854/Screenshots/Sequencer.png)
+![The sequencer](Screenshots/Sequencer.png)
 
 # How to compile
 You must have Lazarus IDE installed on your system with BGRABitmap package.  
