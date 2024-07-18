@@ -224,7 +224,7 @@ procedure TProgramOptions.SetLanguage(AValue: string);
 begin
   if FLanguage = AValue then Exit;
   FLanguage := AValue;
-  SetDefaultLang(FLanguage);
+  SetDefaultLang(FLanguage, GetAppLanguagesFolder);
   Save;
 
   Project.UpdateStringAfterLanguageChange;

@@ -1,0 +1,21 @@
+Saynètes is a free and open source audio and DMX controller software. It help you to build your shows.
+
+
+This archive contains all the necessary files to run the software without installation.
+Simply decompress it somewhere in your user space, enter in the obtained directory and run "Saynetes".
+
+
+At startup, choose "Open a demo project" to see a demo that show how it work.
+
+
+UBUNTU: if you want a link with an icon on your desktop:
+     - open the file "saynetes.desktop" in a text editor
+     - line 5, 6, 7 replace "PathToDecompressedDirectory" by the path of the "Saynetes" executable.
+     - save and close the text editor.
+     - then copy or move the file "saynetes.desktop" to ~/Desktop
+
+
+Bugs reports: https://github.com/Lulu04/Saynetes/issues
+Code: https://github.com/Lulu04/Saynetes
+
+

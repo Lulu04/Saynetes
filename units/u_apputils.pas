@@ -13,6 +13,7 @@ function OSName: string;
 // The following (sub)folders are located in the application binary folder
 function GetAppDataFolder: string;
 function GetAppImagesFolder: string;
+function GetAppLanguagesFolder: string;
 function GetAppFactoryPresetsFolder: string;
 function GetAppStageImagesFolder: string;
 function GetAppFixtureImagesFolder: string;
@@ -97,6 +98,11 @@ begin
     else Result := GetUserConfigFolder + 'DMXLibrary' + DirectorySeparator;
 
 //  Result := GetAppDataFolder+'DMXLibrary'+DirectorySeparator;
+end;
+
+function GetAppLanguagesFolder: string;
+begin
+  Result := GetAppDataFolder+'languages'+DirectorySeparator;
 end;
 
 function GetAppFactoryPresetsFolder: string;

@@ -148,7 +148,7 @@ object FormProgramOptions: TFormProgramOptions
         Height = 450
         Top = 1
         Width = 673
-        PageIndex = 1
+        PageIndex = 0
         Align = alClient
         TabOrder = 0
         object PageAppGeneral: TPage
