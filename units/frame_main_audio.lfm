@@ -192,13 +192,17 @@ object FrameMainAudio: TFrameMainAudio
         ParentFont = False
       end
       object Label8: TLabel
+        AnchorSideLeft.Control = SB_fadein7s
+        AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Panel1
         AnchorSideRight.Control = BHelp
-        Left = 240
+        Left = 111
         Height = 17
         Top = 4
-        Width = 111
-        Anchors = [akTop, akRight]
+        Width = 240
+        Alignment = taRightJustify
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 5
         BorderSpacing.Top = 3
         BorderSpacing.Right = 3
         Caption = 'SOUND CONTROL'
