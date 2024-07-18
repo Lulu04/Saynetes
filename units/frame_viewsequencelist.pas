@@ -60,7 +60,6 @@ type
   private
     function GetSelCount: integer;
     function GetSelectedTop: TSequence;
-    procedure RemoveErrorHint;
     procedure SetErrorHint(aItemIndex: integer);
   private
     FSpacePressed,
@@ -87,6 +86,7 @@ type
 
     procedure Fill;
     procedure UpdateStringAfterLanguageChange;
+    procedure RemoveErrorHint;
 
     procedure Add(aID: cardinal);
     procedure Insert(aID: cardinal);
@@ -379,23 +379,9 @@ begin
   FormMain.FrameViewProjector1.FreeOpenGLTextures;
 
   FormSequenceEdition := TFormSequenceEdition.Create(Self);
-  try
-    FormSequenceEdition.SetModifyMode(seq.Name, seq.SequencerInfoList, LB.ItemIndex);
-    if FormSequenceEdition.ShowModal = mrOk then begin
-      seq.Stop;
-      seq.Name := FormSequenceEdition.TopName;
-      seq.SequencerInfoList := FormSequenceEdition.SequencerInfoList;
-      Project.SetModified;
-
-      RemoveErrorHint;
-      if flagError then FormMain.CheckSequenceError;
-    end;
-  finally
-    FormSequenceEdition.Free;
-    FormSequenceEdition := NIL;
-  end;
-
-  FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
+  FormSequenceEdition.ParentFrameViewSequenceList := Self;
+  FormSequenceEdition.SetModifyMode(seq.Name, seq.SequencerInfoList, LB.ItemIndex);
+  FormSequenceEdition.Show;
 end;
 
 procedure TFrameViewSequenceList.MIInsertSequenceClick(Sender: TObject);
@@ -405,20 +391,9 @@ begin
  Sequences.StopAll;
 
  FormSequenceEdition := TFormSequenceEdition.Create(Self);
- try
-   FormSequenceEdition.SetAddMode( SSequence+' '+(Sequences.Count+1).ToString );
-   if FormSequenceEdition.ShowModal = mrOk then
-   begin
-     with Sequences.InsertSequence(LB.ItemIndex, FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList) do
-       Insert(ID);
-     Project.SetModified;
-   end;
- finally
-   FormSequenceEdition.Free;
-   FormSequenceEdition := NIL;
- end;
-
- FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
+ FormSequenceEdition.SetInsertMode( SSequence+' '+(Sequences.Count+1).ToString );
+ FormSequenceEdition.ParentFrameViewSequenceList := Self;
+ FormSequenceEdition.Show;
 end;
 
 procedure TFrameViewSequenceList.MILoadFromAnotherProjectClick(Sender: TObject);
@@ -444,20 +419,9 @@ begin
   Sequences.StopAll;
 
   FormSequenceEdition := TFormSequenceEdition.Create(Self);
-  try
-    FormSequenceEdition.SetAddMode( SSequence+' '+(Sequences.Count+1).ToString );
-    if FormSequenceEdition.ShowModal = mrOk then
-    begin
-      seq := Sequences.AddSequence(FormSequenceEdition.TopName, FormSequenceEdition.SequencerInfoList);
-      Add(seq.ID);
-      Project.SetModified;
-    end;
-  finally
-    FormSequenceEdition.Free;
-    FormSequenceEdition := NIL;
-  end;
-
-  FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
+  FormSequenceEdition.ParentFrameViewSequenceList := Self;
+  FormSequenceEdition.SetAddMode( SSequence+' '+(Sequences.Count+1).ToString );
+  FormSequenceEdition.Show;
 end;
 
 procedure TFrameViewSequenceList.MIResetSpeedClick(Sender: TObject);

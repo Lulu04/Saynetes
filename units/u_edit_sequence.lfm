@@ -3,20 +3,20 @@ object FormSequenceEdition: TFormSequenceEdition
   Height = 675
   Top = 117
   Width = 1170
+  BorderStyle = bsSingle
   Caption = 'Sequence edition'
   ClientHeight = 675
   ClientWidth = 1170
   Color = 3423553
   Font.Color = 13948116
   KeyPreview = True
+  OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyUp = FormKeyUp
   OnShow = FormShow
-  Position = poWorkAreaCenter
   LCLVersion = '2.2.6.0'
-  WindowState = wsMaximized
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Splitter2
