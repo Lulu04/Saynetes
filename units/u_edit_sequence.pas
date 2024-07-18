@@ -173,15 +173,6 @@ begin
   FSeq.View_All;
 
   UpdateWidgetState;
-
-  {$if defined(LCLGTK2)}
-  // maximize the window to the size of main form
-  SetBounds(FormMain.Top, FormMain.Left, FormMain.Width, FormMain.Height);
-  {$else}
-  BorderIcons := [biSystemMenu];
-  Position := poMainFormCenter;
-  WindowState := wsMaximized;
-  {$endif}
 end;
 
 procedure TFormSequenceEdition.Panel7Click(Sender: TObject);
@@ -391,6 +382,13 @@ end;
 
 procedure TFormSequenceEdition.FormCreate(Sender: TObject);
 begin
+  {$if defined(LCLGTK2)}
+  WindowState := wsNormal;
+  Position := poDesigned;
+  // maximize the window to the size of main form
+  SetBounds(FormMain.Top, FormMain.Left, FormMain.Width, FormMain.Height);
+  {$endif}
+
   FSeq := TFrameSequencer.Create(Self);
   FSeq.Parent := Panel1;
   FSeq.Align := alClient;
