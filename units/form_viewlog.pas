@@ -20,13 +20,11 @@ type
     Panel1: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
-    BSendLogByMail: TSpeedButton;
     BOpenLogFolder: TSpeedButton;
     procedure BOpenLogFolderClick(Sender: TObject);
-    procedure BSendLogByMailClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
   private
@@ -39,8 +37,7 @@ type
 
 
 implementation
-uses LCLType, u_web, u_apputils, u_userdialogs, u_resource_string, u_logfile,
-  LCLIntf;
+uses LCLType, u_web, u_apputils, u_logfile, LCLIntf;
 
 {$R *.lfm}
 
@@ -78,22 +75,6 @@ procedure TFormViewLogFile.FormCreate(Sender: TObject);
 begin
   CheckedLabelManager := TCheckedLabelManager.Create;
   CheckedLabelManager.CaptureLabelsClick([Label1, Label2]);
-end;
-
-procedure TFormViewLogFile.BSendLogByMailClick(Sender: TObject);
-var f: string;
-  res: Boolean;
-begin
-  if Memo1.Lines.Count = 0 then exit;
-
-  Screen.BeginWaitCursor;
-  try
-    res := SendMail(Memo1.Lines.Text, []);
-  finally
-    Screen.EndWaitCursor;
-  end;
-  if res then ShowMess(SMailSentSuccessfully, SOk, mtInformation)
-    else ShowMess(SFailToSendMail, SOk, mtError);
 end;
 
 procedure TFormViewLogFile.BOpenLogFolderClick(Sender: TObject);
