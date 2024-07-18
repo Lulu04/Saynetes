@@ -1106,13 +1106,10 @@ msgstr ""
 "Bienvenu !\n"
 "Par quoi voulez-vous commencer ?"
 
-#: tformviewlogfile.bopenlogfolder.hint
+#: tformviewlogfile.bopenlogfolder.caption
+msgctxt "tformviewlogfile.bopenlogfolder.caption"
 msgid "Open log folder"
-msgstr "Ouvrir le dossier du fichier log"
-
-#: tformviewlogfile.bsendlogbymail.caption
-msgid "Send this log to the authors of Saynètes"
-msgstr "Envoyer ce log aux auteurs de Saynètes"
+msgstr "Ouvrir l'emplacement du log"
 
 #: tformviewlogfile.caption
 msgid "Log file"
