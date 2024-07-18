@@ -154,7 +154,9 @@
     </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
-      <MinorVersionNr Value="5"/>
+      <MajorVersionNr Value="3"/>
+      <MinorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
       <StringTable CompanyName="Lulu" ProductName="Saynètes"/>
     </VersionInfo>
     <MacroValues Count="1">
