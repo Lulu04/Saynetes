@@ -17,3 +17,5 @@ ProjectTest/
 /unit_dmx_device/backup
 Binary/Saynetes.ini
 /OFLToSayneteConverter
+/release_tools/*.zip
+/release_tools/*.gz
