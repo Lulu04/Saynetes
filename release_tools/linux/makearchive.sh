@@ -89,7 +89,7 @@ PROJECT_EXECUTABLE="${PROJECT_BINARY_DIR}/saynetes"
 LAZARUS_PROJECT="${PROJECT_DIR}/Saynetes.lpi"
 STAGING_DIR=./staging
 STAGING_EXECUTABLE="${STAGING_DIR}/saynetes"
-NO_INSTALL_ARCHIVE_NAME="saynetes_${VERSION}_${OS_NAME}_${WIDGETSET}_no_install.tar.gz"
+NO_INSTALL_ARCHIVE_NAME="saynetes_${VERSION}_${OS_NAME}_${WIDGETSET}_portable.tar.gz"
 LAZBUILD_DIR="/home/lulu/fpcupdeluxe/lazarus"
 
 # delete the old project binary file
