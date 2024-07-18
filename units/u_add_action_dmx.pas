@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  frame_viewprojectors;
+  frame_viewprojectors, frame_sequencer;
 
 type
 
@@ -15,11 +15,13 @@ type
   TFormAddDMXAction = class(TForm)
     Panel1: TPanel;
     procedure FormClose(Sender: TObject; var {%H-}CloseAction: TCloseAction);
+    procedure FormDeactivate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     procedure ProcessOnAddCmdFromViewProjector(Sender: TObject);
   public
     FrameViewProjector1: TFrameViewProjector;
+    ParentSequencer: TFrameSequencer;
   end;
 
 
@@ -45,6 +47,15 @@ begin
   FormMain.FrameViewProjector1.ReloadWidgetStateFromClassVar;
   FProjectorViewToRefreshForThreadUniverse := FormMain.FrameViewProjector1;
   UniverseManager.StartThread;
+
+  CloseAction := caFree;
+end;
+
+procedure TFormAddDMXAction.FormDeactivate(Sender: TObject);
+begin
+  {$if defined(LCLGTK2)}
+  Show;
+  {$endif}
 end;
 
 procedure TFormAddDMXAction.FormShow(Sender: TObject);
@@ -70,8 +81,23 @@ begin
 end;
 
 procedure TFormAddDMXAction.ProcessOnAddCmdFromViewProjector(Sender: TObject);
+{$if defined(LCLGTK2)}var s: TSequenceStep;{$endif}
 begin
+  {$if defined(LCLGTK2)}
+  ParentSequencer.Sel_SelectNone;
+  s := TSequenceStep.Create;
+  s.ParentSeq := ParentSequencer;
+  s.TimePos := ParentSequencer.ClickedTimePos;
+  s.Top := ParentSequencer.ClickedY;
+  s.Caption := FrameViewProjector1.ShortReadableString;
+  s.CmdList := FrameViewProjector1.Cmds;
+  s.Duration := FrameViewProjector1.CmdDuration;
+  ParentSequencer.Add(s, TRUE);
+  ParentSequencer.ForceReconstructOpenGLObjects;
+  Close;
+  {$else}
   ModalResult := mrOk;
+  {$endif}
 end;
 
 end.

@@ -9,7 +9,7 @@ uses
   LCLTranslator, StdCtrls, Buttons, ComCtrls, Menus,
   frame_bglvirtualscreen_sequencer, frame_sequencer, frame_viewcmdlist,
   u_common, frame_editstring, u_audio_manager, u_list_dmxuniverse,
-  lcl_utils;
+  lcl_utils, frame_viewsequencelist;
 
 type
 
@@ -65,6 +65,7 @@ type
     procedure B_UndoClick(Sender: TObject);
     procedure B_ViewAllClick(Sender: TObject);
     procedure B_ViewSelectionClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var {%H-}CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -74,10 +75,11 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure Splitter2Moved(Sender: TObject);
+  private type TMode=(mAdd, mInsert, mModify);
   private
     FrameViewCmdList1: TFrameViewCmdList;
     FrameEditString1: TFrameEditString;
-    FModifyMode: boolean;
+    FMode: TMode;
     //FSequencerInfoListToModify: TSequencerInfoList;
     function GetTopName: string;
     function GetSequencerInfoList: TSequencerInfoList;
@@ -96,9 +98,11 @@ type
     FToogleSpeedButtonManager: TToggleSpeedButtonManager;
   public
     FSeq: TFrameSequencer;
+    ParentFrameViewSequenceList: TFrameViewSequenceList;
     procedure ProcessEndOfSequencePreview;
 
     procedure SetAddMode(const aNewName: string);
+    procedure SetInsertMode(const aNewName: string);
     procedure SetModifyMode(const aName: string; const aSequencerInfoList: TSequencerInfoList; aTopIndex: integer);
 
     property TopDuration: single read GetTopDuration;
@@ -112,7 +116,8 @@ var
   FormSequenceEdition: TFormSequenceEdition;
 
 implementation
-uses u_resource_string, u_program_options, form_help, LCLType;
+uses u_resource_string, u_program_options, form_help, u_list_sequence,
+  u_project_manager, u_mainform, LCLType;
 
 {$R *.lfm}
 
@@ -168,6 +173,15 @@ begin
   FSeq.View_All;
 
   UpdateWidgetState;
+
+  {$if defined(LCLGTK2)}
+  // maximize the window to the size of main form
+  SetBounds(FormMain.Top, FormMain.Left, FormMain.Width, FormMain.Height);
+  {$else}
+  BorderIcons := [biSystemMenu];
+  Position := poMainFormCenter;
+  WindowState := wsMaximized;
+  {$endif}
 end;
 
 procedure TFormSequenceEdition.Panel7Click(Sender: TObject);
@@ -177,10 +191,11 @@ end;
 
 procedure TFormSequenceEdition.SpeedButton1Click(Sender: TObject);
 begin
-  ModalResult := mrCancel;
+  Close;
 end;
 
 procedure TFormSequenceEdition.SpeedButton2Click(Sender: TObject);
+var seq: TSequence;
 begin
   if not FrameEditString1.TextIsValid then
   begin
@@ -191,7 +206,31 @@ begin
   if FSeq.StepList.Count = 0 then
     exit;
 
-  ModalResult := mrOk;
+  case FMode of
+    mAdd: begin
+      seq := Sequences.AddSequence(TopName, SequencerInfoList);
+      ParentFrameViewSequenceList.Add(seq.ID);
+    end;
+
+    mInsert: begin
+      seq := Sequences.InsertSequence(ParentFrameViewSequenceList.LB.ItemIndex, TopName, SequencerInfoList);
+      ParentFrameViewSequenceList.Insert(seq.ID);
+    end;
+
+    mModify: begin
+     seq := Sequences.GetSequenceByIndex(FEditingTopIndex);
+     seq.Stop;
+     seq.Name := TopName;
+     seq.SequencerInfoList := SequencerInfoList;
+     ParentFrameViewSequenceList.RemoveErrorHint;
+     FormMain.CheckSequenceError;
+    end;
+  end;
+
+  Project.SetModified;
+  FormMain.FrameViewProjector1.ForceReconstructOpenGLObjects;
+
+  Close;
 end;
 
 procedure TFormSequenceEdition.Splitter2Moved(Sender: TObject);
@@ -309,7 +348,21 @@ end;
 
 procedure TFormSequenceEdition.SetAddMode( const aNewName: string );
 begin
-  FModifyMode := FALSE;
+  FMode := mAdd;
+  SpeedButton2.Caption := SAddThisSequence;
+  SpeedButton2.ImageIndex := 0; //+
+
+  FrameEditString1.Text := aNewName;
+  FrameEditString1.ClearSelection;
+  FSeq.UndoRedoManager.Clear;
+  FSeq.Clear;
+
+  FEditingTopIndex := -1;
+end;
+
+procedure TFormSequenceEdition.SetInsertMode(const aNewName: string);
+begin
+  FMode := mInsert;
   SpeedButton2.Caption := SAddThisSequence;
   SpeedButton2.ImageIndex := 0; //+
 
@@ -324,7 +377,7 @@ end;
 procedure TFormSequenceEdition.SetModifyMode( const aName: string; const aSequencerInfoList: TSequencerInfoList;
   aTopIndex: integer);
 begin
-  FModifyMode := TRUE;
+  FMode := mModify;
   SpeedButton2.Caption := SApplyChanges;
   SpeedButton2.ImageIndex := 3;// checked
 
@@ -443,6 +496,11 @@ end;
 procedure TFormSequenceEdition.B_ViewSelectionClick(Sender: TObject);
 begin
   FSeq.View_ZoomOnSelectedArea;
+end;
+
+procedure TFormSequenceEdition.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  CloseAction := caFree;
 end;
 
 procedure TFormSequenceEdition.FormCloseQuery(Sender: TObject; var CanClose: boolean );

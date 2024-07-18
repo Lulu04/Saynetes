@@ -7,6 +7,7 @@ object FormAddDMXAction: TFormAddDMXAction
   Caption = 'DMX action'
   KeyPreview = True
   OnClose = FormClose
+  OnDeactivate = FormDeactivate
   OnShow = FormShow
   Position = poWorkAreaCenter
   LCLVersion = '2.2.6.0'

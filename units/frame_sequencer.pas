@@ -175,6 +175,7 @@ type
 
     // gives the time position clicked by the user
     property ClickedTimePos: single read FClickedTimePos;
+    property ClickedY: integer read FClickedY;
 
   public // we keep track of the clipboard to be able to copy/paste between two sequences
     procedure SaveClipboardContent;
@@ -407,13 +408,16 @@ var s: TSequenceStep;
   w, h: integer;
 begin
   FormAddDMXAction := TFormAddDMXAction.Create(NIL);
+  // center the window and a little bit smaller
+  p := FormSequenceEdition.ClientToScreen(FormSequenceEdition.ClientRect.CenterPoint);
+  w := Round(FormSequenceEdition.ClientWidth*0.6);
+  h := Round(FormSequenceEdition.ClientHeight*0.8);
+  FormAddDMXAction.SetBounds(p.x-w div 2, p.y-h div 2, w, h);
+  {$if defined(LCLGTK2)}
+  FormAddDMXAction.ParentSequencer := Self;
+  FormAddDMXAction.Show;
+  {$else}
   try
-    // center the window and a little bit smaller
-    p := FormSequenceEdition.ClientToScreen(FormSequenceEdition.ClientRect.CenterPoint);
-    w := Round(FormSequenceEdition.ClientWidth*0.6);
-    h := Round(FormSequenceEdition.ClientHeight*0.8);
-    FormAddDMXAction.SetBounds(p.x-w div 2, p.y-h div 2, w, h);
-
     if FormAddDMXAction.ShowModal = mrOk then
     begin
       Sel_SelectNone;
@@ -426,12 +430,12 @@ begin
       s.Duration := FormAddDMXAction.FrameViewProjector1.CmdDuration;
       Add(s, TRUE);
       ForceReconstructOpenGLObjects;
-      //Redraw;
     end;
   finally
     FormAddDMXAction.Free;
     FormAddDMXAction := NIL;
   end;
+  {$endif}
 end;
 
 procedure TFrameSequencer.MI_SBPasteClick(Sender: TObject);
