@@ -16,7 +16,9 @@ object FormSequenceEdition: TFormSequenceEdition
   OnDestroy = FormDestroy
   OnKeyUp = FormKeyUp
   OnShow = FormShow
+  Position = poMainFormCenter
   LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Splitter2
