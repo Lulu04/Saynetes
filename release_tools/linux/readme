@@ -1,11 +1,17 @@
-Saynètes is a free and open source audio and DMX controller software. It help you to build your shows.
+Saynètes is a free and open source audio and lighting controller software. It help you to build your shows.
 
 
 This archive contains all the necessary files to run the software without installation.
 Simply decompress it somewhere in your user space, enter in the obtained directory and run "Saynetes".
-
-
 At startup, choose "Open a demo project" to see a demo that show how it work.
+
+
+NOTE for usb device based on FTDI chip (this is the case for the ENTTEC USB DMX PRO):
+Because Saynètes use the D2XX driver version, after the device is plugged in and before starting the program, you have to unload the VCP (virtual com port) from the kernel with:
+   sudo rmmod ftdi_sio
+   sudo rmmod usbserial
+You can run the script named "saynetes.sh" to do this task.
+More information: https://ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf
 
 
 UBUNTU: if you want a link with an icon on your desktop:
