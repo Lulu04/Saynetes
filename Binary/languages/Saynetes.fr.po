@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: project_util.smodified
 msgid "modified"
@@ -4091,6 +4091,14 @@ msgstr "Niveau min"
 #: u_resource_string.slevels
 msgid "Levels"
 msgstr "Niveaux"
+
+#: u_resource_string.sloadinganotherdmxconfigurationfromanotherproject
+msgid ""
+"Importing the DMX configuration of another project will overwrite the current configuration.\n"
+"Do you want to continue?"
+msgstr ""
+"Importer la configuration DMX d'un autre projet écrasera la configuration actuelle.\n"
+"Voulez-vous continuer ?"
 
 #: u_resource_string.sloadingcursorimage
 msgid "loading DMX cursor images"

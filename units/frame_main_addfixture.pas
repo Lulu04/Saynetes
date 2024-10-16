@@ -112,6 +112,12 @@ end;
 
 procedure TFrameMainAddFixture.BLoadFromClick(Sender: TObject);
 begin
+  if UniverseManager.TotalFixtureCount > 0 then begin
+    // warn the user s/he will lose the current dmx configuration
+    if AskConfirmation(SLoadingAnotherDMXConfigurationFromAnotherProject, SYes, SNo, mtWarning) <> mrYes
+      then exit;
+  end;
+
   OD1.FileName := ExtractFilePath(Project.Filename);
   if not OD1.Execute then exit;
 
@@ -231,6 +237,7 @@ begin
   end;
 
   FrameViewUniverseList1.Fill;
+  Label9.Caption := SUniverse;
 end;
 
 end.
