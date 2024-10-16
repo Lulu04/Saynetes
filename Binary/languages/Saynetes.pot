@@ -3700,6 +3700,12 @@ msgstr ""
 msgid "Levels"
 msgstr ""
 
+#: u_resource_string.sloadinganotherdmxconfigurationfromanotherproject
+msgid ""
+"Importing the DMX configuration of another project will overwrite the current configuration.\n"
+"Do you want to continue?"
+msgstr ""
+
 #: u_resource_string.sloadingcursorimage
 msgid "loading DMX cursor images"
 msgstr ""

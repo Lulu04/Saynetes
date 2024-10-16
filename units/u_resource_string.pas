@@ -229,6 +229,7 @@ resourcestring
   SDMXGroupsSuccessLoaded='DMX groups successfully loaded';
   SErrorWhileImportingDMXGroups='An error occurred while importing the DMX groups from the project';
   SAskMoveFixtureOnAnotherUniverse='Are you sure to move this fixture on another universe ?';
+  SLoadingAnotherDMXConfigurationFromAnotherProject='Importing the DMX configuration of another project will overwrite the current configuration.'+LineEnding+'Do you want to continue?';
 
   SNone='None';
   SRectangle='Rectangle';
