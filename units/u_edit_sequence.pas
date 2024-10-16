@@ -268,7 +268,7 @@ end;
 
 function TFormSequenceEdition.GetTopName: string;
 begin
-  Result := FrameEditString1.Text;
+  Result := Trim(FrameEditString1.Text);
 end;
 
 procedure TFormSequenceEdition.ProcessUndoRedoChangeEvent(Sender: TObject);
