@@ -126,7 +126,7 @@ uses u_resource_string, u_program_options, form_help, u_list_sequence,
 procedure TFormSequenceEdition.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 var t: single;
 begin
-  if Key = VK_SPACE then begin
+  if (Key = VK_SPACE) and not FrameEditString1.HaveFocus then begin
     if FSeq.IsPlaying then BStopPreviewClick(BStopPreview)
         else begin
           if not FSeq.MouseIsOverSequencer then FSeq.Play
