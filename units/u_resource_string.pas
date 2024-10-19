@@ -215,7 +215,8 @@ resourcestring
   SFileIsNotAProject='This file is not a SAYNÈTE project';
   SFailToLoadTheProject='Fail to load the project';
   SFailToSaveTheProject='Fail to save the project';
-  SErrorFoundInProjectSequences='Error(s) found in the project sequences. Please check';
+  SErrorFoundInProjectSequences='Error(s) found in the project sequences.'+LineEnding+'Please check';
+  SAdressConflictInDMX='Adress conflict found in dmx universe.'+LineEnding+'Please check';
   SFailToCreateDirectoryNeededByTheProject='Fail to create the directory needed by the project';
   SPleaseNoSpaceOrSpecialCharacters='please no space or special characters';
   SPleaseNoSpecialCharacters='please no special characters';

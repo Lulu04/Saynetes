@@ -79,7 +79,7 @@ begin
     xx := ARect.Left+5;
     TextOut(xx, ARect.Top, txt);
     xx := xx+TextWidth(txt);
-    if FFlagBlink and uni.ErrorInAdressing then
+    if FFlagBlink and uni.HaveAdressConflict then
      DataModule1.ImageList2.Draw(LB.Canvas, xx, ARect.Top, 0);
 
     // occupied adress

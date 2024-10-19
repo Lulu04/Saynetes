@@ -283,6 +283,9 @@ begin
 
        if not KeepUniverseManager then Result := Result and UniverseManager.Load
          else Log.Info('Keep the same universes as previous', 1);
+       UniverseManager.CheckForAdressConflict;
+       if UniverseManager.HaveAdressConflict then
+         ShowMess(SAdressConflictInDMX, SOk, mtWarning);
 
        FormDMXGroup.LoadFrom(GetFolderCommonData+COMMON_PROJECT_DMX_GROUP_FILENAME);
 

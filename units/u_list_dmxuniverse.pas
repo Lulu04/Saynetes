@@ -250,6 +250,7 @@ type
       procedure SetLocked(AValue: boolean);
       procedure SetRGBColor(AValue: TColor);
    private
+      FHaveAdressConflict: boolean;
       FIsVisibleOnViewCursor: boolean;
       function GetBlueChannel: TDMXChannel;
       function GetGreenChannel: TDMXChannel;
@@ -319,6 +320,8 @@ type
      property Locked: boolean read GetLocked write SetLocked; // lock the channels of the fixture to their current values
 
      property IsVisibleOnViewCursor: boolean read FIsVisibleOnViewCursor write FIsVisibleOnViewCursor;
+     // True when user change the adress and make the fixture overlaps with another.
+     property HaveAdressConflict: boolean read FHaveAdressConflict write FHaveAdressConflict;
   end;
 
   TDMXFixtureList = class(specialize TFPGObjectList<TDMXFixture>);
@@ -331,6 +334,7 @@ type
   TDmxUniverse = class
   private
      FFixtures:TDMXFixtureList;
+     FHaveAdressConflict: boolean;
      FNeedToBeRedraw: boolean;
      function GetFixture(index: integer): TDMXFixture;
      function GetSize: integer;
@@ -355,11 +359,13 @@ type
      // return the last adress occupied by a fixture
      function LastUsedAdress: TDMXAdress;
      function TryToFindFreeAdressRange(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
+     procedure CheckForAdressConflict;
      function ErrorInAdressing: boolean;
      // return TRUE if aAdress is a valid DMX adress [MIN_DMX_ADRESS..MAX_DMX_ADRESS]
      function IsValidAdress(const aAdress: TDMXAdress): boolean;
+     property HaveAdressConflict: boolean read FHaveAdressConflict write FHaveAdressConflict;
+   public // Fixture
 
-     // Fixture
      function FixturesCount: integer;
      procedure Fixture_Add(f: TDmxFixture);
 
@@ -452,6 +458,8 @@ TUniverseManager = class
      procedure Delete(aIndex: integer);
      function ValidIndex(aIndex: integer): boolean;
      function IDToIndex(aID: cardinal): integer;
+     procedure CheckForAdressConflict;
+     function HaveAdressConflict: boolean;
 
      function Save: boolean;
      procedure SaveTo(t: TStringList);
@@ -1774,6 +1782,43 @@ begin
   Result := FALSE;
 end;
 
+procedure TDmxUniverse.CheckForAdressConflict;
+var fix, fix2: TDMXFixture;
+  A:array of boolean;
+  i: integer;
+begin
+  FHaveAdressConflict := False;
+  if FixturesCount = 0 then exit;
+
+  for fix in FFixtures do
+    fix.HaveAdressConflict := False;
+  for fix in FFixtures do
+    for fix2 in FFixtures do
+      if fix2 <> fix then begin
+        if InRange(fix.Adress, fix2.Adress, fix2.LastAdress) or
+           InRange(fix.LastAdress, fix2.Adress, fix2.LastAdress) then begin
+             fix.HaveAdressConflict := True;
+             fix2.HaveAdressConflict := True;
+             FHaveAdressConflict := True;
+           end;
+      end;
+  exit;
+
+  A := NIL;
+  SetLength(A, LastAdress-FirstAdress+1);
+  for i:=0 to High(A) do
+    A[i] := FALSE;
+
+  for fix in FFixtures do begin
+    fix.HaveAdressConflict := False;
+    for i:=fix.Adress-1 to fix.Adress-1+fix.ChannelsCount-1 do
+      if A[i] then begin
+        fix.HaveAdressConflict := True;
+        FHaveAdressConflict := True;
+      end else A[i] := TRUE;
+  end;
+end;
+
 function TDmxUniverse.ErrorInAdressing: boolean;
 var fix: TDMXFixture;
   A:array of boolean;
@@ -2120,6 +2165,23 @@ begin
      exit;
    end;
   Result := -1;
+end;
+
+procedure TUniverseManager.CheckForAdressConflict;
+var i: integer;
+begin
+  for i:=0 to Count-1 do
+    Universes[i].CheckForAdressConflict;
+end;
+
+function TUniverseManager.HaveAdressConflict: boolean;
+var i: integer;
+begin
+  Result := False;
+  for i:=0 to Count-1 do begin
+    Universes[i].CheckForAdressConflict;
+    Result := Result or Universes[i].HaveAdressConflict;
+  end;
 end;
 
 function TUniverseManager.GetUniverse(index: integer): TDmxUniverse;
