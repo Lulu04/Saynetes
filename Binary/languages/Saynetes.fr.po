@@ -326,6 +326,10 @@ msgctxt "tformdmxlibrary.bnewfixture.caption"
 msgid "New fixture"
 msgstr "Nouveau matériel"
 
+#: tformdmxlibrary.bopeninfileexplorer.caption
+msgid "Open folder"
+msgstr "Ouvrir le dossier"
+
 #: tformdmxlibrary.bopeninfileexplorer.hint
 msgid "Open in file explorer"
 msgstr "Ouvrir dans l'explorateur de fichiers"
@@ -3099,10 +3103,6 @@ msgstr "Êtes-vous sûr de vouloir déplacer cet appareil dans un autre univers 
 msgid "A fixture with this filename already exists, do you want to overwrite it ?(its content will be lost)"
 msgstr "Un appareil avec ce nom de fichier existe déjà, voulez-vous l'écraser ? (son contenu sera perdu)"
 
-#: u_resource_string.saskusertosenddefinitionbymail
-msgid "Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software."
-msgstr "Êtes-vous d'accord pour envoyer par mail cette définition aux auteurs de Saynètes ? Elle sera incluse dans la prochaine version du logiciel."
-
 #: u_resource_string.sasremindertherangesmustcovertheinterval
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr "Pour rappel, les plages doivent couvrir l'intervalle de 0 à 255"
@@ -3822,11 +3822,6 @@ msgstr "Échec de chargement du projet"
 msgid "Fail to save the project"
 msgstr "Échec de sauvegarde du projet"
 
-#: u_resource_string.sfailtosendmail
-msgctxt "u_resource_string.sfailtosendmail"
-msgid "Fail to send mail"
-msgstr "Échec de l'envoi du mail"
-
 #: u_resource_string.sfailurewhensavingdmxuniverseto
 msgid "Failure when saving DMX universe to"
 msgstr "Échec lors de la sauvegarde des univers DMX vers"
@@ -4136,11 +4131,6 @@ msgstr "BOUCLE AVANT"
 msgid "Lumens"
 msgstr "Lumens"
 
-#: u_resource_string.smailsentsuccessfully
-msgctxt "u_resource_string.smailsentsuccessfully"
-msgid "Mail sent successfully"
-msgstr "Mail envoyé avec succès"
-
 #: u_resource_string.smainview
 msgid "Main view"
 msgstr "Vue principale"
@@ -4404,6 +4394,17 @@ msgstr "PAR court avec ampoule"
 #: u_resource_string.sparshorttransparentled
 msgid "Short PAR transparent LED"
 msgstr "PAR court à LED transparentes"
+
+#: u_resource_string.sparticipate
+msgctxt "u_resource_string.sparticipate"
+msgid ""
+"You can participate improving Saynètes by sending you DMX fixture definitions to lulutech@gmx.fr\n"
+"They will be added in the next version of this software.\n"
+"Thank you very much!"
+msgstr ""
+"Participez à l'amélioration de Saynètes en envoyant vos définitions d'appareils DMX à lulutech@gmx.fr\n"
+"Elles seront ajoutées à la prochaine version du logiciel.\n"
+"Un grand merci !"
 
 #: u_resource_string.spaste
 msgctxt "u_resource_string.spaste"
@@ -5125,6 +5126,26 @@ msgstr ""
 "- à gauche, sélectionnez le canal virtuel à commuter. S'il n'apparaît pas dans la liste, vous devez d'abord le définir.\n"
 "- à droite, sélectionnez le sous-canal vers qui commuter.\n"
 "NOTE: vous devez d'abord définir le canal virtuel avant d'ajouter des commutateurs dans les plages DMX."
+
+#: u_resource_string._helpdmxlibrary
+msgid ""
+"This is the DMX library.\n"
+"Click the arrow to the left of a manufacturer name to see the list of its fixtures.\n"
+"Click the arrow to the left of a fixture name to see the list of the available modes.\n"
+"Select a mode to see the definition of its channels.\n"
+"Add a new fixture: click the button 'New fixture'\n"
+"Modify a fixture: click the button 'Edit...'\n"
+"Open the dmx library folder in the file explorer: click the button with the magnifier. You can first select a fixture to open its folder.\n"
+"A fixture definition is a file with the extension '.dmx'"
+msgstr ""
+"C'est la bibliothèque DMX.\n"
+"Cliquez la flèche à gauche d'un nom de constructeur pour voir la liste des appareils définis.\n"
+"Cliquez la flèche à gauche d'un nom d'appareil pour voir la liste des modes disponibles.\n"
+"Sélectionnez un mode pour voir la définition de ses canaux.\n"
+"Ajout d'un appareil: cliquez le bouton 'Nouvel appareil'\n"
+"Modifier un appareil: cliquez sur le bouton 'Éditer...'\n"
+"Ouvrir le répertoire de la librairie DMX dans l'explorateur de fichiers: cliquez le bouton avec la loupe. Vous pouvez tout d'abord sélectionner un appareil, cela ouvrira le répertoire où il se trouve\n"
+"Les définitions d'appareils DMX sont des fichiers avec l'extension '.dmx'"
 
 #: u_resource_string._helpeditvirtualchannel
 msgid ""

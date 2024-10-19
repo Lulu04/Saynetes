@@ -289,6 +289,10 @@ msgctxt "tformdmxlibrary.bnewfixture.caption"
 msgid "New fixture"
 msgstr ""
 
+#: tformdmxlibrary.bopeninfileexplorer.caption
+msgid "Open folder"
+msgstr ""
+
 #: tformdmxlibrary.bopeninfileexplorer.hint
 msgid "Open in file explorer"
 msgstr ""
@@ -2715,10 +2719,6 @@ msgstr ""
 msgid "A fixture with this filename already exists, do you want to overwrite it ?(its content will be lost)"
 msgstr ""
 
-#: u_resource_string.saskusertosenddefinitionbymail
-msgid "Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software."
-msgstr ""
-
 #: u_resource_string.sasremindertherangesmustcovertheinterval
 msgid "As a reminder, the ranges must cover the interval 0 to 255"
 msgstr ""
@@ -3431,11 +3431,6 @@ msgstr ""
 msgid "Fail to save the project"
 msgstr ""
 
-#: u_resource_string.sfailtosendmail
-msgctxt "u_resource_string.sfailtosendmail"
-msgid "Fail to send mail"
-msgstr ""
-
 #: u_resource_string.sfailurewhensavingdmxuniverseto
 msgid "Failure when saving DMX universe to"
 msgstr ""
@@ -3742,11 +3737,6 @@ msgstr ""
 msgid "Lumens"
 msgstr ""
 
-#: u_resource_string.smailsentsuccessfully
-msgctxt "u_resource_string.smailsentsuccessfully"
-msgid "Mail sent successfully"
-msgstr ""
-
 #: u_resource_string.smainview
 msgid "Main view"
 msgstr ""
@@ -4008,6 +3998,14 @@ msgstr ""
 
 #: u_resource_string.sparshorttransparentled
 msgid "Short PAR transparent LED"
+msgstr ""
+
+#: u_resource_string.sparticipate
+msgctxt "u_resource_string.sparticipate"
+msgid ""
+"You can participate improving Saynètes by sending you DMX fixture definitions to lulutech@gmx.fr\n"
+"They will be added in the next version of this software.\n"
+"Thank you very much!"
 msgstr ""
 
 #: u_resource_string.spaste
@@ -4686,6 +4684,18 @@ msgid ""
 "- At the left, select the virtual channel to switch. If it doesn't appear its because you have to define it first.\n"
 "- At the right, select the sub-channel to switch to.\n"
 "NOTE: first you have to define a virtual channel before adding the switchers into the dmx range."
+msgstr ""
+
+#: u_resource_string._helpdmxlibrary
+msgid ""
+"This is the DMX library.\n"
+"Click the arrow to the left of a manufacturer name to see the list of its fixtures.\n"
+"Click the arrow to the left of a fixture name to see the list of the available modes.\n"
+"Select a mode to see the definition of its channels.\n"
+"Add a new fixture: click the button 'New fixture'\n"
+"Modify a fixture: click the button 'Edit...'\n"
+"Open the dmx library folder in the file explorer: click the button with the magnifier. You can first select a fixture to open its folder.\n"
+"A fixture definition is a file with the extension '.dmx'"
 msgstr ""
 
 #: u_resource_string._helpeditvirtualchannel
