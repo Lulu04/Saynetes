@@ -2199,7 +2199,8 @@ msgid ""
 "    - Rotation to change its direction.\n"
 "    - Zoom to change its size.\n"
 "    - Horizontal flip.\n"
-"    - Vertical flip."
+"    - Vertical flip.\n"
+"CHANGE DMX ADRESS of a fixture: activate the button 'Show/Hide the fixture information panel' and select a fixture. In the panel that appears, change the adress value. If an address overlap is detected, a red exclamation mark will blink at top right of the screen."
 msgstr ""
 
 #: u_resource_string.helpeditmultiplechannel
