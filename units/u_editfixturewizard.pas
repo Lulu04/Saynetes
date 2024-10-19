@@ -562,8 +562,11 @@ begin
     exit;
   end;
 
+  // inform user to send the fixture definition by mail
+  ShowMess(SParticipate, SOk, mtInformation);
+
   // ask user to send the fixture by mail
-  if AskConfirmation(SAskUserToSendDefinitionByMail, SYes, SNo, mtConfirmation) = mrYes then begin
+{  if AskConfirmation(SAskUserToSendDefinitionByMail, SYes, SNo, mtConfirmation) = mrYes then begin
       if itsNewFixture then s := 'New fixture definition '
         else s := 'Modification of ';
       s := s + LibFix.General.ManufacturerName+' - '+ LibFix.General.FixtureName;
@@ -578,7 +581,7 @@ begin
     end;
     if res then ShowMess(SMailSentSuccessfully, SOk, mtInformation)
       else ShowMess(SFailToSendMail, SOk, mtError);
-  end;
+  end;  }
 
   FIsModified := False;
   FSavedFilename.InitDefault;
