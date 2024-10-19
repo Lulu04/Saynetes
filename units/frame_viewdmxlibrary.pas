@@ -43,6 +43,8 @@ type
     function ItsTheRoot( aNode: TTreeNode ): boolean;
   public
     procedure EraseBackground({%H-}DC: HDC); override;
+    // gives '' if no selection
+    function GetSelectedManufacturerFolder: string;
     // gives '' if its a folder or no selection
     function GetSelectedFixtureFileName: string;
     // return '' if a mode is not selected
@@ -134,6 +136,18 @@ begin
  end;
  {Nodes are of the same type, so do a normal alpha sort}
  Result := StrIComp( PChar(Node1.Text), PChar(Node2.Text) );
+end;
+
+function TFrameViewDMXLibrary.GetSelectedManufacturerFolder: string;
+var n: TTreeNode;
+begin
+  Result := '';
+  n := TV.Selected;
+  if n = NIL then exit;
+  if ItsAMode(n) then n := n.Parent;
+  if ItsAFile(n) then n := n.Parent;
+
+  Result := AbsolutePathForNode(n);
 end;
 
 function TFrameViewDMXLibrary.GetSelectedFixtureFileName: string;
