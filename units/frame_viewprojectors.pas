@@ -159,7 +159,8 @@ type
     FOpenGLObjectsNeedToBeReconstruct: boolean;
     FTextureSeats,
     FTextureStage,
-    FLockTexture: IBGLTexture;
+    FLockTexture,
+    FExclamationMarkTexture: IBGLTexture;
     FTextures: array of IBGLTexture;
     FDMXAdressFont: IBGLRenderedFont;
     procedure CreateFixturesTextures;
@@ -1067,6 +1068,13 @@ begin
           end;
         end;
 
+        if fix.HaveAdressConflict then begin
+          // render symbol adress conflict
+          Matrix := m;
+          Translate(fix.ScreenPos.x+(tex.Width-FExclamationMarkTexture.Width)*0.5, fix.ScreenPos.y+(tex.Height-FExclamationMarkTexture.Height)*0.5);
+          FExclamationMarkTexture.Draw(0, 0);
+        end;
+
        Matrix := m;
        FTotalViewRect:=FTotalViewRect.Union(GetWordFixtureArea(fix));
      end;
@@ -1755,6 +1763,10 @@ begin
   im := SVGFileToBGRABitmap(GetAppFixtureImagesFolder+'Lock.svg', -1, -1);
   FLockTexture := BGLTexture(im);
   im.Free;
+
+  im := SVGFileToBGRABitmap(GetAppIconImagesFolder+'DlgError.svg', FormMain.ScaleDesignToForm(64), -1);
+  FExclamationMarkTexture := BGLTexture(im);
+  im.Free;
 end;
 
 procedure TFrameViewProjector.CreateDMXAdressFont;
@@ -1778,6 +1790,7 @@ begin
   FTextureSeats := NIL;
   FTextureStage := NIL;
   FLockTexture := NIL;
+  FExclamationMarkTexture := NIL;
   for i:=0 to High(FTextures) do
     FTextures[i] := NIL;
   FTextures := NIL;

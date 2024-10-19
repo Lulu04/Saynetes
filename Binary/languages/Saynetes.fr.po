@@ -2642,7 +2642,7 @@ msgstr ""
 "C'est la liste des séquences de votre projet.\n"
 "SÉLECTIONNEZ une séquence avec un clic gauche.\n"
 "ESPACE pour la démarrer: la souris doit impérativement être au dessus de la liste.\n"
-"Clic doit fait apparaître un menu contextuel.\n"
+"Clic droit fait apparaître un menu contextuel.\n"
 "Vous pouvez faire glisser une séquence vers le haut ou vers le bas afin de modifier sa position dans la liste."
 
 #: u_resource_string.helpsequencer
@@ -3005,6 +3005,14 @@ msgstr " une discontinuité apparait sur la plage"
 #: u_resource_string.sadress
 msgid "Adress"
 msgstr "Adresse"
+
+#: u_resource_string.sadressconflictindmx
+msgid ""
+"Adress conflict found in dmx universe.\n"
+"Please check"
+msgstr ""
+"Des conflits d'adresse ont été détectés dans vos univers dmx.\n"
+"Veuillez vérifier svp"
 
 #: u_resource_string.safixturemusthaveatleastonechannel
 msgid "A fixture must have at least one channel"
@@ -3761,8 +3769,12 @@ msgid "Error accessing internet"
 msgstr "Échec lors de l'accès à internet"
 
 #: u_resource_string.serrorfoundinprojectsequences
-msgid "Error(s) found in the project sequences. Please check"
-msgstr "Des erreurs ont été trouvés dans les séquences du project. Veuillez vérifier svp"
+msgid ""
+"Error(s) found in the project sequences.\n"
+"Please check"
+msgstr ""
+"Des erreurs ont été trouvées dans les séquences du projet.\n"
+"Veuillez vérifier svp"
 
 #: u_resource_string.serrorloadingplaylist
 msgid "Error while opening this playlist"

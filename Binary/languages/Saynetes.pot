@@ -2622,6 +2622,12 @@ msgstr ""
 msgid "Adress"
 msgstr ""
 
+#: u_resource_string.sadressconflictindmx
+msgid ""
+"Adress conflict found in dmx universe.\n"
+"Please check"
+msgstr ""
+
 #: u_resource_string.safixturemusthaveatleastonechannel
 msgid "A fixture must have at least one channel"
 msgstr ""
@@ -3369,7 +3375,9 @@ msgid "Error accessing internet"
 msgstr ""
 
 #: u_resource_string.serrorfoundinprojectsequences
-msgid "Error(s) found in the project sequences. Please check"
+msgid ""
+"Error(s) found in the project sequences.\n"
+"Please check"
 msgstr ""
 
 #: u_resource_string.serrorloadingplaylist

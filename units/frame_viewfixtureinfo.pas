@@ -58,6 +58,7 @@ begin
   if FUpdatingView then exit;
 
   FTargetFixture.Adress := SE1.Value;
+  UniverseManager.CheckForAdressConflict;
   Edit1.Text := FTargetFixture.LastAdress.ToString;
   Project.SetModified;
   UpdateView;
