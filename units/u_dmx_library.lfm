@@ -1,5 +1,5 @@
 object FormDMXLibrary: TFormDMXLibrary
-  Left = 225
+  Left = 237
   Height = 785
   Top = 99
   Width = 1024
@@ -138,14 +138,15 @@ object FormDMXLibrary: TFormDMXLibrary
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = BRefresh
     Cursor = crHandPoint
-    Left = 287
+    Left = 220
     Height = 20
     Hint = 'Open in file explorer'
     Top = 22
-    Width = 20
+    Width = 87
     Anchors = [akTop, akRight]
     AutoSize = True
     BorderSpacing.Right = 10
+    Caption = 'Open folder'
     Flat = True
     Images = DataModule1.ImageList1
     ImageIndex = 33
@@ -172,5 +173,20 @@ object FormDMXLibrary: TFormDMXLibrary
     OnClick = BOpenInFileExplorerClick
     ShowHint = True
     ParentShowHint = False
+  end
+  object BHelp: TSpeedButton
+    AnchorSideLeft.Control = Panel1
+    AnchorSideTop.Control = BNewFixture
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHelp
+    Left = 10
+    Height = 20
+    Top = 20
+    Width = 20
+    AutoSize = True
+    Flat = True
+    Images = DataModule1.ImageList1
+    ImageIndex = 48
+    OnClick = BHelpClick
   end
 end

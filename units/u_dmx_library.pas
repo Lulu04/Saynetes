@@ -14,6 +14,7 @@ type
   { TFormDMXLibrary }
 
   TFormDMXLibrary = class(TForm)
+    BHelp: TSpeedButton;
     Label1: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -23,6 +24,7 @@ type
     BEditFixture: TSpeedButton;
     BOpenInFileExplorer: TSpeedButton;
     BRefresh: TSpeedButton;
+    procedure BHelpClick(Sender: TObject);
     procedure BOpenInFileExplorerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; {%H-}Shift: TShiftState);
@@ -46,7 +48,7 @@ type
 
 implementation
 uses LCLType, LCLintf,  u_resource_string, u_editfixturewizard, u_common,
-  u_userdialogs, u_mainform, u_apputils;
+  u_userdialogs, u_mainform, u_apputils, form_help;
 
 {$R *.lfm}
 
@@ -154,11 +156,20 @@ begin
 end;
 
 procedure TFormDMXLibrary.BOpenInFileExplorerClick(Sender: TObject);
+var path: string;
 begin
   if Sender = BRefresh then FrameViewDMXLibrary1.Fill;
 
-  if Sender = BOpenInFileExplorer then
-    OpenDocument(GetDMXLibraryFolder);
+  if Sender = BOpenInFileExplorer then begin
+    path := FrameViewDMXLibrary1.GetSelectedManufacturerFolder;
+    if path = '' then path := GetDMXLibraryFolder;
+    OpenDocument(path);
+  end;
+end;
+
+procedure TFormDMXLibrary.BHelpClick(Sender: TObject);
+begin
+  _ShowHelp(HelpDMXLibrary, BHelp, True);
 end;
 
 end.
