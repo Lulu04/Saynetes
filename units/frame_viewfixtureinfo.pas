@@ -61,6 +61,7 @@ begin
   Edit1.Text := FTargetFixture.LastAdress.ToString;
   Project.SetModified;
   UpdateView;
+  TFrameViewProjector(FTargetViewProjector).Redraw;
 end;
 
 procedure TFrameFixtureInfo.ProcessDescriptionChange(Sender: TObject);
@@ -109,9 +110,9 @@ begin
 
   // Enable edition for guiPrepaDMX  mode
   FrameEditString1.ReadOnly := False;//FormViewProjector.FrameViewProjector1.GUIMode <> guiPrepaDMX;// not Project.ProjectPrefs.EditMode;
-  CBUni.Enabled := False; // TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
+  CBUni.Enabled := TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX; //False;
   SE1.Enabled := True;// TFrameViewProjector(FTargetViewProjector).GUIMode = guiPrepaDMX;
-  SE1.ReadOnly := True;
+  SE1.ReadOnly := TFrameViewProjector(FTargetViewProjector).GUIMode <> guiPrepaDMX; //True;
 
   // update caption language
   Label2.Caption := SUniverse;

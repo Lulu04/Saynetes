@@ -674,7 +674,8 @@ resourcestring
                  '    - Rotation to change its direction.'+LineEnding+
                  '    - Zoom to change its size.'+LineEnding+
                  '    - Horizontal flip.'+LineEnding+
-                 '    - Vertical flip.';
+                 '    - Vertical flip.'+LineEnding+
+                 'CHANGE DMX ADRESS of a fixture: activate the button ''Show/Hide the fixture information panel'' and select a fixture. In the panel that appears, change the adress value. If an address overlap is detected, a red exclamation mark will blink at top right of the screen.';
 
   HelpDMXGroup='Retrieve here the groups (channels and RGB) you have previously defined.'+LineEnding+
                'CHOOSE the type of group you want to recall by clicking Channels or RGB button, then select an item in the list.'+LineEnding+
