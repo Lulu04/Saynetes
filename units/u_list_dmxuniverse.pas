@@ -360,7 +360,6 @@ type
      function LastUsedAdress: TDMXAdress;
      function TryToFindFreeAdressRange(aChannelCount: integer; out aAdress: TDMXAdress): boolean;
      procedure CheckForAdressConflict;
-     function ErrorInAdressing: boolean;
      // return TRUE if aAdress is a valid DMX adress [MIN_DMX_ADRESS..MAX_DMX_ADRESS]
      function IsValidAdress(const aAdress: TDMXAdress): boolean;
      property HaveAdressConflict: boolean read FHaveAdressConflict write FHaveAdressConflict;
@@ -1784,8 +1783,6 @@ end;
 
 procedure TDmxUniverse.CheckForAdressConflict;
 var fix, fix2: TDMXFixture;
-  A:array of boolean;
-  i: integer;
 begin
   FHaveAdressConflict := False;
   if FixturesCount = 0 then exit;
@@ -1802,43 +1799,6 @@ begin
              FHaveAdressConflict := True;
            end;
       end;
-  exit;
-
-  A := NIL;
-  SetLength(A, LastAdress-FirstAdress+1);
-  for i:=0 to High(A) do
-    A[i] := FALSE;
-
-  for fix in FFixtures do begin
-    fix.HaveAdressConflict := False;
-    for i:=fix.Adress-1 to fix.Adress-1+fix.ChannelsCount-1 do
-      if A[i] then begin
-        fix.HaveAdressConflict := True;
-        FHaveAdressConflict := True;
-      end else A[i] := TRUE;
-  end;
-end;
-
-function TDmxUniverse.ErrorInAdressing: boolean;
-var fix: TDMXFixture;
-  A:array of boolean;
-  i: integer;
-begin
-  A := NIL;
-  SetLength(A, LastAdress-FirstAdress+1);
-  for i:=0 to High(A) do
-    A[i] := FALSE;
-
-  for fix in FFixtures do
-    for i:=fix.Adress-1 to fix.Adress-1+fix.ChannelsCount-1 do
-      if A[i] then
-      begin
-        Result := TRUE;
-        exit;
-      end
-      else A[i] := TRUE;
-
-  Result := FALSE;
 end;
 
 function TDmxUniverse.IsValidAdress(const aAdress: TDMXAdress): boolean;
