@@ -19,10 +19,9 @@ resourcestring
   SIconAppBy='Application icon by';
   SApplicationWrittenIn='Application written in';
   SWith='with';
-  SMailSentSuccessfully='Mail sent successfully';
-  SFailToSendMail='Fail to send mail';
-  SAskUserToSendDefinitionByMail='Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software.';
-
+  //SMailSentSuccessfully='Mail sent successfully';
+  //SFailToSendMail='Fail to send mail';
+  //SAskUserToSendDefinitionByMail='Do you agree to e-mail this definition to the author of Saynètes? It will be included in the next version of the software.';
 
   SLoadingFixtureImage='loading DMX fixture images';
   SLoadingCursorImage='loading DMX cursor images';
@@ -1009,6 +1008,18 @@ resourcestring
             '  - Removed: move the mouse over the switcher and click the red cross button at its right.'+LineEnding+
             '  - Modified: move the mouse over the switcher and click the pen button at its right.';
 
+   _HelpDMXLibrary='This is the DMX library.'+LineEnding+
+                  'Click the arrow to the left of a manufacturer name to see the list of its fixtures.'+LineEnding+
+                  'Click the arrow to the left of a fixture name to see the list of the available modes.'+LineEnding+
+                  'Select a mode to see the definition of its channels.'+LineEnding+
+                  'Add a new fixture: click the button ''New fixture'''+LineEnding+
+                  'Modify a fixture: click the button ''Edit...'''+LineEnding+
+                  'Open the dmx library folder in the file explorer: click the button with the magnifier. You can first select a fixture to open its folder.'+LineEnding+
+                  'A fixture definition is a file with the extension ''.dmx''';
+
+   SParticipate='You can participate improving Saynètes by sending you DMX fixture definitions to lulutech@gmx.fr'+LineEnding+
+                'They will be added in the next version of this software.'+LineEnding+
+                'Thank you very much!';
 
   function HelpChannelFlame: string;
   function HelpChannelAudioFollower: string;
@@ -1018,6 +1029,7 @@ resourcestring
   function HelpDefineSwitcherItem: string;
   function HelpSelectExistingSwitchingChannel: string;
   function HelpDefineNewChannel: string;
+  function HelpDMXLibrary: string;
 
 implementation
 
@@ -1069,6 +1081,12 @@ function HelpDefineNewChannel: string;
 begin
   Result := _HelpDefineNewChannel + LineEnding + LineEnding +
             HelpVirtualChannel;
+end;
+
+function HelpDMXLibrary: string;
+begin
+  Result := _HelpDMXLibrary + LineEnding + LineEnding +
+           SParticipate;
 end;
 
 
