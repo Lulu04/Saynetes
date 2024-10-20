@@ -5,6 +5,7 @@ set "BINARYFOLDER=C:\Pascal\Saynetes\Binary\"
 set "BINARYFILE=%BINARYFOLDER%%EXENAME%"
 set "LAZARUS_PROJECT=C:\Pascal\Saynetes\Saynetes.lpi"
 set "DEMO_FOLDER=C:\Pascal\Saynetes\DEMO\"
+set "LAZARUS_PROJECT_FOLDER=C:\Pascal\Saynetes\"
 
 rem retrieves the app version
 pushd ..\..
@@ -47,14 +48,17 @@ echo constructing installable 64b version with InnoSetup
 echo.
 
 echo constructing 64b zip portable version
-rem copy Binary folder to a temp Saynetes folder
+rem copies Binary folder to a temp Saynetes folder
 xcopy %BINARYFOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%" /s /e /i /q
-rem copy the demo folder into this Saynetes folder
+rem copies the demo folder into this Saynetes folder
 xcopy %DEMO_FOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\Demo" /s /e /i /q
 rem delete unecessary folder
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\i386-linux"
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\i386-win32"
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\x86_64-linux"
+rem copies changelog file
+xcopy "%LAZARUS_PROJECT_FOLDER%\changelog.txt" "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%"
+
 
 echo compressing
 tar.exe -a -c -f "..\Saynetes_%VERSION%_Windows64_Portable.zip" "Saynetes_%VERSION%"
@@ -92,14 +96,16 @@ echo constructing installable 32b version with InnoSetup
 echo.
 
 echo constructing 32b zip portable version
-rem copy Binary folder to a temp Saynetes folder
+rem copies Binary folder to a temp Saynetes folder
 xcopy %BINARYFOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%" /s /e /i /q
-rem copy the demo folder into this Saynetes folder
+rem copies the demo folder into this Saynetes folder
 xcopy %DEMO_FOLDER% "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\Demo" /s /e /i /q
 rem delete unecessary folder
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\i386-linux"
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\x86_64-win64"
 rmdir /s /q "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%\x86_64-linux"
+rem copies changelog file
+xcopy "%LAZARUS_PROJECT_FOLDER%\changelog.txt" "C:\Pascal\Saynetes\release_tools\win\Saynetes_%VERSION%"
 
 echo compressing
 tar.exe -a -c -f "..\Saynetes_%VERSION%_Windows32_Portable.zip" "Saynetes_%VERSION%"

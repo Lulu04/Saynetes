@@ -25,6 +25,9 @@ create_no_install_archive(){
   # copy readme file
   cp readme "${STAGING_DIR}/readme"
   
+  # copy changelog file
+  cp "${PROJECT_DIR}/changelog.txt" "${STAGING_DIR}/changelog"
+  
   #copy the icon file
   cp "${PROJECT_DIR}/Design/logo/logo128.png" "${STAGING_DIR}/saynetes.png"
   
