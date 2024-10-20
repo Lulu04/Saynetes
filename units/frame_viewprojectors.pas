@@ -1952,7 +1952,7 @@ begin
   begin
     if SelectedCount = 1 then begin
       FrameFixtureInfo1.UpdateView;
-      Panel9.Height := FrameFixtureInfo1.ViewHeight+2;
+      Panel9.Height := FrameFixtureInfo1.ViewHeight+FormMain.ScaleDesignToForm(2);
       Panel9.Visible := TRUE;
     end
     else Panel9.Visible := FALSE;
