@@ -46,7 +46,7 @@ type
 implementation
 
 uses u_project_manager, u_resource_string, u_common, Graphics,
-  frame_viewprojectors;
+  frame_viewprojectors, u_mainform;
 
 {$R *.lfm}
 
@@ -148,7 +148,7 @@ begin
   if TFrameViewProjector(FTargetViewProjector).Selected[0].HaveAdressDipSwitch then
     Result := FOriginalFullHeight//Self.Height//Panel1.Height
   else
-    Result := SE1.Top+SE1.Height+2;
+    Result := SE1.Top+SE1.Height+FormMain.ScaleDesignToForm(2);;
 end;
 
 end.
