@@ -1,0 +1,21 @@
+------------
+Oct 20 2024 - Saynètes 3.1.2 - Lulu04 <lulutech@gmx.fr>
+  * updated script to launch the program under Linux.
+  * Fix: key SPACE don't start the sequence preview any more when user edits the sequence name.
+  * Added a message to warn user when s/he load dmx configuration from another project.
+  * Leading and trailing spaces are removed from sequence name.
+  * Added help button in DMX library window.
+  * Removed the feature 'send fixture definition by mail': because GMX mail provider block the access to lulutech@gmx.fr by the application located in other country? Instead Saynètes ask the user to send her/himself the file by mail.
+  * Added the possibility to change the dmx adress of a fixture.
+  * Added explanations how to change fixture dmx adress in the appropriate help context.
+  * Improved detection of dmx address conflict and warn message to the user.
+  * Improved some translations.
+  * Clean code.
+
+------------
+Jul 18 2024 - Saynètes 3.1.1 - Lulu04 <lulutech@gmx.fr>
+  * Added Linux 64b portable version (without installation)
+
+------------
+Jul 17 2024 - Saynètes 3.1.0 - Lulu04 <lulutech@gmx.fr>
+  * First release
