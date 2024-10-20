@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Saynètes"
-#define MyAppVersion "3.1.1"
+#define MyAppVersion "3.1.2"
 #define MyAppExeName "Saynetes.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".say"
